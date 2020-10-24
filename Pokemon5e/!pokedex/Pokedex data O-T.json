@@ -357,11 +357,11 @@
 	},
 	"Regidrago":
 	{
-	  "id": "895", "type1": "Dragon", "type2": null, "sr": "14", "image": "https://img.pokemondb.net/artwork/large/regidrago.jpg", "desc": "The Dragon Orb Pokémon. An academic theory proposes that Regidrago’s arms were once the head of an ancient dragon Pokémon. The theory remains unproven."
+	  "id": "895", "type1": "Dragon", "type2": null, "sr": "14", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e8/895Regidrago.png/600px-895Regidrago.png", "desc": "The Dragon Orb Pokémon. An academic theory proposes that Regidrago’s arms were once the head of an ancient dragon Pokémon. The theory remains unproven."
 	},
 	"Regieleki":
 	{
-	  "id": "894", "type1": "Electirc", "type2": null, "sr": "14", "image": "https://img.pokemondb.net/artwork/large/regieleki.jpg", "desc": "The Electron Pokémon. Its entire body is made up of a single organ that generates electrical energy. Regieleki is capable of creating all Galar’s electricity."
+	  "id": "894", "type1": "Electirc", "type2": null, "sr": "14", "image": "https://cdn.bulbagarden.net/upload/thumb/9/9b/894Regieleki.png/600px-894Regieleki.png", "desc": "The Electron Pokémon. Its entire body is made up of a single organ that generates electrical energy. Regieleki is capable of creating all Galar’s electricity."
 	},
 	"Regigi":
 	{
