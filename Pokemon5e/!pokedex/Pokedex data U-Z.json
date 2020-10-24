@@ -1,0 +1,358 @@
+{
+	"Umbreon":
+	{
+		"id": "197", "type1": "Dark", "type2": null, "sr": "8", "image": "https://cdn.bulbagarden.net/upload/3/3d/197Umbreon.png", "desc": "Umbreon evolved as a result of exposure to the moon's waves. It hides silently in darkness and waits for its foes to make a move. The rings on its body glow when it leaps to attack."
+	},
+	"Unfezant":
+	{
+		"id": "521", "type1": "Normal", "type2": "Flying", "sr": "11", "image": "https://cdn.bulbagarden.net/upload/d/d0/521Unfezant.png", "desc": "Males have plumage on their heads. They will never let themselves feel close to anyone other than their Trainers."
+	},
+	"Unown":
+	{
+		"id": "201", "type1": "Psychic", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/7/77/201Unown.png", "desc": "This Pokémon is shaped like ancient writing. It is a mystery as to which came first, the ancient writings or the various Unown. Research into this topic is ongoing but nothing is known."
+	},
+	"Ursaring":
+	{
+		"id": "217", "type1": "Normal", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/e/e9/217Ursaring.png", "desc": "In the forests inhabited by Ursaring, it is said that there are many streams and towering trees where they gather food. This Pokémon walks through its forest gathering food every day."
+	},
+	"Urshifu (Rapid Strike Style)":
+	{
+		"id": "892", "type1": "Fighting", "type2": "Water", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/3/38/892Urshifu-Rapid_Strike.png/600px-892Urshifu-Rapid_Strike.png", "desc": "This form of Urshifu is a strong believer in defeating foes by raining many blows down on them. Its strikes are nonstop, flowing like a river."
+	},
+	"Urshifu (Single Strike Style)":
+	{
+		"id": "892", "type1": "Fighting", "type2": "Dark", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e7/892Urshifu-Single_Strike.png/600px-892Urshifu-Single_Strike.png", "desc": "This form of Urshifu is a strong believer in the one-hit KO. Its strategy is to leap in close to foes and land a devastating blow with a hardened fist."
+	},
+	"Uxie":
+	{
+		"id": "480", "type1": "Psychic", "type2": null, "sr": "15", "image": "https://cdn.bulbagarden.net/upload/e/ef/480Uxie.png", "desc": "Known as “The Being of Knowledge.” It is said that it can wipe out the memory of those who see its eyes."
+	},
+	"Vanillish":
+	{
+		"id": "583", "type1": "Ice", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/2/2f/583Vanillish.png", "desc": "It conceals itself from enemy eyes by creating many small ice particles and hiding among them."
+	},
+	"Vanillite":
+	{
+		"id": "582", "type1": "Ice", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/3/3f/582Vanillite.png", "desc": "This Pokémon formed from icicles bathed in energy from the morning sun. It sleeps buried in snow."
+	},
+	"Vanilluxe":
+	{
+		"id": "584", "type1": "Ice", "type2": null, "sr": "13", "image": "https://cdn.bulbagarden.net/upload/3/39/584Vanilluxe.png", "desc": "If both heads get angry simultaneously, this Pokémon expels a blizzard, burying everything in snow."
+	},
+	"Vaporeon":
+	{
+		"id": "134", "type1": "Water", "type2": null, "sr": "8", "image": "https://cdn.bulbagarden.net/upload/f/fd/134Vaporeon.png", "desc": "Its cell structure is similar to water molecules. It melts into the water and becomes invisible."
+	},
+	"Venipede":
+	{
+		"id": "543", "type1": "Bug", "type2": "Poison", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/0/0e/543Venipede.png", "desc": "It discovers what is going on around it by using the feelers on its head and tail. It is brutally aggressive."
+	},
+	"Venomoth":
+	{
+		"id": "49", "type1": "Bug", "type2": "Poison", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/d/d3/049Venomoth.png", "desc": "The powdery scales on its wings are hard to remove from skin. They also contain poison that leaks out on contact."
+	},
+	"Venonat":
+	{
+		"id": "48", "type1": "Bug", "type2": "Poison", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/a/ad/048Venonat.png", "desc": "Its large eyes act as radar. In a bright place, you can see that they are clusters of many tiny eyes."
+	},
+	"Venusaur":
+	{
+		"id": "3", "type1": "Grass", "type2": "Poison", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/a/ae/003Venusaur.png", "desc": "The flower on its back catches the sun’s rays. The sunlight is then absorbed and used for energy"
+	},
+	"Vespiquen":
+	{
+		"id": "416", "type1": "Bug", "type2": "Flying", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/2/2c/416Vespiquen.png", "desc": "Its abdomen is a honeycomb for grubs. It raises its grubs on honey collected by COMBEE."
+	},
+	"Vibrava":
+	{
+		"id": "329", "type1": "Ground", "type2": "Dragon", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/a/af/329Vibrava.png", "desc": "Vibrava's wings have not yet completed the process of growing. Rather than flying long distances, they are more useful for generating ultrasonic waves by vibrating."
+	},
+	"Victini":
+	{
+		"id": "494", "type1": "Psychic", "type2": "Fire", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/6/60/494Victini.png", "desc": "It creates an unlimited supply of energy inside its body, which it shares with those who touch it."
+	},
+	"Victreebel":
+	{
+		"id": "71", "type1": "Grass", "type2": "Poison", "sr": "12", "image": "https://cdn.bulbagarden.net/upload/b/be/071Victreebel.png", "desc": "Lures prey with the sweet aroma of honey. Swallowed whole, the prey is dissolved in a day, bones and all."
+	},
+	"Vigoroth":
+	{
+		"id": "288", "type1": "Normal", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/6/61/288Vigoroth.png", "desc": "igoroth is always itching and agitated to go on a wild rampage. It simply can't tolerate sitting still for even a minute. This Pokémon's stress level rises if it can't be moving constantly."
+	},
+	"Vikavolt":
+	{
+		"id": "738", "type1": "Bug", "type2": "Electric", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/4/4e/738Vikavolt.png/600px-738Vikavolt.png", "desc": "It builds up electricity in its abdomen, focuses it through its jaws, and then fires the electricity off in concentrated beams."
+	},
+	"Vileplume":
+	{
+		"id": "45", "type1": "Grass", "type2": "Poison", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/6/6a/045Vileplume.png", "desc": "Flaps its broad flower petals to scatter its poisonous pollen. The flapping sound is very loud."
+	},
+	"Virizion":
+	{
+		"id": "640", "type1": "Grass", "type2": "Fighting", "sr": "14", "image": "https://cdn.bulbagarden.net/upload/7/79/640Virizion.png", "desc": "Its head sprouts horns as sharp as blades. Using whirlwind-like movements, it confounds and swiftly cuts opponents."
+	},
+	"Virizling":
+	{
+	  "id": null, "type1": "Grass", "type2": null, "sr": "1", "image": "https://images-ext-1.discordapp.net/external/trIVRaxriTOkHqtgf4PokPEuUqsMmpZ9ysp7gn7Z--I/https/media.discordapp.net/attachments/426076867884351488/725884462092648459/image0.png", "desc": "The Grassland Pokémon. Virizling are proud pokémon. Disrespecting one is the same as disrespecting nature."
+	},
+	"Virizlub":
+	{
+	  "id": null, "type1": "Grass", "type2": null, "sr": "8", "image": "https://images-ext-1.discordapp.net/external/qxHSU2uWyhhIZakwiH9hblL51FfzcKl-pIyw9bCkuGc/https/media.discordapp.net/attachments/426076867884351488/725885503735595098/image0.png?width=372&height=453", "desc": "The Grassland Pokémon. Upon evolution, Virizlub gains a blade of grass. It chews it until it is gone, and once gone, it evolves."
+	},
+	"Vivillon":
+	{
+		"id": "666", "type1": "Bug", "type2": "Flying", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/thumb/4/4c/666Vivillon.png/250px-666Vivillon.png", "desc": "Vivillon with many different patterns are found all over the world. These patterns are affected by the climate of their habitat."
+	},
+	"Volbeat":
+	{
+		"id": "313", "type1": "Bug", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/d/d6/313Volbeat.png", "desc": "Volbeat's tail glows like a lightbulb. With other Volbeat, it uses its tail to draw geometric shapes in the night sky. This Pokémon loves the sweet aroma given off by Illumise."
+	},
+	"Volcanion":
+	{
+		"id": "721", "type1": "Fire", "type2": "Water", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/4/44/721Volcanion.png", "desc": "It lets out billows of steam and disappears into the dense fog. It's said to live in mountains where humans do not tread."
+	},
+	"Volcarona":
+	{
+		"id": "637", "type1": "Bug", "type2": "Fire", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/6/6b/637Volcarona.png", "desc": "A sea of fire engulfs the surroundings of their battles, since they use their six wings to scatter their ember scales."
+	},
+	"Voltorb":
+	{
+		"id": "100", "type1": "Electric", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/d/da/100Voltorb.png", "desc": "It is said to camouflage itself as a Poké Ball. It will self-destruct with very little stimulus."
+	},
+	"Vullaby":
+	{
+		"id": "629", "type1": "Dark", "type2": "Flying", "sr": "2", "image": "https://cdn.bulbagarden.net/upload/f/f2/629Vullaby.png", "desc": "They tend to guard their posteriors with suitable bones they have found. They pursue weak Pokémon."
+	},
+	"Vulpix":
+	{
+		"id": "37", "type1": "Fire", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/6/60/037Vulpix.png", "desc": "Both its fur and its tails are beautiful. As it grows, the tails split and form more tails."
+	},
+	"Wailmer":
+	{
+		"id": "320", "type1": "Water", "type2": null, "sr": "3", "image": "https://cdn.bulbagarden.net/upload/7/71/320Wailmer.png", "desc": "Wailmer's nostrils are located above its eyes. This playful Pokémon loves to startle people by forcefully snorting out seawater it stores inside its body out of its nostrils."
+	},
+	"Wailord":
+	{
+		"id": "321", "type1": "Water", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/b/b9/321Wailord.png", "desc": "Wailord is the largest of all identified Pokémon up to now. This giant Pokémon swims languorously in the vast open sea, eating massive amounts of food at once with its enormous mouth."
+	},
+	"Walrein":
+	{
+		"id": "365", "type1": "Ice", "type2": "Water", "sr": "14", "image": "https://cdn.bulbagarden.net/upload/6/61/365Walrein.png", "desc": "Walrein swims all over in frigid seawater while crushing icebergs with its grand, imposing tusks. Its thick layer of blubber makes enemy attacks bounce off harmlessly."
+	},
+	"Wartortle":
+	{
+		"id": "8", "type1": "Water", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/0/0c/008Wartortle.png", "desc": "When tapped on its head, this Pokémon will pull it in, but its tail will still stick out a little bit."
+	},
+	"Watchog":
+	{
+		"id": "505", "type1": "Normal", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/3/3e/505Watchog.png", "desc": "They make the patterns on their bodies shine in order to threaten predators. Keen eyesight lets them see in the dark."
+	},
+	"Weavile":
+	{
+		"id": "461", "type1": "Dark", "type2": "Ice", "sr": "11", "image": "https://cdn.bulbagarden.net/upload/d/d2/461Weavile.png", "desc": "They live in cold regions, forming groups of four or five that hunt prey with impressive coordination."
+	},
+	"Weedle":
+	{
+		"id": "13", "type1": "Bug", "type2": "Poison", "sr": "0.125", "image": "https://cdn.bulbagarden.net/upload/d/df/013Weedle.png", "desc": "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves."
+	},
+	"Weepinbell":
+	{
+		"id": "70", "type1": "Grass", "type2": "Poison", "sr": "5", "image": "https://cdn.bulbagarden.net/upload/9/9f/070Weepinbell.png", "desc": "When hungry, it swallows anything that moves. Its hapless prey is dissolved by strong acids."
+	},
+	"Weezing":
+	{
+		"id": "110", "type1": "Poison", "type2": null, "sr": "10", "image": "https://cdn.bulbagarden.net/upload/4/42/110Weezing.png", "desc": "This Pokémon lives and grows by absorbing poison gas, dust, and germs that exist inside garbage."
+	},
+	"Whimsicott":
+	{
+		"id": "547", "type1": "Grass", "type2": "Fairy", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/a/a2/547Whimsicott.png", "desc": "Riding whirlwinds, they appear. These Pokémon sneak through gaps into houses and cause all sorts of mischief."
+	},
+	"Whirlipede":
+	{
+		"id": "544", "type1": "Bug", "type2": "Poison", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/b/bc/544Whirlipede.png", "desc": "It is usually motionless, but when attacked, it rotates at high speed and then crashes into its opponent."
+	},
+	"Whiscash":
+	{
+		"id": "340", "type1": "Water", "type2": "Ground", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/6/60/340Whiscash.png", "desc": "If Whiscash goes on a wild rampage, it sets off a quake-like tremor with a radius of over three miles. This Pokémon has the ability to predict real earthquakes."
+	},
+	"Whismur":
+	{
+		"id": "293", "type1": "Normal", "type2": null, "sr": "0.125", "image": "https://cdn.bulbagarden.net/upload/6/6c/293Whismur.png", "desc": "Normally, Whismur's voice is very quiet-it is barely audible even if one is paying close attention. However, if this Pokémon senses danger, it starts crying at an earsplitting volume."
+	},
+	"White Kyurem":
+	{
+		"id": "646", "type1": "Dragon", "type2": "Ice", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/8/81/646Kyurem-White.png", "desc": "It can produce ultracold air. Its body is frozen."
+	},
+	"Wigglytuff":
+	{
+		"id": "40", "type1": "Normal", "type2": "Fairy", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/9/92/040Wigglytuff.png", "desc": "Its body is very elastic. By inhaling deeply, it can continue to inflate itself without limit."
+	},
+	"Wimpod":
+	{
+		"id": "767", "type1": "Bug", "type2": "Water", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ef/767Wimpod.png/600px-767Wimpod.png", "desc": "It’s nature’s cleaner—it eats anything and everything, including garbage and rotten things. The ground near its nest is always clean."
+	},
+	"Wingull":
+	{
+		"id": "278", "type1": "Water", "type2": "Flying", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/3/39/278Wingull.png", "desc": "Wingull has the habit of carrying prey and valuables in its beak and hiding them in all sorts of locations. This Pokémon rides the winds and flies as if it were skating across the sky."
+	},
+	"Wishiwashi (School Form)":
+	{
+		"id": "746", "type1": "Water", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/7/7f/746Wishiwashi-School.png/600px-746Wishiwashi-School.png", "desc": "Wishiwashi assemble in this formation to face off against strong foes. It boasts a strength that earned it the name “demon of the sea.”"
+	},
+	"Wishiwashi (Solo Form)":
+	{
+		"id": "746", "type1": "Water", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/18/746Wishiwashi-Solo.png/600px-746Wishiwashi-Solo.png", "desc": "When it’s in trouble, its eyes moisten and begin to shine. The shining light attracts its comrades, and they stand together against their enemies."
+	},
+	"Wobbuffet":
+	{
+		"id": "202", "type1": "Psychic", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/1/17/202Wobbuffet.png", "desc": "Wobbuffet does nothing but endure attacks-it won't attack on its own. However, it won't endure an attack on its tail. When that happens, the Pokémon will try to take the foe with it using Destiny Bond."
+	},
+	"Woobat":
+	{
+		"id": "527", "type1": "Psychic", "type2": "Flying", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/3/36/527Woobat.png", "desc": "Suction from its nostrils enables it to stick to cave walls during sleep. It leaves a heart-shaped mark behind."
+	},
+	"Wooloo":
+	{
+		"id": "831", "type1": "Normal", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/1f/831Wooloo.png/600px-831Wooloo.png", "desc": "Its curly fleece is such an effective cushion that this Pokémon could fall off a cliff and stand right back up at the bottom, unharmed."
+	},
+	"Wooper":
+	{
+		"id": "194", "type1": "Water", "type2": "Ground", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/7/78/194Wooper.png", "desc": "Wooper usually lives in water. However, it occasionally comes out onto land in search of food. On land, it coats its body with a gooey, toxic film."
+	},
+	"Wormadam Plant Cloak":
+	{
+		"id": "413", "type1": "Bug", "type2": "Grass", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/d/db/413Wormadam-Plant.png", "desc": "When BURMY evolved, its cloak became a part of this Pokémon’s body. The cloak is never shed."
+	},
+	"Wormadam Sand Cloak":
+	{
+		"id": "413", "type1": "Bug", "type2": "Ground", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/0/0b/413Wormadam-Trash.png", "desc": "When BURMY evolved, its cloak became a part of this Pokémon’s body. The cloak is never shed."
+	},
+	"Wormadam Trash Cloak":
+	{
+		"id": "413", "type1": "Bug", "type2": "Steel", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/1/1c/413Wormadam-Sandy.png", "desc": "When BURMY evolved, its cloak became a part of this Pokémon’s body. The cloak is never shed."
+	},
+	"Wurmple":
+	{
+		"id": "265", "type1": "Bug", "type2": null, "sr": "0.125", "image": "https://cdn.bulbagarden.net/upload/7/76/265Wurmple.png", "desc": "Using the spikes on its rear end, Wurmple peels the bark off trees and feeds on the sap that oozes out. This Pokémon's feet are tipped with suction pads that allow it to cling to glass without slipping."
+	},
+	"Wynaut":
+	{
+		"id": "360", "type1": "Psychic", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/d/d0/360Wynaut.png", "desc": "Wynaut can always be seen with a big, happy smile on its face. Look at its tail to determine if it is angry. When angered, this Pokémon will be slapping the ground with its tail."
+	},
+	"Xatu":
+	{
+		"id": "178", "type1": "Psychic", "type2": "Flying", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/f/f4/178Xatu.png", "desc": "It’s said that while this Pokémon has the power to predict the future, it’s not powerful enough to change the future it sees."
+	},
+	"Xerneas":
+	{
+		"id": "716", "type1": "Fairy", "type2": null, "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/1/13/716Xerneas.png/250px-716Xerneas.png", "desc": "Legends say it can share eternal life. It slept for a thousand years in the form of a tree before its revival."
+	},
+	"Xurkitree":
+	{
+		"id": "796", "type1": "Electric", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d2/796Xurkitree.png/600px-796Xurkitree.png", "desc": "They’ve been dubbed Ultra Beasts. Some of them stand unmoving, like trees, with their arms and legs stuck into the ground."
+	},
+	"Yamask":
+	{
+		"id": "562", "type1": "Ghost", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/a/a4/562Yamask.png", "desc": "These Pokémon arose from the spirits of people interred in graves in past ages. Each retains memories of its former life."
+	},
+	"Yamper":
+	{
+		"id": "835", "type1": "Electric", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/6/63/835Yamper.png/600px-835Yamper.png", "desc": "This gluttonous Pokémon only assists people with their work because it wants treats. As it runs, it crackles with electricity."
+	},
+	"Yanma":
+	{
+		"id": "193", "type1": "Bug", "type2": "Flying", "sr": "5", "image": "https://cdn.bulbagarden.net/upload/d/dd/193Yanma.png", "desc": "Yanma is capable of seeing 360 degrees without having to move its eyes. It is a great flier that is adept at making sudden stops and turning midair. This Pokémon uses its flying ability to quickly chase down targeted prey."
+	},
+	"Yanmega":
+	{
+		"id": "469", "type1": "Bug", "type2": "Flying", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/e/e6/469Yanmega.png", "desc": "By churning its wings, it creates shock waves that inflict critical internal injuries to foes."
+	},
+	"Yungoos":
+	{
+		"id": "734", "type1": "Normal", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/0/08/734Yungoos.png/600px-734Yungoos.png", "desc": "Its stomach takes up most of its long torso. It’s a big eater, so the amount Trainers have to spend on its food is no laughing matter."
+	},
+	"Yveltal":
+	{
+		"id": "717", "type1": "Dark", "type2": "Flying", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/5/54/717Yveltal.png/250px-717Yveltal.png", "desc": "When this legendary Pokémon's wings and tail feathers spread wide and glow red, it absorbs the life force of living creatures."
+	},
+		"Zabolt":
+	{
+	  "id": null, "type1": "Electric", "type2": "Flying", "sr": "8", "image":"https://media.discordapp.net/attachments/530836340431126563/548309288851079174/Sparakeet_2.png", "desc":"The Electric Pokémon."
+	},
+  "Zacian (Crowned Sword)":
+	{
+		"id": "888", "type1": "Fairy", "type2": "Steel", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/c/ca/888Zacian.png/600px-888Zacian.png", "desc": "Able to cut down anything with a single strike, it became known as the Fairy King’s Sword, and it inspired awe in friend and foe alike."
+	},
+	"Zacian (Hero of Many Battles)":
+	{
+		"id": "888", "type1": "Fairy", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/e/e3/888Zacian-Hero.png", "desc": "This Pokémon has slumbered for many years. Some say it’s Zamazenta’s elder sister—others say the two Pokémon are rivals."
+	},
+	"Zamazenta (Crowned Shield)":
+	{
+		"id": "889", "type1": "Fighting", "type2": "Steel", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/7/72/889Zamazenta.png/600px-889Zamazenta.png", "desc": "Its ability to deflect any attack led to it being known as the Fighting Master’s Shield. It was feared and respected by all."
+	},
+	"Zamazenta (Hero of Many Battles)":
+	{
+		"id": "889", "type1": "Fighting", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/9/97/889Zamazenta-Hero.png", "desc": "This Pokémon slept for aeons while in the form of a statue. It was asleep for so long, people forgot that it ever existed."
+	},
+	"Zangoose":
+	{
+		"id": "335", "type1": "Normal", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/d/d3/335Zangoose.png", "desc": "Memories of battling its archrival Seviper are etched into every cell of Zangoose's body. This Pokémon adroitly dodges attacks with incredible agility."
+	},
+	"Zapdos":
+	{
+		"id": "145", "type1": "Electric", "type2": "Flying", "sr": "14", "image": "https://cdn.bulbagarden.net/upload/e/e3/145Zapdos.png", "desc": "This legendary bird Pokémon is said to appear when the sky turns dark and lightning showers down."
+	},
+	"Zarude":
+	{
+	  "id": "893", "type1": "Dark", "type2": "Grass", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a5/893Zarude.png/600px-893Zarude.png", "desc": "Within dense forests, this Pokémon lives in a pack with others of its kind. It's incredibly aggressive, and the other Pokémon of the forest fear it."
+	},
+	"Zebstrika":
+	{
+		"id": "523", "type1": "Electric", "type2": null, "sr": "10", "image": "https://cdn.bulbagarden.net/upload/a/a1/523Zebstrika.png", "desc": "This ill-tempered Pokémon is dangerous because when it's angry, it shoots lightning from its mane in all directions."
+	},
+	"Zekrom":
+	{
+		"id": "644", "type1": "Dragon", "type2": "Electric", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/8/81/644Zekrom.png", "desc": "This Pokémon appears in legends. In its tail, it has a giant generator that creates electricity."
+	},
+	"Zeraora":
+	{
+		"id": "807", "type1": "Electric", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a7/807Zeraora.png/600px-807Zeraora.png", "desc": "It electrifies its claws and tears its opponents apart with them. Even if they dodge its attack, they’ll be electrocuted by the flying sparks."
+	},
+	"Zigzagoon":
+	{
+		"id": "263", "type1": "Normal", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/4/47/263Zigzagoon.png", "desc": "Zigzagoon restlessly wanders everywhere at all times. This Pokémon does so because it is very curious. It becomes interested in anything that it happens to see."
+	},
+	"Zoroark":
+	{
+		"id": "571", "type1": "Dark", "type2": null, "sr": "12", "image": "https://cdn.bulbagarden.net/upload/a/a6/571Zoroark.png", "desc": "Each has the ability to fool a large group of people simultaneously. They protect their lair with illusory scenery."
+	},
+	"Zorua":
+	{
+		"id": "570", "type1": "Dark", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/2/2b/570Zorua.png", "desc": "To protect themselves from danger, they hide their true identities by transforming into people and Pokémon."
+	},
+	"Zubat":
+	{
+		"id": "41", "type1": "Poison", "type2": "Flying", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/d/da/041Zubat.png", "desc": "Emits ultrasonic cries while it flies. They act as a sonar used to check for objects in its way."
+	},
+	"Zweilous":
+	{
+		"id": "634", "type1": "Dark", "type2": "Dragon", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/a/a6/634Zweilous.png", "desc": "Since their two heads do not get along and compete with each other for food, they always eat too much."
+	},
+	"Zygarde 10% Forme":
+	{
+		"id": "718", "type1": "Dragon", "type2": "Ground", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/9/94/718Zygarde-10Percent.png/600px-718Zygarde-10Percent.png", "desc": "Its sharp fangs make short work of finishing off its enemies, but it's unable to maintain this body indefinitely. After a period of time, it falls apart."
+	},
+	"Zygarde 50% Forme":
+	{
+		"id": "718", "type1": "Dragon", "type2": "Ground", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/3/3a/718Zygarde.png/600px-718Zygarde.png", "desc": "This is Zygarde's form when it has gathered 50% of its cells. It wipes out all those who oppose it, showing not a shred of mercy."
+	},
+	"Zygarde Complete Form":
+	{
+		"id": "718", "type1": "Dragon", "type2": "Ground", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/9/91/718Zygarde-Complete.png/600px-718Zygarde-Complete.png", "desc": "This is Zygarde's form at times when it uses its overwhelming power to suppress those who endanger the ecosystem."
+	},
+	"Error":
+	{
+	  "type1": "???", "type2": "???", "sr": "???", "id": "???"
+	}
+}
