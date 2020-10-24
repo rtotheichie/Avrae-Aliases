@@ -435,6 +435,18 @@
 	{
 		"id": "332", "type1": "Grass", "type2": "Dark", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/4/41/332Cacturne.png", "desc": "During the daytime, Cacturne remains unmoving so that it does not lose any moisture to the harsh desert sun. This Pokémon becomes active at night when the temperature drops."
 	},
+	"Calyrex":
+	{
+	  "id": "898", "type1": "Psychic", "type2": "Grass", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/3/3c/898Calyrex.png/600px-898Calyrex.png", "desc": "Calyrex is known in legend as a king that ruled over Galar in ancient times. It has the power to cause hearts to mend and plants to spring forth."
+	},
+	"Calyrex (Ice Rider)":
+	{
+	  "id": "898", "type1": "Psychic", "type2": "Ice", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/2/20/HOME898I.png", "desc": "According to lore, this Pokémon showed no mercy to those who got in its way, yet it would heal its opponents' wounds after battle."	  
+	},
+	"Calyrex (Shadow Rider)":
+	{
+	  "id": "898", "type1": "Psychic", "type2": "Ghost", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/f/f2/HOME898S.png", "desc": "Legend says that by using its power to see all events from past to future, this Pokémon saved the creatures of a forest from a meteorite strike."	  
+	},	
 	"Camerupt":
 	{
 		"id": "323", "type1": "Fire", "type2": "Ground", "sr": "9", "image": "https://cdn.bulbagarden.net/upload/7/7d/323Camerupt.png", "desc": "Camerupt has a volcano inside its body. Magma of 18,000 degrees Fahrenheit courses through its body. Occasionally, the humps on this Pokémon's back erupt, spewing the superheated magma."
