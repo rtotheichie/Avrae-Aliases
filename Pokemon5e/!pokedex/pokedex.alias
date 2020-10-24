@@ -1,4 +1,3 @@
-```py
 embed <drac2>
 args = &ARGS&
 if "(F)" in args:
@@ -165,4 +164,3 @@ set_cvar("PokedexCaught",dump_json(CaughtList))
 set_cvar("PokedexSeen",dump_json(SeenList))
 return " ".join(out)
 </drac2>
-```
