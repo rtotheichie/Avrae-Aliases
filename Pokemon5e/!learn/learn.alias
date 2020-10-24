@@ -1,25 +1,29 @@
 !alias learn <drac2>
 args = &ARGS&
-a = argparse(args) if args else ''
-l = level
 help = args[0]=="help" or args[0]=="Help" or args[0]=="?" or not args
 if help:
     HELP = get_gvar("a76acae4-5e61-45de-8e85-1d78dee4ea65")
 if not help:
-    dmg = "damage"
-    STAB = '0' if l<3 else '1' if l<7 else '2' if l<11 else '3' if l <15 else '4' if l<19 else '5'
-    dmg_Bonus = STAB+"+"+a.last('d','0',str) if a.get("STAB") or a.get("stab") else a.last('d',0)
-    atk_Bonus = a.last('b','0',str)
-    PP_bonus = a.last('pp','0',str)
     Move_Name = args[0].title().replace("'S","'s")
+    if args:
+        args = argparse(args)
+    dmg = "damage"
+    if args.get('stab') or args.get('STAB'):
+        STAB = '0' if level<3 else '1' if level<7 else '2' if level<11 else '3' if level<15 else '4' if level<19 else '5'
+    if STAB:
+        dmg_Bonus = STAB+"+"+args.last('d','0',str) if args.get("STAB") or args.get("stab")
+    else:
+        args.last('d',0)
+    atk_Bonus = args.last('b','0',str)
+    PP_bonus = args.last('pp','0',str)
     gvar = load_json(get_gvar("31cb48fb-f491-4c43-bde1-9a89379c0cc3")) if Move_Name[0] in "ABCD" else load_json(get_gvar("df9bea71-6a5a-4e62-8c2c-2f81e2ac3b6e")) if Move_Name[0] in "EFGH" else load_json(get_gvar("d4056cb7-89d1-48df-af57-e4a225bd58fa")) if Move_Name[0] in "IJKLMove_NameO" else load_json(get_gvar("96045d79-0720-4669-a10f-bd93bc7a1c28")) if Move_Name[0] in "PQR" else load_json(get_gvar("6295d6d5-DB77-4c21-86f1-6dc4d92ca2f7")) if Move_Name[0] in "ST" else load_json(get_gvar("93845614-47fb-4c0c-a15b-9b22720b1183")) if Move_Name[0] in "UVWXYZ" else err("I don't think that's a valid move name")
     dmg_level = "1" if l <5 else "5" if l<10 else "10" if l<17 else "17"
     IC = dump_json(gvar[Move_Name]["code"])
     dmg_String = gvar[Move_Name][dmg][dmg_level] if dmg in gvar[Move_Name] else ''
-    if a.get('ea') or a.get('adept'):
+    if args.get('ea') or args.get('adept'):
         dmg_String = dmg_String[:dmg_String.index("+")]+"mi2"+dmg_String[dmg_String.index("+"):]
         IC = IC.replace(']"','^]"')
-    if a.get('savage') or (a.get('technician') and gvar[Move_Name]["PP"]>=15):
+    if args.get('savage') or (args.get('technician') and gvar[Move_Name]["PP"]>=15):
         dmg_String = "("+dmg_String[:dmg_String.index("+")]+","+dmg_String[:dmg_String.index("+")]+")kh1"+dmg_String[dmg_String.index("+"):]
     dmg_String = dmg_String+"+"+dmg_Bonus if dmg_Bonus else dmg_String
     atk_String = gvar[Move_Name]["attack"] if "attack" in gvar[Move_Name] else ''
