@@ -1,0 +1,4 @@
+embed {{set_cvar("PokedexSortMethod","Alpha")}}
+-title "You changed your default sorting method."
+-desc "Your Pokedex will now be sorted alphabetically."
+-thumb "https://cdn.bulbagarden.net/upload/4/4f/Pok%C3%A9dex_GSC.png"
