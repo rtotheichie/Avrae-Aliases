@@ -1,0 +1,35 @@
+embed <drac2>
+TableA = load_json(get_gvar("c237b15a-5b0d-4240-9ee3-c3006f0e53de"))
+TableF = load_json(get_gvar("a8e1c52a-f2cf-4f75-ba89-25020ac57dcc"))
+TableO = load_json(get_gvar("ffb3193c-612a-429e-acb4-c3b0ce91a02e"))
+TableU = load_json(get_gvar("0ab631b4-78c6-455b-8b43-7b72a4504c8f"))
+set_cvar_nx("PokedexCaught","[]")
+set_cvar_nx("PokedexSeen","[]")
+CaughtList = load_json(get("PokedexCaught","[]"))
+SeenList = load_json(get("PokedexSeen","[]"))
+out = []
+out.append(f'-title "{name} checks their Pokedex!"')
+n = "\n".join
+out.append(f"""-desc "**__Pokemon Caught:__**" """)
+srDict = {}
+for pokemon in CaughtList:
+    Table = TableA if pokemon[0] in "ABCDE" else TableF if pokemon[0] in "FGHIJKLMN" else TableO if pokemon[0] in "OPQRST" else TableU
+    srDict.update({Table[pokemon].sr:srDict.get(Table[pokemon].sr,[])+[pokemon]})
+srKeys = list(srDict)
+srKeys.remove("???")
+srKeys.sort(key=float)
+srKeys.append("???")
+newSrDict = {}
+for SR in srKeys:
+    newSrDict.update({SR:srDict[SR]})
+srDict = newSrDict
+for SR in srDict:
+    out.append(f""" -f "**__SR: {SR}__**|{n(srDict[SR])}|inline" """)
+out.append(f'-f "You have caught a total of **{len(CaughtList)}** Pokemon!"')
+out.append('-thumb "https://cdn.bulbagarden.net/upload/4/4f/Pok%C3%A9dex_GSC.png"')
+CaughtList.sort()
+SeenList.sort()
+set_cvar("PokedexCaught",dump_json(CaughtList))
+set_cvar("PokedexSeen",dump_json(SeenList))
+return " ".join(out)
+</drac2>
