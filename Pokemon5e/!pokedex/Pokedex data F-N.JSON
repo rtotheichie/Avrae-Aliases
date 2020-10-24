@@ -251,6 +251,10 @@
 	{
 		"id": "431", "type1": "Normal", "type2": null, "sr": "2", "image": "https://cdn.bulbagarden.net/upload/2/26/431Glameow.png", "desc": "It claws if displeased and purrs when affectionate. Its fickleness is very popular among some."
 	},
+	"Glastrier":
+	{
+	  "id": "896", "type1": "Ice", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/2/29/HOME896.png", "desc":"Glastrier emits intense cold from its hooves. It's also a belligerent Pokémon—anything it wants, it takes by force."
+	},
 	"Gligar":
 	{
 		"id": "207", "type1": "Ground", "type2": "Flying", "sr": "4", "image": "https://cdn.bulbagarden.net/upload/0/04/207Gligar.png", "desc": "Gligar glides through the air without a sound as if it were sliding. This Pokémon hangs on to the face of its foe using its clawed hind legs and the large pincers on its forelegs, then injects the prey with its poison barb."
