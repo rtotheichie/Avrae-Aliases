@@ -1,0 +1,59 @@
+embed <drac2>
+args = &ARGS&
+TableA = load_json(get_gvar("c237b15a-5b0d-4240-9ee3-c3006f0e53de"))
+TableF = load_json(get_gvar("a8e1c52a-f2cf-4f75-ba89-25020ac57dcc"))
+TableO = load_json(get_gvar("ffb3193c-612a-429e-acb4-c3b0ce91a02e"))
+TableU = load_json(get_gvar("0ab631b4-78c6-455b-8b43-7b72a4504c8f"))
+set_cvar_nx("PokedexCaught","[]")
+set_cvar_nx("PokedexSeen","[]")
+sort_method = get("PokedexSortMethod","")
+CaughtList = load_json(get("PokedexCaught","[]"))
+SeenList = load_json(get("PokedexSeen","[]"))
+out = []
+out.append(f'-title "{name} checks their Pokedex!"')
+n = "\n".join
+#error checking
+if CaughtList:
+    CaughtList=list({x:"" for x in CaughtList})
+    for x in CaughtList:
+        if x not in TableA and x not in TableF and x not in TableO and x not in TableU:
+            CaughtList.remove(x)
+if SeenList:
+    SeenList=list({x:"" for x in SeenList})
+    for y in SeenList:
+        if y not in TableA and y not in TableF and y not in TableO and x not in TableU:
+            SeenList.remove(y)
+        if y in CaughtList:
+            SeenList.remove(y)
+out.append(f"""-desc "**__Pokemon Seen:__**" """)
+if not sort_method or sort_method=="Alpha":
+    for y in ['ABC','DEF','GHI','JKL','MNO','PQR','STU','VWX','YZ']:
+        viewList = [x for x in SeenList if x[0] in y]
+        if viewList:
+            out.append(f"""-f "**__{y[0]}-{y[-1]}__**|{n(viewList)}|inline" """)
+if sort_method=="SR":
+    for y in ["0.125","0.25","0.5","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"]:
+        viewList=[]
+        for z in SeenList:
+            Table=TableA if z[0] in "ABCDE" else TableF if z[0] in "FGHIJKLMN" else TableO if z[0] in "OPQRST" else TableU
+            if Table[z]["sr"]==y:
+                viewList.append(z)
+        if viewList:
+            out.append(f"""-f "**__SR: {y}__**|{n(viewList)}|inline" """)
+if sort_method=="Type":
+    for y in ["Normal", "Grass", "Water", "Fire", "Electric", "Rock", "Flying", "Bug", "Dark", "Ghost", "Psychic", "Steel", "Fairy", "Ground", "Poison", "Fighting", "Ice", "Dragon"]:
+        viewList=[]
+        for z in SeenList:
+            Table=TableA if z[0] in "ABCDE" else TableF if z[0] in "FGHIJKLMN" else TableO if z[0] in "OPQRST" else TableU
+            if Table[z]["type1"]==y or Table[z]["type2"]==y:
+                viewList.append(z)
+        if viewList:
+            out.append(f"""-f "**__{y}__**|{n(viewList)}|inline" """)
+out.append(f'-f "You have Seen a total of **{len(SeenList)}** Pokemon!"')
+out.append('-thumb "https://cdn.bulbagarden.net/upload/4/4f/Pok%C3%A9dex_GSC.png"')
+CaughtList.sort()
+SeenList.sort()
+set_cvar("PokedexCaught",dump_json(CaughtList))
+set_cvar("PokedexSeen",dump_json(SeenList))
+return " ".join(out)
+</drac2>
