@@ -129,7 +129,7 @@
 	},
 	"Galarian Articuno":
 	{
-	  "id": "144G", "type1": "Psychic", "type2": "Flying", "sr": "15", "image": "https://img.pokemondb.net/artwork/large/articuno-galarian.jpg", "desc": ""
+	  "id": "144G", "type1": "Psychic", "type2": "Flying", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/d/df/144Articuno-Galar.png/600px-144Articuno-Galar.png", "desc": ""
 	},
 	"Galarian Corsola":
 	{
@@ -149,7 +149,7 @@
 	},
 	"Galarian Moltres":
 	{
-	  "id": "146G", "type1": "Dark", "type2": "Flying", "sr": "15", "image": "https://img.pokemondb.net/artwork/large/moltres-galarian.jpg", "desc":""
+	  "id": "146G", "type1": "Dark", "type2": "Flying", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/f/f7/146Moltres-Galar.png/600px-146Moltres-Galar.png", "desc":""
 	},
 	"Galarian Ponyta":
 	{
@@ -173,7 +173,7 @@
 	},
 	"Galarian Zapdos":
 	{
-	  "id": "145G", "type1": "Fighting", "type2": "Flying", "sr": "15", "image": "https://img.pokemondb.net/artwork/large/zapdos-galarian.jpg", "desc": ""
+	  "id": "145G", "type1": "Fighting", "type2": "Flying", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/1/13/145Zapdos-Galar.png/600px-145Zapdos-Galar.png", "desc": ""
 	},
 	"Galarian Zigzagoon":
 	{
