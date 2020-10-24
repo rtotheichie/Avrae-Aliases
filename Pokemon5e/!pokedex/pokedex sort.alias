@@ -1,0 +1,16 @@
+embed <drac2>
+cvar_name = "PokedexSortMethod"
+out=[]
+out.append("-title 'Your current sorting method is...'")
+default_sort=get(cvar_name,"")
+if default_sort=="Alpha":
+    out.append("-desc 'Alphabetical.'")
+elif default_sort=="SR":
+    out.append("-desc 'Species Rating.'")
+elif default_sort=="Type":
+    out.append("-desc 'Pokemon Type.'")
+else:
+    out.append ('-desc "Not set."')
+out.append('-thumb "https://cdn.bulbagarden.net/upload/4/4f/Pok%C3%A9dex_GSC.png"')
+return " ".join(out)
+</drac2>
