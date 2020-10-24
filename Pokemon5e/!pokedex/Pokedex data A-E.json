@@ -1,0 +1,1110 @@
+{
+	"Abomasnow":
+	{
+		"id": "460", "type1": "Grass", "type2": "Ice", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/3/3b/460Abomasnow.png", "desc": "It whips up blizzards in mountains that are always buried in snow. It is the abominable snowman."
+	},
+	"Abra":
+	{
+		"id": "63", "type1": "Psychic", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/6/62/063Abra.png", "desc": "Sleeps 18 hours a day. If it senses danger, it will teleport itself to safety even as it sleeps."
+	},
+	"Absol":
+	{
+		"id": "359", "type1": "Dark", "type2": null, "sr": "12", "image": "https://cdn.bulbagarden.net/upload/0/00/359Absol.png", "desc": "Every time Absol appears before people, it is followed by a disaster such as an earthquake or a tidal wave. As a result, it came to be known as the disaster Pokémon."
+	},
+	"Accelgor":
+	{
+		"id": "617", "type1": "Bug", "type2": null, "sr": "10", "image": "https://cdn.bulbagarden.net/upload/3/34/617Accelgor.png", "desc": "Having removed its heavy shell, it becomes very light and can fight with ninja-like movements."
+	},
+	"Aegislash":
+	{
+		"id": "681", "type1": "Steel", "type2": "Ghost", "sr": "13", "image": "https://archives.bulbagarden.net/media/upload/f/f9/681Aegislash-Blade.png", "desc": "Generations of kings were attended by these Pokémon, which used their spectral power to manipulate and control people and Pokémon."
+	},
+	"Aerodactyl":
+	{
+		"id": "142", "type1": "Rock", "type2": "Flying", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/e/e8/142Aerodactyl.png", "desc": "A savage Pokémon that died out in ancient times. It was resurrected using DNA taken from amber."
+	},
+	"Aggron":
+	{
+		"id": "306", "type1": "Steel", "type2": "Rock", "sr": "14", "image": "https://cdn.bulbagarden.net/upload/6/6d/306Aggron.png", "desc": "Aggron claims an entire mountain as its own territory. It mercilessly beats up anything that violates its environment. This Pokémon vigilantly patrols its territory at all times."
+	},
+	"Aipom":
+	{
+		"id": "190", "type1": "Normal", "type2": null, "sr": "3", "image": "https://cdn.bulbagarden.net/upload/4/42/190Aipom.png", "desc": "It searches for prey from the tops of trees. When it spots its favorite food, Bounsweet, Aipom gets excited and pounces."
+	},
+	"Alakazam":
+	{
+		"id": "65", "type1": "Psychic", "type2": null, "sr": "12", "image": "https://cdn.bulbagarden.net/upload/c/cc/065Alakazam.png", "desc": "A Pokémon that can memorize anything. It never forgets what it learns—that’s why this Pokémon is smart."
+	},
+	"Alcremie":
+	{
+		"id": "869", "type1": "Fairy", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e0/869Alcremie.png/600px-869Alcremie.png", "desc": "The moment it evolved, it took on a bitter flavor. This is because of the way its cells spontaneously shifted during evolution."
+	},
+	"Alolan Geodude":
+	{
+		"id": "74A", "type1": "Rock", "type2": "Electric", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/4/43/074Geodude-Alola.png", "desc": "Geodude compete against each other with headbutts. The iron sand on their heads will stick to whichever one has stronger magnetism."
+	},
+	"Alolan Golem":
+	{
+		"id": "76A", "type1": "Rock", "type2": "Electric", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/0/07/076Golem-Alola.png", "desc": "It uses magnetism to accelerate and fire off rocks tinged with electricity. Even if it doesn’t score a direct hit, the jolt of electricity will do the job."
+	},
+	"Alolan Graveler":
+	{
+		"id": "75A", "type1": "Rock", "type2": "Electric", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/6/62/075Graveler-Alola.png", "desc": "They eat rocks and often get into a scrap over them. The shock of Graveler smashing together causes a flash of light and a booming noise."
+	},
+	"Alolan Grimer":
+	{
+		"id": "88A", "type1": "Dark", "type2": "Poison", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e0/088Grimer-Alola.png/600px-088Grimer-Alola.png", "desc": "It has a passion for trash above all else, speedily digesting it and creating brilliant crystals of sparkling poison."
+	},
+	"Alolan Marowak":
+	{
+		"id": "105A", "type1": "Fire", "type2": "Ghost", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/0/06/105Marowak-Alola.png/600px-105Marowak-Alola.png", "desc": "When it beats opponents with its bone, the cursed flames spread to them. No amount of water will stop those flames from burning."
+	},
+	"Alolan Meowth":
+	{
+		"id": "52A", "type1": "Dark", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e3/052Meowth-Alola.png/600px-052Meowth-Alola.png", "desc": "Deeply proud and keenly smart, this Pokémon moves with cunning during battle and relentlessly attacks enemies’ weak points."
+	},
+	"Alolan Muk":
+	{
+		"id": "89A", "type1": "Poison", "type2": "Dark", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/thumb/1/15/089Muk-Alola.png/600px-089Muk-Alola.png", "desc": "What look like fangs and claws are actually crystallized poison that will afflict you at a mere touch, so don’t get too close."
+	},
+	"Alolan Ninetales":
+	{
+		"id": "38A", "type1": "Ice", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/2/26/038Ninetales-Alola.png/600px-038Ninetales-Alola.png", "desc": "While it will guide travelers who get lost on a snowy mountain down to the mountain’s base, it won’t forgive anyone who harms nature."
+	},
+	"Alolan Persian":
+	{
+		"id": "53A", "type1": "Dark", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/8/80/053Persian-Alola.png/600px-053Persian-Alola.png", "desc": "This Pokémon is one tough opponent. Not only does it have formidable physical abilities, but it’s also not above fighting dirty."
+	},
+	"Alolan Raichu":
+	{
+		"id": "26A", "type1": "Electric", "type2": "Psychic", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/3/3a/026Raichu-Alola.png/600px-026Raichu-Alola.png", "desc": "It uses psychokinesis to control electricity. It hops aboard its own tail, using psychic power to lift the tail and move about while riding it."
+	},
+	"Alolan Raticate":
+	{
+		"id": "20A", "type1": "Dark", "type2": "Normal", "sr": "5", "image": "https://cdn.bulbagarden.net/upload/thumb/7/71/020Raticate-Alola.png/600px-020Raticate-Alola.png", "desc": "It forms a group of Rattata, which it assumes command of. Each group has its own territory, and disputes over food happen often."
+	},
+	"Alolan Rattata":
+	{
+		"id": "19A", "type1": "Dark", "type2": "Normal", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/9/91/019Rattata-Alola.png/600px-019Rattata-Alola.png", "desc": "With its incisors, it gnaws through doors and infiltrates people’s homes. Then, with a twitch of its whiskers, it steals whatever food it finds."
+	},
+	"Alolan Sandshrew":
+	{
+		"id": "27A", "type1": "Ice", "type2": "Steel", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/thumb/c/c9/027Sandshrew-Alola.png/600px-027Sandshrew-Alola.png", "desc": "It lives on snowy mountains. Its steel shell is very hard—so much so, it can’t roll its body up into a ball."
+	},
+	"Alolan Sandslash":
+	{
+		"id": "28A", "type1": "Ice", "type2": "Steel", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/b/bd/028Sandslash-Alola.png/600px-028Sandslash-Alola.png", "desc": "After fleeing a volcanic eruption, it ended up moving to an area of snowy mountains. Its ice shell is as hard as steel."
+	},
+	"Alolan Vulpix":
+	{
+		"id": "37A", "type1": "Ice", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/3/35/037Vulpix-Alola.png/600px-037Vulpix-Alola.png", "desc": "It exhales air colder than -58 degrees Fahrenheit. Elderly people in Alola call this Pokémon by an older name—Keokeo."
+	},
+	"Alomomola":
+	{
+		"id": "594", "type1": "Water", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/1/10/594Alomomola.png", "desc": "Floating in the open sea is how they live. When they find a wounded Pokémon, they embrace it and bring it to shore."
+	},
+	"Altaria":
+	{
+		"id": "334", "type1": "Dragon", "type2": "Flying", "sr": "12", "image": "https://cdn.bulbagarden.net/upload/d/da/334Altaria.png", "desc": "Altaria sings in a gorgeous soprano. Its wings are like cotton clouds. This Pokémon catches updrafts with its buoyant wings and soars way up into the wild blue yonder."
+	},
+	"Amaura":
+	{
+		"id": "698", "type1": "Rock", "type2": "Ice", "sr": "2", "image": "https://cdn.bulbagarden.net/upload/thumb/2/2a/698Amaura.png/250px-698Amaura.png", "desc": "This ancient Pokémon was restored from part of its body that had been frozen in ice for over 100 million years."
+	},
+	"Ambipom":
+	{
+		"id": "424", "type1": "Normal", "type2": null, "sr": "11", "image": "https://cdn.bulbagarden.net/upload/8/86/424Ambipom.png", "desc": "To eat, it deftly shucks nuts with its two tails. It rarely uses its arms now."
+	},
+	"Amecune":
+	{
+	  "id": null, "type1": "Water", "type2": null, "sr": "5", "image": "https://images-ext-1.discordapp.net/external/iRLk5GRDPn2LLAqcJ88_wBVVAkzO1ugoQO6NvrelBXg/https/media.discordapp.net/attachments/426076867884351488/724805401954091078/image0.png", "desc": "The Stream Pokémon. As it grows it begins to develop purifying powers. It is said that the water purified by a Amecune, is the freshest water possible."
+	},
+	"Amoonguss":
+	{
+		"id": "591", "type1": "Grass", "type2": "Poison", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/1/13/591Amoonguss.png", "desc": "They show off their Poké Ball caps to lure prey, but very few Pokémon are fooled by this."
+	},
+	"Ampharos":
+	{
+		"id": "181", "type1": "Electric", "type2": null, "sr": "12", "image": "https://cdn.bulbagarden.net/upload/4/47/181Ampharos.png", "desc": "The light from its tail can be seen from space. This is why you can always tell exactly where it is, which is why it usually keeps the light off."
+	},
+	"Anorith":
+	{
+		"id": "347", "type1": "Rock", "type2": "Bug", "sr": "2", "image": "https://cdn.bulbagarden.net/upload/4/45/347Anorith.png", "desc": "Anorith was regenerated from a prehistoric fossil. This primitive Pokémon once lived in warm seas. It grips its prey firmly between its two large claws."
+	},
+	"Appletun":
+	{
+		"id": "842", "type1": "Grass", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/3/36/842Appletun.png", "desc": "Its body is covered in sweet nectar, and the skin on its back is especially yummy. Children used to have it as a snack."
+	},
+	"Applin":
+	{
+		"id": "840", "type1": "Grass", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/c/cc/840Applin.png", "desc": "As soon as it’s born, it burrows into an apple. Not only does the apple serve as its food source, but the flavor of the fruit determines its evolution."
+	},
+	"Araquanid":
+	{
+		"id": "752", "type1": "Water", "type2": "Bug", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/8/82/752Araquanid.png/600px-752Araquanid.png", "desc": "Despite what its appearance suggests, it cares for others. If it finds vulnerable, weak Pokémon, it protectively brings them into its water bubble."
+	},
+	"Arbok":
+	{
+		"id": "24", "type1": "Poison", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/c/cd/024Arbok.png", "desc": "The frightening patterns on its belly have been studied. Six variations have been confirmed."
+	},
+	"Arcanine":
+	{
+		"id": "59", "type1": "Fire", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/b/b8/059Arcanine.png", "desc": "A legendary Pokémon in the East. Many people are charmed by the grace and beauty of its running."
+	},
+	"Arceus":
+	{
+		"id": "493", "type1": "Normal", "type2": null, "sr": "15", "image": "https://archives.bulbagarden.net/media/upload/4/40/493Arceus_Normal_Dream.png", "desc": "It is described in mythology as the Pokémon that shaped the universe with its 1,000 arms."
+	},
+	"Archen":
+	{
+		"id": "566", "type1": "Rock", "type2": "Flying", "sr": "3", "image": "https://cdn.bulbagarden.net/upload/a/a3/566Archen.png", "desc": "Revived from a fossil, this Pokémon is thought to be the ancestor of all bird Pokémon."
+	},
+	"Archeops":
+	{
+		"id": "567", "type1": "Rock", "type2": "Flying", "sr": "12", "image": "https://cdn.bulbagarden.net/upload/1/14/567Archeops.png", "desc": "It runs better than it flies. It catches prey by running at speeds comparable to those of an automobile."
+	},
+	"Arctovish":
+	{
+		"id": "883", "type1": "Water", "type2": "Ice", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/0/03/883Arctovish.png", "desc": "Though it’s able to capture prey by freezing its surroundings, it has trouble eating the prey afterward because its mouth is on top of its head."
+	},
+	"Arctozolt":
+	{
+		"id": "881", "type1": "Electric", "type2": "Ice", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/4/40/881Arctozolt.png", "desc": "This Pokémon lived on prehistoric seashores and was able to preserve food with the ice on its body. It went extinct because it moved so slowly."
+	},
+	"Ariados":
+	{
+		"id": "168", "type1": "Bug", "type2": "Poison", "sr": "5", "image": "https://cdn.bulbagarden.net/upload/7/76/168Ariados.png", "desc": "Every night, it wanders around in search of prey, whose movements it restrains by spewing threads before it bites into them with its fangs."
+	},
+	"Armaldo":
+	{
+		"id": "348", "type1": "Rock", "type2": "Bug", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/1/1d/348Armaldo.png", "desc": "Armaldo is a Pokémon species that became extinct in prehistoric times. This Pokémon is said to have walked on its hind legs, which would have been more convenient for life on land."
+	},
+	"Aromatisse":
+	{
+		"id": "683", "type1": "Fairy", "type2": null, "sr": "12", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d9/683Aromatisse.png/250px-683Aromatisse.png", "desc": "It devises various scents, pleasant and unpleasant, and emits scents that its enemies dislike in order to gain an edge in battle."
+	},
+	"Aron":
+	{
+		"id": "304", "type1": "Steel", "type2": "Rock", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/b/bb/304Aron.png", "desc": "This Pokémon has a body of steel. To make its body, Aron feeds on iron ore that it digs from mountains. Occasionally, it causes major trouble by eating bridges and rails."
+	},
+	"Arrokuda":
+	{
+		"id": "846", "type1": "Water", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/a/a9/846Arrokuda.png", "desc": "If it sees any movement around it, this Pokémon charges for it straightaway, leading with its sharply pointed jaw. It’s very proud of that jaw."
+	},
+	"Articuno":
+	{
+		"id": "144", "type1": "Ice", "type2": "Flying", "sr": "14", "image": "https://cdn.bulbagarden.net/upload/4/4e/144Articuno.png", "desc": "A legendary bird Pokémon. It freezes water that is contained in winter air and makes it snow."
+	},
+	"Audino":
+	{
+		"id": "531", "type1": "Normal", "type2": "Fairy", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/f/f5/531Audino.png", "desc": "Its auditory sense is astounding. It has a radarlike ability to understand its surroundings through slight sounds."
+	},
+	"Aurorus":
+	{
+		"id": "699", "type1": "Rock", "type2": "Ice", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/thumb/9/9e/699Aurorus.png/250px-699Aurorus.png", "desc": "The diamond-shaped crystals on its body expel air as cold as -240 degrees Fahrenheit, surrounding its enemies and encasing them in ice."
+	},
+	"Avalugg":
+	{
+		"id": "713", "type1": "Ice", "type2": null, "sr": "13", "image": "https://cdn.bulbagarden.net/upload/thumb/0/04/713Avalugg.png/250px-713Avalugg.png", "desc": "Its ice-covered body is as hard as steel. Its cumbersome frame crushes anything that stands in its way."
+	},
+	"Axew":
+	{
+		"id": "610", "type1": "Dragon", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/5/5c/610Axew.png", "desc": "They mark their territory by leaving gashes in trees with their tusks. If a tusk breaks, a new one grows in quickly."
+	},
+	"Azelf":
+	{
+		"id": "482", "type1": "Psychic", "type2": null, "sr": "15", "image": "https://cdn.bulbagarden.net/upload/d/d0/482Azelf.png", "desc": "Known as “The Being of Willpower.” It sleeps at the bottom of a lake to keep the world in balance."
+	},
+	"Azumarill":
+	{
+		"id": "184", "type1": "Water", "type2": "Fairy", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/a/a5/184Azumarill.png", "desc": "Azumarill's long ears are indispensable sensors. By focusing its hearing, this Pokémon can identify what kinds of prey are around, even in rough and fast-running rivers."
+	},
+	"Azurill":
+	{
+		"id": "298", "type1": "Normal", "type2": "Fairy", "sr": "0.125", "image": "https://cdn.bulbagarden.net/upload/a/ac/298Azurill.png", "desc": "Azurill spins its tail as if it were a lasso, then hurls it far. The momentum of the throw sends its body flying, too. Using this unique action, one of these Pokémon managed to hurl itself a record 33 feet."
+	},
+	"Bagon":
+	{
+		"id": "371", "type1": "Dragon", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/d/d2/371Bagon.png", "desc": "Bagon has a dream of one day soaring in the sky. In doomed efforts to fly, this Pokémon hurls itself off cliffs. As a result of its dives, its head has grown tough and as hard as tempered steel."
+	},
+	"Baltoy":
+	{
+		"id": "343", "type1": "Ground", "type2": "Psychic", "sr": "1", "image": "https://cdn.bulbagarden.net/upload/8/8b/343Baltoy.png", "desc": "Baltoy moves while spinning around on its one foot. Primitive wall paintings depicting this Pokémon living among people were discovered in some ancient ruins."
+	},
+	"Banette":
+	{
+		"id": "354", "type1": "Ghost", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/0/0a/354Banette.png", "desc": "Banette generates energy for laying strong curses by sticking pins into its own body. This Pokémon was originally a pitiful plush doll that was thrown away."
+	},
+	"Barbaracle":
+	{
+		"id": "689", "type1": "Rock", "type2": "Water", "sr": "12", "image": "https://cdn.bulbagarden.net/upload/thumb/4/48/689Barbaracle.png/250px-689Barbaracle.png", "desc": "When they evolve, two Binacle multiply into seven. They fight with the power of seven Binacle."
+	},
+	"Barboach":
+	{
+		"id": "339", "type1": "Water", "type2": "Ground", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/6/60/339Barboach.png", "desc": "Barboach's sensitive whiskers serve as a superb radar system. This Pokémon hides in mud, leaving only its two whiskers exposed while it waits for prey to come along."
+	},
+	"Barraskewda":
+	{
+		"id": "847", "type1": "Water", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/d/d9/847Barraskewda.png", "desc": "This Pokémon has a jaw that’s as sharp as a spear and as strong as steel. Apparently Barraskewda’s flesh is surprisingly tasty, too."
+	},
+	"Basculin":
+	{
+		"id": "550", "type1": "Water", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/2/2f/550Basculin.png", "desc": "Red and blue Basculin usually do not get along, but sometimes members of one school mingle with the other's school."
+	},
+	"Bastiodon":
+	{
+		"id": "411", "type1": "Rock", "type2": "Steel", "sr": "11", "image": "https://cdn.bulbagarden.net/upload/b/bc/411Bastiodon.png", "desc": "Any frontal attack is repulsed. It is a docile Pokémon that feeds on grass and berries."
+	},
+	"Bayleef":
+	{
+		"id": "153", "type1": "Grass", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/c/ca/153Bayleef.png", "desc": "Bayleef's neck is ringed by curled-up leaves. Inside each tubular leaf is a small shoot of a tree. The fragrance of this shoot makes people peppy."
+	},
+	"Beartic":
+	{
+		"id": "614", "type1": "Ice", "type2": null, "sr": "12", "image": "https://cdn.bulbagarden.net/upload/4/40/614Beartic.png", "desc": "It freezes its breath to create fangs and claws of ice to fight with. Cold northern areas are its habitat."
+	},
+	"Beautifly":
+	{
+		"id": "267", "type1": "Bug", "type2": "Flying", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/4/4c/267Beautifly.png", "desc": "Beautifly's favorite food is the sweet pollen of flowers. If you want to see this Pokémon, just leave a potted flower by an open window. Beautifly is sure to come looking for pollen."
+	},
+	"Beedrill":
+	{
+		"id": "15", "type1": "Bug", "type2": "Poison", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/6/61/015Beedrill.png", "desc": "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly."
+	},
+	"Beheeyem":
+	{
+		"id": "606", "type1": "Psychic", "type2": null, "sr": "11", "image": "https://cdn.bulbagarden.net/upload/2/2c/606Beheeyem.png", "desc": "It uses psychic power to control an opponent's brain and tamper with its memories."
+	},
+	"Beldum":
+	{
+		"id": "374", "type1": "Steel", "type2": "Psychic", "sr": "3", "image": "https://cdn.bulbagarden.net/upload/d/d4/374Beldum.png", "desc": "Instead of blood, a powerful magnetic force courses throughout Beldum's body. This Pokémon communicates with others by sending controlled pulses of magnetism."
+	},
+	"Bellossom":
+	{
+		"id": "182", "type1": "Grass", "type2": null, "sr": "13", "image": "https://cdn.bulbagarden.net/upload/c/cd/182Bellossom.png", "desc": "A Bellossom grows flowers more beautifully if it has evolved from a smelly Gloom-the more stinky the better. At night, this Pokémon closes its petals and goes to sleep."
+	},
+	"Bellsprout":
+	{
+		"id": "69", "type1": "Grass", "type2": "Poison", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/a/a2/069Bellsprout.png", "desc": "Prefers hot and humid places. It ensnares tiny bugs with its vines and devours them."
+	},
+	"Bergmite":
+	{
+		"id": "712", "type1": "Ice", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/c/c3/712Bergmite.png/250px-712Bergmite.png", "desc": "It blocks opponents' attacks with the ice that shields its body. It uses cold air to repair any cracks with new ice."
+	},
+	"Bewear":
+	{
+		"id": "760", "type1": "Normal", "type2": "Fighting", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a4/760Bewear.png/600px-760Bewear.png", "desc": "This immensely dangerous Pokémon possesses overwhelming physical strength. Its habitat is generally off-limits."
+	},
+	"Bibarel":
+	{
+		"id": "400", "type1": "Normal", "type2": "Water", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/9/91/400Bibarel.png", "desc": "It makes its nest by damming streams with bark and mud. It is known as an industrious worker."
+	},
+	"Bidoof":
+	{
+		"id": "399", "type1": "Normal", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/f/f5/399Bidoof.png", "desc": "With nerves of steel, nothing can perturb it. It is more agile and active than it appears."
+	},
+	"Binacle":
+	{
+		"id": "688", "type1": "Rock", "type2": "Water", "sr": "1", "image": "https://cdn.bulbagarden.net/upload/thumb/5/5b/688Binacle.png/250px-688Binacle.png", "desc": "Two Binacle live together on one rock. When they fight, one of them will move to a different rock."
+	},
+	"Bisharp":
+	{
+		"id": "625", "type1": "Dark", "type2": "Steel", "sr": "12", "image": "https://cdn.bulbagarden.net/upload/7/74/625Bisharp.png", "desc": "Bisharp pursues prey in the company of a large group of Pawniard. Then Bisharp finishes off the prey."
+	},
+	"Blacephalon":
+	{
+		"id": "806", "type1": "Fire", "type2": "Ghost", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a5/806Blacephalon.png/600px-806Blacephalon.png", "desc": "It slithers toward people. Then, without warning, it triggers the explosion of its own head. It’s apparently one kind of Ultra Beast."
+	},
+	"Black Kyurem":
+	{
+		"id": "646", "type1": "Dragon", "type2": "Ice", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/1/16/646Kyurem-Black.png", "desc": "It can produce ultracold air. Its body is frozen."
+	},
+	"Blastoise":
+	{
+		"id": "9", "type1": "Water", "type2": null, "sr": "13", "image": "https://cdn.bulbagarden.net/upload/0/02/009Blastoise.png", "desc": "Once it takes aim at its enemy, it blasts out water with even more force than a fire hose."
+	},
+	"Blaziken":
+	{
+		"id": "257", "type1": "Fire", "type2": "Fighting", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/9/90/257Blaziken.png", "desc": "In battle, Blaziken blows out intense flames from its wrists and attacks foes courageously. The stronger the foe, the more intensely this Pokémon's wrists burn."
+	},
+	"Blipbug":
+	{
+		"id": "824", "type1": "Bug", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/4/4c/824Blipbug.png", "desc": "Often found in gardens, this Pokémon has hairs on its body that it uses to assess its surroundings."
+	},
+	"Blissey":
+	{
+		"id": "242", "type1": "Normal", "type2": null, "sr": "14", "image": "https://cdn.bulbagarden.net/upload/5/56/242Blissey.png", "desc": "Blissey senses sadness with its fluffy coat of fur. If it does so, this Pokémon will rush over to a sad person, no matter how far away, to share a Lucky Egg that brings a smile to any face."
+	},
+	"Blitzle":
+	{
+		"id": "522", "type1": "Electric", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/a/af/522Blitzle.png", "desc": "When thunderclouds cover the sky, it will appear. It can catch lightning with its mane and store the electricity."
+	},
+	"Blizchick":
+	{
+	   "id": null, "type1": "Ice", "type2": "Flying", "sr": "1", "image": "https://media.discordapp.net/attachments/530836340431126563/548309239941038083/Blizchik.png", "desc": "The Freeze Pokémon. Its forehead is shaped like a shovel so it can get through thick snow, even with its short legs. Wherever it walks, the ground becomes freezing cold."
+	},
+	"Boldore":
+	{
+		"id": "525", "type1": "Rock", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/c/ce/525Boldore.png", "desc": "Because its energy was too great to be contained, the energy leaked and formed orange crystals."
+	},
+	"Boltund":
+	{
+		"id": "836", "type1": "Electric", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/e/e4/836Boltund.png", "desc": "This Pokémon generates electricity and channels it into its legs to keep them going strong. Boltund can run nonstop for three full days."
+	},
+	"Bonsly":
+	{
+		"id": "438", "type1": "Rock", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/e/e2/438Bonsly.png", "desc": "It looks as if it is always crying. It is actually adjusting its body’s fluid levels by eliminating excess."
+	},
+	"Bouffalant":
+	{
+		"id": "626", "type1": "Normal", "type2": null, "sr": "10", "image": "https://cdn.bulbagarden.net/upload/a/a4/626Bouffalant.png", "desc": "They charge wildly and headbutt everything. Their headbutts have enough destructive force to derail a train."
+	},
+	"Bounsweet":
+	{
+		"id": "761", "type1": "Grass", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a1/761Bounsweet.png/600px-761Bounsweet.png", "desc": "Its body gives off a sweet, fruity scent that is extremely appetizing to bird Pokémon."
+	},
+	"Braixen":
+	{
+		"id": "654", "type1": "Fire", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/thumb/0/09/654Braixen.png/250px-654Braixen.png", "desc": "It has a twig stuck in its tail. With friction from its tail fur, it sets the twig on fire and launches into battle."
+	},
+	"Braviary":
+	{
+		"id": "628", "type1": "Normal", "type2": "Flying", "sr": "12", "image": "https://cdn.bulbagarden.net/upload/c/cf/628Braviary.png", "desc": "The more scars they have, the more respect these brave soldiers of the sky get from their peers."
+	},
+	"Breloom":
+	{
+		"id": "286", "type1": "Grass", "type2": "Fighting", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/d/de/286Breloom.png", "desc": "Breloom closes in on its foe with light and sprightly footwork, then throws punches with its stretchy arms. This Pokémon's fighting technique puts boxers to shame."
+	},
+	"Brionne":
+	{
+		"id": "729", "type1": "Water", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/thumb/c/cd/729Brionne.png/600px-729Brionne.png", "desc": "As if dancing, it artfully dodges the attacks of its enemies. All the while, it’s busy forming a bunch of balloons to overwhelm its foes."
+	},
+	"Bronzong":
+	{
+		"id": "437", "type1": "Steel", "type2": "Psychic", "sr": "11", "image": "https://cdn.bulbagarden.net/upload/a/aa/437Bronzong.png", "desc": "One caused a news sensation when it was dug up at a construction site after a 2,000-year sleep."
+	},
+	"Bronzor":
+	{
+		"id": "436", "type1": "Steel", "type2": "Psychic", "sr": "2", "image": "https://cdn.bulbagarden.net/upload/c/c1/436Bronzor.png", "desc": "Implements shaped like it were discovered in ancient tombs. It is unknown if they are related."
+	},
+	"Bruxish":
+	{
+		"id": "779", "type1": "Water", "type2": "Psychic", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/9/92/779Bruxish.png/600px-779Bruxish.png", "desc": "It burrows beneath the sand, radiating psychic power from the protuberance on its head. It waits for prey as it surveys the area."
+	},
+	"Budew":
+	{
+		"id": "406", "type1": "Grass", "type2": "Poison", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/d/d3/406Budew.png", "desc": "Over the winter, it closes its bud and endures the cold. In spring, the bud opens and releases pollen."
+	},
+	"Burno":
+	{
+	  "id": "000", "type1": "Fire", "type2": "Flying", "sr": "1", "image": "https://media.discordapp.net/attachments/530836340431126563/548309282563686410/Kfc.png", "desc": "As a young bird, the fire from its head constantly grows and falls out into molten clumps, sometimes starting forest fires."
+	},
+	"Buizel":
+	{
+		"id": "418", "type1": "Water", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/8/83/418Buizel.png", "desc": "It has a flotation sac that is like an inflatable collar. It floats on water with its head out."
+	},
+	"Bulbasaur":
+	{
+		"id": "1", "type1": "Grass", "type2": "Poison", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/2/21/001Bulbasaur.png", "desc": "It can go for days without eating a single morsel. In the bulb on its back, it stores energy."
+	},
+	"Buneary":
+	{
+		"id": "427", "type1": "Normal", "type2": null, "sr": "2", "image": "https://cdn.bulbagarden.net/upload/a/a7/427Buneary.png", "desc": "It slams foes by sharply uncoiling its rolled ears. It stings enough to make a grown-up cry in pain."
+	},
+	"Bunnelby":
+	{
+		"id": "659", "type1": "Normal", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/7/70/659Bunnelby.png/250px-659Bunnelby.png", "desc": "They use their large ears to dig burrows. They will dig the whole night through."
+	},
+	"Burmy":
+	{
+		"id": "412", "type1": "Bug", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/c/c9/412Burmy-Plant.png", "desc": "To shelter itself from cold, wintry winds, it covers itself with a cloak made of twigs and leaves."
+	},
+	"Butterfree":
+	{
+		"id": "12", "type1": "Bug", "type2": "Flying", "sr": "6", "image": "https://cdn.bulbagarden.net/upload/d/d1/012Butterfree.png", "desc": "Its wings, covered with poisonous powder, repel water. This allows it to fly in the rain."
+	},
+	"Buzzwole":
+	{
+		"id": "794", "type1": "Bug", "type2": "Fighting", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fa/794Buzzwole.png/600px-794Buzzwole.png", "desc": "This Ultra Beast appeared from another world. It shows off its body, but whether that display is a boast or a threat remains unclear."
+	},
+	"Cacnea":
+	{
+		"id": "331", "type1": "Grass", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/1/12/331Cacnea.png", "desc": "The more arid and harsh the environment, the more pretty and fragrant a flower Cacnea grows. This Pokémon battles by wildly swinging its thorny arms."
+	},
+	"Cacturne":
+	{
+		"id": "332", "type1": "Grass", "type2": "Dark", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/4/41/332Cacturne.png", "desc": "During the daytime, Cacturne remains unmoving so that it does not lose any moisture to the harsh desert sun. This Pokémon becomes active at night when the temperature drops."
+	},
+	"Camerupt":
+	{
+		"id": "323", "type1": "Fire", "type2": "Ground", "sr": "9", "image": "https://cdn.bulbagarden.net/upload/7/7d/323Camerupt.png", "desc": "Camerupt has a volcano inside its body. Magma of 18,000 degrees Fahrenheit courses through its body. Occasionally, the humps on this Pokémon's back erupt, spewing the superheated magma."
+	},
+	"Carbink":
+	{
+		"id": "703", "type1": "Rock", "type2": "Fairy", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fa/703Carbink.png/250px-703Carbink.png", "desc": "Born from the temperatures and pressures deep underground, it fires beams from the stone in its head."
+	},
+	"Carkol":
+	{
+		"id": "838", "type1": "Rock", "type2": "Fire", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/e/e1/838Carkol.png", "desc": "By rapidly rolling its legs, it can travel at over 18 mph. The temperature of the flames it breathes exceeds 1,800 degrees Fahrenheit."
+	},
+	"Carnivine":
+	{
+		"id": "455", "type1": "Grass", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/d/df/455Carnivine.png", "desc": "It attracts prey with its sweet-smelling saliva, then chomps down. It takes a whole day to eat prey."
+	},
+	"Carracosta":
+	{
+		"id": "565", "type1": "Water", "type2": "Rock", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/d/d0/565Carracosta.png", "desc": "Incredible jaw strength enables them to chew up steel beams and rocks along with their prey."
+	},
+	"Carvanha":
+	{
+		"id": "318", "type1": "Water", "type2": "Dark", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/9/98/318Carvanha.png", "desc": "If anything invades Carvanha's territory, it will swarm and tear at the intruder with its pointed fangs. On its own, however, this Pokémon turns suddenly timid."
+	},
+	"Cascoon":
+	{
+		"id": "268", "type1": "Bug", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/a/a3/268Cascoon.png", "desc": "Cascoon makes its protective cocoon by wrapping its body entirely with a fine silk from its mouth. Once the silk goes around its body, it hardens. This Pokémon prepares for its evolution inside the cocoon."
+	},
+	"Castform":
+	{
+		"id": "351", "type1": "Normal", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/f/f3/351Castform.png", "desc": "Castform's appearance changes with the weather. This Pokémon gained the ability to use the vast power of nature to protect its tiny body."
+	},
+	"Castform Rainy":
+	{
+		"id": "351", "type1": "Water", "type2": null, "sr": "5", "image": "https://img.pokemondb.net/artwork/vector/castform-rainy.png", "desc": "Castform's appearance changes with the weather. This Pokémon gained the ability to use the vast power of nature to protect its tiny body."
+	},
+	"Castform Snowy":
+	{
+		"id": "351", "type1": "Ice", "type2": null, "sr": "5", "image": "https://img.pokemondb.net/artwork/vector/castform-snowy.png", "desc": "Castform's appearance changes with the weather. This Pokémon gained the ability to use the vast power of nature to protect its tiny body."
+	},
+	"Castform Sunny":
+	{
+		"id": "351", "type1": "Fire", "type2": null, "sr": "5", "image": "https://img.pokemondb.net/artwork/vector/castform-sunny.png", "desc": "Castform's appearance changes with the weather. This Pokémon gained the ability to use the vast power of nature to protect its tiny body."
+	},
+	"Caterpie":
+	{
+		"id": "10", "type1": "Bug", "type2": null, "sr": "0.125", "image": "https://cdn.bulbagarden.net/upload/5/5d/010Caterpie.png", "desc": "If you touch the feeler on top of its head, it will release a horrible stink to protect itself."
+	},
+	"Celebi":
+	{
+		"id": "251", "type1": "Grass", "type2": "Psychic", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/e/e7/251Celebi.png", "desc": "This Pokémon came from the future by crossing over time. It is thought that so long as Celebi appears, a bright and shining future awaits us."
+	},
+	"Celesteela":
+	{
+		"id": "797", "type1": "Steel", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/8/89/797Celesteela.png/600px-797Celesteela.png", "desc": "One of the dangerous UBs, high energy readings can be detected coming from both of its huge arms."
+	},
+	"Centiskorch":
+	{
+		"id": "851", "type1": "Fire", "type2": "Bug", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ed/851Centiskorch.png/600px-851Centiskorch.png", "desc": "While its burning body is already dangerous on its own, this excessively hostile Pokémon also has large and very sharp fangs."
+	},
+	"Chandelure":
+	{
+		"id": "609", "type1": "Ghost", "type2": "Fire", "sr": "14", "image": "https://cdn.bulbagarden.net/upload/6/65/609Chandelure.png", "desc": "Being consumed in Chandelure's flame burns up the spirit, leaving the body behind."
+	},
+	"Chansey":
+	{
+		"id": "113", "type1": "Normal", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/c/cd/113Chansey.png", "desc": "A gentle and kindhearted Pokémon that shares its nutritious eggs if it sees an injured Pokémon."
+	},
+	"Charizard":
+	{
+		"id": "6", "type1": "Fire", "type2": "Flying", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/7/7e/006Charizard.png", "desc": "When this Pokémon expels a blast of superhot fire, the red flame at the tip of its tail burns more intensely."
+	},
+	"Charjabug":
+	{
+		"id": "737", "type1": "Bug", "type2": "Electric", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ec/737Charjabug.png/600px-737Charjabug.png", "desc": "While its durable shell protects it from attacks, Charjabug strikes at enemies with jolts of electricity discharged from the tips of its jaws."
+	},
+	"Charmander":
+	{
+		"id": "4", "type1": "Fire", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/7/73/004Charmander.png", "desc": "The flame at the tip of its tail makes a sound as it burns. You can only hear it in quiet places."
+	},
+	"Charmeleon":
+	{
+		"id": "5", "type1": "Fire", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/4/4a/005Charmeleon.png", "desc": "Tough fights could excite this Pokémon. When excited, it may breathe out bluish-white flames."
+	},
+	"Chatot":
+	{
+		"id": "441", "type1": "Normal", "type2": "Flying", "sr": "5", "image": "https://cdn.bulbagarden.net/upload/b/bf/441Chatot.png", "desc": "It can learn and speak human words. If they gather, they all learn the same saying."
+	},
+	"Cherrim":
+	{
+		"id": "421", "type1": "Grass", "type2": null, "sr": "8", "image": "https://i.imgur.com/IxUEkHI.png?2", "desc": "It blooms during times of strong sunlight. It tries to make up for everything it endured as a bud."
+	},
+	"Cherubi":
+	{
+		"id": "420", "type1": "Grass", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/a/a7/420Cherubi.png", "desc": "The small ball holds the nutrients needed for evolution. Apparently, it is very sweet and tasty."
+	},
+	"Chesnaught":
+	{
+		"id": "652", "type1": "Grass", "type2": "Fighting", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/thumb/1/18/652Chesnaught.png/250px-652Chesnaught.png", "desc": "Its Tackle is forceful enough to flip a 50-ton tank. It shields its allies from danger with its own body."
+	},
+	"Chespin":
+	{
+		"id": "650", "type1": "Grass", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/thumb/c/ca/650Chespin.png/250px-650Chespin.png", "desc": "The quills on its head are usually soft. When it flexes them, the points become so hard and sharp that they can pierce rock."
+	},
+	"Chewtle":
+	{
+		"id": "833", "type1": "Water", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/2/22/833Chewtle.png", "desc": "It starts off battles by attacking with its rock-hard horn, but as soon as the opponent flinches, this Pokémon bites down and never lets go."
+	},
+	"Chikorita":
+	{
+		"id": "152", "type1": "Grass", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/b/bf/152Chikorita.png", "desc": "In battle, Chikorita waves its leaf around to keep the foe at bay. However, a sweet fragrance also wafts from the leaf, becalming the battling Pokémon and creating a cozy, friendly atmosphere all around."
+	},
+	"Chimchar":
+	{
+		"id": "390", "type1": "Fire", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/7/76/390Chimchar.png", "desc": "It agilely scales sheer cliffs to live atop craggy mountains. Its fire is put out when it sleeps."
+	},
+	"Chimecho":
+	{
+		"id": "358", "type1": "Psychic", "type2": null, "sr": "11", "image": "https://cdn.bulbagarden.net/upload/e/e5/358Chimecho.png", "desc": "Chimecho makes its cries echo inside its hollow body. When this Pokémon becomes enraged, its cries result in ultrasonic waves that have the power to knock foes flying."
+	},
+	"Chinchou":
+	{
+		"id": "170", "type1": "Water", "type2": "Electric", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/d/d9/170Chinchou.png", "desc": "Its two antennae glow softly to lure in prey, making it a useful Pokémon for night fishing."
+	},
+	"Chingling":
+	{
+		"id": "433", "type1": "Psychic", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/e/ed/433Chingling.png", "desc": "It emits cries by agitating an orb at the back of its throat. It moves with flouncing hops."
+	},
+	"Cinccino":
+	{
+		"id": "573", "type1": "Normal", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/9/94/573Cinccino.png", "desc": "Their white fur feels amazing to touch. Their fur repels dust and prevents static electricity from building up."
+	},
+	"Cinderace":
+	{
+		"id": "815", "type1": "Fire", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/b/b0/815Cinderace.png/600px-815Cinderace.png", "desc": "It’s skilled at both offense and defense, and it gets pumped up when cheered on. But if it starts showboating, it could put itself in a tough spot."
+	},
+	"Clamperl":
+	{
+		"id": "366", "type1": "Water", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/1/11/366Clamperl.png", "desc": "Clamperl's sturdy shell is not only good for protection-it is also used for clamping and catching prey. A fully grown Clamperl's shell will be scored with nicks and scratches all over."
+	},
+	"Clauncher":
+	{
+		"id": "692", "type1": "Water", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fb/692Clauncher.png/250px-692Clauncher.png", "desc": "They knock down flying prey by firing compressed water from their massive claws like shooting a pistol."
+	},
+	"Clawitzer":
+	{
+		"id": "693", "type1": "Water", "type2": null, "sr": "11", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d3/693Clawitzer.png/250px-693Clawitzer.png", "desc": "Their enormous claws launch cannonballs of water powerful enough to pierce tanker hulls."
+	},
+	"Claydol":
+	{
+		"id": "344", "type1": "Ground", "type2": "Psychic", "sr": "11", "image": "https://cdn.bulbagarden.net/upload/0/07/344Claydol.png", "desc": "Claydol are said to be dolls of mud made by primitive humans and brought to life by exposure to a mysterious ray. This Pokémon moves about while levitating."
+	},
+	"Clefable":
+	{
+		"id": "36", "type1": "Fairy", "type2": null, "sr": "8", "image": "https://cdn.bulbagarden.net/upload/a/a9/036Clefable.png", "desc": "They appear to be very protective of their own world. It is a kind of fairy, rarely seen by people."
+	},
+	"Clefairy":
+	{
+		"id": "35", "type1": "Fairy", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/f/f4/035Clefairy.png", "desc": "Adored for their cute looks and playfulness. They are thought to be rare, as they do not appear often."
+	},
+	"Cleffa":
+	{
+		"id": "173", "type1": "Fairy", "type2": null, "sr": "0.125", "image": "https://cdn.bulbagarden.net/upload/e/e4/173Cleffa.png", "desc": "On nights with many shooting stars, they gather in packs and dance in circles. If you should see them, something good will happen!"
+	},
+	"Clobbopus":
+	{
+		"id": "852", "type1": "Fighting", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/4/4e/852Clobbopus.png", "desc": "Its tentacles tear off easily, but it isn’t alarmed when that happens—it knows they’ll grow back. It’s about as smart as a three-year-old."
+	},
+	"Cloyster":
+	{
+		"id": "91", "type1": "Water", "type2": "Ice", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/1/1d/091Cloyster.png", "desc": "For protection, it uses its harder-than-diamond shell. It also shoots spikes from the shell."
+	},
+	"Coalossal":
+	{
+		"id": "839", "type1": "Rock", "type2": "Fire", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/0/0c/839Coalossal.png", "desc": "While it’s engaged in battle, its mountain of coal will burn bright red, sending off sparks that scorch the surrounding area."
+	},
+	"Cobacub":
+	{
+	  "id": null, "type1": "Steel", "type2": null, "sr": "8", "image": "https://images-ext-2.discordapp.net/external/fYdNNrcE5FaNtuukZ1rtlENQFCvflBFr6M__dCs7pbk/https/media.discordapp.net/attachments/426076867884351488/725884635854274585/image0.png", "desc": "The Iron Will Pokémon. Obstinate and Defiant. The trainer who can command Cobacub has to have they same iron will as the pokémon itself."
+	},
+	"Cobaling":
+	{
+	  "id": null, "type1": "Steel", "type2": null, "sr": "1", "image": "https://images-ext-2.discordapp.net/external/PmNXvXioy3sEBAoL7AvZO-P6aMW_sC3nT7ZBAX9uBmU/%3Fwidth%3D756%26height%3D671/https/media.discordapp.net/attachments/426076867884351488/725884839626014831/image0.png", "desc": "The Iron Will Pokémon. Cobaling's horns can cut through the toughest metals."
+	},
+	"Cobalion":
+	{
+		"id": "638", "type1": "Steel", "type2": "Fighting", "sr": "14", "image": "https://cdn.bulbagarden.net/upload/6/65/638Cobalion.png", "desc": "It has a body and heart of steel. Its glare is sufficient to make even an unruly Pokémon obey it."
+	},
+	"Cofagrigus":
+	{
+		"id": "563", "type1": "Ghost", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/f/f8/563Cofagrigus.png", "desc": "They pretend to be elaborate coffins to teach lessons to grave robbers. Their bodies are covered in pure gold."
+	},
+	"Combee":
+	{
+		"id": "415", "type1": "Bug", "type2": "Flying", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/b/b6/415Combee.png", "desc": "A Pokémon formed by three others. It busily carries sweet floral honey to VESPIQUEN."
+	},
+	"Combusken":
+	{
+		"id": "256", "type1": "Fire", "type2": "Fighting", "sr": "5", "image": "https://cdn.bulbagarden.net/upload/2/29/256Combusken.png", "desc": "Combusken battles with the intensely hot flames it spews from its beak and with outstandingly destructive kicks. This Pokémon's cry is very loud and distracting."
+	},
+	"Comfey":
+	{
+		"id": "764", "type1": "Fairy", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/c/c9/764Comfey.png/600px-764Comfey.png", "desc": "It stretches sticky vines out from its head and picks flowers to adorn itself with. When it doesn’t have any flowers, it feels uneasy."
+	},
+	"Conkeldurr":
+	{
+		"id": "534", "type1": "Fighting", "type2": null, "sr": "13", "image": "https://cdn.bulbagarden.net/upload/1/11/534Conkeldurr.png", "desc": "They use concrete pillars as walking canes. They know moves that enable them to swing the pillars freely in battle."
+	},
+	"Copperajah":
+	{
+		"id": "879", "type1": "Steel", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/7/76/879Copperajah.png", "desc": "These Pokémon live in herds. Their trunks have incredible grip strength, strong enough to crush giant rocks into powder."
+	},
+	"Corphish":
+	{
+		"id": "341", "type1": "Water", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/3/3d/341Corphish.png", "desc": "Corphish catches prey with its sharp claws. It has no likes or dislikes when it comes to food-it will eat anything. This Pokémon has no trouble living in filthy water."
+	},
+	"Corsola":
+	{
+		"id": "222", "type1": "Water", "type2": "Rock", "sr": "3", "image": "https://cdn.bulbagarden.net/upload/f/fc/222Corsola.png", "desc": "Corsola's branches glitter very beautifully in seven colors when they catch sunlight. If any branch breaks off, this Pokémon grows it back in just one night."
+	},
+	"Corviknight":
+	{
+		"id": "823", "type1": "Flying", "type2": "Steel", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/0/0c/823Corviknight.png/600px-823Corviknight.png", "desc": "This Pokémon reigns supreme in the skies of the Galar region. The black luster of its steel body could drive terror into the heart of any foe."
+	},
+	"Corvisquire":
+	{
+		"id": "822", "type1": "Flying", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/e/ec/822Corvisquire.png", "desc": "Smart enough to use tools in battle, these Pokémon have been seen picking up rocks and flinging them or using ropes to wrap up enemies."
+	},
+	"Cosmoem":
+	{
+		"id": "790", "type1": "Psychic", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/1b/790Cosmoem.png/600px-790Cosmoem.png", "desc": "Motionless as if dead, its body is faintly warm to the touch. In the distant past, it was called the cocoon of the stars."
+	},
+	"Cosmog":
+	{
+		"id": "789", "type1": "Psychic", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/17/789Cosmog.png/600px-789Cosmog.png", "desc": "Whether or not it’s a Pokémon from this world is a mystery. When it’s in a jam, it warps away to a safe place to hide."
+	},
+	"Cottonee":
+	{
+		"id": "546", "type1": "Grass", "type2": "Fairy", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/4/44/546Cottonee.png", "desc": "They go wherever the wind takes them. On rainy days, their bodies are heavier, so they take shelter beneath big trees."
+	},
+	"Crabominable":
+	{
+		"id": "740", "type1": "Fighting", "type2": "Ice", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/17/740Crabominable.png/600px-740Crabominable.png", "desc": "It stores coldness in its pincers and pummels its foes. It can even smash thick walls of ice to bits!"
+	},
+	"Crabrawler":
+	{
+		"id": "739", "type1": "Fighting", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/9/98/739Crabrawler.png/600px-739Crabrawler.png", "desc": "Its hard pincers are well suited to both offense and defense. Fights between two Crabrawler are like boxing matches."
+	},
+	"Cradily":
+	{
+		"id": "346", "type1": "Rock", "type2": "Grass", "sr": "11", "image": "https://cdn.bulbagarden.net/upload/3/38/346Cradily.png", "desc": "Cradily's body serves as an anchor, preventing it from being washed away in rough seas. This Pokémon secretes a strong digestive fluid from its tentacles."
+	},
+	"Cramorant":
+	{
+		"id": "845", "type1": "Flying", "type2": "Water", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/f/f3/845Cramorant.png/600px-845Cramorant.png", "desc": "This hungry Pokémon swallows Arrokuda whole. Occasionally, it makes a mistake and tries to swallow a Pokémon other than its preferred prey."
+	},
+	"Cranidos":
+	{
+		"id": "408", "type1": "Rock", "type2": null, "sr": "2", "image": "https://cdn.bulbagarden.net/upload/c/cd/408Cranidos.png", "desc": "It lived in jungles around 100 million years ago. Its skull is as hard as iron."
+	},
+	"Crawdaunt":
+	{
+		"id": "342", "type1": "Water", "type2": "Dark", "sr": "5", "image": "https://cdn.bulbagarden.net/upload/f/f4/342Crawdaunt.png", "desc": "Crawdaunt molts (sheds) its shell regularly. Immediately after molting, its shell is soft and tender. Until the shell hardens, this Pokémon hides in its streambed burrow to avoid attack from its foes."
+	},
+	"Cresselia":
+	{
+		"id": "488", "type1": "Psychic", "type2": null, "sr": "15", "image": "https://cdn.bulbagarden.net/upload/4/4a/488Cresselia.png", "desc": "Shiny particles are released from its wings like a veil. It is said to represent the crescent moon."
+	},
+	"Croagunk":
+	{
+		"id": "453", "type1": "Poison", "type2": "Fighting", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/f/fa/453Croagunk.png", "desc": "Its cheeks hold poison sacs. It tries to catch foes off guard to jab them with toxic fingers."
+	},
+	"Crobat":
+	{
+		"id": "169", "type1": "Poison", "type2": "Flying", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/1/17/169Crobat.png", "desc": "It feeds on the blood of living people and Pokémon. If it can’t drink any blood for even a short while, it becomes weak and unable to fly."
+	},
+	"Croconaw":
+	{
+		"id": "159", "type1": "Water", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/a/a5/159Croconaw.png", "desc": "Once Croconaw has clamped its jaws on its foe, it will absolutely not let go. Because the tips of its fangs are forked back like barbed fishhooks, they become impossible to remove when they have sunk in."
+	},
+	"Crustle":
+	{
+		"id": "558", "type1": "Bug", "type2": "Rock", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/1/19/558Crustle.png", "desc": "It possesses legs of enormous strength, enabling it to carry heavy slabs for many days, even when crossing arid land."
+	},
+	"Cryogonal":
+	{
+		"id": "615", "type1": "Ice", "type2": null, "sr": "11", "image": "https://cdn.bulbagarden.net/upload/1/11/615Cryogonal.png", "desc": "They are born in snow clouds. They use chains made of ice crystals to capture prey."
+	},
+	"Cubchoo":
+	{
+		"id": "613", "type1": "Ice", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/7/72/613Cubchoo.png", "desc": "Its nose is always running. It sniffs the snot back up because the mucus provides the raw material for its moves."
+	},
+	"Cubone":
+	{
+		"id": "104", "type1": "Ground", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/2/2a/104Cubone.png", "desc": "Wears the skull of its deceased mother. Its cries echo inside the skull and come out as a sad melody."
+	},
+	"Cufant":
+	{
+		"id": "878", "type1": "Steel", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/5/56/878Cufant.png", "desc": "It digs up the ground with its trunk. It’s also very strong, being able to carry loads of over five tons without any problem at all."
+	},
+	"Cursola":
+	{
+		"id": "864", "type1": "Ghost", "type2": null, "sr": "8", "image": "https://cdn.bulbagarden.net/upload/thumb/d/db/864Cursola.png/600px-864Cursola.png", "desc": "Its shell is overflowing with its heightened otherworldly energy. The ectoplasm serves as protection for this Pokémon’s core spirit."
+	},
+	"Cutiefly":
+	{
+		"id": "742", "type1": "Bug", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fa/742Cutiefly.png/600px-742Cutiefly.png", "desc": "An opponent’s aura can tell Cutiefly what that opponent’s next move will be. Then Cutiefly can glide around the attack and strike back."
+	},
+	"Cyndaquil":
+	{
+		"id": "155", "type1": "Fire", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/9/9b/155Cyndaquil.png", "desc": "Cyndaquil protects itself by flaring up the flames on its back. The flames are vigorous if the Pokémon is angry. However, if it is tired, the flames splutter fitfully with incomplete combustion."
+	},
+	"Daikou":
+	{
+	  "id": null, "type1": "Electric", "type2": null,"sr": "1", "image": "https://images-ext-2.discordapp.net/external/go8L9C5ODbRqRaiSuB9Exzh1w11igzxXY4HpoMKQENI/https/media.discordapp.net/attachments/426076867884351488/725830060598362243/Daikou.png", "desc": "The Spark Pokémon. It may look playful and harmless, but Diakou has enough stored electricity to knockout a Milktank with ease."
+	},
+	"Darkrai":
+	{
+		"id": "491", "type1": "Dark", "type2": null, "sr": "15", "image": "https://cdn.bulbagarden.net/upload/6/6d/491Darkrai.png", "desc": "It can lull people to sleep and make them dream. It is active during nights of the new moon."
+	},
+	"Darmanitan":
+	{
+		"id": "555", "type1": "Fire", "type2": null, "sr": "12", "image": "https://cdn.bulbagarden.net/upload/4/40/555Darmanitan.png", "desc": "When weakened in battle, it transforms into a stone statue. Then it sharpens its mind and fights on mentally."
+	},
+	"Dartrix":
+	{
+		"id": "723", "type1": "Grass", "type2": "Flying", "sr": "5", "image": "https://cdn.bulbagarden.net/upload/thumb/1/1e/723Dartrix.png/600px-723Dartrix.png", "desc": "It throws one knifelike feather after another at its enemies, and each one precisely strikes a weak point. These feathers are known as blade quills."
+	},
+	"Darumaka":
+	{
+		"id": "554", "type1": "Fire", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/4/4c/554Darumaka.png", "desc": "Darumaka's droppings are hot, so people used to put them in their clothes to keep themselves warm."
+	},
+	"Decidueye":
+	{
+		"id": "724", "type1": "Grass", "type2": "Ghost", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a4/724Decidueye.png/600px-724Decidueye.png", "desc": "As if wielding a bow, it launches the arrow quills hidden among the feathers of its wings. Decidueye’s shots never miss."
+	},
+	"Dedenne":
+	{
+		"id": "702", "type1": "Electric", "type2": "Fairy", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/c/c9/702Dedenne.png/250px-702Dedenne.png", "desc": "Its whiskers serve as antennas. By sending and receiving electrical waves, it can communicate with others over vast distances."
+	},
+	"Deerling (Autumn)":
+	{
+		"id": "585", "type1": "Normal", "type2": "Grass", "sr": "2", "image": "https://cdn.bulbagarden.net/upload/e/e3/585Deerling-Autumn.png", "desc": "The turning of the seasons changes the color and scent of this Pokémon's fur. People use it to mark the seasons."
+	},
+	"Deerling (Spring)":
+	{
+		"id": "585", "type1": "Normal", "type2": "Grass", "sr": "2", "image": "https://cdn.bulbagarden.net/upload/6/68/585Deerling-Spring.png", "desc": "The turning of the seasons changes the color and scent of this Pokémon's fur. People use it to mark the seasons."
+	},
+	"Deerling (Summer)":
+	{
+		"id": "585", "type1": "Normal", "type2": "Grass", "sr": "2", "image": "https://cdn.bulbagarden.net/upload/d/d7/585Deerling-Summer.png", "desc": "The turning of the seasons changes the color and scent of this Pokémon's fur. People use it to mark the seasons."
+	},
+	"Deerling (Winter)":
+	{
+		"id": "585", "type1": "Normal", "type2": "Grass", "sr": "2", "image": "https://cdn.bulbagarden.net/upload/d/d4/585Deerling-Winter.png", "desc": "The turning of the seasons changes the color and scent of this Pokémon's fur. People use it to mark the seasons."
+	},
+	"Deino":
+	{
+		"id": "633", "type1": "Dark", "type2": "Dragon", "sr": "1", "image": "https://cdn.bulbagarden.net/upload/f/f7/633Deino.png", "desc": "They cannot see, so they tackle and bite to learn about their surroundings. Their bodies are covered in wounds."
+	},
+	"Delcatty":
+	{
+		"id": "301", "type1": "Normal", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/f/f4/301Delcatty.png", "desc": "Delcatty prefers to live an unfettered existence in which it can do as it pleases at its own pace. Because this Pokémon eats and sleeps whenever it decides, its daily routines are completely random."
+	},
+	"Delibird":
+	{
+		"id": "225", "type1": "Ice", "type2": "Flying", "sr": "1", "image": "https://cdn.bulbagarden.net/upload/3/3f/225Delibird.png", "desc": "It shares its food with people who are stranded. Because Delibird is omnivorous, sometimes it gives those people bug Pokémon."
+	},
+	"Delphox":
+	{
+		"id": "655", "type1": "Fire", "type2": "Psychic", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/thumb/2/21/655Delphox.png/600px-655Delphox.png", "desc": "It gazes into the flame at the tip of its branch to achieve a focused state, which allows it to see into the future."
+	},
+	"Deoxys":
+	{
+		"id": "386", "type1": "Psychic", "type2": null, "sr": "15", "image": "https://cdn.bulbagarden.net/upload/e/e7/386Deoxys.png", "desc": "The DNA of a space virus underwent a sudden mutation upon exposure to a laser beam and resulted in Deoxys. The crystalline organ on this Pokémon's chest appears to be its brain."
+	},
+	"Dewgong":
+	{
+		"id": "87", "type1": "Water", "type2": "Ice", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/c/c7/087Dewgong.png", "desc": "Its entire body is a snowy white. Unharmed by even intense cold, it swims powerfully in icy waters."
+	},
+	"Dewott":
+	{
+		"id": "502", "type1": "Water", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/e/e4/502Dewott.png", "desc": "Scalchop techniques differ from one Dewott to another. It never neglects maintaining its scalchops."
+	},
+	"Dewpider":
+	{
+		"id": "751", "type1": "Water", "type2": "Bug", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/2/29/751Dewpider.png/600px-751Dewpider.png", "desc": "Dewpider normally lives underwater. When it comes onto land in search of food, it takes water with it in the form of a bubble on its head."
+	},
+	"Dhelmise":
+	{
+		"id": "781", "type1": "Ghost", "type2": "Grass", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/2/2f/781Dhelmise.png/600px-781Dhelmise.png", "desc": "The soul of seaweed adrift in the waves became reborn as this Pokémon. It maintains itself with new infusions of seabed detritus and seaweed."
+	},
+	"Dialga":
+	{
+		"id": "483", "type1": "Steel", "type2": "Dragon", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/8/8a/483Dialga.png", "desc": "It has the power to control time. It appears in Sinnoh-region myths as an ancient deity."
+	},
+	"Diancie":
+	{
+		"id": "719", "type1": "Rock", "type2": "Fairy", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/b/b3/719Diancie.png/600px-719Diancie.png", "desc": "A sudden transformation of Carbink, its pink, glimmering body is said to be the loveliest sight in the whole world."
+	},
+	"Diggersby":
+	{
+		"id": "660", "type1": "Normal", "type2": "Ground", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/thumb/3/34/660Diggersby.png/250px-660Diggersby.png", "desc": "With their powerful ears, they can heft boulders of a ton or more with ease. They can be a big help at construction sites."
+	},
+	"Diglett":
+	{
+		"id": "50", "type1": "Ground", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/3/31/050Diglett.png", "desc": "It prefers dark places. It spends most of its time underground, though it may pop up in caves."
+	},
+	"Alolan Diglett":
+	{
+		"id": "50A", "type1": "Ground", "type2": "Steel", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/thumb/1/10/050Diglett-Alola.png/600px-050Diglett-Alola.png", "desc": "Its three hairs change shape depending on Diglett’s mood. They’re a useful communication tool among these Pokémon."
+	},
+	"Ditto":
+	{
+		"id": "132", "type1": "Normal", "type2": null, "sr": "3", "image": "https://cdn.bulbagarden.net/upload/3/36/132Ditto.png", "desc": "When it spots an enemy, its body transfigures into an almost-perfect copy of its opponent."
+	},
+	"Dodrio":
+	{
+		"id": "85", "type1": "Normal", "type2": "Flying", "sr": "9", "image": "https://cdn.bulbagarden.net/upload/9/93/085Dodrio.png", "desc": "One of Doduo’s two heads splits to form a unique species. It runs close to 40 mph in prairies."
+	},
+	"Doduo":
+	{
+		"id": "84", "type1": "Normal", "type2": "Flying", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/5/54/084Doduo.png", "desc": "Its short wings make flying difficult. Instead, this Pokémon runs at high speed on developed legs."
+	},
+	"Donphan":
+	{
+		"id": "232", "type1": "Ground", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/5/53/232Donphan.png", "desc": "Donphan's favorite attack is curling its body into a ball, then charging at its foe while rolling at high speed. Once it starts rolling, this Pokémon can't stop very easily."
+	},
+	"Dottler":
+	{
+		"id": "825", "type1": "Bug", "type2": "Psychic", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/9/95/825Dottler.png", "desc": "It barely moves, but it’s still alive. Hiding in its shell without food or water seems to have awakened its psychic powers."
+	},
+	"Doublade":
+	{
+		"id": "680", "type1": "Steel", "type2": "Ghost", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ef/680Doublade.png/250px-680Doublade.png", "desc": "When Honedge evolves, it divides into two swords, which cooperate via telepathy to coordinate attacks and slash their enemies to ribbons."
+	},
+	"Dracovish":
+	{
+		"id": "882", "type1": "Water", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/1/16/882Dracovish.png", "desc": "Powerful legs and jaws made it the apex predator of its time. Its own overhunting of its prey was what drove it to extinction."
+	},
+	"Dracozolt":
+	{
+		"id": "880", "type1": "Electric", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/9/91/880Dracozolt.png", "desc": "In ancient times, it was unbeatable thanks to its powerful lower body, but it went extinct anyway after it depleted all its plant-based food sources."
+	},
+	"Dragalge":
+	{
+		"id": "691", "type1": "Poison", "type2": "Dragon", "sr": "12", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a9/691Dragalge.png/250px-691Dragalge.png", "desc": "Their poison is strong enough to eat through the hull of a tanker, and they spit it indiscriminately at anything that enters their territory."
+	},
+	"Dragapult":
+	{
+		"id": "887", "type1": "Dragon", "type2": "Ghost", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/f/f7/887Dragapult.png", "desc": "When it isn’t battling, it keeps Dreepy in the holes on its horns. Once a fight starts, it launches the Dreepy like supersonic missiles."
+	},
+	"Dragonair":
+	{
+		"id": "148", "type1": "Dragon", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/9/93/148Dragonair.png", "desc": "According to a witness, its body was surrounded by a strange aura that gave it a mystical look."
+	},
+	"Dragonite":
+	{
+		"id": "149", "type1": "Dragon", "type2": "Flying", "sr": "14", "image": "https://cdn.bulbagarden.net/upload/8/8b/149Dragonite.png", "desc": "It is said that this Pokémon lives somewhere in the sea and that it flies. However, these are only rumors."
+	},
+	"Drakloak":
+	{
+		"id": "886", "type1": "Dragon", "type2": "Ghost", "sr": "5", "image": "https://cdn.bulbagarden.net/upload/e/e1/886Drakloak.png", "desc": "Without a Dreepy to place on its head and care for, it gets so uneasy it’ll try to substitute any Pokémon it finds for the missing Dreepy."
+	},
+	"Drampa":
+	{
+		"id": "780", "type1": "Normal", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/d/dc/780Drampa.png/600px-780Drampa.png", "desc": "It has a compassionate personality, but if it is angered, it completely destroys its surroundings with its intense breath."
+	},
+	"Drapion":
+	{
+		"id": "452", "type1": "Poison", "type2": "Dark", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/1/13/452Drapion.png", "desc": "It has the power in its clawed arms to make scrap of a car. The tips of its claws release poison."
+	},
+	"Dratini":
+	{
+		"id": "147", "type1": "Dragon", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/c/cc/147Dratini.png", "desc": "Long thought to be a myth, this Pokémon’s existence was only recently confirmed by a fisherman who caught one."
+	},
+	"Drednaw":
+	{
+		"id": "834", "type1": "Water", "type2": "Rock", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/b/be/834Drednaw.png/600px-834Drednaw.png", "desc": "This Pokémon rapidly extends its retractable neck to sink its sharp fangs into distant enemies and take them down."
+	},
+	"Dreepy":
+	{
+		"id": "885", "type1": "Dragon", "type2": "Ghost", "sr": "1", "image": "https://cdn.bulbagarden.net/upload/a/a9/885Dreepy.png", "desc": "After being reborn as a ghost Pokémon, Dreepy wanders the areas it used to inhabit back when it was alive in prehistoric seas."
+	},
+	"Drifblim":
+	{
+		"id": "426", "type1": "Ghost", "type2": "Flying", "sr": "9", "image": "https://cdn.bulbagarden.net/upload/7/71/426Drifblim.png", "desc": "It’s drowzy in daytime, but flies off in the evening in big groups. No one knows where they go."
+	},
+	"Drifloon":
+	{
+		"id": "425", "type1": "Ghost", "type2": "Flying", "sr": "2", "image": "https://cdn.bulbagarden.net/upload/e/eb/425Drifloon.png", "desc": "A Pokémon formed by the spirits of people and Pokémon. It loves damp, humid seasons."
+	},
+	"Drilbur":
+	{
+		"id": "529", "type1": "Ground", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/c/cf/529Drilbur.png", "desc": "It makes its way swiftly through the soil by putting both claws together and rotating at high speed."
+	},
+	"Drizzile":
+	{
+		"id": "817", "type1": "Water", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/6/6c/817Drizzile.png/600px-817Drizzile.png", "desc": "A clever combatant, this Pokémon battles using water balloons created with moisture secreted from its palms."
+	},
+	"Drowzee":
+	{
+		"id": "96", "type1": "Psychic", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/3/3e/096Drowzee.png", "desc": "If you sleep by it all the time, it will sometimes show you dreams it had eaten in the past."
+	},
+	"Druddigon":
+	{
+		"id": "621", "type1": "Dragon", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/a/ad/621Druddigon.png", "desc": "It races through narrow caves, using its sharp claws to catch prey. The skin on its face is harder than a rock."
+	},
+	"Dubwool":
+	{
+		"id": "832", "type1": "Normal", "type2": null, "sr": "10", "image": "https://cdn.bulbagarden.net/upload/9/9a/832Dubwool.png", "desc": "Weave a carpet from its springy wool, and you end up with something closer to a trampoline. You’ll start to bounce the moment you set foot on it."
+	},
+	"Ducklett":
+	{
+		"id": "580", "type1": "Water", "type2": "Flying", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/4/4b/580Ducklett.png", "desc": "When attacked, it uses its feathers to splash water, escaping under cover of the spray."
+	},
+	"Dugtrio":
+	{
+		"id": "51", "type1": "Ground", "type2": null, "sr": "8", "image": "https://cdn.bulbagarden.net/upload/e/e5/051Dugtrio.png", "desc": "A team of triplets that can burrow to a depth of 60 miles. It’s reported that this triggers an earthquake."
+	},
+	"Alolan Dugtrio":
+	{
+		"id": "51A", "type1": "Ground", "type2": "Steel", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/2/22/051Dugtrio-Alola.png/600px-051Dugtrio-Alola.png", "desc": "Their beautiful, metallic whiskers create a sort of protective helmet on their heads, and they also function as highly precise sensors."
+	},
+	"Dunsparce":
+	{
+		"id": "206", "type1": "Normal", "type2": null, "sr": "2", "image": "https://cdn.bulbagarden.net/upload/2/20/206Dunsparce.png", "desc": "Dunsparce has a drill for its tail. It uses this tail to burrow into the ground backward. This Pokémon is known to make its nest in complex shapes deep under the ground."
+	},
+	"Duosion":
+	{
+		"id": "578", "type1": "Psychic", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/8/83/578Duosion.png", "desc": "When their brains, now divided in two, are thinking the same thoughts, these Pokémon exhibit their maximum power."
+	},
+	"Duraludon":
+	{
+		"id": "884", "type1": "Steel", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/3/38/884Duraludon.png/600px-884Duraludon.png", "desc": "The special metal that composes its body is very light, so this Pokémon has considerable agility. It lives in caves because it dislikes the rain."
+	},
+	"Durant":
+	{
+		"id": "632", "type1": "Bug", "type2": "Steel", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/1/1a/632Durant.png", "desc": "Durant dig nests in mountains. They build their complicated, interconnected tunnels into mazes."
+	},
+	"Dusclops":
+	{
+		"id": "356", "type1": "Ghost", "type2": null, "sr": "12", "image": "https://cdn.bulbagarden.net/upload/1/12/356Dusclops.png", "desc": "Dusclops's body is completely hollow-there is nothing at all inside. It is said that its body is like a black hole. This Pokémon will absorb anything into its body, but nothing will ever come back out."
+	},
+	"Dusknoir":
+	{
+		"id": "477", "type1": "Ghost", "type2": null, "sr": "14", "image": "https://cdn.bulbagarden.net/upload/4/4f/477Dusknoir.png", "desc": "The antenna on its head captures radio waves from the world of spirits that command it to take people there."
+	},
+	"Duskull":
+	{
+		"id": "355", "type1": "Ghost", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/e/e2/355Duskull.png", "desc": "Duskull can pass through any wall no matter how thick it may be. Once this Pokémon chooses a target, it will doggedly pursue the intended victim until the break of dawn."
+	},
+	"Dustox":
+	{
+		"id": "269", "type1": "Bug", "type2": "Poison", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/3/34/269Dustox.png", "desc": "Dustox is instinctively drawn to light. Swarms of this Pokémon are attracted by the bright lights of cities, where they wreak havoc by stripping the leaves off roadside trees for food."
+	},
+	"Dwebble":
+	{
+		"id": "557", "type1": "Bug", "type2": "Rock", "sr": "2", "image": "https://cdn.bulbagarden.net/upload/6/6b/557Dwebble.png", "desc": "It makes a hole in a suitable rock. If that rock breaks, the Pokémon remains agitated until it locates a replacement."
+	},
+	"Eelektrik":
+	{
+		"id": "603", "type1": "Electric", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/c/c7/603Eelektrik.png", "desc": "These Pokémon have a big appetite. When they spot their prey, they attack it and paralyze it with electricity."
+	},
+	"Eelektross":
+	{
+		"id": "604", "type1": "Electric", "type2": null, "sr": "12", "image": "https://cdn.bulbagarden.net/upload/6/6c/604Eelektross.png", "desc": "With their sucker mouths, they suck in prey. Then they use their fangs to shock the prey with electricity."
+	},
+	"Eevee":
+	{
+		"id": "133", "type1": "Normal", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/e/e2/133Eevee.png", "desc": "It can evolve into a variety of forms. Eevee’s genes are the key to solving the mysteries of Pokémon evolution."
+	},
+	"Eiscue (Ice Face)":
+	{
+		"id": "875", "type1": "Ice", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/9/9b/875Eiscue-Ice.png/600px-875Eiscue-Ice.png", "desc": "It drifted in on the flow of ocean waters from a frigid place. It keeps its head iced constantly to make sure it stays nice and cold."
+	},
+	"Eiscue (Noice Face)":
+	{
+		"id": "875", "type1": "Ice", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/2/27/875Eiscue-Noice.png", "desc": "The hair on its head connects to the surface of its brain. When this Pokémon has something on its mind, its hair chills the air around it."
+	},
+	"Ekans":
+	{
+		"id": "23", "type1": "Poison", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/f/fa/023Ekans.png", "desc": "The older it gets, the longer it grows. At night, it wraps its long body around tree branches to rest."
+	},
+	"Eldegoss":
+	{
+		"id": "830", "type1": "Grass", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/3/34/830Eldegoss.png/600px-830Eldegoss.png", "desc": "The seeds attached to its cotton fluff are full of nutrients. It spreads them on the wind so that plants and other Pokémon can benefit from them."
+	},
+	"Electabuzz":
+	{
+		"id": "125", "type1": "Electric", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/d/de/125Electabuzz.png", "desc": "If a major power outage occurs, it is certain that this Pokémon has eaten electricity at a power plant."
+	},
+	"Electivire":
+	{
+		"id": "466", "type1": "Electric", "type2": null, "sr": "14", "image": "https://cdn.bulbagarden.net/upload/2/23/466Electivire.png", "desc": "It pushes the tips of its two tails against the foe, then lets loose with over 20,000 volts of power."
+	},
+	"Electrike":
+	{
+		"id": "309", "type1": "Electric", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/4/47/309Electrike.png", "desc": "Electrike runs faster than the human eye can follow. The friction from running is converted into electricity, which is then stored in this Pokémon's fur."
+	},
+	"Electrode":
+	{
+		"id": "101", "type1": "Electric", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/8/84/101Electrode.png", "desc": "Stores electrical energy inside its body. Even the slightest shock could trigger a huge explosion."
+	},
+	"Elekid":
+	{
+		"id": "239", "type1": "Electric", "type2": null, "sr": "2", "image": "https://cdn.bulbagarden.net/upload/5/5d/239Elekid.png", "desc": "Elekid stores electricity in its body. If it touches metal and accidentally discharges all its built-up electricity, this Pokémon begins swinging its arms in circles to recharge itself."
+	},
+	"Elgyem":
+	{
+		"id": "605", "type1": "Psychic", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/f/fd/605Elgyem.png", "desc": "This Pokémon had never been seen until it appeared from far in the desert 50 years ago."
+	},
+	"Emboar":
+	{
+		"id": "500", "type1": "Fire", "type2": "Fighting", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/1/18/500Emboar.png", "desc": "It has mastered fast and powerful fighting moves. It grows a beard of fire."
+	},
+	"Emolga":
+	{
+		"id": "587", "type1": "Electric", "type2": "Flying", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/b/b4/587Emolga.png", "desc": "They live on treetops and glide using the inside of a cape-like membrane while discharging electricity."
+	},
+	"Empoleon":
+	{
+		"id": "395", "type1": "Water", "type2": "Steel", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/7/7f/395Empoleon.png", "desc": "The three horns that extend from its beak attest to its power. The leader has the biggest horns."
+	},
+	"Entei":
+	{
+		"id": "244", "type1": "Fire", "type2": null, "sr": "14", "image": "https://cdn.bulbagarden.net/upload/f/f9/244Entei.png", "desc": "Entei embodies the passion of magma. This Pokémon is thought to have been born in the eruption of a volcano. It sends up massive bursts of fire that utterly consume all that they touch."
+	},
+	"Escavalier":
+	{
+		"id": "589", "type1": "Bug", "type2": "Steel", "sr": "9", "image": "https://cdn.bulbagarden.net/upload/6/63/589Escavalier.png", "desc": "These Pokémon evolve by wearing the shell covering of a Shelmet. The steel armor protects their whole body."
+	},
+	"Espeon":
+	{
+		"id": "196", "type1": "Psychic", "type2": null, "sr": "8", "image": "https://cdn.bulbagarden.net/upload/a/a7/196Espeon.png", "desc": "Espeon is extremely loyal to any Trainer it considers to be worthy. It is said that this Pokémon developed its precognitive powers to protect its Trainer from harm."
+	},
+	"Espurr":
+	{
+		"id": "677", "type1": "Psychic", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/thumb/0/09/677Espurr.png/250px-677Espurr.png", "desc": "The organ that emits its intense psychic power is sheltered by its ears to keep power from leaking out."
+	},
+	"Eternatus":
+	{
+		"id": "890", "type1": "Poison", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/6/62/890Eternatus.png", "desc": "It was inside a meteorite that fell 20,000 years ago. There seems to be a connection between this Pokémon and the Dynamax phenomenon."
+	},
+	"Eternatus (Eternamax)":
+	{
+		"id": "890", "type1": "Poison", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/7/76/HOME890E.png", "desc": "Infinite amounts of energy pour from this Pokémon’s enlarged core, warping the surrounding space-time."
+	},
+	"Excadrill":
+	{
+		"id": "530", "type1": "Steel", "type2": "Ground", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/6/63/530Excadrill.png", "desc": "More than 300 feet below the surface, they build mazelike nests. Their activity can be destructive to subway tunnels."
+	},
+	"Exeggcute":
+	{
+		"id": "102", "type1": "Grass", "type2": "Psychic", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/a/af/102Exeggcute.png", "desc": "The heads attract each other and spin around. There must be six heads for it to maintain balance."
+	},
+	"Exeggutor":
+	{
+		"id": "103", "type1": "Grass", "type2": "Psychic", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/2/24/103Exeggutor.png", "desc": "Its cries are very noisy. This is because each of the three heads thinks about whatever it likes."
+	},
+	"Alolan Exeggutor":
+	{
+		"id": "103A", "type1": "Grass", "type2": "Dragon", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/thumb/7/74/103Exeggutor-Alola.png/600px-103Exeggutor-Alola.png", "desc": "It swings its long neck like a whip and smacks its opponents. This makes Exeggutor itself dizzy, too."
+	},
+	"Exploud":
+	{
+		"id": "295", "type1": "Normal", "type2": null, "sr": "11", "image": "https://cdn.bulbagarden.net/upload/1/12/295Exploud.png", "desc": "Exploud triggers earthquakes with the tremors it creates by bellowing. If this Pokémon violently inhales from the ports on its body, it's a sign that it is preparing to let loose a huge bellow."
+	},
+	"Error":
+	{
+	  "type1": "???", "type2": "???", "sr": "???", "id": "???"
+	}
+}
