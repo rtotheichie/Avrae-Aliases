@@ -1,0 +1,166 @@
+embed <drac2>
+args = &ARGS&
+if "(F)" in args:
+    args.pop()
+    args.append("♀")
+if "(M)" in args:
+    args.pop()
+    args.append("♂")
+TableA = load_json(get_gvar("c237b15a-5b0d-4240-9ee3-c3006f0e53de"))
+TableF = load_json(get_gvar("a8e1c52a-f2cf-4f75-ba89-25020ac57dcc"))
+TableO = load_json(get_gvar("ffb3193c-612a-429e-acb4-c3b0ce91a02e"))
+TableU = load_json(get_gvar("0ab631b4-78c6-455b-8b43-7b72a4504c8f"))
+set_cvar_nx("PokedexCaught","[]")
+set_cvar_nx("PokedexSeen","[]")
+CaughtList = load_json(get("PokedexCaught","[]"))
+SeenList = load_json(get("PokedexSeen","[]"))
+PKMN = ""
+addPKMN = ""
+PName = ""
+PID = ""
+PType = ""
+PSR = ""
+PDesc = ""
+PImage = ""
+out = []
+out.append(f'-title "{name} checks their Pokedex!"')
+n = "\n".join
+search = ""
+partial = ['▏','▎','▍','▌','▋','▊','▉','█']
+percent = len(CaughtList)/(len(TableA)+len(TableF)+len(TableO)+len(TableU)-4)*100
+bar = ""
+if CaughtList:
+    bar += "█"*int(percent/10)
+    bar += partial[int(8-(percent/8)%8)]
+#error checking
+if CaughtList:
+    CaughtList=list({x:"" for x in CaughtList})
+    for x in CaughtList:
+        if x not in TableA and x not in TableF and x not in TableO and x not in TableU:
+            CaughtList.remove(x)
+if SeenList:
+    SeenList=list({x:"" for x in SeenList})
+    for y in SeenList:
+        if y not in TableA and y not in TableF and y not in TableO and x not in TableU:
+            SeenList.remove(y)
+        if y in CaughtList:
+            SeenList.remove(y)
+if not args:
+    out.append(f'''-f "Total Pokemon Caught:|**{len(CaughtList)}**|inline" -f "Total Pokemon Seen:|**{len(SeenList)+len(CaughtList)}**|inline" -f "Pokedex Completion:|**{bar} {int((len(CaughtList)/(len(TableA)+len(TableF)+len(TableO)+len(TableU)-4))*100)}%**"''')
+elif str(args[0]).lower() not in ["caught","seen","help","add","search","delete"]:
+    PKMN = str(" ".join(args)).title()
+elif str(args[0]).lower() == "caught":
+    out.append(f"""-desc "**__Pokemon Caught:__**" """)
+    for y in ['ABC','DEF','GHI','JKL','MNO','PQR','STU','VWX','YZ']:
+        viewList = [x for x in CaughtList if x[0] in y]
+        if viewList:
+            out.append(f"""-f "**{y[0]}-{y[-1]}**|{n(viewList)}|inline" """)
+    out.append(f'-f "You have caught a total of {len(CaughtList)} Pokemon!"')
+elif str(args[0]).lower() == "seen":
+    out.append(f"""-desc "**__Pokemon Seen:__**" """)
+    for y in ['ABC','DEF','GHI','JKL','MNO','PQR','STU','VWX','YZ']:
+        viewList = [x for x in SeenList if x[0] in y]
+        if viewList:
+            out.append(f"""-f "**{y[0]}-{y[-1]}**|{n(viewList)}|inline" """)
+    out.append(f'-f "You have seen a total of {len(SeenList)+len(CaughtList)} Pokemon!"')
+elif str(args[0]).lower() == "add":
+    if str(args[1]).lower() == "caught":
+        addPKMN = 1
+        PKMN = str(" ".join(args[2:])).title()
+    elif str(args[1]).lower() == "seen":
+        addPKMN = 2
+        PKMN = str(" ".join(args[2:])).title()
+    else:
+        PKMN = str(" ".join(args[1:])).title()
+        addPKMN = 1
+elif str(args[0]).lower() == "delete":
+    Delete=str(" ".join(args[1:])).title()
+    CaughtList.remove(Delete) if Delete in CaughtList else ''
+    SeenList.remove(Delete) if Delete in SeenList else ''
+    out.append(f'-desc "{name} removed {Delete} from their Pokedex."')
+elif str(args[0]).lower() == "help":
+    out.append('-title "How do you work this thing?"')
+    out.append('''-desc "**__Pokedex Commands__**
+    **-**`!pokedex caught` See all of your caught Pokemon.
+    **-**`!pokedex seen` See all of your seen Pokemon.
+    **-**`!pokedex <Pokemon>` Search for a specific Pokemon.
+    **-**`!pokedex search <criteria>` Search for Pokemon in your Pokedex that match `criteria` in their name. Partial matches, letters, etc. are fine.
+    **-**`!pokedex search [type/sr/id] <criteria>` Search for Pokemon in your Pokedex that match `criteria` for either a `type`, `SR`, or `id #`. `!pokedex search type Grass`, for example, will show you all Pokemon in your Pokedex that are Grass type.
+    **-**`!pokedex add [seen/caught] <Pokemon>` Add a Pokemon to either your `seen` or `caught` list.
+    **-**`!pokedex delete <Pokemon>` Remove a Pokemon from your Pokedex (will remove from both seen and caught lists)."''')
+    out.append('-f "Special Notes|Alolan/Galarian variants can be found with `Alolan <Pokemon>` or `Galarian <Pokemon>`.  If searching by ID#, add an `A` or `G` to the number, as in `52G`. Pokemon with more than one form can be found by adding the form in (), as in `Tornadus (Incarnate)`."')
+    out.append('-f "Special thanks to|@Hidden#1665 for their help in getting the data for each Pokemon|inline"')
+    out.append('-footer "ver. 1.9.2   Developed by @R to the Ichie#6193"')
+elif str(args[0]).lower() == "search":
+    if str(args[1]).lower() == "type":
+        search = str(" ".join(args[2:])).title()
+        searchTypeA = [x for x in TableA if search in str(TableA[x]["type1"]) or search in str(TableA[x]["type2"])]
+        searchTypeF = [x for x in TableF if search in str(TableF[x]["type1"]) or search in str(TableF[x]["type2"])]
+        searchTypeO = [x for x in TableO if search in str(TableO[x]["type1"]) or search in str(TableO[x]["type2"])]
+        searchTypeU = [x for x in TableU if search in str(TableU[x]["type1"]) or search in str(TableU[x]["type2"])]
+        searchCaught = [x for x in CaughtList if x in searchTypeA+searchTypeF+searchTypeO+searchTypeU] or ["No matches found!"]
+        searchSeen = [x for x in SeenList if x in searchTypeA+searchTypeF+searchTypeO+searchTypeU] or ["No matches found!"]
+        search = "type: " + search
+    elif str(args[1]).lower() == "sr":
+        search = str(" ".join(args[2:])).title()
+        searchTypeA = [x for x in TableA if search == str(TableA[x]["sr"])]
+        searchTypeF = [x for x in TableF if search == str(TableF[x]["sr"])]
+        searchTypeO = [x for x in TableO if search == str(TableO[x]["sr"])]
+        searchTypeU = [x for x in TableU if search == str(TableU[x]["sr"])]
+        searchCaught = [x for x in CaughtList if x in searchTypeA+searchTypeF+searchTypeO+searchTypeU] or ["No matches found!"]
+        searchSeen = [x for x in SeenList if x in searchTypeA+searchTypeF+searchTypeO+searchTypeU] or ["No matches found!"]
+        search = "SR: " + search
+    elif str(args[1]).lower() == "id":
+        search = str(" ".join(args[2:])).title()
+        searchTypeA = [x for x in TableA if search == str(TableA[x]["id"])]
+        searchTypeF = [x for x in TableF if search == str(TableF[x]["id"])]
+        searchTypeO = [x for x in TableO if search == str(TableO[x]["id"])]
+        searchTypeU = [x for x in TableU if search == str(TableU[x]["id"])]
+        searchCaught = [x for x in CaughtList if x in searchTypeA+searchTypeF+searchTypeO+searchTypeU] or ["No matches found!"]
+        searchSeen = [x for x in SeenList if x in searchTypeA+searchTypeF+searchTypeO+searchTypeU] or ["No matches found!"]
+        search = "Dex #: " + search
+    else:
+        search = str(" ".join(args[1:])).title()
+        searchCaught = [x for x in CaughtList if search in x] or ["No matches found!"]
+        searchSeen = [x for x in SeenList if search in x] or ["No matches found!"]
+    out.append(f'-desc "Searching through your Pokedex for Pokemon matching **{search}**..."')
+    out.append(f'''-f "Caught Pokemon:|{n(searchCaught)}|inline" -f "Seen Pokemon:|{n(searchSeen)}|inline"''')
+if PKMN:
+    Table=TableA if PKMN[0] in "ABCDE" else TableF if PKMN[0] in "FGHIJKLMN" else TableO if PKMN[0] in "OPQRST" else TableU
+    for pkmn in Table:
+        if pkmn == "Error":
+            PName = "Unknown"
+            PID = "???"
+            PType = "???"
+            PSR = "???"
+            PDesc = "No match found!"
+            PImage = "https://i0.wp.com/www.alphr.com/wp-content/uploads/2016/07/whos_that_pokemon.png"
+        if PKMN == pkmn or PKMN in pkmn:
+            if addPKMN == 1:
+                CaughtList.append(pkmn)
+                out.append(f'-footer "You caught a {pkmn}!"')
+            elif addPKMN == 2:
+                SeenList.append(pkmn)
+                out.append(f'-footer "You saw a {pkmn}!"')
+            PName = pkmn
+            PID = Table[pkmn]["id"] if (pkmn in CaughtList or pkmn in SeenList) else "???"
+            PType = (Table[pkmn]["type1"]+str("/")+Table[pkmn]["type2"] if Table[pkmn]["type2"] else Table[pkmn]["type1"]) if pkmn in CaughtList else "???"
+            PSR = Table[pkmn]["sr"] if pkmn in CaughtList else "???"
+            PDesc = Table[pkmn]["desc"] if pkmn in CaughtList else "Catch this Pokemon to find out more information!" if pkmn in SeenList else "No information available!"
+            PImage=Table[pkmn]["image"] if (pkmn in CaughtList or pkmn in SeenList) else "https://i0.wp.com/www.alphr.com/wp-content/uploads/2016/07/whos_that_pokemon.png"
+            break
+    out.append(f'-image {PImage}')
+    out.append(f'''-desc "#{PID}: **{PName}**
+    {PDesc}" ''')
+    out.append(f'-f "Type|{PType}|inline"')
+    out.append(f'-f "Species Rating|{PSR}|inline"')
+if ctx.author.id==313430706040733697:
+    out.append('-thumb "https://media.discordapp.net/attachments/500109191026049024/768859678439768084/63161.jpeg"')
+else:
+    out.append('-thumb "https://cdn.bulbagarden.net/upload/4/4f/Pok%C3%A9dex_GSC.png"')
+CaughtList.sort()
+SeenList.sort()
+set_cvar("PokedexCaught",dump_json(CaughtList))
+set_cvar("PokedexSeen",dump_json(SeenList))
+return " ".join(out)
+</drac2>
