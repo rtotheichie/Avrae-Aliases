@@ -863,6 +863,10 @@
 	{
 		"id": "442", "type1": "Ghost", "type2": "Dark", "sr": "11", "image": "https://cdn.bulbagarden.net/upload/8/8e/442Spiritomb.png", "desc": "A Pokémon that was formed by 108 spirits. It is bound to a fissure in an odd keystone."
 	},
+	"Spectrier":
+	{
+	  "id":"897", "type1": "Ghost", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/1/14/HOME897.png", "desc":"It probes its surroundings with all its senses save one—it doesn't use its sense of sight. Spectrier's kicks are said to separate soul from body."
+	},
 	"Spoink":
 	{
 		"id": "325", "type1": "Psychic", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/9/9e/325Spoink.png", "desc": "Spoink keeps a pearl on top of its head. The pearl functions to amplify this Pokémon's psychokinetic powers. It is therefore on a constant search for a bigger pearl."
