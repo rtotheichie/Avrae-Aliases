@@ -287,7 +287,7 @@
           "success": [{
             "type": "damage",
             "meta": [],
-            "damage": "{damage}+{dexterityMod}/2 [Flying]",
+            "damage": "{(damage}+{dexterityMod})/2 [Flying]",
             "overheal": false
           }],
           "dc": "{8+proficiencyBonus+dexterityMod}"
@@ -3797,7 +3797,7 @@
         "effects": [{
           "type": "damage",
           "meta": [],
-          "damage": "1d4+{charismaMod}+1 [Normal]",
+          "damage": "DAMAGE [Fairy]",
           "overheal": false,
           "higher": null,
           "cantripScale": null
