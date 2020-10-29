@@ -70,12 +70,18 @@
             "overheal": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+dexterityMod}"
+          "dc": "{8+proficiencyBonus+max(strengthMod,dexterityMod)}"
         }]
       }],
       "verb": null,
       "proper": true,
       "_v": 2
+    },
+    "damage":{
+      "1":"2d8+{max(strengthMod,dexterityMod)}",
+      "5":"2d10+{max(strengthMod,dexterityMod)}",
+      "10":"3d10+{max(strengthMod,dexterityMod)}",
+      "17":"4d12+{max(strengthMod,dexterityMod)}"
     },
     "PP": 5
   },
