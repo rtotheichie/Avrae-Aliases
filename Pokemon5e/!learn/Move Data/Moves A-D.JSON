@@ -1223,7 +1223,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "DAMAGE[Normal]",
+            "damage": "0 [Normal]",
             "overheal": false
           }],
           "miss": [],
@@ -1233,7 +1233,7 @@
       "verb": "uses",
       "proper": true,
       "_v": 2
-    },
+    },"attack":"proficiencyBonus+max(strengthMod,dexterityMod)",
     "PP": 5
   },
   "Bind": {
