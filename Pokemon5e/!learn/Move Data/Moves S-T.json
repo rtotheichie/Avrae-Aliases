@@ -3334,7 +3334,7 @@
         "effects": [{
           "type": "damage",
           "meta": [],
-          "damage": "{damage} [Normal]",
+          "damage": "1d4 [Normal]",
           "overheal": false,
           "higher": null,
           "cantripScale": null
@@ -3347,13 +3347,6 @@
       "verb": null,
       "proper": true,
       "_v": 2
-    },
-    "attack": "proficiencyBonus+max(0,0)",
-    "damage": {
-      "1": "2x1d4",
-      "5": "3x1d4",
-      "10": "5x1d4",
-      "17": "6x1d4"
     },
     "PP": 10
   },
