@@ -2141,7 +2141,7 @@
           "meta": [{
             "type": "roll",
             "meta": [],
-            "dice": "DAMAGE",
+            "dice": "1d4",
             "name": "Extra Attacks",
             "higher": null,
             "cantripScale": null,
@@ -2150,7 +2150,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "(2d4,2d4)kh1+{dexterityMod} [Grass]",
+            "damage": "DAMAGE [Grass]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -2169,10 +2169,10 @@
     },
     "attack": "proficiencyBonus+dexterityMod",
     "damage": {
-      "1": "1d4",
-      "5": "2d4",
-      "10": "1d12",
-      "17": "4d4"
+      "1": "1d4+{dexterityMod}",
+      "5": "2d4+{dexterityMod}",
+      "10": "1d12+{dexterityMod}",
+      "17": "4d4+{dexterityMod}"
     },
     "PP": 15
   },
