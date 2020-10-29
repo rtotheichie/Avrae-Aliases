@@ -1588,7 +1588,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "6d6+{(dexterityMod)}[Bug]"
+            "damage": "DAMAGE [Bug]"
           }],
           "miss": [],
           "attackBonus": "proficiencyBonus+(dexterityMod)"
