@@ -4756,7 +4756,7 @@
             "damage": "DAMAGE[Dragon]"
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+max(strengthMod,dexterityMod)"
+          "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
