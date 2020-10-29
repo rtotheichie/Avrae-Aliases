@@ -509,7 +509,7 @@
       }, {
         "type": "text",
         "meta": [],
-        "text": "You lunge at an opponent with incredible speed. At the beginning of a round of combat, you may announce that you are using this move, immediately jumping to the top of the initiative order for that round only. Make a melee attack on an opponent, dealing 1d6 + MOVE water damage on a hit."
+        "text": "You lunge at an opponent with incredible speed. Choose a target within 10 feet of you. A burst of water propels you towards that opponent, avoiding all attacks of opportunity. Make a melee attack on that creature, dealing 1d4 water damage on a hit."
       }],
       "verb": null,
       "proper": false,
