@@ -1888,7 +1888,7 @@
         "effects": [{
           "type": "damage",
           "meta": [],
-          "damage": "-(6d6+{max(wisdomMod,charismaMod)}) [healing]"
+          "damage": "-(DAMAGE) [healing]"
         }]
       }, {
         "type": "text",
@@ -1898,7 +1898,7 @@
       "_v": 2,
       "proper": true,
       "verb": "extends healing energy with"
-    },
+    },"damage":{"1":"1d6+{max(wisdomMod,charismaMod)}","5":"2d6+{max(wisdomMod,charismaMod)","10":"4d6+{max(wisdomMod,charismaMod)","17":"6d6+{max(wisdomMod,charismaMod)"},
     "PP": 10
   },
   "Recycle": {
