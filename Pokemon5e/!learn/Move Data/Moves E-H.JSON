@@ -2418,10 +2418,10 @@
     },
     "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
     "damage": {
-      "1": "1d4",
-      "5": "1d6",
-      "10": "1d8",
-      "17": "2d6"
+      "1": "1d4+{max(strengthMod,dexterityMod)}",
+      "5": "1d6+{max(strengthMod,dexterityMod)}",
+      "10": "1d8+{max(strengthMod,dexterityMod)}",
+      "17": "2d6+{max(strengthMod,dexterityMod)}"
     },
     "PP": 10
   },
