@@ -1079,32 +1079,7 @@
     "PP": 5
   },
   "Belch": {
-    "code": {
-      "name": "Belch",
-      "automation": [{
-        "type": "target",
-        "meta": [],
-        "target": "all",
-        "effects": [{
-          "type": "save",
-          "meta": [],
-          "stat": "con",
-          "fail": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "DAMAGE[Poison]"
-          }],
-          "dc": "{8+proficiencyBonus+max(strengthMod,constitutionMod)}"
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "You let out a damaging belch at a creature in range. Force the creature to make a CON save against your Move DC, taking 2d10 + MOVE poison damage on a failure, or half as much on a success. If you are holding a berry when activating this move, you may consume it and force the opponent to automatically fail the saving throw."
-      }],
-      "_v": 2,
-      "proper": true,
-      "verb": null
-    },
+    "code": {"name":"Belch","automation":[{"type":"target","meta":[],"target":"all","effects":[{"type":"save","meta":[],"stat":"con","fail":[{"type":"damage","meta":[],"damage":"DAMAGE [Poison]"}],"success":[{"type":"damage","meta":[],"damage":"(DAMAGE)/2 [Poison]"}],"dc":"{8+proficiencyBonus+max(strengthMod,constitutionMod)}"}]},{"type":"text","meta":[],"text":"You let out a damaging belch at a creature in range. Force the creature to make a CON save against your Move DC, taking 2d10 + MOVE poison damage on a failure, or half as much on a success. If you are holding a berry when activating this move, you may consume it and force the opponent to automatically fail the saving throw."}],"_v":2,"proper":true,"verb":null},
     "damage": {
       "1": "2d10+{max(strengthMod,constitutionMod)}",
       "5": "3d8+{max(strengthMod,constitutionMod)}",
