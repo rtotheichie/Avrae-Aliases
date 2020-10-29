@@ -4002,49 +4002,7 @@
     "PP": 10
   },
   "Horn Attack": {
-    "code": {
-      "name": "Horn Attack",
-      "automation": [{
-        "type": "target",
-        "meta": [],
-        "target": "each",
-        "effects": [{
-          "type": "attack",
-          "meta": [],
-          "hit": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "DAMAGE[Normal]",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }, {
-            "type": "save",
-            "meta": [],
-            "stat": "str",
-            "fail": [{
-              "type": "ieffect",
-              "meta": [],
-              "name": "Prone",
-              "duration": "d4",
-              "effects": "",
-              "end": true
-            }],
-            "success": [],
-            "dc": "{8+proficiencyBonus+strengthMod}"
-          }],
-          "miss": [],
-          "attackBonus": "ATTACK"
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "You strike at an enemy with your horn. Make a melee attack, doing 1d10 + MOVE normal damage on a hit. If you moved 20 feet or more towards an enemy on this turn, force the enemy to make a STR save against your Move DC or be knocked prone. Higher Levels: The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
-      }],
-      "verb": null,
-      "proper": true,
-      "_v": 2
-    },
+    "code": {"name":"Horn Attack","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[{"type":"roll","meta":[],"dice":"1d4","name":"Rounds"}],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Normal]","overheal":false},{"type":"save","meta":[],"stat":"str","fail":[{"type":"ieffect","meta":[],"name":"Prone","duration":"{Rounds}","effects":"","end":true,"conc":false,"desc":null}],"success":[],"dc":"{8+ATTACK}"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You strike at an enemy with your horn. Make a melee attack, doing 1d10 + MOVE normal damage on a hit. If you moved 20 feet or more towards an enemy on this turn, force the enemy to make a STR save against your Move DC or be knocked prone. Higher Levels: The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."}],"_v":2,"proper":true},
     "attack": "proficiencyBonus+strengthMod",
     "damage": {
       "1": "1d10+{strengthMod}",
