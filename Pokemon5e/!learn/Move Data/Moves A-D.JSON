@@ -1079,32 +1079,7 @@
     "PP": 5
   },
   "Belch": {
-    "code": {
-      "name": "Belch",
-      "automation": [{
-        "type": "target",
-        "meta": [],
-        "target": "all",
-        "effects": [{
-          "type": "save",
-          "meta": [],
-          "stat": "con",
-          "fail": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "DAMAGE[Poison]"
-          }],
-          "dc": "{8+proficiencyBonus+max(strengthMod,constitutionMod)}"
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "You let out a damaging belch at a creature in range. Force the creature to make a CON save against your Move DC, taking 2d10 + MOVE poison damage on a failure, or half as much on a success. If you are holding a berry when activating this move, you may consume it and force the opponent to automatically fail the saving throw."
-      }],
-      "_v": 2,
-      "proper": true,
-      "verb": null
-    },
+    "code": {"name":"Belch","automation":[{"type":"target","meta":[],"target":"all","effects":[{"type":"save","meta":[],"stat":"con","fail":[{"type":"damage","meta":[],"damage":"DAMAGE [Poison]"}],"success":[{"type":"damage","meta":[],"damage":"(DAMAGE)/2 [Poison]"}],"dc":"{8+proficiencyBonus+max(strengthMod,constitutionMod)}"}]},{"type":"text","meta":[],"text":"You let out a damaging belch at a creature in range. Force the creature to make a CON save against your Move DC, taking 2d10 + MOVE poison damage on a failure, or half as much on a success. If you are holding a berry when activating this move, you may consume it and force the opponent to automatically fail the saving throw."}],"_v":2,"proper":true,"verb":null},
     "damage": {
       "1": "2d10+{max(strengthMod,constitutionMod)}",
       "5": "3d8+{max(strengthMod,constitutionMod)}",
@@ -2166,7 +2141,7 @@
           "meta": [{
             "type": "roll",
             "meta": [],
-            "dice": "DAMAGE",
+            "dice": "1d4",
             "name": "Extra Attacks",
             "higher": null,
             "cantripScale": null,
@@ -2175,7 +2150,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "(2d4,2d4)kh1+{dexterityMod} [Grass]",
+            "damage": "DAMAGE [Grass]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -2194,10 +2169,10 @@
     },
     "attack": "proficiencyBonus+dexterityMod",
     "damage": {
-      "1": "1d4",
-      "5": "2d4",
-      "10": "1d12",
-      "17": "4d4"
+      "1": "1d4+{dexterityMod}",
+      "5": "2d4+{dexterityMod}",
+      "10": "1d12+{dexterityMod}",
+      "17": "4d4+{dexterityMod}"
     },
     "PP": 15
   },
@@ -4752,7 +4727,7 @@
           "meta": [{
             "type": "roll",
             "meta": [],
-            "dice": "DAMAGE",
+            "dice": "1d4",
             "name": "Rounds",
             "hidden": true
           }],
@@ -4782,10 +4757,10 @@
     },
     "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
     "damage": {
-      "1": "4d4",
-      "5": "2d12",
-      "10": "4d8",
-      "17": "8d6"
+      "1": "4d4+{max(strengthMod,dexterityMod)}",
+      "5": "2d12+{max(strengthMod,dexterityMod)}",
+      "10": "4d8+{max(strengthMod,dexterityMod)}",
+      "17": "8d6+{max(strengthMod,dexterityMod)}"
     },
     "PP": 3
   }

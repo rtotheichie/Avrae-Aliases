@@ -566,67 +566,7 @@
     "PP": 10
   },
   "Self-Destruct": {
-    "code": {
-      "name": "Self-Destruct",
-      "automation": [{
-        "type": "target",
-        "meta": [{
-          "type": "roll",
-          "meta": [],
-          "dice": "DAMAGE",
-          "name": "Damage",
-          "hidden": false
-        }],
-        "target": "all",
-        "effects": [{
-          "type": "save",
-          "meta": [],
-          "stat": "dex",
-          "fail": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "{Damage}+{strengthMod} [Normal]",
-            "overheal": false
-          }],
-          "success": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "({Damage}+{strengthMod})/2 [Normal]",
-            "overheal": false
-          }],
-          "dc": "{8+proficiencyBonus+strengthMod}"
-        }]
-      }, {
-        "type": "target",
-        "meta": [],
-        "target": "self",
-        "effects": [{
-          "type": "save",
-          "meta": [],
-          "stat": "dex",
-          "fail": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "{Damage}+{strengthMod} [Normal]",
-            "overheal": false
-          }],
-          "success": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "({Damage}+{strengthMod})/2 [Normal]",
-            "overheal": false
-          }],
-          "dc": "{8+proficiencyBonus+strengthMod}"
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "You release a massive explosion in a 30 foot radius, fainting immediately after the attack. Creatures in the area must make a DEX save against your Move DC. If your creature has at least half its hit points left, anyone in range takes 5d6 + MOVE normal damage on a fail, or half as much on a success. If your creature has less than half of its hitpoints left, the damage is halved for a failed save, and quartered for a success.\n"
-      }],
-      "verb": "uses",
-      "proper": true,
-      "_v": 2
-    },
+    "code": {"name":"Self-Destruct","automation":[{"type":"target","meta":[{"type":"roll","meta":[],"dice":"DAMAGE","name":"Damage","hidden":false}],"target":"all","effects":[{"type":"save","meta":[],"stat":"dex","fail":[{"type":"damage","meta":[],"damage":"{Damage}+{strengthMod} [Normal]","overheal":false}],"success":[{"type":"damage","meta":[],"damage":"({Damage}+{strengthMod})/2 [Normal]","overheal":false}],"dc":"{8+proficiencyBonus+strengthMod}"}]},{"type":"target","meta":[],"target":"self","effects":[{"type":"damage","meta":[],"damage":"{hp}"}]},{"type":"text","meta":[],"text":"You release a massive explosion in a 30 foot radius, fainting immediately after the attack. Creatures in the area must make a DEX save against your Move DC. If your creature has at least half its hit points left, anyone in range takes 5d6 + MOVE normal damage on a fail, or half as much on a success. If your creature has less than half of its hitpoints left, the damage is halved for a failed save, and quartered for a success.\n"}],"_v":2,"proper":true,"verb":"uses"},
     "damage": {
       "1": "5d6",
       "5": "4d10",
@@ -2284,43 +2224,11 @@
     "PP": 5
   },
   "Spite": {
-    "code": {
-      "name": "Spite",
-      "automation": [{
-        "type": "target",
-        "meta": [],
-        "target": "all",
-        "effects": [{
-          "type": "save",
-          "meta": [{
-            "type": "roll",
-            "meta": [],
-            "dice": "DAMAGE",
-            "name": "Spite",
-            "higher": null,
-            "cantripScale": null,
-            "hidden": false
-          }],
-          "stat": "wis",
-          "fail": [{
-            "type": "ieffect",
-            "meta": [],
-            "name": "Spite",
-            "duration": "-1",
-            "effects": "Lose 1d6 PP",
-            "end": false
-          }],
-          "success": [],
-          "dc": "{8+proficiencyBonus+wisdomMod}"
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "When hit with an attack, you can spend a reaction to attempt to drain the attacker’s PP, if they are in range. Force the attacker to make a WIS save against your Move DC. On a fail, roll a d4. The PP of the move that attacked you is decreased by that number."
-      }],
-      "verb": null,
-      "proper": true,
-      "_v": 2
+    "code": {"name":"Spite","automation":[{"type":"target","meta":[],"target":"all","effects":[{"type":"save","meta":[{"type":"roll","meta":[],"dice":"DAMAGE","name":"Spite","hidden":false}],"stat":"wis","fail":[],"success":[],"dc":"{8+proficiencyBonus+wisdomMod}"}]},{"type":"text","meta":[],"text":"When hit with an attack, you can spend a reaction to attempt to drain the attacker’s PP, if they are in range. Force the attacker to make a WIS save against your Move DC. On a fail, roll a d4. The PP of the move that attacked you is decreased by that number."}],"_v":2,"proper":true},"damage":{
+      "1":"1d4",
+      "5":"1d6",
+      "10":"1d8",
+      "17":"1d10"
     },
     "PP": 3
   },
@@ -3426,7 +3334,7 @@
         "effects": [{
           "type": "damage",
           "meta": [],
-          "damage": "{damage} [Normal]",
+          "damage": "1d4 [Normal]",
           "overheal": false,
           "higher": null,
           "cantripScale": null
@@ -3439,13 +3347,6 @@
       "verb": null,
       "proper": true,
       "_v": 2
-    },
-    "attack": "proficiencyBonus+max(0,0)",
-    "damage": {
-      "1": "2x1d4",
-      "5": "3x1d4",
-      "10": "5x1d4",
-      "17": "6x1d4"
     },
     "PP": 10
   },

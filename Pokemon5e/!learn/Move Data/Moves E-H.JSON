@@ -1918,7 +1918,7 @@
           "meta": [],
           "name": "Tightened Punch",
           "duration": "2",
-          "effects": "-attack \"{proficiencyBonus+max(strengthMod,dexterityMod)}|3d8+{max(strengthMod,dexterityMod)} [Fighting]|\"",
+          "effects": "-attack \"{ATTACK}|DAMAGE [Fighting]|\"",
           "end": true,
           "conc": true
         }]
@@ -1930,6 +1930,12 @@
       "verb": "tightens for",
       "proper": true,
       "_v": 2
+    },"attack":"proficiencyBonus+max(strengthMod,dexterityMod)}",
+    "damage":{
+      "1":"3d8+{max(strengthMod,dexterityMod)}",
+      "5": "5d6+{max(strengthMod,dexterityMod)}",
+      "10":"4d12+{max(strengthMod,dexterityMod)}",
+      "17":"8d8+{max(strengthMod,dexterityMod)}"
     },
     "PP": 10
   },
@@ -3864,7 +3870,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "1d10+{{max(strengthMod,dexterityMod,constitutionMod,intelligenceMod,wisdomMod,charismaMod)}} [{{\"Bug\" if Type==\"1\" else \"Fighting\" if Type==\"2\" else \"Fire\" if Type==\"3\" else \"Flying\" if Type==\"4\" else \"Grass\" if Type==\"5\" else \"Ground\" if Type==\"6\" else \"Electric\" if Type==\"7\" else \"Ice\" if Type==\"8\" else \"Psychic\" if Type==\"9\" else \"Rock\" if Type==\"10\" else \"Steel\" if Type==\"11\" else \"Water\"}}]",
+            "damage": "DAMAGE [{{\"Bug\" if Type==\"1\" else \"Fighting\" if Type==\"2\" else \"Fire\" if Type==\"3\" else \"Flying\" if Type==\"4\" else \"Grass\" if Type==\"5\" else \"Ground\" if Type==\"6\" else \"Electric\" if Type==\"7\" else \"Ice\" if Type==\"8\" else \"Psychic\" if Type==\"9\" else \"Rock\" if Type==\"10\" else \"Steel\" if Type==\"11\" else \"Water\"}}]",
             "overheal": false
           }],
           "miss": [],
@@ -3879,12 +3885,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(AnyMod,AnyMod)",
+    "attack": "proficiencyBonus+max(strengthMod,dexterityMod,constitutionMod,intelligenceMod,wisdomMod,charismaMod)",
     "damage": {
-      "1": "1d10",
-      "5": "2d8",
-      "10": "5d4",
-      "17": "4d8"
+      "1": "1d10+{max(strengthMod,dexterityMod,constitutionMod,intelligenceMod,wisdomMod,charismaMod)}",
+      "5": "2d8+{max(strengthMod,dexterityMod,constitutionMod,intelligenceMod,wisdomMod,charismaMod)}",
+      "10": "5d4+{max(strengthMod,dexterityMod,constitutionMod,intelligenceMod,wisdomMod,charismaMod)}",
+      "17": "4d8+{max(strengthMod,dexterityMod,constitutionMod,intelligenceMod,wisdomMod,charismaMod)}"
     },
     "PP": 10
   },
