@@ -1668,7 +1668,7 @@
           "meta": [],
           "name": "Enraged (advantage on STR checks)",
           "duration": "10",
-          "effects": "-d 6 -resist Normal",
+          "effects": "-d DAMAGE -resist Normal",
           "end": true,
           "conc": true
         }]
@@ -1680,7 +1680,7 @@
       "verb": "goes into a fit of",
       "proper": true,
       "_v": 2
-    },
+    }, "damage":{"1":"1","5":"2","10":"4","17":"6"},
     "PP": 3
   },
   "Rage Powder": {
