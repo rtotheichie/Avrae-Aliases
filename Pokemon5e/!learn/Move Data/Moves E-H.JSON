@@ -852,7 +852,7 @@
             "end": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+charismaMod}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -862,7 +862,7 @@
       "verb": "cries",
       "proper": true,
       "_v": 2
-    },
+    },"attack":"proficiencyBonus+max(wisdomMod,charismaMod)",
     "PP": 5
   },
   "False Swipe": {
