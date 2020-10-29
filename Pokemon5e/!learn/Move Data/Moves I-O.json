@@ -1588,7 +1588,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "6d6+{(dexterityMod)}[Bug]"
+            "damage": "DAMAGE [Bug]"
           }],
           "miss": [],
           "attackBonus": "proficiencyBonus+(dexterityMod)"
@@ -1660,7 +1660,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "1d12mi2 [Fighting^]"
+            "damage": "DAMAGE [Fighting^]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -1962,7 +1962,7 @@
       "automation": [{
         "type": "text",
         "meta": [],
-        "text": "When targeted by a direct attack that isn't Fake Out or Sucker Punch, you may use your reaction to copy the opponent's move against it before it makes the attack. Your attack is rolled at disadvantage, but on a hit, double the damage dice for the move. The damage tier for the move is based off of your level, not the opponent's."
+        "text": "When targeted by a move that isn't Fake Out or Sucker Punch, you may use your reaction to copy the opponent's move against it before it makes the attack. If the attack requires a roll, you have disadvantage. On a hit, double the damage dice for the move. The damage/effect tier for the move is based off of your level, not the opponent's."
       }],
       "_v": 2,
       "proper": true,
@@ -2794,57 +2794,13 @@
     "PP": 3
   },
   "Mud Bomb": {
-    "code": {
-      "name": "Mud Bomb",
-      "automation": [{
-        "type": "target",
-        "meta": [{
-          "type": "roll",
-          "meta": [],
-          "dice": "DAMAGE",
-          "name": "damage",
-          "higher": null,
-          "cantripScale": null,
-          "hidden": false
-        }],
-        "target": "all",
-        "effects": [{
-          "type": "save",
-          "meta": [],
-          "stat": "con",
-          "fail": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "{damage}+{max(strengthMod,dexterityMod)} [Ground]",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }],
-          "success": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "({damage}+{max(strengthMod,dexterityMod)})/2 [Ground]",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }],
-          "dc": "{8+ATTACK}"
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "You throw a hard-packed mud ball at an opponent. Make a ranged attack, dealing ground damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target has disadvantage on its next attack roll. If activating a move that requires a save, the target(s) have advantage."
-      }],
-      "verb": null,
-      "proper": false,
-      "_v": 2
-    },
+    "code": {"name":"Mud Bomb","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Ground]","overheal":false,"higher":null,"cantripScale":null},{"type":"save","meta":[],"stat":"con","fail":[{"type":"ieffect","meta":[],"name":"Disadvantage","duration":"1","effects":"","end":true}],"success":[],"dc":"{8+ATTACK}"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You throw a hard-packed mud ball at an opponent. Make a ranged attack, dealing ground damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target has disadvantage on its next attack roll. If activating a move that requires a save, the target(s) have advantage."}],"verb":null,"proper":true,"_v":2},
     "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
     "damage": {
-      "1": "1d10",
-      "5": "2d8",
-      "10": "5d4",
-      "17": "4d8"
+      "1": "1d10+{max(strengthMod,dexterityMod)}",
+      "5": "2d8+{max(strengthMod,dexterityMod)}",
+      "10": "5d4+{max(strengthMod,dexterityMod)}",
+      "17": "4d8+{max(strengthMod,dexterityMod)}"
     },
     "PP": 5
   },

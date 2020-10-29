@@ -852,7 +852,7 @@
             "end": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+charismaMod}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -862,7 +862,7 @@
       "verb": "cries",
       "proper": true,
       "_v": 2
-    },
+    },"attack":"proficiencyBonus+max(wisdomMod,charismaMod)",
     "PP": 5
   },
   "False Swipe": {
@@ -2088,7 +2088,7 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,0)",
+    "attack": "proficiencyBonus+max(strengthMod,wisdomMod)","damage":{"1":"2d8+{max(strengthMod,wisdomMod)}","5":"2d10+{max(strengthMod,wisdomMod)}","10":"3d10+{max(strengthMod,wisdomMod)}","17":"4d12+{max(strengthMod,wisdomMod)}"},
     "PP": 10
   },
   "Freeze Shock": {
@@ -2418,10 +2418,10 @@
     },
     "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
     "damage": {
-      "1": "1d4",
-      "5": "1d6",
-      "10": "1d8",
-      "17": "2d6"
+      "1": "1d4+{max(strengthMod,dexterityMod)}",
+      "5": "1d6+{max(strengthMod,dexterityMod)}",
+      "10": "1d8+{max(strengthMod,dexterityMod)}",
+      "17": "2d6+{max(strengthMod,dexterityMod)}"
     },
     "PP": 10
   },
@@ -4002,49 +4002,7 @@
     "PP": 10
   },
   "Horn Attack": {
-    "code": {
-      "name": "Horn Attack",
-      "automation": [{
-        "type": "target",
-        "meta": [],
-        "target": "each",
-        "effects": [{
-          "type": "attack",
-          "meta": [],
-          "hit": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "DAMAGE[Normal]",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }, {
-            "type": "save",
-            "meta": [],
-            "stat": "str",
-            "fail": [{
-              "type": "ieffect",
-              "meta": [],
-              "name": "Prone",
-              "duration": "d4",
-              "effects": "",
-              "end": true
-            }],
-            "success": [],
-            "dc": "{8+proficiencyBonus+strengthMod}"
-          }],
-          "miss": [],
-          "attackBonus": "ATTACK"
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "You strike at an enemy with your horn. Make a melee attack, doing 1d10 + MOVE normal damage on a hit. If you moved 20 feet or more towards an enemy on this turn, force the enemy to make a STR save against your Move DC or be knocked prone. Higher Levels: The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
-      }],
-      "verb": null,
-      "proper": true,
-      "_v": 2
-    },
+    "code": {"name":"Horn Attack","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[{"type":"roll","meta":[],"dice":"1d4","name":"Rounds"}],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Normal]","overheal":false},{"type":"save","meta":[],"stat":"str","fail":[{"type":"ieffect","meta":[],"name":"Prone","duration":"{Rounds}","effects":"","end":true,"conc":false,"desc":null}],"success":[],"dc":"{8+ATTACK}"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You strike at an enemy with your horn. Make a melee attack, doing 1d10 + MOVE normal damage on a hit. If you moved 20 feet or more towards an enemy on this turn, force the enemy to make a STR save against your Move DC or be knocked prone. Higher Levels: The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."}],"_v":2,"proper":true},
     "attack": "proficiencyBonus+strengthMod",
     "damage": {
       "1": "1d10+{strengthMod}",

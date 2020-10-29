@@ -2703,7 +2703,7 @@
             "meta": [],
             "damage": "({damage}+{strengthMod})/2 [Rock]"
           }],
-          "dc": "{8+proficiencyBonus+(strengthMod)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -2713,7 +2713,7 @@
       "_v": 2,
       "proper": true,
       "verb": null
-    },
+    }, "attack":"proficiencyBonus+strengthMod",
     "damage": {
       "1": "4d4",
       "5": "2d12",
