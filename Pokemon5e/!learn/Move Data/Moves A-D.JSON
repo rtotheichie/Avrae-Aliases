@@ -4727,7 +4727,7 @@
           "meta": [{
             "type": "roll",
             "meta": [],
-            "dice": "DAMAGE",
+            "dice": "1d4",
             "name": "Rounds",
             "hidden": true
           }],
@@ -4757,10 +4757,10 @@
     },
     "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
     "damage": {
-      "1": "4d4",
-      "5": "2d12",
-      "10": "4d8",
-      "17": "8d6"
+      "1": "4d4+{max(strengthMod,dexterityMod)}",
+      "5": "2d12+{max(strengthMod,dexterityMod)}",
+      "10": "4d8+{max(strengthMod,dexterityMod)}",
+      "17": "8d6+{max(strengthMod,dexterityMod)}"
     },
     "PP": 3
   }
