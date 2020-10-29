@@ -1394,7 +1394,7 @@
         "effects": [{
           "type": "ieffect",
           "meta": [],
-          "name": "1 Guarenteed Hit",
+          "name": "Locked-On",
           "duration": "2",
           "effects": "",
           "end": true
@@ -1405,8 +1405,8 @@
         "text": "You hone in on your target, ready to strike. When this move is activated, a single attack roll you make next turn is guaranteed to hit. You may roll to see if you crit or cause an effect from a high roll. This move does not affect one-shot moves like Fissure, Guillotine, etc.\n"
       }],
       "_v": 2,
-      "proper": true,
-      "verb": "tries to"
+      "proper": false,
+      "verb": "hones in with"
     },
     "PP": 3
   },
