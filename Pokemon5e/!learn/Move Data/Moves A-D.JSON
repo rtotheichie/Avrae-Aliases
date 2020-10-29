@@ -509,7 +509,7 @@
       }, {
         "type": "text",
         "meta": [],
-        "text": "You lunge at an opponent with incredible speed. At the beginning of a round of combat, you may announce that you are using this move, immediately jumping to the top of the initiative order for that round only. Make a melee attack on an opponent, dealing 1d6 + MOVE water damage on a hit."
+        "text": "You lunge at an opponent with incredible speed. Choose a target within 10 feet of you. A burst of water propels you towards that opponent, avoiding all attacks of opportunity. Make a melee attack on that creature, dealing 1d4 water damage on a hit."
       }],
       "verb": null,
       "proper": false,
@@ -868,43 +868,7 @@
     "PP": 5
   },
   "Aurora Beam": {
-    "code": {
-      "name": "Aurora Beam",
-      "automation": [{
-        "type": "target",
-        "meta": [],
-        "target": "each",
-        "effects": [{
-          "type": "save",
-          "meta": [],
-          "stat": "dex",
-          "fail": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "DAMAGE[Ice]",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }, {
-            "type": "ieffect",
-            "meta": [],
-            "name": "Frozen",
-            "duration": "-1",
-            "effects": "",
-            "end": false
-          }],
-          "success": [],
-          "dc": "{8+proficiencyBonus+max(strengthMod,dexterityMod)}"
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "You create a 40 foot line of freezing ice, 5 feet wide. Any creature caught in the line must succeed on a DEX save or take 1d10 + MOVE ice damage and be frozen."
-      }],
-      "verb": "",
-      "proper": true,
-      "_v": 2
-    },
+    "code": {"name":"Aurora Beam","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Ice]","overheal":false},{"type":"save","meta":[],"stat":"con","fail":[{"type":"ieffect","meta":[],"name":"Frozen","duration":-1,"effects":"","end":false,"conc":false}],"success":[],"dc":"{8+ATTACK"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You send a concentrated beam of freezing ice at a single creature in range. Make a ranged attack roll, doing 1d10 + MOVE ice damage on a hit, and forcing the target to make a CON save against your Move DC or become frozen."}],"verb":null,"proper":true,"_v":2},"attack":"proficiencyBonus+max(strengthMod,dexterityMod)",
     "damage": {
       "1": "1d10+{max(strengthMod,dexterityMod)}",
       "5": "2d8+{max(strengthMod,dexterityMod)}",
@@ -1223,7 +1187,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "DAMAGE[Normal]",
+            "damage": "0 [Normal]",
             "overheal": false
           }],
           "miss": [],
@@ -1233,7 +1197,7 @@
       "verb": "uses",
       "proper": true,
       "_v": 2
-    },
+    },"attack":"proficiencyBonus+max(strengthMod,dexterityMod)",
     "PP": 5
   },
   "Bind": {
@@ -2263,7 +2227,7 @@
             "meta": [],
             "damage": "({damage}+{max(strengthMod,dexterityMod)})/2 [Fire]"
           }],
-          "dc": "8+ATTACK"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "target",
@@ -3833,7 +3797,7 @@
         "effects": [{
           "type": "damage",
           "meta": [],
-          "damage": "1d4+{charismaMod}+1 [Normal]",
+          "damage": "DAMAGE [Fairy]",
           "overheal": false,
           "higher": null,
           "cantripScale": null
@@ -4756,7 +4720,7 @@
             "damage": "DAMAGE[Dragon]"
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+max(strengthMod,dexterityMod)"
+          "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
