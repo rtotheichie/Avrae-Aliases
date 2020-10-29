@@ -1918,7 +1918,7 @@
           "meta": [],
           "name": "Tightened Punch",
           "duration": "2",
-          "effects": "-attack \"{proficiencyBonus+max(strengthMod,dexterityMod)}|3d8+{max(strengthMod,dexterityMod)} [Fighting]|\"",
+          "effects": "-attack \"{ATTACK}|DAMAGE [Fighting]|\"",
           "end": true,
           "conc": true
         }]
@@ -1930,6 +1930,12 @@
       "verb": "tightens for",
       "proper": true,
       "_v": 2
+    },"attack":"proficiencyBonus+max(strengthMod,dexterityMod)}",
+    "damage":{
+      "1":"3d8+{max(strengthMod,dexterityMod)}",
+      "5": "5d6+{max(strengthMod,dexterityMod)}",
+      "10":"4d12+{max(strengthMod,dexterityMod)}",
+      "17":"8d8+{max(strengthMod,dexterityMod)}"
     },
     "PP": 10
   },
