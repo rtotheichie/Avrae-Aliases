@@ -2794,57 +2794,13 @@
     "PP": 3
   },
   "Mud Bomb": {
-    "code": {
-      "name": "Mud Bomb",
-      "automation": [{
-        "type": "target",
-        "meta": [{
-          "type": "roll",
-          "meta": [],
-          "dice": "DAMAGE",
-          "name": "damage",
-          "higher": null,
-          "cantripScale": null,
-          "hidden": false
-        }],
-        "target": "all",
-        "effects": [{
-          "type": "save",
-          "meta": [],
-          "stat": "con",
-          "fail": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "{damage}+{max(strengthMod,dexterityMod)} [Ground]",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }],
-          "success": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "({damage}+{max(strengthMod,dexterityMod)})/2 [Ground]",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }],
-          "dc": "{8+ATTACK}"
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "You throw a hard-packed mud ball at an opponent. Make a ranged attack, dealing ground damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target has disadvantage on its next attack roll. If activating a move that requires a save, the target(s) have advantage."
-      }],
-      "verb": null,
-      "proper": false,
-      "_v": 2
-    },
+    "code": {"name":"Mud Bomb","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Ground]","overheal":false,"higher":null,"cantripScale":null},{"type":"save","meta":[],"stat":"con","fail":[{"type":"ieffect","meta":[],"name":"Disadvantage","duration":"1","effects":"","end":true}],"success":[],"dc":"{8+ATTACK}"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You throw a hard-packed mud ball at an opponent. Make a ranged attack, dealing ground damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target has disadvantage on its next attack roll. If activating a move that requires a save, the target(s) have advantage."}],"verb":null,"proper":true,"_v":2},
     "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
     "damage": {
-      "1": "1d10",
-      "5": "2d8",
-      "10": "5d4",
-      "17": "4d8"
+      "1": "1d10+{max(strengthMod,dexterityMod)}",
+      "5": "2d8+{max(strengthMod,dexterityMod)}",
+      "10": "5d4+{max(strengthMod,dexterityMod)}",
+      "17": "4d8+{max(strengthMod,dexterityMod)}"
     },
     "PP": 5
   },
