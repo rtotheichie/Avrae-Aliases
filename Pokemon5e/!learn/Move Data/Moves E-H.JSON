@@ -2088,7 +2088,7 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,0)",
+    "attack": "proficiencyBonus+max(strengthMod,wisdomMod)","damage":{"1":"2d8+{max(strengthMod,wisdomMod)}","5":"2d10+{max(strengthMod,wisdomMod)}","10":"3d10+{max(strengthMod,wisdomMod)}","17":"4d12+{max(strengthMod,wisdomMod)}"},
     "PP": 10
   },
   "Freeze Shock": {
