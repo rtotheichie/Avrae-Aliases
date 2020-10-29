@@ -2224,43 +2224,11 @@
     "PP": 5
   },
   "Spite": {
-    "code": {
-      "name": "Spite",
-      "automation": [{
-        "type": "target",
-        "meta": [],
-        "target": "all",
-        "effects": [{
-          "type": "save",
-          "meta": [{
-            "type": "roll",
-            "meta": [],
-            "dice": "DAMAGE",
-            "name": "Spite",
-            "higher": null,
-            "cantripScale": null,
-            "hidden": false
-          }],
-          "stat": "wis",
-          "fail": [{
-            "type": "ieffect",
-            "meta": [],
-            "name": "Spite",
-            "duration": "-1",
-            "effects": "Lose 1d6 PP",
-            "end": false
-          }],
-          "success": [],
-          "dc": "{8+proficiencyBonus+wisdomMod}"
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "When hit with an attack, you can spend a reaction to attempt to drain the attacker’s PP, if they are in range. Force the attacker to make a WIS save against your Move DC. On a fail, roll a d4. The PP of the move that attacked you is decreased by that number."
-      }],
-      "verb": null,
-      "proper": true,
-      "_v": 2
+    "code": {"name":"Spite","automation":[{"type":"target","meta":[],"target":"all","effects":[{"type":"save","meta":[{"type":"roll","meta":[],"dice":"DAMAGE","name":"Spite","hidden":false}],"stat":"wis","fail":[],"success":[],"dc":"{8+proficiencyBonus+wisdomMod}"}]},{"type":"text","meta":[],"text":"When hit with an attack, you can spend a reaction to attempt to drain the attacker’s PP, if they are in range. Force the attacker to make a WIS save against your Move DC. On a fail, roll a d4. The PP of the move that attacked you is decreased by that number."}],"_v":2,"proper":true},"damage":{
+      "1":"1d4",
+      "5":"1d6",
+      "10":"1d8",
+      "17":"1d10"
     },
     "PP": 3
   },
