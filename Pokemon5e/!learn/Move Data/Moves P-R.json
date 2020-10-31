@@ -2544,7 +2544,7 @@
           "fail": [{
             "type": "damage",
             "meta": [],
-            "damage": "{damage}+strengthMod [Rock]"
+            "damage": "{damage}+{strengthMod} [Rock]"
           }, {
             "type": "ieffect",
             "meta": [],
