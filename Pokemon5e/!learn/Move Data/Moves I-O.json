@@ -1660,7 +1660,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "DAMAGE [Fighting^]"
+            "damage": "DAMAGE [Fighting]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
