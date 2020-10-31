@@ -23,7 +23,10 @@ if not help:
     Import_Code = dump_json(gvar[Move_Name]["code"])
     dmg_String = gvar[Move_Name][dmg][dmg_level] if dmg in gvar[Move_Name] else ''
     if args.get('ea') or args.get('adept'):
-        dmg_String = dmg_String[:dmg_String.index("+")]+"mi2"+dmg_String[dmg_String.index("+"):]
+        if '+' in dmg_String:
+            dmg_String = dmg_String[:dmg_String.index("+")]+"mi2"+dmg_String[dmg_String.index("+"):]
+        else:
+            dmg_String = dmg_String + "mi2"
         Import_Code = Import_Code.replace(']"','^]"')
     if args.get('savage') or (args.get('technician') and gvar[Move_Name]["PP"]>=15):
         dmg_String = "("+dmg_String[:dmg_String.index("+")]+","+dmg_String[:dmg_String.index("+")]+")kh1"+dmg_String[dmg_String.index("+"):]
