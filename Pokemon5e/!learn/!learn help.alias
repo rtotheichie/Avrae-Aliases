@@ -1,0 +1,17 @@
+embed	
+-title "{{name}} is trying to learn a new move!"
+-desc "Run `!learn \"Move Name\"` to teach your Pokemon a new move and add the appropriate counters.
+**__Available Arguments:__**
+`-b #` Add to your attack bonus (or your DC for save moves)
+`-d #` Add to your damage
+`-pp #` Add to your base PP counter (for things like PP Up)
+`tireless` Adds to your PP if you have the Tireless feat
+`stab` Add your STAB to your damage (use `-d` for Type Master's additional STAB bonus)
+`savage` Change your damage to account for the Savage Attacker feat (also useful for Iron Fist or other abilities that do the same thing)
+`technician` Change your damage for the Technician ability.  Using this will check to make sure your PP is high enough for the move to take advantage of it.
+`adept` Add the bonuses to your damage for the Elemental Adept Feat
+`manual` Instead of adding the move automatically, display the code so you can tweak it and add it manually if you desire
+`help` Gets you this message"
+-f "Special Notes|`Curse (Ghost)` for the Ghost version of the move. Non-ghost version coming soon :tm:
+If your move has both an attack roll and a saving throw, `-b` will add to both.  For the time being, the only way around this is to use `manual` and remove the bonus from the saving throw DC."
+-footer "!learn - Developed by @R to the Ichie#6193"
