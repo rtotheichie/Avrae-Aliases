@@ -3317,37 +3317,7 @@
     "PP": 10
   },
   "Swift": {
-    "code": {
-      "name": "Swift",
-      "automation": [{
-        "type": "target",
-        "meta": [{
-          "type": "roll",
-          "meta": [],
-          "dice": "DAMAGE",
-          "name": "damage",
-          "higher": null,
-          "cantripScale": null,
-          "hidden": false
-        }],
-        "target": "all",
-        "effects": [{
-          "type": "damage",
-          "meta": [],
-          "damage": "1d4 [Normal]",
-          "overheal": false,
-          "higher": null,
-          "cantripScale": null
-        }]
-      }, {
-        "type": "text",
-        "meta": [],
-        "text": "You fire three projectiles at any Pokémon you choose in range. They do not have to target the same Pokémon. Each hit for 1d4 normal damage. This move also targets Pokémon during the invulnerable stages of Dig, Fly, Bounce, etc."
-      }],
-      "verb": null,
-      "proper": true,
-      "_v": 2
-    },
+    "code": {"name":"Swift","automation":[{"type":"target","meta":[{"type":"roll","meta":[],"dice":"1d4","name":"damage","higher":null,"cantripScale":null,"hidden":false}],"target":"all","effects":[{"type":"damage","meta":[],"damage":"{damage} [Normal]","overheal":false,"higher":null,"cantripScale":null}]},{"type":"text","meta":[],"text":"You fire three projectiles at any Pokémon you choose in range. They do not have to target the same Pokémon. Each hit for 1d4 normal damage. This move also targets Pokémon during the invulnerable stages of Dig, Fly, Bounce, etc."}],"verb":null,"proper":true,"_v":2},
     "PP": 10
   },
   "Switcheroo": {
