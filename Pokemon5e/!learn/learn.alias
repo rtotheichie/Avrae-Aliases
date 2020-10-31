@@ -28,8 +28,12 @@ if not help:
         else:
             dmg_String = dmg_String + "mi2"
         Import_Code = Import_Code.replace(']"','^]"')
-    if args.get('savage') or (args.get('technician') and gvar[Move_Name]["PP"]>=15):
-        dmg_String = "("+dmg_String[:dmg_String.index("+")]+","+dmg_String[:dmg_String.index("+")]+")kh1"+dmg_String[dmg_String.index("+"):]
+    if args.get('savage') or (args.get('technician') and G[MN]["PP"]>=15):
+        if "+" in dmg_String:
+            dmg_String_x, dmg_String_y = dmg_String[:dmg_String.index("+")], dmg_String[dmg_String.index("+"):]
+            dmg_String=f"({dmg_String_x},{dmg_String_x})kh1+{dmg_String_y}"
+        else:
+            dmg_String=f"({dmg_String},{dmg_String})kh1"
     dmg_String = dmg_String+"+"+str(dmg_Bonus) if dmg_Bonus else dmg_String
     atk_String = gvar[Move_Name]["attack"] if "attack" in gvar[Move_Name] else ''
     atk_String = atk_String+"+"+str(atk_Bonus) if atk_Bonus else atk_String
