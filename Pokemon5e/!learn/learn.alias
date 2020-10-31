@@ -8,16 +8,6 @@ if not help:
     if args:
         args = argparse(args)
     dmg = "damage"
-    if args.get('stab') or args.get('STAB'):
-        STAB = 0 if level<3 else 1 if level<7 else 2 if level<11 else 3 if level<15 else 4 if level<19 else 5
-    else:
-        STAB = 0
-    if STAB:
-        dmg_Bonus = STAB + args.last('d',0,int)
-    else:
-        dmg_Bonus = args.last('d',0)
-    atk_Bonus = args.last('b',0,int)
-    PP_bonus = args.last('pp',0,int)
     gvar = load_json(get_gvar("31cb48fb-f491-4c43-bde1-9a89379c0cc3")) if Move_Name[0] in "ABCD" else load_json(get_gvar("df9bea71-6a5a-4e62-8c2c-2f81e2ac3b6e")) if Move_Name[0] in "EFGH" else load_json(get_gvar("d4056cb7-89d1-48df-af57-e4a225bd58fa")) if Move_Name[0] in "IJKLMNO" else load_json(get_gvar("96045d79-0720-4669-a10f-bd93bc7a1c28")) if Move_Name[0] in "PQR" else load_json(get_gvar("6295d6d5-db77-4c21-86f1-6dc4d92ca2f7")) if Move_Name[0] in "ST" else load_json(get_gvar("93845614-47fb-4c0c-a15b-9b22720b1183")) if Move_Name[0] in "UVWXYZ" else err("I don't think that's a valid move name")
     dmg_level = "1" if level <5 else "5" if level<10 else "10" if level<17 else "17"
     Import_Code = dump_json(gvar[Move_Name]["code"])
@@ -34,6 +24,19 @@ if not help:
             dmg_String=f"({dmg_String_x},{dmg_String_x})kh1+{dmg_String_y}"
         else:
             dmg_String=f"({dmg_String},{dmg_String})kh1"
+    if args.get('stab') or args.get('STAB'):
+        STAB = 0 if level<3 else 1 if level<7 else 2 if level<11 else 3 if level<15 else 4 if level<19 else 5
+    else:
+        STAB = 0
+    if args.get('pixilate'):
+        Import_Code = Import_Code.replace('[Normal]','[Fairy]')
+        STAB = STAB*2
+    if STAB:
+        dmg_Bonus = STAB + args.last('d',0,int)
+    else:
+        dmg_Bonus = args.last('d',0)
+    atk_Bonus = args.last('b',0,int)
+    PP_bonus = args.last('pp',0,int)
     dmg_String = dmg_String+"+"+str(dmg_Bonus) if dmg_Bonus else dmg_String
     atk_String = gvar[Move_Name]["attack"] if "attack" in gvar[Move_Name] else ''
     atk_String = atk_String+"+"+str(atk_Bonus) if atk_Bonus else atk_String
