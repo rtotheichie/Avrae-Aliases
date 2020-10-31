@@ -12,6 +12,11 @@ if not help:
     dmg_level = "1" if level <5 else "5" if level<10 else "10" if level<17 else "17"
     Import_Code = dump_json(gvar[Move_Name]["code"])
     dmg_String = gvar[Move_Name][dmg][dmg_level] if dmg in gvar[Move_Name] else ''
+    if args.get('normalize'):
+        for dmg_type in ["[Normal]","[Bug]","[Fire]","[Electric]","[Grass]","[Water]","[Ice]","[Dark]","[Fighting]","[Psychic]","[Ghost]","[Rock]","[Ground]","[Flying]","[Steel]","[Fairy]","[Dragon]","[Poison]"]:
+            if dmg_type in Import_Code:
+                Import_Code = Import_Code.replace(dmg_type,"[Normal]")
+                break
     if args.get('ea') or args.get('adept'):
         if '+' in dmg_String:
             dmg_String = dmg_String[:dmg_String.index("+")]+"mi2"+dmg_String[dmg_String.index("+"):]
@@ -31,6 +36,13 @@ if not help:
     if args.get('pixilate'):
         Import_Code = Import_Code.replace('[Normal]','[Fairy]')
         STAB = STAB*2
+    if args.get('refrigerate'):
+        Import_Code = Import_Code.replace('[Normal]','[Ice]')
+        STAB = STAB*2
+    if args.get('galvanize'):
+        Import_Code = Import_Code.replace('[Normal]','[Electric]')
+    if args.get('aerilate'):
+        Import_Code = Import_Code.replace('[Normal]','[Flying]')
     if STAB:
         dmg_Bonus = STAB + args.last('d',0,int)
     else:
