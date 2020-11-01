@@ -1,0 +1,205 @@
+[
+ {
+  "name":"System Reference Document Races",
+  "featureResources":"4df6c4b7-efd2-4903-8766-4dfcebcdd695",
+  "counters":[],
+  "cvars":{
+   "race":"",
+   "speed":"30 ft.",
+   "languages":"Common",
+   "size":"Medium",
+   "creatureType":"Humanoid",
+   "resist":"",
+   "immune":"",
+   "cimmune":"",
+   "vuln":"",
+   "senses":""
+  }
+ },
+ {
+  "name":"dragonborn black",
+  "counters":[
+   {"name":"Breath Weapon","reset":"short","level":1,"use":"use blackBreath [-t targets]"}
+  ],
+  "cvars":{
+   "race":"Black Dragonborn",
+   "resist":"Acid",
+   "languages":"Common, Draconic"
+  }
+ },
+ {
+  "name":"dragonborn blue",
+  "counters":[
+   {"name":"Breath Weapon","reset":"short","level":1,"use":"use blueBreath [-t targets]"}
+  ],
+  "cvars":{
+   "race":"Blue Dragonborn",
+   "resist":"Lightning",
+   "languages":"Common, Draconic"
+  }
+ },
+ {
+  "name":"dragonborn brass",
+  "counters":[
+   {"name":"Breath Weapon","reset":"short","level":1,"use":"use brassBreath [-t targets]"}
+  ],
+  "cvars":{
+   "race":"Brass Dragonborn",
+   "resist":"Fire",
+   "languages":"Common, Draconic"
+  }
+ },
+ {
+  "name":"dragonborn bronze",
+  "counters":[
+   {"name":"Breath Weapon","reset":"short","level":1,"use":"use bronzeBreath [-t targets]"}
+  ],
+  "cvars":{
+   "race":"Bronze Dragonborn",
+   "resist":"Lightning",
+   "languages":"Common, Draconic"
+  }
+ },
+ {
+  "name":"dragonborn copper",
+  "counters":[
+   {"name":"Breath Weapon","reset":"short","level":1,"use":"use copperBreath [-t targets]"}
+  ],
+  "cvars":{
+   "race":"Copper Dragonborn",
+   "resist":"Acid",
+   "languages":"Common, Draconic"
+  }
+ },
+ {
+  "name":"dragonborn gold",
+  "counters":[
+   {"name":"Breath Weapon","reset":"short","level":1,"use":"use goldBreath [-t targets]"}
+  ],
+  "cvars":{
+   "race":"Gold Dragonborn",
+   "resist":"Fire",
+   "languages":"Common, Draconic"
+  }
+ },
+ {
+  "name":"dragonborn green",
+  "counters":[
+   {"name":"Breath Weapon","reset":"short","level":1,"use":"use greenBreath [-t targets]"}
+  ],
+  "cvars":{
+   "race":"Green Dragonborn",
+   "resist":"Poison",
+   "languages":"Common, Draconic"
+  }
+ },
+ {
+  "name":"dragonborn red",
+  "counters":[
+   {"name":"Breath Weapon","reset":"short","level":1,"use":"use redBreath [-t targets]"}
+  ],
+  "cvars":{
+   "race":"Red Dragonborn",
+   "resist":"Fire",
+   "languages":"Common, Draconic"
+  }
+ },
+ {
+  "name":"dragonborn silver",
+  "counters":[
+   {"name":"Breath Weapon","reset":"short","level":1,"use":"use silverBreath [-t targets]"}
+  ],
+  "cvars":{
+   "race":"Silver Dragonborn",
+   "resist":"Cold",
+   "languages":"Common, Draconic"
+  }
+ },
+ {
+  "name":"dragonborn white",
+  "counters":[
+   {"name":"Breath Weapon","reset":"short","level":1,"use":"use whiteBreath [-t targets]"}
+  ],
+  "cvars":{
+   "race":"White Dragonborn",
+   "resist":"Cold",
+   "languages":"Common, Draconic"
+  }
+ },
+ {
+  "name":"dwarf hill",
+  "cvars":{
+   "race":"Hill Dwarf",
+   "speed":"25 ft.",
+   "resist":"Poison",
+   "languages":"Common, Dwarvish",
+   "senses":"Darkvision 60 ft."
+  }
+ },
+ {
+  "name":"elf high",
+  "cvars":{
+   "race":"High Elf",
+   "languages":"Common, Elvish",
+   "senses":"Darkvision 60 ft."
+  }
+ },
+ {
+  "name":"gnome rock",
+  "cvars":{
+   "race":"Rock Gnome",
+   "speed":"25 ft.",
+   "languages":"Common, Gnomish",
+   "size":"Small",
+   "senses":"Darkvision 60 ft."
+  }
+ },
+ {
+  "name":"halfling lightfoot",
+  "cvars":{
+   "race":"Lightfoot Halfling",
+   "speed":"25 ft.",
+   "languages":"Common, Halfling",
+   "size":"Small"
+  }
+ },
+ {
+  "name":"half-elf",
+  "cvars":{
+   "race":"Half-Elf",
+   "languages":"Common, Elvish| one extra language of your choice",
+   "senses":"Darkvision 60 ft."
+  }
+ },
+ {
+  "name":"half-orc",
+  "counters":[
+   {"name":"Relentless Endurance","reset":"long","level":1,"use":"use horcEndurance"}
+  ],
+  "cvars":{
+   "race":"Half-Orc",
+   "languages":"Common, Orc",
+   "senses":"Darkvision 60 ft."
+  }
+ },
+ {
+  "name":"human variant",
+  "cvars":{
+   "race":"Human",
+   "languages":"Common| one extra language of your choice"
+  }
+ },
+ {
+  "name":"tiefling",
+  "counters":[
+   {"name":"Hellish Rebuke","reset":"long","level":3,"use":"racecast 'Hellish Rebuke' [-t target]"},
+   {"name":"Darkness","reset":"long","level":5,"use":"racecast Darkness"}
+  ],
+  "cvars":{
+   "race":"Tiefling",
+   "resist":"Fire",
+   "languages":"Common, Infernal",
+   "senses":"Darkvision 60 ft."
+  }
+ }
+]
