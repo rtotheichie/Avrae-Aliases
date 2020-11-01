@@ -1,0 +1,212 @@
+[{
+    "Class": "Trainer",
+    "hitDie": "d8",
+    "subclassLevel": 2,
+    "counters": [{
+        "name": "Pokéslots",
+        "level": 1,
+        "value": [3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6],
+        "reset": "none",
+        "display": "bubble",
+        "classLevel": "TrainerLevel"
+      },
+      {
+        "name": "Pokémon Tracker",
+        "level": 13,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "TrainerLevel"
+      },
+      {
+        "name": "Master Trainer",
+        "level": 20,
+        "value": 2,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "TrainerLevel"
+      }
+    ]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Ace Trainer",
+    "counters": [{
+      "name": "Battle Dice",
+      "level": 5,
+      "value": "wisdomMod",
+      "modifier": 1,
+      "reset": "long",
+      "display": "bubble",
+      "classLevel": "TrainerLevel"
+    }]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Hobbyist",
+    "counters": [{
+      "name": "Skill Dice",
+      "level": 5,
+      "value": "wisdomMod",
+      "modifier": 1,
+      "reset": "long",
+      "display": "bubble",
+      "classLevel": "TrainerLevel"
+    }]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Poké Mentor",
+    "counters": [{
+        "name": "Pokéchef",
+        "level": 5,
+        "value": "wisdomMod",
+        "modifier": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "TrainerLevel"
+      },
+      {
+        "name": "Cheerleader",
+        "level": 9,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "TrainerLevel"
+      }
+    ]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Researcher",
+    "counters": [{
+      "name": "Professor",
+      "level": 15,
+      "value": 1,
+      "reset": "none",
+      "display": "bubble",
+      "classLevel": "TrainerLevel"
+    }]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Pokémon Collector",
+    "counters": [{
+      "name": "Gotta Catch ‘Em All",
+      "level": 5,
+      "value": 1,
+      "reset": "long",
+      "display": "bubble",
+      "classLevel": "TrainerLevel"
+    }]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Nurse",
+    "counters": [{
+        "name": "Pure Heart",
+        "level": 5,
+        "value": [0, 0, 0, 0, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100],
+        "reset": "long",
+        "display": "default",
+        "classLevel": "TrainerLevel"
+      },
+      {
+        "name": "Joy",
+        "level": 15,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "TrainerLevel"
+      }
+    ]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Type Master",
+    "counters": []
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Commander",
+    "counters": [{
+        "name": "Show Me What You've Got",
+        "level": 9,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "TrainerLevel"
+      },
+      {
+        "name": "We're a Team",
+        "level": 15,
+        "value": "charismaMod",
+        "modifier": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "TrainerLevel"
+      }
+    ]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Grunt",
+    "counters": [{
+      "name": "Shadow Points",
+      "level": 2,
+      "value": "TrainerLevel",
+      "reset": "long",
+      "display": "default",
+      "classLevel": "TrainerLevel"
+    }]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Tactician",
+    "counters": [{
+      "name": "Tactical Points",
+      "level": 2,
+      "value": [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "reset": "long",
+      "display": "default",
+      "classLevel": "TrainerLevel"
+    }]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Ranger",
+    "counters": [{
+      "name": "Deep Connection",
+      "level": 5,
+      "value": "charismaMod",
+      "reset": "long",
+      "display": "bubble",
+      "classLevel": "TrainerLevel"
+    }]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Coordinator",
+    "counters": [{
+      "name": "Style Dice",
+      "level": 5,
+      "value": "charismaMod",
+      "reset": "long",
+      "display": "bubble",
+      "classLevel": "TrainerLevel"
+    }]
+  },
+  {
+    "Class": "Trainer",
+    "subclass": "Guru",
+    "counters": [{
+      "name": "Spirit",
+      "level": 15,
+      "value": "charismaMod",
+      "modifier": 1,
+      "reset": "long",
+      "display": "bubble",
+      "classLevel": "TrainerLevel"
+    }]
+  }
+]
