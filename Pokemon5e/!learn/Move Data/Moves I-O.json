@@ -12,7 +12,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "2d6+{max(strengthMod,dexterityMod)+5} [Ice^]"
+            "damage": "DAMAGE [Ice^]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -26,12 +26,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d4+{max(strengthMod,dexterityMod)}",
-      "5": "1d6+{max(strengthMod,dexterityMod)}",
-      "10": "2d4+{max(strengthMod,dexterityMod)}",
-      "17": "2d6+{max(strengthMod,dexterityMod)}"
+      "1": "1d4+{max(SMO,DMO)}",
+      "5": "1d6+{max(SMO,DMO)}",
+      "10": "2d4+{max(SMO,DMO)}",
+      "17": "2d6+{max(SMO,DMO)}"
     },
     "PP": 10
   },
@@ -54,7 +54,7 @@
           "fail": [{
             "type": "damage",
             "meta": [],
-            "damage": "{damage}+{max(strengthMod,dexterityMod)} [Ice]"
+            "damage": "{damage}+{max(SMO,DMO)} [Ice]"
           }, {
             "type": "ieffect",
             "meta": [],
@@ -66,7 +66,7 @@
           "success": [{
             "type": "damage",
             "meta": [],
-            "damage": "({damage}+{max(strengthMod,dexterityMod)})/2 [Ice]"
+            "damage": "({damage}+{max(SMO,DMO)})/2 [Ice]"
           }],
           "dc": "{8+ATTACK}"
         }]
@@ -79,7 +79,7 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "2d8",
       "5": "2d10",
@@ -108,16 +108,16 @@
           "fail": [{
             "type": "damage",
             "meta": [],
-            "damage": "{damage}+{max(strengthMod,dexterityMod)} [Ice]",
+            "damage": "{damage}+{max(SMO,DMO)} [Ice]",
             "overheal": false
           }],
           "success": [{
             "type": "damage",
             "meta": [],
-            "damage": "({damage}+{max(strengthMod,dexterityMod)})/2 [Ice]",
+            "damage": "({damage}+{max(SMO,DMO)})/2 [Ice]",
             "overheal": false
           }],
-          "dc": "{8+proficiencyBonus+max(strengthMod,dexterityMod)}"
+          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
         }]
       }, {
         "type": "text",
@@ -163,12 +163,12 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(strengthMod,dexterityMod)}",
-      "5": "2d8+{max(strengthMod,dexterityMod)}",
-      "10": "5d4+{max(strengthMod,dexterityMod)}",
-      "17": "4d8+{max(strengthMod,dexterityMod)}"
+      "1": "1d10+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "5d4+{max(SMO,DMO)}",
+      "17": "4d8+{max(SMO,DMO)}"
     },
     "PP": 10
   },
@@ -200,12 +200,12 @@
       "proper": false,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d12+{max(strengthMod,dexterityMod)}",
-      "5": "2d8+{max(strengthMod,dexterityMod)}",
-      "10": "2d12+{max(strengthMod,dexterityMod)}",
-      "17": "6d6+{max(strengthMod,dexterityMod)}"
+      "1": "1d12+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "2d12+{max(SMO,DMO)}",
+      "17": "6d6+{max(SMO,DMO)}"
     },
     "PP": 10
   },
@@ -236,7 +236,7 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d4",
       "5": "1d6",
@@ -272,12 +272,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "2d6+{dexterityMod}",
-      "5": "2d8+{dexterityMod}",
-      "10": "4d6+{dexterityMod}",
-      "17": "6d6+{dexterityMod}"
+      "1": "2d6+{DMO}",
+      "5": "2d8+{DMO}",
+      "10": "4d6+{DMO}",
+      "17": "6d6+{DMO}"
     },
     "PP": 5
   },
@@ -319,7 +319,7 @@
       "proper": false,
       "_v": 2
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d4",
       "5": "2d4",
@@ -356,12 +356,12 @@
       "proper": false,
       "_v": 2
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d8+{dexterityMod}",
-      "5": "2d6+{dexterityMod}",
-      "10": "4d4+{dexterityMod}",
-      "17": "3d10+{dexterityMod}"
+      "1": "1d8+{DMO}",
+      "5": "2d6+{DMO}",
+      "10": "4d4+{DMO}",
+      "17": "3d10+{DMO}"
     },
     "PP": 10
   },
@@ -385,7 +385,7 @@
             "end": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(wisdomMod,intelligenceMod)}"
+          "dc": "{8+proficiencyBonus+max(WMO,IMO)}"
         }]
       }, {
         "type": "target",
@@ -439,12 +439,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(strengthMod,dexterityMod)}",
-      "5": "2d8+{max(strengthMod,dexterityMod)}",
-      "10": "5d4+{max(strengthMod,dexterityMod)}",
-      "17": "4d8+{max(strengthMod,dexterityMod)}"
+      "1": "1d10+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "5d4+{max(SMO,DMO)}",
+      "17": "4d8+{max(SMO,DMO)}"
     },
     "PP": 10
   },
@@ -482,12 +482,12 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "4d4+{max(strengthMod,dexterityMod)}",
-      "5": "2d12+{max(strengthMod,dexterityMod)}",
-      "10": "4d8+{max(strengthMod,dexterityMod)}",
-      "17": "8d6+{max(strengthMod,dexterityMod)}"
+      "1": "4d4+{max(SMO,DMO)}",
+      "5": "2d12+{max(SMO,DMO)}",
+      "10": "4d8+{max(SMO,DMO)}",
+      "17": "8d6+{max(SMO,DMO)}"
     },
     "PP": 3
   },
@@ -526,7 +526,7 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(constitutionMod,constitutionMod)",
+    "attack": "proficiencyBonus+CoMO",
     "damage": {
       "1": "1d4",
       "5": "1d6",
@@ -547,7 +547,7 @@
           "meta": [],
           "name": "roots",
           "duration": "3",
-          "effects": "-attack \"|-(1d6+{constitutionMod})| The Pokemon absorbs energy with its roots\"",
+          "effects": "-attack \"|-(1d6+{CoMO})| The Pokemon absorbs energy with its roots\"",
           "end": false
         }]
       }, {
@@ -654,12 +654,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+strengthMod",
+    "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d6+{strengthMod}",
-      "5": "2d8+{strengthMod}",
-      "10": "4d6+{strengthMod}",
-      "17": "6d6+{strengthMod}"
+      "1": "2d6+{SMO}",
+      "5": "2d8+{SMO}",
+      "10": "4d6+{SMO}",
+      "17": "6d6+{SMO}"
     },
     "PP": 10
   },
@@ -690,12 +690,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+strengthMod",
+    "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "4d4+{strengthMod}",
-      "5": "2d12+{strengthMod}",
-      "10": "4d8+{strengthMod}",
-      "17": "8d6+{strengthMod}"
+      "1": "4d4+{SMO}",
+      "5": "2d12+{SMO}",
+      "10": "4d8+{SMO}",
+      "17": "8d6+{SMO}"
     },
     "PP": 10
   },
@@ -721,7 +721,7 @@
           "fail": [{
             "type": "damage",
             "meta": [],
-            "damage": "{damage}+{strengthMod}",
+            "damage": "{damage}+{SMO}",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -729,12 +729,12 @@
           "success": [{
             "type": "damage",
             "meta": [],
-            "damage": "({damage}+{strengthMod})/2",
+            "damage": "({damage}+{SMO})/2",
             "overheal": false,
             "higher": null,
             "cantripScale": null
           }],
-          "dc": "{8+proficiencyBonus+strengthMod}"
+          "dc": "{8+proficiencyBonus+SMO}"
         }]
       }],
       "verb": null,
@@ -776,12 +776,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "4d4+{max(strengthMod,dexterityMod)}",
-      "5": "2d12+{max(strengthMod,dexterityMod)}",
-      "10": "4d8+{max(strengthMod,dexterityMod)}",
-      "17": "8d6+{max(strengthMod,dexterityMod)}"
+      "1": "4d4+{max(SMO,DMO)}",
+      "5": "2d12+{max(SMO,DMO)}",
+      "10": "4d8+{max(SMO,DMO)}",
+      "17": "8d6+{max(SMO,DMO)}"
     },
     "PP": 5
   },
@@ -812,12 +812,12 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d8+{max(strengthMod,dexterityMod)}",
-      "5": "2d6+{max(strengthMod,dexterityMod)}",
-      "10": "4d4+{max(strengthMod,dexterityMod)}",
-      "17": "3d10+{max(strengthMod,dexterityMod)}"
+      "1": "1d8+{max(SMO,DMO)}",
+      "5": "2d6+{max(SMO,DMO)}",
+      "10": "4d4+{max(SMO,DMO)}",
+      "17": "3d10+{max(SMO,DMO)}"
     },
     "PP": 15
   },
@@ -898,12 +898,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d10+{dexterityMod}",
-      "5": "2d8+{dexterityMod}",
-      "10": "5d4+{dexterityMod}",
-      "17": "4d8+{dexterityMod}"
+      "1": "1d10+{DMO}",
+      "5": "2d8+{DMO}",
+      "10": "5d4+{DMO}",
+      "17": "4d8+{DMO}"
     },
     "PP": 10
   },
@@ -926,14 +926,14 @@
           "fail": [{
             "type": "damage",
             "meta": [],
-            "damage": "{damage}+{strengthMod} [Ground]"
+            "damage": "{damage}+{SMO} [Ground]"
           }],
           "success": [{
             "type": "damage",
             "meta": [],
-            "damage": "({damage}+{strengthMod})/2 [Ground]"
+            "damage": "({damage}+{SMO})/2 [Ground]"
           }],
-          "dc": "{8+proficiencyBonus+strengthMod}"
+          "dc": "{8+proficiencyBonus+SMO}"
         }]
       }, {
         "type": "text",
@@ -980,12 +980,12 @@
       "proper": false,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d12+{max(strengthMod,dexterityMod)}",
-      "5": "3d10+{max(strengthMod,dexterityMod)}",
-      "10": "7d6+{max(strengthMod,dexterityMod)}",
-      "17": "8d8+{max(strengthMod,dexterityMod)}"
+      "1": "2d12+{max(SMO,DMO)}",
+      "5": "3d10+{max(SMO,DMO)}",
+      "10": "7d6+{max(SMO,DMO)}",
+      "17": "8d8+{max(SMO,DMO)}"
     },
     "PP": 3
   },
@@ -1011,7 +1011,7 @@
           "fail": [{
             "type": "damage",
             "meta": [],
-            "damage": "{Fireball}+{strengthMod} [Fire]",
+            "damage": "{Fireball}+{SMO} [Fire]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -1019,12 +1019,12 @@
           "success": [{
             "type": "damage",
             "meta": [],
-            "damage": "({Fireball}+{strengthMod})/2 [Fire]",
+            "damage": "({Fireball}+{SMO})/2 [Fire]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
           }],
-          "dc": "{8+proficiencyBonus+strengthMod}"
+          "dc": "{8+proficiencyBonus+SMO}"
         }]
       }, {
         "type": "text",
@@ -1045,12 +1045,12 @@
   },
   "Leafage": {
     "code": {"name":"Leafage","automation":[{"type": "target", "meta": [],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Grass]"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You summon a flurry of leaves to pelt a target. Make a ranged attack, doing 1d6+MOVE grass damage on a hit."}],"_v":2,"proper":true,"verb":null},
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1":"1d6+{dexterityMod}",
-      "5":"1d12+{dexterityMod}",
-      "10":"2d8+{dexterityMod}",
-      "17":"4d6+{dexterityMod}"
+      "1":"1d6+{DMO}",
+      "5":"1d12+{DMO}",
+      "10":"2d8+{DMO}",
+      "17":"4d6+{DMO}"
     },
     "PP": 20
   },
@@ -1081,12 +1081,12 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "2d8+{dexterityMod}",
-      "5": "2d10+{dexterityMod}",
-      "10": "3d10+{dexterityMod}",
-      "17": "4d12+{dexterityMod}"
+      "1": "2d8+{DMO}",
+      "5": "2d10+{DMO}",
+      "10": "3d10+{DMO}",
+      "17": "4d12+{DMO}"
     },
     "PP": 10
   },
@@ -1106,7 +1106,7 @@
             "meta": [],
             "damage": "DAMAGE[Grass]"
           }],
-          "dc": "{8+proficiencyBonus+max(dexterityMod,strengthMod)}"
+          "dc": "{8+proficiencyBonus+max(DMO,SMO)}"
         }]
       }, {
         "type": "target",
@@ -1130,10 +1130,10 @@
       "verb": "creates "
     },
     "damage": {
-      "1": "5d4+{max(strengthMod,dexterityMod)}",
-      "5": "3d10+{max(strengthMod,dexterityMod)}",
-      "10": "5d8+{max(strengthMod,dexterityMod)}",
-      "17": "8d8+{max(strengthMod,dexterityMod)}"
+      "1": "5d4+{max(SMO,DMO)}",
+      "5": "3d10+{max(SMO,DMO)}",
+      "10": "5d8+{max(SMO,DMO)}",
+      "17": "8d8+{max(SMO,DMO)}"
     },
     "PP": 3
   },
@@ -1165,12 +1165,12 @@
       "proper": false,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(strengthMod,dexterityMod)}",
-      "5": "2d8+{max(strengthMod,dexterityMod)}",
-      "10": "5d4+{max(strengthMod,dexterityMod)}",
-      "17": "4d8+{max(strengthMod,dexterityMod)}"
+      "1": "1d10+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "5d4+{max(SMO,DMO)}",
+      "17": "4d8+{max(SMO,DMO)}"
     },
     "PP": 5
   },
@@ -1202,12 +1202,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "2d6+{dexterityMod}",
-      "5": "2d8+{dexterityMod}",
-      "10": "4d6+{dexterityMod}",
-      "17": "6d6+{dexterityMod}"
+      "1": "2d6+{DMO}",
+      "5": "2d8+{DMO}",
+      "10": "4d6+{DMO}",
+      "17": "6d6+{DMO}"
     },
     "PP": 5
   },
@@ -1241,7 +1241,7 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d4",
       "5": "2d4",
@@ -1274,7 +1274,7 @@
             "text": "You stare down an enemy Pokémon, reducing its will. The Pokémon must make a WIS save against your Move DC. On a fail, allies may add +1 to any attack they target it with for the duration. This modifier can be stacked if it fails multiple leer saves, up to a maximum of +5."
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(wisdomMod,charismaMod)}"
+          "dc": "{8+proficiencyBonus+max(WMO,ChMO)}"
         }]
       }],
       "verb": "uses",
@@ -1313,12 +1313,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(wisdomMod,intelligenceMod)",
+    "attack": "proficiencyBonus+max(WMO,IMO)",
     "damage": {
-      "1": "1d6+{max(wisdomMod,intelligenceMod)}",
-      "5": "1d10+{max(wisdomMod,intelligenceMod)}",
-      "10": "2d8+{max(wisdomMod,intelligenceMod)}",
-      "17": "5d4+{max(wisdomMod,intelligenceMod)}"
+      "1": "1d6+{max(WMO,IMO)}",
+      "5": "1d10+{max(WMO,IMO)}",
+      "10": "2d8+{max(WMO,IMO)}",
+      "17": "5d4+{max(WMO,IMO)}"
     },
     "PP": 15
   },
@@ -1341,14 +1341,14 @@
           "fail": [{
             "type": "damage",
             "meta": [],
-            "damage": "{Damage}+{max(dexterityMod,charismaMod)} [Fairy]"
+            "damage": "{Damage}+{max(DMO,ChMO)} [Fairy]"
           }],
           "success": [{
             "type": "damage",
             "meta": [],
-            "damage": "({Damage}+{max(dexterityMod,charismaMod)})/2 [Fairy]"
+            "damage": "({Damage}+{max(DMO,ChMO)})/2 [Fairy]"
           }],
-          "dc": "{8+proficiencyBonus+max(dexterityMod,charismaMod)}"
+          "dc": "{8+proficiencyBonus+max(DMO,ChMO)}"
         }]
       }, {
         "type": "target",
@@ -1441,7 +1441,7 @@
             "end": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(wisdomMod,charismaMod)}"
+          "dc": "{8+proficiencyBonus+max(WMO,ChMO)}"
         }]
       }, {
         "type": "text",
@@ -1484,12 +1484,12 @@
       "proper": false,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d8+{max(strengthMod,dexterityMod)}",
-      "5": "1d10+{max(strengthMod,dexterityMod)}",
-      "10": "2d8+{max(strengthMod,dexterityMod)}",
-      "17": "5d4+{max(strengthMod,dexterityMod)}"
+      "1": "1d8+{max(SMO,DMO)}",
+      "5": "1d10+{max(SMO,DMO)}",
+      "10": "2d8+{max(SMO,DMO)}",
+      "17": "5d4+{max(SMO,DMO)}"
     },
     "PP": 10
   },
@@ -1540,12 +1540,12 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{proficiencyBonus+max(strengthMod,dexterityMod)}",
-      "5": "2d8+{proficiencyBonus+max(strengthMod,dexterityMod)}",
-      "10": "5d4+{proficiencyBonus+max(strengthMod,dexterityMod)}",
-      "17": "4d8+{proficiencyBonus+max(strengthMod,dexterityMod)}"
+      "1": "1d10+{proficiencyBonus+max(SMO,DMO)}",
+      "5": "2d8+{proficiencyBonus+max(SMO,DMO)}",
+      "10": "5d4+{proficiencyBonus+max(SMO,DMO)}",
+      "17": "4d8+{proficiencyBonus+max(SMO,DMO)}"
     },
     "PP": 10
   },
@@ -1602,7 +1602,7 @@
             "damage": "DAMAGE [Bug]"
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+(dexterityMod)"
+          "attackBonus": "proficiencyBonus+(DMO)"
         }]
       }, {
         "type": "text",
@@ -1613,12 +1613,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "2d6+{dexterityMod}",
-      "5": "2d8+{dexterityMod}",
-      "10": "4d6+{dexterityMod}",
-      "17": "6d6+{dexterityMod}"
+      "1": "2d6+{DMO}",
+      "5": "2d8+{DMO}",
+      "10": "4d6+{DMO}",
+      "17": "6d6+{DMO}"
     },
     "PP": 10
   },
@@ -1649,12 +1649,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d12+{dexterityMod}",
-      "5": "2d8+{dexterityMod}",
-      "10": "2d12+{dexterityMod}",
-      "17": "6d6+{dexterityMod}"
+      "1": "1d12+{DMO}",
+      "5": "2d8+{DMO}",
+      "10": "2d12+{DMO}",
+      "17": "6d6+{DMO}"
     },
     "PP": 3
   },
@@ -1685,7 +1685,7 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d4",
       "5": "1d6",
@@ -1770,10 +1770,10 @@
       "_v": 2
     },
     "damage": {
-      "1": "1d6+{dexterityMod}",
-      "5": "1d10+{dexterityMod}",
-      "10": "2d8+{dexterityMod}",
-      "17": "5d4+{dexterityMod}"
+      "1": "1d6+{DMO}",
+      "5": "1d10+{DMO}",
+      "10": "2d8+{DMO}",
+      "17": "5d4+{DMO}"
     },
     "PP": 5
   },
@@ -1789,7 +1789,7 @@
           "meta": [],
           "name": "Pass Con Save (DC #)",
           "duration": "10",
-          "effects": "-attack \"|4d4+{strengthMod} [Fire]|\"",
+          "effects": "-attack \"|4d4+{SMO} [Fire]|\"",
           "end": false,
           "conc": true
         }, {
@@ -1797,7 +1797,7 @@
           "meta": [],
           "name": "Fail Con Save",
           "duration": "10",
-          "effects": "-attack \"|(4d4+{strengthMod})/2 [Fire]|\" -parent \"User|Pass Con Save\"",
+          "effects": "-attack \"|(4d4+{SMO})/2 [Fire]|\" -parent \"User|Pass Con Save\"",
           "end": false
         }]
       }, {
@@ -1833,10 +1833,10 @@
       "verb": null
     },
     "damage": {
-      "1": "1d6+{max(strengthMod,dexterityMod)}",
-      "5": "1d10+{max(strengthMod,dexterityMod)}",
-      "10": "2d8+{max(strengthMod,dexterityMod)}",
-      "17": "5d4+{max(strengthMod,dexterityMod)}"
+      "1": "1d6+{max(SMO,DMO)}",
+      "5": "1d10+{max(SMO,DMO)}",
+      "10": "2d8+{max(SMO,DMO)}",
+      "17": "5d4+{max(SMO,DMO)}"
     },
     "PP": 5
   },
@@ -1922,13 +1922,13 @@
           "fail": [{
             "type": "damage",
             "meta": [],
-            "damage": "{{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{strengthMod} [Ground]",
+            "damage": "{{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{SMO} [Ground]",
             "overheal": false
           }],
           "success": [{
             "type": "damage",
             "meta": [],
-            "damage": "({{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{strengthMod})/2 [Ground]",
+            "damage": "({{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{SMO})/2 [Ground]",
             "overheal": false
           }],
           "dc": "{8+ATTACK}"
@@ -1938,7 +1938,7 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+strengthMod",
+    "attack": "proficiencyBonus+SMO",
     "PP": 5
   },
   "Mat Block": {
@@ -2001,7 +2001,7 @@
             "end": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(strengthMod,charismaMod)}"
+          "dc": "{8+proficiencyBonus+max(SMO,ChMO)}"
         }]
       }, {
         "type": "text",
@@ -2068,12 +2068,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(strengthMod,dexterityMod)}",
-      "5": "1d12+{max(strengthMod,dexterityMod)}",
-      "10": "2d8+{max(strengthMod,dexterityMod)}",
-      "17": "4d6+{max(strengthMod,dexterityMod)}"
+      "1": "1d6+{max(SMO,DMO)}",
+      "5": "1d12+{max(SMO,DMO)}",
+      "10": "2d8+{max(SMO,DMO)}",
+      "17": "4d6+{max(SMO,DMO)}"
     },
     "PP": 10
   },
@@ -2104,12 +2104,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+strengthMod",
+    "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d10+{strengthMod}",
-      "5": "3d8+{strengthMod}",
-      "10": "4d10+{strengthMod}",
-      "17": "7d8+{strengthMod}"
+      "1": "2d10+{SMO}",
+      "5": "3d8+{SMO}",
+      "10": "4d10+{SMO}",
+      "17": "7d8+{SMO}"
     },
     "PP": 10
   },
@@ -2140,12 +2140,12 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+strengthMod",
+    "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d6+{strengthMod}",
-      "5": "2d8+{strengthMod}",
-      "10": "4d6+{strengthMod}",
-      "17": "6d6+{strengthMod}"
+      "1": "2d6+{SMO}",
+      "5": "2d8+{SMO}",
+      "10": "4d6+{SMO}",
+      "17": "6d6+{SMO}"
     },
     "PP": 15
   },
@@ -2195,12 +2195,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d10+{max(strengthMod,dexterityMod)}",
-      "5": "3d8+{max(strengthMod,dexterityMod)}",
-      "10": "4d10+{max(strengthMod,dexterityMod)}",
-      "17": "7d8+{max(strengthMod,dexterityMod)}"
+      "1": "2d10+{max(SMO,DMO)}",
+      "5": "3d8+{max(SMO,DMO)}",
+      "10": "4d10+{max(SMO,DMO)}",
+      "17": "7d8+{max(SMO,DMO)}"
     },
     "PP": 5
   },
@@ -2271,7 +2271,7 @@
       "proper": false,
       "verb": "lets out"
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "PP": 3
   },
   "Metal Claw": {
@@ -2301,12 +2301,12 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+strengthMod",
+    "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d8+{strengthMod}",
-      "5": "2d6+{strengthMod}",
-      "10": "4d4+{strengthMod}",
-      "17": "3d10+{strengthMod}"
+      "1": "1d8+{SMO}",
+      "5": "2d6+{SMO}",
+      "10": "4d4+{SMO}",
+      "17": "3d10+{SMO}"
     },
     "PP": 10
   },
@@ -2334,7 +2334,7 @@
             "text": "You emit an ear-shattering high pitched sound that only your target can hear, leaving them in a defenseless state. When activating this move, a target must make a CON saving throw against your Move DC. On a failure, all attack rolls against the target are given a +5 bonus until the end of your next turn."
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(strengthMod,dexterityMod)}"
+          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
         }]
       }],
       "_v": 2,
@@ -2370,12 +2370,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d8+{max(strengthMod,dexterityMod)}",
-      "5": "2d10+{max(strengthMod,dexterityMod)}",
-      "10": "3d10+{max(strengthMod,dexterityMod)}",
-      "17": "4d12+{max(strengthMod,dexterityMod)}"
+      "1": "2d8+{max(SMO,DMO)}",
+      "5": "2d10+{max(SMO,DMO)}",
+      "10": "3d10+{max(SMO,DMO)}",
+      "17": "4d12+{max(SMO,DMO)}"
     },
     "PP": 5
   },
@@ -2403,7 +2403,7 @@
         "effects": [{
           "type": "damage",
           "meta": [],
-          "damage": "-(8d6+{constitutionMod}) [Healing]",
+          "damage": "-(8d6+{CoMO}) [Healing]",
           "overheal": false
         }]
       }, {
@@ -2517,7 +2517,7 @@
             "end": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(wisdomMod,intelligenceMod)}"
+          "dc": "{8+proficiencyBonus+max(WMO,IMO)}"
         }]
       }, {
         "type": "text",
@@ -2545,7 +2545,7 @@
         "effects": [{
           "type": "damage",
           "meta": [],
-          "damage": "-1d6+{max(constitutionMod,wisdomMod)}"
+          "damage": "-1d6+{max(CoMO,WMO)}"
         }]
       }, {
         "type": "text",
@@ -2602,7 +2602,7 @@
               "end": true
             }],
             "success": [],
-            "dc": "{8+proficiencyBonus+max(strengthMod,dexterityMod)}"
+            "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -2616,12 +2616,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(strengthMod,dexterityMod)}",
-      "5": "2d8+{max(strengthMod,dexterityMod)}",
-      "10": "5d4+{max(strengthMod,dexterityMod)}",
-      "17": "4d8+{max(strengthMod,dexterityMod)}"
+      "1": "1d10+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "5d4+{max(SMO,DMO)}",
+      "17": "4d8+{max(SMO,DMO)}"
     },
     "PP": 5
   },
@@ -2678,12 +2678,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d12+{max(strengthMod,dexterityMod)}",
-      "5": "2d8+{max(strengthMod,dexterityMod)}",
-      "10": "2d12+{max(strengthMod,dexterityMod)}",
-      "17": "6d6+{max(strengthMod,dexterityMod)}"
+      "1": "1d12+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "2d12+{max(SMO,DMO)}",
+      "17": "6d6+{max(SMO,DMO)}"
     },
     "PP": 3
   },
@@ -2743,12 +2743,12 @@
       "proper": false,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(dexterityMod,charismaMod)",
+    "attack": "proficiencyBonus+max(DMO,ChMO)",
     "damage": {
-      "1": "2d8+{max(dexterityMod,charismaMod)}",
-      "5": "2d10+{max(dexterityMod,charismaMod)}",
-      "10": "3d10+{max(dexterityMod,charismaMod)}",
-      "17": "4d12+{max(dexterityMod,charismaMod)}"
+      "1": "2d8+{max(DMO,ChMO)}",
+      "5": "2d10+{max(DMO,ChMO)}",
+      "10": "3d10+{max(DMO,ChMO)}",
+      "17": "4d12+{max(DMO,ChMO)}"
     },
     "PP": 10
   },
@@ -2774,10 +2774,10 @@
       "verb": "absorbs the"
     },
     "damage": {
-      "1": "2d6+{max(wisdomMod,charismaMod)}",
-      "5": "3d6+{max(wisdomMod,charismaMod)}",
-      "10": "5d6+{max(wisdomMod,charismaMod)}",
-      "17": "8d6+{max(wisdomMod,charismaMod)}"
+      "1": "2d6+{max(WMO,ChMO)}",
+      "5": "3d6+{max(WMO,ChMO)}",
+      "10": "5d6+{max(WMO,ChMO)}",
+      "17": "8d6+{max(WMO,ChMO)}"
     },
     "PP": 3
   },
@@ -2791,7 +2791,7 @@
         "effects": [{
           "type": "damage",
           "meta": [],
-          "damage": "-(2d6+{max(wisdomMod,constitutionMod)}) [Healing]"
+          "damage": "-(2d6+{max(WMO,CoMO)}) [Healing]"
         }]
       }, {
         "type": "text",
@@ -2806,12 +2806,12 @@
   },
   "Mud Bomb": {
     "code": {"name":"Mud Bomb","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Ground]","overheal":false,"higher":null,"cantripScale":null},{"type":"save","meta":[],"stat":"con","fail":[{"type":"ieffect","meta":[],"name":"Disadvantage","duration":"1","effects":"","end":true}],"success":[],"dc":"{8+ATTACK}"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You throw a hard-packed mud ball at an opponent. Make a ranged attack, dealing ground damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target has disadvantage on its next attack roll. If activating a move that requires a save, the target(s) have advantage."}],"verb":null,"proper":true,"_v":2},
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(strengthMod,dexterityMod)}",
-      "5": "2d8+{max(strengthMod,dexterityMod)}",
-      "10": "5d4+{max(strengthMod,dexterityMod)}",
-      "17": "4d8+{max(strengthMod,dexterityMod)}"
+      "1": "1d10+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "5d4+{max(SMO,DMO)}",
+      "17": "4d8+{max(SMO,DMO)}"
     },
     "PP": 5
   },
@@ -2842,12 +2842,12 @@
       "proper": false,
       "verb": "sends out"
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d8+{dexterityMod}",
-      "5": "2d6+{dexterityMod}",
-      "10": "4d4+{dexterityMod}",
-      "17": "3d10+{dexterityMod}"
+      "1": "1d8+{DMO}",
+      "5": "2d6+{DMO}",
+      "10": "4d4+{DMO}",
+      "17": "3d10+{DMO}"
     },
     "PP": 10
   },
@@ -2914,12 +2914,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d4+{max(strengthMod,dexterityMod)}",
-      "5": "2d4+{max(strengthMod,dexterityMod)}",
-      "10": "1d12+{max(strengthMod,dexterityMod)}",
-      "17": "4d4+{max(strengthMod,dexterityMod)}"
+      "1": "1d4+{max(SMO,DMO)}",
+      "5": "2d4+{max(SMO,DMO)}",
+      "10": "1d12+{max(SMO,DMO)}",
+      "17": "4d4+{max(SMO,DMO)}"
     },
     "PP": 5
   },
@@ -2950,12 +2950,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(dexterityMod,constitutionMod)",
+    "attack": "proficiencyBonus+max(DMO,CoMO)",
     "damage": {
-      "1": "2d8+{max(dexterityMod,constitutionMod)}",
-      "5": "2d10+{max(dexterityMod,constitutionMod)}",
-      "10": "3d10+{max(dexterityMod,constitutionMod)}",
-      "17": "4d12+{max(dexterityMod,constitutionMod)}"
+      "1": "2d8+{max(DMO,CoMO)}",
+      "5": "2d10+{max(DMO,CoMO)}",
+      "10": "3d10+{max(DMO,CoMO)}",
+      "17": "4d12+{max(DMO,CoMO)}"
     },
     "PP": 5
   },
@@ -2993,12 +2993,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d12+{dexterityMod}",
-      "5": "2d8+{dexterityMod}",
-      "10": "2d12+{dexterityMod}",
-      "17": "6d6+{dexterityMod}"
+      "1": "1d12+{DMO}",
+      "5": "2d8+{DMO}",
+      "10": "2d12+{DMO}",
+      "17": "6d6+{DMO}"
     },
     "PP": 5
   },
@@ -3042,7 +3042,7 @@
           "hit": [{
             "type": "damage",
             "meta": [],
-            "damage": "2d12+{strengthMod} [Berry]",
+            "damage": "2d12+{SMO} [Berry]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -3059,7 +3059,7 @@
       "proper": false,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "PP": 10
   },
   "Nature Power": {
@@ -3103,12 +3103,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d10+{dexterityMod}",
-      "5": "2d8+{dexterityMod}",
-      "10": "5d4+{dexterityMod}",
-      "17": "4d8+{dexterityMod}"
+      "1": "1d10+{DMO}",
+      "5": "2d8+{DMO}",
+      "10": "5d4+{DMO}",
+      "17": "4d8+{DMO}"
     },
     "PP": 10
   },
@@ -3139,12 +3139,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(dexterityMod,wisdomMod)",
+    "attack": "proficiencyBonus+max(DMO,WMO)",
     "damage": {
-      "1": "2d6+{max(dexterityMod,wisdomMod)}",
-      "5": "2d8+{max(dexterityMod,wisdomMod)}",
-      "10": "4d6+{max(dexterityMod,wisdomMod)}",
-      "17": "6d6+{max(dexterityMod,wisdomMod)}"
+      "1": "2d6+{max(DMO,WMO)}",
+      "5": "2d8+{max(DMO,WMO)}",
+      "10": "4d6+{max(DMO,WMO)}",
+      "17": "6d6+{max(DMO,WMO)}"
     },
     "PP": 5
   },
@@ -3178,7 +3178,7 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(wisdomMod,intelligenceMod)",
+    "attack": "proficiencyBonus+max(WMO,IMO)",
     "damage": {
       "1": "1d6+{level}",
       "5": "2d4+{level}",
@@ -3217,12 +3217,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d12+{max(strengthMod,dexterityMod)}",
-      "5": "2d8+{max(strengthMod,dexterityMod)}",
-      "10": "2d12+{max(strengthMod,dexterityMod)}",
-      "17": "6d6+{max(strengthMod,dexterityMod)}"
+      "1": "1d12+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "2d12+{max(SMO,DMO)}",
+      "17": "6d6+{max(SMO,DMO)}"
     },
     "PP": 10
   },
@@ -3248,10 +3248,10 @@
       "verb": "gives the target"
     },
     "damage": {
-      "1": "3d6+{max(wisdomMod,charismaMod)}",
-      "5": "4d6+{max(wisdomMod,charismaMod)}",
-      "10": "5d6+{max(wisdomMod,charismaMod)}",
-      "17": "6d6+{max(wisdomMod,charismaMod)}"
+      "1": "3d6+{max(WMO,ChMO)}",
+      "5": "4d6+{max(WMO,ChMO)}",
+      "10": "5d6+{max(WMO,ChMO)}",
+      "17": "6d6+{max(WMO,ChMO)}"
     },
     "PP": 10
   },
@@ -3298,7 +3298,7 @@
               "conc": false
             }],
             "success": [],
-            "dc": "{8+proficiencyBonus+dexterityMod}"
+            "dc": "{8+proficiencyBonus+DMO}"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -3312,12 +3312,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+dexterityMod",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d4+{dexterityMod}",
-      "5": "2d4+{dexterityMod}",
-      "10": "1d12+{dexterityMod}",
-      "17": "4d4+{dexterityMod}"
+      "1": "1d4+{DMO}",
+      "5": "2d4+{DMO}",
+      "10": "1d12+{DMO}",
+      "17": "4d4+{DMO}"
     },
     "PP": 10
   },
@@ -3348,12 +3348,12 @@
       "proper": true,
       "verb": ""
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d6+{max(strengthMod,dexterityMod)}",
-      "5": "2d8+{max(strengthMod,dexterityMod)}",
-      "10": "4d6+{max(strengthMod,dexterityMod)}",
-      "17": "6d6+{max(strengthMod,dexterityMod)}"
+      "1": "2d6+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "4d6+{max(SMO,DMO)}",
+      "17": "6d6+{max(SMO,DMO)}"
     },
     "PP": 5
   },
@@ -3384,12 +3384,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(strengthMod,dexterityMod)}",
-      "5": "2d8+{max(strengthMod,dexterityMod)}",
-      "10": "5d4+{max(strengthMod,dexterityMod)}",
-      "17": "4d8+{max(strengthMod,dexterityMod)}"
+      "1": "1d10+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "5d4+{max(SMO,DMO)}",
+      "17": "4d8+{max(SMO,DMO)}"
     },
     "PP": 5
   },
@@ -3447,12 +3447,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(wisdomMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(WMO,DMO)",
     "damage": {
-      "1": "1d10+{max(wisdomMod,dexterityMod)}",
-      "5": "2d8+{max(wisdomMod,dexterityMod)}",
-      "10": "5d4+{max(wisdomMod,dexterityMod)}",
-      "17": "4d8+{max(wisdomMod,dexterityMod)}"
+      "1": "1d10+{max(WMO,DMO)}",
+      "5": "2d8+{max(WMO,DMO)}",
+      "10": "5d4+{max(WMO,DMO)}",
+      "17": "4d8+{max(WMO,DMO)}"
     },
     "PP": 3
   },
@@ -3483,7 +3483,7 @@
       "proper": true,
       "verb": "uses"
     },
-    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "3 beams",
       "5": "4 beams",
@@ -3540,13 +3540,13 @@
           "fail": [{
             "type": "damage",
             "meta": [],
-            "damage": "DAMAGE+{max(strengthMod,constitutionMod)} [Fire]",
+            "damage": "DAMAGE+{max(SMO,CoMO)} [Fire]",
             "overheal": false
           }],
           "success": [{
             "type": "damage",
             "meta": [],
-            "damage": "(DAMAGE+{max(strengthMod,constitutionMod)})/2 [Fire]",
+            "damage": "(DAMAGE+{max(SMO,CoMO)})/2 [Fire]",
             "overheal": false
           }],
           "dc": "{8+ATTACK}"
@@ -3573,7 +3573,7 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(strengthMod,constitutionMod)",
+    "attack": "proficiencyBonus+max(SMO,CoMO)",
     "damage": {
       "1": "5d4",
       "5": "3d10",
