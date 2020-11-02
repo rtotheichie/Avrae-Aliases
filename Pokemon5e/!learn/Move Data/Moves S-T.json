@@ -332,7 +332,7 @@
             "text": "You let out a horrible screech at enemy Pokémon in a 20 foot radius, centered on you, distracting them and opening up their defenses. The Pokémon must make a WIS save against your Move DC. On a fail, allies add +1 to any attack they target an affected Pokémon with for the duration. This modifier can be stacked if a Pokémon fails multiple screech saves, up to a maximum of +5."
           }],
           "success": [],
-          "dc": "{max{ChMO, CoMO}"
+          "dc": "{10+proficiencyBonus+max(ChMO, CoMO)}"
         }]
       }],
       "verb": "uses",
@@ -2679,12 +2679,12 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,0)",
+    "attack": "proficiencyBonus+max(SMO,WMO)",
     "damage": {
-      "1": "1d6 + Move+{max(SMO,0)}",
-      "5": "2d6 + Move+{max(SMO,0)}",
-      "10": "3d6 + Move+{max(SMO,0)}",
-      "17": "4d6 + Move+{max(SMO,0)}"
+      "1": "1d6+{max(SMO,WMO)}",
+      "5": "2d6+{max(SMO,WMO)}",
+      "10": "3d6+{max(SMO,WMO)}",
+      "17": "4d6+{max(SMO,WMO)}"
     },
     "PP": 5
   },
