@@ -1093,6 +1093,17 @@
     },
     "PP": 5
   },
+  "Fiery Wrath": {
+    "code": {"name":"Fiery Wrath","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Dark]","overheal":false,"higher":null,"cantripScale":null},{"type":"ieffect","meta":[],"name":"Flinched","duration":1,"effects":"","end":true}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You transform your wrath into a fire-like aura attack. Make a ranged attack roll, doing 2d8 + MOVE dark damage on a hit, and causing the target to flinch."}],"verb":null,"proper":true,"_v":2},
+    "attack": "proficiencyBonus+max(wisdomMod,constitutionMod)",
+    "damage": {
+      "1": "2d8+{max(wisdomMod,constitutionMod)}",
+      "5": "2d10+{max(wisdomMod,constitutionMod)}",
+      "10": "3d10+{max(wisdomMod,constitutionMod)}",
+      "17": "4d12+{max(wisdomMod,constitutionMod)}"
+    },
+    "PP": "5"
+  },
   "Final Gambit": {
     "code": {
       "name": "Final Gambit",
@@ -2181,6 +2192,17 @@
       "17": "6d6+{max(strengthMod,dexterityMod)}"
     },
     "PP": 10
+  },
+  "Freezing Glare": {
+    "code": {"name":"Freezing Glare","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Psychic]","overheal":false},{"type":"save","meta":[],"stat":"wis","fail":[{"type":"ieffect","meta":[],"name":"Frozen","duration":3,"effects":"","end":true,"conc":false}],"success":[],"dc":"{8+ATTACK"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You send a concentrated beam of freezing energy at a single creature in range, with your eyes. Make a ranged attack roll, doing 2d8 + MOVE psychic damage on a hit, and forcing the target to make a WIS save against your Move DC or become frozen."}],"verb":null,"proper":true,"_v":2},
+    "attack": "max(wisdomMod,constitutionMod)+proficiencyBonus}",
+    "damage": {
+      "1":"2d8+{max(wisdomMod,constitutionMod)}",
+      "5": "2d10+{max(wisdomMod,constitutionMod)}",
+      "10": "3d10+{max(wisdomMod,constitutionMod)}",
+      "17": "4d12+{max(wisdomMod,constitutionMod)}"
+    },
+    "PP": 5
   },
   "Frenzy Plant": {
     "code": {
