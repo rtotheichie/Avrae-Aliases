@@ -1043,6 +1043,17 @@
     },
     "PP": 5
   },
+  "Leafage": {
+    "code": {"name":"Leafage","automation":[{"type": "target", "meta": [],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Grass]"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You summon a flurry of leaves to pelt a target. Make a ranged attack, doing 1d6+MOVE grass damage on a hit."}],"_v":2,"proper":true,"verb":null},
+    "attack": "proficiencyBonus+dexterityMod",
+    "damage": {
+      "1":"1d6+{dexterityMod}",
+      "5":"1d12+{dexterityMod}",
+      "10":"2d8+{dexterityMod}",
+      "17":"4d6+{dexterityMod}"
+    },
+    "PP": 20
+  },
   "Leaf Blade": {
     "code": {
       "name": "Leaf Blade",
@@ -1562,7 +1573,7 @@
         "effects": [{
           "type": "damage",
           "meta": [],
-          "damage": "999"
+          "damage": "{max_hp}"
         }]
       }, {
         "type": "text",
