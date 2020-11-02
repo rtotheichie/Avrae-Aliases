@@ -3478,6 +3478,17 @@
     },
     "PP": 5
   },
+  "Darkest Lariat": {
+    "code": {"name": "Darkest Lariat", "automation": [{"type": "target", "meta": [], "target": "each", "effects": [{"type": "attack", "meta": [], "hit": [{"type": "damage", "meta": [], "damage": "2d6+{max(strengthMod,dexterityMod)}[Dark]", "overheal": false, "higher": null, "cantripScale": null}], "miss": [], "attackBonus": "ATTACK"}]}, {"type": "text", "meta": [], "text": "You dangerously swing both arms at an opponent in range, ignoring any positive stat changes the target is affected with. Make a melee attack, dealing 2d6+MOVE dark damage on a hit."}], "verb": null, "proper": true, "_v": 2},
+    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "damage": {
+      "1": "2d6+{max(strengthMod,dexterityMod)}",
+      "5": "2d8+{max(strengthMod,dexterityMod)}",
+      "10": "4d6+{max(strengthMod,dexterityMod)}",
+      "17": "6d6+{max(strengthMod,dexterityMod)}"
+    },
+    "PP": 5
+  },
   "Dazzling Gleam": {
     "code": {
       "name": "Dazzling Gleam",
@@ -4339,6 +4350,28 @@
       "verb": "does"
     },
     "PP": 10
+  },
+  "Dargon Darts": {
+    "code": {"name":"Dragon Darts","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Dragon]"}],"miss":[],"attackBonus":"ATTACK"},{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Dragon]"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"A pair of tiny dragon-shaped projectiles fire out from your body towards a creature in range. Make two ranged attack rolls, dealing 1d6 + MOVE dragon damage with each hit. This attack may target two different creatures."}],"_v":2,"proper":false,"verb":null},
+    "attack": "proficiencyBonus+max(dexterityMod,strengthMod)",
+    "damage": {
+      "1": "1d6+{max(dexterityMod,strengthMod)}",
+      "5": "1d12+{max(dexterityMod,strengthMod)}",
+      "10": "2d8+{max(dexterityMod,strengthMod)}",
+      "17": "4d6+{max(dexterityMod,strengthMod)}"
+    },
+    "PP": 5
+  },
+  "Dragon Energy":
+  {
+    "code": {"name":"Dragon Energy","automation":[{"type": "target", "meta": [],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Dragon]"}],"miss":[],"attackBonus":""}]},{"type":"text","meta":[],"text":"You convert your energy into a concentrated beam of dragon energy at a single creature in range. Make a ranged attack roll, doing 2d8 + MOVE dragon damage on a hit. If you are at half health or lower, this move does half of its total damage rolled."}],"_v":2,"proper":true,"verb":null},
+    "attack":"proficiencyBonus+strengthMod",
+    "damage": {
+      "1": "2d8+{strengthMod}",
+      "5": "2d10+{strengthMod}",
+      "10": "3d10+{strengthMod}",
+      "17": "4d12+{strengthMod}"
+    }
   },
   "Dragon Pulse": {
     "code": {
