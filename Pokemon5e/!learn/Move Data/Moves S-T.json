@@ -2054,6 +2054,17 @@
     },
     "PP": 10
   },
+  "Sparkling Aria": {
+    "code": {"name":"Sparkling Aria","automation":[{"type":"target","meta":[{"type":"roll","meta":[],"dice":"DAMAGE","name":"damage"}],"target":"all","effects":[{"type":"save","meta":[],"stat":"dex","fail":[{"type":"damage","meta":[],"damage":"{damage}+{max(dexterityMod,charismaMod)} [Water]"}],"success":[{"type":"damage","meta":[],"damage":"({damage}+{max(dexterityMod,charismaMod)})/2 [Water]"}],"dc":"{8+ATTACK"}]},{"type":"text","meta":[],"text":"You burst into song, unleashing a flurry of bubbles in a 10ft circle, centered on you. All creatures in range must make a DEX save or take 2d8 + MOVE water damage on a fail and half as much on a save. Any creature suffering from the burned condition will be cured upon touching the bubbles."}],"_v":2,"proper":false,"verb":null},
+    "attack": "proficiencyBonus+max(dexterityMod,charismaMod)}",
+    "damage": {
+      "1":"2d8",
+      "5":"2d10",
+      "10":"3d10",
+      "17":"4d12"
+    },
+    "PP": 5
+  },
   "Spider Web": {
     "code": {
       "name": "Spider Web",
@@ -2186,6 +2197,17 @@
       "verb": "protects with"
     },
     "PP": 3
+  },
+  "Spirit Shackle": {
+    "code": {"name":"Spirit Shackle","automation":[{"type": "target", "meta": [],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Ghost]"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You employ dark energy to stitch an opponent’s shadow to the ground. Make a ranged attack, dealing 2d6+MOVE ghost damage on a hit. On hit, the target is unable to flee or switch out while the user remains in battle."}],"_v":2,"proper":true,"verb":null},
+    "attack": "proficiencyBonus+max(charismaMod,dexterityMod)",
+    "damage": {
+      "1": "2d6+{max(charismaMod,dexterityMod)}",
+      "5": "2d8+{max(charismaMod,dexterityMod)}",
+      "10": "4d6+{max(charismaMod,dexterityMod)}",
+      "17": "6d6+{max(charismaMod,dexterityMod)}"
+    },
+    "PP": 5
   },
   "Spit Up": {
     "code": {
@@ -4003,6 +4025,17 @@
     },
     "PP": 5
   },
+  "Throat Chop": {
+    "code": {"name":"Throat Chop","automation":[{"type":"target","meta":[{"type":"roll","meta":[],"dice":"1d4","name":"Deafened"}],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Dark]"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You focus in on an attack at the target’s throat. Make a melee attack, dealing 2d6 + MOVE dark damage on a hit. On hit, the target is unable to activate sound based attacks for its next 1d4 turns."}],"_v":2,"proper":true,"verb":null},
+    "attack": "proficiencyBonus+max(strengthMod,dexterityMod)",
+    "damage": {
+      "1": "2d6+{max(strengthMod,dexterityMod)}",
+      "5": "2d8+{max(strengthMod,dexterityMod)}",
+      "10": "4d6+{max(strengthMod,dexterityMod)}",
+      "17": "6d6+{max(strengthMod,dexterityMod)}"
+    },
+    "PP": 10
+  },
   "Thunder": {
     "code": {
       "name": "Thunder",
@@ -4045,6 +4078,17 @@
       "5": "3d8",
       "10": "6d6",
       "17": "7d8"
+    },
+    "PP": 5
+  },
+  "Thunder Cage": {
+    "code": {"name":"Thunder Cage","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE+{dexterityMod} [Electric]"},{"type":"ieffect","meta":[],"name":"Electric Arcs","duration":"3","effects":"-attack \"|DAMAGE [Electric]|\"","end":true,"conc":true}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You release a series of moving arcs of electricity that dance around a target. Make a ranged attack roll, doing 2d6 + MOVE electric damage on a hit. As long as you maintain concentration, the target takes an additional 2d6 electric damage at the end of each of its next three turns."}],"verb":null,"proper":true,"_v":2},
+    "attack": "proficiencyBonus+dexterityMod",
+    "damage": {
+      "1": "2d6",
+      "5": "2d10",
+      "10": "4d8",
+      "17": "10d4"
     },
     "PP": 5
   },
@@ -4226,6 +4270,17 @@
       "17": "4d12+{max(strengthMod,dexterityMod)}"
     },
     "PP": 10
+  },
+  "Thunderous Kick": {
+    "code": {"name":"Thunderous Kick","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Fighting]"},{"type":"ieffect","meta":[],"name":"Broken Defense","duration":"-1","effects":"-ac -1","end":false}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You overwhelm the target with lightning-like movement before delivering a powerful kick. Make a melee attack roll, doing 2d8 + MOVE fighting damage on a hit, and causing the target to lose 1AC. Can stack up to -5 AC"}],"_v":2,"proper":false,"verb":null},
+    "attack": "proficiencyBonus+max(dexterityMod,strengthMod)",
+    "damage": {
+      "1": "2d8+{max(dexterityMod,strengthMod)}",
+      "5": "2d10+{max(dexterityMod,strengthMod)}",
+      "10": "3d10+{max(dexterityMod,strengthMod)}",
+      "17": "4d12+{max(dexterityMod,strengthMod)}"
+    },
+    "PP": 5
   },
   "Tickle": {
     "code": {
