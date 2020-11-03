@@ -851,7 +851,7 @@
             "end": false
           }],
           "success": [],
-          "dc": "{8+SMO+proficiencyBonus}"
+          "dc": "{8+DMO+proficiencyBonus}"
         }]
       }, {
         "type": "text",
