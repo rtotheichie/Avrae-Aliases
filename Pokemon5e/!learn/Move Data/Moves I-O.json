@@ -1542,10 +1542,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{proficiencyBonus+max(SMO,DMO)}",
-      "5": "2d8+{proficiencyBonus+max(SMO,DMO)}",
-      "10": "5d4+{proficiencyBonus+max(SMO,DMO)}",
-      "17": "4d8+{proficiencyBonus+max(SMO,DMO)}"
+      "1": "1d10+{max(SMO,DMO)}",
+      "5": "2d8+{+max(SMO,DMO)}",
+      "10": "5d4+{max(SMO,DMO)}",
+      "17": "4d8+{max(SMO,DMO)}"
     },
     "PP": 10
   },
