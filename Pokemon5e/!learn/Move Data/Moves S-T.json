@@ -3325,7 +3325,7 @@
             "end": true
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+CoMO}"
+          "dc": "{8+proficiencyBonus+max(ChMO,CoMO)}"
         }]
       }, {
         "type": "text",
