@@ -3273,7 +3273,7 @@
         "meta": [{
           "type": "roll",
           "meta": [],
-          "dice": "DAMAGE",
+          "dice": "1d4",
           "name": "Confuse",
           "hidden": false
         }],
@@ -3325,7 +3325,7 @@
             "end": true
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+CoMO}"
+          "dc": "{8+proficiencyBonus+max(ChMO,CoMO)}"
         }]
       }, {
         "type": "text",
