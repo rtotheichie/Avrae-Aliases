@@ -833,7 +833,7 @@
         "meta": [{
           "type": "roll",
           "meta": [],
-          "dice": "DAMAGE",
+          "dice": "1d4",
           "name": "prone",
           "hidden": true
         }],
