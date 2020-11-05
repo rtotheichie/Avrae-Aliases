@@ -208,5 +208,10 @@
       "display": "bubble",
       "classLevel": "TrainerLevel"
     }]
+  },
+  {
+    "Class": "Trainer",
+    "subClass": "Breeder",
+    "counters":[]
   }
 ]
