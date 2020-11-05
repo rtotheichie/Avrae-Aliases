@@ -211,7 +211,7 @@
   },
   {
     "Class": "Trainer",
-    "subClass": "Breeder",
+    "subclass": "Breeder",
     "counters":[]
   }
 ]
