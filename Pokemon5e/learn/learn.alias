@@ -1,4 +1,4 @@
-<drac2> #test comment the second
+<drac2> #test comment
 args = &ARGS&
 Move_Name = args[0].title().replace("'S","'s")
 if args:
