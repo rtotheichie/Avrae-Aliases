@@ -1162,6 +1162,56 @@
     },
     "PP": 20
   },
+  "Beak Blast": {
+    "code": {
+      "name": "Beak Blast",
+      "automation": [{
+        "type": "target",
+        "meta": [],
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "meta": [],
+          "hit": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "DAMAGE[Flying]"
+          }, {
+            "type": "save",
+            "meta": [],
+            "stat": "dex",
+            "fail": [{
+              "type": "ieffect",
+              "meta": [],
+              "name": "Burned",
+              "duration": "-1",
+              "effects": "",
+              "end": false
+            }],
+            "success": [],
+            "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "meta": [],
+        "text": "You heat up your beak and strike out at a target. When you activate this move, you spend your action to charge up your beak. On your next turn, spend an action to make a melee attack on a creature, dealing 3d8 + MOVE flying damage on a hit, and forcing the target to make a DEX save against your Move DC or become burned."
+      }],
+      "_v": 2,
+      "proper": true,
+      "verb": null
+    },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
+    "damage": {
+      "1": "1d10+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "5d4+{max(SMO,DMO)}",
+      "17": "4d8+{max(SMO,DMO)}"
+    },
+    "PP": 15
+  },
   "Beat Up": {
     "code": {
       "name": "Beat Up",
