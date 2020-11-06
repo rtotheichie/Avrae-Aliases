@@ -5,6 +5,7 @@ embed
 `-b #` Add to your attack bonus (or your DC for save moves)
 `-d #` Add to your damage
 `-pp #` Add to your base PP counter (for things like PP Up)
+`-criton #` Changes the critical hit value of a move.  Replace # with the actual number that scores a critical hit.  **Note:** Moves that already have an increased crit range will default to the correct range.  Only use this is you have an item or ability that further expands that range (i.e. Super Luck or Scope Lens)
 `tireless` Adds to your PP if you have the Tireless feat
 `stab` Add your STAB to your damage (use `-d` for Type Master's additional STAB bonus)
 `savage` Change your damage to account for the Savage Attacker feat (also useful for Iron Fist or other abilities that do the same thing)
