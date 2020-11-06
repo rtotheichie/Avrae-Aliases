@@ -254,7 +254,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You dive at an creature with such speed that it is impossible for them to avoid. This move is guaranteed to hit for 1d6 + MOVE flying damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
+        "text": "You dive at an creature with such speed that it is impossible for them to avoid. This move is guaranteed to hit for 1d6 + MOVE flying damage, except when targeting a creature in the invulnerable stages of Fly, Dig, Bounce, etc."
       }],
       "verb": null,
       "proper": true,
@@ -373,7 +373,7 @@
       "criton": "CRIT"
     },
     "attack": "proficiencyBonus+DMO",
-    "crit" : "19"
+    "crit" : "19",
     "damage": {
       "1": "1d10",
       "5": "2d8",
@@ -438,9 +438,9 @@
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "name": "Amnesia (+2 Saves)",
+          "name": "Amnesia",
           "duration": 10,
-          "effects": "",
+          "effects": "-sb +2",
           "end": false
         }]
       }],
@@ -463,7 +463,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Steel]",
+            "damage": "DAMAGE+{max(DMO,SMO)}[Steel]",
             "overheal": false
           }, {
             "type": "save",
@@ -488,10 +488,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,SMO)",
     "damage": {
-      "1": "2d6+{max(DMO,SMO)}",
-      "5": "2d8+{max(DMO,SMO)}",
-      "10": "4d6+{max(DMO,SMO)}",
-      "17": "6d6+{max(DMO,SMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 15
   },
@@ -505,7 +505,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Rock]"
+            "damage": "DAMAGE+{max(SMO,DMO)[Rock]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -520,10 +520,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "5d4+{max(SMO,DMO)}",
-      "17": "4d8+{max(SMO,DMO)}"
+      "1": "1d10}",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 3
   },
@@ -547,7 +547,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You lunge at an opponent with incredible speed. Choose a target within 10 feet of you. A burst of water propels you towards that opponent, avoiding all attacks of opportunity. Make a melee attack on that creature, dealing 1d4 water damage on a hit."
+        "text": "You lunge at a creature with incredible speed. Choose a target within 10 feet of you. A burst of water propels you towards that opponent, avoiding all attacks of opportunity. Make a melee attack on that creature, dealing 1d4 water damage on a hit."
       }],
       "verb": null,
       "proper": false,
@@ -584,7 +584,7 @@
       "proper": true,
       "_v": 2
     },
-    "PP": 10
+    "PP": 5
   },
   "Aqua Tail": {
     "code": {
@@ -596,7 +596,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Water]",
+            "damage": "DAMAGE+{max(SMO,DMO)[Water]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -606,7 +606,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You lash out with your tail to strike an opponent. Make a melee attack, dealing 2d8 + MOVE water damage on a hit."
+        "text": "You lash out with your tail to strike a creature. Make a melee attack, dealing 2d8 + MOVE water damage on a hit."
       }],
       "verb": null,
       "proper": false,
@@ -614,10 +614,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d8+{max(SMO,DMO)}",
-      "5": "2d10+{max(SMO,DMO)}",
-      "10": "3d10+{max(SMO,DMO)}",
-      "17": "4d12+{max(SMO,DMO)}"
+      "1": "2d8}",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 5
   },
@@ -636,14 +636,14 @@
           }],
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You unleash a flurry of fists on an opponent. Make a melee attack roll, doing 1d4 + MOVE fighting damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 fighting damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits."
+        "text": "You unleash a flurry of fists on a creature. Make a melee attack roll, doing 1d4 + MOVE fighting damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 fighting damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits."
       }],
       "_v": 2,
       "proper": false,
@@ -651,10 +651,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d4+{max(SMO,DMO)}",
-      "5": "1d6+{max(SMO,DMO)}",
-      "10": "1d8+{max(SMO,DMO)}",
-      "17": "2d6+{max(SMO,DMO)}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d8",
+      "17": "2d6"
     },
     "PP": 10
   },
@@ -727,14 +727,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dark]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Dark]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You strike an opponent where it already hurts. Make a melee attack against an opponent, dealing 1d10 + MOVE dark damage on a hit. If the target has already taken damage in the same round, double the damage dice."
+        "text": "You strike a creature where it already hurts. Make a melee attack against a creature, dealing 1d10 + MOVE dark damage on a hit. If the target has already taken damage in the same round, double the damage dice."
       }],
       "_v": 2,
       "proper": true,
@@ -742,10 +742,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "5d4+{max(SMO,DMO)}",
-      "17": "4d8+{max(SMO,DMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 5
   },
@@ -759,7 +759,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ghost]",
+            "damage": "DAMAGE+{max(DMO,WMO)}[Ghost]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -769,7 +769,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You startle an opponent with a loud shout . Make a ranged attack roll against an opponent doing 1d6 + MOVE ghost damage on a hit. On a natural attack roll of 15 or more, the opponent flinches."
+        "text": "You startle a creature with a loud shout . Make a ranged attack roll against a creature doing 1d6 + MOVE ghost damage on a hit. On a natural attack roll of 15 or more, the target flinches."
       }],
       "verb": null,
       "proper": true,
@@ -777,10 +777,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,WMO)",
     "damage": {
-      "1": "1d6+{max(DMO,WMO)}",
-      "5": "1d10+{max(DMO,WMO)}",
-      "10": "2d8+{max(DMO,WMO)}",
-      "17": "5d4+{max(DMO,WMO)}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 10
   },
@@ -794,25 +794,27 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Bug]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Bug]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You summon your underlings to attack a foe. Make a ranged attack on an opponent, dealing 2d8 + MOVE bug damage on a hit. This move scores a critical hit on rolls of 19 or 20."
+        "text": "You summon your underlings to attack a foe. Make a ranged attack on a creature, dealing 2d8 + MOVE bug damage on a hit. This move scores a critical hit on rolls of 19 or 20."
       }],
       "_v": 2,
       "proper": true,
-      "verb": "commands an"
+      "verb": "commands an",
+      "criton": "CRIT"
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
+    "crit": "19",
     "damage": {
-      "1": "2d8+{max(SMO,DMO)}",
-      "5": "2d10+{max(SMO,DMO)}",
-      "10": "3d10+{max(SMO,DMO)}",
-      "17": "4d12+{max(SMO,DMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 10
   },
@@ -850,21 +852,21 @@
         "target": "each",
         "effects": [{
           "type": "damage",
-          "damage": "DAMAGE[Fighting]"
+          "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]"
         }]
       }, {
         "type": "text",
-        "text": "You focus your aura into a concentrated blast that strikes an opponent in range. This move is guaranteed to hit for 1d6 + MOVE fighting damage, except when targeting an opponent in the invulnerable stages of Fly, Dig, Bounce, etc."
+        "text": "You focus your aura into a concentrated blast that strikes a creature in range. This move is guaranteed to hit for 1d6 + MOVE fighting damage, except when targeting a creature in the invulnerable stages of Fly, Dig, Bounce, etc."
       }],
       "_v": 2,
       "proper": false,
       "verb": null
     },
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d10+{max(SMO,DMO)}",
-      "10": "2d8+{max(SMO,DMO)}",
-      "17": "5d4+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 5
   },
