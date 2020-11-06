@@ -110,7 +110,7 @@
       "name": "Winning Personality",
       "reset": "long",
       "level": 1,
-      "value": 1,
+      "value": 2,
       "use": "winningpersonality"
     }],
     "cvars": {
