@@ -1,4 +1,4 @@
-<drac2> #test comment here we go
+<drac2>
 args = &ARGS&
 Move_Name = args[0].title().replace("'S","'s")
 if args:
@@ -56,6 +56,9 @@ Import_Code = Import_Code.replace('CoMO','constitutionMod')
 Import_Code = Import_Code.replace('IMO','intelligenceMod')
 Import_Code = Import_Code.replace('WMO','wisdomMod')
 Import_Code = Import_Code.replace('ChMO','charismaMod')
+criton_value = gvar[Move_Name]["crit"] if "crit" in gvar[Move_Name] else args.last('criton',0)
+if criton_value:
+    Import_Code = Import_Code.replace('CRIT',criton_value)
 if Move_Name != "Struggle":
     PP = gvar[Move_Name]["PP"]
     PP = int(PP)+PP_bonus+(1 if args.get('tireless') else 0)
