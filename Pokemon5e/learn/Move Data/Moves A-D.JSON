@@ -488,6 +488,57 @@
     },
     "PP": 10
   },
+  "Anchor Shot": {
+    "code": {
+      "name": "Anchor Shot",
+      "automation": [{
+        "type": "text",
+        "meta": [],
+        "text": "You attempt to entangle a target with your anchor chain while attacking. Choose a target within range and make a ranged attack on that creature, dealing 2d6 + MOVE steel damage on a hit. On a hit, the target becomes restrained and cannot flee or be switched out.  The target may make a STR saving throw against your Move DC at the beginning of each of its turns to attempt to release themselves from the chain."
+      }, {
+        "type": "target",
+        "meta": [],
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "meta": [],
+          "hit": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "DAMAGE[Steel]",
+            "overheal": false
+          }, {
+            "type": "save",
+            "meta": [],
+            "stat": "str",
+            "fail": [{
+              "type": "ieffect",
+              "meta": [],
+              "name": "Restrained",
+              "duration": "-1",
+              "effects": "Restrained",
+              "end": false
+            }],
+            "success": [],
+            "dc": "{8+proficiencyBonus+max(DMO,SMO)}"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }],
+      "verb": null,
+      "proper": true,
+      "_v": 2
+    },
+    "attack": "proficiencyBonus+max(DMO,SMO)",
+    "damage": {
+      "1": "2d6+{max(DMO,SMO)}",
+      "5": "2d8+{max(DMO,SMO)}",
+      "10": "4d6+{max(DMO,SMO)}",
+      "17": "6d6+{max(DMO,SMO)}"
+    },
+    "PP": 15
+  },
   "Ancient Power": {
     "code": {
       "name": "Ancient Power",
