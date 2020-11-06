@@ -4,14 +4,11 @@
       "name": "Sacred Fire",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Fire]"
           }],
           "miss": [],
@@ -19,7 +16,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You unleash a devastating, concentrated blast of flame at a single target in range. Make a ranged attack roll, doing 4d4 + MOVE fire damage on a hit. If the natural attack roll is 10 or more, the target is burned."
       }],
       "_v": 2,
@@ -40,14 +36,11 @@
       "name": "Sacred Sword",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Fighting]"
           }],
           "miss": [],
@@ -55,7 +48,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You attempt to pierce an enemy with one of your sharp appendages. Make a melee attack, dealing 2d8 + MOVE fighting damage on a hit. **This move ignores any boosts affecting the target's AC.**\n"
       }],
       "_v": 2,
@@ -76,11 +68,9 @@
       "name": "Safeguard",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Safeguard",
           "duration": "3",
           "effects": "",
@@ -88,7 +78,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You and all allies in range boost their defense. For the duration, anyone affected is protected from any new negative status conditions."
       }],
       "_v": 2,
@@ -102,22 +91,18 @@
       "name": "Sand Attack",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Sandy",
             "duration": "-1",
             "effects": "-b -1",
             "end": false
           }, {
             "type": "text",
-            "meta": [],
             "text": "You kick up a cloud of sand in an attempt to blind a target in range. The target must make a CON save against your Move DC. On a fail, for the remainder of the encounter, they add -1 to all of their attack rolls. This move can be stacked for a maximum of -5 to attack rolls."
           }],
           "success": [],
@@ -135,18 +120,14 @@
       "name": "Sand Tomb",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Ground]"
           }, {
             "type": "ieffect",
-            "meta": [],
             "name": "Entombed",
             "duration": "-1",
             "effects": "",
@@ -157,7 +138,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You attempt to summon a wave of sand that surrounds your opponent. Make a ranged attack roll. On a hit, the target takes 1d4 + MOVE ground damage and is grappled and restrained. At the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. While a Pokémon is grappled, you may continue this move, as a bonus action, to do an automatic 1d4 ground damage without having to make an attack roll."
       }],
       "_v": 2,
@@ -178,11 +158,9 @@
       "name": "Sandstorm",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Sandstorm damage (level/2 Rock damage each round)",
           "duration": "5",
           "effects": "-attack \"|{ceil(level/2)} [Rock]|\"",
@@ -191,7 +169,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You stir up a massive sandstorm in a 30 foot radius, centered on a point in range. Any non rock-, steel-, or ground-type creature in the area at the beginning of their turn take an amount of rock damage equal to their level divided by 2, rounded up. The Sandstorm lasts for 5 rounds."
       }],
       "verb": null,
@@ -205,14 +182,11 @@
       "name": "Scald",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Water]"
           }],
           "miss": [],
@@ -220,7 +194,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You instantly boil water within you to a damaging temperature, blasting an opponent with its heat. Make a ranged attack, dealing 2d6 + MOVE water damage on a hit. On a natural attack roll of 16 or more, the target is burned."
       }],
       "_v": 2,
@@ -241,15 +214,12 @@
       "name": "Scary Face",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Paralyzed",
             "duration": "-1",
             "effects": "",
@@ -260,7 +230,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You put on your scariest face, attempting to paralyze an opponent with fear. Force a target in range to make a WIS save against your Move DC. On a fail, the target is paralyzed."
       }],
       "_v": 2,
@@ -274,14 +243,11 @@
       "name": "Scratch",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]",
             "overheal": false,
             "higher": null,
@@ -292,7 +258,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You slash out at a Pokémon in range. Make a melee attack, doing 1d6 + MOVE normal damage on a hit."
       }],
       "verb": null,
@@ -313,22 +278,18 @@
       "name": "Screech",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Screech",
             "duration": 10,
             "effects": "",
             "end": true
           }, {
             "type": "text",
-            "meta": [],
             "text": "You let out a horrible screech at enemy Pokémon in a 20 foot radius, centered on you, distracting them and opening up their defenses. The Pokémon must make a WIS save against your Move DC. On a fail, allies add +1 to any attack they target an affected Pokémon with for the duration. This modifier can be stacked if a Pokémon fails multiple screech saves, up to a maximum of +5."
           }],
           "success": [],
@@ -346,22 +307,18 @@
       "name": "Searing Shot",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Fire]"
           }],
           "dc": "{8+proficiencyBonus+DMO}"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "Searing hot flames lick out at opponents in a 10 foot circle, centered on you. Any creature in range must make a DEX save against your Move DC, taking 4d4 + MOVE fire damage on a failure, or half as much on a success. If a target fails the save by more than 5, it is burned."
       }],
       "_v": 2,
@@ -381,19 +338,16 @@
       "name": "Secret Power",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
           "meta": [{
             "type": "roll",
-            "meta": [],
             "dice": "DAMAGE",
             "name": "Extra Effect"
           }],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]"
           }],
           "miss": [],
@@ -401,7 +355,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike a foe with unknown power. Make a melee attack roll against an opponent, dealing 1d12 + MOVE normal damage on a hit. On a natural attack roll of 15 or higher, roll a d6 and cause the random effect.\n\n| d6 | Effect |\n| 1 | Poison |\n| 2 | Burn |\n| 3 | Confusion |\n| 4 | Frozen |\n| 5 | Paralysis |\n| 6 | Sleep |\n"
       }],
       "_v": 2,
@@ -422,14 +375,11 @@
       "name": "Secret Sword",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Fighting]"
           }],
           "miss": [],
@@ -437,7 +387,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You attempt to pierce an enemy with one of your sharp appendages. Make a melee attack, dealing 2d6 + MOVE fighting damage on a hit. This move ignores any boosts affecting the target's AC."
       }],
       "_v": 2,
@@ -458,14 +407,11 @@
       "name": "Seed Bomb",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Grass]"
           }],
           "miss": [],
@@ -473,7 +419,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You fire a series of hard seeds that crash down on top of an opponent in range. Make a ranged attack, dealing 2d6 + MOVE grass damage on a hit."
       }],
       "_v": 2,
@@ -496,30 +441,25 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "damage"
         }],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "{damage} [Grass]"
           }],
           "success": [{
             "type": "damage",
-            "meta": [],
             "damage": "({damage})/2 [Grass]"
           }],
           "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You release a bright shockwave from your body, damaging all creatures within 20 feet of you. Any creature in range must make a CON save against your Move DC, taking 2d10 + MOVE grass damage on a failure, or half as much on a success. Until the end of your next turn, any attack roll made against a target that failed is rolled at advantage."
       }],
       "_v": 2,
@@ -540,14 +480,11 @@
       "name": "Seismic Toss",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "{level} [Fighting]"
           }],
           "miss": [],
@@ -555,7 +492,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You attempt to throw a creature into the ground with tremendous force. Make a melee attack roll, doing fighting damage equal to the opponent’s level on a hit, double on a critical hit. Seismic Toss results in a critical hit on 19s and 20s."
       }],
       "_v": 2,
@@ -566,7 +502,47 @@
     "PP": 10
   },
   "Self-Destruct": {
-    "code": {"name":"Self-Destruct","automation":[{"type":"target","meta":[{"type":"roll","meta":[],"dice":"DAMAGE","name":"Damage","hidden":false}],"target":"all","effects":[{"type":"save","meta":[],"stat":"dex","fail":[{"type":"damage","meta":[],"damage":"{Damage}+{SMO} [Normal]","overheal":false}],"success":[{"type":"damage","meta":[],"damage":"({Damage}+{SMO})/2 [Normal]","overheal":false}],"dc":"{8+proficiencyBonus+SMO}"}]},{"type":"target","meta":[],"target":"self","effects":[{"type":"damage","meta":[],"damage":"{hp}"}]},{"type":"text","meta":[],"text":"You release a massive explosion in a 30 foot radius, fainting immediately after the attack. Creatures in the area must make a DEX save against your Move DC. If your creature has at least half its hit points left, anyone in range takes 5d6 + MOVE normal damage on a fail, or half as much on a success. If your creature has less than half of its hitpoints left, the damage is halved for a failed save, and quartered for a success.\n"}],"_v":2,"proper":true,"verb":"uses"},
+    "code": {
+      "name": "Self-Destruct",
+      "automation": [{
+        "type": "target",
+        "meta": [{
+          "type": "roll",
+          "dice": "DAMAGE",
+          "name": "Damage",
+          "hidden": false
+        }],
+        "target": "all",
+        "effects": [{
+          "type": "save",
+          "stat": "dex",
+          "fail": [{
+            "type": "damage",
+            "damage": "{Damage}+{SMO} [Normal]",
+            "overheal": false
+          }],
+          "success": [{
+            "type": "damage",
+            "damage": "({Damage}+{SMO})/2 [Normal]",
+            "overheal": false
+          }],
+          "dc": "{8+proficiencyBonus+SMO}"
+        }]
+      }, {
+        "type": "target",
+        "target": "self",
+        "effects": [{
+          "type": "damage",
+          "damage": "{hp}"
+        }]
+      }, {
+        "type": "text",
+        "text": "You release a massive explosion in a 30 foot radius, fainting immediately after the attack. Creatures in the area must make a DEX save against your Move DC. If your creature has at least half its hit points left, anyone in range takes 5d6 + MOVE normal damage on a fail, or half as much on a success. If your creature has less than half of its hitpoints left, the damage is halved for a failed save, and quartered for a success.\n"
+      }],
+      "_v": 2,
+      "proper": true,
+      "verb": "uses"
+    },
     "damage": {
       "1": "5d6",
       "5": "4d10",
@@ -580,19 +556,15 @@
       "name": "Shadow Ball",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Ghost]",
             "overheal": false
           }, {
             "type": "ieffect",
-            "meta": [],
             "name": "Lingering Shadows",
             "duration": "1",
             "effects": "-b -2",
@@ -604,7 +576,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You hurl a sphere of magical darkness at an opponent. Make a ranged attack, doing 2d6 + MOVE ghost damage on a hit. On a hit, the ball expands and covers the opponents face, granting them a -2 to hit on their next attack."
       }],
       "verb": null,
@@ -625,14 +596,11 @@
       "name": "Shadow Bone",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE [Ghost]"
           }],
           "miss": [],
@@ -640,7 +608,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You attack by beating yout target with a large bone containing a spirit. Make a melee attack roll, dealing 2d6 + MOVE ghost damage on a hit. On a natural attack roll of 18 or higher, the target's AC is reduced by 1 while they remain in combat."
       }],
       "_v": 2,
@@ -661,14 +628,11 @@
       "name": "Shadow Claw",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Ghost]",
             "overheal": false
           }],
@@ -677,7 +641,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike with a sharp claw made from shadows in range. Make a ranged attack, dealing 1d12 + MOVE ghost damage on a hit. This moves scores a critical hit on natural attack rolls of 19 and 20."
       }],
       "verb": null,
@@ -698,11 +661,9 @@
       "name": "Shadow Force",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Invisible",
           "duration": "2",
           "effects": "-attack \"{proficiencyBonus+max(DMO,WMO)}|2d10+{max(DMO,WMO)} [Ghost]|\"",
@@ -710,7 +671,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You disappear from view and prepare to surprise your enemy with an attack. When you activate this move, you become invisible and immune to any attacks of opportunity. You cannot be targeted by attacks while you are invisible. On your next turn, you use may your action to reappear and make a melee attack against a creature, with advantage, dealing 2d10 + MOVE ghost damage on a successful hit. Protect and Detect reactions may not be used when hit by this attack."
       }],
       "_v": 2,
@@ -725,17 +685,14 @@
       "name": "Shadow Punch",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "damage",
-          "meta": [],
           "damage": "DAMAGE[Ghost]",
           "overheal": false
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You throw a punch from the surrounding shadows, unavoidable by any enemy. This move is guaranteed to hit for 1d4 + MOVE ghost damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
       }],
       "verb": null,
@@ -755,14 +712,11 @@
       "name": "Shadow Sneak",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Ghost]",
             "overheal": false,
             "higher": null,
@@ -773,7 +727,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You extend your shadow to strike an opponent from behind. At the beginning of a round of combat, you may announce that you are using this move, immediately jumping to the top of the initiative order for that round only. Make a melee attack on an opponent, dealing 1d6 + MOVE ghost damage on a hit."
       }],
       "verb": "uses",
@@ -794,11 +747,9 @@
       "name": "Sharpen",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Sharp Corners",
           "duration": "10",
           "effects": "-b 1d4",
@@ -807,7 +758,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You collect your focus, sharpening your combat skills. You may add 1d4 to all attack rolls for the duration. At level 10, the dice you can add changes to 1d6."
       }],
       "_v": 2,
@@ -823,7 +773,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "Frozen Core"
         }],
@@ -831,7 +780,6 @@
         "effects": []
       }, {
         "type": "text",
-        "meta": [],
         "text": "You send a chill down the spine of an opponent, freezing its core. Choose a target in range and roll a d20. On a 20, the target faints. On any other roll, this move has no effect. If the target's level is 10 more than your own, this move automatically fails."
       }],
       "_v": 2,
@@ -846,11 +794,9 @@
       "name": "Shell Smash",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Broken Shell",
           "duration": "10",
           "effects": "-ac -1 -d 1 -b 1",
@@ -858,7 +804,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You break off a piece of your shell, lowering your AC, but improving your attack. When you activate this move, lower your AC by 1, but increase your attack and damage rolls by 1 for the duration. This move cannot stack."
       }],
       "_v": 2,
@@ -872,11 +817,9 @@
       "name": "Shift Gear",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "High Gear (+10 Speed)",
           "duration": "10",
           "effects": "-b 1 -d 1",
@@ -885,7 +828,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You rotate your gears quickly, raising your attack and speed. When you activate this move, add +1 to your attack and damage rolls, and +10 to your speed for the duration."
       }],
       "_v": 2,
@@ -899,17 +841,14 @@
       "name": "Shock Wave",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "damage",
-          "meta": [],
           "damage": "DAMAGE[Electric]",
           "overheal": false
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "A burst of electric energy glides forward, striking anything in a 15 foot cone. This move is guaranteed to hit all creatures caught in the wave for 1d4 + MOVE electric damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
       }],
       "verb": null,
@@ -929,14 +868,11 @@
       "name": "Signal Beam",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Bug]",
             "overheal": false
           }],
@@ -945,7 +881,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "A flashing beam strikes an opponent in range. Make a ranged attack roll against an opponent, dealing 1d12 + MOVE bug damage on a hit. On a natural attack roll of 19 or 20, the beam confuses the opponent."
       }],
       "verb": "shoots out",
@@ -966,14 +901,11 @@
       "name": "Silver Wind",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Bug]"
           }],
           "miss": [],
@@ -981,7 +913,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike a foe with a battering wind of silver dust. Make a ranged attack roll against a creature, doing 1d10 + MOVE bug damage on a hit. On a natural roll of 19 or 20, all of your ability scores go up by 1 while you remain in battle. This move can be stacked for a maximum of +5 to all ability scores.\n"
       }],
       "_v": 2,
@@ -1002,15 +933,12 @@
       "name": "Simple Beam",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Simple Ability",
             "duration": "11",
             "effects": "",
@@ -1021,7 +949,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You use a mysterious psychic energy to change a target's ability to Simple. Force a target in range to make a WIS saving throw against your Move DC. On a failure, choose one of the target's abilities and change it to Simple for the duration."
       }],
       "_v": 2,
@@ -1037,7 +964,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "Health Amount",
           "hidden": false
@@ -1046,7 +972,6 @@
         "effects": []
       }, {
         "type": "text",
-        "meta": [],
         "text": "You sing a beautiful song in an attempt to put enemy creature to to sleep. Roll 5d8; the total is how many hit points of the creatures this move can affect. Opponents within 30 feet of you are affected in ascending order of their current hit points. Starting with the creature that has the lowest current hit points, each creature affected by this move falls asleep. Subtract each creature’s hit points from the total before moving on to the creature with the next lowest hit points. A creature’s hit points must be equal to or less than the remaining total for that creature to be affected."
       }],
       "verb": "uses",
@@ -1060,7 +985,6 @@
       "name": "Sketch",
       "automation": [{
         "type": "text",
-        "meta": [],
         "text": "When any move is activated within sight of you, use a reaction to copy it to your move list, replacing it with one instance of Sketch in your current move list permanently."
       }],
       "_v": 2,
@@ -1074,15 +998,12 @@
       "name": "Skill Swap",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Swapped Abilities",
             "duration": "11",
             "effects": "",
@@ -1093,7 +1014,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You attempt to swap abilities with an opponent for the duration. Select a target in range and force them to make a WIS saving throw against your Move DC. On a failure, choose which abilities to switch for the duration."
       }],
       "_v": 2,
@@ -1107,11 +1027,9 @@
       "name": "Skull Bash",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Headbutt",
           "duration": "2",
           "effects": "-attack \"{proficiencyBonus+SMO}|5d4+{SMO} [Normal]| Str DC {8+proficiencyBonus+SMO} or Prone on hit\"",
@@ -1120,7 +1038,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "When you use this move, you lower your head and prepare to strike a foe within range. On your next turn’s action, if you keep your concentration, you charge at a creature in range, ignoring your walking speed and any opportunity attacks you may incur. Make a melee attack roll, doing 5d4 + MOVE normal damage on a hit. A creature hit with this attack must succeed on a STR saving throw against your Move DC or be knocked prone."
       }],
       "verb": null,
@@ -1135,11 +1052,9 @@
       "name": "Sky attack",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Sky damage",
           "duration": "2",
           "effects": "-attack \"{proficiencyBonus}+{max(DMO, SMO)}|3d8+{max(DMO, SMO)}|Sky attack dmg\"",
@@ -1148,7 +1063,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "When you use this move, you flap your wings menacingly and prepare to strike a foe within range. On your next turn’s action, if you keep your concentration, you dive at a creature in range, ignoring your flying speed and any opportunity attacks you may incur. Make a melee attack roll, doing 3d8 + MOVE flying damage on a hit."
       }],
       "verb": null,
@@ -1163,14 +1077,11 @@
       "name": "Sky Drop",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Grappled",
             "duration": "2",
             "effects": "",
@@ -1181,7 +1092,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You reach out in an attempt to lift an opponent up in the air for a slamming attack. When you activate this move, make a melee attack roll. On a hit, the target is grappled. The target may use its next action to attempt a STR save against your Move DC to get free. If it does not succeed, and you maintain your concentration, you may use your action on your next turn to lift the creature into the air, dropping it to the ground for 2d10 + MOVE flying damage. Flying-type creatures or ones under the effect of \"Levitate\", \"Magnet Rise\" or other similar abilities/moves are not damaged.\n"
       }],
       "_v": 2,
@@ -1195,14 +1105,11 @@
       "name": "Sky uppercut",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Fighting]"
           }],
           "miss": [],
@@ -1210,7 +1117,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You unleash a devastating uppercutting fist that continues to strike skyward with force. Make a ranged attack roll against an opponent, dealing 2d6 + MOVE fighting damage on a hit. This move can target enemies in the invulnerable stages of Fly, Bounce and Sky Drop, if the opponent used that move within range."
       }],
       "_v": 2,
@@ -1231,11 +1137,9 @@
       "name": "Slack Off",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Taking a Break",
           "duration": "3",
           "effects": "-attack \"|-({hp}/2) [heal]|\"",
@@ -1244,7 +1148,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You give yourself a break, healing your wounds. When you activate this move, you lose your turn for the next two rounds. At the end of your next turn, regain half of your maximum hit points."
       }],
       "verb": "decides to ",
@@ -1258,14 +1161,11 @@
       "name": "Slam",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]"
           }],
           "miss": [],
@@ -1273,7 +1173,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You crush an opponent with a slam attack. Make a melee attack roll against a target, doing 2d6 + MOVE normal damage on a hit."
       }],
       "_v": 2,
@@ -1294,14 +1193,11 @@
       "name": "Slash",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]",
             "overheal": false
           }],
@@ -1310,7 +1206,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You slash out at a creature in range. Make a melee attack, doing 1d12 + MOVE normal damage on a hit. Slash results in a critical hit on 19s and 20s."
       }],
       "verb": null,
@@ -1331,15 +1226,12 @@
       "name": "Sleep Powder",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Asleep",
             "duration": "1",
             "effects": "",
@@ -1350,7 +1242,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "YYou release a cluster of spores at a creature in range, attempting to put them to sleep. The target must make a WIS saving throw against your Move DC or fall asleep."
       }],
       "_v": 2,
@@ -1366,7 +1257,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "Activated Move",
           "higher": null,
@@ -1377,11 +1267,9 @@
         "effects": []
       }, {
         "type": "text",
-        "meta": [],
         "text": "This move can only be used if you are asleep. While asleep, activate a random move from your move list (not Sleep Talk) that has a move time of \"1 action\"."
       }, {
         "type": "text",
-        "meta": [],
         "text": "Moves: \n1:Rest\n2: Toxic\n3: Icicle Spear\n4: Spike Cannon"
       }],
       "verb": "",
@@ -1395,22 +1283,17 @@
       "name": "Sludge",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Poison]"
           }, {
             "type": "save",
-            "meta": [],
             "stat": "con",
             "fail": [{
               "type": "ieffect",
-              "meta": [],
               "name": "Poisoned",
               "duration": "-1",
               "effects": "",
@@ -1424,7 +1307,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You spew poisonous sludge at an enemy creature in range. Make a ranged attack, doing 1d10 + MOVE poison damage on a hit. The creature must make a CON save against your Move DC or become poisoned."
       }],
       "_v": 2,
@@ -1445,25 +1327,20 @@
       "name": "Sludge Bomb",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Poison]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
           }, {
             "type": "save",
-            "meta": [],
             "stat": "con",
             "fail": [{
               "type": "ieffect",
-              "meta": [],
               "name": "Poisoned",
               "duration": "-1",
               "effects": "",
@@ -1477,7 +1354,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You hurl a mass of sticky sludge that may poison opponents in its blast. Make a ranged attack roll against a target. On a hit, the target takes 2d8 + MOVE poison damage and the area in a 5 foot radius around it is covered in sludge. Any creature in that area at the beginning of their turn must make a CON save against your Move DC or become poisoned."
       }],
       "verb": null,
@@ -1498,14 +1374,11 @@
       "name": "Sludge Wave",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Poison]",
             "overheal": false
           }],
@@ -1514,7 +1387,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You send a wave of poisonous sludge at an opponent in range. Make a ranged attack, dealing 2d8 + MOVE poison damage on a hit. On a natural attack roll of 19 or 20, the target is poisoned."
       }],
       "verb": "sends out",
@@ -1535,14 +1407,11 @@
       "name": "Smack Down",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE [Rock]",
             "overheal": false,
             "higher": null,
@@ -1553,7 +1422,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You throw a solid piece of stone at an opponent in an attempt to bring them to the ground. Make a ranged attack, dealing 1d8 + MOVE rock damage on a hit. On a hit, any raised creature (ones with the flying type, Levitate, Magnet Rise, etc. moves) is knocked prone and loses its immunity to ground-type moves until it can move again."
       }],
       "verb": null,
@@ -1574,17 +1442,14 @@
       "name": "Smart Strike",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "damage",
-          "meta": [],
           "damage": "DAMAGE[Steel]",
           "overheal": false
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You pinpoint the perfect place to strike an opponent with a horn as strong as steel. This move is guaranteed to hit for 2d8+MOVE steel damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
       }],
       "verb": null,
@@ -1604,14 +1469,11 @@
       "name": "Smelling Salts",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]"
           }],
           "miss": [],
@@ -1619,7 +1481,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You procure a handful of strong smelling salt, damaging an opponent's senses. Make a ranged attack against a target, dealing 1d12 + MOVE normal damage on a hit. If the target is paralyzed, double the dice roll for the damage."
       }],
       "_v": 2,
@@ -1640,20 +1501,16 @@
       "name": "Smog",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "damage",
-          "meta": [],
           "damage": "DAMAGE[Poison]",
           "overheal": false
         }, {
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Poisoned",
             "duration": "-1",
             "effects": "",
@@ -1665,15 +1522,12 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You create a fog of poisonous smog in a 15 foot radius, centered on a point within range. Creatures that begin their turn in the area take 1d4 + MOVE poison damage and must succeed on a CON save against your Move DC or become poisoned. The area of smog is considered difficult terrain, and any attacks make from inside it are done at disadvantage. The smog cloud dissipates at the beginning of your next turn."
       }, {
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Obstructing Smog",
           "duration": "1",
           "effects": "dis",
@@ -1699,15 +1553,12 @@
       "name": "Smokescreen",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Blinded",
             "duration": "10",
             "effects": "Blinded",
@@ -1718,7 +1569,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You conjure a line of smoke on the battlefield, 60 feet long and 5 feet thick. The area on either side is obscured and imposes disadvantage on any ranged attacks made by a creature targeting another on the opposite side. Any creature inside the wall of smoke, when it is conjured, must make a CON save against your Move DC or become blinded for the duration. A blinded creature can repeat the save at the beginning of its turns to remove the effect on a success."
       }],
       "verb": "launches",
@@ -1732,19 +1582,15 @@
       "name": "Snarl",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Dark]"
           }, {
             "type": "ieffect",
-            "meta": [],
             "name": "Disadv Against User",
             "duration": "1",
             "effects": "",
@@ -1755,7 +1601,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You release a harsh growl at an opponent, damaging their willpower. Force an opponent to make a WIS save against your Move DC. On a failure, the target takes 1d8 + MOVE dark damage. If you are the target of its next attack, the attack is rolled at disadvantage."
       }],
       "_v": 2,
@@ -1775,15 +1620,12 @@
       "name": "Snatch",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Stolen Positive Effect",
             "duration": "1",
             "effects": "",
@@ -1794,7 +1636,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You call upon dark energy to steal an effect from an opponent. When an opponent in range activates a move with a positive effect on itself (curing negative status effect, boosting stats, healing, etc.), force it to make a WIS save against your Move DC. On a failure, you gain the positive effect and the opponent's move fails."
       }],
       "_v": 2,
@@ -1808,17 +1649,14 @@
       "name": "Snore",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "damage",
-          "meta": [],
           "damage": "DAMAGE[Normal]",
           "overheal": false
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "While you are asleep, you may activate this move to create a harsh noise that damages all creature within range for 1d8 + MOVE normal damage."
       }],
       "verb": null,
@@ -1838,15 +1676,12 @@
       "name": "Soak",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Dripping Wet",
             "duration": "11",
             "effects": "-neutral Normal -neutral Fighting -neutral Flying -neutral Poison -neutral Ground -neutral Rock -neutral Bug -neutral Ghost -neutral Psychic -neutral Dark -neutral Dragon -neutral Fairy -vuln Grass -vuln Electric -resist Steel -resist Fire -resist Ice -resist Water",
@@ -1857,7 +1692,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You fire a torrent of water at an opponent with such force that it leaves lasting effects. Force a target in range to make a CON save against your Move DC. On a failure, their type changes to water."
       }],
       "_v": 2,
@@ -1871,16 +1705,13 @@
       "name": "Soft-Boiled",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "damage",
-          "meta": [],
           "damage": "-(2d6+{max(CoMO,ChMO)}) [Healing]"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "Heal a creature in range for 2d6 + MOVE hitpoints."
       }],
       "_v": 2,
@@ -1896,7 +1727,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "damage",
           "hidden": false
@@ -1904,17 +1734,14 @@
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "{damage}+{max(DMO,SMO)}[Grass]",
             "overheal": false
           }],
           "success": [{
             "type": "damage",
-            "meta": [],
             "damage": "({damage}+{max(DMO,SMO)}[Grass])/2",
             "overheal": false
           }],
@@ -1922,7 +1749,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "When you use this move, soak in solar energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a 80 foot line of solar energy, 5 feet wide. Any creature caught in the line must succeed on a DEX save or take 3d8 + MOVE grass damage on a fail and half as much on a save. If this move in used in harsh sunlight, double your MOVE modifier for damage and it can be used on the turn it is activated, without concentration.."
       }],
       "verb": null,
@@ -1943,15 +1769,12 @@
       "name": "Sonic Boom",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]"
           }],
           "success": [],
@@ -1959,7 +1782,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You unleash a deafening sound that harms creature in a 20 foot circle, centered on you. Creatures in range must make a CON save against your Move DC, taking 20 flat normal type damage on a fail.\n"
       }],
       "_v": 2,
@@ -1981,34 +1803,28 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "Ethereal"
         }],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "{damage}+{max(SMO,DMO)} [Dragon]"
           }],
           "success": [{
             "type": "damage",
-            "meta": [],
             "damage": "({damage}+{max(SMO,DMO)})/2 [Dragon]"
           }],
           "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You release a powerful shockwave that tears through foes and the space around them. All creatures within 50 feet of you must make a CON save against your Move DC, taking 5d6 + MOVE dragon damage on a failure, or half as much on a success. Creatures that fail this save by more than 5 become uncontrollable and are sucked into the Ethereal Plane where they must remain for 1d4 rounds, appearing in the same location when they return."
       }, {
         "type": "text",
-        "meta": [],
         "text": "If they fail by 5 or more use `!i effect \"Pokemon\" \"Ethereal Disappearance\" -dur \"Ethereal+1\" `"
       }],
       "_v": 2,
@@ -2028,14 +1844,11 @@
       "name": "Spark",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Electric]",
             "overheal": false
           }],
@@ -2044,7 +1857,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike out with an electrified tackle with a chance to paralyze a target. Make a melee attack roll against an opponent, doing 1d10 + MOVE electric damage on a hit. If the natural attack roll is 18 or higher, the target is paralyzed."
       }],
       "verb": null,
@@ -2061,13 +1873,43 @@
     "PP": 10
   },
   "Sparkling Aria": {
-    "code": {"name":"Sparkling Aria","automation":[{"type":"target","meta":[{"type":"roll","meta":[],"dice":"DAMAGE","name":"damage"}],"target":"all","effects":[{"type":"save","meta":[],"stat":"dex","fail":[{"type":"damage","meta":[],"damage":"{damage}+{max(DMO,ChMO)} [Water]"}],"success":[{"type":"damage","meta":[],"damage":"({damage}+{max(DMO,ChMO)})/2 [Water]"}],"dc":"{8+ATTACK"}]},{"type":"text","meta":[],"text":"You burst into song, unleashing a flurry of bubbles in a 10ft circle, centered on you. All creatures in range must make a DEX save or take 2d8 + MOVE water damage on a fail and half as much on a save. Any creature suffering from the burned condition will be cured upon touching the bubbles."}],"_v":2,"proper":false,"verb":null},
+    "code": {
+      "name": "Sparkling Aria",
+      "automation": [{
+        "type": "target",
+        "meta": [{
+          "type": "roll",
+          "dice": "DAMAGE",
+          "name": "damage"
+        }],
+        "target": "all",
+        "effects": [{
+          "type": "save",
+          "stat": "dex",
+          "fail": [{
+            "type": "damage",
+            "damage": "{damage}+{max(DMO,ChMO)} [Water]"
+          }],
+          "success": [{
+            "type": "damage",
+            "damage": "({damage}+{max(DMO,ChMO)})/2 [Water]"
+          }],
+          "dc": "{8+ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "text": "You burst into song, unleashing a flurry of bubbles in a 10ft circle, centered on you. All creatures in range must make a DEX save or take 2d8 + MOVE water damage on a fail and half as much on a save. Any creature suffering from the burned condition will be cured upon touching the bubbles."
+      }],
+      "_v": 2,
+      "proper": false,
+      "verb": null
+    },
     "attack": "proficiencyBonus+max(DMO,ChMO)}",
     "damage": {
-      "1":"2d8",
-      "5":"2d10",
-      "10":"3d10",
-      "17":"4d12"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 5
   },
@@ -2076,14 +1918,11 @@
       "name": "Spider Web",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Covered in web",
             "duration": "10",
             "effects": "",
@@ -2094,7 +1933,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You fire a sticky web that attempts to restrain an opponent. Make a ranged attack roll on a target in range. On a hit, the target is covered in web. While covered, it is restrained and cannot flee or be switched out. The target can use an action on its turn to escape with a STR save against your Move DC."
       }],
       "_v": 2,
@@ -2109,13 +1947,11 @@
       "name": "Spike Cannon",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
           "meta": [{
             "type": "roll",
-            "meta": [],
             "dice": "DAMAGE",
             "name": "Extra Attacks",
             "higher": null,
@@ -2124,7 +1960,6 @@
           }],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]",
             "overheal": false,
             "higher": null,
@@ -2135,7 +1970,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You fire a series of sharp spikes at a Pokémon in range. Make a ranged attack roll, doing 1d4 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits. Higher Levels: The damage dice rolls for this move change to 2d4 at level 5, 1d12 at level 10, and 4d4 at level 17."
       }],
       "verb": null,
@@ -2156,14 +1990,11 @@
       "name": "Spikes",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Ground]"
           }],
           "miss": [],
@@ -2171,7 +2002,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You set a trap of spikes that hurts creature that come into battle. If a trainer is in range and switches out a creature, you can spend a reaction to make a ranged attack on the incoming creature with spikes that come out of the ground, doing 1d6 + MOVE ground damage on a hit."
       }],
       "_v": 2,
@@ -2187,7 +2017,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "Proficiency"
         }],
@@ -2195,7 +2024,6 @@
         "effects": []
       }, {
         "type": "text",
-        "meta": [],
         "text": "You quickly raise a spiked shield to protect yourself from damage. When you are hit by a melee attack, use your reaction to ignore damage, dealing grass damage equal to your proficiency modifier to the attacker instead. On future instances of this reaction in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful."
       }],
       "_v": 2,
@@ -2205,7 +2033,28 @@
     "PP": 3
   },
   "Spirit Shackle": {
-    "code": {"name":"Spirit Shackle","automation":[{"type": "target", "meta": [],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Ghost]"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You employ dark energy to stitch an opponent’s shadow to the ground. Make a ranged attack, dealing 2d6+MOVE ghost damage on a hit. On hit, the target is unable to flee or switch out while the user remains in battle."}],"_v":2,"proper":true,"verb":null},
+    "code": {
+      "name": "Spirit Shackle",
+      "automation": [{
+        "type": "target",
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE [Ghost]"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "text": "You employ dark energy to stitch an opponent’s shadow to the ground. Make a ranged attack, dealing 2d6+MOVE ghost damage on a hit. On hit, the target is unable to flee or switch out while the user remains in battle."
+      }],
+      "_v": 2,
+      "proper": true,
+      "verb": null
+    },
     "attack": "proficiencyBonus+max(ChMO,DMO)",
     "damage": {
       "1": "2d6+{max(ChMO,DMO)}",
@@ -2220,14 +2069,11 @@
       "name": "Spit Up",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]"
           }],
           "miss": [],
@@ -2235,7 +2081,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "The power of energy stored by Stockpile is released about a foe. Make a ranged attack against an opponent, dealing a base 1d6 + Move normal damage on a hit. The dice roll is doubled if two rounds of energy were Stockpiled. The dice roll is tripled if three rounds of energy were Stockpiled."
       }],
       "_v": 2,
@@ -2252,11 +2097,36 @@
     "PP": 5
   },
   "Spite": {
-    "code": {"name":"Spite","automation":[{"type":"target","meta":[],"target":"all","effects":[{"type":"save","meta":[{"type":"roll","meta":[],"dice":"DAMAGE","name":"Spite","hidden":false}],"stat":"wis","fail":[],"success":[],"dc":"{8+proficiencyBonus+WMO}"}]},{"type":"text","meta":[],"text":"When hit with an attack, you can spend a reaction to attempt to drain the attacker’s PP, if they are in range. Force the attacker to make a WIS save against your Move DC. On a fail, roll a d4. The PP of the move that attacked you is decreased by that number."}],"_v":2,"proper":true},"damage":{
-      "1":"1d4",
-      "5":"1d6",
-      "10":"1d8",
-      "17":"1d10"
+    "code": {
+      "name": "Spite",
+      "automation": [{
+        "type": "target",
+        "target": "all",
+        "effects": [{
+          "type": "save",
+          "meta": [{
+            "type": "roll",
+            "dice": "DAMAGE",
+            "name": "Spite",
+            "hidden": false
+          }],
+          "stat": "wis",
+          "fail": [],
+          "success": [],
+          "dc": "{8+proficiencyBonus+WMO}"
+        }]
+      }, {
+        "type": "text",
+        "text": "When hit with an attack, you can spend a reaction to attempt to drain the attacker’s PP, if they are in range. Force the attacker to make a WIS save against your Move DC. On a fail, roll a d4. The PP of the move that attacked you is decreased by that number."
+      }],
+      "_v": 2,
+      "proper": true
+    },
+    "damage": {
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d8",
+      "17": "1d10"
     },
     "PP": 3
   },
@@ -2265,7 +2135,6 @@
       "name": "Splash",
       "automation": [{
         "type": "text",
-        "meta": [],
         "text": "You flail around on the ground, doing no damage and looking ridiculous, but you can leap up to 50 feet in the air."
       }],
       "_v": 2,
@@ -2279,15 +2148,12 @@
       "name": "Spore",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Asleep",
             "duration": "4",
             "effects": "",
@@ -2298,7 +2164,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "When you are hit by a melee attack, you can use your reaction to release a spore that attempts to put your attacker to sleep. The creature must make a WIS save against your Move DC, falling asleep on a fail."
       }],
       "_v": 2,
@@ -2312,15 +2177,12 @@
       "name": "Spotlight",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Spotted",
             "duration": "10",
             "effects": "",
@@ -2331,11 +2193,9 @@
         }]
       }, {
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Adv on Spotted Target",
           "duration": "10",
           "effects": "",
@@ -2344,7 +2204,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": ""
       }],
       "_v": 2,
@@ -2358,14 +2217,11 @@
       "name": "Stealth Rock",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Rock]",
             "overheal": false,
             "higher": null,
@@ -2376,7 +2232,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You quickly summon a trap of sharp rocks that hurts a creature entering the battle. When a creature is switched into battle, you may use your reaction to make a ranged attack, dealing 1d8 + MOVE rock damage to the incoming creature on a hit."
       }],
       "verb": null,
@@ -2399,7 +2254,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "damage",
           "higher": null,
@@ -2409,11 +2263,9 @@
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "{damage}+{max(SMO,DMO)} [Water]",
             "overheal": false,
             "higher": null,
@@ -2421,7 +2273,6 @@
           }],
           "success": [{
             "type": "damage",
-            "meta": [],
             "damage": "({damage}+{max(SMO,DMO)})/2 [Water]",
             "overheal": false,
             "higher": null,
@@ -2431,7 +2282,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You shoot out a cone of intensely hot steam from your body, immersing your foes. Any creature in the are must make a DEX save against your Move DC, taking 3d6 + MOVE water damage on a failure, or half as much on a success. If a target fails the save by 5 or more, it becomes burned."
       }],
       "verb": null,
@@ -2451,14 +2301,11 @@
       "name": "Steamroller",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Bug]"
           }],
           "miss": [],
@@ -2466,7 +2313,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You roll up your body and roll over an opponent. Make a melee attack roll, dealing 1d10 + MOVE bug damage on a hit. If your natural attack roll is 15 or higher, the target flinches."
       }],
       "_v": 2,
@@ -2487,14 +2333,11 @@
       "name": "Steel Wing",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Steel]"
           }],
           "miss": [],
@@ -2502,7 +2345,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike a foe hard with outstretched wings. Make a melee attack on an opponent, doing 1d12 + MOVE steel damage on a hit."
       }],
       "_v": 2,
@@ -2523,14 +2365,11 @@
       "name": "Sticky Web",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Restrained",
             "duration": "-1",
             "effects": "",
@@ -2541,7 +2380,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You quickly fire a sticky web at a creature entering the battle. When a creature is switched into battle, you may use your reaction to make a ranged attack on the creature. On a hit, the target is restrained The creature may make a STR save against your Move DC at the beginning of each of its turns to escape the web."
       }],
       "_v": 2,
@@ -2556,11 +2394,9 @@
       "name": "Stockpile",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Stored Power",
           "duration": "-1",
           "effects": "-ac +1",
@@ -2568,7 +2404,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You use your action to store energy for a Spit Up or Swallow move, increasing your defense. Raise your AC by 1 until you use one of those two moves. This move may be stacked a maximum of 3 times before the energy is used."
       }],
       "_v": 2,
@@ -2582,14 +2417,11 @@
       "name": "Stomp",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]"
           }],
           "miss": [],
@@ -2597,7 +2429,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You raise your feet up for a stomp attack. Make a melee attack roll against a target, doing 1d10 + MOVE normal damage on a hit. If the natural attack roll is 18 or more, the target flinches."
       }],
       "_v": 2,
@@ -2620,36 +2451,32 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "damage"
         }],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "{damage}+{SMO} [Rock]"
           }],
           "success": [{
             "type": "damage",
-            "meta": [],
             "damage": "({damage}+{SMO})/2 [Rock]"
           }],
           "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "The earth moves beneath an enemy’s feet as sharp stone pierce through the ground underneath them. Creatures in a 10 foot radius centered on a point you choose in range must make a DEX save against your MOVE DC, taking 4d4 + MOVE rock damage on a fail, or half as much on a save."
       }],
       "_v": 2,
       "proper": true,
       "verb": null
-    }, "attack":"proficiencyBonus+SMO",
+    },
+    "attack": "proficiencyBonus+SMO",
     "damage": {
       "1": "4d4",
       "5": "2d12",
@@ -2663,14 +2490,11 @@
       "name": "Stored Power",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Psychic]"
           }],
           "miss": [],
@@ -2678,7 +2502,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You use your psychic energy to attack with stored power. Make a ranged attack, dealing 1d6 + MOVE psychic damage on a hit. Add an additional damage dice for each bonus applied to any of your attack, damage, or AC stats. (For example, if you or an ally has activated a move(s) that is currently boosting your AC, attack, and damage rolls by +1, add three additional damage dice."
       }],
       "_v": 2,
@@ -2699,14 +2522,11 @@
       "name": "Storm Throw",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Fighting]"
           }],
           "miss": [],
@@ -2714,7 +2534,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike a target with a fierce blow. Make a melee attack on an opponent, dealing 2d10 + MOVE fighting damage on a hit. If a target is immune to the damage from critical hits, halve the damage dealt by this attack."
       }],
       "_v": 2,
@@ -2735,14 +2554,11 @@
       "name": "Strength",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]"
           }],
           "miss": [],
@@ -2750,7 +2566,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike out at a creature with brute strength. Make a melee attack roll, doing 2d6 + MOVE normal damage on a hit. On a hit, you may also choose to push the creature 5 feet away."
       }],
       "_v": 2,
@@ -2771,14 +2586,11 @@
       "name": "String Shot",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Slowed",
             "duration": "10",
             "effects": "",
@@ -2788,7 +2600,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You unleash sticky string at a creature in range, slowing it down. Make a ranged attack roll against a target. On a hit, the target’s speed is reduced by 10 for the duration. The move is stackable to any amount. The target may take an action to attempt to get rid of any string with a STR save against your Move DC. If this reduction in speed causes their speed to be 0, they are restrained."
       }],
       "_v": 2,
@@ -2803,14 +2614,11 @@
       "name": "Struggle",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "2d1+{max(SMO,DMO)}",
             "overheal": false,
             "higher": null,
@@ -2821,7 +2629,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "This move is known by all Pokémon, and is used only when all other moves are out of PP. Make a melee attack roll, doing damage equal to 2 + MOVE damage on a hit."
       }],
       "verb": null,
@@ -2842,14 +2649,11 @@
       "name": "Struggle Bug",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Bug]"
           }],
           "miss": [],
@@ -2857,7 +2661,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You resist an attack, fighting back against an opponent. When hit by a melee attack, you may use a reaction to immediately retaliate with an attack roll of your own, dealing 1d6 + MOVE bug damage on a hit."
       }],
       "_v": 2,
@@ -2878,15 +2681,12 @@
       "name": "Stun Spore",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Paralyzed",
             "duration": "-1",
             "effects": "",
@@ -2897,7 +2697,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "When you are hit by a melee attack, you can use your reaction to release a spore that attempts to stun your attacker. The creature must make a CON save against your Move DC, becoming paralyzed on a fail."
       }],
       "_v": 2,
@@ -2911,18 +2710,14 @@
       "name": "Submission",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Fighting]"
           }, {
             "type": "ieffect",
-            "meta": [],
             "name": "Grappled",
             "duration": "-1",
             "effects": "",
@@ -2933,7 +2728,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You attempt a forceful grapple on a target. Make a melee attack, doing 2d6 + MOVE fighting damage on a hit, but taking a quarter of the damage dealt in recoil. On a hit, the target is grappled. At the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. While a creature is grappled, this move can be activated again as a bonus action with an automatic hit, dealing 2d6 fighting damage with a quarter of the damage dealt in typeless recoil damage."
       }],
       "_v": 2,
@@ -2956,7 +2750,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "1d20",
           "name": "Second+ Cast (DC16)",
           "hidden": false
@@ -2965,7 +2758,6 @@
         "effects": []
       }, {
         "type": "text",
-        "meta": [],
         "text": "You create a duplicate of yourself that copies a quarter of your current HP (rounded down). This substitute moves with you, has an AC of 1 and takes all damage and status ailments you would normally take until it is destroyed. If the damage done is enough to destroy the substitute, you take the remaining damage. In future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the move to be successful."
       }],
       "verb": "creates a ",
@@ -2979,14 +2771,11 @@
       "name": "Sucker Punch",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Dark]",
             "overheal": false,
             "higher": null,
@@ -2997,7 +2786,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You lay in a quick punch before an opponent has a chance to attack. When targeted by a melee attack, you may use your reaction to attempt to strike an opponent before its attack is rolled. Make a melee attack, dealing dark damage on a hit."
       }],
       "verb": "",
@@ -3018,11 +2806,9 @@
       "name": "Sunny Day",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Harsh Sun",
           "duration": "5",
           "effects": "",
@@ -3031,7 +2817,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You summon harsh sun that covers the battlefield for 5 rounds."
       }],
       "verb": "uses",
@@ -3045,14 +2830,11 @@
       "name": "Super Fang",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE [Normal]",
             "overheal": false
           }],
@@ -3061,7 +2843,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You lash out with an incredible fang attack. Make a melee attack, doing 2d6 +MOVE normal damage on a hit. On critical hits, instead of doubling the dice, you can choose to do damage equal to half the target’s current HP (up to a maximum of 5x your level)."
       }],
       "verb": null,
@@ -3082,14 +2863,11 @@
       "name": "Superpower",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Fighting]",
             "overheal": false
           }],
@@ -3098,7 +2876,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike a foe with incredible power - but with great power comes great responsibility. Make a melee attack against an opponent, dealing 4d6 + MOVE fighting damage on a hit. This move exhausts you, and your STR and DEX ability scores are both reduced by 10 until after the end of your next turn."
       }],
       "verb": null,
@@ -3121,18 +2898,15 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "1d4",
           "name": "Confusion"
         }],
         "target": "each",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Confused",
             "duration": "{Confusion}",
             "effects": "",
@@ -3143,13 +2917,13 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You emit a high pitched screech heard only by the target. Choose a target in range. The target must pass a WIS saving throw against your Move DC or become confused."
       }],
       "_v": 2,
       "proper": true,
       "verb": null
-    },"attack":"proficiencyBonus+max(DMO,WMO)",
+    },
+    "attack": "proficiencyBonus+max(DMO,WMO)",
     "PP": 10
   },
   "Surf": {
@@ -3159,7 +2933,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "damage"
         }],
@@ -3168,18 +2941,15 @@
           "type": "save",
           "meta": [{
             "type": "roll",
-            "meta": [],
             "dice": "1d4",
             "name": "prone"
           }],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "{damage}+{max(SMO,DMO)} [Water]"
           }, {
             "type": "ieffect",
-            "meta": [],
             "name": "Prone",
             "duration": "prone",
             "effects": "",
@@ -3187,14 +2957,12 @@
           }],
           "success": [{
             "type": "damage",
-            "meta": [],
             "damage": "({damage}+{max(SMO,DMO)})/2 [Water]"
           }],
           "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You create a powerful wave that crashes down on an opponent in a 30ft cone, centered on you. Any creature caught in the blast must make a DEX saving throw, taking 2d8 + MOVE water damage and falling prone on a failure, or half as much without falling prone on a success."
       }],
       "_v": 2,
@@ -3217,18 +2985,15 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "Confusion"
         }],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Confused",
             "duration": "{Confusion}",
             "effects": "-b 2",
@@ -3239,7 +3004,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "Force a target in range to make a WIS save against your Move DC. On a fail, the target is confused, but it adds +2 to its attack rolls while confused."
       }],
       "_v": 2,
@@ -3253,16 +3017,13 @@
       "name": "Swallow",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "damage",
-          "meta": [],
           "damage": "-(1d6+{CoMO}) [Healing]"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You absorb your Stockpiled energy to heal your wounds. When activated after using Stockpile, regain a base 1d6 + Move hit points. The dice roll is doubled if two rounds of energy were Stockpiled. The dice roll is tripled if three rounds of energy were Stockpiled.\n"
       }],
       "_v": 2,
@@ -3278,7 +3039,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "1d4",
           "name": "Confuse",
           "hidden": false
@@ -3286,11 +3046,9 @@
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "cha",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Confused",
             "duration": "{Confuse}",
             "effects": "",
@@ -3302,7 +3060,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You lay a kiss on an opponent, attempting to confuse them. The target must make an CHA saving throw against your Move DC or become confused."
       }],
       "verb": "gives",
@@ -3316,15 +3073,12 @@
       "name": "Sweet Scent",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "cha",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Sweet Scent (attacks against have advantage)",
             "duration": "2",
             "effects": "",
@@ -3335,7 +3089,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You release a sweet smell directed ar a target within range. The target must make a CHA save against your Move DC. On a fail, you have advantage on your next two attacks against that target."
       }],
       "_v": 2,
@@ -3345,7 +3098,34 @@
     "PP": 10
   },
   "Swift": {
-    "code": {"name":"Swift","automation":[{"type":"target","meta":[{"type":"roll","meta":[],"dice":"1d4","name":"damage","higher":null,"cantripScale":null,"hidden":false}],"target":"all","effects":[{"type":"damage","meta":[],"damage":"{damage} [Normal]","overheal":false,"higher":null,"cantripScale":null}]},{"type":"text","meta":[],"text":"You fire three projectiles at any Pokémon you choose in range. They do not have to target the same Pokémon. Each hit for 1d4 normal damage. This move also targets Pokémon during the invulnerable stages of Dig, Fly, Bounce, etc."}],"verb":null,"proper":true,"_v":2},
+    "code": {
+      "name": "Swift",
+      "automation": [{
+        "type": "target",
+        "meta": [{
+          "type": "roll",
+          "dice": "1d4",
+          "name": "damage",
+          "higher": null,
+          "cantripScale": null,
+          "hidden": false
+        }],
+        "target": "all",
+        "effects": [{
+          "type": "damage",
+          "damage": "{damage} [Normal]",
+          "overheal": false,
+          "higher": null,
+          "cantripScale": null
+        }]
+      }, {
+        "type": "text",
+        "text": "You fire three projectiles at any Pokémon you choose in range. They do not have to target the same Pokémon. Each hit for 1d4 normal damage. This move also targets Pokémon during the invulnerable stages of Dig, Fly, Bounce, etc."
+      }],
+      "verb": null,
+      "proper": true,
+      "_v": 2
+    },
     "PP": 10
   },
   "Switcheroo": {
@@ -3353,15 +3133,12 @@
       "name": "Switcheroo",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Switched Items",
             "duration": "-1",
             "effects": "",
@@ -3372,7 +3149,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "Your hands move with incredible speed as you attempt to switch held items with an opponent. Force an opponent to make a DEX save against your Move DC. On a failure, you take their held item and replace it with your own. If you do not have a held item, you simply take theirs without replacement."
       }],
       "_v": 2,
@@ -3386,11 +3162,9 @@
       "name": "Swords Dance",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Dancing Swords",
           "duration": 10,
           "effects": "-ac +2 -attack \"ATTACK|DAMAGE[Normal]|\"",
@@ -3399,7 +3173,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "When you activate this move, two swords appear and dance around you, increasing your AC by +1 for each sword. As a bonus action on a future turn, you can drop out of concentration to send the swords at an enemy Pokémon within 30 feet of you, making two ranged attack rolls, doing 1d6 normal damage on each hit."
       }],
       "verb": "dances",
@@ -3420,22 +3193,18 @@
       "name": "Synchonoise",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Psychic]"
           }],
           "dc": "{8+proficiencyBonus+max(WMO,ChMO)}"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You emit a strange soundwave that only damages creature that share a type with you. Any creature within a 20ft circle that shares at least one of your types must make a CON save against your Move DC, taking 2d10 + MOVE psychic damage on a failure, or half as much on a success."
       }],
       "_v": 2,
@@ -3455,17 +3224,14 @@
       "name": "Synthesis",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "damage",
-          "meta": [],
           "damage": "-(6d6+{CoMO})",
           "overheal": false
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You regenerate from the inside, healing some of your wounds. Heal yourself for 2d6 + MOVE hit points."
       }],
       "verb": "heals with",
@@ -3479,14 +3245,11 @@
       "name": "Tackle",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]",
             "overheal": false,
             "higher": null,
@@ -3497,7 +3260,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You rush forward and slam into an opponent. Make a melee attack roll against a target, doing 1d6 + MOVE normal damage on a hit."
       }],
       "verb": null,
@@ -3518,11 +3280,9 @@
       "name": "Tail Glow",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Double Stab",
           "duration": "10",
           "effects": "",
@@ -3531,7 +3291,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "Your tail emits a flash of light, boosting your attack. For the duration, double your STAB damage."
       }],
       "_v": 2,
@@ -3545,20 +3304,17 @@
       "name": "Tail Slap",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
           "meta": [{
             "type": "roll",
-            "meta": [],
             "dice": "DAMAGE",
             "name": "Extra Attacks",
             "hidden": false
           }],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]",
             "overheal": false
           }],
@@ -3567,7 +3323,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike out against an opponent with a quick-hitting, hard tail. Make a melee attack roll, doing 1d4 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits."
       }],
       "verb": null,
@@ -3588,22 +3343,18 @@
       "name": "Tail Whip",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Whipped - +1 to attacks against",
             "duration": "10",
             "effects": "",
             "end": true
           }, {
             "type": "text",
-            "meta": [],
             "text": "You shake your tail at a targetn, distracting it and opening up its defenses. The creature must make a WIS save against your Move DC. On a fail, allies add +1 to any attack they target it with for the duration. This modifier can be stacked if it fails multiple tail whip saves, up to a maximum of +5."
           }],
           "success": [],
@@ -3621,11 +3372,9 @@
       "name": "Tailwind",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "User and Ally Double Move Speed",
           "duration": "10",
           "effects": "",
@@ -3634,7 +3383,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You whip up a turbulent whirlwind that boosts the speed of you and all allies in a 30 foot circle, centered on you. The wind only follows you and your allies, and doubles their movement speed for the duration."
       }],
       "_v": 2,
@@ -3650,7 +3398,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "damage",
           "hidden": false
@@ -3658,10 +3405,8 @@
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "{damage}+{SMO}[Normal]",
             "overheal": false
           }],
@@ -3670,7 +3415,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You sacrifice your own position to take down an opponent. Roll a melee attack roll. On a hit, you deal 2d8 + MOVE normal damage, taking a quarter of the total damage (rounded down) in recoil."
       }],
       "verb": null,
@@ -3691,15 +3435,12 @@
       "name": "Taunt",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Come at me Bro!",
             "duration": "-10",
             "effects": "Can only use damaging attacks against caster",
@@ -3711,7 +3452,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You taunt an opponent to only attack you with damaging attacks. Choose a target in range and force it to make a WIS saving throw against your Move DC. On a failure, the target can only use damaging attacks that target you for the duration."
       }],
       "verb": null,
@@ -3725,27 +3465,22 @@
       "name": "Techno Blast",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "2d8+{max(SMO,DMO)} [Typeless]"
           }],
           "success": [{
             "type": "damage",
-            "meta": [],
             "damage": "(2d8+{max(SMO,DMO)})/2 [Typeless]"
           }],
           "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You fire a powerful beam of pure light. The line is 40 feet long and 5 feet wide, and all creatues caught in the blast must make a DEX save against your Move DC, taking 2d10 + MOVE damage on a failure, or half as much on a success. The damage type is dependant on the Drive the user holds. (Burn Drive - Fire, Chill Drive - Ice, Douse Drive - Water, Shock Drive - Electric)"
       }],
       "_v": 2,
@@ -3767,18 +3502,15 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "Confusion"
         }],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Confused",
             "duration": "{Confusion}",
             "effects": "",
@@ -3789,7 +3521,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You start to perform a difficult dance, confusing all creatures in range. Creatures in a 20 foot circle around you must make a WIS save against your Move DC, becoming confused on a fail."
       }],
       "_v": 2,
@@ -3803,15 +3534,12 @@
       "name": "Telekinesis",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Restrained",
             "duration": "4",
             "effects": "",
@@ -3822,11 +3550,9 @@
         }]
       }, {
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Psychic Powers",
           "duration": "3",
           "effects": "",
@@ -3835,7 +3561,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You use your psychic power to attempt to hold a create above the ground, making in vulnerable to attacks. Force a creature in range to make a CON save against your Move DC. On a failure, the creature is grappled and restrained for the duration, unable to release itself as long as you hold your concentration."
       }],
       "_v": 2,
@@ -3849,7 +3574,6 @@
       "name": "Teleport",
       "automation": [{
         "type": "text",
-        "meta": [],
         "text": "You disappear from view and reappear at an unoccupied point within range. In wild creature battles, this move can be activated to automatically count as a single success in a group DEX check to run away."
       }],
       "_v": 2,
@@ -3863,22 +3587,17 @@
       "name": "Thief",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Dark]"
           }, {
             "type": "save",
-            "meta": [],
             "stat": "dex",
             "fail": [{
               "type": "ieffect",
-              "meta": [],
               "name": "Item Stolen",
               "duration": "-1",
               "effects": "",
@@ -3892,7 +3611,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You lash out with a quick attack that may steal an opponent’s held item. Make a melee attack against an opponent, doing 1d10 + MOVE dark damage on a hit. If the user does not have an item held, the target must make a DEX save against your Move DC or have their item stolen by the user.\n"
       }],
       "_v": 2,
@@ -3915,34 +3633,28 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "damage"
         }],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "{damage}+{max(DMO,WMO)} [Ground]"
           }],
           "success": [{
             "type": "damage",
-            "meta": [],
             "damage": "({damage}+{max(DMO,WMO)})/2 [Ground]"
           }],
           "dc": "{8+proficiencyBonus+max(DMO,WMO)}"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You summon forth a volley of green arrows to pierce your foes. All creatures in a 30 ft radius, centered on a point within range, must make a DEX save against your Move DC, taking 2d8 + MOVE ground damage on a hit, or half as much on a save. Flying-type creatures or ones with Levitate, Magnet Rise, or similar ability CAN be hit by this move. Any creature that fails the saving throw falls to the ground and is now \"grounded\". Grounded creatures are susceptible to to ground-type moves until they raise up, regardless of their type or ability.\n"
       }, {
         "type": "text",
-        "meta": [],
         "text": "If a raised creature fails use `!i effect \"Pokemon\" Grounded -neutral Ground` change neutral to \"vuln\" if needed"
       }],
       "_v": 2,
@@ -3962,22 +3674,18 @@
       "name": "Thousand Waves",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Ground]"
           }],
           "dc": "{8+proficiencyBonus+max(DMO,WMO)}"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "A wave of green energy courses through the battlefield in a 60 foot cone, centered on you. Any creature caught in the wave must make a DEX save against your Move DC, taking 2d8 + MOVE ground damage on a failure, or half as much on a success. Any creature that fails the saving throw cannot flee or be switched out as long as you remain in battle."
       }],
       "_v": 2,
@@ -3997,20 +3705,17 @@
       "name": "Thrash",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
           "meta": [{
             "type": "roll",
-            "meta": [],
             "dice": "DAMAGE",
             "name": "rounds"
           }],
           "target": "self",
           "effects": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Confused",
             "duration": "{rounds}",
             "effects": "Confused",
@@ -4032,7 +3737,33 @@
     "PP": 5
   },
   "Throat Chop": {
-    "code": {"name":"Throat Chop","automation":[{"type":"target","meta":[{"type":"roll","meta":[],"dice":"1d4","name":"Deafened"}],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Dark]"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You focus in on an attack at the target’s throat. Make a melee attack, dealing 2d6 + MOVE dark damage on a hit. On hit, the target is unable to activate sound based attacks for its next 1d4 turns."}],"_v":2,"proper":true,"verb":null},
+    "code": {
+      "name": "Throat Chop",
+      "automation": [{
+        "type": "target",
+        "meta": [{
+          "type": "roll",
+          "dice": "1d4",
+          "name": "Deafened"
+        }],
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE [Dark]"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "text": "You focus in on an attack at the target’s throat. Make a melee attack, dealing 2d6 + MOVE dark damage on a hit. On hit, the target is unable to activate sound based attacks for its next 1d4 turns."
+      }],
+      "_v": 2,
+      "proper": true,
+      "verb": null
+    },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "2d6+{max(SMO,DMO)}",
@@ -4049,30 +3780,25 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "damage"
         }],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "{damage}+{max(DMO,SMO)} [Electric]"
           }],
           "success": [{
             "type": "damage",
-            "meta": [],
             "damage": "({damage}+{max(DMO,SMO)})/2 [Electric]"
           }],
           "dc": "{8+proficiencyBonus+max(DMO,SMO)}"
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "Powerful electric energy arcs out from you, hitting any creature in a 20 foot radius, centered on you. Creatures caught in the area must make a DEX save against your Move DC, taking 3d6 + MOVE electric damage on a fail, and half as much on a success. Creatures that fail the saving throw by 5 or more become paralyzed."
       }],
       "_v": 2,
@@ -4088,7 +3814,35 @@
     "PP": 5
   },
   "Thunder Cage": {
-    "code": {"name":"Thunder Cage","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE+{DMO} [Electric]"},{"type":"ieffect","meta":[],"name":"Electric Arcs","duration":"3","effects":"-attack \"|DAMAGE [Electric]|\"","end":true,"conc":true}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You release a series of moving arcs of electricity that dance around a target. Make a ranged attack roll, doing 2d6 + MOVE electric damage on a hit. As long as you maintain concentration, the target takes an additional 2d6 electric damage at the end of each of its next three turns."}],"verb":null,"proper":true,"_v":2},
+    "code": {
+      "name": "Thunder Cage",
+      "automation": [{
+        "type": "target",
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE+{DMO} [Electric]"
+          }, {
+            "type": "ieffect",
+            "name": "Electric Arcs",
+            "duration": "3",
+            "effects": "-attack \"|DAMAGE [Electric]|\"",
+            "end": true,
+            "conc": true
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "text": "You release a series of moving arcs of electricity that dance around a target. Make a ranged attack roll, doing 2d6 + MOVE electric damage on a hit. As long as you maintain concentration, the target takes an additional 2d6 electric damage at the end of each of its next three turns."
+      }],
+      "verb": null,
+      "proper": true,
+      "_v": 2
+    },
     "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "2d6",
@@ -4103,18 +3857,14 @@
       "name": "Thunder Fang",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Electric]"
           }, {
             "type": "text",
-            "meta": [],
             "text": "You attempt to pierce an opponent with electric fangs. Make a melee attack, dealing 1d10 + MOVE electric damage on a hit. On a natural attack roll of 19 or 20, the target is paralyzed and flinches."
           }],
           "miss": [],
@@ -4139,14 +3889,11 @@
       "name": "Thunder Punch",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Electric]",
             "overheal": false,
             "higher": null,
@@ -4157,7 +3904,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "Your punches are imbued with electric energy. Make a melee attack on a Pokémon, doing 1d12 + MOVE electric damage on a hit. On a natural attack roll of 19 or 20, the target is paralyzed."
       }],
       "verb": null,
@@ -4178,14 +3924,11 @@
       "name": "Thunder Shock",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Electric]"
           }],
           "miss": [],
@@ -4193,7 +3936,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You deliver an electric shock to a target in range. Make a ranged attack, doing 1d6 + MOVE electric damage on a hit."
       }],
       "_v": 2,
@@ -4214,15 +3956,12 @@
       "name": "Thunder Wave",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Paralyzed",
             "duration": "-1",
             "effects": "",
@@ -4243,14 +3982,11 @@
       "name": "Thunderbolt",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE [Electric]",
             "overheal": false,
             "higher": null,
@@ -4261,7 +3997,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You send a powerful bolt of electricity at a Pokémon in range. Make a ranged attack roll, doing 2d8 + MOVE electric damage on a hit. On a natural attack roll of 19 or 20, the target is paralyzed. Higher Levels: The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
       }],
       "verb": "sends out ",
@@ -4278,7 +4013,34 @@
     "PP": 10
   },
   "Thunderous Kick": {
-    "code": {"name":"Thunderous Kick","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE [Fighting]"},{"type":"ieffect","meta":[],"name":"Broken Defense","duration":"-1","effects":"-ac -1","end":false}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"text","meta":[],"text":"You overwhelm the target with lightning-like movement before delivering a powerful kick. Make a melee attack roll, doing 2d8 + MOVE fighting damage on a hit, and causing the target to lose 1AC. Can stack up to -5 AC"}],"_v":2,"proper":false,"verb":null},
+    "code": {
+      "name": "Thunderous Kick",
+      "automation": [{
+        "type": "target",
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE [Fighting]"
+          }, {
+            "type": "ieffect",
+            "name": "Broken Defense",
+            "duration": "-1",
+            "effects": "-ac -1",
+            "end": false
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "text": "You overwhelm the target with lightning-like movement before delivering a powerful kick. Make a melee attack roll, doing 2d8 + MOVE fighting damage on a hit, and causing the target to lose 1AC. Can stack up to -5 AC"
+      }],
+      "_v": 2,
+      "proper": false,
+      "verb": null
+    },
     "attack": "proficiencyBonus+max(DMO,SMO)",
     "damage": {
       "1": "2d8+{max(DMO,SMO)}",
@@ -4293,15 +4055,12 @@
       "name": "Tickle",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Flinched",
             "duration": "1",
             "effects": "",
@@ -4312,7 +4071,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You turn your melee attack into a playful tickle. As a bonus action at the end of a turn in which you used a melee attack, force an opponent to make a CON saving throw against your Move DC. On a failure, the target flinches."
       }],
       "_v": 2,
@@ -4326,15 +4084,12 @@
       "name": "Topsy-Turvy",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "cha",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Opposite Stat changes",
             "duration": "1",
             "effects": "",
@@ -4345,7 +4100,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You unleash a dark energy that has the power to reverse the stat changes of an opponent. Force a creature in range to make a CHA save against your Move DC. On a failure, any stat changes (-1 to attack, +2 to AC, etc.) currently affecting the target have the opposite effect."
       }],
       "_v": 2,
@@ -4359,11 +4113,9 @@
       "name": "Torment",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "wis",
           "fail": [],
           "success": [],
@@ -4371,7 +4123,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You send a dark energy to torment an opponent in range that attacks you. When hit by a melee or ranged attack, force the opponent to make a WIS saving throw against your Move DC. On a failure, the opponent cannot use the same move that hit you on its next turn."
       }],
       "_v": 2,
@@ -4385,15 +4136,12 @@
       "name": "Toxic",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Poisoned",
             "duration": "-1",
             "effects": "",
@@ -4404,7 +4152,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You send a downpour of potent, poisonous rain in a 5 foot radius, centered on a point within range. Targets in the area must make a CON save against your MOVE DC or become poisoned. Pokémon poisoned by this move takes double the normal poison damage.\n"
       }],
       "verb": "",
@@ -4418,15 +4165,12 @@
       "name": "Toxic spikes",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "con",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Poisoned",
             "duration": "-1",
             "effects": "",
@@ -4438,7 +4182,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You quickly summon a trap of poisonous spikes around an opponent that enters the battle. When a creature is switched into battle, you may use your reaction to force an opponent to make a CON save against your Move DC, becoming poisoned on a failure."
       }],
       "verb": "uses",
@@ -4452,11 +4195,9 @@
       "name": "Transform",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "meta": [],
           "name": "Transformed",
           "duration": "10",
           "effects": "",
@@ -4465,7 +4206,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You attempt to morph into a near-exact copy of a creature in range, as long as the base SR of the target is able to be controlled by your trainer. For the duration, you copy all of the target's stats and current moves, keeping your own HP and level.\n\nCodes:\n!ms score Pokémon -b #\n"
       }],
       "verb": "uses",
@@ -4481,7 +4221,6 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "meta": [],
           "dice": "DAMAGE",
           "name": "damage",
           "hidden": false
@@ -4489,17 +4228,14 @@
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "meta": [],
             "damage": "{damage}+{max(SMO,DMO)}+6 [Normal]",
             "overheal": false
           }],
           "success": [{
             "type": "damage",
-            "meta": [],
             "damage": "({damage}+{max(SMO,DMO)}+6)/2 [Normal]",
             "overheal": false
           }],
@@ -4507,7 +4243,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike with a simultaneous three-beam attack. Each creature in a 30 foot cone, centered on you, must make a DEX save against your Move DC, taking 2d6 + MOVE normal damage on a fail, and half as much on a success. Targets that fail the save by more than 5 must roll a d4, gaining the status condition as follows: 1. The target becomes burned. 2. The target becomes frozen. 3. The target becomes paralyzed. 4. Must reroll until any number other than 4 appears.\n"
       }],
       "verb": null,
@@ -4527,14 +4262,11 @@
       "name": "Trick",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "text",
-            "meta": [],
             "text": "Items swapped"
           }],
           "miss": [],
@@ -4542,7 +4274,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You move quickly to attempt to swap held items with an opponent. Make a melee attack roll against an opponent, swapping held items with them on a hit."
       }],
       "_v": 2,
@@ -4557,11 +4288,9 @@
       "name": "Trick Room",
       "automation": [{
         "type": "text",
-        "meta": [],
         "text": "The world around you seems to spin for a moment, and the whole battlefield is hit with a bizarre feeling. Starting at the beginning of the next round of combat after you activate this move, the initiative order is permanently reversed."
       }, {
         "type": "text",
-        "meta": [],
         "text": "Use `!i opt Pokemon -p #` to change init order"
       }],
       "_v": 2,
@@ -4575,15 +4304,12 @@
       "name": "Trick-or-Treat",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
-          "meta": [],
           "stat": "cha",
           "fail": [{
             "type": "ieffect",
-            "meta": [],
             "name": "Ghost Type",
             "duration": "4",
             "effects": "-neutral Flying -neutral Rock -neutral Steel -neutral Fire -neutral Water -neutral Grass -neutral Electric -neutral Psychic -neutral Ice -neutral Fairy -neutral Dragon -neutral Ground -vuln Ghost -vuln Dark -immune Normal -immune Fighting -resist Poison -resist Bug",
@@ -4594,7 +4320,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You attempt to scare the spirit right out of a creature in range. Force an opponent in range to make a CHA save against your Move DC. On a failure, its type is changed to Ghost for the duration."
       }],
       "_v": 2,
@@ -4608,14 +4333,11 @@
       "name": "Triple Kick",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Fighting]"
           }],
           "miss": [],
@@ -4623,7 +4345,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike out with three consecutive kicks. Make three melee attack rolls in order, doing 1d4 + MOVE fighting damage on each hit. As soon as one attack misses, the move is over."
       }],
       "_v": 2,
@@ -4644,14 +4365,11 @@
       "name": "Trump Card",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Normal]"
           }],
           "miss": [],
@@ -4659,7 +4377,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You strike out with a blast of energy that increases in strength the more it is used. Make a ranged attack on an opponent, dealing 1d6 + MOVE normal damage on a hit. Increase the damage by your Move modifier for each PP that has been expended for the move, before the move was activated. Using a restorative to regain PP resets the damage for this attack."
       }],
       "_v": 2,
@@ -4680,14 +4397,11 @@
       "name": "Twineedle",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Bug]",
             "overheal": false
           }],
@@ -4696,7 +4410,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You fire two sharp projectiles at creature in range. They do not have to target the same opponent. Make two ranged attack rolls, dealing 1d4 + MOVE bug damage on each hit. If the natural roll of either attack is a 19 or 20, the target is poisoned."
       }],
       "verb": "",
@@ -4717,14 +4430,11 @@
       "name": "Twister",
       "automation": [{
         "type": "target",
-        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [],
           "hit": [{
             "type": "damage",
-            "meta": [],
             "damage": "DAMAGE[Dragon]",
             "overheal": false
           }],
@@ -4733,7 +4443,6 @@
         }]
       }, {
         "type": "text",
-        "meta": [],
         "text": "You send a gust of swirling wind that tears through an opponent. Make a ranged attack on an opponent, doing 1d6 + MOVE dragon damage on a hit. If the natural attack roll is 16 or higher, the opponent flinches."
       }],
       "verb": null,
