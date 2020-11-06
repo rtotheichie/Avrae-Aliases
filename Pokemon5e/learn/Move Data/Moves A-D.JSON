@@ -9,7 +9,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Grass]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Grass]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -27,10 +27,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d4+{max(SMO,DMO)}",
-      "5": "2d4+{max(SMO,DMO)}",
-      "10": "1d12+{max(SMO,DMO)}",
-      "17": "4d4+{max(SMO,DMO)}"
+      "1": "1d4",
+      "5": "2d4",
+      "10": "1d12",
+      "17": "4d4"
     },
     "PP": 15
   },
@@ -143,7 +143,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Poison]",
+            "damage": "DAMAGE+{max(DMO,CoMO)}[Poison]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -165,7 +165,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You spit a spray of acidic fluid that works to melt away an opponent's defense. Make a ranged attack against a target, dealing 1d6 + MOVE poison damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target's AC is reduce by 1 for the duration. This decrease may be stacked on an opponent, up to a maximum of -3 to its AC."
+        "text": "You spit a spray of acidic fluid that works to melt away an creature's defense. Make a ranged attack against a target, dealing 1d6 + MOVE poison damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target's AC is reduce by 1 for the duration. This decrease may be stacked on a creature, up to a maximum of -3 to its AC."
       }],
       "verb": null,
       "proper": true,
@@ -173,10 +173,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,CoMO)",
     "damage": {
-      "1": "1d6+{max(DMO,CoMO)}",
-      "5": "1d12+{max(DMO,CoMO)}",
-      "10": "2d8+{max(DMO,CoMO)}",
-      "17": "4d6+{max(DMO,CoMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 10
   },
@@ -190,7 +190,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]",
+            "damage": "DAMAGE+{DMO}[Flying]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -208,10 +208,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "3d6+{DMO}",
-      "5": "3d8+{DMO}",
-      "10": "6d6+{DMO}",
-      "17": "7d8+{DMO}"
+      "1": "3d6",
+      "5": "3d8",
+      "10": "6d6",
+      "17": "7d8"
     },
     "PP": 5
   },
@@ -249,22 +249,22 @@
         "target": "each",
         "effects": [{
           "type": "damage",
-          "damage": "DAMAGE[Flying]",
+          "damage": "DAMAGE+{DMO}[Flying]",
           "overheal": false
         }]
       }, {
         "type": "text",
-        "text": "You dive at an opponent with such speed that it is impossible for them to avoid. This move is guaranteed to hit for 1d6 + MOVE flying damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
+        "text": "You dive at an creature with such speed that it is impossible for them to avoid. This move is guaranteed to hit for 1d6 + MOVE flying damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
       }],
       "verb": null,
       "proper": true,
       "_v": 2
     },
     "damage": {
-      "1": "1d6+{DMO}",
-      "5": "1d10+{DMO}",
-      "10": "2d8+{DMO}",
-      "17": "5d4+{DMO}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 5
   },
@@ -285,29 +285,29 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "{damage}+{DMO} [Flying]",
+            "damage": "{damage}+{max(SMO,DMO)} [Flying]",
             "overheal": false
           }],
           "success": [{
             "type": "damage",
-            "damage": "{(damage}+{DMO})/2 [Flying]",
+            "damage": "{(damage}+{max(SMO,DMO)O})/2 [Flying]",
             "overheal": false
           }],
-          "dc": "{8+proficiencyBonus+DMO}"
+          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
         }]
       }, {
         "type": "text",
-        "text": "You shoot out a powerful vortex of air that shreds through opponents. Any creature caught in a 50 foot line, 5 feet wide, must make a DEX save against your Move DC, taking 4d4 + MOVE flying damage on a fail, and half as much on a save."
+        "text": "You shoot out a powerful vortex of air that shreds through creatures. Any creature caught in a 50 foot line, 5 feet wide, must make a DEX save against your Move DC, taking 4d4 + MOVE flying damage on a fail, and half as much on a save."
       }],
       "verb": null,
       "proper": true,
       "_v": 2
     },
     "damage": {
-      "1": "4d4",
-      "5": "2d12",
-      "10": "4d8",
-      "17": "8d6"
+      "1": "3d10",
+      "5": "6d6",
+      "10": "8d6",
+      "17": "7d12"
     },
     "PP": 3
   },
@@ -316,7 +316,7 @@
       "name": "After You",
       "automation": [{
         "type": "text",
-        "text": "As a bonus action, choose an ally or opponent in range that has not yet taken its turn in the current round. The target must immediately take its turn now, and return to normal initiative order in the next round."
+        "text": "As a bonus action, choose a creature in range that has not yet taken its turn in the current round. The target must immediately take its turn now, and return to normal initiative order in the next round."
       }],
       "verb": null,
       "proper": false,
@@ -328,8 +328,19 @@
     "code": {
       "name": "Agility",
       "automation": [{
+        "type": "target",
+        "target": "self",
+        "effects": [{
+          "type": "ieffect",
+          "name": "Agility (move speed increased by 20)",
+          "duration": 10,
+          "effects": "",
+          "end": true,
+          "conc": true
+        }]
+      }, {
         "type": "text",
-        "text": "You hone your abilities and feel a surge of speed course through your veins. Increase your movement speed by 20 feet for the duration. Applicable to any movement type the creature has."
+        "text": " You hone your abilities and feel a surge of speed course through your veins. Increase your movement speed by 20 feet for the duration. Applicable to any movement type the creature has."
       }],
       "verb": null,
       "proper": false,
@@ -347,25 +358,27 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE+{DMO}[Flying]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You create a gust of razor-like wind to slash an opponent. Make a ranged attack against an opponent, doing 1d10 + MOVE flying damage on a hit. This move scores a critical hit on 19 and 20."
+        "text": "You create a gust of razor-like wind to slash a creature. Make a ranged attack against a creature, doing 1d10 + MOVE flying damage on a hit. This move scores a critical hit on 19 and 20."
       }],
       "_v": 2,
       "proper": true,
-      "verb": "sends out an"
+      "verb": "sends out an",
+      "criton": "CRIT"
     },
     "attack": "proficiencyBonus+DMO",
+    "crit" : "19"
     "damage": {
-      "1": "1d10+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "5d4+{DMO}",
-      "17": "4d8+{DMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 15
   },
@@ -379,14 +392,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE+{DMO}[Flying]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You slash at an opponent with a blade of sharp air. Make a ranged attack on an opponent, dealing 1d12 + MOVE flying damage on a hit. On a natural attack roll of 15 or higher, the target flinches if it has not taken a turn this round."
+        "text": "You slash at a creature with a blade of sharp air. Make a ranged attack on a creature, dealing 1d12 + MOVE flying damage on a hit. On a natural attack roll of 15 or higher, the target flinches if it has not taken a turn this round."
       }],
       "_v": 2,
       "proper": true,
@@ -394,10 +407,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d12+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "2d12+{DMO}",
-      "17": "6d6+{DMO}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -2391,21 +2404,16 @@
       "name": "Chatter",
       "automation": [{
         "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "DAMAGE",
-          "name": "Confusion"
-        }],
         "target": "each",
         "effects": [{
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE+{max(WMO,ChMO)}[Flying]"
           }, {
             "type": "ieffect",
             "name": "Confused",
-            "duration": "{Confusion}",
+            "duration": "3",
             "effects": "",
             "end": false
           }],
@@ -2670,11 +2678,6 @@
       "name": "Confide",
       "automation": [{
         "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "DAMAGE",
-          "name": "Confusion"
-        }],
         "target": "all",
         "effects": [{
           "type": "save",
@@ -2682,7 +2685,7 @@
           "fail": [{
             "type": "ieffect",
             "name": "Confused",
-            "duration": "{Confusion}",
+            "duration": "3",
             "effects": "",
             "end": true
           }],
@@ -2704,19 +2707,11 @@
       "name": "Confuse Ray",
       "automation": [{
         "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "1d4",
-          "name": "Rounds",
-          "higher": null,
-          "cantripScale": null,
-          "hidden": false
-        }],
         "target": "each",
         "effects": [{
           "type": "ieffect",
           "name": "Confused",
-          "duration": "{Rounds}",
+          "duration": "3",
           "effects": "",
           "end": true
         }]
@@ -3241,6 +3236,8 @@
     },
     "PP": 5
   },
+  "Curse (Other)":{
+  },
   "Cut": {
     "code": {
       "name": "Cut",
@@ -3725,17 +3722,12 @@
       "name": "Dizzy Punch",
       "automation": [{
         "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "1d4",
-          "name": "Confusion"
-        }],
         "target": "each",
         "effects": [{
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+max(SMO,DMO)[Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
