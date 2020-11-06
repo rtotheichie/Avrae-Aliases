@@ -880,7 +880,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Ice]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Ice]",
             "overheal": false
           }, {
             "type": "save",
@@ -909,10 +909,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "5d4+{max(SMO,DMO)}",
-      "17": "4d8+{max(SMO,DMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 10
   },
@@ -924,7 +924,7 @@
         "text": "You use the environment to create a shield of ice around your body. Only able to be activated while it is hailing, this move can be used as a bonus action to halve all damage dealt to you for three rounds.",
         "effects": [{
           "type": "ieffect",
-          "name": "Aurora Veiled (Take 1/2 Damage",
+          "name": "Aurora Veiled (Take 1/2 Damage)",
           "duration": 3,
           "effects": "",
           "end": false
@@ -966,14 +966,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ice]"
+            "damage": "DAMAGE+{SMO}[Ice]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You send forth a heap of powerful snow to pummel an opponent. Make a ranged attack on a target, dealing 1d10 + MOVE ice damage on a hit. If the target has dealt any damage to you since the end of your last turn, double the damage you deal."
+        "text": "You send forth a heap of powerful snow to pummel a creature. Make a ranged attack on a target, dealing 1d10 + MOVE ice damage on a hit. If the target has dealt any damage to you since the end of your last turn, double the damage you deal."
       }],
       "_v": 2,
       "proper": false,
@@ -981,10 +981,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d10+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "5d4+{SMO}",
-      "17": "4d8+{SMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 5
   },
@@ -993,7 +993,7 @@
       "name": "Baby-Doll Eyes",
       "automation": [{
         "type": "text",
-        "text": "You quickly widen your eyes in an attempt to charm an opponent, decreasing their will to fight. When you or an ally in range are targeted by a Move that requires an attack roll, you may use a reaction to impose disadvantage on the roll."
+        "text": "You quickly widen your eyes in an attempt to charm a creature, decreasing their will to fight. When you or an ally in range are targeted by a Move that requires an attack roll, you may use a reaction to impose disadvantage on the roll."
       }],
       "verb": null,
       "proper": false,
@@ -1084,7 +1084,7 @@
       "name": "Baton Pass",
       "automation": [{
         "type": "text",
-        "text": "As a bonus action, you may switch a creature out, passing along all negative status effects or stat changes to the new creature. This includes existing substitutes, critical hit bonuses, AC increases, etc."
+        "text": " As a bonus action, you may switch out, passing along all negative status effects or stat changes to the new creature. This includes existing substitutes, critical hit bonuses, AC increases, etc. Moves that require concentration may also be transferred, with concentration now dependent on the new creature."
       }],
       "_v": 2,
       "proper": true,
@@ -1102,7 +1102,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Flying]"
           }, {
             "type": "save",
             "stat": "dex",
@@ -1129,10 +1129,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "5d4+{max(SMO,DMO)}",
-      "17": "4d8+{max(SMO,DMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 15
   },
@@ -1146,7 +1146,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dark]"
+            "damage": "DAMAGE+{SMO}[Dark]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -1160,6 +1160,12 @@
       "verb": null
     },
     "attack": "proficiencyBonus+SMO",
+    "damage": {
+      "1": "1d6",
+      "5": "1d6",
+      "10": "1d6",
+      "17": "1d6"
+    },
     "PP": 5
   },
   "Belch": {
@@ -1173,11 +1179,11 @@
           "stat": "con",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE [Poison]"
+            "damage": "DAMAGE+{max(SMO,CoMO)}[Poison]"
           }],
           "success": [{
             "type": "damage",
-            "damage": "(DAMAGE)/2 [Poison]"
+            "damage": "(DAMAGE+{max(SMO,CoMO)})/2 [Poison]"
           }],
           "dc": "{8+proficiencyBonus+max(SMO,CoMO)}"
         }]
@@ -1190,10 +1196,10 @@
       "verb": null
     },
     "damage": {
-      "1": "2d10+{max(SMO,CoMO)}",
-      "5": "3d8+{max(SMO,CoMO)}",
-      "10": "4d10+{max(SMO,CoMO)}",
-      "17": "7d8+{max(SMO,CoMO)}"
+      "1": "2d10",
+      "5": "3d8",
+      "10": "4d10",
+      "17": "7d8"
     },
     "PP": 5
   },
@@ -1252,7 +1258,7 @@
       "name": "Bide",
       "automation": [{
         "type": "text",
-        "text": "You embrace the damage done to you, waiting for your time to strike. Use your attack action to activate this move, and keep track of all damage done to you before your next turn. On your next turn, you lash out at an enemy with a normal ranged attack, striking them for double the amount of damage you took on a successful hit. At 10th Level, you can choose to hold Bide for a second turn for the\nchance to add additional damage to the attack."
+        "text": "You embrace the damage done to you, waiting for your time to strike. Use your attack action to activate this move, and keep track of all damage done to you before your next turn. On your next turn, you use your action to lash out at a target with a normal ranged attack, striking them for double the amount of typeless damage you took on a successful hit. At 10th Level, you can choose to hold Bide for a second turn for the chance to add additional damage to the attack."
       }, {
         "type": "target",
         "target": "each",
@@ -1284,7 +1290,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]|",
+            "damage": "DAMAGE+{SMO}[Normal]|",
             "end": false
           }]
         }, {
@@ -1298,10 +1304,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d4+{SMO}",
-      "5": "1d6+{SMO}",
-      "10": "1d8+{SMO}",
-      "17": "2d6+{SMO}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d8",
+      "17": "2d6"
     },
     "PP": 10
   },
@@ -1315,7 +1321,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dark]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Dark]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -1325,7 +1331,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You sink your teeth into an enemy Pokémon. Make a melee attack roll, doing 1d10 + MOVE dark damage on a successful hit. On natural attack rolls of 19 or 20, the target flinches."
+        "text": "You sink your teeth into a target creature. Make a melee attack roll, doing 1d10 + MOVE dark damage on a successful hit. On natural attack rolls of 19 or 20, the target flinches."
       }],
       "verb": null,
       "proper": false,
@@ -1333,10 +1339,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "5d4+{max(SMO,DMO)}",
-      "17": "4d8+{max(SMO,DMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 15
   },
@@ -1351,7 +1357,7 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]"
           }],
           "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
         }]
@@ -1367,17 +1373,17 @@
         }]
       }, {
         "type": "text",
-        "text": "Explosive projectiles rain down upon your opponents in a 10 foot radius. Any creature caught in the blast must succeed on a DEX save against your Move DC or take 3d8 + MOVE fire damage on a fail and half as much on a success. This move saps you of energy, and you may not make any attack until after the end of your next turn."
+        "text": "Explosive projectiles rain down upon any creatures in a 10 foot radius. Any creature caught in the blast must succeed on a DEX save against your Move DC or take 3d8 + MOVE fire damage on a fail and half as much on a success. This move saps you of energy, and you may not make any attack until after the end of your next turn."
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
     "damage": {
-      "1": "3d8+{max(SMO,DMO)}",
-      "5": "5d6+{max(SMO,DMO)}",
-      "10": "4d12+{max(SMO,DMO)}",
-      "17": "8d8+{max(SMO,DMO)}"
+      "1": "3d8",
+      "5": "5d6",
+      "10": "4d12",
+      "17": "8d8"
     },
     "PP": 3
   },
