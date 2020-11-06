@@ -1,126 +1,148 @@
-[
- {
-  "name":"Pokémon 5e Trainer Races (Jotho Region server)",
-  "featureResources":"",
-  "counters":[],
-  "cvars":{
-   "race":"",
-   "speed":"30 ft.",
-   "languages":"Common",
-   "size":"Medium",
-   "creatureType":"Human",
-   "resist":"",
-   "immune":"",
-   "cimmune":"",
-   "vuln":"",
-   "senses":""
-  }
- },
- {
-  "name":"kantonian",
-  "counters":[],
-  "cvars":{
-   "race":"Kantonian",
-   "resist":"",
-   "languages":"Common, Kantonese"
-  }
- },
- {
-  "name":"johto-jin",
-  "counters":[
-   {"name":"Ceremony of Health","reset":"long","level":1,"use":""}
-  ],
-  "cvars":{
-   "race":"Johto-Jin",
-   "resist":"",
-   "languages":"Common, Johtonese"
-  }
- },
- {
-  "name":"hoennian sea",
-  "counters":[],
-  "cvars":{
-   "race":"Hoennian Sea",
-   "speed":"30 ft., Swim 30 ft.",
-   "resist":"",
-   "languages":"Common, Hoennian"
-  }
- },
+[{
+    "name": "Pokémon 5e Trainer Races (Jotho Region server)",
+    "featureResources": "",
+    "counters": [],
+    "cvars": {
+      "race": "",
+      "speed": "30 ft.",
+      "languages": "Common",
+      "size": "Medium",
+      "creatureType": "Human",
+      "resist": "",
+      "immune": "",
+      "cimmune": "",
+      "vuln": "",
+      "senses": ""
+    }
+  },
   {
-  "name":"hoennian mountain",
-  "counters":[],
-  "cvars":{
-   "race":"Hoennian Mountain",
-   "speed":"30 ft., Climb 30 ft.",
-   "resist":"",
-   "languages":"Common, Hoennian"
-  }
- },
+    "name": "kantonian",
+    "counters": [],
+    "cvars": {
+      "race": "Kantonian",
+      "resist": "",
+      "languages": "Common, Kantonese"
+    }
+  },
   {
-  "name":"hoennian forest",
-  "counters":[],
-  "cvars":{
-   "race":"Hoennian Forest",
-   "speed":"35 ft.",
-   "resist":"",
-   "languages":"Common, Hoennian"
+    "name": "johto-jin",
+    "counters": [{
+      "name": "Ceremony of Health",
+      "reset": "long",
+      "level": 1,
+      "use": "ceremony"
+    }],
+    "cvars": {
+      "race": "Johto-Jin",
+      "resist": "",
+      "languages": "Common, Johtonese"
+    }
+  },
+  {
+    "name": "hoennian sea",
+    "counters": [],
+    "cvars": {
+      "race": "Hoennian Sea",
+      "speed": "30 ft., Swim 30 ft.",
+      "resist": "",
+      "languages": "Common, Hoennian"
+    }
+  },
+  {
+    "name": "hoennian mountain",
+    "counters": [],
+    "cvars": {
+      "race": "Hoennian Mountain",
+      "speed": "30 ft., Climb 30 ft.",
+      "resist": "",
+      "languages": "Common, Hoennian"
+    }
+  },
+  {
+    "name": "hoennian forest",
+    "counters": [],
+    "cvars": {
+      "race": "Hoennian Forest",
+      "speed": "35 ft.",
+      "resist": "",
+      "languages": "Common, Hoennian"
+    }
+  },
+  {
+    "name": "sinnoan",
+    "counters": [{
+      "name": "Tough Through",
+      "reset": "long",
+      "level": 1,
+      "use": "tough",
+      "value": 2
+    }],
+    "cvars": {
+      "race": "Sinnoan",
+      "languages": "Common, Sinnoan"
+    }
+  },
+  {
+    "name": "unovan",
+    "counters": [{
+        "name": "Quick Draw",
+        "reset": "short",
+        "level": 1,
+        "use": "quickdraw"
+      },
+      {
+        "name": "Not So Fast",
+        "reset": "long",
+        "level": 1,
+        "value": 2,
+        "use": "notsofast"
+      }
+    ],
+    "cvars": {
+      "race": "Unovan",
+      "speed": "40ft.",
+      "languages": "Common, Unovan"
+    }
+  },
+  {
+    "name": "kalosian",
+    "counters": [{
+      "name": "Winning Personality",
+      "reset": "long",
+      "level": 1,
+      "value": 1,
+      "use": "winningpersonality"
+    }],
+    "cvars": {
+      "race": "Kalosian",
+      "languages": "Common, Kalosian"
+    }
+  },
+  {
+    "name": "alolan",
+    "counters": [{
+      "name": "Pokémon Whisperer",
+      "reset": "long",
+      "level": 1,
+      "use": "whisperer"
+    }],
+    "cvars": {
+      "race": "Alolan",
+      "speed": "35 ft.",
+      "languages": "Common, Alolan"
+    }
+  },
+  {
+    "name": "galarian",
+    "counters": [{
+      "name": "That Didn't Even Hurt",
+      "reset": "long",
+      "level": 1,
+      "use": "didntevenhurt"
+    }],
+    "cvars": {
+      "race": "Galarian",
+      "languages": "Common, Galarian"
+    }
   }
- },
- {
-   "name":"sinnoan",
-   "counters":[
-     {"name":"Tough Through","reset":"long","level":1,"use":"","value":2}
-     ],
-     "cvar":{
-       "race":"Sinnoan",
-       "languages":"Common, Sinnoan"
-     }
- },
- {
-   "name":"unovan",
-   "counters":[
-     {"name":"Quick Draw","reset":"short","level":1,"use":""},
-     {"name":"Not So Fast","reset":"long","level":1,"value":2,"use":""}
-     ],
-     "cvars":{
-       "race":"Unovan",
-       "speed":"40ft.",
-       "languages":"Common, Unovan"
-     }
- },
- {
-   "name":"kalosian",
-   "counters":[
-     {"name":"Winning Personality","reset":"long","level":1,"value":1,"use":""}
-     ],
-     "cvars":{
-       "race":"Kalosian",
-       "languages":"Common, Kalosian"
-     }
- },
- {
-   "name":"alolan",
-   "counters":[
-     {
-       "name":"Pokémon Whisperer","reset":"long","level":1,"use":""
-     }
-     ],
-     "cvars":{
-       "race":"Alolan",
-       "speed":"35 ft.",
-       "languages":"Common, Alolan"
-     }
- },
- {
-   "name":"galarian",
-   "counters":[
-     {
-       "name":"That Didn't Even Hurt","reset":"long","level":1,"use":""
-     }
-     ],
-     "cvars":{
-       "race":"Galarian",
-       "languages":"Common, Galarian"
-     }
- }
 ]
