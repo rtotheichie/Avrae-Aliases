@@ -1148,7 +1148,7 @@
           "type": "roll",
           "meta": [],
           "dice": "1d20",
-          "name": "Detect"
+          "name": "Protect"
         }],
         "target": "self",
         "effects": []
