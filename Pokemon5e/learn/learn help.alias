@@ -18,5 +18,5 @@ embed
 `Swords Dance` cannot change the AC bonus on its own; you will need to use `manual` and change it on your own.
 If your move has both an attack roll and a saving throw, `-b` will add to both.  For the time being, the only way around this is to use `manual` and remove the bonus from the saving throw DC."
 -f "Find an issue?|Feel free to report it at [my Github](https://github.com/rtotheichie/Avrae-Aliases/issues)"
--f "Acknowledgements|Thank you to @JOEtheDM#9617 for making the system and compiling the automation for every move.  Thank you to @Hopop#6751 for helping fix/update/add a lot of the moves.  Thank you to @OniLink#0001 for inspiring this alias by creating the [Johto Region](http://discord.gg/johtoregion) server.  Finally, **thank you** to everybody that uses this alias and finds it helpful."
+-f "Acknowledgements|Thank you to **@JOEtheDM#9617** for making the system and compiling the automation for every move.  Thank you to **@Hopop#6751** for helping fix/update/add a lot of the moves.  Thank you to **@OniLink#0001** for inspiring this alias by creating the [Johto Region](http://discord.gg/johtoregion) server.  Finally, **thank you** to everybody that uses this alias and finds it helpful."
 -footer "!learn - Developed by @R to the Ichie#6193"
