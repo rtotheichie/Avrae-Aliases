@@ -1923,11 +1923,17 @@
       }, {
         "type": "text",
         "meta": [],
-        "text": "When you use this move, soak in solar energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a 80 foot line of solar energy, 5 feet wide. Any creature caught in the line must succeed on a DEX save or take 3d8 + MOVE grass damage on a fail and half as much on a save. If this move in used in harsh sunlight, the damage increases by 2d6."
+        "text": "When you use this move, soak in solar energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a 80 foot line of solar energy, 5 feet wide. Any creature caught in the line must succeed on a DEX save or take 3d8 + MOVE grass damage on a fail and half as much on a save. If this move in used in harsh sunlight, double your MOVE modifier for damage and it can be used on the turn it is activated, without concentration.."
       }],
       "verb": null,
       "proper": true,
       "_v": 2
+    },
+    "damage": {
+      "1": "3d8",
+      "5": "5d6",
+      "10": "4d12",
+      "17": "8d8"
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "PP": 5

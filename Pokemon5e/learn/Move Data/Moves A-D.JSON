@@ -38,6 +38,45 @@
     },
     "PP": 15
   },
+  "Accelerock": {
+    "code": {
+      "name": "Accelerock",
+      "automation": [{
+        "type": "target",
+        "meta": [],
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "meta": [],
+          "hit": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "DAMAGE[Rock]",
+            "overheal": false,
+            "higher": null,
+            "cantripScale": null
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "meta": [],
+        "text": "You smash into a target at high speed. As a bonus action, you can immediately move up to 10ft and make a melee attack against a creature in range without taking an attack of opportunity, doing 1d4 rock damage on a hit"
+      }],
+      "verb": null,
+      "proper": true,
+      "_v": 2
+    },
+    "attack": "proficiencyBonus+DMO",
+    "damage": {
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d10",
+      "17": "1d12"
+    },
+    "PP": 15
+  },
   "Acid": {
     "code": {
       "name": "Acid",
@@ -448,6 +487,57 @@
       "_v": 2
     },
     "PP": 10
+  },
+  "Anchor Shot": {
+    "code": {
+      "name": "Anchor Shot",
+      "automation": [{
+        "type": "text",
+        "meta": [],
+        "text": "You attempt to entangle a target with your anchor chain while attacking. Choose a target within range and make a ranged attack on that creature, dealing 2d6 + MOVE steel damage on a hit. On a hit, the target becomes restrained and cannot flee or be switched out.  The target may make a STR saving throw against your Move DC at the beginning of each of its turns to attempt to release themselves from the chain."
+      }, {
+        "type": "target",
+        "meta": [],
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "meta": [],
+          "hit": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "DAMAGE[Steel]",
+            "overheal": false
+          }, {
+            "type": "save",
+            "meta": [],
+            "stat": "str",
+            "fail": [{
+              "type": "ieffect",
+              "meta": [],
+              "name": "Restrained",
+              "duration": "-1",
+              "effects": "Restrained",
+              "end": false
+            }],
+            "success": [],
+            "dc": "{8+proficiencyBonus+max(DMO,SMO)}"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }],
+      "verb": null,
+      "proper": true,
+      "_v": 2
+    },
+    "attack": "proficiencyBonus+max(DMO,SMO)",
+    "damage": {
+      "1": "2d6+{max(DMO,SMO)}",
+      "5": "2d8+{max(DMO,SMO)}",
+      "10": "4d6+{max(DMO,SMO)}",
+      "17": "6d6+{max(DMO,SMO)}"
+    },
+    "PP": 15
   },
   "Ancient Power": {
     "code": {
@@ -971,6 +1061,30 @@
     },
     "PP": 3
   },
+  "Baneful Bunker": {
+    "code": {
+      "name": "Baneful Bunker",
+      "automation": [{
+        "type": "text",
+        "meta": [],
+        "text": "You sense incoming danger and are able to quickly create a barrier to avoid it.  When targeted by an attack, you may automatically avoid taking damage on the first instance of this reaction. If Baneful Bunker was successful in avoiding a melee attack, the attacker becomes poisoned.  On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful."
+      }, {
+        "type": "target",
+        "meta": [{
+          "type": "roll",
+          "meta": [],
+          "dice": "1d20",
+          "name": "Baneful Bunker"
+        }],
+        "target": "self",
+        "effects": []
+      }],
+      "_v": 2,
+      "proper": true,
+      "verb": "uses"
+    },
+    "PP": 3
+  },
   "Barrage": {
     "code": {
       "name": "Barrage",
@@ -1047,6 +1161,56 @@
       "verb": "uses"
     },
     "PP": 20
+  },
+  "Beak Blast": {
+    "code": {
+      "name": "Beak Blast",
+      "automation": [{
+        "type": "target",
+        "meta": [],
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "meta": [],
+          "hit": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "DAMAGE[Flying]"
+          }, {
+            "type": "save",
+            "meta": [],
+            "stat": "dex",
+            "fail": [{
+              "type": "ieffect",
+              "meta": [],
+              "name": "Burned",
+              "duration": "-1",
+              "effects": "",
+              "end": false
+            }],
+            "success": [],
+            "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "meta": [],
+        "text": "You heat up your beak and strike out at a target. When you activate this move, you spend your action to charge up your beak. On your next turn, spend an action to make a melee attack on a creature, dealing 3d8 + MOVE flying damage on a hit, and forcing the target to make a DEX save against your Move DC or become burned."
+      }],
+      "_v": 2,
+      "proper": true,
+      "verb": null
+    },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
+    "damage": {
+      "1": "1d10+{max(SMO,DMO)}",
+      "5": "2d8+{max(SMO,DMO)}",
+      "10": "5d4+{max(SMO,DMO)}",
+      "17": "4d8+{max(SMO,DMO)}"
+    },
+    "PP": 15
   },
   "Beat Up": {
     "code": {
