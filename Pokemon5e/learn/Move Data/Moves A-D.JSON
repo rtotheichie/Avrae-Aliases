@@ -1061,6 +1061,30 @@
     },
     "PP": 3
   },
+  "Baneful Bunker": {
+    "code": {
+      "name": "Baneful Bunker",
+      "automation": [{
+        "type": "text",
+        "meta": [],
+        "text": "You sense incoming danger and are able to quickly create a barrier to avoid it.  When targeted by an attack, you may automatically avoid taking damage on the first instance of this reaction. If Baneful Bunker was successful in avoiding a melee attack, the attacker becomes poisoned.  On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful."
+      }, {
+        "type": "target",
+        "meta": [{
+          "type": "roll",
+          "meta": [],
+          "dice": "1d20",
+          "name": "Baneful Bunker"
+        }],
+        "target": "self",
+        "effects": []
+      }],
+      "_v": 2,
+      "proper": true,
+      "verb": "uses"
+    },
+    "PP": 3
+  },
   "Barrage": {
     "code": {
       "name": "Barrage",
