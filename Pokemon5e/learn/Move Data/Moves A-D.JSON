@@ -38,6 +38,45 @@
     },
     "PP": 15
   },
+  "Accelerock": {
+    "code": {
+      "name": "Accelerock",
+      "automation": [{
+        "type": "target",
+        "meta": [],
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "meta": [],
+          "hit": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "DAMAGE[Rock]",
+            "overheal": false,
+            "higher": null,
+            "cantripScale": null
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "meta": [],
+        "text": "You smash into a target at high speed. As a bonus action, you can immediately move up to 10ft and make a melee attack against a creature in range without taking an attack of opportunity, doing 1d4 rock damage on a hit"
+      }],
+      "verb": null,
+      "proper": true,
+      "_v": 2
+    },
+    "attack": "proficiencyBonus+DMO",
+    "damage": {
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d10",
+      "17": "1d12"
+    },
+    "PP": 15
+  },
   "Acid": {
     "code": {
       "name": "Acid",
