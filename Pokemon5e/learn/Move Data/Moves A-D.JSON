@@ -1397,25 +1397,27 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "Flames burst from your feet as you deliver a powerful kick. Make a melee attack on an opponent, doing 2d6 + MOVE fire damage on a hit. On a natural attack roll of 18 or more, the target is burned. This move scores a critical hit on 19s and 20s"
+        "text": "Flames burst from your feet as you deliver a powerful kick. Make a melee attack on a creature, doing 2d6 + MOVE fire damage on a hit. On a natural attack roll of 18 or more, the target is burned. This move scores a critical hit on 19s and 20s"
       }],
       "_v": 2,
       "proper": true,
-      "verb": null
+      "verb": null,
+      "criton": "CRIT"
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
+    "crit": "19"
     "damage": {
-      "1": "2d6+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "4d6+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -1464,7 +1466,7 @@
       "name": "Block",
       "automation": [{
         "type": "text",
-        "text": "If an opponent within range attempts to flee or switch out, you may use your reaction to stop it dead in its tracks, keeping this from happening."
+        "text": "If a creature within range attempts to flee or switch out, you may use your reaction to stop it dead in its tracks, keeping this from happening."
       }],
       "verb": null,
       "proper": false,
@@ -1477,13 +1479,22 @@
       "name": "Blue Flare",
       "automation": [{
         "type": "target",
+        "meta": [{
+          "type": "roll",
+          "dice": "DAMAGE",
+          "name": "damage"
+        }],
         "target": "all",
         "effects": [{
           "type": "save",
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "{damage}+{max(SMO,DMO)}[Fire]"
+          }],
+          "success": [{
+            "type": "damage",
+            "damage": "({damage}+{max(SMO,DMO)})/2[Fire]"
           }],
           "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
         }]
@@ -1496,10 +1507,10 @@
       "verb": null
     },
     "damage": {
-      "1": "5d4+{max(SMO,DMO)}",
-      "5": "3d10+{max(SMO,DMO)}",
-      "10": "5d8+{max(SMO,DMO)}",
-      "17": "8d8+{max(SMO,DMO)}"
+      "1": "5d4",
+      "5": "3d10",
+      "10": "5d8",
+      "17": "8d8"
     },
     "PP": 3
   },
@@ -1508,18 +1519,12 @@
       "name": "Body slam",
       "automation": [{
         "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "DAMAGE",
-          "name": "prone",
-          "hidden": false
-        }],
         "target": "each",
         "effects": [{
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{SMO}[Normal]",
             "overheal": false
           }, {
             "type": "save",
@@ -1527,7 +1532,7 @@
             "fail": [{
               "type": "ieffect",
               "name": "Proned",
-              "duration": "{prone}",
+              "duration": "3",
               "effects": "",
               "end": true,
               "conc": false
@@ -1540,7 +1545,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You thrust yourself towards an opponent in an attempt to crush them with your physical size. Make a melee attack on a target. On a hit, the target takes 2d6 + MOVE normal damage, and must succeed on a STR saving throw against your Move DC or be knocked prone."
+        "text": "You thrust yourself towards a creature in an attempt to crush them with your physical size. Make a melee attack on a target. On a hit, the target takes 2d6 + MOVE normal damage, and must succeed on a STR saving throw against your Move DC or be knocked prone."
       }],
       "verb": null,
       "proper": true,
@@ -1548,10 +1553,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d6+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "4d6+{SMO}",
-      "17": "6d6+{SMO}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -1560,29 +1565,38 @@
       "name": "Bolt Strike",
       "automation": [{
         "type": "target",
+        "meta": [{
+          "type": "roll",
+          "dice": "DAMAGE",
+          "name": "damage"
+        }],
         "target": "all",
         "effects": [{
           "type": "save",
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Electric]"
+            "damage": "{damage}+{max(SMO,DMO)}[Electric]"
+          }],
+          "success": [{
+            "type": "damage",
+            "damage": "({damage}+{max(SMO,DMO)})/2[Electric]"
           }],
           "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
         }]
       }, {
         "type": "text",
-        "text": "You send down a powerful strike of lightning from the heavens, surrounding an area of the battlefield with surging electricity. Any opponent caught in a 20 foot radius, centered on a point within range, must make a DEX save against your Move DC, taking 5d4 + MOVE electric damage on a failure, or half as much on a success. If a creature fails the save by more than 5, it becomes paralyzed."
+        "text": "You send down a powerful strike of lightning from the heavens, surrounding an area of the battlefield with surging electricity. Any creature caught in a 20 foot radius, centered on a point within range, must make a DEX save against your Move DC, taking 5d4 + MOVE electric damage on a failure, or half as much on a success. If a creature fails the save by more than 5, it becomes paralyzed."
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
     "damage": {
-      "1": "5d4+{max(SMO,DMO)}",
-      "5": "3d10+{max(SMO,DMO)}",
-      "10": "5d8+{max(SMO,DMO)}",
-      "17": "8d8+{max(SMO,DMO)}"
+      "1": "5d4",
+      "5": "3d10",
+      "10": "5d8",
+      "17": "8d8"
     },
     "PP": 3
   },
@@ -1596,7 +1610,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ground]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Ground]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -1606,7 +1620,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You attack by beating your target with a large bone containing a spirit. Make a melee attack roll, dealing 2d6 + MOVE ghost damage on a hit. On a natural attack roll of 18 or higher, the target's AC is reduced by 1 while they remain in combat. Higher Levels: The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+        "text": "You strike a creature with a club of bone, doing 1d10 + MOVE ground damage on a successful hit. If the natural attack roll is 18 or more, the target flinches."
       }],
       "verb": null,
       "proper": true,
@@ -1614,10 +1628,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "5d4+{max(SMO,DMO)}",
-      "17": "4d8+{max(SMO,DMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 10
   },
@@ -1631,12 +1645,12 @@
           "type": "attack",
           "meta": [{
             "type": "roll",
-            "dice": "DAMAGE",
+            "dice": "4d4",
             "name": "Extra Attacks"
           }],
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ground]"
+            "damage": "DAMAGE+{SMO}[Ground]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -1668,10 +1682,18 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ground]"
+            "damage": "DAMAGE+{DMO}[Ground]"
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+DMO"
+          "attackBonus": "ATTACK"
+        }, {
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE+{DMO}[Ground]"
+          }],
+          "miss": [],
+          "attackBonus": "Attack"
         }]
       }, {
         "type": "text",
@@ -1683,10 +1705,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d4+{DMO}",
-      "5": "1d6+{DMO}",
-      "10": "2d4+{DMO}",
-      "17": "3d4+{DMO}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "2d4",
+      "17": "3d4"
     },
     "PP": 5
   },
@@ -1741,14 +1763,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE+{DMO}[Flying]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "When you activate this move, you bounce high into the air, disappearing into the Ethereal plane. You may not be targeted by attacks in the Ethereal plane. On your next turn, as an action, you reappear and attempt to slam down on top of an opponent. Make a melee attack roll on an opponent in range, with advantage, doing 2d6 + MOVE flying damage on a hit. On a natural attack roll of 15 or more, the target is paralyzed.\n"
+        "text": "When you activate this move, you bounce high into the air, disappearing into the Ethereal plane. You may not be targeted by attacks in the Ethereal plane. On your next turn, as an action, you reappear and attempt to slam down on top of a creature. Make a melee attack roll on an opponent in range, with advantage, doing 2d6 + MOVE flying damage on a hit. On a natural attack roll of 15 or more, the target is paralyzed.\n"
       }],
       "_v": 2,
       "proper": false,
@@ -1756,10 +1778,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "2d6+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "4d6+{DMO}",
-      "17": "6d6+{DMO}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 3
   },
@@ -1773,14 +1795,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Flying]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You tuck in your wings and dive at an opponent. Make a melee attack, dealing 2d10 + MOVE flying damage on a hit. On a hit, you also take a quarter of the total (rounded down) in typeless recoil damage."
+        "text": "You tuck in your wings and dive at a a creature. Make a melee attack, dealing 2d10 + MOVE flying damage on a hit. On a hit, you also take a quarter of the total (rounded down) in typeless recoil damage."
       }],
       "_v": 2,
       "proper": true,
@@ -1788,10 +1810,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d10+{max(SMO,DMO)}",
-      "5": "3d8+{max(SMO,DMO)}",
-      "10": "4d10+{max(SMO,DMO)}",
-      "17": "7d8+{max(SMO,DMO)}"
+      "1": "2d10",
+      "5": "3d8",
+      "10": "4d10",
+      "17": "7d8"
     },
     "PP": 10
   },
@@ -1805,7 +1827,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]",
+            "damage": "DAMAGE+{SMO}[Fighting]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -1815,7 +1837,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You strike out with a powerful and focused punch. Make a melee attack roll on an opponent, doing 1d12 + MOVE fighting damage on a hit. On a hit, this move automatically ends an opponent’s Light Screen, and bypasses Reflect with no effect."
+        "text": "You strike out with a powerful and focused punch. Make a melee attack roll on a creature, doing 1d12 + MOVE fighting damage on a hit. This move ignores the effects of moves that would reduce its damage (Harden, Reflect, etc.)"
       }],
       "verb": null,
       "proper": true,
@@ -1823,10 +1845,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d12+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "2d12+{SMO}",
-      "17": "6d6+{SMO}"
+      "1": "1d12",
+      "5": "2d8+",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 10
   },
