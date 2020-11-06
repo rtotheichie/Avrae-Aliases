@@ -804,12 +804,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(SMO,SMO)",
+    "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d6+{max(SMO,SMO)}",
-      "5": "1d10+{max(SMO,SMO)}",
-      "10": "2d8+{max(SMO,SMO)}",
-      "17": "5d4+{max(SMO,SMO)}"
+      "1": "1d6+{SMO}",
+      "5": "1d10+{SMO}",
+      "10": "2d8+{SMO)}",
+      "17": "5d4+{SMO}"
     },
     "PP": 10
   },
