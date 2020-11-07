@@ -9,7 +9,10 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Bug]"
+            "damage": "DAMAGE+{DMO}[Bug]"
+            "overheal": false,
+            "higher": null,
+            "cantripScale": null
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -22,12 +25,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(DMO,DMO)",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d12+{max(DMO,DMO)}",
-      "5": "2d8+{max(DMO,DMO)}",
-      "10": "2d12+{max(DMO,DMO)}",
-      "17": "6d6+{max(DMO,DMO)}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 3
   },
@@ -38,40 +41,46 @@
         "type": "target",
         "target": "self",
         "effects": [{
+           "type": "target",
+           "meta": [{
+          "type": "roll",
+          "dice": "DAMAGE",
+          "name": "damage"
+        }],
+           "target": "all",
+           "effects": [{
+           "type": "save",
+           "stat": "con",
+           "fail": [{
+            "type": "damage",
+            "damage":"{damage}+{max(SMO,DMO)}[Normal]",
+            "overheal": false
+         }],
+         "success": [],
+          "dc": "{8+ATTACK}"
+        }]
           "type": "ieffect",
           "name": "Extra rounds Uproar",
           "duration": "3",
           "effects": "",
-          "end": false,
-          "conc": false
+          "end": true,
+          "conc": true
         }]
       }, {
         "type": "text",
-        "text": "You cause an uproar on the battlefield in a 30 foot circle, centered on you, for three rounds of combat. During the uproar, you cannot use any other Move, and any creature in range is prevented from falling asleep. (This include creatures that would purposefully fall asleep using moves like Rest) In addition, opponents must make a CON save against your Move DC at the start of each turn. On a fail, the opponent takes 2d8 + MOVE normal damage.\n\nUse the following command for next two rounds:\n!use -save con -dc 13 -d \"2d10+2 [Normal]\" -title \"Uproar attack\" -t <target>\n\nWhen taking dmg roll a concentration check to see if this attack stays active. **!conc**"
-      }, {
-        "type": "target",
-        "target": "all",
-        "effects": [{
-          "type": "save",
-          "stat": "con",
-          "fail": [{
-            "type": "damage",
-            "damage": "DAMAGE[Normal]",
-            "overheal": false
-          }],
-          "success": [],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
-        }]
+        "text": "You cause an uproar on the battlefield in a 30 foot circle, centered on you, for three rounds of combat. During the uproar, you cannot use any other Move, and any creature in range wakes and is prevented from falling asleep. (This include creatures that would purposefully fall asleep using moves like Rest) In addition, creatures must make a CON save against your Move DC at the start of each turn. On a fail, the opponent takes 2d8 + MOVE normal damage.\n\nUse the following command for next two rounds:\n!use -save con -dc 13 -d \"2d10+2 [Normal]\" -title \"Uproar attack\" -t <target>\n\nWhen taking dmg roll a concentration check to see if this attack stays active. **!conc**"
+      }, 
       }],
       "verb": null,
       "proper": true,
       "_v": 2
     },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d8+{max(SMO,DMO)}",
-      "5": "2d10+{max(SMO,DMO)}",
-      "10": "3d10+{max(SMO,DMO)}",
-      "17": "4d12+{max(SMO,DMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 5
   },
