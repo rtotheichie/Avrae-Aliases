@@ -91,16 +91,17 @@
             "type": "damage",
             "damage": "({damage}+{DMO})/2 [Poison]"
           }],
-          "dc": "{8+proficiencyBonus+DMO}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "text": "You create a stream of hot acid in a 30 foot cone, centered on you. Creatures caught in the cone must succeed on a DEX save, taking 1d6 + MOVE poison damage on a fail, and half as much on a success."
+        "text": "You create a stream of hot acid in a 30 foot cone, centered on you. Creatures caught in the cone must make a DEX save against your Move DC, taking 1d6 + MOVE poison damage on a fail, and half as much on a success."
       }],
       "_v": 2,
       "proper": false,
       "verb": null
     },
+    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d6",
       "5": "1d12",
@@ -158,7 +159,7 @@
               "end": true
             }],
             "success": [],
-            "dc": "{8+proficiencyBonus+max(CoMO,DMO)}"
+            "dc": "{8+ATTACK}"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -293,7 +294,7 @@
             "damage": "{(damage}+{max(SMO,DMO)O})/2 [Flying]",
             "overheal": false
           }],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -303,6 +304,7 @@
       "proper": true,
       "_v": 2
     },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "3d10",
       "5": "6d6",
@@ -476,7 +478,7 @@
               "end": false
             }],
             "success": [],
-            "dc": "{8+proficiencyBonus+max(DMO,SMO)}"
+            "dc": "{8+ATTACK}"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -832,7 +834,7 @@
             "text": "Reroll damage and use lower amount"
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+ChMO}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -842,6 +844,7 @@
       "proper": true,
       "verb": "uses"
     },
+    "attack" : "proficiencyBonus+ChMO",
     "PP": 5
   },
   "Aura Sphere": {
@@ -1114,7 +1117,7 @@
               "end": false
             }],
             "success": [],
-            "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+            "dc": "{8+ATTACK}"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -1185,7 +1188,7 @@
             "type": "damage",
             "damage": "(DAMAGE+{max(SMO,CoMO)})/2 [Poison]"
           }],
-          "dc": "{8+proficiencyBonus+max(SMO,CoMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -1195,6 +1198,7 @@
       "proper": true,
       "verb": null
     },
+    "attack": "proficiencyBonus+max(SMO,CoMO)",
     "damage": {
       "1": "2d10",
       "5": "3d8",
@@ -1290,10 +1294,24 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE+{SMO}[Normal]|",
-            "end": false
-          }]
-        }, {
+            "damage": "DAMAGE+{SMO}[Normal]",
+            "overheal": false
+          }, {
+            "type": "save",
+            "stat": "str",
+            "fail": [{
+              "type": "ieffect",
+              "name": "Grappled",
+              "duration": "-1",
+              "effects": "Grappled",
+              "end": false
+            }],
+            "success": [],
+            "dc": "{8+ATTACK}"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }], {
           "type": "text",
           "text": "You attempt to grapple a target into submission. Make a melee attack roll. On a hit, the target takes 1d4 + MOVE normal damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. While a creature is grappled, you may continue this move, as a bonus action, to do an automatic 1d4 normal damage without having to make an attack roll."
         }]
@@ -1359,7 +1377,7 @@
             "type": "damage",
             "damage": "DAMAGE+{max(SMO,DMO)}[Fire]"
           }],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "target",
@@ -1373,12 +1391,13 @@
         }]
       }, {
         "type": "text",
-        "text": "Explosive projectiles rain down upon any creatures in a 10 foot radius. Any creature caught in the blast must succeed on a DEX save against your Move DC or take 3d8 + MOVE fire damage on a fail and half as much on a success. This move saps you of energy, and you may not make any attack until after the end of your next turn."
+        "text": "Explosive projectiles rain down upon any creatures in a 10 foot radius. Any creature caught in the blast must make a DEX save against your Move DC, taking 3d8 + MOVE fire damage on a fail or half as much on a success. This move saps you of energy, and you may not make any attack until after the end of your next turn."
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "3d8",
       "5": "5d6",
@@ -1443,7 +1462,7 @@
             "type": "damage",
             "damage": "({damage}+{max(SMO,DMO)})/2 [Ice]"
           }],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -1453,6 +1472,7 @@
       "proper": true,
       "verb": null
     },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "3d6",
       "5": "3d8",
@@ -1496,7 +1516,7 @@
             "type": "damage",
             "damage": "({damage}+{max(SMO,DMO)})/2[Fire]"
           }],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -1506,6 +1526,7 @@
       "proper": true,
       "verb": null
     },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "5d4",
       "5": "3d10",
@@ -1582,7 +1603,7 @@
             "type": "damage",
             "damage": "({damage}+{max(SMO,DMO)})/2[Electric]"
           }],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -1592,6 +1613,7 @@
       "proper": true,
       "verb": null
     },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "5d4",
       "5": "3d10",
@@ -1862,14 +1884,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Water]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Water]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You send a harsh blast of salt water at an opponent. Make a ranged attack against an opponent, dealing 1d10 + MOVE water damage on a hit. If the opponent has less that 50% of its max HP, double the damage dealt."
+        "text": "You send a harsh blast of salt water at a creature. Make a ranged attack against a creature, dealing 1d10 + MOVE water damage on a hit. If the target has less that 50% of its max HP, double the damage dealt."
       }],
       "_v": 2,
       "proper": false,
@@ -1877,10 +1899,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "5d4+{max(SMO,DMO)}",
-      "17": "4d8+{max(SMO,DMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 5
   },
@@ -1906,7 +1928,7 @@
             "type": "damage",
             "damage": "({damage}+{SMO})/2 [Dark]"
           }],
-          "dc": "{8+proficiencyBonus+SMO}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -1916,6 +1938,7 @@
       "proper": false,
       "verb": null
     },
+    "attack": "proficiencyBonus+SMO"
     "damage": {
       "1": "1d10",
       "5": "2d8",
@@ -1991,7 +2014,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Water]",
+            "damage": "DAMAGE+{max(DMO,SMO)}[Water]",
             "overheal": false
           }],
           "miss": [],
@@ -2007,10 +2030,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,SMO)",
     "damage": {
-      "1": "1d10+{max(DMO,SMO)}",
-      "5": "2d8+{max(DMO,SMO)}",
-      "10": "5d4+{max(DMO,SMO)}",
-      "17": "4d8+{max(DMO,SMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 10
   },
@@ -2024,14 +2047,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Bug]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Bug]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You lash out and bite a foe. Make a melee attack against an opponent, dealing 1d10 + MOVE bug damage on a hit. If the target is holding a berry when you hit, you immediately eat it and gain its effect."
+        "text": "You lash out and bite a foe. Make a melee attack against a creature, dealing 1d10 + MOVE bug damage on a hit. If the target is holding a berry when you hit, you immediately eat it and gain its effect."
       }],
       "_v": 2,
       "proper": false,
@@ -2039,10 +2062,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "5d4+{max(SMO,DMO)}",
-      "17": "4d8+{max(SMO,DMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 10
   },
@@ -2057,14 +2080,14 @@
           "stat": "con",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE [Bug]"
+            "damage": "DAMAGE+{max(DMO,ChMO)}[Bug]"
           }],
           "success": [],
           "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "text": "You vibrate your wings, creating a harsh sound that damages any creature in range. All creatures within 20 feet of you must make a CON save against your Move DC, taking 2d8 + MOVE bug damage on a fail. If an opponent fails the save by more than 5, they have disadvantage on their next attack."
+        "text": "You vibrate your wings, creating a harsh sound that damages any creature in range. All creatures within 20 feet of you must make a CON save against your Move DC, taking 2d8 + MOVE bug damage on a fail. If a creature fails the save by more than 5, they have disadvantage on their next attack."
       }],
       "_v": 2,
       "proper": false,
@@ -2072,10 +2095,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,ChMO)",
     "damage": {
-      "1": "2d8+{max(DMO,ChMO)}",
-      "5": "2d10+{max(DMO,ChMO)}",
-      "10": "3d10+{max(DMO,ChMO)}",
-      "17": "4d12+{max(DMO,ChMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 3
   },
@@ -2119,10 +2142,10 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Ground]"
+            "damage": "DAMAGE+{SMO}[Ground]"
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+SMO}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -2132,11 +2155,12 @@
       "proper": false,
       "verb": null
     },
+    "attack": "proficiencyBonus+SMO"
     "damage": {
-      "1": "1d10+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "5d4+{SMO}",
-      "17": "4d8+{SMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 10
   },
@@ -2185,7 +2209,7 @@
           "type": "attack",
           "meta": [{
             "type": "roll",
-            "dice": "1d4",
+            "dice": "4d4",
             "name": "Extra Attacks",
             "higher": null,
             "cantripScale": null,
@@ -2193,7 +2217,7 @@
           }],
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Grass]",
+            "damage": "DAMAGE+{DMO}[Grass]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -2211,10 +2235,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d4+{DMO}",
-      "5": "2d4+{DMO}",
-      "10": "1d12+{DMO}",
-      "17": "4d4+{DMO}"
+      "1": "1d4",
+      "5": "2d4",
+      "10": "1d12",
+      "17": "4d4"
     },
     "PP": 15
   },
