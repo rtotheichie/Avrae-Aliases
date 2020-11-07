@@ -2356,16 +2356,17 @@
             "text": "Attack Misses"
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(WMO,ChMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "text": "You attempt to charm an opponent into pulling its punches. When hit by an attack from an opponent of the opposite gender, you may use a reaction to force it to make a CHA save against your Move DC. On a failure, the attack does not hit."
+        "text": "You attempt to charm a creature into pulling its punches. When hit by an attack from a creature of the opposite gender, you may use a reaction to force it to make a CHA save against your Move DC. On a failure, the attack does not hit."
       }],
       "_v": 2,
       "proper": true,
       "verb": "uses"
     },
+    "attack":"proficiencyBonus+max(WMO,ChMO)"
     "PP": 3
   },
   "Charge": {
@@ -2401,7 +2402,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Electric]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Electric]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -2416,10 +2417,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d8+{max(SMO,DMO)}",
-      "5": "2d6+{max(SMO,DMO)}",
-      "10": "4d4+{max(SMO,DMO)}",
-      "17": "3d10+{max(SMO,DMO)}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 5
   },
