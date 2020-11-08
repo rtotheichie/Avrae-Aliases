@@ -1,0 +1,29 @@
+attack {{atk,gr,gv,i="&1&",get_raw(),load_json(get_gvar("5eed7634-7526-4b25-86f2-38677ecc27b5")),"-i" in &ARGS&}}"{{atk}}" &*&
+{{atks=[i for i in gr.consumables.custom if atk.lower() in i.lower() and [x for x in (combat().me.attacks if combat() and combat().me else gr.attacks) if atk.lower() in x.name.lower()]]}}
+{{cc=atks[0] if atks else err("You do not have a PP counter set up for that!")}}{{v=get_cc(cc)}}
+{{'miss' if not v else mod_cc(cc, -1)}}
+{{err("You are out of PP!") if not v else ""}}
+{{mod_cc(cc, -1) if "pressure" in &ARGS& else ""}}
+{{c,cr,pr=combat(),vroll("1d20"),vroll("1d4")}}
+{{ce=c.me.get_effect('Confused') if c and c.me and not i else ''}}
+{{pe=c.me.get_effect('Paralyzed') if c and c.me and not i else ''}}
+{{be=c.me.get_effect('Burned') if c and c.me and not i else ''}}
+{{poe=c.me.get_effect('Poisoned') if c and c.me and not i else ''}}
+{{pm = get('miss', 0) + (pr.total==1) if pe else ''}}
+{{cm = get('miss', 0) + (cr.total<=9) if ce and not pm else ''}}
+{{f'-phrase "It hurt itself in its confusion!"' if cm else ''}}
+{{f'-phrase "It is paralyzed! It cannot move!"' if pm else ''}}
+{{f'-f "**{name} snapped out of Confusion!**"' if ce and cr.total==20 else ''}}
+{{f'-f "Paralyzed Roll|{pr}"' if pe else ''}}
+{{f'-f "Paralyzed|{gv.Pa}"' if pe else ''}}
+{{f'-f "Confused Roll|{cr}"' if ce and not pm else ''}}
+{{f'-f "Confused|{gv.C}"' if ce else ''}}
+{{f'miss{cm}' if cr.total<=9 and ce else ''}}
+{{c.me.mod_hp(-proficiencyBonus) if cr.total<=9 and ce else ''}}
+{{c.me.remove_effect(ce.name) if cr.total==20 and ce else ''}}
+{{f'miss{pm}' if pr.total==1 and pe else ''}}
+{{f'-f "Burned|{gv.B}"' if be else ''}}
+{{f'-f "Poisoned|{gv.Po}"' if poe else ''}}
+-f 'PP Remaining|{{cc_str(cc)}}'
+{{f'-f "Pressure|Any move targeting this Pokémon directly costs an additional 1 PP."' if "pressure" in &ARGS& else ''}}
+{{f'-f "{name}: <{hp_str()} HP> (-{proficiencyBonus})"' if ce and cr.total<=9 else ''}}
