@@ -1,0 +1,10 @@
+embed {{c,D=combat(), int('&1&') if '&1&' != '&'+'1&' else ''}}
+{{chek=vroll('1d4')}}
+{{suc=chek.total>=3}}
+-title "{{name}} uses Sturdy!"
+-desc "When taking damage equal to half or more of your current HP, roll a d4. On a result of 3 of 4, halve the damage dealt."
+-f "Roll|{{chek}}"
+{{mod_hp(D//2,0) if D and suc else ''}}
+{{f'-f "The damage was halved!"' if suc else '-f "The attack does full damage!"'}}
+-footer "{{name}}: {{hp_str()}}"
+-thumb <image> -color <color>
