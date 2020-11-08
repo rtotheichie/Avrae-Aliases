@@ -13,6 +13,11 @@ if args.get('normalize'):
         if dmg_type in Import_Code:
             Import_Code = Import_Code.replace(dmg_type,"[Normal]")
             break
+if args.get('liquid'):
+    for dmg_type in ["[Normal]","[Bug]","[Fire]","[Electric]","[Grass]","[Water]","[Ice]","[Dark]","[Fighting]","[Psychic]","[Ghost]","[Rock]","[Ground]","[Flying]","[Steel]","[Fairy]","[Dragon]","[Poison]"]:
+        if dmg_type in Import_Code:
+            Import_Code = Import_Code.replace(dmg_type,"[Water]")
+            break
 if args.get('stab') or args.get('STAB'):
     STAB = 0 if level<3 else 1 if level<7 else 2 if level<11 else 3 if level<15 else 4 if level<19 else 5
 else:
