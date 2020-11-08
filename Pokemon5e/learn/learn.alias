@@ -13,12 +13,6 @@ if args.get('normalize'):
         if dmg_type in Import_Code:
             Import_Code = Import_Code.replace(dmg_type,"[Normal]")
             break
-if args.get('ea') or args.get('adept'):
-    if '+' in dmg_String:
-        dmg_String = dmg_String[:dmg_String.index("+")]+"mi2"+dmg_String[dmg_String.index("+"):]
-    else:
-        dmg_String = dmg_String + "mi2"
-    Import_Code = Import_Code.replace(']"','^]"')
 if args.get('savage') or (args.get('technician') and G[MN]["PP"]>=15):
     if "+" in dmg_String:
         dmg_String_x, dmg_String_y = dmg_String[:dmg_String.index("+")], dmg_String[dmg_String.index("+"):]
@@ -39,6 +33,12 @@ if args.get('galvanize'):
     Import_Code = Import_Code.replace('[Normal]','[Electric]')
 if args.get('aerilate'):
     Import_Code = Import_Code.replace('[Normal]','[Flying]')
+if args.get('ea') or args.get('adept'):
+    if '+' in dmg_String:
+        dmg_String = dmg_String[:dmg_String.index("+")]+"mi2"+dmg_String[dmg_String.index("+"):]
+    else:
+        dmg_String = dmg_String + "mi2"
+    Import_Code = Import_Code.replace(']"','^]"')
 if STAB:
     dmg_Bonus = STAB + args.last('d',0,int)
 else:
