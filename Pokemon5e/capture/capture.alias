@@ -1,0 +1,57 @@
+embed <drac2> #Code for the !capture alias
+args,gv,gr,c=&ARGS&,load_json(get_gvar("e0fd9c74-fc1e-4f17-886d-e0f8d1d23b8e")),get_raw(),combat() #This sets a variable for the arguments we bring over from the base alias, loads the gvar that explains what the Pokeballs do, sets a shortcut for get_raw(), and then checks to see if the channel is in combat
+a=argparse(args) #This parses the arguments we stored in the args variable.  This allows us to easily check for advantage when we make our roll later
+bag=load_json(bags) if bags else err("You didn't bring your bag with you!") #This calls the user's bags cvar and errors if they don't have one
+balltype,roundnum='Pokeball','' #This makes the default ball we're using your basic Pokeball.  It also creates a variable we'll need later for certain types of balls
+out,mod,qty=[],0,0 #This sets more variables we'll need later.  Of note, out is now an empty list
+collector="Collector" in get('subclass',"None") #This checks to see if the Trainer has taken the Collector Path
+if len(args)>0 and args[0]!="adv": #This checks to see if we have any arguments and makes sure adv isn't the first argument
+    balltype=args[0] #This sets our ball type to the first argument
+for b in gv: #This line starts processing our gvar we called earlier, going through every entry in it
+    if balltype.lower() in b.lower(): #This line looks for a match in the gvar for our specified type of ball
+        break #This stops searching the list once we find a match
+if b: #So once we know what type of ball we're using...
+    mod=gv[b][0] #We call the modifier from the gvar...
+    balldesc=gv[b][1] #And the description from the gvar...
+    ballimage=gv[b][2] #And the image link for the ball
+else: #If we couldn't find a match earlier...
+    return err("That isn't a valid type of Pokeball!") #We show the user an error message
+for bt in ["Timer Ball","Quick Ball"]: #We then create this list for two special types of Pokeballs
+    if b=="Timer Ball": #If the ball we selected is a Timer Ball...
+        roundnum=c.round_num if c else 0 #We check to see the round number of combat...
+        mod=min(roundnum,10) #And set the modifier to the round number or 10, whichever is lesser
+    if b=="Quick Ball": #If the ball we selected is a Quick Ball...
+        roundnum=c.round_num if c else 0 #We check to see the round number of combat...
+        mod=15 if roundnum==1 else 0 #And set the mod to 15 if we're in the first round, otherwise set the mod to 0
+for balls in bag: #Now we start processing our bag cvar
+    if balls[0] == "Pokeballs": #We check for a bag named Pokeballs
+        for bType in balls[1]: #We then start processing what is in the Pokeballs bag
+            if b.lower() in bType.lower(): #We look for a match in their bag for the ball we selected earlier
+                break #And stop searching once we find a match
+        qty = balls[1].get(bType,0) #This gets the quantity of our item from the bag
+        if b.lower() in bType.lower(): #So if we did find a match...
+            if qty == 0: #Was it empty?
+                _ = balls[1].pop(bType) #If so, remove it from the list...
+                set_cvar("bags", dump_json(bags)) #Then update the bags cvar...
+                err("You're out of that kind of Pokeball!") # And tell the user they're out of that Pokeball
+            else: #If the quatity isn't zero
+                balls[1][bType] -= 1 #Subtract one from the quatity
+                if qty == 1: #If there was only one to begin with
+                    _ = balls[1].pop(bType) #Remove it from the list since it's now gone
+        else: #If the type of Pokeball isn't in the bag
+            err("You're out of that kind of Pokeball!") #Return an error to the user
+        break #Once you go through all of that once, don't do it again
+if collector and level>=9:
+    mod=int(mod)+charismaMod
+catch=vroll(f"{['1d20','2d20kh1'][a.adv()>0]}+{gr.skills.animalHandling}+{mod}") #(Finally) make the roll, giving advantage if they told it to, adding the modifier for their Animal Handling skill and the modifier for the selected Pokeball
+out.append(f'-title "{name} throws a {b}!"') #Just some embed stuff for the next few lines
+out.append('-desc "You hurl a Pokéball at a wild Pokémon in attempt to capture it. Make an Animal Handling skill check. You have advantage on the throw if the Pokémon is poisoned, restrained, asleep, burning, confused, paralyzed, or frozen."')
+out.append(f'-f "{b}: {balldesc}|{catch}"')
+if qty>1: #So if we have more balls left...
+    out.append(f'-f "{name}\'s Pokeballs|{balls[1][b]}x {b} (-1)"') #Show us how many
+else: #Otherwise...
+    out.append(f'-f "{name}\'s Pokeballs|0x {b} (-1)"') #Tell us we're out
+out.append(f"-thumb {ballimage} -color {color}")
+set_cvar("bags",dump_json(bag)) #Set the bags cvar again with the updated amounts
+return " ".join(out) #Take the list of out[] stuff we added above and display it
+</drac2>
