@@ -14,9 +14,9 @@
   "Pokemon5e/!pokedex/pokedex seen abc.alias":"5f83ce4bf2d59b2718721500",
   "Pokemon5e/!pokedex/pokedex seen sr.alias":"5f83ce9cf2d59b2718721501",
   "Pokemon5e/!pokedex/pokedex seen type.alias":"5f83ceedbbee1bca82ad3121",
-  "Pokemon5e/dt.alias":"5f77ea9690e415e96a23c811",
-  "Pokemon5e/capture.alias":"5f783ce790e415e96a23c8aa",
-  "Pokemon5e/sturdy.alias":"5f78cd8a90e415e96a23c9df",
-  "Pokemon5e/atk.alias":"5f84f2c5f2d59b27187216b5",
-  "Pokemon5e/pokegen.alias":"5f8bbc4df2d59b2718721df3"
+  "Pokemon5e/dt/dt.alias":"5f77ea9690e415e96a23c811",
+  "Pokemon5e/capture/capture.alias":"5f783ce790e415e96a23c8aa",
+  "Pokemon5e/sturdy/sturdy.alias":"5f78cd8a90e415e96a23c9df",
+  "Pokemon5e/atk/atk.alias":"5f84f2c5f2d59b27187216b5",
+  "Pokemon5e/pokegen/pokegen.alias":"5f8bbc4df2d59b2718721df3"
 }
