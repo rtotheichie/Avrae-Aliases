@@ -1,0 +1,11 @@
+embed {{c,D=combat(), int('&1&') if '&1&' != '&'+'1&' else ''}}
+{{chek=vroll('1d4')}}
+{{suc=chek.total>=3}}
+{{eff=c.me.get_effect('Double Team') or ''}}
+-title "{{name}} uses Double Team!"
+-desc "You create a duplicate image of yourself, 5 feet beside you. The image copies every move you make. When an enemy hits you with a successful melee or ranged attack, roll a d4. On a 3 or 4, the image takes all the damage for you and disappears. Enemies with Truesight bypass the effect of this move."
+-f "Roll|{{chek}}"
+{{mod_hp(D,0) if D and suc else ''}}
+{{c.me.remove_effect('Double Team') if c and suc and eff else ''}}
+{{f'-f "The copy took the attack!"' if suc else '-f "The attack lands!|Check your concentration"'}}
+-footer "{{name}}: {{hp_str()}}"
