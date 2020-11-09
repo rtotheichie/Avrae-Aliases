@@ -19,5 +19,8 @@
   "Pokemon5e/sturdy/sturdy.alias":"5f78cd8a90e415e96a23c9df",
   "Pokemon5e/atk/atk.alias":"5f84f2c5f2d59b27187216b5",
   "Pokemon5e/pokegen/pokegen.alias":"5f8bbc4df2d59b2718721df3",
-  "Pokemon5e/hatch/hatch.alias":"5f77c44d4ded026d119cfcb2"
+  "Pokemon5e/hatch/hatch.alias":"5f77c44d4ded026d119cfcb2",
+  "Pokemon5e/pokerace/pokerace.alias":"5fa7d084181a164697a74886",
+  "Pokemon5e/pokerace/pokerace start.alias":"fa7d0bd7e4b0daea5b6033e",
+  "Pokemon5e/pokerace/pokerace end.alias":"5fa7d0ee7e4b0daea5b6033f"
 }
