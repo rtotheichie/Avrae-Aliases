@@ -1,0 +1,20 @@
+embed <drac2>
+args = &ARGS&
+if len(args) > 0:
+    character().set_cvar('raceSpeed', args[0])
+elif not get('raceSpeed', 0):
+    character().set_cvar('raceSpeed', 30)
+out = []
+out.append('-title "On your marks! Get set! Go!"')
+if combat() and combat().me:
+    combat().me.set_note("Progress: 0")
+    character().create_cc('raceBoosts', minVal = '0', maxVal = constitutionMod, reset = 'none', dispType = 'bubble')
+out.append(f'''-desc "It's time for the Pokemon Racing League! {name}'s Movement Speed has been set to **{get('raceSpeed')}** feet."''')
+out.append('-f "Rules|The first Pokemon to cross the finish line is the winner!\nBoosting may help your Pokemon get there quicker, but if it becomes too tired to finish, you will be disqualified!\nEvery lap, your Pokemon must beat a DC determined by your Dexterity or Strength score.  The level of success (or failure) determines how much of their speed they move."')
+out.append(f'-f "Instructions|`{ctx.prefix}{ctx.alias}`to run another lap!\n`{ctx.prefix}{ctx.alias} boost` to give your Pokemon a boost!\n`{ctx.prefix}{ctx.alias} end` to finish the race!"')
+if not combat() or not combat().me:
+    out.append(f'-f "**WARNING**|Make sure you start initiative and have all racers join before starting with `{ctx.prefix}init begin` and `{ctx.prefix}init join` or this alias will not work!"')
+out.append('-footer "Developed by @R to the Ichie#6193 for use on the Johto Region server"')
+return " ".join(out)
+</drac2>
+-thumb <image> -color <color>
