@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Antidote",
+    "desc":"-desc \"Instantly cures and grants immunity to the **Poisoned** status for one round.\"",
+    "duration":"1 round",
+    "ename":"Immune to Poisoned",
+    "effect":"",
+    "dur": 1
+  },
+  {
+    "name":"Paralyze Heal",
+    "desc":"-desc \"Instantly cures and grants immunity to the **Paralyzed** status for one round.\"",
+    "duration":"1 round",
+    "ename":"Immune to Paralyzed",
+    "effect":"",
+    "dur": 1
+  },
+  {
+    "name":"Caffeine",
+    "desc":"-desc \"The jolt your Pokémon needs to get up. Instantly raises the Pokémon from proned and grants immunity to the **Proned** status for one round.\"",
+    "duration":"1 round",
+    "ename":"Immune to Proned",
+    "effect":"",
+    "dur": 1
+  },
+  {
+    "name":"Johto Potion",
+    "desc":"-desc \"Restores a creature's HP by 20.\"",
+    "healing":"20"
+  },
+  {
+    "name":"Johto Super Potion",
+    "desc":"-desc \"Restores a creature's HP by 50.\"",
+    "healing":"50"
+  },
+  {
+    "name":"Johto Hyper Potion",
+    "desc":"-desc \"Restores a creature's HP by 200.\"",
+    "healing":"200"
+  },
+  {
+    "name":"Max Potion",
+    "desc":"-desc \"Restores a creature's HP fully.\"",
+    "healing":"{max_hp}"
+  },
+  {
+    "name":"Revive",
+    "desc":"-desc \"Revives a fainted Pokemon with 2d4+2 HP.\"",
+    "healing":"2d4+2"
+  },
+  {
+    "name":"Max Revive",
+    "desc":"-desc \"Revives a fainted Pokemon with 4d12+10 HP.\"",
+    "healing":"4d12+10"
+  }
+  ]
