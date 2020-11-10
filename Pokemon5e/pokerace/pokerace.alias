@@ -10,15 +10,6 @@ exhausted = 0
 out=[]
 out.append(f'-title "{name} races around the track!"')
 raceRoll = vroll("1d20")
-if boosted:
-    speed = speed + max(strength,dexterity)
-    character().mod_cc(boosts, -1)
-    out.append(f'-desc "**DC:** {DC} {raceRoll.result}\n{name} uses a boost to add an extra {max(strength,dexterity)} feet to their speed!"')
-    if not character().get_cc(boosts):
-        exhausted = 1
-        out.append ('-f "They are out of boosts!"')
-else:
-    out.append(f'-desc "**DC:** {DC} {raceRoll.result}"')
 tally = 0
 if raceRoll.result.crit==1:
     tally = speed*2
@@ -28,6 +19,16 @@ elif raceRoll.total == 1:
     tally = 0
 else:
     tally = speed//2
+if boosted:
+    if tally:
+        tally +=max(strength,dexterity)
+    character().mod_cc(boosts, -1)
+    out.append(f'-desc "**DC:** {DC} {raceRoll.result}\n{name} uses a boost to add an extra {max(strength,dexterity)} feet to their speed!"')
+    if not character().get_cc(boosts):
+        exhausted = 1
+        out.append ('-f "They are out of boosts!"')
+else:
+    out.append(f'-desc "**DC:** {DC} {raceRoll.result}"')
 progress += tally
 if exhausted:
     conSave = combat().me.save('con')
