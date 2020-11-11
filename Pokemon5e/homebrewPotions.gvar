@@ -1,4 +1,6 @@
-[
+{
+"image":"https://cdn.discordapp.com/attachments/475518171970011137/740712014891974807/tumblr_nio0uqmYwI1u258ivo10_1280.png",
+"potions":[
   {
     "name": "Antidote",
     "desc":"-desc \"Instantly cures and grants immunity to the **Poisoned** status for one round.\"",
@@ -41,7 +43,7 @@
   {
     "name":"Max Potion",
     "desc":"-desc \"Restores a creature's HP fully.\"",
-    "healing":"{max_hp}"
+    "healing":"2000"
   },
   {
     "name":"Revive",
@@ -52,5 +54,50 @@
     "name":"Max Revive",
     "desc":"-desc \"Revives a fainted Pokemon with 4d12+10 HP.\"",
     "healing":"4d12+10"
+  },
+  {
+    "name":"Burn Heal",
+    "desc":"-desc \"Instantly cures and grants immunity to the **Burned** status for one round.\"",
+    "duration":"1 round",
+    "ename":"Immune to Burned",
+    "effect":"",
+    "dur": 1
+  },
+  {
+    "name":"Ice Heal",
+    "desc":"-desc \"Instantly cures and grants immunity to the **Frozen** status for one round.\"",
+    "duration":"1 round",
+    "ename":"Immune to Frozen",
+    "effect":"",
+    "dur": 1
+  },
+    {
+    "name":"Full Heal",
+    "desc":"-desc \"Restores all Status Effects and grants immunity to all statuses for one round.\"",
+    "duration":"1 round",
+    "ename":"Immune to all status effects",
+    "effect":"",
+    "dur": 1
+  },
+  {
+    "name":"Ehter",
+    "desc":"-desc \"Restores 5 PP to a single move.\""
+  },
+  {
+    "name":"Max Ehter",
+    "desc":"-desc \"Restores 5 PP to all moves.\""
+  },
+  {
+    "name":"Elixir",
+    "desc":"-desc \"Restores 10 PP to a single move.\""
+  },
+  {
+    "name":"Max Elixir",
+    "desc":"-desc \"Restores 10 PP to all moves.\""
+  },
+  {
+    "name":"Full Restore",
+    "desc":"-desc \"`Restores a pokemon's HP, PP, and heals all status conditions.\""
   }
   ]
+}
