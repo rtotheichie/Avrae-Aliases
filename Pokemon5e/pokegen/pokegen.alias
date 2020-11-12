@@ -32,7 +32,7 @@ else:
     shinyRate = argparse(args).last('shiny') or 1
     shiny = vroll('1d100')
     shiny = shiny.total <= shinyRate
-    out.append(f'-desc "Your {diff} {hab} Pokemon is a {"**SHINY** " if shiny else ""}**{PKMN}**!"')
+    out.append(f'''-desc "Your {diff} {hab} Pokemon is a {'**SHINY** ' if shiny else ''}**{PKMN}**!"''')
     genderRate=gvar[dayNight][diff][hab][PKMN]
     if genderRate == 200:
         gender = "Genderless"
