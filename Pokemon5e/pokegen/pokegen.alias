@@ -4,7 +4,7 @@ gvar=load_json(get_gvar("fc6518e3-18f5-417e-9824-8dfe65fd9a5d"))
 out=[]
 out.append('-title "Generating a new Pokemon..."')
 if 'Help' in args or '?' in args or not args:
-    out.append(f'-desc "Running `{ctx.prefix}{ctx.alias} random` will generate a Pokemon generated from a random Difficulty and Habitat. You can type in a difficulty and/or habitat after `{ctx.prefix}{ctx.alias}` to narrow the results (make sure you capitalize the first letter). You can add `day` or `night` to specify a time or just let the alias choose randomly."')
+    out.append(f'-desc "Running `{ctx.prefix}{ctx.alias} random` will generate a Pokemon generated from a random Difficulty and Habitat. You can type in a difficulty and/or habitat after `{ctx.prefix}{ctx.alias}` to narrow the results. You can add `day` or `night` to specify a time or just let the alias choose randomly."')
     out.append(f'-f "__Available Difficulties:__|{", ".join([x for x in gvar.Day.keys()])}"')
     out.append(f'-f "__Available Habitats:__|{", ".join([x for x in gvar.Day.Simple.keys()])}"')
 else:
@@ -16,20 +16,20 @@ else:
         dayNight = ['Day', 'Night'][randint(2)-1]
     diffList =  [x for x in gvar[dayNight].keys()]
     for x in diffList:
-        if x in &ARGS&:
+        if x in args:
             diff = x
             break
         else:
             diff = diffList[randint(len(diffList))-1]
     habList = [x for x in gvar[dayNight][diff].keys()]
     for x in habList:
-        if x in &ARGS&:
+        if x in args:
             hab = x
             break
         else:
             hab = habList[randint(len(habList))-1]
     PKMN = [x for x in gvar[dayNight][diff][hab]][randint(len(gvar[dayNight][diff][hab]))-1]
-    shiny = vroll('1d4096')
+    shiny = vroll('1d100')
     shiny = 1 if shiny.total == 1 else 0
     out.append(f'-desc "Your {diff} {hab} Pokemon is a {"**SHINY** " if shiny else ""}**{PKMN}**!"')
     genderRate=gvar[dayNight][diff][hab][PKMN]
