@@ -29,7 +29,7 @@ else:
         else:
             hab = habList[randint(len(habList))-1]
     PKMN = [x for x in gvar[dayNight][diff][hab]][randint(len(gvar[dayNight][diff][hab]))-1]
-    shinyRate = argsparse(args).last('shiny') if argsparse(args).get('shiny') else 1
+    shinyRate = argparse(args).last('shiny') if argparse(args).get('shiny') else 1
     shiny = vroll('1d100')
     shiny = 1 if shiny.total <= shinyRate else 0
     out.append(f'-desc "Your {diff} {hab} Pokemon is a {"**SHINY** " if shiny else ""}**{PKMN}**!"')
