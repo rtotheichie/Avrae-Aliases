@@ -29,10 +29,9 @@ else:
         else:
             hab = habList[randint(len(habList))-1]
     PKMN = [x for x in gvar[dayNight][diff][hab]][randint(len(gvar[dayNight][diff][hab]))-1]
-    shinyRate = argparse(args).last('shiny') or 1
+    shinyRate = int(argparse(args).last('shiny')) or 1
     shiny = vroll('1d100')
-    shiny = 1 if shiny.total <= shinyRate else 0
-    out.append(f'-desc "Your {diff} {hab} Pokemon is a {"**SHINY** " if shiny else ""}**{PKMN}**!"')
+    out.append(f'-desc "Your {diff} {hab} Pokemon is a {"**SHINY** " if shiny.total <= shinyRate else ""}**{PKMN}**!"')
     genderRate=gvar[dayNight][diff][hab][PKMN]
     if genderRate == 200:
         gender = "Genderless"
