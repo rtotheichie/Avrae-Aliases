@@ -32,7 +32,7 @@ else:
     shinyRate = argparse(args).last('Shiny') or 1
     shiny = vroll('1d100')
     shiny = shiny.total <= int(shinyRate)
-    out.append(f'''-desc "Your {diff} {hab} Pokemon is a **{'SHINY ' if shiny else ''}{PKMN}**!"''')
+    out.append(f'''-desc "Your {dayNight}time {diff} {hab} Pokemon is a **{'SHINY ' if shiny else ''}{PKMN}**!\nIt has the following attributes:"''')
     genderRate=gvar[dayNight][diff][hab][PKMN]
     if genderRate == 200:
         gender = "Genderless"
@@ -45,5 +45,7 @@ else:
     out.append(f'-f "Nature|{nature}"')
     ability = vroll('1d2')
     out.append(f'-f "Ability|{"First" if ability.total == 1 else "Second (if it has one)"}"')
+    out.append('-thumb "https://i0.wp.com/www.alphr.com/wp-content/uploads/2016/07/whos_that_pokemon.png"')
+    out.append(f'-footer "{ctx.prefix}{ctx.alias} | Developed by @R to the Ichie#6193 for the Pokemon5e system")
 return " ".join(out)
 </drac2>
