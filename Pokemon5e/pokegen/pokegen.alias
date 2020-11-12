@@ -1,16 +1,48 @@
-embed {{a,difficulty,habitats,g=&ARGS&,["Easy","Medium","Hard","Brutal","Legendary"],["Cave","Arctic","Forest","Grass","Mountain","Rugged","Sea","Urban","Coast"],load_json(get_gvar("fc6518e3-18f5-417e-9824-8dfe65fd9a5d"))}}
-{{shiny, gender, ability, nature, gvar=vroll("1d100"), vroll("1d2"), vroll("1d2"), vroll("1d20"), load_json(get_gvar("d8f15aca-b785-4a65-801e-ee2a27b93d6a"))}}
-{{help="?" in a or "help" in a}}
-{{v=not help}}
-{{a=[x.title() for x in a]}}
-{{diff,hab=([difficulty[x] for x in range(len(difficulty)) if difficulty[x] in a] or [difficulty[randint(len(difficulty))]])[0],([habitats[y] for y in range(len(habitats)) if habitats[y] in a] or [habitats[randint(len(habitats))]])[0]}}
-{{result=g[diff][hab][randint(len(g[diff][hab]))] if v else ''}}
--title "Generating a new Pokemon...."
-{{f'-desc "Running `!pokegen` will generate a Pokemon generated from a random Difficulty and Habitat. You can type in a difficulty and/or habitat after `!pokegen` to narrow the results."' if help else f'-desc "Difficulty: {diff}\nHabitat: {hab}"'}}
-{{f"-f 'You found a...|{result}'" if v else ''}}
-{{f'''-f 'Gender: {gender}|{"Male" if gender.total==1 else "Female"}' ''' if v else ""}} 
-{{f'''-f 'Ability: {ability}|{"First Ability" if ability.total==1 else "Second Ability"}' ''' if v else ""}}
-{{f'''-f 'Nature: {nature}|{gvar[nature.total-1]}' ''' if v else ""}}
-{{f'''-f "Available Difficulty|{", ".join([x for x in difficulty])}"''' if help else ''}}
-{{f'''-f "Available Habitats|{", ".join([x for x in habitats])}"''' if help else ''}}
--thumb <image> -color <color>
+embed <drac2>
+args= x.title() for x in &ARGS&
+gvar=load_json(get_gvar("fc6518e3-18f5-417e-9824-8dfe65fd9a5d"))
+out=[]
+out.append('-title "Generating a new Pokemon..."')
+if 'Help' in args or '?' in args or not args:
+    out.append(f'-desc "Running `{ctx.prefix}{ctx.alias} random` will generate a Pokemon generated from a random Difficulty and Habitat. You can type in a difficulty and/or habitat after `{ctx.prefix}{ctx.alias}` to narrow the results (make sure you capitalize the first letter). You can add `day` or `night` to specify a time or just let the alias choose randomly."')
+    out.append(f'-f "__Available Difficulties:__|{", ".join([x for x in gvar.Day.keys()])}"')
+    out.append(f'-f "__Available Habitats:__|{", ".join([x for x in gvar.Day.Simple.keys()])}"')
+else:
+    if 'Day' in args:
+        dayNight = "Day"
+    elif 'Night' in args:
+        dayNight = "Night"
+    else:
+        dayNight = ['Day', 'Night'][randint(2)-1]
+    diffList =  [x for x in gvar[dayNight].keys()]
+    for x in diffList:
+        if x in &ARGS&:
+            diff = x
+            break
+        else:
+            diff = diffList[randint(len(diffList))-1]
+    habList = [x for x in gvar[dayNight][diff].keys()]
+    for x in habList:
+        if x in &ARGS&:
+            hab = x
+            break
+        else:
+            hab = habList[randint(len(habList))-1]
+    PKMN = [x for x in gvar[dayNight][diff][hab]][randint(len(gvar[dayNight][diff][hab]))-1]
+    shiny = vroll('1d4096')
+    shiny = 1 if shiny.total == 1 else 0
+    out.append(f'-desc "Your {diff} {hab} Pokemon is a {"**SHINY** " if shiny else ""}**{PKMN}**!"')
+    genderRate=gvar[dayNight][diff][hab][PKMN]
+    if genderRate == 200:
+        gender = "Genderless"
+    else:
+        gender = vroll('1d100')
+        gender = "Male" if gender.total <= genderRate else "Female"
+    out.append(f'-f "Gender|{gender}"')
+    nature = vroll('1d20')
+    nature = load_json(get_gvar("d8f15aca-b785-4a65-801e-ee2a27b93d6a"))[nature.total-1]
+    out.append(f'-f "Nature|{nature}"')
+    ability = vroll('1d2')
+    out.append(f'-f "Ability|{"First" if ability.total == 1 else "Second (if it has one)"}"')
+return " ".join(out)
+</drac2>
