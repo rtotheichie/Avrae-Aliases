@@ -1,5 +1,5 @@
 embed <drac2>
-args= x.title() for x in &ARGS&
+args= [x.title() for x in &ARGS&]
 gvar=load_json(get_gvar("fc6518e3-18f5-417e-9824-8dfe65fd9a5d"))
 out=[]
 out.append('-title "Generating a new Pokemon..."')
