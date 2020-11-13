@@ -96,7 +96,7 @@
     "desc":"-desc \"Restores 10 PP to all moves.\""
   },
   {
-    "name":"Full Restore",
+    "name":"Full Restorer",
     "desc":"-desc \"`Restores a pokemon's HP, PP, and heals all status conditions.\""
   }
   ]
