@@ -213,5 +213,10 @@
     "Class": "Trainer",
     "subclass": "Breeder",
     "counters":[]
+  },
+  {
+    "Class": "Trainer",
+    "subclass":"Poké Racer",
+    "counters": []
   }
 ]
