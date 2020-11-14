@@ -41,7 +41,7 @@ if exhausted:
     elif conSave.result < 10:
         out.append(f'''-f "Constitution Save: {conSave}|{name} is exhausted and cannot continue the race!"''')
         character().set_cvar('raceSpeed', 0)
-combat().me.set_note(f'Progress: {progress}\nBoosts:{character().get_cc(boosts}')
+combat().me.set_note(f'Progress: {progress}\nBoosts:{character().get_cc(boosts)}')
 out.append(f'-f "Lap # {combat().round_num}:|{name} moves forward {tally} feet!"')
 out.append(f'''-f "Progress:|{combat().me.note[combat().me.note.index(' '):]} feet|inline"''')
 out.append(f'''-f "Boosts / Movement Speed:|{'🥕'*character().get_cc(boosts) or 'None'} / {get('raceSpeed')} feet|inline"''')
