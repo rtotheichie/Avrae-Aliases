@@ -25,6 +25,7 @@ if "egg" in e or "Egg" in e:
     if args.get("plus"):
         inc=vroll("2d20")
         incText="**Plus Incubator.** Trainers may reduce Hatch Time by an additional 2d20 when rolling against the incubation counter."
+        desc.append(str(inc))
     if args.get("super"):
         inc=vroll("3d20")
         incText="**Super Incubator.** Trainers may reduce Hatch Time by an additional 3d20 when rolling against the incubation counter."
