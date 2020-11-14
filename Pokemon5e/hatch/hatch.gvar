@@ -4,4 +4,4 @@
 
 __**Making the counter** __
 When you create the counter, name it \"<Color> Egg\" or some other descriptor followed by \"Egg.\" `!cc create \"Red Egg\" -min 0 -max 300 -reset none` or `!cc create \"Super Mega Legendary Egg\" -min 0 -max 100000 -reset none`. Naming it something else will make the alias mess up." 
--footer "Developed by @""R to the Ichie#6193 for use on the Johto Region server" 
+-footer "Developed by @R to the Ichie#6193 for use with Pokemon5e." 
