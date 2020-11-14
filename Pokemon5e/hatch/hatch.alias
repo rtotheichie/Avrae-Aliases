@@ -3,59 +3,50 @@ a,gr=&ARGS&,get_raw()
 args=argparse(a)
 out=[]
 help=get_gvar("9c2adfb1-21f8-4000-bedf-3ad5fc90d136")
-magma,flame,inc='','',''
-magmaText,flameText,incText=magma,flame,inc
+inc=''
+incText=inc
 if len(a)>0:
     cc=a[0]+" Egg"
 else:
     return help
-if ctx.guild.id!=592176064214859786:
-    out.append('-title "This is not the time to use that."')
-    out.append('-desc "This alias is designed specifically for the rules used on the Johto Region server.  Please join there to use this alias."')
-    out.append('-image "https://media.giphy.com/media/3ohzdQ1IynzclJldUQ/giphy.gif"')
-else:
-    for e in gr.consumables.custom:
-        if cc.lower() in e.lower():
-            break
-    if e:
-        out.append(f'-title "{name} rolls for their daily hatching rate!"')
-        desc=["-desc \"At the beginning of each day, the trainer rolls a d100. The number rolled is the number subtracted from the egg days left to hatch. When the egg days reach 0 the egg hatches. Today, you rolled:"]
-        S=vroll("1d100")
-        desc.append(str(S))
-        if args.get("magma"):
-            magma=vroll("1d20")
-            magmaText="**Magma Armor.** Increases hatch speed by an extra d20 each day. A Pokemon with this ability must be in the egg holder's party."
-            desc.append(str(magma))
-        if args.get("flame"):
-            flame=vroll("1d20")
-            flameText="**Flame Body.** Increases hatch speed by an extra d20 each day. A Pokemon with this ability must be in the egg holder's party."
-            desc.append(str(flame))
-        if args.get("inc"):
-            inc=vroll("1d20")
-            incText="**Incubator.** Increases hatch speed by an extra d20 each day the egg is in the incubator."
-            desc.append(str(inc))
-        if args.get("super"):
-            inc=vroll("1d100")
-            incText="**Super Incubator.** Increases hatch speed by an extra d100 each day the egg is in the incubator."
-            desc.append(str(inc))
-        mT,fT,iT=magma.total if magma else 0,flame.total if flame else 0,inc.total if inc else 0
-        ST=S.total+mT+iT+fT
-        mod_cc(e,-ST)
-        for T in [magmaText,flameText,incText]:
-            if T:
-                desc.append(T)
-        desc.append('\"')
-        desc="\n".join(desc)
-        out.append(desc)
-        out.append(f"-f '{e}|{cc_str(e)} (-{ST})'")
+    break
+for e in gr.consumables.custom:
+    if cc.lower() in e.lower():
+        break
+if "egg" in e or "Egg" in e:
+    out.append(f'-title "{name} rolls for their daily hatching rate!"')
+    desc=["-desc \"When an egg is created, it begins an incubation counter to determine how long it will take for the egg to hatch. Progress against this timer may only be made if the egg is being carried by its trainer through the night or a significant portion of the prior session. A trainer will roll 1d100 at the beginning of each in-campaign day (or session), and reduce the remaining counter by the result. Today, you rolled:"]
+    S=vroll("1d100")
+    desc.append(str(S))
+    if args.get("inc"):
+        inc=vroll("1d20")
+        incText="** Basic Incubator.** Trainers may reduce Hatch Time by an additional 1d20 when rolling against the incubation counter."
+        desc.append(str(inc))
+    if args.get("plus"):
+        inc=vroll("2d20")
+        incText="**Plus Incubator.** Trainers may reduce Hatch Time by an additional 2d20 when rolling against the incubation counter."
+    if args.get("super"):
+        inc=vroll("3d20")
+        incText="**Super Incubator.** Trainers may reduce Hatch Time by an additional 3d20 when rolling against the incubation counter."
+        desc.append(str(inc))
+    iT=inc.total if inc else 0
+    ST=S.total+iT
+    mod_cc(e,-ST)
+    for T in [incText]:
+        if T:
+            desc.append(T)
+    desc.append('\"')
+    desc="\n".join(desc)
+    out.append(desc)
+    out.append(f"-f '{e}|{cc_str(e)} (-{ST})'")
+    out.append("-thumb <image> -color <color>")
+    if get_cc(e)<=0:
+        out.append('-footer "Your egg hatched!"')
         out.append("-thumb <image> -color <color>")
-        if get_cc(e)<=0:
-            out.append('-footer "Your egg hatched!"')
-            out.append("-thumb <image> -color <color>")
-            delete_cc(e)
-        else:
-            out.append(f'-footer "Run !hatch with no arguments for the help" -thumb {image} -color {color}')
+        delete_cc(e)
     else:
-        return help
+        out.append(f'-footer "Run !hatch with no arguments for the help" -thumb {image} -color {color}')
+else:
+    return help
 return " ".join(out)
 </drac2>
