@@ -1,6 +1,6 @@
 -title "Need some help with hatching an egg?"
 -desc "__**Running the command** __
-`!hatch <Color>` will roll for the egg you specify (i.e. `!hatch Yellow` to roll for your Yellow Egg.  You can add `super` for a Super Incubator, 'plus' for a Plus Incubator, or `inc` for a Basic Incubator. 
+`!hatch <Color>` will roll for the egg you specify (i.e. `!hatch Yellow` to roll for your Yellow Egg.  You can add `super` for a Super Incubator, `plus` for a Plus Incubator, or `inc` for a Basic Incubator. 
 
 __**Making the counter** __
 When you create the counter, name it \"<Color> Egg\" or some other descriptor followed by \"Egg.\" `!cc create \"Red Egg\" -min 0 -max 300 -reset none` or `!cc create \"Super Mega Legendary Egg\" -min 0 -max 100000 -reset none`. Naming it something else will make the alias mess up." 
