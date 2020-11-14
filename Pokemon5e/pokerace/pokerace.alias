@@ -38,7 +38,7 @@ if exhausted:
     elif conSave.result.crit == 1:
         character().set_cc(boosts, constitutionMod//2)
         out.append(f'-f "Consitution Save: {conSave}|They dug deep and found more energy!"')
-    elif conSave.result < 10:
+    elif conSave.total < 10:
         out.append(f'''-f "Constitution Save: {conSave}|{name} is exhausted and cannot continue the race!"''')
         character().set_cvar('raceSpeed', 0)
 combat().me.set_note(f'Progress: {progress}')
