@@ -32,14 +32,14 @@ else:
 progress += tally
 if exhausted:
     conSave = combat().me.save('con')
-    if conSave.result.crit == 0 and conSave.total < 12:
+    if conSave.result.crit == 0 and conSave.total < 15:
         character().set_cvar('raceSpeed', int(get('raceSpeed'))//2)
-        out.append(f'-f "{name} is too tired to keep racing at full speed!|Their movement speed is cut in half for the remainder of the race!"')
+        out.append(f'-f "{conSave} {name} is too tired to keep racing at full speed!|Their movement speed is cut in half for the remainder of the race!"')
     elif conSave.result.crit == 1:
         character().set_cc(boosts, constitutionMod//2)
         out.append('-f "They dug deep and found more energy!"')
-    elif conSave.result.crit == 2:
-        out.append('-f "{name} is exhausted and cannot continue the race!"')
+    elif conSave.result < 10:
+        out.append(f'-f "{conSave} {name} is exhausted and cannot continue the race!"')
         character().set_cvar('raceSpeed', 0)
 combat().me.set_note(f'Progress: {progress}')
 out.append(f'-f "Lap # {combat().round_num}:|{name} moves forward {tally} feet!"')
