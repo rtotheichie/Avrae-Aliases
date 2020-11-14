@@ -13,7 +13,7 @@ attack {{atk,gr,gv,i="&1&",get_raw(),load_json(get_gvar("5eed7634-7526-4b25-86f2
 {{cm = get('miss', 0) + (cr.total<=9) if ce and not pm else ''}}
 {{f'-phrase "It hurt itself in its confusion!"' if cm else ''}}
 {{f'-phrase "It is paralyzed! It cannot move!"' if pm else ''}}
-{{f'-f "**{name} snapped out of Confusion!**"' if ce and cr.total==20 else ''}}
+{{f'-f "**{name} snapped out of Confusion!**"' if ce and cr.total>=16 else ''}}
 {{f'-f "Paralyzed Roll|{pr}"' if pe else ''}}
 {{f'-f "Paralyzed|{gv.Pa}"' if pe else ''}}
 {{f'-f "Confused Roll|{cr}"' if ce and not pm else ''}}
