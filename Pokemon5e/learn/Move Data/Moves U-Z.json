@@ -91,8 +91,19 @@
           "attackBonus": "ATTACK"
         }]
       }, {
+        "type": "target",
+        "target": "self",
+        "effects": [{
+          "type": "ieffect",
+          "name": "Exhausted",
+          "duration": "1",
+          "effects": "-ac -2",
+          "end": false,
+          "conc": false
+        }]
+      }, {
         "type": "text",
-        "text": "Your forehead burns like hot coals as you slam your head into an opponent. Make a melee attack roll, dealing 3d10 + MOVE fire damage on a hit. After activating this move, your AC decreases by 2 until the beginning of your next turn."
+        "text": "Your forehead burns like hot coals as you slam your head into a creature. Make a melee attack roll, dealing 3d10 + MOVE fire damage on a hit. After activating this move, your AC decreases by 2 until the beginning of your next turn."
       }],
       "_v": 2,
       "proper": true,
@@ -124,7 +135,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You whirl your fists with a fast attack that hits before your opponent has a chance to strike. As a bonus action, you may make rush to an opponent in range and a quick melee attack on an opponent, dealing 1d4 fighting damage on a hit."
+        "text": "You whirl your fists with a fast attack that pushes a burst of wind at a creature in range. Make a ranged attack on a creature, dealing 1d4 fighting damage on a hit."
       }],
       "_v": 2,
       "proper": true,
@@ -160,7 +171,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You drench a creature with an odd, poisonous liquid. Force an opponent to make a CON save against your Move DC, becoming poisoned on a failure. If the target is already poisoned, this move automatically hits, causing the creature to now take double the normal damage at the end of each of its turns."
+        "text": "You drench a creature with an odd, poisonous liquid. Force a creature to make a CON save against your Move DC, becoming poisoned on a failure. If the target is already poisoned, this move automatically hits causing the creature to now take double the base poison damage at the end of each of its turns."
       }],
       "_v": 2,
       "proper": true,
@@ -185,7 +196,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You attempt to drench an opponent in poisonous liquid. Make a ranged attack on an opponent, dealing 1d10 + MOVE poison damage on a hit. **If the target is already poisoned, double your Move modifier when adding damage.**"
+        "text": "You attempt to drench a creature in poisonous liquid. Make a ranged attack on a creature, dealing 1d10 + MOVE poison damage on a hit. **If the target is already poisoned, double the dice roll for the damage.**"
       }],
       "_v": 2,
       "proper": true,
@@ -194,9 +205,9 @@
     "attack": "proficiencyBonus+max(DMO,CoMO)",
     "damage": {
       "1": "1d10+{max(DMO,CoMO)}",
-      "5": "2d8+{max(DMO,CoMO)}",
+      "5": "2d6+{max(DMO,CoMO)}",
       "10": "2d12+{max(DMO,CoMO)}",
-      "17": "4d8+{max(DMO,CoMO)}"
+      "17": "3d10+{max(DMO,CoMO)}"
     },
     "PP": 5
   },
@@ -211,13 +222,25 @@
           "hit": [{
             "type": "damage",
             "damage": "DAMAGE[Normal]"
-          }],
+          }, {
+            "type": "save",
+            "stat": "str",
+            "fail": [{
+              "type": "ieffect",
+              "name": "Grappled",
+              "duration": "-1",
+              "effects": "Grappled",
+              "end": false
+            }],
+            "succes": [],
+            "dc": "{8+proficiencyBonus+SMO}"
+          },
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You crush an opponent with a forceful, gripping attack. Make a melee attack, doing 1d8 + MOVE normal damage on a hit, grappling the opponent. On each successive turn, if the creature is still grappled, you may use this move again (as an action) and automatically hit. A creature may attempt to escape the grapple at the beginning of its turns with a STR save against your Move DC."
+        "text": "You crush a creature with a forceful, gripping attack. Make a melee attack, doing 1d8 + MOVE normal damage on a hit, grappling the target. On each successive turn, if the creature is still grappled, you may use this move again (as an action) and automatically hit. A creature may attempt to escape the grapple at the beginning of its turns with a STR save against your Move DC."
       }],
       "_v": 2,
       "proper": true,
@@ -249,7 +272,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You extend a sharp vine to whip the opponent with. Make a ranged attack roll, doing 1d6 + MOVE grass damage on a hit."
+        "text": "You extend a sharp vine to whip the target with. Make a ranged attack roll, doing 1d6 + MOVE grass damage on a hit."
       }],
       "_v": 2,
       "proper": false,
@@ -280,7 +303,7 @@
         }]
       }, {
         "type": "text",
-        "text": "A slow fighting attack that pummels your foes. As an action on your turn, you can choose to hold this move until next turn, where it will automatically hit for 1d12 + MOVE fighting damage as long as the opponent remains in melee range."
+        "text": "A slow fighting attack that pummels your foes. As an action on your turn, you can choose to hold this move until next turn, where it will automatically hit for 1d12 + MOVE fighting damage as long as the target remains in melee range."
       }],
       "verb": "foresees the future with",
       "proper": true,
@@ -315,7 +338,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You lash out with a quick, electric strike before you make a getaway. Make a melee attack, dealing 1d12 + MOVE electric damage on a hit. After this move is activated, a trainer must switch out the user as a free action. Higher Levels: The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+        "text": "You lash out with a quick, electric strike before you make a getaway. Make a melee attack, dealing 1d12 + MOVE electric damage on a hit. After this move is activated, a trainer must switch out the user as a free action."
       }],
       "verb": null,
       "proper": false,
@@ -347,7 +370,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You rush forward in a flash of electricity with extended reach, slamming into an opponent. When activating this move, gain an additional 10 feet of movement and make a melee attack roll against an opponent, dealing 2d10 + Move electric damage on a hit. On a hit, you also take a quarter of the total (rounded down) in typeless recoil damage."
+        "text": "You rush forward in a flash of electricity with extended reach, slamming into a creatuew. When activating this move, gain an additional 15 feet of movement and make a melee attack roll against an opponent, dealing 2d10 + Move electric damage on a hit. On a hit, you also take a quarter of the total (rounded down) in typeless recoil damage."
       }],
       "_v": 2,
       "proper": true,
@@ -378,7 +401,7 @@
             "cantripScale": null
           }, {
             "type": "text",
-            "text": "You attack with a jolting slap from your palms. Make a melee attack on an opponent, dealing 1d12 + MOVE fighting damage on a hit. If the target is asleep, double the damage dice, but the target automatically wakes up."
+            "text": "You attack with a jolting slap from your palms. Make a melee attack on a creature, dealing 1d12 + MOVE fighting damage on a hit. If the target is asleep, double your Move modifier when adding damage, but the target automatically wakes up."
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -413,7 +436,7 @@
             "cantripScale": null
           }, {
             "type": "text",
-            "text": "You fire a quick spurt of water at a Pokémon in range. Make a ranged attack roll, doing 1d6 + MOVE water damage on a hit."
+            "text": "You fire a quick spurt of water at a creature in range. Make a ranged attack roll, doing 1d6 + MOVE water damage on a hit."
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -449,7 +472,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You send a column of water towards an opponent. Make a ranged attack, dealing 2d6 + MOVE water damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits.\n"
+        "text": "You send a column of water towards a creature. Make a ranged attack, dealing 2d6 + MOVE water damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits.\n"
       }],
       "_v": 2,
       "proper": true,
@@ -482,7 +505,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You send a wave of ultrasonic aquatic energy at an opponent in range. Make a ranged attack roll, dealing 1d10 + MOVE water damage on a hit. On a natural attack roll of 17 or higher, the target is confused."
+        "text": "You send a wave of ultrasonic aquatic energy at a creature in range. Make a ranged attack roll, dealing 1d10 + MOVE water damage on a hit. On a natural attack roll of 17 or higher, the target is confused."
       }],
       "verb": null,
       "proper": false,
@@ -581,7 +604,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You fire a blast of water at an opponent that increases in power the more healthy you are. Make a ranged attack roll against an opponent, doing 3d8 + MOVE water damage on a hit if you are at or above 50% of your health. If you are below 50%, halve the total damage done."
+        "text": "You fire a blast of water at a creature that increases in power the more healthy you are. Make a ranged attack roll against a creature, doing 3d8 + MOVE water damage on a hit if you are at or above 50% of your health. If you are below 50%, halve the total damage done."
       }],
       "_v": 2,
       "proper": true,
@@ -633,7 +656,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You create an intense waterfall that crashes down upon enemy creatures in a 10 foot radius, centered on a point within range. Creatures in the area must make a DEX save against your Move DC or take 2d6 + MOVE water damage and fall prone on a fail, or half as much on a save."
+        "text": "You create an intense waterfall that crashes down upon creatures in a 10 foot radius, centered on a point within range. Creatures in the area must make a DEX save against your Move DC or take 2d6 + MOVE water damage and fall prone on a fail, or half as much on a save."
       }],
       "_v": 2,
       "proper": false,
@@ -685,7 +708,7 @@
       "name": "Whirlpool",
       "automation": [{
         "type": "text",
-        "text": "You create a wave of water that swirls around an opponent in range. Make a ranged attack roll. On a hit, the target takes 1d6 + MOVE water damage and is restrained. At the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. On each successive turn, if the creature is still restrained, you may use this move again (as an action) and automatically hit."
+        "text": "You create a wave of water that swirls around a creature in range. Make a ranged attack roll. On a hit, the target takes 1d6 + MOVE water damage and is restrained. At the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. On each successive turn, if the creature is still restrained, you may use this move again (as an action) and automatically hit."
       }, {
         "type": "target",
         "target": "each",
@@ -720,7 +743,7 @@
     "damage": {
       "1": "1d6+{SMO}",
       "5": "1d10+{SMO}",
-      "10": "2d8+{SMO)}",
+      "10": "2d8+{SMO}",
       "17": "5d4+{SMO}"
     },
     "PP": 10
@@ -809,7 +832,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You shroud yourself in electricity and charge at an opponent. Make a melee attack, dealing 2d8 + MOVE electric damage on a hit, but taking 1/4 of the damage (rounded down) in typeless recoil damage."
+        "text": "You shroud yourself in electricity and charge at a creature. Make a melee attack, dealing 2d8 + MOVE electric damage on a hit, but taking 1/4 of the damage (rounded down) in typeless recoil damage."
       }],
       "_v": 2,
       "proper": true,
@@ -844,7 +867,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You send a sinister, white-hot flame at an opponent attempting to inflict a burn. Make a ranged attack roll on a target, causing burn on a hit.\n"
+        "text": "You send a sinister, white-hot flame at a creature attempting to inflict a burn. Make a ranged attack roll on a target, causing burn on a hit.\n"
       }],
       "verb": null,
       "proper": false,
@@ -869,7 +892,7 @@
             "cantripScale": null
           }, {
             "type": "text",
-            "text": "You strike out at an enemy Pokémon with your wings. Make a melee attack roll, doing 1d10 + MOVE flying damage on a hit."
+            "text": "You strike out at a target creature with your wings. Make a melee attack roll, doing 1d10 + MOVE flying damage on a hit."
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -898,7 +921,7 @@
           "type": "ieffect",
           "name": "Healing Wish",
           "duration": "2",
-          "effects": "-attack \"|-(4d12+{max(WMO,ChMO)}) [Healing]|\"",
+          "effects": "-attack \"|-(3d8+{max(WMO,ChMO)}) [Healing]|\"",
           "end": true,
           "conc": false
         }]
@@ -917,7 +940,7 @@
       "name": "Withdraw",
       "automation": [{
         "type": "text",
-        "text": "When hit by a melee or ranged attack, you can spend your reaction to increase your AC by +2 if it would cause the attack to miss."
+        "text": "When hit by a melee or ranged attack, you can spend your reaction to increase your AC by +2 if it would cause the attack to miss. This move increases your AC by +3 at level 10 and above."
       }],
       "verb": null,
       "proper": false,
@@ -941,7 +964,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You create a bizarre vibe in the air in a 50ft circle, centered on you. For the duration, all WIS saves become CON saves and all CON saves become WIS saves."
+        "text": "You create a bizarre vibe in the air in a 100 foot circle, centered on you. For the duration, all WIS saves become CON saves and all CON saves become WIS saves."
       }],
       "_v": 2,
       "proper": true,
@@ -966,7 +989,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You slam your rough body against an opponent, taking serious recoil damage. Make an attack roll against a target, dealing 2d10 + MOVE grass damage on a hit. On a hit, you also take half the damage dealt in typeless recoil damage."
+        "text": "You slam your rough body against a creature, taking serious recoil damage. Make an attack roll against a target, dealing 2d10 + MOVE grass damage on a hit. On a hit, you also take a quarter of the damage dealt in typeless recoil damage."
       }],
       "_v": 2,
       "proper": true,
@@ -1056,7 +1079,7 @@
               "type": "ieffect",
               "name": "Grappled",
               "duration": "-1",
-              "effects": "Restrained",
+              "effects": "Grappled",
               "end": false
             }],
             "success": [],
@@ -1096,7 +1119,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You wrap your hands around the opponent and squeeze hard. Make a melee attack against an opponent, dealing 3d8 + MOVE normal damage on a hit. If the opponent has 50% or more of its maximum HP, double your move modifier for the damage roll."
+        "text": "You wrap your hands around the target and squeeze hard. Make a melee attack against a creature, dealing 3d8 + MOVE normal damage on a hit. If the target has 50% or more of its maximum HP, double your move modifier for the damage roll."
       }],
       "_v": 2,
       "proper": true,
@@ -1128,7 +1151,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You cross your claws for a scissor-like slashing attack. Make a melee attack against an opponent, dealing 2d6 + MOVE bug damage on a hit."
+        "text": "You cross your claws for a scissor-like slashing attack. Make a melee attack against a creature, dealing 2d6 + MOVE bug damage on a hit."
       }],
       "_v": 2,
       "proper": true,
@@ -1166,7 +1189,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You release a big yawn that causes an opponent to become very drowsy. Choose a target in range. If that target is still in the battle at the end of its next turn, it falls"
+        "text": "You release a big yawn that causes a creature to become very drowsy. Choose a target in range. If that target is still in the battle at the end of its next turn, it falls asleep"
       }],
       "verb": "lets out",
       "proper": false,
@@ -1193,7 +1216,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You fire out an extreme blast of pure electric energy at an opponent. Make a ranged attack against a foe in range, doing 2d10 + MOVE electric damage. If the natural attack roll is 15 or higher, the target is paralyzed."
+        "text": "You fire out an extreme blast of pure electric energy at a creature. Make a ranged attack against a target in range, doing 2d10 + MOVE electric damage. If the natural attack roll is 15 or higher, the target is paralyzed."
       }],
       "verb": null,
       "proper": false,
@@ -1225,19 +1248,51 @@
         }]
       }, {
         "type": "text",
-        "text": "You focus all of your willpower into your head and ram it into an opponent. Make a melee attack, dealing 2d6 + MOVE psychic damage on a hit. If the natural attack roll is 17 or higher, the target flinches."
+        "text": "You focus all of your willpower into your head and ram it into a creature. Make a melee attack, dealing 2d6 + MOVE psychic damage on a hit. If the natural attack roll is 17 or higher, the target flinches."
       }],
       "_v": 2,
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,0)",
+    "attack": "proficiencyBonus+max(SMO,WMO)",
     "damage": {
-      "1": "2d6+{max(SMO,0)}",
-      "5": "2d8+{max(SMO,0)}",
-      "10": "4d6+{max(SMO,0)}",
-      "17": "6d6+{max(SMO,0)}"
+      "1": "2d6+{max(SMO,WMO)}",
+      "5": "2d8+{max(SMO,WMO)}",
+      "10": "4d6+{max(SMO,WMO)}",
+      "17": "6d6+{max(SMO,WMO)}"
     },
     "PP": 10
+  },
+  "Zing Zap": {
+    "code": {
+      "name": "Zing Zap",
+      "automation": [{
+        "type": "target",
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE[Electric]"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "text": "A strong electric blast crashes down on two unique targets in range, giving them an electric shock. make two ranged attacks going 1d10 + MOVE electric damage on a hit. If the natural attack roll is 18 or higher, the target flinches."
+      }],
+      "_v": 2,
+      "proper": false,
+      "verb": null
+    },
+    "attack": "proficiencyBonus+DMO",
+    "damage": {
+      "1": "1d10+{DMO}",
+      "5": "2d8+{DMO}",
+      "10": "4d6+{DMO}",
+      "17": "6d6+{DMO}"
+    },
+    "PP": 5
   }
 }
