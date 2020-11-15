@@ -9,6 +9,7 @@ out.append('-title "On your marks! Get set! Go!"')
 if combat() and combat().me:
     combat().me.set_note("Progress: 0")
     character().create_cc('raceBoosts', minVal = '0', maxVal = constitutionMod, reset = 'none', dispType = 'bubble')
+    character().set_cc('raceBoosts',0)
 out.append(f'''-desc "It's time for the Pokemon Racing League! {name}'s Movement Speed has been set to **{get('raceSpeed')}** feet."''')
 out.append('-f "Rules|The first Pokemon to cross the finish line is the winner!\nBoosting may help your Pokemon get there quicker, but if it becomes too tired to finish, you will be disqualified!\nEvery lap, your Pokemon must beat a DC determined by your Dexterity or Strength score.  The level of success (or failure) determines how much of their speed they move."')
 out.append(f'-f "Instructions|`{ctx.prefix}{ctx.alias}`to run another lap!\n`{ctx.prefix}{ctx.alias} boost` to give your Pokemon a boost!\n`{ctx.prefix}{ctx.alias} end` to finish the race!"')
