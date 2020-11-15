@@ -9,14 +9,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ground]"
+            "damage": "DAMAGE+{SMO}[Ground]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You cause the ground beneath an opponent to erupt with power. Make a ranged attack, dealing 2d8 + MOVE ground damage on a hit. If the natural attack roll is 19 or 20, the next attack against the target is rolled at advantage.\n"
+        "text": "You cause the ground beneath a creature to erupt with power. Make a ranged attack, dealing 2d8 + MOVE ground damage on a hit. If the natural attack roll is 19 or 20, the next attack against the target is rolled at advantage.\n"
       }],
       "_v": 2,
       "proper": true,
@@ -24,10 +24,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d8+{SMO}",
-      "5": "2d10+{SMO}",
-      "10": "3d10+{SMO}",
-      "17": "4d12+{SMO}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 5
   },
@@ -48,7 +48,7 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE [Ground]",
+            "damage": "DAMAGE+{SMO} [Ground]",
             "overheal": false
           }, {
             "type": "ieffect",
@@ -60,7 +60,7 @@
           }],
           "success": [{
             "type": "damage",
-            "damage": "(DAMAGE)/2 [Ground]",
+            "damage": "(DAMAGE+{SMO})/2 [Ground]",
             "overheal": false
           }],
           "dc": "{8+ATTACK}"
@@ -72,10 +72,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "4d4+{SMO}",
-      "5": "2d12+{SMO}",
-      "10": "4d8+{SMO}",
-      "17": "8d6+{SMO}"
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 5
   },
@@ -89,7 +89,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(WMO,ChMO)}[Normal]",
             "overheal": false
           }],
           "miss": [],
@@ -97,7 +97,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You release a shout that echoes across the battlefield towards an opponent. Make a ranged attack, dealing 1d6 + MOVE normal damage on a hit. Until the beginning of your next turn, if any other creature in range uses this move, they may double their damage dice on a hit. This multiplier can continue to stack to a maximum of 8x the damage dice, resetting if any of the attacks miss."
+        "text": "You release a shout that echoes across the battlefield towards a creature. Make a ranged attack, dealing 1d6 + MOVE normal damage on a hit. Until the beginning of your next turn, if any other creature in range uses this move, they may double their damage dice on a hit. This multiplier can continue to stack to a maximum of 8x the damage dice, resetting if any of the attacks miss."
       }],
       "verb": null,
       "proper": false,
@@ -105,10 +105,10 @@
     },
     "attack": "proficiencyBonus+max(WMO,ChMO)",
     "damage": {
-      "1": "1d6+{max(WMO,ChMO)}",
-      "5": "1d12+{max(WMO,ChMO)}",
-      "10": "2d8+{max(WMO,ChMO)}",
-      "17": "4d6+{max(WMO,ChMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 10
   },
@@ -156,7 +156,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+{DMO}[Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -171,10 +171,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "4d4+{DMO}",
-      "5": "2d12+{DMO}",
-      "10": "4d8+{DMO}",
-      "17": "8d6+{DMO}"
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 5
   },
@@ -237,7 +237,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Electric]"
+            "damage": "DAMAGE+{DMO} [Electric]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -252,10 +252,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d6+{DMO}",
-      "5": "1d12+{DMO}",
-      "10": "2d8+{DMO}",
-      "17": "4d6+{DMO}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 5
   },
@@ -269,7 +269,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Electric]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Electric]"
           }, {
             "type": "ieffect",
             "name": "Webbed (Speed Reduced)",
@@ -290,10 +290,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d8+{max(SMO,DMO)}",
-      "5": "2d6+{max(SMO,DMO)}",
-      "10": "4d4+{max(SMO,DMO)}",
-      "17": "3d10+{max(SMO,DMO)}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 10
   },
@@ -318,7 +318,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You surround an opponent in range with a dark aura. Force an opponent to make a WIS save against your Move DC. On a failure, the opponent cannot gain the effect of any held item or trainer item given to it for the duration.\n\n"
+        "text": "You surround an opponent in range with a dark aura. Force a creature to make a WIS save against your Move DC. On a failure, the creature cannot gain the effect of any held item or trainer item given to it for the duration.\n\n"
       }],
       "_v": 2,
       "proper": true,
@@ -336,7 +336,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -351,10 +351,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d12+{max(SMO,DMO)}",
-      "10": "2d8+{max(SMO,DMO)}",
-      "17": "4d6+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 15
   },
@@ -379,7 +379,7 @@
         }]
       }, {
         "type": "text",
-        "text": "After being targeted by a move, force an opponent to make a WIS save against your Move DC as a reaction. On a fail, the target can only use the move that targeted you for its next turn. At level 10, the number of turns an opponent must use the move changes to 2. At level 17, it changes to 3."
+        "text": "After being targeted by a move, force a creature to make a WIS save against your Move DC as a reaction. On a fail, the target can only use the move that targeted you for its next turn. At level 10, the number of turns an opponent must use the move changes to 2. At level 17, it changes to 3."
       }],
       "_v": 2,
       "proper": true,
@@ -405,7 +405,7 @@
         }]
       }, {
         "type": "text",
-        "text": "When you activate this move, select an opponent in range. The opponent must make a WIS saving throw against your Move DC. On a failure, the target’s current HP is reduced to be equal to your own. This move can not be used in the first round of combat."
+        "text": "When you activate this move, select a creature in range. The creature must make a WIS saving throw against your Move DC. On a failure, the target’s current HP is reduced to be equal to your own. This move can not be used in the first round of combat."
       }],
       "_v": 2,
       "proper": true,
@@ -446,7 +446,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Grass]",
+            "damage": "DAMAGE+{max(DMO,WMO)}[Grass]",
             "overheal": false
           }],
           "miss": [],
@@ -454,7 +454,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You draw in power from nature in a concentrated ball that you send towards an opponent. Make a ranged attack, dealing 2d8 + MOVE Grass damage on a hit. On a natural attack roll of 19 or 20, the next attack against the target is rolled at advantage"
+        "text": "You draw in power from nature in a concentrated ball that you send towards a creature. Make a ranged attack, dealing 2d8 + MOVE Grass damage on a hit. On a natural attack roll of 19 or 20, the next attack against the target is rolled at advantage"
       }],
       "verb": "uses",
       "proper": true,
@@ -462,10 +462,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,WMO)",
     "damage": {
-      "1": "2d8+{max(DMO,WMO)}",
-      "5": "2d10+{max(DMOWMO)}",
-      "10": "3d10+{max(DMO,WMO)}",
-      "17": "4d12+{max(DMO,WMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 5
   },
@@ -490,7 +490,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You dance with a strange rhythm that causes an opponent to mimic you. Choose a target in range and force them to make a WIS save against your Move DC. On a failure, choose one of their abilities to replace with one of your own for the duration."
+        "text": "You dance with a strange rhythm that causes a creature to mimic you. Choose a target in range and force it to make a WIS save against your Move DC. On a failure, choose one of its abilities to replace with one of your own for the duration."
       }],
       "_v": 2,
       "proper": true,
@@ -509,7 +509,7 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]"
           }],
           "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
         }]
@@ -522,10 +522,10 @@
       "verb": null
     },
     "damage": {
-      "1": "3d8+{max(SMO,DMO)}",
-      "5": "5d6+{max(SMO,DMO)}",
-      "10": "4d12+{max(SMO,DMO)}",
-      "17": "8d8+{max(SMO,DMO)}"
+      "1": "3d8",
+      "5": "5d6",
+      "10": "4d12",
+      "17": "8d8"
     },
     "PP": 3
   },
@@ -562,14 +562,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Psychic]"
+            "damage": "DAMAGE+{WMO}[Psychic]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You create an irritating, damaging sound in the mind of an opponent. Make a ranged attack roll against an opponent in range, doing 2d6 + MOVE psychic damage on a hit. If the natural attack roll is 19 or 20, the target flinches."
+        "text": "You create an irritating, damaging sound in the mind of a creature. Make a ranged attack roll against a creature in range, doing 2d6 + MOVE psychic damage on a hit. If the natural attack roll is 19 or 20, the target flinches."
       }],
       "_v": 2,
       "proper": true,
@@ -577,10 +577,10 @@
     },
     "attack": "proficiencyBonus+WMO",
     "damage": {
-      "1": "2d6+{WMO}",
-      "5": "2d8+{WMO}",
-      "10": "4d6+{WMO}",
-      "17": "6d6+{WMO}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -642,7 +642,7 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d12+{max(SMO,DMO)}",
+      "1": "1d12",
       "5": "2d8+{max(SMO,DMO)}",
       "10": "2d12+{max(SMO,DMO)}",
       "17": "6d6+{max(SMO,DMO)}"
