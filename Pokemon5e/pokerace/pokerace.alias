@@ -38,7 +38,8 @@ if speed > 0:
             out.append(f'-f "Constitution Save (DC 15): {conSave}|{name} is too tired to keep racing at full speed!\nTheir movement speed is cut in half for the next turn."')
     else:
         out.append(f'-desc "**DC:** {DC} {raceRoll.result}"')
-        character().mod_cc(boosts, 1)
+        if not boosted:
+            character().mod_cc(boosts, 1)
     progress += tally
 else:
     out.append(f'-title "{name} is catching their breath."')
