@@ -45,7 +45,7 @@ else:
 combat().me.set_note(f'Progress: {progress}')
 out.append(f'-f "Lap # {combat().round_num}:|{name} moves forward {tally} feet!"')
 out.append(f'''-f "Progress:|{combat().me.note[combat().me.note.index(' '):]} feet|inline"''')
-out.append(f'''-f "Boosts / Movement Speed:|{'🥕'*character().get_cc(boosts) or 'None'} / {get('turnSpeed',get('raceSpeed')} feet|inline"''')
+out.append(f'''-f "Boosts / Movement Speed:|{'🥕'*character().get_cc(boosts) or 'None'} / {get('turnSpeed',get('raceSpeed'))} feet|inline"''')
 return " ".join(out)
 </drac2>
 -thumb <image> -color <color>
