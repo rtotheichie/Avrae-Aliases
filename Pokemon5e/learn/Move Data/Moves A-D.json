@@ -1106,25 +1106,13 @@
           "hit": [{
             "type": "damage",
             "damage": "DAMAGE+{max(SMO,DMO)}[Flying]"
-          }, {
-            "type": "save",
-            "stat": "dex",
-            "fail": [{
-              "type": "ieffect",
-              "name": "Burned",
-              "duration": "-1",
-              "effects": "",
-              "end": false
-            }],
-            "success": [],
-            "dc": "{8+ATTACK}"
-          }],
+          },
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You heat up your beak and strike out at a target. When you activate this move, you spend your action to charge up your beak. On your next turn, spend an action to make a melee attack on a creature, dealing 3d8 + MOVE flying damage on a hit, and forcing the target to make a DEX save against your Move DC or become burned."
+        "text": "You heat up your beak and strike out at a target.  If you are hit with a melee attack before the action of your next turn, the target is burned. On your next turn, spend an action to make a melee attack on a creature, dealing 3d8 + MOVE flying damage on a hit."
       }],
       "_v": 2,
       "proper": true,
@@ -2437,7 +2425,7 @@
             "type": "ieffect",
             "name": "Charmed",
             "duration": "10",
-            "effects": "-b -2",
+            "effects": "-b EFFECT",
             "end": true,
             "conc": false
           }],
@@ -2446,11 +2434,17 @@
         }]
       }, {
         "type": "text",
-        "text": "You attempt to charm an opponent, sharply decreasing its attack. A target you choose in range must make a WIS save against your Move DC. On a fail, the target adds -2 to all attacks against you for the duration."
+        "text": "You attempt to charm a creature, sharply decreasing its attack. A target you choose in range must make a WIS save against your Move DC. On a fail, the target adds -2 to all attacks against you for the duration."
       }],
       "verb": "attempts to",
       "proper": true,
       "_v": 2
+    },
+    "effect": {
+      "1": "-2",
+      "5": "-3",
+      "10": "-4",
+      "17": "-5"
     },
     "PP": 10
   },
@@ -2477,7 +2471,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You shout a series of disorienting words at an opponent, scrambling their senses. Make a ranged attack. On a hit, deal 1d10 + MOVE flying damage and cause the target to become confused."
+        "text": "You shout a series of disorienting words at a creature, scrambling their senses. Make a ranged attack. On a hit, deal 1d10 + MOVE flying damage and cause the target to become confused."
       }],
       "_v": 2,
       "proper": true,
@@ -2502,7 +2496,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -2520,10 +2514,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d12+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "2d12+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -2537,7 +2531,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]",
+            "damage": "DAMAGE+{SMO}[Fighting]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -2547,7 +2541,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You swing the opponent around and throw it as hard as you can, away from the battlefield. Make a melee attack, dealing 4d4 + MOVE fighting damage on a hit. In wild battles, the target takes the damage and flees from battle if its level is lower than that of the user. In trainer battles, the target takes the damage and must be immediately switched out for another creature in the trainer's party, if any remain."
+        "text": "You swing the target around and throw it as hard as you can, away from the battlefield. Make a melee attack, dealing 4d4 + MOVE fighting damage on a hit. In wild battles, the target takes the damage and flees from battle if its level is lower than that of the user. In trainer battles, the target takes the damage and must be immediately switched out for another creature in the trainer's party, if any remain."
       }],
       "verb": null,
       "proper": false,
@@ -2555,10 +2549,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d10+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "5d4+{SMO}",
-      "17": "4d8+{SMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 5
   },
@@ -2572,13 +2566,19 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Water]"
+            "damage": "DAMAGE+{SMO}[Water]"
           }, {
-            "type": "ieffect",
-            "name": "Grappled",
-            "duration": "11",
-            "effects": "",
-            "end": false
+            "type": "save",
+            "stat": "str",
+            "fail": [{
+              "type": "ieffect",
+              "name": "Grappled",
+              "duration": "-1",
+              "effects": "Grappled",
+              "end": false
+            }],
+            "success": [],
+            "dc": "{8+ATTACK}"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -2593,12 +2593,48 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d6+{SMO}",
-      "5": "1d10+{SMO}",
-      "10": "2d8+{SMO}",
-      "17": "5d4+{SMO}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 10
+  },
+  "Clanging Scales": {
+    "code": {
+      "name": "Clanging Scales",
+      "automation": [{
+        "type": "target",
+        "target": "all",
+        "effects": [{
+          "type": "save",
+          "stat": "con",
+          "fail": [{
+            "type": "damage",
+            "damage": "DAMAGE+{max(SMO,WMO)}[Dragon]"
+          }],
+          "success": [{
+            "type": "damage",
+            "damage": "(DAMAGE+{max(SMO,WMO)})/2[Dragon]"
+          }],
+          "dc": "{8+ATTACK}"
+        }]
+      }, {
+        "type": "text",
+        "text": "You slam your scaled hands together to create an intense, sound-based shockwave in a 30 foot cone in front of you. Any creature caught in the blast must make a CON save against your Move DC, taking 3d6 + MOVE dragon damage on a failure, or half as much on a success. Creatures that fail the save by 5 or more reduce their AC by 1 for the remainder of combat."
+      }],
+      "_v": 2,
+      "proper": false,
+      "verb": null
+    },
+    "attack": "proficiencyBonus+max(SMO,WMO)",
+    "damage": {
+      "1": "3d6",
+      "5": "3d8",
+      "10": "6d6",
+      "17": "7d8"
+    },
+    "PP": 3
   },
   "Clear Smog": {
     "code": {
@@ -2610,7 +2646,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Poison]"
+            "damage": "DAMAGE+{max(DMO,CoMO)}[Poison]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -2625,10 +2661,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,CoMO)",
     "damage": {
-      "1": "1d8+{max(DMO,CoMO)}",
-      "5": "2d6+{max(DMO,CoMO)}",
-      "10": "4d4+{max(DMO,CoMO)}",
-      "17": "3d10+{max(DMO,CoMO)}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 10
   },
@@ -2642,11 +2678,21 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
-          }],
+            "damage": "DAMAGE+{SMO}[Fighting]"
+          }, {
+          "type": "ieffect",
+          "name": "Open Enemy (Advantage against target)",
+          "duration": "1",
+          "effects": "",
+          "end": true,
+          "conc": false
+        }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
+      }],{
+        "type": "text",
+        "text": "You get in close for a devastating strike, sacrificing your defenses. Make a melee attack on a creature, dealing 2d10 + MOVE fighting damage on a hit. After activating this move, the target has advantage on any attack it makes against you before the beginning of your next turn."
       }],
       "_v": 2,
       "proper": true,
@@ -2654,10 +2700,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d10+{SMO}",
-      "5": "3d8+{SMO}",
-      "10": "4d10+{SMO}",
-      "17": "7d8+{SMO}"
+      "1": "2d10",
+      "5": "3d8",
+      "10": "4d10",
+      "17": "7d8"
     },
     "PP": 3
   },
@@ -2703,7 +2749,7 @@
           }],
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -2721,10 +2767,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d4+{max(SMO,DMO)}",
-      "5": "1d6+{max(SMO,DMO)}",
-      "10": "1d8+{max(SMO,DMO)}",
-      "17": "2d6+{max(SMO,DMO)}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d8",
+      "17": "2d6"
     },
     "PP": 10
   },
@@ -2745,7 +2791,7 @@
             "end": true
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(WMO,ChMO)}"
+          "dc": "{8+ATTACK)}"
         }]
       }, {
         "type": "text",
@@ -2755,6 +2801,7 @@
       "proper": true,
       "verb": null
     },
+    "attack": "proficiencyBonus+max(WMO,ChMO)",
     "PP": 10
   },
   "Confuse Ray": {
@@ -2764,6 +2811,18 @@
         "type": "target",
         "target": "each",
         "effects": [{
+          "type": "attack",
+          "hit": [{
+            "type": "ieffect",
+            "name": "Confused",
+            "duration": "3",
+            "effects": "",
+            "end": false
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }
           "type": "ieffect",
           "name": "Confused",
           "duration": "3",
@@ -2772,12 +2831,13 @@
         }]
       }, {
         "type": "text",
-        "text": " You target an opponent in range with a sinister ray of ghostly light. The target becomes confused."
+        "text": " You target a creature in range with a sinister ray of ghostly light. Make a ranged attack against a creature. On a hit, they become confused."
       }],
       "verb": null,
       "proper": true,
       "_v": 2
     },
+    "attack": "proficiencyBonus+max(WMO,IMO)",    
     "PP": 5
   },
   "Confusion": {
@@ -2790,7 +2850,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Psychic]",
+            "damage": "DAMAGE+{max(IMO,WMO)}[Psychic]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -2800,7 +2860,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You attempt to enter the mind of an enemy and cause confusion. Make a ranged attack on a Pokémon in range. On a hit, the target takes 1d8 + MOVE psychic damage. If the natural attack roll is 15 or more, the target becomes confused."
+        "text": "You attempt to enter the mind of a target and cause confusion. Make a ranged attack on a Pokémon in range. On a hit, the target takes 1d8 + MOVE psychic damage. If the natural attack roll is 15 or more, the target becomes confused."
       }],
       "verb": null,
       "proper": true,
@@ -2808,10 +2868,10 @@
     },
     "attack": "proficiencyBonus+max(IMO,WMO)",
     "damage": {
-      "1": "1d8+{max(IMO,WMO)}",
-      "5": "2d6+{max(IMO,WMO)}",
-      "10": "4d4+{max(IMO,WMO)}",
-      "17": "3d10+{max(IMO,WMO)}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 15
   },
@@ -2825,13 +2885,19 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Normal]"
+            "damage": "DAMAGE+{SMO}[Normal]"
           }, {
-            "type": "ieffect",
-            "name": "Grappled",
-            "duration": "-1",
-            "effects": "",
-            "end": false
+            "type": "save",
+            "stat": "str",
+            "fail": [{
+              "type": "ieffect",
+              "name": "Grappled",
+              "duration": "-1",
+              "effects": "Grappled",
+              "end": false
+            }],
+            "success": [],
+            "dc": "{8+ATTACK}"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -2846,10 +2912,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d4+{SMO}",
-      "5": "2d4+{SMO}",
-      "10": "1d12+{SMO}",
-      "17": "4d4+{SMO}"
+      "1": "1d4",
+      "5": "2d4",
+      "10": "1d12",
+      "17": "4d4"
     },
     "PP": 15
   },
@@ -4602,19 +4668,13 @@
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [{
-            "type": "roll",
-            "dice": "1d4",
-            "name": "Rounds",
-            "hidden": true
-          }],
           "hit": [{
             "type": "damage",
             "damage": "DAMAGE[Fighting]"
           }, {
             "type": "ieffect",
             "name": "Confused",
-            "duration": "{Rounds}",
+            "duration": "3",
             "effects": "",
             "end": false
           }],
