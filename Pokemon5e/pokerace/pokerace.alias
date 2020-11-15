@@ -9,6 +9,7 @@ DC = 15-max(strengthMod,dexterityMod)
 boosted = booster and get_cc(boosts)
 exhausted = 0
 out=[]
+tally=0
 if speed > 0:
     out.append(f'-title "{name} races around the track!"')
     raceRoll = vroll("1d20")
