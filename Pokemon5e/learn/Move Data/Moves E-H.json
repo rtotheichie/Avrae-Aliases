@@ -10,14 +10,7 @@
           "hit": [{
             "type": "damage",
             "damage": "DAMAGE[Ground]"
-          }],
-          "miss": [],
-          "attackBonus": "ATTACK"
-        }]
-      }, {
-        "type": "text",
-        "text": "You cause the ground beneath an opponent to erupt with power. Make a ranged attack, dealing 2d8 + MOVE ground damage on a hit. If the natural attack roll is 19 or 20, the next attack against the target is rolled at advantage.\n"
-      }],
+          },
       "_v": 2,
       "proper": true,
       "verb": null
@@ -31,6 +24,7 @@
     },
     "PP": 5
   },
+                  "text": "You cause the ground beneath a creature to erupt with power. Make a ranged attack, dealing 2d8 + MOVE ground damage on a hit. If the natural attack roll is 19 or 20, the next attack against the target is rolled at advantage."
   "Earthquake": {
     "code": {
       "name": "Earthquake",
