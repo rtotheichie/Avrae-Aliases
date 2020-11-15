@@ -30,13 +30,17 @@ if speed > 0:
         if not character().get_cc(boosts):
             exhausted = 1
         if exhausted:
-            if conSave.result.crit == 2:
+            if conSave.total < 15:
                 character().set_cvar('turnSpeed', '0')
-                out.append(f'''-f "Constitution Save (DC 15): {conSave}|{name} is exhausted and cannot continue the race!"''')
-        if conSave.total < 15:
+                out.append(f'''-f "Constitution Save (DC 15): {conSave}|{name} is exhausted and needs to take a break!"''')
+            else:
+                out.append(f'''-f "Constitution Save (DC 15): {conSave}|{name} is still holding on!"''')
+        elif conSave.total < 15:
             speed = int(get('raceSpeed', 0))
             character().set_cvar('turnSpeed', f'{speed//2}')
             out.append(f'-f "Constitution Save (DC 15): {conSave}|{name} is too tired to keep racing at full speed!\nTheir movement speed is cut in half for the next turn."')
+        else:
+            out.append(f'''-f "Constitution Save (DC 15): {conSave}|{name} is holding steady!"''')
     else:
         out.append(f'-desc "**DC:** {DC} {raceRoll.result}"')
         if not boosted:
