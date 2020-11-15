@@ -1141,7 +1141,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Bug]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Bug]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -1156,10 +1156,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d6+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "4d6+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -1205,7 +1205,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Electric]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Electric]",
             "overheal": false
           }],
           "miss": [],
@@ -1221,10 +1221,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d10+{max(SMO,DMO)}",
-      "5": "3d8+{max(SMO,DMO)}",
-      "10": "4d10+{max(SMO,DMO)}",
-      "17": "7d8+{max(SMO,DMO)}"
+      "1": "2d10",
+      "5": "3d8",
+      "10": "4d10",
+      "17": "7d8"
     },
     "PP": 3
   },
@@ -1238,7 +1238,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Psychic]"
+            "damage": "DAMAGE+{max(SMO,WMO)}[Psychic]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -1253,10 +1253,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,WMO)",
     "damage": {
-      "1": "2d6+{max(SMO,WMO)}",
-      "5": "2d8+{max(SMO,WMO)}",
-      "10": "4d6+{max(SMO,WMO)}",
-      "17": "6d6+{max(SMO,WMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -1270,14 +1270,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Electric]"
+            "damage": "DAMAGE+{DMO}[Electric]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "A strong electric blast crashes down on two unique targets in range, giving them an electric shock. make two ranged attacks going 1d10 + MOVE electric damage on a hit. If the natural attack roll is 18 or higher, the target flinches."
+        "text": "A strong electric blast crashes down on two unique targets in range, giving them an electric shock. Make two ranged attacks going 1d10 + MOVE electric damage on a hit. If the natural attack roll is 18 or higher, the target flinches."
       }],
       "_v": 2,
       "proper": false,
@@ -1285,10 +1285,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d10+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "4d6+{DMO}",
-      "17": "6d6+{DMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 5
   }
