@@ -4022,7 +4022,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Fighting]"
+            "damage": "DAMAGE+{max(DMO,SMO)}[Fighting]"
           }, {
             "type": "ieffect",
             "name": "Broken Defense",
@@ -4043,10 +4043,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,SMO)",
     "damage": {
-      "1": "2d8+{max(DMO,SMO)}",
-      "5": "2d10+{max(DMO,SMO)}",
-      "10": "3d10+{max(DMO,SMO)}",
-      "17": "4d12+{max(DMO,SMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 5
   },
@@ -4067,16 +4067,17 @@
             "end": true
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+DMO}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "text": "You turn your melee attack into a playful tickle. As a bonus action at the end of a turn in which you used a melee attack, force an opponent to make a CON saving throw against your Move DC. On a failure, the target flinches."
+        "text": "You turn your melee attack into a playful tickle. As a bonus action at the end of a turn in which you used a melee attack, force a creature to make a CON saving throw against your Move DC. On a failure, the target flinches."
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
+    "attack": "proficiencyBonus+DMO",
     "PP": 10
   },
   "Topsy-Turvy": {
@@ -4091,21 +4092,22 @@
           "fail": [{
             "type": "ieffect",
             "name": "Opposite Stat changes",
-            "duration": "1",
+            "duration": "-1",
             "effects": "",
-            "end": true
+            "end": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+WMO}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "text": "You unleash a dark energy that has the power to reverse the stat changes of an opponent. Force a creature in range to make a CHA save against your Move DC. On a failure, any stat changes (-1 to attack, +2 to AC, etc.) currently affecting the target have the opposite effect."
+        "text": "You unleash a dark energy that has the power to reverse the stat changes of a creature. Force a creature in range to make a CHA save against your Move DC. On a failure, any stat changes (-1 to attack, +2 to AC, etc.) currently affecting the target have the opposite effect."
       }],
       "_v": 2,
       "proper": true,
       "verb": "uses"
     },
+    "attack": "proficiencyBonus+WMO",
     "PP": 10
   },
   "Torment": {
@@ -4117,18 +4119,25 @@
         "effects": [{
           "type": "save",
           "stat": "wis",
-          "fail": [],
+          "fail": [{
+            "type": "ieffect",
+            "name": "Tormented",
+            "duration": "2",
+            "effects": "",
+            "end": true
+          }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(DMO,WMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "text": "You send a dark energy to torment an opponent in range that attacks you. When hit by a melee or ranged attack, force the opponent to make a WIS saving throw against your Move DC. On a failure, the opponent cannot use the same move that hit you on its next turn."
+        "text": "You send a dark energy to torment a creature in range that attacks you. When hit by a melee or ranged attack, force the target to make a WIS saving throw against your Move DC. On a failure, the target cannot use the same move that hit you on its next turn."
       }],
       "_v": 2,
       "proper": true,
       "verb": "uses"
     },
+    "attack": "proficiencyBonus+max(DMO,WMO)",
     "PP": 3
   },
   "Toxic": {
@@ -4148,16 +4157,17 @@
             "end": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+CoMO}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "text": "You send a downpour of potent, poisonous rain in a 5 foot radius, centered on a point within range. Targets in the area must make a CON save against your MOVE DC or become poisoned. Pokémon poisoned by this move takes double the normal poison damage.\n"
+        "text": "You send a downpour of potent, poisonous rain in a 5 foot radius, centered on a point within range. Targets in the area must make a CON save against your MOVE DC or become poisoned. Pokémon poisoned by this move takes double the normal poison damage."
       }],
       "verb": "",
       "proper": true,
       "_v": 2
     },
+    "attack": "proficiencyBonus+CoMO",
     "PP": 5
   },
   "Toxic Spikes": {
@@ -4178,18 +4188,54 @@
             "conc": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(CoMO,DMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "text": "You quickly summon a trap of poisonous spikes around an opponent that enters the battle. When a creature is switched into battle, you may use your reaction to force an opponent to make a CON save against your Move DC, becoming poisoned on a failure."
+        "text": "You quickly summon a trap of poisonous spikes around a creature that enters the battle. When a creature is switched into battle, you may use your reaction to force a creature to make a CON save against your Move DC, becoming poisoned on a failure."
       }],
       "verb": "uses",
       "proper": true,
       "_v": 2
     },
+    "attack": "proficiencyBonus+max(CoMO,DMO)",
     "PP": 3
   },
+  "Toxic Thread": {
+    "code": {
+      "name": "Toxic Thread",
+      "automation": [{
+        "type": "target",
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "hit": [{
+            "type": "ieffect",
+            "name": "Poisoned",
+            "duration": "-1",
+            "effects": "",
+            "end": false,
+          }, {
+            "type": "ieffect",
+            "name": "Speed -10",
+            "duration": "-1",
+            "effects": "",
+            "end": false
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK",
+        }]
+        }, {
+          "type": "text",
+          "text": "You fire a collection of poisonous threads at a creature in range. Make a ranged attack roll against a target, covering them with threads on a hit. So long as the threads make contact with the target, the target is poisoned and its speed is reduced by 10. This move is stackable to any amount however the poison effect does not affect the target more than once. If this reduction of speed causes their speed to be 0, the target is restrained. The target may use an action to remove the threads from its body, healing the poisoned status."
+        }],
+        "v-2": 2,
+        "proper": false,
+        "verb": null
+      },
+      "attack": "proficiencyBonus+DMO",
+      "PP": 15
+  },                     
   "Transform": {
     "code": {
       "name": "Transform",
@@ -4206,7 +4252,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You attempt to morph into a near-exact copy of a creature in range, as long as the base SR of the target is able to be controlled by your trainer. For the duration, you copy all of the target's stats and current moves, keeping your own HP and level.\n\nCodes:\n!ms score Pokémon -b #\n"
+        "text": "You attempt to morph into a near-exact copy of a creature in range, as long as the base SR of the target is able to be controlled by your trainer. For the duration, you copy all of the target's type, ability scores, skills, speeds, senses,abilities and current moves. You retain your own feats, level and HP (Changed CON does not impact your HP). Codes: !ms score Pokémon -b #"
       }],
       "verb": "uses",
       "proper": true,
@@ -4231,19 +4277,19 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "{damage}+{max(SMO,DMO)}+6 [Normal]",
+            "damage": "{damage}+{max(SMO,DMO)} [Normal]",
             "overheal": false
           }],
           "success": [{
             "type": "damage",
-            "damage": "({damage}+{max(SMO,DMO)}+6)/2 [Normal]",
+            "damage": "({damage}+{max(SMO,DMO)})/2 [Normal]",
             "overheal": false
           }],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
-        "text": "You strike with a simultaneous three-beam attack. Each creature in a 30 foot cone, centered on you, must make a DEX save against your Move DC, taking 2d6 + MOVE normal damage on a fail, and half as much on a success. Targets that fail the save by more than 5 must roll a d4, gaining the status condition as follows: 1. The target becomes burned. 2. The target becomes frozen. 3. The target becomes paralyzed. 4. Must reroll until any number other than 4 appears.\n"
+        "text": "You strike with a simultaneous three-beam attack. Each creature in a 30 foot cone, centered on you, must make a DEX save against your Move DC, taking 2d6 + MOVE normal damage on a fail, and half as much on a success. Targets that fail the save by more than 5 must roll a d4, gaining the status condition as follows: 1. The target becomes burned. 2. The target becomes frozen. 3. The target becomes paralyzed. 4. Must reroll until any number other than 4 appears."
       }],
       "verb": null,
       "proper": true,
@@ -4255,6 +4301,7 @@
       "10": "4d6",
       "17": "6d6"
     },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "PP": 5
   },
   "Trick": {
@@ -4274,7 +4321,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You move quickly to attempt to swap held items with an opponent. Make a melee attack roll against an opponent, swapping held items with them on a hit."
+        "text": "You move quickly to attempt to swap held items with a creature. Make a melee attack roll against a creature, swapping held items with them on a hit."
       }],
       "_v": 2,
       "proper": true,
@@ -4316,7 +4363,7 @@
             "end": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(WMO,ChMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -4326,6 +4373,7 @@
       "proper": true,
       "verb": "uses"
     },
+    "attack": "proficiencyBonus+max(WMO,ChMO)",
     "PP": 5
   },
   "Triple Kick": {
@@ -4338,7 +4386,21 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]",
+            "type": "attack",
+            "hit": [{
+              "type": "damage",
+              "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]",
+              "type": "attack",
+              "hit": [{
+                "type": "damage",
+                "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]"
+              }],
+              "miss": [],
+              "attackBonus": "ATTACK"
+            }],
+            "miss": [],
+            "attackBonus": "ATTACK"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -4353,12 +4415,44 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d4+{max(SMO,DMO)}",
-      "5": "1d6+{max(SMO,DMO)}",
-      "10": "1d8+{max(SMO,DMO)}",
-      "17": "2d6+{max(SMO,DMO)}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d8",
+      "17": "2d6"
     },
     "PP": 5
+  },
+  "Trop Kick": {
+    "code": {
+      "name": "Trop Kick",
+      "automation": [{
+        "type": "target",
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Grass]"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "text": "You attempt to land an intense kick of tropical origins on the target. Make a melee attack, dealing 1d12 + MOVE grass damage on a hit. On a natural roll of 16 or more, the target adds -1 to any attack it makes for the remainder of combat. This modifier can be stacked up to a maximum of -5."
+      }],
+      "_v": 2,
+      "proper": true,
+      "verb": null
+    },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
+    "damage": {
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
+    },
+    "PP": 10
   },
   "Trump Card": {
     "code": {
@@ -4370,14 +4464,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You strike out with a blast of energy that increases in strength the more it is used. Make a ranged attack on an opponent, dealing 1d6 + MOVE normal damage on a hit. Increase the damage by your Move modifier for each PP that has been expended for the move, before the move was activated. Using a restorative to regain PP resets the damage for this attack."
+        "text": "You strike out with a blast of energy that increases in strength the more it is used. Make a ranged attack on a creature, dealing 1d6 + MOVE normal damage on a hit. Increase the damage by your Move modifier for each PP that has been expended for the move, before the move was activated. Using a restorative to regain PP resets the damage for this attack."
       }],
       "_v": 2,
       "proper": true,
@@ -4385,10 +4479,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d4+{max(SMO,DMO)}",
-      "5": "1d8+{max(SMO,DMO)}",
-      "10": "2d6+{max(SMO,DMO)}",
-      "17": "4d6+{max(SMO,DMO)}"
+      "1": "1d4",
+      "5": "1d8",
+      "10": "2d6",
+      "17": "4d6"
     },
     "PP": 5
   },
@@ -4402,7 +4496,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Bug]",
+            "damage": "DAMAGE+{DMO}[Bug]",
             "overheal": false
           }],
           "miss": [],
@@ -4410,7 +4504,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You fire two sharp projectiles at creature in range. They do not have to target the same opponent. Make two ranged attack rolls, dealing 1d4 + MOVE bug damage on each hit. If the natural roll of either attack is a 19 or 20, the target is poisoned."
+        "text": "You fire two sharp projectiles at a creature in range. They do not have to target the same creature. Make two ranged attack rolls, dealing 1d4 + MOVE bug damage on each hit. If the natural roll of either attack is a 19 or 20, the target is poisoned."
       }],
       "verb": "",
       "proper": true,
@@ -4418,10 +4512,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d4+{DMO}",
-      "5": "2d4+{DMO}",
-      "10": "1d12+{DMO}",
-      "17": "4d4+{DMO}"
+      "1": "1d4",
+      "5": "2d4",
+      "10": "1d12",
+      "17": "4d4"
     },
     "PP": 5
   },
@@ -4435,7 +4529,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dragon]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Dragon]",
             "overheal": false
           }],
           "miss": [],
@@ -4443,7 +4537,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You send a gust of swirling wind that tears through an opponent. Make a ranged attack on an opponent, doing 1d6 + MOVE dragon damage on a hit. If the natural attack roll is 16 or higher, the opponent flinches."
+        "text": "You send a gust of swirling wind that tears through a creature. Make a ranged attack on a creature, doing 1d6 + MOVE dragon damage on a hit. If the natural attack roll is 16 or higher, the target flinches."
       }],
       "verb": null,
       "proper": false,
@@ -4451,10 +4545,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d12+{max(SMO,DMO)}",
-      "10": "2d8+{max(SMO,DMO)}",
-      "17": "4d6+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 10
   }
