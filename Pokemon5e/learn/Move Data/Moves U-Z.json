@@ -9,7 +9,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Bug]"
+            "damage": "DAMAGE+{DMO}[Bug]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -22,12 +22,12 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(DMO,DMO)",
+    "attack": "proficiencyBonusDMO",
     "damage": {
-      "1": "1d12+{max(DMO,DMO)}",
-      "5": "2d8+{max(DMO,DMO)}",
-      "10": "2d12+{max(DMO,DMO)}",
-      "17": "6d6+{max(DMO,DMO)}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 3
   },
@@ -56,11 +56,11 @@
           "stat": "con",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]",
             "overheal": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }],
       "verb": null,
@@ -68,11 +68,12 @@
       "_v": 2
     },
     "damage": {
-      "1": "2d8+{max(SMO,DMO)}",
-      "5": "2d10+{max(SMO,DMO)}",
-      "10": "3d10+{max(SMO,DMO)}",
-      "17": "4d12+{max(SMO,DMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "PP": 5
   },
   "V-Create": {
@@ -88,7 +89,7 @@
             "damage": "DAMAGE[Fire]"
           }],
           "miss": [],
-          "attackBonus": "ATTACK+{max(SMO,DMO)"
+          "attackBonus": "ATTACK"
         }]
       }, {
         "type": "target",
@@ -111,7 +112,7 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "3d10}",
+      "1": "3d10",
       "5": "6d6",
       "10": "8d6",
       "17": "7d12"
@@ -345,7 +346,7 @@
       "proper": false,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(DMO,DMO)",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d12",
       "5": "2d8",
@@ -371,7 +372,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You rush forward in a flash of electricity with extended reach, slamming into a creatuew. When activating this move, gain an additional 15 feet of movement and make a melee attack roll against an opponent, dealing 2d10 + Move electric damage on a hit. On a hit, you also take a quarter of the total (rounded down) in typeless recoil damage."
+        "text": "You rush forward in a flash of electricity with extended reach, slamming into a creature. When activating this move, gain an additional 15 feet of movement and make a melee attack roll against an opponent, dealing 2d10 + Move electric damage on a hit. On a hit, you also take a quarter of the total (rounded down) in typeless recoil damage."
       }],
       "_v": 2,
       "proper": true,
@@ -636,7 +637,7 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "{damage}+{max(SMO,DMO)} [Water]"
+            "damage": "{DAMAGE}+{max(SMO,DMO)} [Water]"
           }, {
             "type": "ieffect",
             "name": "Proned",
@@ -646,7 +647,7 @@
           }],
           "success": [{
             "type": "damage",
-            "damage": "({damage}+{max(SMO,DMO)})/2 [Water]"
+            "damage": "({DAMAGE}+{max(SMO,DMO)})/2 [Water]"
           }],
           "dc": "{8+ATTACK}"
         }]
@@ -1042,7 +1043,7 @@
             "end": true
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(DMO,ChMO)}"
+          "dc": "{8+ATTACK}"
         }]
       }, {
         "type": "text",
@@ -1052,6 +1053,7 @@
       "proper": true,
       "verb": null
     },
+    "attack": "proficiencyBonus+max(DMO,ChMO)",
     "PP": 5
   },
   "Wrap": {
