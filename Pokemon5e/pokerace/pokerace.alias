@@ -34,7 +34,8 @@ if speed > 0:
                 character().set_cvar('turnSpeed', '0')
                 out.append(f'''-f "Constitution Save (DC 15): {conSave}|{name} is exhausted and cannot continue the race!"''')
         if conSave.total < 15:
-            character().set_cvar('turnSpeed', f'{int(get('raceSpeed',0))//2}')
+            speed = get('raceSpeed', 0)
+            character().set_cvar('turnSpeed', f'{speed//2}')
             out.append(f'-f "Constitution Save (DC 15): {conSave}|{name} is too tired to keep racing at full speed!\nTheir movement speed is cut in half for the next turn."')
     else:
         out.append(f'-desc "**DC:** {DC} {raceRoll.result}"')
