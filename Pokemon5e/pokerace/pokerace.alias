@@ -1,6 +1,9 @@
 embed <drac2>
 args = &ARGS&
-speed = int(get('turnSpeed','raceSpeed'))
+if turnSpeed:
+    speed = int(get('turnSpeed',""))
+else:
+    speed=int(get('raceSpeed',0))
 character().delete_cvar('turnSpeed')
 progress = int(combat().me.note[combat().me.note.index(" "):])
 boosts = 'raceBoosts'
