@@ -1,6 +1,7 @@
 embed <drac2>
 args = &ARGS&
-speed = int(get('raceSpeed',0))
+speed = int(get('turnSpeed','raceSpeed'))
+character().delete_cvar('turnSpeed')
 progress = int(combat().me.note[combat().me.note.index(" "):])
 boosts = 'raceBoosts'
 booster = 'boost' in args
@@ -8,45 +9,43 @@ DC = 15-max(strengthMod,dexterityMod)
 boosted = booster and get_cc(boosts)
 exhausted = 0
 out=[]
-out.append(f'-title "{name} races around the track!"')
-raceRoll = vroll("1d20")
-tally = 0
-if raceRoll.result.crit==1:
-    tally = speed*2
-elif raceRoll.total >= DC:
-    tally = speed
-elif raceRoll.total == 1:
+if speed > 0:
+    out.append(f'-title "{name} races around the track!"')
+    raceRoll = vroll("1d20")
     tally = 0
-else:
-    tally = speed//2
-if boosted:
-    if tally:
-        tally +=max(strength,dexterity)
-    character().mod_cc(boosts, -1)
-    out.append(f'-desc "**DC:** {DC} {raceRoll.result}\n{name} uses a boost to add an extra {max(strength,dexterity)} feet to their speed!"')
-    if not character().get_cc(boosts):
-        exhausted = 1
-        out.append ('-f "They are out of boosts!"')
-else:
-    out.append(f'-desc "**DC:** {DC} {raceRoll.result}"')
-progress += tally
-if exhausted:
-    conSave = combat().me.save('con')
-    if conSave.result.crit == 1:
-        character().set_cc(boosts, constitutionMod//2)
-        out.append(f'-f "Consitution Save (DC 15): {conSave}|They dug deep and found more energy!"')
-    elif 10 < conSave.total < 15:
-        character().set_cvar('raceSpeed', int(get('raceSpeed'))//2)
-        out.append(f'-f "Constitution Save (DC 15): {conSave}|{name} is too tired to keep racing at full speed!\nTheir movement speed is cut in half for the remainder of the race!"')
-    elif conSave.total < 10:
-        out.append(f'''-f "Constitution Save (DC 15): {conSave}|{name} is exhausted and cannot continue the race!"''')
-        character().set_cvar('raceSpeed', 0)
+    if raceRoll.result.crit==1:
+        tally = speed*2
+    elif raceRoll.total >= DC:
+        tally = speed
+    elif raceRoll.total == 1:
+        tally = 0
     else:
-        out.append(f'-f "Constiution Save (DC 15): {conSave}|{name} keeps racing at full spped!"')
+        tally = speed//2
+    if boosted:
+        if tally:
+            tally += max(strength,dexterity)
+        character().mod_cc(boosts, -1)
+        out.append(f'-desc "**DC:** {DC} {raceRoll.result}\n{name} uses a boost to add an extra {max(strength,dexterity)} feet to their speed!"')
+        conSave = combat().me.save('con')
+        if not character().get_cc(boosts):
+            exhausted = 1
+        if exhausted:
+            if conSave.result.crit == 2:
+                character().set_cvar('turnSpeed', '0')
+                out.append(f'''-f "Constitution Save (DC 15): {conSave}|{name} is exhausted and cannot continue the race!"''')
+        if conSave.total < 15:
+            character().set_cvar('turnSpeed', f'{speed//2}')
+            out.append(f'-f "Constitution Save (DC 15): {conSave}|{name} is too tired to keep racing at full speed!\nTheir movement speed is cut in half for the next turn."')
+    else:
+        out.append(f'-desc "**DC:** {DC} {raceRoll.result}"')
+        character().mod_cc(boosts, 1)
+    progress += tally
+else:
+    out.append(f'-title "{name} is catching their breath."')
 combat().me.set_note(f'Progress: {progress}')
 out.append(f'-f "Lap # {combat().round_num}:|{name} moves forward {tally} feet!"')
 out.append(f'''-f "Progress:|{combat().me.note[combat().me.note.index(' '):]} feet|inline"''')
-out.append(f'''-f "Boosts / Movement Speed:|{'🥕'*character().get_cc(boosts) or 'None'} / {get('raceSpeed')} feet|inline"''')
+out.append(f'''-f "Boosts / Movement Speed:|{'🥕'*character().get_cc(boosts) or 'None'} / {get('turnSpeed','raceSpeed')} feet|inline"''')
 return " ".join(out)
 </drac2>
 -thumb <image> -color <color>
