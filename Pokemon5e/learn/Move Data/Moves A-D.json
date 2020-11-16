@@ -2934,33 +2934,33 @@
         }]
       }, {
         "type": "text",
-        "text": "You take on a new type for resistances/vulnerabilities/immunities, equal to one of the types of a move you currently know for the duration. \nUse `!protean Type` (capital is important)"
+        "text": "Until the beginning of your next turn, take on a new type for resistances/vulnerabilities/immunities equal to one of the types of a move you currently know. \nUse `!protean Type` (capital is important)"
       }],
       "_v": 2,
       "proper": true,
       "verb": "uses"
     },
-    "PP": 15
+    "PP": 10
   },
   "Conversion 2": {
     "code": {
       "name": "Conversion 2",
       "automation": [{
         "type": "text",
-        "text": "After taking damage from an attack, You may use your reaction to change your creature type to one of your choice that is resistant or immune to the type of move used against you for the duration"
+        "text": "If you took damage from an attack since the end of your last turn, you may use a bonus action to change your type to any type that is resistant or immune to the type of move used against you. This effect lasts until the beginning of your next turn. \nUse `!protean Type` (capital is important)"
       }],
       "_v": 2,
       "proper": true,
       "verb": "uses"
     },
-    "PP": 5
+    "PP": 10
   },
   "Copycat": {
     "code": {
       "name": "Copycat",
       "automation": [{
         "type": "text",
-        "text": "You mimic a target that acted just before you. When activating this move, you use the identical move of the creature whose turn came immediately before yours."
+        "text": "You mimic a target that you can see, in range. When you activate this move, fully execute the most recent move used by a Pokemon other than yourself, using your own ability scores, level, and typing for saving throw DC, attack, and damage."
       }],
       "_v": 2,
       "proper": true,
@@ -3028,16 +3028,16 @@
           "fail": [{
             "type": "ieffect",
             "name": "-10 Speed",
-            "duration": "11",
+            "duration": "10,
             "effects": "",
-            "end": false
+            "end": true
           }],
           "success": [],
           "dc": "{8+proficiencyBonus+max(DMO,CoMO)}"
         }]
       }, {
         "type": "text",
-        "text": "You unleash spores of thick cotton that covers the opponent. Force a target in range to make a CON save against your Move DC. On a fail, the target’s speed is reduced by 10 for the duration. If this reduction in speed causes their speed to be 0, they are restrained for the duration.\n"
+        "text": "You unleash spores of thick cotton that covers the creature. Force a target in range to make a CON save against your Move DC. On a fail, the target’s speed is reduced by 10 for the duration. If this reduction in speed causes their speed to be 0, they are restrained for the duration.\n"
       }],
       "_v": 2,
       "proper": true,
@@ -3055,14 +3055,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE+{max(DMO,SMO)}[Fighting]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You invoke a fight within to retaliate against a foe that damages you. After taking damage from a melee attack, you may use a reaction to make a melee attack against the attacker, doing 1d4 + MOVE fighting damage on a hit."
+        "text": "You invoke a fight within to retaliate against a foe that damages you. After taking damage from a melee attack, you may use a reaction to make a melee attack against the creature, doing 1d4 + MOVE fighting damage on a hit."
       }],
       "_v": 2,
       "proper": true,
@@ -3070,10 +3070,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,SMO)",
     "damage": {
-      "1": "1d4+{max(DMO,SMO)}",
-      "5": "1d6+{max(DMO,SMO)}",
-      "10": "1d8+{max(DMO,SMO)}",
-      "17": "2d6+{max(DMO,SMO)}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d8",
+      "17": "2d6"
     },
     "PP": 10
   },
@@ -3087,7 +3087,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{DMO}[Normal]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -3097,7 +3097,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You strike out with quick and sticky hands. Make a melee attack roll against an opponent, doing 1d10 + MOVE normal damage on a hit. On a successful attack, you steal the opponents held item if you are not currently holding one."
+        "text": "You strike out with quick and sticky hands. Make a melee attack roll against a creature, doing 1d10 + MOVE normal damage on a hit. On a successful attack, you steal the creautre's held item if you are not currently holding one."
       }],
       "verb": null,
       "proper": true,
@@ -3105,10 +3105,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d10+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "5d4+{DMO}",
-      "17": "4d8+{DMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 15
   },
@@ -3122,25 +3122,27 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Water]"
+            "damage": "DAMAGE+{SMO[Water]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You slam down onto an opponent with a heavy claw. Make a melee attack roll on a target, dealing 2d8 + MOVE water damage on a hit. This move scores a critical hit on rolls of 19 or 20."
+        "text": "You slam down onto a creature with a heavy claw. Make a melee attack roll on a target, dealing 2d8 + MOVE water damage on a hit. This move scores a critical hit on rolls of 19 or 20."
       }],
       "_v": 2,
       "proper": true,
-      "verb": null
+      "verb": null,
+      "criton": "CRIT"
     },
     "attack": "proficiencyBonus+SMO",
+    "crit": "19",
     "damage": {
-      "1": "2d8+{SMO}",
-      "5": "2d10+{SMO}",
-      "10": "3d10+{SMO}",
-      "17": "4d12+{SMO}"
+      "1": "2d8}",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 5
   },
@@ -3167,25 +3169,27 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You crush an opponent with a strong sideways strike. Make a melee attack against a target, doing 4d4 + MOVE fighting damage on a hit. Cross Chop results in a critical hit on 19s and 20s."
+        "text": "You crush a creature with a strong sideways strike. Make a melee attack against a target, doing 4d4 + MOVE fighting damage on a hit. Cross Chop results in a critical hit on 19s and 20s."
       }],
       "_v": 2,
       "proper": false,
-      "verb": null
+      "verb": null,
+      "criton": "CRIT"
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
+    "crit": "19",
     "damage": {
-      "1": "4d4+{max(SMO,DMO)}",
-      "5": "2d12+{max(SMO,DMO)}",
-      "10": "4d8+{max(SMO,DMO)}",
-      "17": "8d6+{max(SMO,DMO)}"
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 3
   },
@@ -3199,25 +3203,27 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Poison]"
+            "damage": "DAMAGE+{DMO}[Poison]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You slash at an opponent with a poisonous strike. Make a melee attack, dealing 1d12 + MOVE poison damage on a hit. On a natural attack roll of 19 or 20, the attack is treated as a critical hit and the target is poisoned."
+        "text": "You slash at a creature with a poisonous strike. Make a melee attack, dealing 1d12 + MOVE poison damage on a hit. On a natural attack roll of 19 or 20, the attack is treated as a critical hit and the target is poisoned."
       }],
       "_v": 2,
       "proper": true,
-      "verb": null
+      "verb": null,
+      "criton": "CRIT"
     },
     "attack": "proficiencyBonus+DMO",
+    "crit": "19",
     "damage": {
-      "1": "1d12+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "2d12+{DMO}",
-      "17": "6d6+{DMO}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -3231,7 +3237,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dark]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Dark]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -3249,10 +3255,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d6+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "4d6+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -3266,14 +3272,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "(6d6,6d6)kh1+{SMO}+7 [Normal]"
+            "damage": "DAMAGE+{SMO} [Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You strike out with powerful claws. Make a melee attack roll against an opponent, doing 1d12 + MOVE normal damage on a hit. If the natural attack roll is 15 or more, your next attack on the same target gets an additional +1 to hit."
+        "text": "You strike out with powerful claws. Make a melee attack roll against a creature, doing 1d12 + MOVE normal damage on a hit. If the natural attack roll is 15 or more, your next attack on the same target gets an additional +1 to hit."
       }],
       "_v": 2,
       "proper": true,
@@ -3281,10 +3287,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d12+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "2d12+{SMO}",
-      "17": "6d6+{SMO}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 5
   },
