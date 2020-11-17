@@ -9,14 +9,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ground]"
+            "damage": "DAMAGE+{SMO}[Ground]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You cause the ground beneath an opponent to erupt with power. Make a ranged attack, dealing 2d8 + MOVE ground damage on a hit. If the natural attack roll is 19 or 20, the next attack against the target is rolled at advantage.\n"
+        "text": "You cause the ground beneath a creature to erupt with power. Make a ranged attack, dealing 2d8 + MOVE ground damage on a hit. If the natural attack roll is 19 or 20, the next attack against the target is rolled at advantage.\n"
       }],
       "_v": 2,
       "proper": true,
@@ -24,10 +24,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d8+{SMO}",
-      "5": "2d10+{SMO}",
-      "10": "3d10+{SMO}",
-      "17": "4d12+{SMO}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 5
   },
@@ -48,7 +48,7 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE [Ground]",
+            "damage": "DAMAGE+{SMO} [Ground]",
             "overheal": false
           }, {
             "type": "ieffect",
@@ -60,7 +60,7 @@
           }],
           "success": [{
             "type": "damage",
-            "damage": "(DAMAGE)/2 [Ground]",
+            "damage": "(DAMAGE+{SMO})/2 [Ground]",
             "overheal": false
           }],
           "dc": "{8+ATTACK}"
@@ -72,10 +72,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "4d4+{SMO}",
-      "5": "2d12+{SMO}",
-      "10": "4d8+{SMO}",
-      "17": "8d6+{SMO}"
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 5
   },
@@ -89,7 +89,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(WMO,ChMO)}[Normal]",
             "overheal": false
           }],
           "miss": [],
@@ -97,7 +97,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You release a shout that echoes across the battlefield towards an opponent. Make a ranged attack, dealing 1d6 + MOVE normal damage on a hit. Until the beginning of your next turn, if any other creature in range uses this move, they may double their damage dice on a hit. This multiplier can continue to stack to a maximum of 8x the damage dice, resetting if any of the attacks miss."
+        "text": "You release a shout that echoes across the battlefield towards a creature. Make a ranged attack, dealing 1d6 + MOVE normal damage on a hit. Until the beginning of your next turn, if any other creature in range uses this move, they may double their damage dice on a hit. This multiplier can continue to stack to a maximum of 8x the damage dice, resetting if any of the attacks miss."
       }],
       "verb": null,
       "proper": false,
@@ -105,10 +105,10 @@
     },
     "attack": "proficiencyBonus+max(WMO,ChMO)",
     "damage": {
-      "1": "1d6+{max(WMO,ChMO)}",
-      "5": "1d12+{max(WMO,ChMO)}",
-      "10": "2d8+{max(WMO,ChMO)}",
-      "17": "4d6+{max(WMO,ChMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 10
   },
@@ -156,7 +156,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+{DMO}[Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -171,10 +171,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "4d4+{DMO}",
-      "5": "2d12+{DMO}",
-      "10": "4d8+{DMO}",
-      "17": "8d6+{DMO}"
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 5
   },
@@ -237,7 +237,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Electric]"
+            "damage": "DAMAGE+{DMO} [Electric]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -252,10 +252,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d6+{DMO}",
-      "5": "1d12+{DMO}",
-      "10": "2d8+{DMO}",
-      "17": "4d6+{DMO}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 5
   },
@@ -269,7 +269,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Electric]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Electric]"
           }, {
             "type": "ieffect",
             "name": "Webbed (Speed Reduced)",
@@ -290,10 +290,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d8+{max(SMO,DMO)}",
-      "5": "2d6+{max(SMO,DMO)}",
-      "10": "4d4+{max(SMO,DMO)}",
-      "17": "3d10+{max(SMO,DMO)}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 10
   },
@@ -318,7 +318,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You surround an opponent in range with a dark aura. Force an opponent to make a WIS save against your Move DC. On a failure, the opponent cannot gain the effect of any held item or trainer item given to it for the duration.\n\n"
+        "text": "You surround an opponent in range with a dark aura. Force a creature to make a WIS save against your Move DC. On a failure, the creature cannot gain the effect of any held item or trainer item given to it for the duration.\n\n"
       }],
       "_v": 2,
       "proper": true,
@@ -336,7 +336,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -351,10 +351,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d12+{max(SMO,DMO)}",
-      "10": "2d8+{max(SMO,DMO)}",
-      "17": "4d6+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 15
   },
@@ -379,7 +379,7 @@
         }]
       }, {
         "type": "text",
-        "text": "After being targeted by a move, force an opponent to make a WIS save against your Move DC as a reaction. On a fail, the target can only use the move that targeted you for its next turn. At level 10, the number of turns an opponent must use the move changes to 2. At level 17, it changes to 3."
+        "text": "After being targeted by a move, force a creature to make a WIS save against your Move DC as a reaction. On a fail, the target can only use the move that targeted you for its next turn. At level 10, the number of turns an opponent must use the move changes to 2. At level 17, it changes to 3."
       }],
       "_v": 2,
       "proper": true,
@@ -405,7 +405,7 @@
         }]
       }, {
         "type": "text",
-        "text": "When you activate this move, select an opponent in range. The opponent must make a WIS saving throw against your Move DC. On a failure, the target’s current HP is reduced to be equal to your own. This move can not be used in the first round of combat."
+        "text": "When you activate this move, select a creature in range. The creature must make a WIS saving throw against your Move DC. On a failure, the target’s current HP is reduced to be equal to your own. This move can not be used in the first round of combat."
       }],
       "_v": 2,
       "proper": true,
@@ -446,7 +446,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Grass]",
+            "damage": "DAMAGE+{max(DMO,WMO)}[Grass]",
             "overheal": false
           }],
           "miss": [],
@@ -454,7 +454,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You draw in power from nature in a concentrated ball that you send towards an opponent. Make a ranged attack, dealing 2d8 + MOVE Grass damage on a hit. On a natural attack roll of 19 or 20, the next attack against the target is rolled at advantage"
+        "text": "You draw in power from nature in a concentrated ball that you send towards a creature. Make a ranged attack, dealing 2d8 + MOVE Grass damage on a hit. On a natural attack roll of 19 or 20, the next attack against the target is rolled at advantage"
       }],
       "verb": "uses",
       "proper": true,
@@ -462,10 +462,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,WMO)",
     "damage": {
-      "1": "2d8+{max(DMO,WMO)}",
-      "5": "2d10+{max(DMOWMO)}",
-      "10": "3d10+{max(DMO,WMO)}",
-      "17": "4d12+{max(DMO,WMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 5
   },
@@ -490,7 +490,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You dance with a strange rhythm that causes an opponent to mimic you. Choose a target in range and force them to make a WIS save against your Move DC. On a failure, choose one of their abilities to replace with one of your own for the duration."
+        "text": "You dance with a strange rhythm that causes a creature to mimic you. Choose a target in range and force it to make a WIS save against your Move DC. On a failure, choose one of its abilities to replace with one of your own for the duration."
       }],
       "_v": 2,
       "proper": true,
@@ -509,7 +509,7 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]"
           }],
           "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
         }]
@@ -522,10 +522,10 @@
       "verb": null
     },
     "damage": {
-      "1": "3d8+{max(SMO,DMO)}",
-      "5": "5d6+{max(SMO,DMO)}",
-      "10": "4d12+{max(SMO,DMO)}",
-      "17": "8d8+{max(SMO,DMO)}"
+      "1": "3d8",
+      "5": "5d6",
+      "10": "4d12",
+      "17": "8d8"
     },
     "PP": 3
   },
@@ -562,14 +562,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Psychic]"
+            "damage": "DAMAGE+{WMO}[Psychic]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You create an irritating, damaging sound in the mind of an opponent. Make a ranged attack roll against an opponent in range, doing 2d6 + MOVE psychic damage on a hit. If the natural attack roll is 19 or 20, the target flinches."
+        "text": "You create an irritating, damaging sound in the mind of a creature. Make a ranged attack roll against a creature in range, doing 2d6 + MOVE psychic damage on a hit. If the natural attack roll is 19 or 20, the target flinches."
       }],
       "_v": 2,
       "proper": true,
@@ -577,10 +577,10 @@
     },
     "attack": "proficiencyBonus+WMO",
     "damage": {
-      "1": "2d6+{WMO}",
-      "5": "2d8+{WMO}",
-      "10": "4d6+{WMO}",
-      "17": "6d6+{WMO}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -626,7 +626,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]",
             "overheal": false
           }],
           "miss": [],
@@ -634,7 +634,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You strike out at an opponent with revenge. Make a melee attack roll against a target, dealing 1d12 + MOVE normal damage on a hit. If you are poisoned, paralyzed, or burned, double the dice for the damage."
+        "text": "You strike out at a creature with revenge. Make a melee attack roll against a target, dealing 1d12 + MOVE normal damage on a hit. If you are poisoned, paralyzed, or burned, double the dice for the damage."
       }],
       "verb": null,
       "proper": false,
@@ -642,10 +642,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d12+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "2d12+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -682,14 +682,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fairy]"
+            "damage": "DAMAGE+{max(DMO,ChMO)}[Fairy]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You stir up a series of vicious fairy winds that fly towards an opponent in range. Make a ranged attack roll against a target, dealing 1d6 + MOVE fairy damage on a hit."
+        "text": "You stir up a series of vicious fairy winds that fly towards a creature in range. Make a ranged attack roll against a target, dealing 1d6 + MOVE fairy damage on a hit."
       }],
       "_v": 2,
       "proper": true,
@@ -697,10 +697,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,ChMO)",
     "damage": {
-      "1": "1d6+{max(DMO,ChMO)}",
-      "5": "1d12+{max(DMO,ChMO)}",
-      "10": "2d8+{max(DMO,ChMO)}",
-      "17": "4d6+{max(DMO,ChMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 15
   },
@@ -714,7 +714,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -730,7 +730,7 @@
         }]
       }, {
         "type": "text",
-        "text": "This move is only usable in the first round of combat. Make a melee attack on an opponent, doing 1d6 + MOVE normal damage on a hit, causing the target to flinch."
+        "text": "This move is only usable in the first round of combat. Make a melee attack on a creature, doing 1d6 + MOVE normal damage on a hit and causing the target to flinch."
       }],
       "verb": null,
       "proper": true,
@@ -738,10 +738,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d12+{max(SMO,DMO)}",
-      "10": "2d8+{max(SMO,DMO)}",
-      "17": "4d6+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 5
   },
@@ -766,7 +766,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You fake an opponent out with superficial tears, lowering their defenses. When activating this move, a target must make a WIS saving throw against your Move DC. On a failure, all attack rolls against the target are given a +5 bonus until the end of your next turn."
+        "text": "You fake a creature out with superficial tears, lowering their defenses. When activating this move, a target must make a WIS saving throw against your Move DC. On a failure, all attack rolls against the target are given a +5 bonus until the end of your next turn."
       }],
       "verb": "cries",
       "proper": true,
@@ -785,7 +785,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -795,7 +795,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You swipe at an opponent but hold back power slightly. Make a melee attack against an opponent, doing 1d6 + MOVE normal damage on a hit. If this attack would normally cause an opponent to faint, it is reduced to 1HP instead."
+        "text": "You swipe at a creature but hold back power slightly. Make a melee attack against an opponent, doing 1d6 + MOVE normal damage on a hit. If this attack would normally cause an opponent to faint, it is reduced to 1HP instead."
       }],
       "verb": null,
       "proper": true,
@@ -803,10 +803,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d12+{max(SMO,DMO)}",
-      "10": "2d8+{max(SMO,DMO)}",
-      "17": "4d6+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 20
   },
@@ -839,7 +839,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You distract an opponent in range with a beautiful dance. The target must make a WIS saving throw against your Move DC. On a fail, the target cannot add proficiency to its attack rolls for the duration."
+        "text": "You distract a creature in range with a beautiful dance. The target must make a WIS saving throw against your Move DC. On a fail, the target cannot add proficiency to its attack rolls for the duration."
       }],
       "_v": 2,
       "proper": true,
@@ -857,14 +857,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+{DMO}[Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You fake out an opponent before you strike. Make a melee attack against a target, dealing 1d6 + MOVE normal damage on a hit. If an opponent attempts to use a Protect or Detect reaction against the damage, it fails."
+        "text": "You fake out a creature before you strike. Make a melee attack against a target, dealing 1d6 + MOVE normal damage on a hit. If an opponent attempts to use a Protect or Detect reaction against the damage, it fails."
       }],
       "_v": 2,
       "proper": false,
@@ -872,10 +872,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d6+{DMO}",
-      "5": "1d10+{DMO}",
-      "10": "2d8+{DMO}",
-      "17": "5d4+{DMO}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 5
   },
@@ -889,7 +889,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dark]",
+            "damage": "DAMAGE+{max(SMO,ChMO,DMO)}[Dark]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -899,7 +899,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You bring an opponent close and hit it with a sucker punch. Make a melee attack on an opponent, always with advantage, doing 1d10 + MOVE dark damage on a hit."
+        "text": "You bring a creature close and hit it with a sucker punch. Make a melee attack on a creature, always with advantage, doing 1d10 + MOVE dark damage on a hit."
       }],
       "verb": "",
       "proper": false,
@@ -907,10 +907,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,ChMO,DMO)",
     "damage": {
-      "1": "1d10+{max(SMO,ChMO,DMO)}",
-      "5": "2d8+{max(SMO,ChMO,DMO)}",
-      "10": "5d4+{max(SMO,ChMO,DMO)}",
-      "17": "4d8+{max(SMO,ChMO,DMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 10
   },
@@ -924,7 +924,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Bug]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Bug]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -939,10 +939,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d8+{max(SMO,DMO)}",
-      "5": "2d6+{max(SMO,DMO)}",
-      "10": "4d4+{max(SMO,DMO)}",
-      "17": "3d10+{max(SMO,DMO)}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 10
   },
@@ -957,23 +957,22 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{max(DMO,ChMO)}[Fire]"
           }],
           "dc": "{8+proficiencyBonus+max(DMO,ChMO)}"
         }]
       }, {
         "type": "text",
-        "text": "You dance and flap your wings, sending flames in a 15 foot circle, centered on you. Anyone caught in the blaze must make a DEX save against your Move DC, taking 2d6 + MOVE fire damage on a failure, or half as much on a success. If a creature fails the save by more than 5, double the MOVE modifier when adding damage\n"
+        "text": "You dance and flap your wings, sending out flames in a 15 foot circle, centered on you. Any creature caught in the blaze must make a DEX save against your Move DC, taking 2d6 + MOVE fire damage on a failure, or half as much on a success. If a creature fails the save by more than 5, double the MOVE modifier when adding damage\n"
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
     "damage": {
-      "1": "2d6+{max(DMO,ChMO)}",
-      "5": "2d8+{max(DMO,ChMO)}",
-      "10": "4d6+{max(DMO,ChMO)}",
-      "17": "6d6+{max(DMO,ChMO)}"
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -987,7 +986,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Dark]",
+            "damage": "DAMAGE+{max(WMO,CoMO)}[Dark]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -1011,10 +1010,10 @@
     },
     "attack": "proficiencyBonus+max(WMO,CoMO)",
     "damage": {
-      "1": "2d8+{max(WMO,CoMO)}",
-      "5": "2d10+{max(WMO,CoMO)}",
-      "10": "3d10+{max(WMO,CoMO)}",
-      "17": "4d12+{max(WMO,CoMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": "5"
   },
@@ -1047,7 +1046,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You risk everything and use your own life force to damage an opponent in range. When you activate this move, you faint, and force a target in range to make a CON save against your Move DC. The target takes an amount of fighting damage equal to your remaining HP on a failure, or half as much on a success"
+        "text": "You risk everything and use your own life force to damage a creature in range. When you activate this move, you faint, and force a target in range to make a CON save against your Move DC. The target takes an amount of fighting damage equal to your remaining HP on a failure, or half as much on a success"
       }],
       "verb": null,
       "proper": true,
@@ -1096,7 +1095,7 @@
         }]
       }, {
         "type": "text",
-        "text": "Two pillars of raging hot flames explode out from you and leap towards up to two creature in range. The creature(s) targeted must succeed on a DEX save against your Move DC, taking 3d6 + MOVE fire damage on a failure, or half as much on a success. Creatures that fail the save by more than 5 become burned."
+        "text": "Two pillars of raging hot flames explode out from you and leap towards up to two creatures in range. The creature(s) targeted must succeed on a DEX save against your Move DC, taking 3d6 + MOVE fire damage on a failure, or half as much on a success. Creatures that fail the save by more than 5 become burned."
       }],
       "verb": null,
       "proper": false,
@@ -1120,14 +1119,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You attempt to pierce an opponent with flame-cloaked fangs. Make a melee attack, dealing 1d10 + MOVE fire damage on a hit. On a natural attack roll of 19 or 20, the target is burned and flinches."
+        "text": "You attempt to pierce a creature with flame-cloaked fangs. Make a melee attack, dealing 1d10 + MOVE fire damage on a hit. On a natural attack roll of 19 or 20, the target is burned and flinches."
       }],
       "_v": 2,
       "proper": true,
@@ -1135,10 +1134,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d10+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "5d4+{max(SMO,DMO)}",
-      "17": "4d8+{max(SMO,DMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 10
   },
@@ -1152,14 +1151,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{SMO}[Fire]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You send a plume of flame towards an opponent. Make a ranged attack, dealing 2d6 + MOVE fire damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits."
+        "text": "You send a plume of flame towards a creature. Make a ranged attack, dealing 2d6 + MOVE fire damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits."
       }],
       "_v": 2,
       "proper": true,
@@ -1167,10 +1166,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d6+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "4d6+{SMO}",
-      "17": "6d6+{SMO}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -1184,7 +1183,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -1202,10 +1201,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d12+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "2d12+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -1219,7 +1218,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{DMO}[Fire]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -1234,10 +1233,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d6+{DMO}",
-      "5": "1d10+{DMO}",
-      "10": "2d8+{DMO}",
-      "17": "5d4+{DMO}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 10
   },
@@ -1255,7 +1254,7 @@
         "effects": []
       }, {
         "type": "text",
-        "text": "You crack open the ground with devastating force. Choose a target in range and roll a d20. On a 20, the target falls into the crack and vanished into the abyss. On any other roll, or if targeting a flying creature, this move has no effect. The area in a 20 foot radius around the target becomes difficult terrain. If the target's level is 10 more than your own, this move automatically fails."
+        "text": "You crack open the ground with devastating force. Choose a target in range and roll a d20. On a 20, the target falls into the crack and vanished into the abyss. On any other roll, or if targeting a flying creature, this move has no effect. The area in a 20 foot radius around the target becomes difficult terrain. If the target's level is at least 10 more than your own, this move automatically fails."
       }],
       "_v": 2,
       "proper": true,
@@ -1274,14 +1273,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You flail about with a wild strike that increases in power the more injured you are. Make a melee attack roll against an opponent, doing 1d6 + MOVE normal damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities."
+        "text": "You flail about with a wild strike that increases in power the more injured you are. Make a melee attack roll against a creature, doing 1d6 + MOVE normal damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities."
       }],
       "_v": 2,
       "proper": true,
@@ -1289,10 +1288,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d10+{max(SMO,DMO)}",
-      "10": "2d8+{max(SMO,DMO)}",
-      "17": "5d4+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 10
   },
@@ -1346,7 +1345,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -1356,7 +1355,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You cloak yourself with flame and lash out at an opponent. Make a melee attack, dealing 1d8 + MOVE fire damage on a hit. With each successful hit from this move, increase your movement speed by 5 until you are incapacitated, are switched out, or the combat ends. (Maximum of +30 to movement speed)"
+        "text": "You cloak yourself with flame and lash out at a creature. Make a melee attack, dealing 1d8 + MOVE fire damage on a hit. With each successful hit from this move, increase your movement speed by 5 until you are incapacitated, are switched out, or the combat ends. (Maximum of +30 to movement speed)"
       }],
       "verb": null,
       "proper": false,
@@ -1364,10 +1363,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d8+{max(SMO,DMO)}",
-      "5": "2d6+{max(SMO,DMO)}",
-      "10": "4d4+{max(SMO,DMO)}",
-      "17": "3d10+{max(SMO,DMO)}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 10
   },
@@ -1397,7 +1396,7 @@
         }]
       }, {
         "type": "text",
-        "text": "A wheel of flame explodes out from you in a 10 foot radius. All Pokémon in the area must succeed on a DEX save against your Move DC, taking 1d10 + MOVE fire damage on a fail and half as much on a save. If the user is frozen, this move can still be used, thawing out the Pokémon during the attack."
+        "text": "A wheel of flame explodes out from you in a 10 foot radius. All creatures in the area must succeed on a DEX save against your Move DC, taking 1d10 + MOVE fire damage on a fail and half as much on a save. If the user is frozen, this move can still be used, thawing out the Pokémon during the attack."
       }],
       "_v": 2,
       "proper": false,
@@ -1426,7 +1425,7 @@
           }],
           "success": [{
             "type": "damage",
-            "damage": "(DAMAGE)/2 [Fire]"
+            "damage": "(DAMAGE+{max(SMO,DMO)})/2 [Fire]"
           }],
           "dc": "{8+ATTACK}"
         }]
@@ -1440,10 +1439,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d8+{max(SMO,DMO)}",
-      "5": "2d10+{max(SMO,DMO)}",
-      "10": "3d10+{max(SMO,DMO)}",
-      "17": "4d12+{max(SMO,DMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 10
   },
@@ -1457,7 +1456,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]",
             "overheal": false
           }],
           "miss": [],
@@ -1465,7 +1464,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You cloak yourself in fire and charge at an opponent with serious damage. Make a melee attack against an opponent, dealing 2d10 + MOVE fire damage on a hit. On a hit, you take half the damage dealt in typeless recoil damage. On a natural attack roll of 19 or 20, the target is burned. If the user is frozen, this move can still be used, thawing out the creature during the attack"
+        "text": "You cloak yourself in fire and charge at a creature with burning wrath. Make a melee attack against a creature, dealing 2d10 + MOVE fire damage on a hit. On a hit, you take half the damage dealt in typeless recoil damage. On a natural attack roll of 19 or 20, the target is burned. If the user is frozen, this move can still be used, thawing out the user during the attack"
       }],
       "verb": null,
       "proper": true,
@@ -1473,10 +1472,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d10+{max(SMO,DMO)}",
-      "5": "3d8+{max(SMO,DMO)}",
-      "10": "4d10+{max(SMO,DMO)}",
-      "17": "7d8+{max(SMO,DMO)}"
+      "1": "2d10",
+      "5": "3d8",
+      "10": "4d10",
+      "17": "7d8"
     },
     "PP": 10
   },
@@ -1519,14 +1518,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Steel]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Steel]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You gather energy from the light around you and send a concentrated beam towards an opponent in range. Make a ranged attack, dealing 2d6 + MOVE steel damage on a hit. On a natural attack roll of 19 or 20, the next attack against the opponent is rolled at advantage."
+        "text": "You gather energy from the light around you and send a concentrated beam towards a creature in range. Make a ranged attack, dealing 2d6 + MOVE steel damage on a hit. On a natural attack roll of 19 or 20, the next attack against the creature is rolled at advantage."
       }],
       "_v": 2,
       "proper": true,
@@ -1534,10 +1533,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d6+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "4d6+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -1567,7 +1566,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You send mixed signals to an opponent. Select a target in range. They become confused, but during this confusion, they double their proficiency bonus when making attack rolls."
+        "text": "You send mixed signals to an opponent. Select a creature in range. They become confused, but during this confusion, they double their proficiency bonus when making attack rolls."
       }],
       "_v": 2,
       "proper": true,
@@ -1592,7 +1591,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You sacrifice your held item to throw it an opponent. Make a ranged attack. On a hit, the amount of dark damage dealt is equal to the price of the item in the manual, divided by 100 (rounded down), plus STAB (if applicable). After activating this move, on a hit or miss, the item disappears."
+        "text": "You sacrifice your held item to throw it a creature. Make a ranged attack. On a hit, the amount of dark damage dealt is equal to the price of the item in the manual, divided by 100 (rounded down), plus STAB (if applicable). After activating this move, on a hit or miss, the item disappears."
       }],
       "_v": 2,
       "proper": true,
@@ -1635,7 +1634,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Flying]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -1650,10 +1649,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d8+{max(SMO,DMO)}",
-      "5": "2d10+{max(SMO,DMO)}",
-      "10": "3d10+{max(SMO,DMO)}",
-      "17": "4d12+{max(SMO,DMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 10
   },
@@ -1677,13 +1676,18 @@
         }]
       }, {
         "type": "text",
-        "text": "You dive at an opponent with quick reaction speed, able to change the type of attack when you reach them. Make a melee attack against a target, dealing 4d8 + MOVE flying OR fighting damage, depending on your choice. STAB can only added to this move if its type is fighting."
+        "text": "You dive at a creature with quick reaction speed, able to change the type of attack when you reach them. Make a melee attack against a target, dealing 4d8 + MOVE flying OR fighting damage, depending on your choice. STAB can only added to this move if its type is fighting."
       }],
       "verb": null,
       "proper": true,
       "_v": 2
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
+    "damage": {
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     "PP": 5
   },
   "Focus Blast": {
@@ -1696,14 +1700,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You heighten your focus and unleash it upon an opponent. Make a ranged attack, dealing 2d10 + MOVE fighting damage on a hit. On a natural attack roll of 19 or 20, the next attack against the opponent is rolled at advantage."
+        "text": "You heighten your focus and unleash it upon a creature. Make a ranged attack, dealing 2d10 + MOVE fighting damage on a hit. On a natural attack roll of 19 or 20, the next attack against the opponent is rolled at advantage."
       }],
       "_v": 2,
       "proper": false,
@@ -1711,10 +1715,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d10+{max(SMO,DMO)}",
-      "5": "3d8+{max(SMO,DMO)}",
-      "10": "4d10+{max(SMO,DMO)}",
-      "17": "7d8+{max(SMO,DMO)}"
+      "1": "2d10",
+      "5": "3d8",
+      "10": "4d10",
+      "17": "7d8"
     },
     "PP": 3
   },
@@ -1751,7 +1755,7 @@
           "type": "ieffect",
           "name": "Tightened Punch",
           "duration": "2",
-          "effects": "-attack \"{ATTACK}|DAMAGE [Fighting]|\"",
+          "effects": "-attack \"{ATTACK}|DAMAGE+{max(SMO,DMO)}[Fighting]|\"",
           "end": true,
           "conc": true
         }]
@@ -1765,10 +1769,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)}",
     "damage": {
-      "1": "3d8+{max(SMO,DMO)}",
-      "5": "5d6+{max(SMO,DMO)}",
-      "10": "4d12+{max(SMO,DMO)}",
-      "17": "8d8+{max(SMO,DMO)}"
+      "1": "3d8",
+      "5": "5d6",
+      "10": "4d12",
+      "17": "8d8"
     },
     "PP": 10
   },
@@ -1787,7 +1791,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You entice all enemies to attack you. All ranged and melee attacks by any opponent in range must target you until the beginning of your next turn."
+        "text": "You entice all enemies to attack you. All ranged and melee attacks by opponents in range must target you until the beginning of your next turn."
       }],
       "_v": 2,
       "proper": true,
@@ -1805,14 +1809,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE+{SMO}[Fighting]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You thrust your palm outward with such strength that a shockwave is sent towards an opponent. Make a ranged attack, dealing 1d10 + MOVE fighting damage on a hit. On a natural attack roll of 16 or higher, the target is paralyzed."
+        "text": "You thrust your palm outward with such strength that a shockwave is sent towards a creature. Make a ranged attack, dealing 1d10 + MOVE fighting damage on a hit. On a natural attack roll of 16 or higher, the target is paralyzed."
       }],
       "_v": 2,
       "proper": false,
@@ -1820,10 +1824,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d10+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "5d4+{SMO}",
-      "17": "4d8+{SMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 5
   },
@@ -1848,7 +1852,7 @@
         }]
       }, {
         "type": "text",
-        "text": "Force a target in range to make a WIS saving throw against your Move DC. On a fail, add +2 to all attack rolls you make against the opponent for the duration. Regardless of the saving throw, for the remainder of combat, any of your fighting or normal moves can hit a\nghost type Pokémon. If you are a ghost type, your ghost moves can now hit normal type Pokémon."
+        "text": "Force a creature in range to make a WIS saving throw against your Move DC. On a fail, add +2 to all attack rolls you make against the opponent for the duration. Regardless of the saving throw, for the remainder of combat, any of your fighting or normal moves can hit a\nghost type Pokémon. If you are a ghost type, your ghost moves can now hit normal type Pokémon."
       }],
       "_v": 2,
       "proper": true,
@@ -1877,7 +1881,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You summon the energy of the forest to change the type of another creature. Force an opponent in range to make a CON save against your Move DC. On a failure, its type is changed to Grass for the duration."
+        "text": "You summon the energy of the forest to change the type of another creature. Force a creature in range to make a CON save against your Move DC. On a failure, its type is changed to Grass for the duration."
       }],
       "_v": 2,
       "proper": true,
@@ -1895,7 +1899,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dark]"
+            "damage": "DAMAGE+{max(SMO,WMO)}[Dark]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -1910,10 +1914,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,WMO)",
     "damage": {
-      "1": "2d8+{max(SMO,WMO)}",
-      "5": "2d10+{max(SMO,WMO)}",
-      "10": "3d10+{max(SMO,WMO)}",
-      "17": "4d12+{max(SMO,WMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 10
   },
@@ -1946,13 +1950,13 @@
         }]
       }, {
         "type": "text",
-        "text": "When you use this move, you charge up a ball of rock-hard ice. On your next turn’s action, if you keep your concentration, you fire your electrically charged ice at an opponent. Make a ranged attack roll, dealing 3d8 + MOVE ice damage on a hit. On natural attack rolls of 15 or more, the target is paralyzed."
+        "text": "When you use this move, you charge up a ball of rock-hard ice. On your next turn, if you keep your concentration, you can use your action to fire your electrically charged ice at a creature. Make a ranged attack roll, dealing 3d8 + MOVE ice damage on a hit. On natural attack rolls of 15 or more, the target is paralyzed."
       }],
       "verb": null,
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+DMO",
+    "attack": "proficiencyBonus+{DMO}",
     "damage": {
       "1": "3d8",
       "5": "5d6",
@@ -1971,14 +1975,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ice]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Ice]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You unleash a freezing cold air that rapidly chills a creature in range. Make a ranged attack on an opponent, dealing 1d12 + MOVE ice damage on a hit. On a natural attack roll of 19 or 20, the target is frozen. **This move deals super effective damage to water-type creatures.**"
+        "text": "You unleash a freezing cold air that rapidly chills a creature in range. Make a ranged attack on a creature, dealing 1d12 + MOVE ice damage on a hit. On a natural attack roll of 19 or 20, the target is frozen. **This move deals super effective damage to water-type creatures.**"
       }],
       "_v": 2,
       "proper": true,
@@ -1986,10 +1990,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d12+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "2d12+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -2003,7 +2007,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Psychic]",
+            "damage": "DAMAGE+{max(WMO,CoMO)}[Psychic]",
             "overheal": false
           }, {
             "type": "save",
@@ -2017,14 +2021,14 @@
               "conc": false
             }],
             "success": [],
-            "dc": "{8+ATTACK"
+            "dc": "{8+ATTACK}"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You send a concentrated beam of freezing energy at a single creature in range, with your eyes. Make a ranged attack roll, doing 2d8 + MOVE psychic damage on a hit, and forcing the target to make a WIS save against your Move DC or become frozen."
+        "text": "You send a concentrated beam of freezing energy at a creature in range, with your eyes. Make a ranged attack roll, doing 2d8 + MOVE psychic damage on a hit, and forcing the target to make a WIS save against your Move DC, becoming frozen on a failure."
       }],
       "verb": null,
       "proper": true,
@@ -2032,10 +2036,10 @@
     },
     "attack": "max(WMO,CoMO)+proficiencyBonus}",
     "damage": {
-      "1": "2d8+{max(WMO,CoMO)}",
-      "5": "2d10+{max(WMO,CoMO)}",
-      "10": "3d10+{max(WMO,CoMO)}",
-      "17": "4d12+{max(WMO,CoMO)}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
     "PP": 5
   },
@@ -2050,7 +2054,7 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Grass]"
+            "damage": "DAMAGE+{DMO}[Grass]"
           }],
           "dc": "{8+proficiencyBonus+DMO}"
         }]
@@ -2066,17 +2070,17 @@
         }]
       }, {
         "type": "text",
-        "text": "You summon a whirlwind of jagged branches and razor sharp leaves that batter all opponents in a 15 foot circle, centered on you. All opponent caught in the flurry must make a DEX saving throw against your Move DC, taking 3d8 + MOVE grass damage on a failure, and half as much on a success. This move saps you of energy, and may not make any attack until after the end of your next turn.\n"
+        "text": "You summon a whirlwind of jagged branches and razor sharp leaves that batter all creatures in a 15 foot circle, centered on you. All creatures caught in the flurry must make a DEX saving throw against your Move DC, taking 3d8 + MOVE grass damage on a failure, and half as much on a success. This move saps you of energy, and you may not make any attack until after the end of your next turn.\n"
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
     "damage": {
-      "1": "3d8+{DMO}",
-      "5": "5d6+{DMO}",
-      "10": "4d12+{DMO}",
-      "17": "8d8+{DMO}"
+      "1": "3d8",
+      "5": "5d6",
+      "10": "4d12",
+      "17": "8d8"
     },
     "PP": 3
   },
@@ -2090,14 +2094,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ice]"
+            "damage": "DAMAGE+{max(CoMO,DMO)}[Ice]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You blow a gust of freezing cold air at an opponent in range. Make a ranged attack roll, dealing 1d12 + MOVE ice damage on a hit. This move scores a critical hit on natural attack rolls of 16 and higher."
+        "text": "You blow a gust of freezing cold air at a creature in range. Make a ranged attack roll, dealing 1d12 + MOVE ice damage on a hit. This move scores a critical hit on natural attack rolls of 16 and higher."
       }],
       "_v": 2,
       "proper": false,
@@ -2105,10 +2109,10 @@
     },
     "attack": "proficiencyBonus+max(CoMO,DMO)",
     "damage": {
-      "1": "1d12+{max(CoMO,DMO)}",
-      "5": "2d8+{max(CoMO,DMO)}",
-      "10": "2d12+{max(CoMO,DMO)}",
-      "17": "6d6+{max(CoMO,DMO)}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -2122,14 +2126,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+{SMO}[Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You lash out at an opponent, venting your frustration at your trainer. Make a melee attack roll against an opponent, doing 1d6 + MOVE normal damage on a hit. When you make this attack, add an additional bonus to hit and damage equal to the number of levels you are below zero on the Loyalty Chart."
+        "text": "You lash out at a creature, venting your frustration at your trainer. Make a melee attack roll against an opponent, doing 1d6 + MOVE normal damage on a hit. When you make this attack, add an additional bonus to hit and damage equal to the number of levels you are below zero on the Loyalty Chart."
       }],
       "_v": 2,
       "proper": true,
@@ -2137,10 +2141,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "1d6+{SMO}",
-      "5": "1d10+{SMO}",
-      "10": "2d8+{SMO}",
-      "17": "5d4+{SMO}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 10
   },
@@ -2162,7 +2166,7 @@
           }],
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -2172,7 +2176,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You reach out and unleash relentless claw attacks against a Pokémon. Make a melee attack roll, doing 1d4 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits."
+        "text": "You reach out and unleash relentless claw attacks against a creature. Make a melee attack roll, doing 1d4 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits."
       }],
       "verb": null,
       "proper": false,
@@ -2180,10 +2184,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d4+{max(SMO,DMO)}",
-      "5": "1d6+{max(SMO,DMO)}",
-      "10": "1d8+{max(SMO,DMO)}",
-      "17": "2d6+{max(SMO,DMO)}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d8",
+      "17": "2d6"
     },
     "PP": 10
   },
@@ -2197,7 +2201,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Bug]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Bug]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -2212,10 +2216,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d4+{max(SMO,DMO)}",
-      "5": "1d6+{max(SMO,DMO)}",
-      "10": "2d4+{max(SMO,DMO)}",
-      "17": "2d6+{max(SMO,DMO)}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "2d4",
+      "17": "2d6"
     },
     "PP": 10
   },
@@ -2237,7 +2241,7 @@
           }],
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -2247,7 +2251,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You reach out and unleash relentless claw attacks against a Pokémon. Make a melee attack roll, doing 1d4 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits."
+        "text": "You reach out and unleash relentless claw attacks against a creature. Make a melee attack roll, doing 1d4 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits."
       }],
       "verb": null,
       "proper": false,
@@ -2255,10 +2259,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d4+{max(SMO,DMO)}",
-      "5": "1d6+{max(SMO,DMO)}",
-      "10": "1d8+{max(SMO,DMO)}",
-      "17": "2d6+{max(SMO,DMO)}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d8",
+      "17": "2d6"
     },
     "PP": 10
   },
@@ -2273,23 +2277,23 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Electric]"
+            "damage": "DAMAGE+{SMO}[Electric]"
           }],
           "dc": "{8+proficiencyBonus+SMO}"
         }]
       }, {
         "type": "text",
-        "text": "You summon a gigantic lightning bolt that strikes down from the heavens in a 30 foot circle, centered on a point within range. All creatures caught in the blast must make a DEX save against your Move DC, taking 4d4 + MOVE electric damage on a failure, or half as much on a success. If Fusion Bolt was already used this round, double the damage dealt.\n"
+        "text": "You summon a gigantic lightning bolt that strikes down from the heavens in a 30 foot circle, centered on a point within range. All creatures caught in the blast must make a DEX save against your Move DC, taking 4d4 + MOVE electric damage on a failure, or half as much on a success. If Fusion Flare was already used this round, double the damage dealt.\n"
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
     "damage": {
-      "1": "4d4+{SMO}",
-      "5": "2d12+{SMO}",
-      "10": "4d8+{SMO}",
-      "17": "8d6+{SMO}"
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 3
   },
@@ -2304,23 +2308,23 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE+{SMO}[Fire]"
           }],
           "dc": "{8+proficiencyBonus+SMO}"
         }]
       }, {
         "type": "text",
-        "text": "You summon a gigantic fireball that strikes down from the heavens in a 30 foot circle, centered on a point within range. All creatures caught in the blast must make a DEX save against your Move DC, taking 4d4 + MOVE fire damage on a failure, or half as much on a success. If Fusion Flare was already used this round, double the damage dealt. Fusion Flare may be used to thaw out the user from the frozen status before attacking."
+        "text": "You summon a gigantic fireball that strikes down from the heavens in a 30 foot circle, centered on a point within range. All creatures caught in the blast must make a DEX save against your Move DC, taking 4d4 + MOVE fire damage on a failure, or half as much on a success. If Fusion Bolt was already used this round, double the damage dealt. Fusion Flare may be used to thaw out the user from the frozen status before attacking."
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
     "damage": {
-      "1": "4d4+{SMO}",
-      "5": "2d12+{SMO}",
-      "10": "4d8+{SMO}",
-      "17": "8d6+{SMO}"
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 3
   },
@@ -2369,7 +2373,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You hurl stomach acid towards a foe. Make a ranged attack. On a hit, the target is covered in the disgusting substance and cannot benefit from the effect of any of its abilities for the duration."
+        "text": "You hurl stomach acid towards a creature. Make a ranged attack. On a hit, the target is covered in the disgusting substance and cannot benefit from the effect of any of its abilities for the duration."
       }],
       "_v": 2,
       "proper": true,
@@ -2388,14 +2392,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Steel]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Steel]"
           }],
           "miss": [],
           "attackBonus": "proficiencyBonus+max(SMO,DMO)"
         }]
       }, {
         "type": "text",
-        "text": "You send a pair of steel gears at a target(s) in range. Make two ranged attacks, dealing 1d8 + MOVE steel damage with each hit."
+        "text": "You send a pair of steel gears at a creature(s) in range. Make two ranged attacks, dealing 1d8 + MOVE steel damage with each hit."
       }],
       "_v": 2,
       "proper": true,
@@ -2403,10 +2407,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d8+{max(SMO,DMO)}",
-      "5": "2d6+{max(SMO,DMO)}",
-      "10": "4d4+{max(SMO,DMO)}",
-      "17": "3d10+{max(SMO,DMO)}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 10
   },
@@ -2462,14 +2466,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Grass]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Grass]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You attempt to drain the life force of a target. Make a ranged attack on a target, doing 2d6 + MOVE grass damage on a hit. Half of the damage dealt is restored to the user."
+        "text": "You attempt to drain the life force of a creature. Make a ranged attack on a target, doing 2d6 + MOVE grass damage on a hit. Half of the damage dealt is restored to the user."
       }],
       "_v": 2,
       "proper": true,
@@ -2477,10 +2481,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d12+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "2d12+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -2494,14 +2498,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+{SMO}[Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You charge at an opponent with every ounce of your power. Make a melee attack, dealing 3d8 + MOVE normal damage on a hit. This move cannot be used on consecutive turns by the same creature."
+        "text": "You charge at a creature with every ounce of your power. Make a melee attack, dealing 3d8 + MOVE normal damage on a hit. This move cannot be used on consecutive turns by the same creature."
       }],
       "_v": 2,
       "proper": true,
@@ -2509,10 +2513,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "3d8+{SMO}",
-      "5": "5d6+{SMO}",
-      "10": "4d12+{SMO}",
-      "17": "8d8+{SMO}"
+      "1": "3d8",
+      "5": "5d6",
+      "10": "4d12",
+      "17": "8d8"
     },
     "PP": 3
   },
@@ -2526,14 +2530,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ice]"
+            "damage": "DAMAGE+{DMO}[Ice]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You blow a wind of freezing cold air at an opponent in range. Make a ranged attack roll, dealing 1d10 + MOVE ice damage on a hit. On a hit, reduce the target's speed by 5 feet. A target reduced to a speed of 0 in this manner becomes frozen. The target may use an action at any time (before becoming frozen) to warm its body, resetting its speed."
+        "text": "You blow a wind of freezing cold air at a creature in range. Make a ranged attack roll, dealing 1d10 + MOVE ice damage on a hit. On a hit, reduce the target's speed by 5 feet. A target reduced to a speed of 0 in this manner becomes frozen. The target may use an action at any time (before becoming frozen) to warm its body, resetting its speed."
       }],
       "_v": 2,
       "proper": true,
@@ -2541,10 +2545,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d10+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "5d4+{DMO}",
-      "17": "4d8+{DMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 5
   },
@@ -2592,14 +2596,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Grass]"
+            "damage": "DAMAGE+{DMO}[Grass]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You attempt to ensnare an opponent with vines that sprout from the ground, causing it to trip. Make a ranged attack, dealing 1d10 + MOVE grass damage on a hit. If the targets size is Large or bigger, double the dice roll for the damage. On a natural attack roll of 19 or 20, the target falls prone."
+        "text": "You attempt to ensnare a creature with vines that sprout from the ground, causing it to trip. Make a ranged attack, dealing 1d10 + MOVE grass damage on a hit. If the target's size is Large or bigger, double the dice roll for the damage. On a natural attack roll of 19 or 20, the target falls prone."
       }],
       "_v": 2,
       "proper": true,
@@ -2607,10 +2611,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d10+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "5d4+{DMO}",
-      "17": "4d8+{DMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 10
   },
@@ -2624,14 +2628,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Grass]"
+            "damage": "DAMAGE+{SMO}[Grass]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You send a column of thick grass towards an opponent. Make a ranged attack, dealing 2d6 + MOVE grass damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits.\n"
+        "text": "You send a column of thick grass towards a creature. Make a ranged attack, dealing 2d6 + MOVE grass damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits.\n"
       }],
       "_v": 2,
       "proper": true,
@@ -2639,10 +2643,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d6+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "4d6+{SMO}",
-      "17": "6d6+{SMO}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -2667,7 +2671,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You attempt to put the target to sleep. The target must make a WIS save against your Move DC, falling asleep on a failure."
+        "text": "You whistle a soothing note. One creature in range must make a WIS save against your Move DC, falling asleep on a failure."
       }],
       "_v": 2,
       "proper": true,
@@ -2715,7 +2719,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You strengthen gravity in a 40 foot sphere, centered on you. Any opponent in the area cannot use moves like Fly or Bounce, and the Levitate ability is suppressed."
+        "text": "You strengthen gravity in a 40 foot sphere, centered on you. Any creature in the area cannot use moves like Fly or Bounce, and the Levitate ability is suppressed."
       }],
       "_v": 2,
       "proper": true,
@@ -2768,7 +2772,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You increase the size of a target. When you use this move, a creature in range (or you) grows slightly larger, gaining the ability to add a d4 to any attack roll or saving throw for the duration."
+        "text": "You flood a creature with plant energy, enlarging it. When you use this move, the user or another creature in range grows slightly larger, gaining the ability to add a d4 to all attack rolls and saving throw for the duration."
       }],
       "_v": 2,
       "proper": true,
@@ -2868,7 +2872,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You use your psychic power to swap defenses with an opponent. Force an opponent in range to make a CHA save against your Move DC. On a failure, switch armor class with the opponent for the duration."
+        "text": "You use your psychic power to swap defenses with a creature. Force a creature in range to make a CHA save against your Move DC. On a failure, switch armor class with the target for the duration."
       }],
       "verb": "tries to",
       "proper": true,
@@ -2890,7 +2894,7 @@
         "effects": []
       }, {
         "type": "text",
-        "text": "You are filled with an incredible rage, grabbing the head of an enemy creature in an attempt to squeeze the life from it. Roll a d20. On a 20, you instantly cause the creature to faint. On any other roll, this move has no effect. If the target's level is 10 more than your own, this move automatically fails."
+        "text": "You are filled with an incredible rage, grabbing the head of a creature in an attempt to squeeze the life from it. Roll a d20. On a 20, you instantly cause the creature to faint. On any other roll, this move has no effect. If the target's level is at least 10 more than your own, this move automatically fails."
       }],
       "_v": 2,
       "proper": true,
@@ -2909,14 +2913,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Poison]"
+            "damage": "DAMAGE+{DMO}[Poison]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You fire a wad of icky gunk at an opponent. Make a ranged attack, dealing 1d10 + MOVE poison damage on a hit. On a natural attack roll of 16 or higher, the target is poisoned."
+        "text": "You fire a wad of icky gunk at a creature. Make a ranged attack, dealing 1d10 + MOVE poison damage on a hit. On a natural attack roll of 16 or higher, the target is poisoned."
       }],
       "_v": 2,
       "proper": true,
@@ -2924,10 +2928,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "2d10+{DMO}",
-      "5": "3d8+{DMO}",
-      "10": "4d10+{DMO}",
-      "17": "7d8+{DMO}"
+      "1": "2d10",
+      "5": "3d8",
+      "10": "4d10",
+      "17": "7d8"
     },
     "PP": 3
   },
@@ -2941,14 +2945,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE+{DMO}[Flying]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You create a strong wind that batters a target in range. Make a ranged attack, doing 1d6 + MOVE flying damage on a hit."
+        "text": "You create a strong wind that batters a creature in range. Make a ranged attack, doing 1d6 + MOVE flying damage on a hit."
       }],
       "_v": 2,
       "proper": true,
@@ -2956,10 +2960,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d6+{DMO}",
-      "5": "1d12+{DMO}",
-      "10": "2d8+{DMO}",
-      "17": "4d6+{DMO}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 20
   },
@@ -2973,14 +2977,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Steel]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Steel]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You tackle an opponent with a high-speed spin. Make a melee attack against an opponent, dealing 1d6 + MOVE steel damage on a hit. If your DEX score is lower than the opponent's, double the dice roll for damage."
+        "text": "You tackle a creature with a high-speed spin. Make a melee attack against a creature, dealing 1d6 + MOVE steel damage on a hit. If your DEX score is lower than the opponent's, double the dice roll for damage."
       }],
       "_v": 2,
       "proper": false,
@@ -2988,10 +2992,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d12+{max(SMO,DMO)}",
-      "10": "2d8+{max(SMO,DMO)}",
-      "17": "4d6+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 3
   },
