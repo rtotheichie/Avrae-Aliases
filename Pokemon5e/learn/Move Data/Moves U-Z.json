@@ -178,7 +178,7 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(DMO,CoMO)"
+    "attack": "proficiencyBonus+max(DMO,CoMO)",
     "PP": 10
   },
   "Venoshock": {
@@ -236,7 +236,7 @@
             }],
             "succes": [],
             "dc": "{8+ATTACK}"
-          },
+          }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
@@ -782,7 +782,7 @@
       "proper": false,
       "verb": "creates"
     },
-    "attack": "proficiencyBonus+DMO"
+    "attack": "proficiencyBonus+DMO",
     "PP": 10
   },
   "Wide Guard": {
