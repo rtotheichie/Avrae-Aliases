@@ -5,6 +5,7 @@ out=[]
 help=get_gvar("9c2adfb1-21f8-4000-bedf-3ad5fc90d136")
 inc=''
 incText=inc
+breeder = 'Breeder' in get('subclass',[]) and level >= 5
 if len(a)>0:
     cc=a[0]+" Egg"
 else:
@@ -16,18 +17,18 @@ for e in gr.consumables.custom:
 if "egg" in e or "Egg" in e:
     out.append(f'-title "{name} rolls for their daily hatching rate!"')
     desc=["-desc \"When an egg is created, it begins an incubation counter to determine how long it will take for the egg to hatch. Progress against this timer may only be made if the egg is being carried by its trainer through the night or a significant portion of the prior session. A trainer will roll 1d100 at the beginning of each in-campaign day (or session), and reduce the remaining counter by the result. Today, you rolled:"]
-    S=vroll("1d100")
+    S=vroll(f"2d100kh1" if breeder else '1d100')
     desc.append(str(S))
     if args.get("inc"):
-        inc=vroll("1d20")
+        inc=vroll(f"2d20kh1" if breeder else '1d20')
         incText="** Basic Incubator.** Trainers may reduce Hatch Time by an additional 1d20 when rolling against the incubation counter."
         desc.append(str(inc))
     if args.get("plus"):
-        inc=vroll("2d20")
+        inc=vroll(f"(2d20,2d20)kh1" if breeder else '2d20')
         incText="**Plus Incubator.** Trainers may reduce Hatch Time by an additional 2d20 when rolling against the incubation counter."
         desc.append(str(inc))
     if args.get("super"):
-        inc=vroll("3d20")
+        inc=vroll(f"(3d20,3d20)kh1" if breeder else '3d20')
         incText="**Super Incubator.** Trainers may reduce Hatch Time by an additional 3d20 when rolling against the incubation counter."
         desc.append(str(inc))
     iT=inc.total if inc else 0
@@ -39,6 +40,8 @@ if "egg" in e or "Egg" in e:
     desc.append('\"')
     desc="\n".join(desc)
     out.append(desc)
+    if breeder:
+        out.append('-f "Tender Love and Care|As a Breeder, you have studied Pokémon eggs and know just what they need to create the perfect environment for optimal growth, no matter the species. When you reach level 5, gain advantage on all rolls that reduce the incubation counter for Pokémon egg hatching times."')
     out.append(f"-f '{e}|{cc_str(e)} (-{ST})'")
     out.append("-thumb <image> -color <color>")
     if get_cc(e)<=0:
