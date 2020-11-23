@@ -4,7 +4,7 @@ gvar=load_json(get_gvar("fc6518e3-18f5-417e-9824-8dfe65fd9a5d"))
 out=[]
 out.append('-title "Generating a new Pokemon..."')
 if 'Help' in args or '?' in args or not args:
-    out.append(f'-desc "Running `{ctx.prefix}{ctx.alias} random` will generate a Pokemon generated from a random Difficulty and Habitat. You can type in a difficulty and/or habitat after `{ctx.prefix}{ctx.alias}` to narrow the results. You can add `day` or `night` to specify a time or just let the alias choose randomly. Add `-shiny ##` to change the percentage rate for a shiny Pokemon (i.e. `-shiny 10` for a 10% drop rate.)"'
+    out.append(f'-desc "Running `{ctx.prefix}{ctx.alias} random` will generate a Pokemon generated from a random Difficulty and Habitat. You can type in a difficulty and/or habitat after `{ctx.prefix}{ctx.alias}` to narrow the results. You can add `day` or `night` to specify a time or just let the alias choose randomly. Add `-shiny ##` to change the percentage rate for a shiny Pokemon (i.e. `-shiny 10` for a 10% drop rate.)"')
     out.append(f'-f "__Available Difficulties:__|{", ".join([x for x in gvar.Day.keys()])}"')
     out.append(f'-f "__Available Habitats:__|{", ".join([x for x in gvar.Day.Simple.keys()])}"')
 else:
