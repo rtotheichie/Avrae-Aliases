@@ -23,5 +23,12 @@
   "Pokemon5e/pokerace/pokerace.alias":"5fa7d084181a164697a74886",
   "Pokemon5e/pokerace/pokerace start.alias":"5fa7d0bd7e4b0daea5b6033e",
   "Pokemon5e/pokerace/pokerace end.alias":"5fa7d0ee7e4b0daea5b6033f",
-  "Pokemon5e/STAB.snippet":"5f77e2d54ded026d119cfce5"
+  "Pokemon5e/STAB.snippet":"5f77e2d54ded026d119cfce5",
+  "Pokemon5e/2STAB.snippet":"5f77e30d90e415e96a23c803",
+  "Pokemon5e/confused.snippet":"5f77e36b4ded026d119cfce7",
+  "Pokemon5e/conf.snippet":"5f77e3a14ded026d119cfce9",
+  "Pokemon5e/mm.snippet":"5f77e3cf4ded026d119cfcea",
+  "Pokemon5e/rm.snippet":"5f77e3f24ded026d119cfceb",
+  "Pokemon5e/paralyzed.snippet":"5f77e44890e415e96a23c804",
+  "Pokemon5e/scrappy.snippet":"5f77e4824ded026d119cfcec"
 }
