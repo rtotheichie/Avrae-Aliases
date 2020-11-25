@@ -1,0 +1,5 @@
+{{Richie=vroll("1d4")}}
+{{Oni = get('miss', 0) + (Richie.total==1)}}
+-f "Paralyzed Roll|{{Richie}}"
+-f "Paralyzed|A paralyzed creature has disadvantage on any STR or DEX saving throws, and attacks against it have advantage. After selecting a Move to activate and spend PP on, roll a d4. On a result of 1, it is incapacitated and restrained. The trainer of a fully paralyzed Pokémon still may take an action. (Electric types are immune to this status condition)."
+{{f'miss{Oni}' if Richie.total==1 else ''}}
