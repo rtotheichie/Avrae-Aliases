@@ -81,7 +81,7 @@
 	},
 	"Vikavolt":
 	{
-		"id": "738", "type1": "Bug", "type2": "Electric", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/4/4e/738Vikavolt.png/600px-738Vikavolt.png", "desc": "It builds up electricity in its abdomen, focuses it through its jaws, and then fires the electricity off in concentrated beams."
+		"id": "738", "type1": "Bug", "type2": "Electric", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/4/4e/738Vikavolt.png/600px-738Vikavolt.png", "desc": "It builds up electricity in its abdomen, focuses it through its jaws, and then fires the electricity off in concentrated beams."
 	},
 	"Vileplume":
 	{
@@ -189,7 +189,7 @@
 	},
 	"Wimpod":
 	{
-		"id": "767", "type1": "Bug", "type2": "Water", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ef/767Wimpod.png/600px-767Wimpod.png", "desc": "It’s nature’s cleaner—it eats anything and everything, including garbage and rotten things. The ground near its nest is always clean."
+		"id": "767", "type1": "Bug", "type2": "Water", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ef/767Wimpod.png/600px-767Wimpod.png", "desc": "It’s nature’s cleaner—it eats anything and everything, including garbage and rotten things. The ground near its nest is always clean."
 	},
 	"Wingull":
 	{
@@ -197,11 +197,11 @@
 	},
 	"Wishiwashi (School Form)":
 	{
-		"id": "746", "type1": "Water", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/7/7f/746Wishiwashi-School.png/600px-746Wishiwashi-School.png", "desc": "Wishiwashi assemble in this formation to face off against strong foes. It boasts a strength that earned it the name “demon of the sea.”"
+		"id": "746", "type1": "Water", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/thumb/7/7f/746Wishiwashi-School.png/600px-746Wishiwashi-School.png", "desc": "Wishiwashi assemble in this formation to face off against strong foes. It boasts a strength that earned it the name “demon of the sea.”"
 	},
 	"Wishiwashi (Solo Form)":
 	{
-		"id": "746", "type1": "Water", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/18/746Wishiwashi-Solo.png/600px-746Wishiwashi-Solo.png", "desc": "When it’s in trouble, its eyes moisten and begin to shine. The shining light attracts its comrades, and they stand together against their enemies."
+		"id": "746", "type1": "Water", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/thumb/1/18/746Wishiwashi-Solo.png/600px-746Wishiwashi-Solo.png", "desc": "When it’s in trouble, its eyes moisten and begin to shine. The shining light attracts its comrades, and they stand together against their enemies."
 	},
 	"Wobbuffet":
 	{
@@ -213,7 +213,7 @@
 	},
 	"Wooloo":
 	{
-		"id": "831", "type1": "Normal", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/1f/831Wooloo.png/600px-831Wooloo.png", "desc": "Its curly fleece is such an effective cushion that this Pokémon could fall off a cliff and stand right back up at the bottom, unharmed."
+		"id": "831", "type1": "Normal", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/thumb/1/1f/831Wooloo.png/600px-831Wooloo.png", "desc": "Its curly fleece is such an effective cushion that this Pokémon could fall off a cliff and stand right back up at the bottom, unharmed."
 	},
 	"Wooper":
 	{
@@ -249,7 +249,7 @@
 	},
 	"Xurkitree":
 	{
-		"id": "796", "type1": "Electric", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d2/796Xurkitree.png/600px-796Xurkitree.png", "desc": "They’ve been dubbed Ultra Beasts. Some of them stand unmoving, like trees, with their arms and legs stuck into the ground."
+		"id": "796", "type1": "Electric", "type2": null, "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d2/796Xurkitree.png/600px-796Xurkitree.png", "desc": "They’ve been dubbed Ultra Beasts. Some of them stand unmoving, like trees, with their arms and legs stuck into the ground."
 	},
 	"Yamask":
 	{
@@ -269,7 +269,7 @@
 	},
 	"Yungoos":
 	{
-		"id": "734", "type1": "Normal", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/0/08/734Yungoos.png/600px-734Yungoos.png", "desc": "Its stomach takes up most of its long torso. It’s a big eater, so the amount Trainers have to spend on its food is no laughing matter."
+		"id": "734", "type1": "Normal", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/0/08/734Yungoos.png/600px-734Yungoos.png", "desc": "Its stomach takes up most of its long torso. It’s a big eater, so the amount Trainers have to spend on its food is no laughing matter."
 	},
 	"Yveltal":
 	{
@@ -317,7 +317,7 @@
 	},
 	"Zeraora":
 	{
-		"id": "807", "type1": "Electric", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a7/807Zeraora.png/600px-807Zeraora.png", "desc": "It electrifies its claws and tears its opponents apart with them. Even if they dodge its attack, they’ll be electrocuted by the flying sparks."
+		"id": "807", "type1": "Electric", "type2": null, "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a7/807Zeraora.png/600px-807Zeraora.png", "desc": "It electrifies its claws and tears its opponents apart with them. Even if they dodge its attack, they’ll be electrocuted by the flying sparks."
 	},
 	"Zigzagoon":
 	{
