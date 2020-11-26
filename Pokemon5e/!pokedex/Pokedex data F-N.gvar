@@ -81,7 +81,7 @@
 	},
 	"Fomantis":
 	{
-		"id": "753", "type1": "Grass", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/10/753Fomantis.png/600px-753Fomantis.png", "desc": "It loves the sunshine. When it basks in the sunlight regularly, it grows up with vivid coloration."
+		"id": "753", "type1": "Grass", "type2": null, "sr": "0.125", "image": "https://cdn.bulbagarden.net/upload/thumb/1/10/753Fomantis.png/600px-753Fomantis.png", "desc": "It loves the sunshine. When it basks in the sunlight regularly, it grows up with vivid coloration."
 	},
 	"Foongus":
 	{
@@ -293,7 +293,7 @@
 	},
 	"Golisopod":
 	{
-		"id": "768", "type1": "Bug", "type2": "Water", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/b/b6/768Golisopod.png/600px-768Golisopod.png", "desc": "It will do anything to win, taking advantage of every opening and finishing opponents off with the small claws on its front legs."
+		"id": "768", "type1": "Bug", "type2": "Water", "sr": "9", "image": "https://cdn.bulbagarden.net/upload/thumb/b/b6/768Golisopod.png/600px-768Golisopod.png", "desc": "It will do anything to win, taking advantage of every opening and finishing opponents off with the small claws on its front legs."
 	},
 	"Golurk":
 	{
@@ -393,7 +393,7 @@
 	},
 	"Grubbin":
 	{
-		"id": "736", "type1": "Bug", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/14/736Grubbin.png/600px-736Grubbin.png", "desc": "It uses its big jaws to dig nests into the forest floor, and it loves to feed on sweet tree sap."
+		"id": "736", "type1": "Bug", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/1/14/736Grubbin.png/600px-736Grubbin.png", "desc": "It uses its big jaws to dig nests into the forest floor, and it loves to feed on sweet tree sap."
 	},
 	"Grumpig":
 	{
@@ -405,7 +405,7 @@
 	},
 	"Gumshoos":
 	{
-		"id": "735", "type1": "Normal", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/b/ba/735Gumshoos.png/600px-735Gumshoos.png", "desc": "Although it wasn’t originally found in Alola, this Pokémon was brought over a long time ago when there was a huge Rattata outbreak."
+		"id": "735", "type1": "Normal", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/b/ba/735Gumshoos.png/600px-735Gumshoos.png", "desc": "Although it wasn’t originally found in Alola, this Pokémon was brought over a long time ago when there was a huge Rattata outbreak."
 	},
 	"Gurdurr":
 	{
@@ -413,7 +413,7 @@
 	},
 	"Guzzlord":
 	{
-		"id": "799", "type1": "Dark", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/4/47/799Guzzlord.png/600px-799Guzzlord.png", "desc": "An unknown life-form called a UB. It may be constantly hungry—it is certainly always devouring something."
+		"id": "799", "type1": "Dark", "type2": "Dragon", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/4/47/799Guzzlord.png/600px-799Guzzlord.png", "desc": "An unknown life-form called a UB. It may be constantly hungry—it is certainly always devouring something."
 	},
 	"Gyarados":
 	{
@@ -421,7 +421,7 @@
 	},
 	"Hakamo-o":
 	{
-		"id": "783", "type1": "Dragon", "type2": "Fighting", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/0/0d/783Hakamo-o.png/600px-783Hakamo-o.png", "desc": "It sheds and regrows its scales on a continuous basis. The scales become harder and sharper each time they’re regrown."
+		"id": "783", "type1": "Dragon", "type2": "Fighting", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/0/0d/783Hakamo-o.png/600px-783Hakamo-o.png", "desc": "It sheds and regrows its scales on a continuous basis. The scales become harder and sharper each time they’re regrown."
 	},
 	"Happiny":
 	{
@@ -597,7 +597,7 @@
 	},
 	"Jangmo-o":
 	{
-		"id": "782", "type1": "Dragon", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a0/782Jangmo-o.png/600px-782Jangmo-o.png", "desc": "It smacks the scales on its head against rocks or against the ground to frighten its opponents. It can also contact its friends with these noises."
+		"id": "782", "type1": "Dragon", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a0/782Jangmo-o.png/600px-782Jangmo-o.png", "desc": "It smacks the scales on its head against rocks or against the ground to frighten its opponents. It can also contact its friends with these noises."
 	},
 	"Jellicent":
 	{
@@ -653,7 +653,7 @@
 	},
 	"Kartana":
 	{
-		"id": "798", "type1": "Grass", "type2": "Steel", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fe/798Kartana.png/600px-798Kartana.png", "desc": "This Ultra Beast’s body, which is as thin as paper, is like a sharpened sword."
+		"id": "798", "type1": "Grass", "type2": "Steel", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fe/798Kartana.png/600px-798Kartana.png", "desc": "This Ultra Beast’s body, which is as thin as paper, is like a sharpened sword."
 	},
 	"Kecleon":
 	{
@@ -701,11 +701,11 @@
 	},
 	"Komala":
 	{
-		"id": "775", "type1": "Normal", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/7/7d/775Komala.png/600px-775Komala.png", "desc": "It is born asleep, and it dies asleep. All its movements are apparently no more than the results of it tossing and turning in its dreams."
+		"id": "775", "type1": "Normal", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/7/7d/775Komala.png/600px-775Komala.png", "desc": "It is born asleep, and it dies asleep. All its movements are apparently no more than the results of it tossing and turning in its dreams."
 	},
 	"Kommo-o":
 	{
-		"id": "784", "type1": "Dragon", "type2": "Fighting", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/8/84/784Kommo-o.png/600px-784Kommo-o.png", "desc": "Its rigid scales function as offense and defense. In the past, its scales were processed and used to make weapons and other commodities."
+		"id": "784", "type1": "Dragon", "type2": "Fighting", "sr": "14", "image": "https://cdn.bulbagarden.net/upload/thumb/8/84/784Kommo-o.png/600px-784Kommo-o.png", "desc": "Its rigid scales function as offense and defense. In the past, its scales were processed and used to make weapons and other commodities."
 	},
 	"Krabby":
 	{
@@ -873,7 +873,7 @@
 	},
 	"Lunala":
 	{
-		"id": "792", "type1": "Psychic", "type2": "Ghost", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/9/9d/792Lunala.png/600px-792Lunala.png", "desc": "It steals the light from its surroundings and then becomes the full moon, showering its own light across the night sky."
+		"id": "792", "type1": "Psychic", "type2": "Ghost", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/9/9d/792Lunala.png/600px-792Lunala.png", "desc": "It steals the light from its surroundings and then becomes the full moon, showering its own light across the night sky."
 	},
 	"Lunatone":
 	{
@@ -881,7 +881,7 @@
 	},
 	"Lurantis":
 	{
-		"id": "754", "type1": "Grass", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/19/754Lurantis.png/600px-754Lurantis.png", "desc": "For self-protection, it pretends to be a bug Pokémon. Both of its arms bear keen-edged petals."
+		"id": "754", "type1": "Grass", "type2": null, "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/1/19/754Lurantis.png/600px-754Lurantis.png", "desc": "For self-protection, it pretends to be a bug Pokémon. Both of its arms bear keen-edged petals."
 	},
 	"Luvdisc":
 	{
@@ -897,15 +897,15 @@
 	},
 	"Lycanroc (Dusk Form)":
 	{
-		"id": "745", "type1": "Rock", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/3/37/745Lycanroc-Dusk.png/600px-745Lycanroc-Dusk.png", "desc": "Bathed in the setting sun of evening, Lycanroc has undergone a special kind of evolution. An intense fighting spirit underlies its calmness."
+		"id": "745", "type1": "Rock", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/thumb/3/37/745Lycanroc-Dusk.png/600px-745Lycanroc-Dusk.png", "desc": "Bathed in the setting sun of evening, Lycanroc has undergone a special kind of evolution. An intense fighting spirit underlies its calmness."
 	},
 	"Lycanroc (Midday Form)":
 	{
-		"id": "745", "type1": "Rock", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/14/745Lycanroc.png/600px-745Lycanroc.png", "desc": "The rocks in its mane are sharper than a knife. Fragments that break off are treasured as good luck charms."
+		"id": "745", "type1": "Rock", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/thumb/1/14/745Lycanroc.png/600px-745Lycanroc.png", "desc": "The rocks in its mane are sharper than a knife. Fragments that break off are treasured as good luck charms."
 	},
 	"Lycanroc (Midnight Form)":
 	{
-		"id": "745", "type1": "Rock", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/3/34/745Lycanroc-Midnight.png/600px-745Lycanroc-Midnight.png", "desc": "It goads its enemies into attacking, withstands the hits, and in return, delivers a headbutt, crushing their bones with its rocky mane."
+		"id": "745", "type1": "Rock", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/thumb/3/34/745Lycanroc-Midnight.png/600px-745Lycanroc-Midnight.png", "desc": "It goads its enemies into attacking, withstands the hits, and in return, delivers a headbutt, crushing their bones with its rocky mane."
 	},
 	"Machamp":
 	{
@@ -929,7 +929,7 @@
 	},
 	"Magearna":
 	{
-		"id": "801", "type1": "Steel", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/0/0a/801Magearna.png/600px-801Magearna.png", "desc": "It synchronizes its consciousness with others to understand their feelings. This faculty makes it useful for taking care of people."
+		"id": "801", "type1": "Steel", "type2": "Fairy", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/0/0a/801Magearna.png/600px-801Magearna.png", "desc": "It synchronizes its consciousness with others to understand their feelings. This faculty makes it useful for taking care of people."
 	},
 	"Magikarp":
 	{
@@ -997,7 +997,7 @@
 	},
 	"Mareanie":
 	{
-		"id": "747", "type1": "Poison", "type2": "Water", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d3/747Mareanie.png/600px-747Mareanie.png", "desc": "The first symptom of its sting is numbness. The next is an itching sensation so intense that it’s impossible to resist the urge to claw at your skin."
+		"id": "747", "type1": "Poison", "type2": "Water", "sr": "1", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d3/747Mareanie.png/600px-747Mareanie.png", "desc": "The first symptom of its sting is numbness. The next is an itching sensation so intense that it’s impossible to resist the urge to claw at your skin."
 	},
 	"Mareep":
 	{
@@ -1013,7 +1013,7 @@
 	},
 	"Marshadow":
 	{
-		"id": "802", "type1": "Fighting", "type2": "Ghost", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/8/89/802Marshadow.png/600px-802Marshadow.png", "desc": "It slips into the shadows of others and mimics their powers and movements. As it improves, it becomes stronger than those it’s imitating."
+		"id": "802", "type1": "Fighting", "type2": "Ghost", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/8/89/802Marshadow.png/600px-802Marshadow.png", "desc": "It slips into the shadows of others and mimics their powers and movements. As it improves, it becomes stronger than those it’s imitating."
 	},
 	"Marshtomp":
 	{
@@ -1041,7 +1041,7 @@
 	},
 	"Melmetal":
 	{
-		"id": "809", "type1": "Steel", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ea/809Melmetal.png/600px-809Melmetal.png", "desc": "Centrifugal force is behind the punches of Melmetal’s heavy hex-nut arms. Melmetal is said to deliver the strongest punches of all Pokémon."
+		"id": "809", "type1": "Steel", "type2": null, "sr": "14", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ea/809Melmetal.png/600px-809Melmetal.png", "desc": "Centrifugal force is behind the punches of Melmetal’s heavy hex-nut arms. Melmetal is said to deliver the strongest punches of all Pokémon."
 	},
 	"Meloetta - Aria":
 	{
@@ -1053,7 +1053,7 @@
 	},
 	"Meltan":
 	{
-		"id": "808", "type1": "Steel", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d1/808Meltan.png/600px-808Meltan.png", "desc": "It melts particles of iron and other metals found in the subsoil, so it can absorb them into its body of molten steel."
+		"id": "808", "type1": "Steel", "type2": null, "sr": "5", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d1/808Meltan.png/600px-808Meltan.png", "desc": "It melts particles of iron and other metals found in the subsoil, so it can absorb them into its body of molten steel."
 	},
 	"Meowstic ♀":
 	{
@@ -1125,7 +1125,7 @@
 	},
 	"Mimikyu":
 	{
-		"id": "778", "type1": "Ghost", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/9/9b/778Mimikyu.png/600px-778Mimikyu.png", "desc": "Although it’s a quiet, lonely Pokémon, if you try to look at what’s under its rag, it will become agitated and resist violently."
+		"id": "778", "type1": "Ghost", "type2": "Fairy", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/thumb/9/9b/778Mimikyu.png/600px-778Mimikyu.png", "desc": "Although it’s a quiet, lonely Pokémon, if you try to look at what’s under its rag, it will become agitated and resist violently."
 	},
 	"Minccino":
 	{
@@ -1133,11 +1133,11 @@
 	},
 	"Minior (Core Form)":
 	{
-		"id": "774", "type1": "Rock", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/2/20/774Minior-Core.png/600px-774Minior-Core.png", "desc": "It eats dust in the atmosphere. The composition of the dust determines the color of its core."
+		"id": "774", "type1": "Rock", "type2": "Flying", "sr": "4", "image": "https://cdn.bulbagarden.net/upload/thumb/2/20/774Minior-Core.png/600px-774Minior-Core.png", "desc": "It eats dust in the atmosphere. The composition of the dust determines the color of its core."
 	},
 	"Minior (Meteor Form)":
 	{
-		"id": "774", "type1": "Rock", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/9/90/774Minior.png/600px-774Minior.png", "desc": "Strong impacts can knock it out of its shell. This Pokémon was born from mutated nanoparticles."
+		"id": "774", "type1": "Rock", "type2": "Flying", "sr": "4", "image": "https://cdn.bulbagarden.net/upload/thumb/9/90/774Minior.png/600px-774Minior.png", "desc": "Strong impacts can knock it out of its shell. This Pokémon was born from mutated nanoparticles."
 	},
 	"Minun":
 	{
@@ -1169,7 +1169,7 @@
 	},
 	"Morelull":
 	{
-		"id": "755", "type1": "Grass", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/c/c9/755Morelull.png/600px-755Morelull.png", "desc": "Pokémon living in the forest eat the delicious caps on Morelull’s head. The caps regrow overnight."
+		"id": "755", "type1": "Grass", "type2": "Fairy", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/c/c9/755Morelull.png/600px-755Morelull.png", "desc": "Pokémon living in the forest eat the delicious caps on Morelull’s head. The caps regrow overnight."
 	},
 	"Morgrem":
 	{
@@ -1201,7 +1201,7 @@
 	},
 	"Mudbray":
 	{
-		"id": "749", "type1": "Ground", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/12/749Mudbray.png/600px-749Mudbray.png", "desc": "It eats dirt to create mud and smears this mud all over its feet, giving them the grip needed to walk on rough terrain without slipping."
+		"id": "749", "type1": "Ground", "type2": null, "sr": "2", "image": "https://cdn.bulbagarden.net/upload/thumb/1/12/749Mudbray.png/600px-749Mudbray.png", "desc": "It eats dirt to create mud and smears this mud all over its feet, giving them the grip needed to walk on rough terrain without slipping."
 	},
 	"Mudkip":
 	{
@@ -1209,7 +1209,7 @@
 	},
 	"Mudsdale":
 	{
-		"id": "750", "type1": "Ground", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/f/f7/750Mudsdale.png/600px-750Mudsdale.png", "desc": "It remains calm and unmoving no matter the situation. It mixes dirt with the saliva in its mouth to make a special kind of mud."
+		"id": "750", "type1": "Ground", "type2": null, "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/f/f7/750Mudsdale.png/600px-750Mudsdale.png", "desc": "It remains calm and unmoving no matter the situation. It mixes dirt with the saliva in its mouth to make a special kind of mud."
 	},
 	"Muk":
 	{
@@ -1233,7 +1233,7 @@
 	},
 	"Naganadel":
 	{
-		"id": "804", "type1": "Poison", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/d/de/804Naganadel.png/600px-804Naganadel.png", "desc": "One kind of Ultra Beast, it fires a glowing, venomous liquid from its needles. This liquid is also immensely adhesive."
+		"id": "804", "type1": "Poison", "type2": "Dragon", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/d/de/804Naganadel.png/600px-804Naganadel.png", "desc": "One kind of Ultra Beast, it fires a glowing, venomous liquid from its needles. This liquid is also immensely adhesive."
 	},
 	"Natu":
 	{
@@ -1241,19 +1241,19 @@
 	},
 	"Necrozma":
 	{
-		"id": "800", "type1": "Psychic", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/4/44/800Necrozma.png/600px-800Necrozma.png", "desc": "It survives by absorbing light. After a long time spent slumbering underground, impurities accumulated within it, causing its body to darken."
+		"id": "800", "type1": "Psychic", "type2": null, "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/4/44/800Necrozma.png/600px-800Necrozma.png", "desc": "It survives by absorbing light. After a long time spent slumbering underground, impurities accumulated within it, causing its body to darken."
 	},
 	"Necrozma (Dawn Wings Necrozma)":
 	{
-		"id": "800", "type1": "Psychic", "type2": "Ghost", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/7/7a/800Necrozma-Dawn_Wings.png", "desc": "This is its form while it’s devouring the light of Lunala. It grasps foes in its giant claws and rips them apart with brute force."
+		"id": "800", "type1": "Psychic", "type2": "Ghost", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/7/7a/800Necrozma-Dawn_Wings.png", "desc": "This is its form while it’s devouring the light of Lunala. It grasps foes in its giant claws and rips them apart with brute force."
 	},
 	"Necrozma (Dusk Mane Necrozma)":
 	{
-		"id": "800", "type1": "Psychic", "type2": "Steel", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/8/80/800Necrozma-Dusk_Mane.png", "desc": "This is its form while it is devouring the light of Solgaleo. It pounces on foes and then slashes them with the claws on its four limbs and back."
+		"id": "800", "type1": "Psychic", "type2": "Steel", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/8/80/800Necrozma-Dusk_Mane.png", "desc": "This is its form while it is devouring the light of Solgaleo. It pounces on foes and then slashes them with the claws on its four limbs and back."
 	},
 	"Necrozma (Ultra Necrozma)":
 	{
-		"id": "800", "type1": "Psychic", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/8/8b/800Necrozma-Ultra.png/600px-800Necrozma-Ultra.png", "desc": "The light pouring out from all over its body affects living things and nature, impacting them in various ways."
+		"id": "800", "type1": "Psychic", "type2": "Dragon", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/8/8b/800Necrozma-Ultra.png/600px-800Necrozma-Ultra.png", "desc": "The light pouring out from all over its body affects living things and nature, impacting them in various ways."
 	},
 	"Nickit":
 	{
@@ -1285,7 +1285,7 @@
 	},
 	"Nihilego":
 	{
-		"id": "793", "type1": "Rock", "type2": "Poison", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/2/2c/793Nihilego.png/600px-793Nihilego.png", "desc": "It appeared in this world from an Ultra Wormhole. Nihilego appears to be a parasite that lives by feeding on people and Pokémon."
+		"id": "793", "type1": "Rock", "type2": "Poison", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/2/2c/793Nihilego.png/600px-793Nihilego.png", "desc": "It appeared in this world from an Ultra Wormhole. Nihilego appears to be a parasite that lives by feeding on people and Pokémon."
 	},
 	"Nincada":
 	{

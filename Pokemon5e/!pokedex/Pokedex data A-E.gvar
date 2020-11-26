@@ -141,7 +141,7 @@
 	},
 	"Araquanid":
 	{
-		"id": "752", "type1": "Water", "type2": "Bug", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/8/82/752Araquanid.png/600px-752Araquanid.png", "desc": "Despite what its appearance suggests, it cares for others. If it finds vulnerable, weak Pokémon, it protectively brings them into its water bubble."
+		"id": "752", "type1": "Water", "type2": "Bug", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/8/82/752Araquanid.png/600px-752Araquanid.png", "desc": "Despite what its appearance suggests, it cares for others. If it finds vulnerable, weak Pokémon, it protectively brings them into its water bubble."
 	},
 	"Arbok":
 	{
@@ -293,7 +293,7 @@
 	},
 	"Bewear":
 	{
-		"id": "760", "type1": "Normal", "type2": "Fighting", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a4/760Bewear.png/600px-760Bewear.png", "desc": "This immensely dangerous Pokémon possesses overwhelming physical strength. Its habitat is generally off-limits."
+		"id": "760", "type1": "Normal", "type2": "Fighting", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a4/760Bewear.png/600px-760Bewear.png", "desc": "This immensely dangerous Pokémon possesses overwhelming physical strength. Its habitat is generally off-limits."
 	},
 	"Bibarel":
 	{
@@ -361,7 +361,7 @@
 	},
 	"Bounsweet":
 	{
-		"id": "761", "type1": "Grass", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a1/761Bounsweet.png/600px-761Bounsweet.png", "desc": "Its body gives off a sweet, fruity scent that is extremely appetizing to bird Pokémon."
+		"id": "761", "type1": "Grass", "type2": null, "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/a/a1/761Bounsweet.png/600px-761Bounsweet.png", "desc": "Its body gives off a sweet, fruity scent that is extremely appetizing to bird Pokémon."
 	},
 	"Braixen":
 	{
@@ -389,7 +389,7 @@
 	},
 	"Bruxish":
 	{
-		"id": "779", "type1": "Water", "type2": "Psychic", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/9/92/779Bruxish.png/600px-779Bruxish.png", "desc": "It burrows beneath the sand, radiating psychic power from the protuberance on its head. It waits for prey as it surveys the area."
+		"id": "779", "type1": "Water", "type2": "Psychic", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/9/92/779Bruxish.png/600px-779Bruxish.png", "desc": "It burrows beneath the sand, radiating psychic power from the protuberance on its head. It waits for prey as it surveys the area."
 	},
 	"Budew":
 	{
@@ -425,7 +425,7 @@
 	},
 	"Buzzwole":
 	{
-		"id": "794", "type1": "Bug", "type2": "Fighting", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fa/794Buzzwole.png/600px-794Buzzwole.png", "desc": "This Ultra Beast appeared from another world. It shows off its body, but whether that display is a boast or a threat remains unclear."
+		"id": "794", "type1": "Bug", "type2": "Fighting", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fa/794Buzzwole.png/600px-794Buzzwole.png", "desc": "This Ultra Beast appeared from another world. It shows off its body, but whether that display is a boast or a threat remains unclear."
 	},
 	"Cacnea":
 	{
@@ -501,11 +501,11 @@
 	},
 	"Celesteela":
 	{
-		"id": "797", "type1": "Steel", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/8/89/797Celesteela.png/600px-797Celesteela.png", "desc": "One of the dangerous UBs, high energy readings can be detected coming from both of its huge arms."
+		"id": "797", "type1": "Steel", "type2": "Flying", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/8/89/797Celesteela.png/600px-797Celesteela.png", "desc": "One of the dangerous UBs, high energy readings can be detected coming from both of its huge arms."
 	},
 	"Centiskorch":
 	{
-		"id": "851", "type1": "Fire", "type2": "Bug", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ed/851Centiskorch.png/600px-851Centiskorch.png", "desc": "While its burning body is already dangerous on its own, this excessively hostile Pokémon also has large and very sharp fangs."
+		"id": "851", "type1": "Fire", "type2": "Bug", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ed/851Centiskorch.png/600px-851Centiskorch.png", "desc": "While its burning body is already dangerous on its own, this excessively hostile Pokémon also has large and very sharp fangs."
 	},
 	"Chandelure":
 	{
@@ -521,7 +521,7 @@
 	},
 	"Charjabug":
 	{
-		"id": "737", "type1": "Bug", "type2": "Electric", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ec/737Charjabug.png/600px-737Charjabug.png", "desc": "While its durable shell protects it from attacks, Charjabug strikes at enemies with jolts of electricity discharged from the tips of its jaws."
+		"id": "737", "type1": "Bug", "type2": "Electric", "sr": "5", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ec/737Charjabug.png/600px-737Charjabug.png", "desc": "While its durable shell protects it from attacks, Charjabug strikes at enemies with jolts of electricity discharged from the tips of its jaws."
 	},
 	"Charmander":
 	{
@@ -649,7 +649,7 @@
 	},
 	"Comfey":
 	{
-		"id": "764", "type1": "Fairy", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/c/c9/764Comfey.png/600px-764Comfey.png", "desc": "It stretches sticky vines out from its head and picks flowers to adorn itself with. When it doesn’t have any flowers, it feels uneasy."
+		"id": "764", "type1": "Fairy", "type2": null, "sr": "9", "image": "https://cdn.bulbagarden.net/upload/thumb/c/c9/764Comfey.png/600px-764Comfey.png", "desc": "It stretches sticky vines out from its head and picks flowers to adorn itself with. When it doesn’t have any flowers, it feels uneasy."
 	},
 	"Conkeldurr":
 	{
@@ -677,11 +677,11 @@
 	},
 	"Cosmoem":
 	{
-		"id": "790", "type1": "Psychic", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/1b/790Cosmoem.png/600px-790Cosmoem.png", "desc": "Motionless as if dead, its body is faintly warm to the touch. In the distant past, it was called the cocoon of the stars."
+		"id": "790", "type1": "Psychic", "type2": null, "sr": "13", "image": "https://cdn.bulbagarden.net/upload/thumb/1/1b/790Cosmoem.png/600px-790Cosmoem.png", "desc": "Motionless as if dead, its body is faintly warm to the touch. In the distant past, it was called the cocoon of the stars."
 	},
 	"Cosmog":
 	{
-		"id": "789", "type1": "Psychic", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/17/789Cosmog.png/600px-789Cosmog.png", "desc": "Whether or not it’s a Pokémon from this world is a mystery. When it’s in a jam, it warps away to a safe place to hide."
+		"id": "789", "type1": "Psychic", "type2": null, "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/1/17/789Cosmog.png/600px-789Cosmog.png", "desc": "Whether or not it’s a Pokémon from this world is a mystery. When it’s in a jam, it warps away to a safe place to hide."
 	},
 	"Cottonee":
 	{
@@ -689,11 +689,11 @@
 	},
 	"Crabominable":
 	{
-		"id": "740", "type1": "Fighting", "type2": "Ice", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/17/740Crabominable.png/600px-740Crabominable.png", "desc": "It stores coldness in its pincers and pummels its foes. It can even smash thick walls of ice to bits!"
+		"id": "740", "type1": "Fighting", "type2": "Ice", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/thumb/1/17/740Crabominable.png/600px-740Crabominable.png", "desc": "It stores coldness in its pincers and pummels its foes. It can even smash thick walls of ice to bits!"
 	},
 	"Crabrawler":
 	{
-		"id": "739", "type1": "Fighting", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/9/98/739Crabrawler.png/600px-739Crabrawler.png", "desc": "Its hard pincers are well suited to both offense and defense. Fights between two Crabrawler are like boxing matches."
+		"id": "739", "type1": "Fighting", "type2": null, "sr": "1", "image": "https://cdn.bulbagarden.net/upload/thumb/9/98/739Crabrawler.png/600px-739Crabrawler.png", "desc": "Its hard pincers are well suited to both offense and defense. Fights between two Crabrawler are like boxing matches."
 	},
 	"Cradily":
 	{
@@ -753,7 +753,7 @@
 	},
 	"Cutiefly":
 	{
-		"id": "742", "type1": "Bug", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fa/742Cutiefly.png/600px-742Cutiefly.png", "desc": "An opponent’s aura can tell Cutiefly what that opponent’s next move will be. Then Cutiefly can glide around the attack and strike back."
+		"id": "742", "type1": "Bug", "type2": "Fairy", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fa/742Cutiefly.png/600px-742Cutiefly.png", "desc": "An opponent’s aura can tell Cutiefly what that opponent’s next move will be. Then Cutiefly can glide around the attack and strike back."
 	},
 	"Cyndaquil":
 	{
@@ -833,11 +833,11 @@
 	},
 	"Dewpider":
 	{
-		"id": "751", "type1": "Water", "type2": "Bug", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/2/29/751Dewpider.png/600px-751Dewpider.png", "desc": "Dewpider normally lives underwater. When it comes onto land in search of food, it takes water with it in the form of a bubble on its head."
+		"id": "751", "type1": "Water", "type2": "Bug", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/thumb/2/29/751Dewpider.png/600px-751Dewpider.png", "desc": "Dewpider normally lives underwater. When it comes onto land in search of food, it takes water with it in the form of a bubble on its head."
 	},
 	"Dhelmise":
 	{
-		"id": "781", "type1": "Ghost", "type2": "Grass", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/2/2f/781Dhelmise.png/600px-781Dhelmise.png", "desc": "The soul of seaweed adrift in the waves became reborn as this Pokémon. It maintains itself with new infusions of seabed detritus and seaweed."
+		"id": "781", "type1": "Ghost", "type2": "Grass", "sr": "11", "image": "https://cdn.bulbagarden.net/upload/thumb/2/2f/781Dhelmise.png/600px-781Dhelmise.png", "desc": "The soul of seaweed adrift in the waves became reborn as this Pokémon. It maintains itself with new infusions of seabed detritus and seaweed."
 	},
 	"Dialga":
 	{
@@ -913,7 +913,7 @@
 	},
 	"Drampa":
 	{
-		"id": "780", "type1": "Normal", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/d/dc/780Drampa.png/600px-780Drampa.png", "desc": "It has a compassionate personality, but if it is angered, it completely destroys its surroundings with its intense breath."
+		"id": "780", "type1": "Normal", "type2": "Dragon", "sr": "9", "image": "https://cdn.bulbagarden.net/upload/thumb/d/dc/780Drampa.png/600px-780Drampa.png", "desc": "It has a compassionate personality, but if it is angered, it completely destroys its surroundings with its intense breath."
 	},
 	"Drapion":
 	{

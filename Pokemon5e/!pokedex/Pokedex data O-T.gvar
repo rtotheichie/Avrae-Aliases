@@ -25,27 +25,27 @@
 	},
 	"Oranguru":
 	{
-		"id": "765", "type1": "Normal", "type2": "Psychic", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d8/765Oranguru.png/600px-765Oranguru.png", "desc": "It knows the forest inside and out. If it comes across a wounded Pokémon, Oranguru will gather medicinal herbs to treat it."
+		"id": "765", "type1": "Normal", "type2": "Psychic", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d8/765Oranguru.png/600px-765Oranguru.png", "desc": "It knows the forest inside and out. If it comes across a wounded Pokémon, Oranguru will gather medicinal herbs to treat it."
 	},
 	"Orbeetle":
 	{
-		"id": "826", "type1": "Bug", "type2": "Psychic", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/7/79/826Orbeetle.png", "desc": "It’s famous for its high level of intelligence, and the large size of its brain is proof that it also possesses immense psychic power."
+		"id": "826", "type1": "Bug", "type2": "Psychic", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/7/79/826Orbeetle.png", "desc": "It’s famous for its high level of intelligence, and the large size of its brain is proof that it also possesses immense psychic power."
 	},
 	"Oricorio (Baile Style)":
 	{
-		"id": "741", "type1": "Fire", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ed/741Oricorio-Baile.png/600px-741Oricorio-Baile.png", "desc": "This Oricorio has drunk red nectar. If its Trainer gives the wrong order, this passionate Pokémon becomes fiercely angry."
+		"id": "741", "type1": "Fire", "type2": "Flying", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/e/ed/741Oricorio-Baile.png/600px-741Oricorio-Baile.png", "desc": "This Oricorio has drunk red nectar. If its Trainer gives the wrong order, this passionate Pokémon becomes fiercely angry."
 	},
 	"Oricorio (Pa'u Style)":
 	{
-		"id": "741", "type1": "Psychic", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/5/50/741Oricorio-Pa%27u.png/600px-741Oricorio-Pa%27u.png", "desc": "This Oricorio has sipped pink nectar. It gets so caught up in its dancing that it sometimes doesn’t hear its Trainer’s orders."
+		"id": "741", "type1": "Psychic", "type2": "Flying", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/5/50/741Oricorio-Pa%27u.png/600px-741Oricorio-Pa%27u.png", "desc": "This Oricorio has sipped pink nectar. It gets so caught up in its dancing that it sometimes doesn’t hear its Trainer’s orders."
 	},
 	"Oricorio (Pom-Pom Style)":
 	{
-		"id": "741", "type1": "Electric", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/6/6d/741Oricorio-Pom-Pom.png/600px-741Oricorio-Pom-Pom.png", "desc": "This Oricorio has drunk bright yellow nectar. When it sees someone looking glum, it will try to cheer them up with a dance."
+		"id": "741", "type1": "Electric", "type2": "Flying", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/6/6d/741Oricorio-Pom-Pom.png/600px-741Oricorio-Pom-Pom.png", "desc": "This Oricorio has drunk bright yellow nectar. When it sees someone looking glum, it will try to cheer them up with a dance."
 	},
 	"Oricorio (Sensu Style)":
 	{
-		"id": "741", "type1": "Ghost", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/1c/741Oricorio-Sensu.png/600px-741Oricorio-Sensu.png", "desc": "This Oricorio has sipped purple nectar. Some dancers use its graceful, elegant dancing as inspiration."
+		"id": "741", "type1": "Ghost", "type2": "Flying", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/1/1c/741Oricorio-Sensu.png/600px-741Oricorio-Sensu.png", "desc": "This Oricorio has sipped purple nectar. Some dancers use its graceful, elegant dancing as inspiration."
 	},
 	"Oshawott":
 	{
@@ -61,7 +61,7 @@
 	},
 	"Palossand":
 	{
-		"id": "770", "type1": "Ghost", "type2": "Ground", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/3/32/770Palossand.png/600px-770Palossand.png", "desc": "Each of its grains of sand has its own will. Palossand eats small Pokémon and siphons away their vital essence while they’re still alive."
+		"id": "770", "type1": "Ghost", "type2": "Ground", "sr": "11", "image": "https://cdn.bulbagarden.net/upload/thumb/3/32/770Palossand.png/600px-770Palossand.png", "desc": "Each of its grains of sand has its own will. Palossand eats small Pokémon and siphons away their vital essence while they’re still alive."
 	},
 	"Palpitoad":
 	{
@@ -97,7 +97,7 @@
 	},
 	"Passimian":
 	{
-		"id": "766", "type1": "Fighting", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/b/ba/766Passimian.png/600px-766Passimian.png", "desc": "They battle with hard berries for weapons. Their techniques are passed from the boss to the group, generation upon generation."
+		"id": "766", "type1": "Fighting", "type2": null, "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/b/ba/766Passimian.png/600px-766Passimian.png", "desc": "They battle with hard berries for weapons. Their techniques are passed from the boss to the group, generation upon generation."
 	},
 	"Patrat":
 	{
@@ -133,7 +133,7 @@
 	},
 	"Pheromosa":
 	{
-		"id": "795", "type1": "Bug", "type2": "Fighting", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/c/c7/795Pheromosa.png/600px-795Pheromosa.png", "desc": "A life-form that lives in another world, its body is thin and supple, but it also possesses great power."
+		"id": "795", "type1": "Bug", "type2": "Fighting", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/c/c7/795Pheromosa.png/600px-795Pheromosa.png", "desc": "A life-form that lives in another world, its body is thin and supple, but it also possesses great power."
 	},
 	"Phione":
 	{
@@ -169,7 +169,7 @@
 	},
 	"Pikipek":
 	{
-		"id": "731", "type1": "Normal", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/15/731Pikipek.png/600px-731Pikipek.png", "desc": "It pecks at trees with its hard beak. You can get some idea of its mood or condition from the rhythm of its pecking."
+		"id": "731", "type1": "Normal", "type2": "Flying", "sr": "0.25", "image": "https://cdn.bulbagarden.net/upload/thumb/1/15/731Pikipek.png/600px-731Pikipek.png", "desc": "It pecks at trees with its hard beak. You can get some idea of its mood or condition from the rhythm of its pecking."
 	},
 	"Piloswine":
 	{
@@ -197,7 +197,7 @@
 	},
 	"Poipole":
 	{
-		"id": "803", "type1": "Poison", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e5/803Poipole.png/600px-803Poipole.png", "desc": "An Ultra Beast that lives in a different world, it cackles wildly as it sprays its opponents with poison from the needles on its head."
+		"id": "803", "type1": "Poison", "type2": null, "sr": "12", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e5/803Poipole.png/600px-803Poipole.png", "desc": "An Ultra Beast that lives in a different world, it cackles wildly as it sprays its opponents with poison from the needles on its head."
 	},
 	"Politoed":
 	{
@@ -297,7 +297,7 @@
 	},
 	"Pyukumuku":
 	{
-		"id": "771", "type1": "Water", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/4/4f/771Pyukumuku.png/600px-771Pyukumuku.png", "desc": "It’s covered in a slime that keeps its skin moist, allowing it to stay on land for days without drying up."
+		"id": "771", "type1": "Water", "type2": null, "sr": "6", "image": "https://cdn.bulbagarden.net/upload/thumb/4/4f/771Pyukumuku.png/600px-771Pyukumuku.png", "desc": "It’s covered in a slime that keeps its skin moist, allowing it to stay on land for days without drying up."
 	},
 	"Quagsire":
 	{
@@ -409,7 +409,7 @@
 	},
 	"Ribombee":
 	{
-		"id": "743", "type1": "Bug", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e4/743Ribombee.png/600px-743Ribombee.png", "desc": "It makes pollen puffs from pollen and nectar. The puffs’ effects depend on the type of ingredients and how much of each one is used."
+		"id": "743", "type1": "Bug", "type2": "Fairy", "sr": "7", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e4/743Ribombee.png/600px-743Ribombee.png", "desc": "It makes pollen puffs from pollen and nectar. The puffs’ effects depend on the type of ingredients and how much of each one is used."
 	},
 	"Rillaboom":
 	{
@@ -421,7 +421,7 @@
 	},
 	"Rockruff":
 	{
-		"id": "744", "type1": "Rock", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/5/51/744Rockruff.png/600px-744Rockruff.png", "desc": "When it rubs the rocks on its neck against you, that’s proof of its love for you. However, the rocks are sharp, so the gesture is quite painful!"
+		"id": "744", "type1": "Rock", "type2": null, "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/thumb/5/51/744Rockruff.png/600px-744Rockruff.png", "desc": "When it rubs the rocks on its neck against you, that’s proof of its love for you. However, the rocks are sharp, so the gesture is quite painful!"
 	},
 	"Roggenrola":
 	{
@@ -489,11 +489,11 @@
 	},
 	"Salandit":
 	{
-		"id": "757", "type1": "Poison", "type2": "Fire", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/2/27/757Salandit.png/600px-757Salandit.png", "desc": "It burns its bodily fluids to create a poisonous gas. When its enemies become disoriented from inhaling the gas, it attacks them."
+		"id": "757", "type1": "Poison", "type2": "Fire", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/thumb/2/27/757Salandit.png/600px-757Salandit.png", "desc": "It burns its bodily fluids to create a poisonous gas. When its enemies become disoriented from inhaling the gas, it attacks them."
 	},
 	"Salazzle":
 	{
-		"id": "758", "type1": "Poison", "type2": "Fire", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/7/72/758Salazzle.png/600px-758Salazzle.png", "desc": "Only female Salazzle exist. They emit a gas laden with pheromones to captivate male Salandit."
+		"id": "758", "type1": "Poison", "type2": "Fire", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/7/72/758Salazzle.png/600px-758Salazzle.png", "desc": "Only female Salazzle exist. They emit a gas laden with pheromones to captivate male Salandit."
 	},
 	"Samurott":
 	{
@@ -517,7 +517,7 @@
 	},
 	"Sandygast":
 	{
-		"id": "769", "type1": "Ghost", "type2": "Ground", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/f/f0/769Sandygast.png/600px-769Sandygast.png", "desc": "It likes the shovel on its head, so Sandygast will get serious and fight any children who come to take it back."
+		"id": "769", "type1": "Ghost", "type2": "Ground", "sr": "1", "image": "https://cdn.bulbagarden.net/upload/thumb/f/f0/769Sandygast.png/600px-769Sandygast.png", "desc": "It likes the shovel on its head, so Sandygast will get serious and fight any children who come to take it back."
 	},
 	"Sankou":
 	{
@@ -661,7 +661,7 @@
 	},
 	"Shiinotic":
 	{
-		"id": "756", "type1": "Grass", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/3/36/756Shiinotic.png/600px-756Shiinotic.png", "desc": "It emits flickering spores that cause drowsiness. When its prey succumb to sleep, this Pokémon feeds on them by sucking in their energy."
+		"id": "756", "type1": "Grass", "type2": "Fairy", "sr": "8", "image": "https://cdn.bulbagarden.net/upload/thumb/3/36/756Shiinotic.png/600px-756Shiinotic.png", "desc": "It emits flickering spores that cause drowsiness. When its prey succumb to sleep, this Pokémon feeds on them by sucking in their energy."
 	},
 	"Shinx":
 	{
@@ -693,7 +693,7 @@
 	},
 	"Silvally":
 	{
-		"id": "773", "type1": "Normal", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/b/be/773Silvally.png/600px-773Silvally.png", "desc": "This is its form once it has awakened and evolved. Freed from its heavy mask, its speed is greatly increased."
+		"id": "773", "type1": "Normal", "type2": null, "sr": "14", "image": "https://cdn.bulbagarden.net/upload/thumb/b/be/773Silvally.png/600px-773Silvally.png", "desc": "This is its form once it has awakened and evolved. Freed from its heavy mask, its speed is greatly increased."
 	},
 	"Simipour":
 	{
@@ -717,7 +717,7 @@
 	},
 	"Sizzlipede":
 	{
-		"id": "850", "type1": "Fire", "type2": "Bug", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/f/f2/850Sizzlipede.png", "desc": "It stores flammable gas in its body and uses it to generate heat. The yellow sections on its belly get particularly hot."
+		"id": "850", "type1": "Fire", "type2": "Bug", "sr": "0.5", "image": "https://cdn.bulbagarden.net/upload/f/f2/850Sizzlipede.png", "desc": "It stores flammable gas in its body and uses it to generate heat. The yellow sections on its belly get particularly hot."
 	},
 	"Skarmory":
 	{
@@ -825,7 +825,7 @@
 	},
 	"Solgaleo":
 	{
-		"id": "791", "type1": "Psychic", "type2": "Steel", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/5/57/791Solgaleo.png/600px-791Solgaleo.png", "desc": "When light radiates from its body, this Pokémon could almost appear to be the sun. It will dispel any darkness and light up the world."
+		"id": "791", "type1": "Psychic", "type2": "Steel", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/5/57/791Solgaleo.png/600px-791Solgaleo.png", "desc": "When light radiates from its body, this Pokémon could almost appear to be the sun. It will dispel any darkness and light up the world."
 	},
 	"Solosis":
 	{
@@ -881,7 +881,7 @@
 	},
 	"Stakataka":
 	{
-		"id": "805", "type1": "Rock", "type2": "Steel", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/2/27/805Stakataka.png/600px-805Stakataka.png", "desc": "It appeared from an Ultra Wormhole. Each one appears to be made up of many life-forms stacked one on top of each other."
+		"id": "805", "type1": "Rock", "type2": "Steel", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/2/27/805Stakataka.png/600px-805Stakataka.png", "desc": "It appeared from an Ultra Wormhole. Each one appears to be made up of many life-forms stacked one on top of each other."
 	},
 	"Stantler":
 	{
@@ -913,7 +913,7 @@
 	},
 	"Steenee":
 	{
-		"id": "762", "type1": "Grass", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/7/78/762Steenee.png/600px-762Steenee.png", "desc": "As it twirls like a dancer, a sweet smell spreads out around it. Anyone who inhales the scent will feel a surge of happiness."
+		"id": "762", "type1": "Grass", "type2": null, "sr": "3", "image": "https://cdn.bulbagarden.net/upload/thumb/7/78/762Steenee.png/600px-762Steenee.png", "desc": "As it twirls like a dancer, a sweet smell spreads out around it. Anyone who inhales the scent will feel a surge of happiness."
 	},
 	"Stonjourner":
 	{
@@ -925,7 +925,7 @@
 	},
 	"Stufful":
 	{
-		"id": "759", "type1": "Normal", "type2": "Fighting", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e5/759Stufful.png/600px-759Stufful.png", "desc": "The way it protects itself by flailing its arms may be an adorable sight, but stay well away. This is flailing that can snap thick tree trunks."
+		"id": "759", "type1": "Normal", "type2": "Fighting", "sr": "1", "image": "https://cdn.bulbagarden.net/upload/thumb/e/e5/759Stufful.png/600px-759Stufful.png", "desc": "The way it protects itself by flailing its arms may be an adorable sight, but stay well away. This is flailing that can snap thick tree trunks."
 	},
 	"Stunfisk":
 	{
@@ -1013,19 +1013,19 @@
 	},
 	"Tapu Bulu":
 	{
-		"id": "787", "type1": "Grass", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/6/67/787Tapu_Bulu.png/600px-787Tapu_Bulu.png", "desc": "It makes ringing sounds with its tail to let others know where it is, avoiding unneeded conflicts. This guardian deity of Ula’ula controls plants."
+		"id": "787", "type1": "Grass", "type2": "Fairy", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/6/67/787Tapu_Bulu.png/600px-787Tapu_Bulu.png", "desc": "It makes ringing sounds with its tail to let others know where it is, avoiding unneeded conflicts. This guardian deity of Ula’ula controls plants."
 	},
 	"Tapu Fini":
 	{
-		"id": "788", "type1": "Water", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/6/66/788Tapu_Fini.png/600px-788Tapu_Fini.png", "desc": "The guardian deity of Poni, it can control water. People say it can create pure water that will wash away any uncleanness."
+		"id": "788", "type1": "Water", "type2": "Fairy", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/6/66/788Tapu_Fini.png/600px-788Tapu_Fini.png", "desc": "The guardian deity of Poni, it can control water. People say it can create pure water that will wash away any uncleanness."
 	},
 	"Tapu Koko":
 	{
-		"id": "785", "type1": "Electric", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d0/785Tapu_Koko.png/600px-785Tapu_Koko.png", "desc": "Although it’s called a guardian deity, if a person or Pokémon puts it in a bad mood, it will become a malevolent deity and attack."
+		"id": "785", "type1": "Electric", "type2": "Fairy", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/d/d0/785Tapu_Koko.png/600px-785Tapu_Koko.png", "desc": "Although it’s called a guardian deity, if a person or Pokémon puts it in a bad mood, it will become a malevolent deity and attack."
 	},
 	"Tapu Lele":
 	{
-		"id": "786", "type1": "Psychic", "type2": "Fairy", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/4/4d/786Tapu_Lele.png/600px-786Tapu_Lele.png", "desc": "It heals the wounds of people and Pokémon by sprinkling them with its sparkling scales. This guardian deity is worshiped on Akala."
+		"id": "786", "type1": "Psychic", "type2": "Fairy", "sr": "15", "image": "https://cdn.bulbagarden.net/upload/thumb/4/4d/786Tapu_Lele.png/600px-786Tapu_Lele.png", "desc": "It heals the wounds of people and Pokémon by sprinkling them with its sparkling scales. This guardian deity is worshiped on Akala."
 	},
 	"Tatei":
 	{
@@ -1093,7 +1093,7 @@
 	},
 	"Togedemaru":
 	{
-		"id": "777", "type1": "Electric", "type2": "Steel", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/5/5a/777Togedemaru.png/600px-777Togedemaru.png", "desc": "When it’s surprised or agitated, the 14 fur spikes on its back will stand up involuntarily."
+		"id": "777", "type1": "Electric", "type2": "Steel", "sr": "3", "image": "https://cdn.bulbagarden.net/upload/thumb/5/5a/777Togedemaru.png/600px-777Togedemaru.png", "desc": "When it’s surprised or agitated, the 14 fur spikes on its back will stand up involuntarily."
 	},
 	"Togekiss":
 	{
@@ -1137,11 +1137,11 @@
 	},
 	"Toucannon":
 	{
-		"id": "733", "type1": "Normal", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/7/78/733Toucannon.png/600px-733Toucannon.png", "desc": "They smack beaks with others of their kind to communicate. The strength and number of hits tell each other how they feel."
+		"id": "733", "type1": "Normal", "type2": "Flying", "sr": "10", "image": "https://cdn.bulbagarden.net/upload/thumb/7/78/733Toucannon.png/600px-733Toucannon.png", "desc": "They smack beaks with others of their kind to communicate. The strength and number of hits tell each other how they feel."
 	},
 	"Toxapex":
 	{
-		"id": "748", "type1": "Poison", "type2": "Water", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/0/06/748Toxapex.png/600px-748Toxapex.png", "desc": "Those attacked by Toxapex’s poison will suffer intense pain for three days and three nights. Post-recovery, there will be some aftereffects."
+		"id": "748", "type1": "Poison", "type2": "Water", "sr": "13", "image": "https://cdn.bulbagarden.net/upload/thumb/0/06/748Toxapex.png/600px-748Toxapex.png", "desc": "Those attacked by Toxapex’s poison will suffer intense pain for three days and three nights. Post-recovery, there will be some aftereffects."
 	},
 	"Toxel":
 	{
@@ -1185,15 +1185,15 @@
 	},
 	"Trumbeak":
 	{
-		"id": "732", "type1": "Normal", "type2": "Flying", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/5/5c/732Trumbeak.png/600px-732Trumbeak.png", "desc": "It can bend the tip of its beak to produce over a hundred different cries at will."
+		"id": "732", "type1": "Normal", "type2": "Flying", "sr": "3", "image": "https://cdn.bulbagarden.net/upload/thumb/5/5c/732Trumbeak.png/600px-732Trumbeak.png", "desc": "It can bend the tip of its beak to produce over a hundred different cries at will."
 	},
 	"Tsareena":
 	{
-		"id": "763", "type1": "Grass", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/2/23/763Tsareena.png/600px-763Tsareena.png", "desc": "A Pokémon with an aggressive personality and a mastery of kicking, it cackles every time it kicks an opponent."
+		"id": "763", "type1": "Grass", "type2": null, "sr": "13", "image": "https://cdn.bulbagarden.net/upload/thumb/2/23/763Tsareena.png/600px-763Tsareena.png", "desc": "A Pokémon with an aggressive personality and a mastery of kicking, it cackles every time it kicks an opponent."
 	},
 	"Turtonator":
 	{
-		"id": "776", "type1": "Fire", "type2": "Dragon", "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/1/15/776Turtonator.png/600px-776Turtonator.png", "desc": "It lives in volcanoes and eats sulfur and other minerals. Materials from the food it eats form the basis of its explosive shell."
+		"id": "776", "type1": "Fire", "type2": "Dragon", "sr": "12", "image": "https://cdn.bulbagarden.net/upload/thumb/1/15/776Turtonator.png/600px-776Turtonator.png", "desc": "It lives in volcanoes and eats sulfur and other minerals. Materials from the food it eats form the basis of its explosive shell."
 	},
 	"Turtwig":
 	{
@@ -1209,7 +1209,7 @@
 	},
 	"Type: Null":
 	{
-		"id": "772", "type1": "Normal", "type2": null, "sr": "???", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fd/772Type_Null.png/600px-772Type_Null.png", "desc": "Due to the danger that this synthetic Pokémon may go on a rampage, it wears a control mask to restrain its power."
+		"id": "772", "type1": "Normal", "type2": null, "sr": "13", "image": "https://cdn.bulbagarden.net/upload/thumb/f/fd/772Type_Null.png/600px-772Type_Null.png", "desc": "Due to the danger that this synthetic Pokémon may go on a rampage, it wears a control mask to restrain its power."
 	},
 	"Typhlosion":
 	{
