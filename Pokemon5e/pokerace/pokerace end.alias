@@ -4,6 +4,7 @@ out.append('-title"Check the tape!"')
 out.append(f'''-desc "The race is over!\n{name} finished at **{combat().me.note[combat().me.note.index(" "):]}** feet!"''')
 character().delete_cc('raceBoosts')
 character().delete_cvar('raceSpeed')
+character().delete_cvar('turnSpeed')
 return " ".join(out)
 </drac2>
 -thumb "https://ncbarblog.com/wp-content/uploads/2016/02/checkered-flag-high-resolution-wallpaper.jpg" -color <color> -image <image>
