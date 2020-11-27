@@ -4,7 +4,7 @@ speed = int(get('turnSpeed', get('raceSpeed', 0)))
 character().delete_cvar('turnSpeed')
 progress = int(combat().me.note[combat().me.note.index(" "):])
 boosts = 'raceBoosts'
-booster = 'b' in args or 'B' in args
+booster = 'b' in args[0] or 'B' in args[0]
 DC = 15-max(strengthMod,dexterityMod)
 boosted = booster and get_cc(boosts)
 exhausted = 0
