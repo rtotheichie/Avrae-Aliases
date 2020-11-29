@@ -885,26 +885,13 @@
             "type": "damage",
             "damage": "DAMAGE+{max(SMO,DMO)}[Ice]",
             "overheal": false
-          }, {
-            "type": "save",
-            "stat": "con",
-            "fail": [{
-              "type": "ieffect",
-              "name": "Frozen",
-              "duration": -1,
-              "effects": "",
-              "end": false,
-              "conc": false
-            }],
-            "success": [],
-            "dc": "{8+ATTACK}"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You send a concentrated beam of freezing ice at a single creature in range. Make a ranged attack roll, doing 1d10 + MOVE ice damage on a hit, and forcing the target to make a CON save against your Move DC or become frozen."
+        "text": "You send a concentrated beam of freezing ice at a single creature in range. Make a ranged attack roll, doing 1d10 + MOVE ice damage on a hit. On natural attack rolls of 15 or higher, the target has disadvantage on any attack it makes on its next turn."
       }],
       "verb": null,
       "proper": true,
@@ -1106,7 +1093,7 @@
           "hit": [{
             "type": "damage",
             "damage": "DAMAGE+{max(SMO,DMO)}[Flying]"
-          },
+          }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
@@ -1299,7 +1286,7 @@
           }],
           "miss": [],
           "attackBonus": "ATTACK"
-        }], {
+        }, {
           "type": "text",
           "text": "You attempt to grapple a target into submission. Make a melee attack roll. On a hit, the target takes 1d4 + MOVE normal damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. While a creature is grappled, you may continue this move, as a bonus action, to do an automatic 1d4 normal damage without having to make an attack roll."
         }]
@@ -1372,14 +1359,14 @@
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "name": "Can't Attack",
+          "name": "Can't Use Moves",
           "duration": "2",
           "effects": "",
           "end": true
         }]
       }, {
         "type": "text",
-        "text": "Explosive projectiles rain down upon any creatures in a 10 foot radius. Any creature caught in the blast must make a DEX save against your Move DC, taking 3d8 + MOVE fire damage on a fail or half as much on a success. This move saps you of energy, and you may not make any attack until after the end of your next turn."
+        "text": "Explosive projectiles rain down upon creatures in a 10 foot radius. Any creature caught in the blast must make a DEX save against your Move DC, taking 3d8 + MOVE fire damage on a fail or half as much on a success. This move saps you of energy, and you may not make any activate any move until after the end of your next turn."
       }],
       "_v": 2,
       "proper": true,
@@ -1419,7 +1406,7 @@
       "criton": "CRIT"
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
-    "crit": "19"
+    "crit": "19",
     "damage": {
       "1": "2d6",
       "5": "2d8",
@@ -1926,7 +1913,7 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+SMO"
+    "attack": "proficiencyBonus+SMO",
     "damage": {
       "1": "1d10",
       "5": "2d8",
@@ -2143,7 +2130,7 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+SMO"
+    "attack": "proficiencyBonus+SMO",
     "damage": {
       "1": "1d10",
       "5": "2d8",
@@ -2354,7 +2341,7 @@
       "proper": true,
       "verb": "uses"
     },
-    "attack":"proficiencyBonus+max(WMO,ChMO)"
+    "attack":"proficiencyBonus+max(WMO,ChMO)",
     "PP": 3
   },
   "Charge": {
@@ -2690,7 +2677,7 @@
           "miss": [],
           "attackBonus": "ATTACK"
         }]
-      }],{
+      },{
         "type": "text",
         "text": "You get in close for a devastating strike, sacrificing your defenses. Make a melee attack on a creature, dealing 2d10 + MOVE fighting damage on a hit. After activating this move, the target has advantage on any attack it makes against you before the beginning of your next turn."
       }],
@@ -2821,13 +2808,6 @@
           }],
           "miss": [],
           "attackBonus": "ATTACK"
-        }]
-      }
-          "type": "ieffect",
-          "name": "Confused",
-          "duration": "3",
-          "effects": "",
-          "end": true
         }]
       }, {
         "type": "text",
@@ -3028,7 +3008,7 @@
           "fail": [{
             "type": "ieffect",
             "name": "-10 Speed",
-            "duration": "10,
+            "duration": "10",
             "effects": "",
             "end": true
           }],
@@ -3304,14 +3284,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+{SMO}[Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You clasp your hands around an opponent for a crushing blow. Make a melee attack against a target, dealing 2d10 + MOVE normal damage on a hit. If the target is above 50% of its maximum health, add your proficiency bonus to the damage roll."
+        "text": "You clasp your hands around a creature for a crushing blow. Make a melee attack against a target, dealing 2d10 + MOVE normal damage and grappling the target on a hit. If the target is above 50% of its maximum health, add your proficiency bonus to the damage roll."
       }],
       "_v": 2,
       "proper": true,
@@ -3319,10 +3299,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d10+{SMO}",
-      "5": "3d8+{SMO}",
-      "10": "4d10+{SMO}",
-      "17": "7d8+{SMO}"
+      "1": "3d8",
+      "5": "5d6",
+      "10": "4d12",
+      "17": "8d8"
     },
     "PP": 3
   },
@@ -3364,6 +3344,28 @@
     "PP": 5
   },
   "Curse (Other)":{
+    "code": {
+      "name": "Curse (Other)",
+      "automation": [{
+        "type": "target",
+        "target": "self",
+        "effects": [{
+          "type": "ieffect",
+          "name": "Cursed (Str/Con increased, Dex decreased)",
+          "duration": "10",
+          "effects": "",
+          "end": false,
+          "conc": true
+        }]
+      }, {
+        "type": "text",
+        "text": "You place a curse on yourself. For the duration, your STR and CON scores increase by 2, but your DEX score decreases by 4"
+      }],
+      "_v": 2,
+      "proper": false,
+      "verb": null
+    },
+    "PP": 5
   },
   "Cut": {
     "code": {
@@ -3375,14 +3377,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You lash out at an enemy with vine or claw or blade. Make a melee roll on an enemy, doing 1d8 + MOVE normal damage on a successful hit.\n"
+        "text": "You lash out at a target with vine or claw or blade. Make a melee roll on a target, doing 1d8 + MOVE normal damage on a successful hit."
       }],
       "_v": 2,
       "proper": true,
@@ -3390,10 +3392,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d8+{max(SMO,DMO)}",
-      "5": "2d6+{max(SMO,DMO)}",
-      "10": "4d4+{max(SMO,DMO)}",
-      "17": "3d10+{max(SMO,DMO)}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 15
   },
@@ -3407,7 +3409,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dark]",
+            "damage": "DAMAGE+{max(WMO,ChMO)}[Dark]",
             "overheal": false
           }],
           "miss": [],
@@ -3415,7 +3417,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You target an oponent with a dark aura filled with horrible thoughts. Make a ranged attack on an opponent, dealing 2d6 + MOVE dark damage on a hit. On a natural attack roll of 17 or higher, the target flinches"
+        "text": "You target a creature with a dark aura filled with horrible thoughts. Make a ranged attack on a creature, dealing 2d6 + MOVE dark damage on a hit. On a natural attack roll of 17 or higher, the target flinches"
       }],
       "verb": null,
       "proper": false,
@@ -3423,10 +3425,10 @@
     },
     "attack": "proficiencyBonus+max(WMO,ChMO)",
     "damage": {
-      "1": "2d6+{max(WMO,ChMO)}",
-      "5": "2d8+{max(WMO,ChMO)}",
-      "10": "4d6+{max(WMO,ChMO)}",
-      "17": "6d6+{max(WMO,ChMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -3445,17 +3447,29 @@
             "duration": "4",
             "effects": "",
             "end": false
+          }, {
+            "type": "damage",
+            "damage": "{damage}+{WMO} [Dark]"
           }],
-          "success": [],
+          "success": [{
+            "type": "damage",
+            "damage": "({damage}+{WMO})/2 [Dark]"
+          }],
           "dc": "{8+proficiencyBonus+WMO}"
         }]
       }, {
         "type": "text",
-        "text": "You send the minds of your opponents into a world of darkness, putting them to sleep. All creatures within 30 feet of you must make a WIS save against your Move DC, falling asleep on a failure."
+        "text": "You send the minds of nearby creatures into a world of darkness, putting them to sleep. All creatures within 30 feet of you must make a WIS save against your Move DC, taking 2d10 + MOVE dark damage and falling asleep on a failure, or half as much without falling asleep on a success."
       }],
       "_v": 2,
       "proper": true,
       "verb": "uses"
+    },
+    "damage": {
+      "1": "2d10",
+      "5": "3d8",
+      "10": "4d10",
+      "17": "7d8"
     },
     "PP": 5
   },
@@ -3479,7 +3493,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You dangerously swing both arms at an opponent in range, ignoring any positive stat changes the target is affected with. Make a melee attack, dealing 2d6+MOVE dark damage on a hit."
+        "text": "You dangerously swing both arms at a creature in range, ignoring any positive stat changes the target is affected with. Make a melee attack, dealing 2d6+MOVE dark damage on a hit."
       }],
       "verb": null,
       "proper": true,
@@ -3487,10 +3501,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d6+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "4d6+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -3628,7 +3642,7 @@
       "name": "Detect",
       "automation": [{
         "type": "text",
-        "text": "You sense incoming danger and are able to quickly avoid it. When hit by an attack, you may automatically avoid taking damage on the first instance of this reaction. On future reactions in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful."
+        "text": "You sense incoming danger and are able to quickly avoid it. When targeted by a move, or forced to make a saving throw, you may automatically avoid the damage/effects on the first instance of this reaction. On future reactions in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful."
       }, {
         "type": "target",
         "meta": [{
@@ -3652,7 +3666,7 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "dice": "DAMAGE",
+          "dice": "1d4",
           "name": "+2 AC"
         }],
         "target": "self",
@@ -3666,7 +3680,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You stir up a massive storm of sharp diamonds in a 30 foot radius, centered on a point in range. Any creature in the area at the beginning of their turn takes 4d4 rock damage. The Diamond Storm lasts for 3 rounds. When you activate this move, roll a d4. On a result of 3 or 4, your AC is increased by 2 while the Diamond Storm is active.\n"
+        "text": "You stir up a massive storm of sharp diamonds in a 30 foot radius, centered on a point in range. Any creature in the area at the beginning of their turn takes 4d4 rock damage. The Diamond Storm lasts for 3 rounds. When you activate this move, roll a d4. On a result of 3 or 4, your AC is increased by 2 while the Diamond Storm is active."
       }],
       "_v": 2,
       "proper": true,
@@ -3690,14 +3704,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ground]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Ground]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "Your creature burrows underground, disappearing from view before striking from underneath the foe. When you activate this move, you burrow underground and remain there until your next turn. During this time, you cannot be the target of any attack. On your next turn, make a melee attack on a creature in range, with advantage, doing ground damage on a successful hit. If the target has Tremorsense, the attack is not rolled with advantage."
+        "text": "You burrow underground, disappearing from view before striking from underneath a target. When you activate this move, you burrow underground and remain there until your next turn. During this time, you cannot be the target of any attack. On your next turn, make a melee attack on a creature in range, with advantage, doing ground damage on a successful hit. If the target has Tremorsense, the attack is not rolled with advantage."
       }],
       "_v": 2,
       "proper": true,
@@ -3705,10 +3719,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d6+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "4d6+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -3757,24 +3771,24 @@
         "target": "each",
         "effects": [{
           "type": "damage",
-          "damage": "DAMAGE [Fairy]",
+          "damage": "DAMAGE+{ChMO} [Fairy]",
           "overheal": false,
           "higher": null,
           "cantripScale": null
         }]
       }, {
         "type": "text",
-        "text": "You let out a charming cry, dealing emotional damage to any opponent in range that can hear you. This move automatically hits for 1d4 + MOVE fairy damage unless a creature is in the invulnerable stages of Fly, Dig, Bounce, etc."
+        "text": "You let out a charming cry, dealing emotional damage to any creature in range that can hear you. This move automatically hits for 1d4 + MOVE fairy damage unless a creature is in the invulnerable stages of Fly, Dig, Bounce, etc."
       }],
       "verb": "cries with",
       "proper": false,
       "_v": 2
     },
     "damage": {
-      "1": "1d4+{ChMO}",
-      "5": "2d4+{ChMO}",
-      "10": "1d12+{ChMO}",
-      "17": "4d4+{ChMO}"
+      "1": "1d4",
+      "5": "2d4",
+      "10": "1d12",
+      "17": "4d4"
     },
     "PP": 10
   },
@@ -3789,7 +3803,7 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Electric]",
+            "damage": "DAMAGE+{DMO}[Electric]",
             "overheal": false
           }],
           "success": [{
@@ -3801,17 +3815,17 @@
         }]
       }, {
         "type": "text",
-        "text": "You let loose a flare of electricity in a 10 foot circle, centered on you, striking all creatures around you. Creatures in the area must make a DEX saving throw against your Move DC. On a fail, a creature takes 2d6 + MOVE electric damage. If a creature fails the save by more than 5, it is paralyzed."
+        "text": "You let loose a flare of electricity in a 20 foot circle, centered on you, striking all creatures around you. Creatures in the area must make a DEX saving throw against your Move DC. On a fail, a creature takes 2d6 + MOVE electric damage. If a creature fails the save by more than 5, it is paralyzed."
       }],
       "verb": "lets loose",
       "proper": false,
       "_v": 2
     },
     "damage": {
-      "1": "2d6+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "4d6+{DMO}",
-      "17": "6d6+{DMO}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -3837,10 +3851,10 @@
       "verb": null
     },
     "damage": {
-      "1": "2d6+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "4d6+{DMO}",
-      "17": "6d6+{DMO}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 3
   },
@@ -3896,7 +3910,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You promise doom upon an opponent. When you activate this move, select a target and make an attack roll. On a hit, at the beginning of the third round after you activate this move, the target takes 2d12 + MOVE damage of no specific type. If the target is switched out, the damage is done to the trainer's current active Pokémon."
+        "text": "You promise doom upon a creature. When you activate this move, select a target and make an attack roll. On a hit, at the beginning of the third round after you activate this move, the target takes 2d12 + MOVE damage of no specific type. If the target is switched out, the damage is done to the trainer's current active Pokémon."
       }],
       "_v": 2,
       "proper": true,
@@ -3915,10 +3929,18 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]"
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+max(SMO,DMO)"
+          "attackBonus": "ATTACK"
+        }, {
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Normal]"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
@@ -3930,10 +3952,50 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d10+{max(SMO,DMO)}",
-      "10": "2d8+{max(SMO,DMO)}",
-      "17": "5d4+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
+    },
+    "PP": 10
+  },
+  "Double Iron Bash": {
+    "code": {
+      "name": "Double Iron Bash",
+      "automation": [{
+        "type": "target",
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE+{SMO}[Steel]"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }, {
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE+{SMO}[Steel]"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "text": "You punch twice with two devastating slams of your fist. Make two melee attack rolls, doing 1d6 + MOVE steel damage on each successful hit. If any natural attack roll is 16 or higher, the target flinches."
+      }],
+      "_v": 2,
+      "proper": false,
+      "verb": null
+    },
+    "attack": "proficiencyBonus+SMO",
+    "damage": {
+      "1": "1d6",
+      "5": "2d10",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 5
   },
@@ -3947,7 +4009,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -3955,7 +4017,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -3970,12 +4032,12 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d8+{max(SMO,DMO)}",
-      "10": "1d10+{max(SMO,DMO)}",
-      "17": "1d12+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
-    "PP": 15
+    "PP": 10
   },
   "Double Slap": {
     "code": {
@@ -3995,7 +4057,7 @@
           }],
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(SMO,DMO,ChMO)}[Normal]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -4013,10 +4075,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO,ChMO)",
     "damage": {
-      "1": "1d4+{max(SMO,DMO,ChMO)}",
-      "5": "1d6+{max(SMO,DMO,ChMO)}",
-      "10": "1d8+{max(SMO,DMO,ChMO)}",
-      "17": "2d6+{max(SMO,DMO,ChMO)}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d8",
+      "17": "2d6"
     },
     "PP": 5
   },
@@ -4036,7 +4098,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You create a duplicate image of yourself, 5 feet beside you. The image copies every move you make. When an enemy hits you with a damaging melee or ranged attack with an area of effect of 5 feet wide or less, roll a d4. On a 3 or 4, the image absorbs the damage and/or effects of the attack and disappears. Enemies with Truesight bypass the effect of this move."
+        "text": "You create a duplicate image of yourself, 5 feet beside you. The image mimics you and attempt to fool your opponents into attacking it, instead. When subject to any move (attack or saving throw / damaging or non-damaging) with an area of effect of 5 feet wide or less, roll a d4. On a result of 3 or 4, the image absorbs the damage and/or effects of the attack and disappears. Creatures with Truesight bypass the effect of this move. If grappled or restrained by a creature while Double Team is active, Double Team has no effect. (Examples that would trigger the roll include Tackle, Thunder Wave, Rock Slide, etc.)"
       }],
       "verb": "uses",
       "proper": true,
@@ -4051,7 +4113,7 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "dice": "DAMAGE",
+          "dice": "DAMAGE+max(SMO,DMO)",
           "name": "Damage"
         }],
         "target": "each",
@@ -4066,7 +4128,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You commit a massive attack against an opponent. Make a melee attack against a target, doing 2d10 + MOVE normal damage on a hit, but taking {Damage}/4 in typeless recoil damage."
+        "text": "You commit a massive attack against a creature. Make a melee attack against a target, doing 2d10 + MOVE normal damage on a hit, but taking {Damage}/4 in typeless recoil damage."
       }],
       "_v": 2,
       "proper": true,
@@ -4092,7 +4154,7 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE[Dragon]"
+            "damage": "DAMAGE+{SMO}[Dragon]"
           }],
           "dc": "{8+proficiencyBonus+SMO}"
         }]
@@ -4108,17 +4170,17 @@
         }]
       }, {
         "type": "text",
-        "text": "You summon forth a meteor shower that rains down on your opponents. All creatures in a 10 foot circle, centered on a point within range, must make a DEX save against your Move DC, taking 5d4 + MOVE dragon damage on a hit, or half as much on a save. After activating this move, your next attack is rolled at disadvantage. If that attack requires a saving throw, the target has advantage."
+        "text": "You summon forth a meteor shower that rains down on creatures in a targeted area. All creatures in a 10 foot circle, centered on a point within range, must make a DEX save against your Move DC, taking 5d4 + MOVE dragon damage on a hit, or half as much on a save. After activating this move, your next attack is rolled at disadvantage. If that attack requires a saving throw, the target has advantage."
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
     "damage": {
-      "1": "5d4+{SMO}",
-      "5": "3d10+{SMO}",
-      "10": "5d8+{SMO}",
-      "17": "8d8+{SMO}"
+      "1": "5d4",
+      "5": "3d10",
+      "10": "5d8",
+      "17": "8d8"
     },
     "PP": 3
   },
@@ -4126,20 +4188,20 @@
     "code": {
       "name": "Dragon Ascent",
       "automation": [{
-        "type": "target",
-        "target": "each",
+       "type": "target",
+       "target": "each",
         "effects": [{
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Flying]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You soar upward and come crashing down towards a creature in range at tremendous speed. Make a melee attack roll, dealing 2d10 + MOVE flying damage on a hit. After activating this move, any attack roll that targets you until the beginning of your next turn is rolled with advantage."
+        "text": "You soar upward and come crashing down towards a creature in range at tremendous speed. Make a melee attack roll, dealing 2d10 + MOVE flying damage on a hit. Any creature within 10 feet of the target must make a DEX save against your Move DC and take the same amount of damage on a success, or half as much on a fail. After activating this move, any attack roll that targets you until the beginning of your next turn is rolled with advantage."
       }],
       "_v": 2,
       "proper": true,
@@ -4147,10 +4209,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d10+{max(SMO,DMO)}",
-      "5": "3d8+{max(SMO,DMO)}",
-      "10": "4d10+{max(SMO,DMO)}",
-      "17": "7d8+{max(SMO,DMO)}"
+      "1": "2d10",
+      "5": "3d8",
+      "10": "4d10",
+      "17": "7d8"
     },
     "PP": 3
   },
@@ -4214,14 +4276,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dragon]"
+            "damage": "DAMAGE+{SMO}[Dragon]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You strike out with a powerful claw attack. Make a melee attack roll against an opponent, doing 1d8 + MOVE dragon damage on a hit."
+        "text": "You strike out with a powerful claw attack. Make a melee attack roll on a creature, doing 1d8 + MOVE dragon damage on a hit."
       }],
       "_v": 2,
       "proper": false,
@@ -4229,10 +4291,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d6+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "4d6+{SMO}",
-      "17": "6d6+{SMO}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -4270,7 +4332,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Dragon]"
+            "damage": "DAMAGE+{max(DMO,SMO)}[Dragon]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -4278,7 +4340,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Dragon]"
+            "damage": "DAMAGE+{max(DMO,SMO)}[Dragon]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -4293,10 +4355,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,SMO)",
     "damage": {
-      "1": "1d6+{max(DMO,SMO)}",
-      "5": "1d12+{max(DMO,SMO)}",
-      "10": "2d8+{max(DMO,SMO)}",
-      "17": "4d6+{max(DMO,SMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 5
   },
@@ -4310,10 +4372,10 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE [Dragon]"
+            "damage": "DAMAGE+{SMO}[Dragon]"
           }],
           "miss": [],
-          "attackBonus": ""
+          "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
@@ -4325,10 +4387,41 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "2d8+{SMO}",
-      "5": "2d10+{SMO}",
-      "10": "3d10+{SMO}",
-      "17": "4d12+{SMO}"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
+    }
+  },
+  "Dragon Hammer": {
+    "code": {
+      "name": "Dragon Hammer",
+      "automation": [{
+        "type": "target",
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "hit": [{
+            "type": "damage",
+            "damage": "DAMAGE+{SMO}[Dragon]"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "text": "You slam your head down like a hammer to attack a creature in range. Make a melee attack roll against the target, dealing 2d8 + MOVE dragon damage on a hit. Hit or miss, any creatures within the line created by the attack (5 feet wide) must make a DEX save against your Move DC, taking the same damage on a failure."
+}],
+      "_v": 2,
+      "proper": true,
+      "verb": null
+    },
+    "attack": "proficiencyBonus+SMO",
+    "damage": {
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     }
   },
   "Dragon Pulse": {
@@ -4341,7 +4434,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dragon]"
+            "damage": "DAMAGE+{DMO}[Dragon]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -4356,10 +4449,10 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "2d6+{DMO}",
-      "5": "2d8+{DMO}",
-      "10": "4d6+{DMO}",
-      "17": "6d6+{DMO}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -4413,7 +4506,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dragon]",
+            "damage": "DAMAGE+{SMO}[Dragon]",
             "overheal": false
           }],
           "miss": [],
@@ -4421,7 +4514,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You rush at an opponent with overwhelming menace. Make a melee attack, dealing 4d4 + MOVE dragon damage on a hit. On natural attack rolls of 17 or higher, the target flinches."
+        "text": "You rush at a creature with overwhelming menace. Make a melee attack, dealing 4d4 + MOVE dragon damage on a hit. On natural attack rolls of 17 or higher, the target flinches."
       }],
       "verb": null,
       "proper": true,
@@ -4429,10 +4522,10 @@
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
-      "1": "4d4+{SMO}",
-      "5": "2d12+{SMO}",
-      "10": "4d8+{SMO}",
-      "17": "8d6+{SMO}"
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 5
   },
@@ -4453,10 +4546,10 @@
             "end": true
           }, {
             "type": "text",
-            "text": "You whip your dragon tail at an opponent in an attempt to send them away. Force a target to make a CON save against your Move DC. On a failure, they take 1d10 + MOVE dragon damage and are too frightened by you to remain in battle. In trainer battles, the target must be switched out if another creature is available. In wild battles, the target only flees if it a lower level than the user."
+            "text": "You whip your dragon tail at a creature in an attempt to send them away. Force a target to make a CON save against your Move DC. On a failure, they take 1d10 + MOVE dragon damage and are too frightened by you to remain in battle. In trainer battles, the target must be switched out if another creature is available. In wild battles, the target only flees if it a lower level than the user."
           }, {
             "type": "damage",
-            "damage": "DAMAGE[Dragon]",
+            "damage": "DAMAGE+{SMO}[Dragon]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -4470,10 +4563,10 @@
       "verb": null
     },
     "damage": {
-      "1": "1d10+{SMO}",
-      "5": "2d8+{SMO}",
-      "10": "5d4+{SMO}",
-      "17": "4d8+{SMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 3
   },
@@ -4487,14 +4580,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "Your strike a foe with an energy-draining punch. Make a melee attack, dealing 1d12 + MOVE fighting damage on a hit, gaining half the damage dealt (rounded down) in HP."
+        "text": "Your strike a target with an energy-draining punch. Make a melee attack, dealing 1d12 + MOVE fighting damage on a hit, gaining half the damage dealt (rounded down) in HP."
       }],
       "_v": 2,
       "proper": false,
@@ -4502,10 +4595,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d12+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "2d12+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -4519,7 +4612,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fairy]",
+            "damage": "DAMAGE+{max(DMO,ChMO)}[Fairy]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -4529,7 +4622,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You attempt to zap the target's energy with a kiss. Make a melee attack roll on an opponent, dealing 1d8 + MOVE fairy damage on a hit. The user is then healed for half the damage dealt."
+        "text": "You attempt to zap the target's energy with a kiss. Make a melee attack roll on a creature, dealing 1d8 + MOVE fairy damage on a hit. The user is then healed for half the damage dealt."
       }],
       "verb": null,
       "proper": false,
@@ -4537,10 +4630,10 @@
     },
     "attack": "proficiencyBonus+max(DMO,ChMO)",
     "damage": {
-      "1": "1d8+{max(DMO,ChMO)}",
-      "5": "2d6+{max(DMO,ChMO)}",
-      "10": "4d4+{max(DMO,ChMO)}",
-      "17": "3d10+{max(DMO,ChMO)}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 5
   },
@@ -4552,7 +4645,7 @@
         "target": "each",
         "effects": [{
           "type": "damage",
-          "damage": "DAMAGE[Psychic]"
+          "damage": "DAMAGE+{WMO}[Psychic]"
         }]
       }, {
         "type": "text",
@@ -4563,10 +4656,10 @@
       "verb": null
     },
     "damage": {
-      "1": "4d4+{max(WMO,WMO)}",
-      "5": "2d12+{max(WMO,WMO)}",
-      "10": "4d8+{max(WMO,WMO)}",
-      "17": "8d6+{max(WMO,WMO)}"
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 10
   },
@@ -4580,25 +4673,27 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Flying]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You hammer down on an enemy with a peck attack. Make a melee attack roll on a target, doing 2d6 + MOVE flying damage on a successful hit. Drill Peck scores a critical hit on 19s and 20s."
+        "text": "You hammer down on a target with a peck attack. Make a melee attack roll on a target, doing 2d6 + MOVE flying damage on a successful hit. Drill Peck scores a critical hit on 19s and 20s."
       }],
       "_v": 2,
       "proper": false,
-      "verb": null
+      "verb": null,
+      "criton": "CRIT"
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
+    "crit" : "19",
     "damage": {
-      "1": "2d6+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "4d6+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 10
   },
@@ -4612,25 +4707,27 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ground]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Ground]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You crash into an opponent, spinning your body like a drill. Make a melee attack, dealing 2d6 + MOVE ground damage on a hit. This attack scores a critical hit on 19s and 20s."
+        "text": "You crash into a creature, spinning your body like a drill. Make a melee attack, dealing 2d6 + MOVE ground damage on a hit. This attack scores a critical hit on 19s and 20s."
       }],
       "_v": 2,
       "proper": true,
-      "verb": null
+      "verb": null,
+      "criton": "CRIT"
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
+    "crit" : "19",
     "damage": {
-      "1": "2d6+{max(SMO,DMO)}",
-      "5": "2d8+{max(SMO,DMO)}",
-      "10": "4d6+{max(SMO,DMO)}",
-      "17": "6d6+{max(SMO,DMO)}"
+      "1": "2d6",
+      "5": "2d8",
+      "10": "4d6",
+      "17": "6d6"
     },
     "PP": 5
   },
@@ -4644,14 +4741,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Dragon]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Dragon]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You lash out at an opponent(s) with two quick strikes. Make two melee attack rolls, dealing 1d6 + MOVE dragon damage with each hit."
+        "text": "You lash out at a creature(s) with two quick strikes. Make two melee attack rolls, dealing 1d6 + MOVE dragon damage with each hit."
       }],
       "_v": 2,
       "proper": false,
@@ -4659,10 +4756,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d6+{max(SMO,DMO)}",
-      "5": "1d12+{max(SMO,DMO)}",
-      "10": "2d8+{max(SMO,DMO)}",
-      "17": "4d6+{max(SMO,DMO)}"
+      "1": "1d6",
+      "5": "1d12",
+      "10": "2d8",
+      "17": "4d6"
     },
     "PP": 10
   },
@@ -4676,7 +4773,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE+{max(SMO,DMO)}[Fighting]"
           }, {
             "type": "ieffect",
             "name": "Confused",
@@ -4689,7 +4786,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You strike out with a twirling punch that confuses your foes. Make a melee attack roll against an opponent, doing 4d4 + MOVE fighting damage on a hit. On a hit, it also becomes confused."
+        "text": "You strike out with a twirling punch that confuses a creature. Make a melee attack roll against a creature, doing 4d4 + MOVE fighting damage on a hit. On a hit, it also becomes confused."
       }],
       "_v": 2,
       "proper": false,
@@ -4697,10 +4794,10 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "4d4+{max(SMO,DMO)}",
-      "5": "2d12+{max(SMO,DMO)}",
-      "10": "4d8+{max(SMO,DMO)}",
-      "17": "8d6+{max(SMO,DMO)}"
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 3
   }
