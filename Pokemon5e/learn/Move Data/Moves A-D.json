@@ -917,7 +917,8 @@
           "name": "Aurora Veiled (Take 1/2 Damage)",
           "duration": 3,
           "effects": "",
-          "end": false
+          "end": false,
+          "conc": true
         }]
       }],
       "verb": "uses",
@@ -1074,13 +1075,13 @@
       "name": "Baton Pass",
       "automation": [{
         "type": "text",
-        "text": " As a bonus action, you may switch out, passing along all negative status effects or stat changes to the new creature. This includes existing substitutes, critical hit bonuses, AC increases, etc. Moves that require concentration may also be transferred, with concentration now dependent on the new creature."
+        "text": " As a bonus action, you may switch out, passing along all negative status effects or stat changes to the new creature. This includes existing battle effects from moves such as Substitute, Swords Dance, Ingrain, Aqua Ring, etc. Effects from moves that require concentration may also be transferred, with concentration now dependent on the newcreature."
       }],
       "_v": 2,
       "proper": true,
       "verb": "uses"
     },
-    "PP": 20
+    "PP": 5
   },
   "Beak Blast": {
     "code": {
@@ -1997,7 +1998,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You shoot a concentrated stream of bubbles at a single creature in range. Make a ranged attack roll, doing 1d10 + MOVE water damage on a hit."
+        "text": "You shoot a concentrated stream of bubbles at a single creature in range. Make a ranged attack roll, doing 1d10 + MOVE water damage on a hit.  On natural attack rolls of 19 or 20, the target's speed is halved until the end of their next turn."
       }],
       "verb": null,
       "proper": false,
@@ -2088,7 +2089,8 @@
           "name": "Bulk Up Attack",
           "duration": "10",
           "effects": "-b 1",
-          "end": false
+          "end": false,
+          "conc": true
         }, {
           "type": "ieffect",
           "name": "Bulk Up AC",
@@ -2384,7 +2386,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You send a beam of electric energy at an opponent that has a chance to power you up. Make a ranged attack, dealing 1d8 + MOVE electric damage on a hit. If the **natural attack roll is 10 or higher and the attack hits, add your proficiency bonus to the damage.**"
+        "text": "You send a beam of electric energy at a creature that has a chance to power you up. Make a ranged attack, dealing 1d8 + MOVE electric damage on a hit. If the **natural attack roll is 10 or higher and the attack hits, double your MOVE modifier for the damage of this move and any other move you activate before the end of your next turn.**"
       }],
       "_v": 2,
       "proper": true,
