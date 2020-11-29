@@ -8,7 +8,7 @@ attack {{atk,gr,gv,i="&1&",get_raw(),load_json(get_gvar("5eed7634-7526-4b25-86f2
 {{ce=c.me.get_effect('Confused') if c and c.me and not i else ''}}
 {{be=c.me.get_effect('Burned') if c and c.me and not i else ''}}
 {{poe=c.me.get_effect('Poisoned') if c and c.me and not i else ''}}
-{{cm = get('miss', 0) + (cr.total<=10) if ce and not pm else ''}}
+{{cm = get('miss', 0) + (cr.total<=10) if ce else ''}}
 {{f'-phrase "It hurt itself in its confusion!"' if cm else ''}}
 {{f'-f "**{name} snapped out of Confusion!**"' if ce and cr.total>=16 else ''}}
 {{f'-f "Confused Roll|{cr}"' if ce else ''}}
