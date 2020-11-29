@@ -22,7 +22,7 @@
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonusDMO",
+    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d12",
       "5": "2d8",
