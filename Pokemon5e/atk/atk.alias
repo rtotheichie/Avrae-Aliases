@@ -6,22 +6,22 @@ attack {{atk,gr,gv,i="&1&",get_raw(),load_json(get_gvar("5eed7634-7526-4b25-86f2
 {{mod_cc(cc, -1) if "pressure" in &ARGS& else ""}}
 {{c,cr,pr=combat(),vroll("1d20"),vroll("1d4")}}
 {{ce=c.me.get_effect('Confused') if c and c.me and not i else ''}}
-{{pe=c.me.get_effect('Paralyzed') if c and c.me and not i else ''}}
+# {{pe=c.me.get_effect('Paralyzed') if c and c.me and not i else ''}}
 {{be=c.me.get_effect('Burned') if c and c.me and not i else ''}}
 {{poe=c.me.get_effect('Poisoned') if c and c.me and not i else ''}}
 {{pm = get('miss', 0) + (pr.total==1) if pe else ''}}
 {{cm = get('miss', 0) + (cr.total<=10) if ce and not pm else ''}}
 {{f'-phrase "It hurt itself in its confusion!"' if cm else ''}}
-{{f'-phrase "It is paralyzed! It cannot move!"' if pm else ''}}
+# {{f'-phrase "It is paralyzed! It cannot move!"' if pm else ''}}
 {{f'-f "**{name} snapped out of Confusion!**"' if ce and cr.total>=16 else ''}}
-{{f'-f "Paralyzed Roll|{pr}"' if pe else ''}}
-{{f'-f "Paralyzed|{gv.Pa}"' if pe else ''}}
-{{f'-f "Confused Roll|{cr}"' if ce and not pm else ''}}
+# {{f'-f "Paralyzed Roll|{pr}"' if pe else ''}}
+# {{f'-f "Paralyzed|{gv.Pa}"' if pe else ''}}
+{{f'-f "Confused Roll|{cr}"' if ce else ''}}
 {{f'-f "Confused|{gv.C}"' if ce else ''}}
 {{f'miss{cm}' if cr.total<=10 and ce else ''}}
 {{c.me.mod_hp(-proficiencyBonus) if cr.total<=10 and ce else ''}}
 {{c.me.remove_effect(ce.name) if cr.total>=16 and ce else ''}}
-{{f'miss{pm}' if pr.total==1 and pe else ''}}
+# {{f'miss{pm}' if pr.total==1 and pe else ''}}
 {{f'-f "Burned|{gv.B}"' if be else ''}}
 {{f'-f "Poisoned|{gv.Po}"' if poe else ''}}
 -f 'PP Remaining|{{cc_str(cc)}}'
