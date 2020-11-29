@@ -3676,7 +3676,7 @@
           "type": "ieffect",
           "name": "Flying Diamonds",
           "duration": "3",
-          "effects": "-attack \"|4d4 [Rock]|\"",
+          "effects": "-attack \"|DAMAGE [Rock]|\"",
           "end": false,
           "conc": true
         }]
@@ -3841,7 +3841,7 @@
           "type": "ieffect",
           "name": "Ethereal Attack",
           "duration": "2",
-          "effects": "-attack \"{proficiencyBonus+DMO}|2d6+{DMO} [Water]|\"",
+          "effects": "-attack \"{proficiencyBonus+DMO}|DAMAGE+{DMO} [Water]|\"",
           "end": true
         }]
       }, {
