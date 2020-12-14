@@ -598,7 +598,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE+{max(SMO,DMO)[Water]",
+            "damage": "DAMAGE+{max(SMO,DMO)[Water]}",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -616,7 +616,7 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d8}",
+      "1": "2d8",
       "5": "2d10",
       "10": "3d10",
       "17": "4d12"
