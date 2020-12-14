@@ -598,7 +598,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE+{max(SMO,DMO)[Water]}",
+            "damage": "DAMAGE+{max(SMO,DMO)} [Water]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
