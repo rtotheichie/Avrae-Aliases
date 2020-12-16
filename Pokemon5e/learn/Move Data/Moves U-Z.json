@@ -237,7 +237,7 @@
             "desc": ""
           }],
           "miss": [],
-          "attackBonus": "8+ATTACK"
+          "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
