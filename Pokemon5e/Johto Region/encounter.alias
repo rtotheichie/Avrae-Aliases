@@ -15,10 +15,7 @@ cave = args.last('cave')
 npc = "NPC" if args.get('npc') or args.get("NPC") else ''
 water = "Water" if args.get('water') else ''
 land = "Land" if args.get('land') or not water else ''
-flip = "Flip" if args.get('flip') or (time()+int(get_svar('EncounterTimeZone',6))*3600 - 12)%7 >= 6 else ''
-if flip:
-    if args.get('flip') and (time()+int(get_svar('EncounterTimeZone',6))*3600 - 12)%7 >= 6:
-        flip = ''
+flip = "Flip" if args.get('flip') or (not args.get('flip') and (time()+int(get_svar('EncounterTimeZone',6))*3600 - 12)%7) >= 6 else ''
 Time = round((time()+int(get_svar('EncounterTimeZone',6))*3600)%86400//3600)
 day = 'Day' if args.get('day') or 7 <= Time <= 19 and not args.get('night') else ''
 if npc:
