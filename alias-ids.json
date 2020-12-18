@@ -30,5 +30,12 @@
   "Pokemon5e/mm.snippet":"5f77e3cf4ded026d119cfcea",
   "Pokemon5e/rm.snippet":"5f77e3f24ded026d119cfceb",
   "Pokemon5e/paralyzed.snippet":"5f77e44890e415e96a23c804",
-  "Pokemon5e/scrappy.snippet":"5f77e4824ded026d119cfcec"
+  "Pokemon5e/scrappy.snippet":"5f77e4824ded026d119cfcec",
+  "Pokemon5e/Johto Region/encounter/encounter.alias":"5fd6fca623e34c240918637a",
+  "Pokemon5e/Johto Region/loyalty/loyalty.alias":"5fc1fda50260807c831fe3af",
+  "Pokemon5e/Johto Region/loyalty/loyalty check.alias":"5fc2269430b59cacdc58a5da",
+  "Pokemon5e/Johto Region/loyalty/loyalty set.alias":"5fc20bb330b59cacdc58a5d3",
+  "Pokemon5e/Johto Region/loyalty/loyalty roll.alias": "5fc21aa80260807c831fe3bb",
+  "Pokemon5e/Johto Region/slots.alias": "5fb636c37e4b0daea5b60f02",
+  "Pokemon5e/Johto Region/exchange":"5fb637ba7e4b0daea5b60f05"
 }
