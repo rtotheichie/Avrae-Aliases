@@ -36,6 +36,6 @@
   "Pokemon5e/Johto Region/loyalty/loyalty check.alias":"5fc2269430b59cacdc58a5da",
   "Pokemon5e/Johto Region/loyalty/loyalty set.alias":"5fc20bb330b59cacdc58a5d3",
   "Pokemon5e/Johto Region/loyalty/loyalty roll.alias": "5fc21aa80260807c831fe3bb",
-  "Pokemon5e/Johto Region/slots.alias": "5fb636c37e4b0daea5b60f02",
-  "Pokemon5e/Johto Region/exchange":"5fb637ba7e4b0daea5b60f05"
+  "Pokemon5e/Johto Region/slots/slots.alias": "5fb636c37e4b0daea5b60f02",
+  "Pokemon5e/Johto Region/exchange/exchange.alias":"5fb637ba7e4b0daea5b60f05"
 }
