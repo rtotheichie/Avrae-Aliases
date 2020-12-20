@@ -17,7 +17,7 @@ if speed > 0:
     raceRoll = vroll("1d20")
     tally = 0
     if raceRoll.result.crit==1:
-        tally = speed*2
+        tally = speed + max(strength, dexterity)
     elif raceRoll.total >= DC:
         tally = speed
     elif raceRoll.total == 1:
@@ -26,7 +26,7 @@ if speed > 0:
         tally = speed//2
     if boosted:
         if tally:
-            tally += max(strength,dexterity)
+            tally += max(strength, dexterity)
         character().mod_cc(boosts, -1)
         out.append(f'-desc "**DC:** {DC} {raceRoll.result}\n{name} uses a boost to add an extra {max(strength,dexterity)} feet to their speed!"')
         conSave = combat().me.save('con')
