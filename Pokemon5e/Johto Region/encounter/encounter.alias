@@ -71,7 +71,7 @@ else:
             out.append('-desc "The chosen Pokemon will have the following attributes:"')
             out.append(f'-f "Shiny or Normal ({100 - shiny_rate}% chance)|{"Shiny" if shiny_roll.total < shiny_rate else "Normal"}"')
             out.append(f'-f "Gender|{"Male" if gender_roll.total==1 else "Female"}"')
-            out.append(f'-f "Ability|{"First Ability" if ability_roll.totsl==1 else "Second Ability (if it has one)"}"')
+            out.append(f'-f "Ability|{"First Ability" if ability_roll.total==1 else "Second Ability (if it has one)"}"')
             out.append(f'-f "Nature|{nature_list[nature_roll.total-1]}"')
         else:
             result = list(table[land or water].items())
