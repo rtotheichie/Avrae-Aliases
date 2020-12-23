@@ -2,8 +2,14 @@ embed <drac2>
 args = &ARGS&
 if len(args) > 0:
     character().set_cvar('raceSpeed', args[0])
-elif not get('raceSpeed', 0):
-    character().set_cvar('raceSpeed', 30)
+else:
+    speed_cvar = get('speed', '30')
+    speed_list = speed_cvar.split(',')
+    max_speed=[]
+    for speed in speed_list:
+        max_speed.append(int(''.join([y for y in speed if y.isdigit()])))
+    max_speed = max(max_speed)
+    character().set_cvar('raceSpeed', max_speed)
 out = []
 out.append('-title "On your marks! Get set! Go!"')
 if combat() and combat().me:
