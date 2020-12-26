@@ -128,6 +128,7 @@ if PrestigeLevel >= 9:
 if PrestigeLevel == 10:
     out.append('''-f "Majora's Blessing|Through the trials and tribulations you have overcome, like all champions have done before you, you can feel their energy course through you in combat. Now being a Prestige Trainer of Level 10, you may once per long rest take 1 additional action on your turn in combat with you or one of your Pokémon."''')
     c.create_cc("Majora's Blessing", 0, 1, 'long', 'bubble')
-out.append('-thumb <image>').append('-color <color>')
+out.append('-thumb <image>')
+out.append('-color <color>')
 return " ".join(out)
 </drac2>
