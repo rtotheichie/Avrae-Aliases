@@ -68,7 +68,7 @@ if PrestigeLevel >= 5:
         out.append(f'''-f "Prime Example ({race})|Your “Cultural Practitioner” ability can be used 1 + your Wisdom Modifier times per long rest, and the amount of additional hit points gained is always 40."''')
         c.create_cc('Cultural Practioner', 0, f'{1+wisdomMod}', 'long')
         out.append(f'''-f "Cultural Practioner|{c.cc_str('Cultural Practioner')}"''')
-    if race == "Hoennian":
+    if "Hoennian" in race:
         out.append(f'''-f "Prime Example ({race})|You may select another option from the racial feature “One With Nature”."''')
     if race == "Sinnoan":
         out.append(f'''-f "Prime Example ({race})|Your “Tough Through” racial feature can now be used 1 + your Constitution Modifier times per long rest."''')
