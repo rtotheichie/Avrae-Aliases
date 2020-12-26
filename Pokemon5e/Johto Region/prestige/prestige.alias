@@ -15,7 +15,7 @@ for x in PrestigeLevels:
 subclass = get('subclass', 0)
 if subclass == 0:
     return err('You must set your Trainer Path using `!level` before using this command.')
-race = get('race', 0)
+race = get('race', race)
 if race == 0:
     return err('You must set your Trainer Race using `!setrace` before using this command.')
 if PrestigeLevel >= 1:
