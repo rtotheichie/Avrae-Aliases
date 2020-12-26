@@ -20,6 +20,8 @@ subclass = subclass["TrainerLevel"]
 race = get('race', c.race)
 if race == 0:
     return err('You must set your Trainer Race using `!setrace` before using this command.')
+out.append(f'-title "{name} is trying to Prestige!"')
+out.append('''-desc "Prestige allows you to go beyond the usual leveling system, obtaining improvements to existing abilities and new ones entirely. Instead of your Prestige Levels being calculated by your highest leveled Pokémon, you level up based off of the number of Pokémon you have caught and registered in your Pokédex. Starting at 50 Pokémon caught you will become Prestige Level 1, and catching more Pokémon will raise your level as shown in the Prestige Trainer Table. Note Prestige Levels do not add to your Character Level. You are still a Level 20 Character, and as such you do not gain anymore hit dice or increase your hit points when you gain a Prestige Level. If you become Prestiged and meet the requirements for a Prestige Level (Example, 200 Pokémon caught for Prestige Level 7) you immediately gain the benefits up to that level."''')
 if PrestigeLevel >= 1:
     c.create_cc('Pokéslots', 0, 7, None, 'bubble')
     out.append('''-f "Champion's Privilege|As a Champion of the region you are gifted an additional Pokéslot bringing your party limit up to 7 Pokemon."''')
@@ -126,5 +128,6 @@ if PrestigeLevel >= 9:
 if PrestigeLevel == 10:
     out.append('''-f "Majora's Blessing|Through the trials and tribulations you have overcome, like all champions have done before you, you can feel their energy course through you in combat. Now being a Prestige Trainer of Level 10, you may once per long rest take 1 additional action on your turn in combat with you or one of your Pokémon."''')
     c.create_cc("Majora's Blessing", 0, 1, 'long', 'bubble')
+out.append('-thumb <image>').append('-color <color>')
 return " ".join(out)
 </drac2>
