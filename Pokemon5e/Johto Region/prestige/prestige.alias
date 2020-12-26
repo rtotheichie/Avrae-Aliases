@@ -15,7 +15,8 @@ for x in PrestigeLevels:
 subclass = get('subclass', 0)
 if subclass == 0:
     return err('You must set your Trainer Path using `!level` before using this command.')
-subclass = load_json(subclass)[0]
+subclass = load_json(subclass)
+subclass = subclass[0]
 race = get('race', c.race)
 if race == 0:
     return err('You must set your Trainer Race using `!setrace` before using this command.')
