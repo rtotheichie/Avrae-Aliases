@@ -74,7 +74,7 @@ if PrestigeLevel >= 5:
         out.append(f'''-f "Prime Example ({race})|Your “Tough Through” racial feature can now be used 1 + your Constitution Modifier times per long rest."''')
     if race == "Unovan":
         out.append(f'''-f "Prime Example ({race})|Your “Not So Fast” racial feature can now be used 4 times per long rest."''')
-        c.create_cc('Not so Fast', 0, 4, 'long', 'bubble')
+        c.create_cc('Not So Fast', 0, 4, 'long', 'bubble')
         out.append(f'''-f "Not So Fast|{c.cc_str('Not So Fast')}"''')
     if race == "Kalosian":
         out.append(f'''-f "Prime Example ({race})|Your “Bon Chance” racial feature is now activated any time you have a natural roll of 1 for an attack roll, ability check, or saving throw for you or your Pokémon. You still need to use the new roll."''')
@@ -85,10 +85,10 @@ if PrestigeLevel >= 5:
     if race == "Galarian":
         out.append(f'''-f "Prime Example ({race})|Your “That Didn’t Even Hurt” racial feature can now be used 3 times per long rest."''')
         c.create_cc("That Didn't Even Hurt", 0, 3, 'long', 'bubble')
-        out.append(f'''-f "That Didn't Even Hurt|{c.cc_str('That Didn't Even Hurt)}"''')
+        out.append(f'''-f """That Didn't Even Hurt|{c.cc_str("That Didn't Even Hurt")}"""''')
 if PrestigeLevel >= 6:
     out.append('''-f "Legendary Trainer|Your Pokémon have stuck with you through thick and thin and while they haven’t grown any stronger their experience facing extremely strong opponents has pushed them far beyond their natural skills. Starting at Prestige Level 6, you can use your Master Trainer feature up to a total of 3 times per long rest."''')
-    out.cc_create('Master Trainer', 0, 3, 'long', 'bubble')
+    c.create_cc('Master Trainer', 0, 3, 'long', 'bubble')
     out.append(f'''-f "Master Trainer|{c.cc_str('Master Trainer')}"''')
 if PrestigeLevel >= 7:
     out.append('''-f "Prestige Ability Score Improvement|Your ability to grow has reached it's peak, allowing your ability score maximum to become 30. When you reach Prestige Level 2, and again at 5, 7, and 9, you can increase one ability score of your choice by 3, or you can increase multiple ability scores of your choice by an amount equaling up to a total of 3. Alternatively can spend two points for a Feat and ignore if it has a stipulation about being unable to increase a score above 20."''')
@@ -104,7 +104,7 @@ if PrestigeLevel >= 9:
     if subclass == "Poké Mentor":
         out.append(f'''-f "Prestige Path ({subclass})|When the going gets tough, you know exactly which words inspire the best in your Pokémon. Your Cheerleader feature now lasts three rounds instead of one."''')
     if subclass == "Researcher":
-        out.appent(f'-f "Prestige Path ({subclass})|Your analytical mind has allowed you to learn the attack patterns of the Pokémon you study. When you use your Professor feature, you and your Pokémon gain the ability to take the dodge action as a bonus action, but only gain the benefits of the dodge action against that Pokémon."')
+        out.append(f'-f "Prestige Path ({subclass})|Your analytical mind has allowed you to learn the attack patterns of the Pokémon you study. When you use your Professor feature, you and your Pokémon gain the ability to take the dodge action as a bonus action, but only gain the benefits of the dodge action against that Pokémon."')
     if subclass == "Pokémon Collector":
         out.append(f'-f "Prestige Path ({subclass})|Your reflexes and practice throwing Pokéballs has made it almost second nature for you. You can now throw a Pokéball as a bonus action."')
     if subclass == "Nurse":
