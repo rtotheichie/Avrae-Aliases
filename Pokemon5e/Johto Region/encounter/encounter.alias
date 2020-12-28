@@ -17,6 +17,8 @@ water = "Water" if args.get('water') else ''
 land = "Land" if args.get('land') or not water else ''
 Time = time() + (int(get_svar('EncounterTimeZone', -6))*3600)
 flip = "Flip" if args.get('flip') or (not args.get('flip') and int((Time//86400)-11)%7) >= 5 else ''
+if flip and (args.get('flip') and int((Time//86400)-11)%7):
+    flip = ''
 Time = round(Time%86400//3600)
 day = 'Day' if args.get('day') or 7 <= Time <= 19 and not args.get('night') else ''
 if npc:
