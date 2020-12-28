@@ -3,7 +3,7 @@ pokedex = load_json(get('PokedexCaught', []))
 c = character()
 out = []
 if not pokedex:
-    return err("Make sure you have selected your Trainer before running this command.  If you're sure you have selected your Trainer, make sure ")
+    return err("Make sure you have selected your Trainer before running this command.  If you're sure you have selected your Trainer, make sure you have updated your Pokedex.")
 pokedex = len(pokedex)
 if pokedex < 50:
     return err("You must catch at least 50 Pokemon before you can gain Prestige Rewards.")
