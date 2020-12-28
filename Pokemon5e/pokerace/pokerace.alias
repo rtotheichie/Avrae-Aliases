@@ -1,23 +1,31 @@
 embed <drac2>
 args = &ARGS&
-speed = int(get('turnSpeed', get('raceSpeed', 0)))
-character().delete_cvar('turnSpeed')
-progress = int(combat().me.note[combat().me.note.index(" "):])
-boosts = 'raceBoosts'
+c = combat().current
+cge = c.get_effect
+mod = c.stats.get_mod
+speed = int(cge('Speed').desc)
+if cge('Slowed'):
+    speed = speed//2
+    c.remove_effect('Slowed')
+if cge('Exhausted'):
+    speed = 0
+    c.remove_effect('Exhausted')
+progress = int(cge('Race Progress').desc)
+boosts = int(cge('Boosts').desc.count('🥕'))
 booster = ''
 if args:
     booster = 'b' in args[0] or 'B' in args[0]
-DC = 15-max(strengthMod,dexterityMod)
-boosted = booster and get_cc(boosts)
+DC = 15-max(mod('str'),mod('dex'))
+boosted = booster and boosts
 exhausted = 0
 out=[]
 tally=0
 if speed > 0:
-    out.append(f'-title "{name} races around the track!"')
+    out.append(f'-title "{c.name} races around the track!"')
     raceRoll = vroll("1d20")
     tally = 0
     if raceRoll.result.crit==1:
-        tally = speed + max(strength, dexterity)
+        tally = speed + max(c.stats.strength, c.stats.dexterity)
     elif raceRoll.total >= DC:
         tally = speed
     elif raceRoll.total == 1:
@@ -26,35 +34,35 @@ if speed > 0:
         tally = speed//2
     if boosted:
         if tally:
-            tally += max(strength, dexterity)
-        character().mod_cc(boosts, -1)
-        out.append(f'-desc "**DC:** {DC} {raceRoll.result}\n{name} uses a boost to add an extra {max(strength,dexterity)} feet to their speed!"')
-        conSave = combat().me.save('con')
-        if not character().get_cc(boosts):
+            tally += max(c.stats.strength, c.stats.dexterity)
+        c.add_effect('Boosts', '', duration=-1, desc='🥕'*(boosts-1))
+        out.append(f'-desc "**DC:** {DC} {raceRoll.result}\n{c.name} uses a boost to add an extra {max(c.stats.strength, c.stats.dexterity)} feet to their speed!"')
+        conSave = c.save('con')
+        if not (boosts-1):
             exhausted = 1
         if exhausted:
             if conSave.total < 15:
-                character().set_cvar('turnSpeed', '0')
-                out.append(f'''-f "Constitution Save (DC 15): {conSave}|{name} is exhausted and needs to take a break!"''')
+                c.add_effect('Exhausted','', duration=-1)
+                out.append(f'''-f "Constitution Save (DC 15): {conSave}|{c.name} is exhausted and needs to take a break!"''')
             else:
-                out.append(f'''-f "Constitution Save (DC 15): {conSave}|{name} is still holding on!"''')
+                out.append(f'''-f "Constitution Save (DC 15): {conSave}|{c.name} is still holding on!"''')
         elif conSave.total < 15:
-            speed = int(get('raceSpeed', 0))
-            character().set_cvar('turnSpeed', f'{speed//2}')
-            out.append(f'-f "Constitution Save (DC 15): {conSave}|{name} is too tired to keep racing at full speed!\nTheir movement speed is cut in half for the next turn."')
+            c.add_effect('Slowed','', duration=-1)
+            out.append(f'-f "Constitution Save (DC 15): {conSave}|{c.name} is too tired to keep racing at full speed!\nTheir movement speed is cut in half for the next turn."')
         else:
-            out.append(f'''-f "Constitution Save (DC 15): {conSave}|{name} is holding steady!"''')
+            out.append(f'''-f "Constitution Save (DC 15): {conSave}|{c.name} is holding steady!"''')
     else:
         out.append(f'-desc "**DC:** {DC} {raceRoll.result}"')
         if not boosted:
-            character().mod_cc(boosts, 1)
+            if boosts < mod('con'):
+                c.add_effect('Boosts', '', duration=-1, desc='🥕'*(boosts+1))
     progress += tally
 else:
     out.append(f'-title "{name} is catching their breath."')
-combat().me.set_note(f'Progress: {progress}')
+c.add_effect('Race Progress','',duration=-1,desc=f'{progress+tally}')
 out.append(f'-f "Lap # {combat().round_num}:|{name} moves forward {tally if tally else "0"} feet!"')
-out.append(f'''-f "Progress:|{combat().me.note[combat().me.note.index(' '):]} feet|inline"''')
-out.append(f'''-f "Boosts / Movement Speed:|{'🥕'*character().get_cc(boosts) or 'None'} / {get('turnSpeed',get('raceSpeed'))} feet|inline"''')
+out.append(f'''-f "Progress:|{cge('Race Progress').desc} feet|inline"''')
+out.append(f'''-f "Boosts / Movement Speed:|{cge('Boosts').desc} / {cge('Speed').desc} feet|inline"''')
 return " ".join(out)
 </drac2>
--thumb <image> -color <color>
+-thumb <'https://hugelolcdn.com/i/190943.gif'> -color <color>
