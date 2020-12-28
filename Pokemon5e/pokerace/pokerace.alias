@@ -59,7 +59,7 @@ if speed > 0:
     progress += tally
 else:
     out.append(f'-title "{name} is catching their breath."')
-c.add_effect('Race Progress','',duration=-1,desc=f'{progress+tally}')
+c.add_effect('Race Progress','',duration=-1,desc=f'{progress}')
 out.append(f'-f "Lap # {combat().round_num}:|{name} moves forward {tally if tally else "0"} feet!"')
 out.append(f'''-f "Progress:|{cge('Race Progress').desc} feet|inline"''')
 out.append(f'''-f "Boosts / Movement Speed:|{cge('Boosts').desc} / {cge('Speed').desc} feet|inline"''')
