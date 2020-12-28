@@ -65,4 +65,4 @@ out.append(f'''-f "Progress:|{cge('Race Progress').desc} feet|inline"''')
 out.append(f'''-f "Boosts / Movement Speed:|{cge('Boosts').desc} / {cge('Speed').desc} feet|inline"''')
 return " ".join(out)
 </drac2>
--thumb <'https://hugelolcdn.com/i/190943.gif'> -color <color>
+{{"-thumb <'https://hugelolcdn.com/i/190943.gif'>" if c != combat().me else "-thumb <image>"}} -color <color>
