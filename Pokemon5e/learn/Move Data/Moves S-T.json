@@ -3229,11 +3229,11 @@
       "proper": true,
       "_v": 2
     },
-    "damage":{
-    "1":"1d12",
-      "5":"2d8",
-      "10":"2d12",
-      "17":"6d6"
+    "damage": {
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 3
   },
@@ -3698,7 +3698,50 @@
     "PP": 5
   },
   "Thrash": {
-    "code": {"name":"Thrash","automation":[{"type":"target","meta":[],"target":"each","effects":[{"type":"attack","meta":[],"hit":[{"type":"damage","meta":[],"damage":"DAMAGE+{SMO} [Normal]"},{"type":"roll","meta":[],"dice":"2d4","name":"Extra Hits"}],"miss":[],"attackBonus":"ATTACK"}]},{"type":"target","meta":[],"target":"self","effects":[{"type":"ieffect","meta":[],"name":"Confused","duration":"3","effects":"","end":true,"desc":""}]},{"type":"text","meta":[],"text":"You thrash about wildly, doing several attacks without control. Make a melee attack roll, doing 1d10 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d10 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of two additional hits. At the end of this attack, you become confused."}],"_v":2,"proper":true,"verb":null},
+    "code": {
+      "name": "Thrash",
+      "automation": [{
+        "type": "target",
+        "meta": [],
+        "target": "each",
+        "effects": [{
+          "type": "attack",
+          "meta": [],
+          "hit": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "DAMAGE+{SMO} [Normal]"
+          }, {
+            "type": "roll",
+            "meta": [],
+            "dice": "2d4",
+            "name": "Extra Hits"
+          }],
+          "miss": [],
+          "attackBonus": "ATTACK"
+        }]
+      }, {
+        "type": "target",
+        "meta": [],
+        "target": "self",
+        "effects": [{
+          "type": "ieffect",
+          "meta": [],
+          "name": "Confused",
+          "duration": "3",
+          "effects": "",
+          "end": true,
+          "desc": ""
+        }]
+      }, {
+        "type": "text",
+        "meta": [],
+        "text": "You thrash about wildly, doing several attacks without control. Make a melee attack roll, doing 1d10 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d10 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of two additional hits. At the end of this attack, you become confused."
+      }],
+      "_v": 2,
+      "proper": true,
+      "verb": null
+    },
     "attack": "proficiencyBonus+SMO",
     "damage": {
       "1": "1d10",
