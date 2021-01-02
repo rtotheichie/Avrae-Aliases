@@ -727,7 +727,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You extend your shadow to strike an opponent from behind. At the beginning of a round of combat, you may announce that you are using this move, immediately jumping to the top of the initiative order for that round only. Make a melee attack on an opponent, dealing 1d6 + MOVE ghost damage on a hit."
+        "text": "You extend your shadow to strike a creature from behind. As a bonus action, you can control your shadow to make a ranged attack roll against a target within range dealing 1d4 ghost damage on a hit."
       }],
       "verb": "uses",
       "proper": true,
@@ -2160,7 +2160,7 @@
             "end": false
           }],
           "success": [],
-          "dc": "{8+proficiencyBonus+max(DMO,WMO)}"
+          "dc": "{8+proficiencyBonus+max(DMO,CoMO)}"
         }]
       }, {
         "type": "text",
@@ -2896,11 +2896,7 @@
       "name": "Supersonic",
       "automation": [{
         "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "1d4",
-          "name": "Confusion"
-        }],
+        "meta": [],
         "target": "each",
         "effects": [{
           "type": "save",
@@ -2908,7 +2904,7 @@
           "fail": [{
             "type": "ieffect",
             "name": "Confused",
-            "duration": "{Confusion}",
+            "duration": "3",
             "effects": "",
             "end": true
           }],
@@ -3037,12 +3033,7 @@
       "name": "Sweet Kiss",
       "automation": [{
         "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "1d4",
-          "name": "Confuse",
-          "hidden": false
-        }],
+        "meta": [],
         "target": "all",
         "effects": [{
           "type": "save",
@@ -3050,9 +3041,9 @@
           "fail": [{
             "type": "ieffect",
             "name": "Confused",
-            "duration": "{Confuse}",
+            "duration": "3",
             "effects": "",
-            "end": false,
+            "end": true,
             "conc": false
           }],
           "success": [],
@@ -3227,7 +3218,7 @@
         "target": "self",
         "effects": [{
           "type": "damage",
-          "damage": "-(6d6+{CoMO})",
+          "damage": "-(DAMAGE+{CoMO}) [Healing]",
           "overheal": false
         }]
       }, {
@@ -3237,6 +3228,12 @@
       "verb": "heals with",
       "proper": true,
       "_v": 2
+    },
+    "damage": {
+      "1": "1d12",
+      "5": "2d8",
+      "10": "2d12",
+      "17": "6d6"
     },
     "PP": 3
   },
@@ -3705,27 +3702,45 @@
       "name": "Thrash",
       "automation": [{
         "type": "target",
+        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
-          "meta": [{
+          "meta": [],
+          "hit": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "DAMAGE+{SMO} [Normal]"
+          }, {
             "type": "roll",
-            "dice": "DAMAGE",
-            "name": "rounds"
+            "meta": [],
+            "dice": "2d4",
+            "name": "Extra Hits"
           }],
-          "target": "self",
-          "effects": [{
-            "type": "ieffect",
-            "name": "Confused",
-            "duration": "{rounds}",
-            "effects": "Confused",
-            "end": false
-          }]
+          "miss": [],
+          "attackBonus": "ATTACK"
         }]
+      }, {
+        "type": "target",
+        "meta": [],
+        "target": "self",
+        "effects": [{
+          "type": "ieffect",
+          "meta": [],
+          "name": "Confused",
+          "duration": "3",
+          "effects": "",
+          "end": true,
+          "desc": ""
+        }]
+      }, {
+        "type": "text",
+        "meta": [],
+        "text": "You thrash about wildly, doing several attacks without control. Make a melee attack roll, doing 1d10 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d10 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of two additional hits. At the end of this attack, you become confused."
       }],
-      "verb": null,
-      "proper": false,
-      "_v": 2
+      "_v": 2,
+      "proper": true,
+      "verb": null
     },
     "attack": "proficiencyBonus+SMO",
     "damage": {
