@@ -375,7 +375,7 @@
       "criton": "CRIT"
     },
     "attack": "proficiencyBonus+DMO",
-    "crit" : "19",
+    "crit": "19",
     "damage": {
       "1": "1d10",
       "5": "2d8",
@@ -844,7 +844,7 @@
       "proper": true,
       "verb": "uses"
     },
-    "attack" : "proficiencyBonus+ChMO",
+    "attack": "proficiencyBonus+ChMO",
     "PP": 5
   },
   "Aura Sphere": {
@@ -2343,7 +2343,7 @@
       "proper": true,
       "verb": "uses"
     },
-    "attack":"proficiencyBonus+max(WMO,ChMO)",
+    "attack": "proficiencyBonus+max(WMO,ChMO)",
     "PP": 3
   },
   "Charge": {
@@ -2669,17 +2669,17 @@
             "type": "damage",
             "damage": "DAMAGE+{SMO}[Fighting]"
           }, {
-          "type": "ieffect",
-          "name": "Open Enemy (Advantage against target)",
-          "duration": "1",
-          "effects": "",
-          "end": true,
-          "conc": false
-        }],
+            "type": "ieffect",
+            "name": "Open Enemy (Advantage against target)",
+            "duration": "1",
+            "effects": "",
+            "end": true,
+            "conc": false
+          }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
-      },{
+      }, {
         "type": "text",
         "text": "You get in close for a devastating strike, sacrificing your defenses. Make a melee attack on a creature, dealing 2d10 + MOVE fighting damage on a hit. After activating this move, the target has advantage on any attack it makes against you before the beginning of your next turn."
       }],
@@ -2819,7 +2819,7 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(WMO,IMO)",    
+    "attack": "proficiencyBonus+max(WMO,IMO)",
     "PP": 5
   },
   "Confusion": {
@@ -3345,7 +3345,7 @@
     },
     "PP": 5
   },
-  "Curse (Other)":{
+  "Curse (Other)": {
     "code": {
       "name": "Curse (Other)",
       "automation": [{
@@ -4190,8 +4190,8 @@
     "code": {
       "name": "Dragon Ascent",
       "automation": [{
-       "type": "target",
-       "target": "each",
+        "type": "target",
+        "target": "each",
         "effects": [{
           "type": "attack",
           "hit": [{
@@ -4329,31 +4329,26 @@
       "name": "Dragon Darts",
       "automation": [{
         "type": "target",
+        "meta": [],
         "target": "each",
         "effects": [{
           "type": "attack",
+          "meta": [],
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE+{max(DMO,SMO)}[Dragon]"
-          }],
-          "miss": [],
-          "attackBonus": "ATTACK"
-        }, {
-          "type": "attack",
-          "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE+{max(DMO,SMO)}[Dragon]"
+            "meta": [],
+            "damage": "DAMAGE+{max(SMO,DMO)} [Dragon]",
+            "overheal": false
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
+        "meta": [],
         "text": "A pair of tiny dragon-shaped projectiles fire out from your body towards a creature in range. Make two ranged attack rolls, dealing 1d6 + MOVE dragon damage with each hit. This attack may target two different creatures."
       }],
-      "_v": 2,
-      "proper": false,
-      "verb": null
+      "_v": 2
     },
     "attack": "proficiencyBonus+max(DMO,SMO)",
     "damage": {
@@ -4413,7 +4408,7 @@
       }, {
         "type": "text",
         "text": "You slam your head down like a hammer to attack a creature in range. Make a melee attack roll against the target, dealing 2d8 + MOVE dragon damage on a hit. Hit or miss, any creatures within the line created by the attack (5 feet wide) must make a DEX save against your Move DC, taking the same damage on a failure."
-}],
+      }],
       "_v": 2,
       "proper": true,
       "verb": null
@@ -4690,7 +4685,7 @@
       "criton": "CRIT"
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
-    "crit" : "19",
+    "crit": "19",
     "damage": {
       "1": "2d6",
       "5": "2d8",
@@ -4724,7 +4719,7 @@
       "criton": "CRIT"
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
-    "crit" : "19",
+    "crit": "19",
     "damage": {
       "1": "2d6",
       "5": "2d8",
@@ -4804,4 +4799,3 @@
     "PP": 3
   }
 }
-
