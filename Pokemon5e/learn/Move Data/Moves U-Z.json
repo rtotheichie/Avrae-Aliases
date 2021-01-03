@@ -766,10 +766,10 @@
           "stat": "str",
           "fail": [{
             "type": "ieffect",
-            "name": "Prone",
+            "name": "Proned",
             "duration": "3",
             "effects": "",
-            "end": false
+            "end": true
           }],
           "success": [],
           "dc": "{8+ATTACK}"
