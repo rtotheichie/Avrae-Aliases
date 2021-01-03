@@ -3318,7 +3318,7 @@
           "type": "ieffect",
           "name": "Cursed One",
           "duration": "10",
-          "effects": "-attack \"|1d6 [Ghost]|\"",
+          "effects": "-attack \"|DAMAGE [Ghost]|\"",
           "end": false,
           "conc": true
         }]
@@ -3342,6 +3342,12 @@
       "_v": 2,
       "proper": true,
       "verb": "uses"
+    },
+    "damage": {
+      "1": "1d6",
+      "5": "2d4",
+      "10": "1d12",
+      "17": "4d4"
     },
     "PP": 5
   },
