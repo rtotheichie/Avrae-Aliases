@@ -654,7 +654,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Poison]"
+            "damage": "DAMAGE+{max(SMO,DMO)} [Poison]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -667,12 +667,12 @@
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "1d8+{DMO}",
-      "5": "2d6+{DMO}",
-      "10": "4d4+{DMO}",
-      "17": "3d10+{DMO}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 15
   },
