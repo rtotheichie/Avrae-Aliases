@@ -1177,7 +1177,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ghost]",
+            "damage": "DAMAGE+{max(DMO,WMO)} [Ghost]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -1193,12 +1193,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(WMO,IMO)",
+    "attack": "proficiencyBonus+max(WMO,DMO)",
     "damage": {
-      "1": "1d6+{max(WMO,IMO)}",
-      "5": "1d10+{max(WMO,IMO)}",
-      "10": "2d8+{max(WMO,IMO)}",
-      "17": "5d4+{max(WMO,IMO)}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 15
   },
