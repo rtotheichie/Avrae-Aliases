@@ -423,8 +423,8 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "dice": "DAMAGE",
-          "name": "Detect"
+          "dice": "1d20",
+          "name": "Endure"
         }],
         "target": "self",
         "effects": []
@@ -433,7 +433,6 @@
       "proper": true,
       "verb": "uses"
     },
-    "attack": "proficiencyBonus+max(0,0)",
     "PP": 3
   },
   "Energy Ball": {
@@ -536,7 +535,7 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "dice": "DAMAGE",
+          "dice": "1d20",
           "name": "Instant Death"
         }],
         "target": "each",
@@ -549,7 +548,6 @@
       "proper": true,
       "verb": "tries to KO with"
     },
-    "attack": "proficiencyBonus+max(0,0)",
     "PP": 3
   },
   "Extrasensory": {
