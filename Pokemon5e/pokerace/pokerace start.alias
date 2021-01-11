@@ -13,8 +13,10 @@ else:
     c.add_effect('Speed', '', duration=-1, desc=max_speed)
 out = []
 out.append('-title "On your marks! Get set! Go!"')
-c.add_effect('Race Progress', '', desc= '0')
-c.add_effect('Boosts', '', duration = -1, desc='')
+c.add_effect('Race Progress', '', desc = '0')
+c.add_effect('Boosts', '', duration = -1, desc = '')
+if get("ShakeAndBake", ""):
+    c.add_effect('Shake and Bake!', '', duration = -1, desc = '')
 out.append(f'''-desc "It's time for the Pokemon Racing League! {c.name}'s Movement Speed has been set to **{c.get_effect('Speed').desc}** feet."''')
 out.append('-f "Rules|The first Pokemon to cross the finish line is the winner!\nBoosting may help your Pokemon get there quicker, but if it becomes too tired it may need to rest.\nEvery lap, your Pokemon must beat a DC determined by your Dexterity or Strength score.  The level of success (or failure) determines how much of their speed they move."')
 out.append(f'-f "Instructions|`{ctx.prefix}{ctx.alias}`to run another lap!\n`{ctx.prefix}{ctx.alias} boost` to give your Pokemon a boost!\n`{ctx.prefix}{ctx.alias} end` to finish the race!"')
