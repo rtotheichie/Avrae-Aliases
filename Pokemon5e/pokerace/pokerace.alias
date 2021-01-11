@@ -37,7 +37,10 @@ if speed > 0:
             tally += max(c.stats.strength, c.stats.dexterity)
         c.add_effect('Boosts', '', duration=-1, desc='🥕'*(boosts-1))
         out.append(f'-desc "**DC:** {DC} {raceRoll.result}\n{c.name} uses a boost to add an extra {max(c.stats.strength, c.stats.dexterity)} feet to their speed!"')
-        conSave = c.save('con')
+        if get("ShakeAndBake", ""):
+            conSave = c.save('con', True)
+        else:
+            conSave = c.save('con')
         if not (boosts-1):
             exhausted = 1
         if exhausted:
