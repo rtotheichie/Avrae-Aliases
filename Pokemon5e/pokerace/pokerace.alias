@@ -37,7 +37,7 @@ if speed > 0:
             tally += max(c.stats.strength, c.stats.dexterity)
         c.add_effect('Boosts', '', duration=-1, desc='🥕'*(boosts-1))
         out.append(f'-desc "**DC:** {DC} {raceRoll.result}\n{c.name} uses a boost to add an extra {max(c.stats.strength, c.stats.dexterity)} feet to their speed!"')
-        if get("ShakeAndBake", ""):
+        if cge("Shake and Bake!"):
             conSave = c.save('con', True)
         else:
             conSave = c.save('con')
