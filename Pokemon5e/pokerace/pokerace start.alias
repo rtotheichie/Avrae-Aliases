@@ -3,6 +3,8 @@ args = &ARGS&
 c = combat().current
 if len(args) > 0:
     c.add_effect('Speed', '', duration=-1, desc=args[0])
+    if 'shake' in args:
+        c.add_effect('Shake and Bake!', '', duration = -1, desc = '')
 else:
     speed_cvar = get('speed', '30')
     speed_list = speed_cvar.split(',')
