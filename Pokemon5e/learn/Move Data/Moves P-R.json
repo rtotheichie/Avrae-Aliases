@@ -354,7 +354,7 @@
           "type": "attack",
           "meta": [{
             "type": "roll",
-            "dice": "DAMAGE",
+            "dice": "1d4",
             "name": "Extra Attacks"
           }],
           "hit": [{
