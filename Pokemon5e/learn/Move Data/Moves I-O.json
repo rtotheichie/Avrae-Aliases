@@ -444,7 +444,7 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "dice": "DAMAGE",
+          "dice": "1d4",
           "name": "Infested",
           "hidden": false
         }],
@@ -453,7 +453,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Bug]|\"",
+            "damage": "DAMAGE+CoMO [Bug]",
             "end": true,
             "conc": false
           }],
