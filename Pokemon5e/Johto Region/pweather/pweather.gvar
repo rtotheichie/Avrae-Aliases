@@ -1,0 +1,60 @@
+{
+  "Summer": {
+    "25": [
+      "Harsh Sun, Calm", "Grass, Ground, Fire"
+    ],
+    "35": [
+      "Harsh Sun, Windy", "Grass, Ground, Fire, Flying, Dragon, Psychic"
+    ],
+    "65": [
+      "Cloudy, Calm", "Normal, Rock, Fairy, Fighting, Poison"
+    ],
+    "75": [
+      "Cloudy, Windy", "Normal, Rock, Fairy, Fighting, Poison, Flying, Dragon, Psychic"
+    ],
+    "80": [
+      "Foggy", "Dark, Ghost"
+    ],
+    "90": [
+      "Light Drizzle", "Water, Electric, Bug"
+    ],
+    "99": [
+      "Heavy Rain", "Water, Electric, Bug"
+    ],
+    "100": [
+      "Dangerous Storm", "Water, Electric, Bug"
+    ]
+  },
+  "Winter": {
+    "15": [
+      "Harsh Sun, Calm", "Grass, Ground, Fire"
+    ],
+    "25": [
+      "Harsh Sun, Windy", "Grass, Ground, Fire, Flying, Dragon, Psychic"
+    ],
+    "40": [
+      "Cloudy, Calm", "Normal, Rock, Fairy, Fighting, Poison"
+    ],
+    "50": [
+      "Cloudy, Windy", "Normal, Rock, Fairy, Fighting, Poison, Flying, Dragon, Psychic"
+    ],
+    "60": [
+      "Foggy", "Dark, Ghost"
+    ],
+    "70": [
+      "Light Drizzle", "Water, Electric, Bug"
+    ],
+    "80": [
+      "Heavy Rain", "Water, Electric, Bug"
+    ],
+    "90": [
+      "Light Snow", "Ice, Steel"
+    ],
+    "99": [
+      "Light Snow", "Ice, Steel"
+    ],
+    "100": [
+      "Light Snow", "Ice, Steel"
+    ]
+  }
+}
