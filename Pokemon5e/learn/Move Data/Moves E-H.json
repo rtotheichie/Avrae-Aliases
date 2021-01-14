@@ -1419,7 +1419,7 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE [Fire]"
+            "damage": "DAMAGE+{max(SMO,DMO)} [Fire]"
           }],
           "success": [{
             "type": "damage",
