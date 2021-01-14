@@ -3274,7 +3274,7 @@
         "target": "each",
         "effects": [{
           "type": "damage",
-          "damage": "-(6d6+{max(WMO,CoMO)}) [Healing]",
+          "damage": "-(DAMAGE+{max(WMO,CoMO)}) [Healing]",
           "overheal": false
         }]
       }, {
@@ -3284,6 +3284,12 @@
       "verb": "uses",
       "proper": true,
       "_v": 2
+    },
+    "damage": {
+      "1": "4d4",
+      "5": "2d12",
+      "10": "4d8",
+      "17": "8d6"
     },
     "PP": 5
   },
