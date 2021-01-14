@@ -12,6 +12,6 @@ for category in CategoryList:
             result = table[season][x]
             break
     out.append(f'''-f "{category} -\n{result[0]}|Types Affected:\n{result[1]}|inline"''')
-out.append('-f "{ctx.prefix}{ctx.alias} | Developed by @R to the Ichie#6193"')
+out.append(f'-footer "{ctx.prefix}{ctx.alias} | Developed by @R to the Ichie#6193"')
 return " ".join(out)
 </drac2>
