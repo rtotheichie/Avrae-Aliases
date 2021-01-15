@@ -11,7 +11,7 @@ for category in CategoryList:
         if weather_roll.total <= int(x):
             result = table[season][x]
             break
-    out.append(f'''-f "{category} -\n{result[0]}|Types Affected:\n{result[1]}|inline"''')
+    out.append(f'''-f "**{category}** -\n{result[0]}|Types Affected:\n{result[1]}|inline"''')
 out.append(f'-footer "{ctx.prefix}{ctx.alias} | Developed by @R to the Ichie#6193"')
 return " ".join(out)
 </drac2>
