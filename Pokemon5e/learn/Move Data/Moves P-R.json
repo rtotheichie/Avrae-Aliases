@@ -1803,7 +1803,7 @@
         "target": "self",
         "effects": [{
           "type": "damage",
-          "damage": "-(DAMAGE+{max(WMO,ChMO)} [Healing]",
+          "damage": "-(DAMAGE+{max(WMO,ChMO)}) [Healing]",
           "overheal": false,
           "higher": null,
           "cantripScale": null
