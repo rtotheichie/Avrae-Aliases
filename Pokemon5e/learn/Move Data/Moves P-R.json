@@ -1803,7 +1803,7 @@
         "target": "self",
         "effects": [{
           "type": "damage",
-          "damage": "-8d6-2",
+          "damage": "-(DAMAGE+{max(WMO,ChMO)} [Healing]",
           "overheal": false,
           "higher": null,
           "cantripScale": null
@@ -1821,6 +1821,12 @@
       "verb": "Heals with",
       "proper": false,
       "_v": 2
+    },
+    "damage": {
+      "1": "4d6",
+      "5": "6d6",
+      "10": "8d6",
+      "17": "8d10"
     },
     "PP": 5
   },
