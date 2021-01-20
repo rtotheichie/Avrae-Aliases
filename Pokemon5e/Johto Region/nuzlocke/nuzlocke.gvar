@@ -19,5 +19,8 @@
   ],
   "Alola": [
     "Rowlet", "Litten", "Popplio", "Pikipek", "Yungoos", "Rattata", "Caterpie", "Ledyba", "Spinarak", "Pichu", "Pikachu", "Grubbin", "Slowpoke", "Wingull", "Abra", "Meowth", "Magnemite", "Grimer", "Ekans", "Growlithe", "Drowzee", "Gastly", "Zubat", "Diglett", "Spearow", "Mankey", "Cutiefly", "Flabébé", "Petilil", "Cottonee", "Psyduck", "Magikarp", "Barboach", "Seel", "Machop", "Roggenrola", "Rockruff", "Shellder", "Remoraid", "Lillipup", "Eevee", "Mareep", "Igglybuff", "Surskit", "Dewpider", "Fomantis", "Morelull", "Paras", "Poliwag", "Goldeen", "Feebas", "Fletchling", "Salandit", "Cubone", "Bounsweet", "Hoothoot", "Goomy", "Wimpod", "Staryu", "Natu", "Chinchou", "Minccino", "Cleffa", "Houndour", "Electrike", "Geodude", "Sandile", "Trapinch", "Snorunt", "Sandshrew", "Vulpix", "Vanillite", "Carvanha", "Skrelp", "Exeggcute", "Corphish", "Mienfoo", "Riolu"
-  ]
+  ],
+  "Galar": [
+    "Caterpie", "Grubbin", "Hoothoot", "Pidove", "Lotad", "Seedot", "Purrloin", "Bunnelby", "Minccino", "Bounsweet", "Oddish", "Budew", "Wingull", "Joltik", "Electrike", "Vulpix", "Growlithe", "Vanillite", "Swinub", "Snorunt", "Mudbray", "Dwebble", "Natu", "Snover", "Krabby", "Wooper", "Corphish", "Nincada", "Klink", "Combee", "Bronzor", "Ralts", "Cherubi", "Tympole", "Duskull", "Machop", "Gastly", "Magikarp", "Goldeen", "Shellder", "Feebass", "Diglett", "Drilbur", "Roggenrola", "Timburr", "Woobat", "Meowth", "Cutiefly", "Pichu", "Eevee", "Wynaut", "Croagunk", "Scraggy", "Shellos", "Wimpod", "Salndit", "Bonsly", "Cleffa", "Togepi", "Rhyhorn", "Gothita", "Solosis", "Karrblast", "Shelmet", "Cubchoo", "Litwick", "Riolu", "Helioptile", "Trapinch", "Bergmite", "Mime Jr", "Charmander", "Larvitar", "Goomy"
+    ]
 }
