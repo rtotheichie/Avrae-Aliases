@@ -6,7 +6,7 @@ nature = vroll('1d20')
 nature_table = load_json(get_gvar("d8f15aca-b785-4a65-801e-ee2a27b93d6a"))
 starter_table = load_json(get_gvar("d3890ca2-bcf0-4833-a44b-9e4f7d2b9324"))
 region = args[0] if args else character().race
-region = "Kanto" if "kan" in region.lower() else "Johto" if "jo" in region.lower() else "Sinnoh" if "si" in region.lower() else "Hoenn" if "ho" in region.lower() else "Unova" if "uno" in region.lower() else "Alola" if "alol" in region.lower() else "Kalos" if "kal" in region.lower() else ["Kanto", "Johto", "Sinnoh", "Hoenn", "Kalos", "Unova", "Alola"][randint(7)-1]
+region = "Kanto" if "kan" in region.lower() else "Johto" if "jo" in region.lower() else "Sinnoh" if "si" in region.lower() else "Hoenn" if "ho" in region.lower() else "Unova" if "uno" in region.lower() else "Alola" if "alol" in region.lower() else "Kalos" if "kal" in region.lower() else "Galar" if "gal" in region.lower() else err("You must specify your race on your sheet before using this alias!")
 starter = starter_table[region][randint(len(starter_table[region]))-1]
 out = []
 out.append(f'-title "{name} receives a {starter} for their Nuzlocke run!"')
