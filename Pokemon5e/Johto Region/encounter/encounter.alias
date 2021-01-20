@@ -27,7 +27,7 @@ if npc:
 night = 'Night' if args.get('night') or not day else ''
 shiny_rate = args.last('shiny', type_=int) or int(get_svar("ShinyRate", 5))
 shiny_roll = vroll('1d100')
-gender_roll = vroll('1d2') if server == 'Johto' else vroll('1d100')
+gender_roll = vroll('1d100')
 ability_roll = vroll('1d2')
 nature_roll = vroll('1d20')
 route_choice = "Flip" if flip else "Routes" if route else "Caves"
