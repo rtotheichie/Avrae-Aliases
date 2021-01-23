@@ -1,0 +1,23 @@
+embed <drac2>
+if not TrainerLevel:
+    return err("This alias is meant for characters with the Trainer class.  Please set your class on your sheet as Trainer and `!update` to use this alias.", pm_user=False)
+subclass = get('subclass', '')
+race = get('race', character().race)
+args = argparse(&ARGS&)
+out = []
+if not &ARGS&:
+    out.append(f'-title "{name} checks their Pokémon Trainer abilities"')
+    trainer_features = []
+    if level >= 13:
+        trainer_features.append("**Pokémon Tracker** - `tracker`")
+        trainer_features.append("At level 13, you have already spent countless hours in the wild, searching for Pokémon high and low. Once per long rest, you may make a DC 15 WIS check to search for Pokémon in the nearby area. On a success, your DM must tell you what wild Pokémon can be found nearby. On a critical success, a Pokémon of your choice from the DM's list appears in the next encounter.")
+    if level == 20:
+        trainer_features.append("**Master Trainer** - `master`")
+        trainer_features.append("At level 20, your Pokémon are at peak fighting performance. When you or your Pokémon fail a saving throw, you may choose to succeed instead. This feature can be used twice per long rest.")
+    desc = []
+    desc.append(f"The following features may be used with `{ctx.prefix}{ctx.alias} <feature name>`.")
+    desc.append(trainer_features)
+    desc = "\n".join(desc)
+    out.append(f'-desc "{desc}"')
+    return " ".join(out)
+</drac2>
