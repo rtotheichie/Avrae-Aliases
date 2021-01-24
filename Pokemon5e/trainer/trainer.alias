@@ -5,6 +5,7 @@ subclass = get('subclass', '')
 race = get('race', character().race)
 args = argparse(&ARGS&)
 out = []
+n = '\n'
 if not &ARGS&:
     out.append(f'-title "{name} checks their Pokémon Trainer abilities"')
     trainer_features = []
@@ -14,10 +15,6 @@ if not &ARGS&:
     if level == 20:
         trainer_features.append("**Master Trainer** - `master`")
         trainer_features.append("At level 20, your Pokémon are at peak fighting performance. When you or your Pokémon fail a saving throw, you may choose to succeed instead. This feature can be used twice per long rest.")
-    desc = []
-    desc.append(f"The following features may be used with `{ctx.prefix}{ctx.alias} <feature name>`.")
-    desc.append(trainer_features)
-    desc = "\n".join(desc)
-    out.append(f'-desc "{desc}"')
+    out.append(f'''-desc "The following features may be used with `{ctx.prefix}{ctx.alias} <feature name>`.{n}{n}{(n).join(trainer_features)}"''')
     return " ".join(out)
 </drac2>
