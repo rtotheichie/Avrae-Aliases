@@ -1939,7 +1939,7 @@
             "cantripScale": null
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+DMO"
+          "attackBonus": "ATTACK"
         }, {
           "type": "attack",
           "hit": [{
@@ -1950,7 +1950,7 @@
             "cantripScale": null
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+DMO"
+          "attackBonus": "ATTACK"
         }, {
           "type": "attack",
           "hit": [{
@@ -1961,7 +1961,7 @@
             "cantripScale": null
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+DMO"
+          "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
