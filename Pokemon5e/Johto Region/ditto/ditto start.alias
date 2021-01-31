@@ -20,5 +20,6 @@ out.append('-title "Ditto\'s Dynamic Doppelgängers!"')
 out.append(f'-desc "{name} bets {bet} Credits and hopes to win big!"')
 out.append(f'-f "Match as many pairs as possible in five turns!|Four rows of four cards each, numbered 1-16, are dealt face down in front of you.\nUse `{ctx.prefix}{ctx.alias} # #` to flip over two cards.\nKeep up with which ones you have already flipped. Good luck!"')
 return " ".join(out)
+character().set_cvar("DDDBet", bet)
 </drac2>
 -thumb {{image}} -color {{color}}
