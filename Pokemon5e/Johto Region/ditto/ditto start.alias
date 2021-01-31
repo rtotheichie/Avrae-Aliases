@@ -10,7 +10,7 @@ if coins[1].get(credit) < bet:
 else:
     coins[1].update({credit:coins[1][credit] - bet})
     set_cvar("bags", dump_json(bag))
-cards = ["Bulbasaur","Squirtle","Charmander","Chikorita","Cyndaquil","Totodile","Pikachu","Eevee","Bulbasaur","Squirtle","Charmander","Chikorita","Cyndaquil","Totodile","Pikachu","Eevee"]
+cards = ["<:Goomy:630099254228287488>","<:pikasurprise:630099253988950016>","<:Spr_3r_059:629784975541141524>","<:mudthink:630099253808857145>","<:pichu:630099253322317845>","<:Hooh:768672497192402945>","<:coold:630098663276019793>","<:403Shinx_XY_anime:629786246243287080>","<:Goomy:630099254228287488>","<:pikasurprise:630099253988950016>","<:Spr_3r_059:629784975541141524>","<:mudthink:630099253808857145>","<:pichu:630099253322317845>","<:Hooh:768672497192402945>","<:coold:630098663276019793>","<:403Shinx_XY_anime:629786246243287080>"]
 shuffled = []
 for x in range(len(cards)):
     newcard = cards.pop(randint(len(cards)))
