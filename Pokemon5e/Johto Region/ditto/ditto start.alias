@@ -1,0 +1,25 @@
+embed <drac2>
+out = []
+args = &ARGS&
+bet = 5 if not args else int(args[0]) if args[0].isdigit() else err("You can only bet credits in whole numbers.")
+bag = load_json(bags)
+coins = [i for i in bag if ('Wallet' in i[0])][0]
+credit = 'Credit'
+if coins[1].get(credit) < bet:
+    return err("You don't have enough Credits to cover the bet!")
+else:
+    coins[1].update({credit:coins[1][credit] - bet})
+    set_cvar("bags", dump_json(bag))
+cards = ["Bulbasaur","Squirtle","Charmander","Chikorita","Cyndaquil","Totodile","Pikachu","Eevee","Bulbasaur","Squirtle","Charmander","Chikorita","Cyndaquil","Totodile","Pikachu","Eevee"]
+shuffled = []
+for x in range(len(cards)):
+    newcard = cards.pop(randint(len(cards)))
+    shuffled.append(newcard)
+character().set_cvar("DDDcards", shuffled)
+out.append('-title "Ditto\'s Dynamic Doppelgängers!"')
+out.append(f'-desc "{name} bets {bet} Credits and hopes to win big!"')
+out.append(f'-f "Match as many pairs as possible in five turns!|Four rows of four cards each, numbered 1-16, are dealt face down in front of you.\nUse `{ctx.prefix}{ctx.alias} # #` to flip over two cards.\nKeep up with which ones you have already flipped. Good luck!"')
+return " ".join(out)
+character().set_cvar("DDDBet", bet)
+</drac2>
+-thumb {{image}} -color {{color}}
