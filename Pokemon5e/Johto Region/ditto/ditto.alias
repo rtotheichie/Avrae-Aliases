@@ -28,7 +28,7 @@ if firstcard == secondcard:
         out.append('-f "You already matched that pair!"')
 out.append(f'-f "You have found **{matches} matches** and have **{5-turncount} turns** remaning."')
 if turncount == 5:
-    payouts = [0, 0.5, 1, 3, 10, 20]
+    payouts = [0, 0.5, 1, 2, 4, 10]
     payout = int(get("DDDBet", 5)) * payouts[int(get("DDDmatches",0))]
     out.append(f'-f "The game is over! You found {matches} matches and earned {int(payout)} Credits!"')
     character().delete_cvar("DDDmatches")
