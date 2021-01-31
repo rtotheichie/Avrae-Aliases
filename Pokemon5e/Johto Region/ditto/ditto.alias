@@ -14,7 +14,7 @@ turncount = int(get("DDDturn", 0)) + 1
 firstcard = cards[int(args[0])-1]
 secondcard = cards[int(args[1])-1]
 out.append('-title "Ditto\'s Dynamic Doppelgängers!"')
-out.append(f'-desc "You uncovered a {firstcard} and a {secondcard}!"')
+out.append(f'-desc "You uncovered a **{firstcard}** and a **{secondcard}**!"')
 if firstcard == secondcard:
     matched = load_json(get("DDDmatched", []))
     if not firstcard in matched:
@@ -26,7 +26,7 @@ if firstcard == secondcard:
         turncount += -1
     else:
         out.append('-f "You already matched that pair!"')
-out.append(f'-f "You have found {matches} matches and have {5-turncount} turns remaning."')
+out.append(f'-f "You have found **{matches} matches** and have **{5-turncount} turns** remaning."')
 if turncount == 5:
     payouts = [0, 0.5, 1, 3, 10, 20]
     payout = int(get("DDDBet", 5)) * payouts[int(get("DDDmatches",0))]
