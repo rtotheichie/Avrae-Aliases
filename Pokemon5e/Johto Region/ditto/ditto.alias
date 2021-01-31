@@ -23,9 +23,10 @@ if firstcard == secondcard:
         character().set_cvar("DDDmatches", matches)
         matched.append(firstcard)
         character().set_cvar("DDDmatched", dump_json(matched))
+        turncount += -1
     else:
         out.append('-f "You already matched that pair!"')
-out.append(f'-f "You have found {matches} matches in {turncount} turns."')
+out.append(f'-f "You have found {matches} matches and have {5-turncount} turns remaning."')
 if turncount == 5:
     payouts = [0, 0.5, 1, 3, 10, 20]
     payout = int(get("DDDBet", 5)) * payouts[int(get("DDDmatches",0))]
@@ -40,6 +41,7 @@ if turncount == 5:
     credit = 'Credit'
     coins[1].update({credit:coins[1][credit] + int(payout)})
     set_cvar("bags", dump_json(bag))
+    out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits (+{int(payout)})"''')
 else:
     character().set_cvar("DDDturn", turncount)
 return " ".join(out)
