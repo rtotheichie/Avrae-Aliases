@@ -26,7 +26,7 @@ if firstcard == secondcard:
         turncount += -1
     else:
         out.append('-f "You already matched that pair!"')
-out.append(f'-f "You have found **{matches} matches** and have **{5-turncount} turns** remaining."')
+out.append(f'-f "You have found **{matches} matches** and have **{4-turncount} turns** remaining."')
 if turncount == 4 or matches == 8:
     payouts = load_json(get_svar("payouts","[0, 0.25, 0.5, 2, 5, 7.5, 10, 15, 20]"))
     payout = int(get("DDDBet", 5)) * payouts[int(get("DDDmatches",0))]
