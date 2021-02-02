@@ -46,6 +46,7 @@ if not help:
     if land and not npc and not land in table:
         if not args.get('land'):
             water = "Water"
+            land = ""
         else: 
             err("That area doesn't have land.")
     if water and not npc and not water in table:
