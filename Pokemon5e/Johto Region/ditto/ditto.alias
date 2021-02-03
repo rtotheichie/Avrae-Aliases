@@ -9,6 +9,8 @@ if len(args)<2:
     return err("You didn't pick enough cards")
 if args[0] == args[1]:
     return err("You picked the same card for both choices")
+if not 0 < int(args[0]) <= 16 or not 0 < int(args[1]) <= 16:
+    return err("You told it to pick a card that doesn't exist.")
 character().set_cvar_nx("DDDturn", 0)
 turncount = int(get("DDDturn", 0)) + 1
 firstcard = cards[int(args[0])-1]
