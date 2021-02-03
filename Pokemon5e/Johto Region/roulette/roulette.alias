@@ -5,6 +5,7 @@ if not args:
     out.append('-title "Rowlet\'s Rockin\' Roulette!"')
     out.append(f'-desc "Use `{ctx.prefix}{ctx.alias} # <type>` To set your `#` amount to bet and the type of bet you want to make (consult the below table)."')
     out.append('-f "Available Bets:|`low` - 1-18 **2xBet**\n`high` - 19-36 **2xBet**\n`even` - Even Numbers **2xBet**\n`odd` - Odd Numbers **2xBet**\n`red` - Red Pockets **2xBet**\n`black` - Black Pockets **2xBet**\n`1dozen` - 1st 12 **3xBet**\n`2dozen` - 2nd 12 **3xBet**\n`3dozen` - 3rd 12 **3xBet**\n`1column` - 1st Column **2xBet**\n`2column` - 2nd Column **2xBet**\n`3column` - 3rd Column **2xBet**\n`basket` Basket (0,00,1,2,3) **6xBet**\n`#-#-#-#` - Corner (Any Block of Four Adjoining Numbers) **8xBet**\n`#-#-#` - Street (Any Three Horizontal Numbers) **11xBet**\n`#-#` - Split (Any Two Adjoining Numbers) **17xBet**\n`row` - 0 or 00 **17xBet**\n`#` - Straight Up (Any Single #) **36xBet**"')
+    out.append('-thumb "http://68.media.tumblr.com/626047232a819d31903c2914772b8a14/tumblr_ojo8lk0W7l1vt418do1_540.gif"')
 elif len(args) <2:
     err("You must specify an amount to bet and a bet type.")
 else:
@@ -111,9 +112,9 @@ else:
         coins[1].update({credit:coins[1][credit] - int(bet_amount)})
         set_cvar("bags", dump_json(bag))
         out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits (-{int(bet_amount)})"''')
-
+    out.append(f'-thumb {image}')
 
 return " ".join(out)
 </drac2>
 -footer "Developed by @RtotheIchie#6193"
--image "https://images-ext-1.discordapp.net/external/VElf2CdW8D30QLgfc3LC6tcSQgIyaKEfrCBhqw88g3U/https/www.casinoencyclopedia.com/wp-content/uploads/2019/06/American-Roulette-Table-game.gif" -thumb {{image}} -color {{color}}
+-image "https://images-ext-1.discordapp.net/external/VElf2CdW8D30QLgfc3LC6tcSQgIyaKEfrCBhqw88g3U/https/www.casinoencyclopedia.com/wp-content/uploads/2019/06/American-Roulette-Table-game.gif" -color {{color}}
