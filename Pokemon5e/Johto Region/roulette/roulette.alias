@@ -2,7 +2,7 @@ embed <drac2>
 args = &ARGS&
 out = []
 if not args:
-    out.append('-title "Place your bets and watch where the ball lands!"')
+    out.append('-title "Rowlet\'s Rockin\' Roulette!"')
     out.append(f'-desc "Use `{ctx.prefix}{ctx.alias} # <type>` To set your `#` amount to bet and the type of bet you want to make (consult the below table)."')
     out.append('-f "Available Bets:|`low` - 1-18 **2xBet**\n`high` - 19-36 **2xBet**\n`even` - Even Numbers **2xBet**\n`odd` - Odd Numbers **2xBet**\n`red` - Red Pockets **2xBet**\n`black` - Black Pockets **2xBet**\n`1dozen` - 1st 12 **3xBet**\n`2dozen` - 2nd 12 **3xBet**\n`3dozen` - 3rd 12 **3xBet**\n`1column` - 1st Column **2xBet**\n`2column` - 2nd Column **2xBet**\n`3column` - 3rd Column **2xBet**\n`basket` Basket (0,00,1,2,3) **6xBet**\n`#-#-#-#` - Corner (Any Block of Four Adjoining Numbers) **8xBet**\n`#-#-#` - Street (Any Three Horizontal Numbers) **11xBet**\n`#-#` - Split (Any Two Adjoining Numbers) **17xBet**\n`row` - 0 or 00 **17xBet**\n`#` - Straight Up (Any Single #) **36xBet**"')
 elif len(args) <2:
