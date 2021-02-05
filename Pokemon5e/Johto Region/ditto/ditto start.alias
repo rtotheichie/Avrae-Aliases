@@ -1,4 +1,6 @@
 embed <drac2>
+if get("DDDbet",""):
+    err(f'{name} still has a game they need to finish!')
 out = []
 args = &ARGS&
 bet = 5 if not args else int(args[0]) if args[0].isdigit() else err("You can only bet credits in whole numbers.")
