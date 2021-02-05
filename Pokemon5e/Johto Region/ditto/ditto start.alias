@@ -1,5 +1,5 @@
 embed <drac2>
-if get("DDDbet",""):
+if get("DDDBet",""):
     err(f'{name} still has a game they need to finish!')
 out = []
 args = &ARGS&
