@@ -877,7 +877,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You fake out a creature before you strike. Make a melee attack against a target, dealing 1d6 + MOVE normal damage on a hit. If an opponent attempts to use a Protect or Detect reaction against the damage, it fails."
+        "text": "You fake out a creature before you strike. Make a melee attack against a target, dealing 1d10 + MOVE normal damage on a hit. If an opponent attempts to use a Protect or Detect reaction against the damage, it fails."
       }],
       "_v": 2,
       "proper": false,
@@ -885,12 +885,12 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d6",
-      "5": "1d10",
-      "10": "2d8",
-      "17": "5d4"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
-    "PP": 5
+    "PP": 10
   },
   "Feint Attack": {
     "code": {
