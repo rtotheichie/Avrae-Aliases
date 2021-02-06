@@ -1850,30 +1850,14 @@
     "code": {
       "name": "Foresight",
       "automation": [{
-        "type": "target",
-        "target": "all",
-        "effects": [{
-          "type": "save",
-          "stat": "wis",
-          "fail": [{
-            "type": "ieffect",
-            "name": "Foresight (attacks against get +2 to hit)",
-            "duration": "10",
-            "effects": "",
-            "end": true
-          }],
-          "success": [],
-          "dc": "{8+proficiencyBonus+WMO}"
-        }]
-      }, {
         "type": "text",
-        "text": "Force a creature in range to make a WIS saving throw against your Move DC. On a fail, add +2 to all attack rolls you make against the opponent for the duration. Regardless of the saving throw, for the remainder of combat, any of your fighting or normal moves can hit a\nghost type Pokémon. If you are a ghost type, your ghost moves can now hit normal type Pokémon."
+        "text": "You grant yourself a brief but incredible sixth sense. On the next ghost-, normal-, or fighting-type move you activate, ignore any immunities of the target creature(s) granted by their Pokémon type. If the target’s secondary type gives it vulnerability or resistance to the attack, it follows the secondary type for that effect."
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
-    "PP": 20
+    "PP": 15
   },
   "Forest's Curse": {
     "code": {
@@ -2298,7 +2282,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You summon a gigantic lightning bolt that strikes down from the heavens in a 30 foot circle, centered on a point within range. All creatures caught in the blast must make a DEX save against your Move DC, taking 4d4 + MOVE electric damage on a failure, or half as much on a success. If Fusion Flare was already used this round, double the damage dealt.\n"
+        "text": "You summon a gigantic lightning bolt that strikes down from the heavens in a 30 foot circle, centered on a point within range. All creatures caught in the blast must make a DEX save against your Move DC, taking 4d4 + MOVE electric damage on a failure, or half as much on a success. If Fusion Flare was already used this round, double the damage dealt."
       }],
       "_v": 2,
       "proper": true,
