@@ -498,7 +498,43 @@
     "PP": 10
   },
   "Eruption": {
-    "code": {"name":"Eruption","automation":[{"type":"target","meta":[],"target":"all","effects":[{"type":"roll","meta":[],"dice":"DAMAGE+{max(strengthMod, dexterityMod)}","name":"damage"},{"type":"save","meta":[],"stat":"dex","fail":[{"type":"damage","meta":[],"damage":"{damage} [Fire]"}],"success":[{"type":"damage","meta":[],"damage":"{damage}/2 [Fire]"}],"dc":"8+ATTACK"}]},{"type":"text","meta":[],"text":"You spew hot magma in a 15 foot cone. Any creature caught in the blast must make a DEX saving throw against your Move DC, taking 3d8 + MOVE fire damage on a failure, or half as much on a success. If you are at full health when activating this move, double your STAB bonus when dealing damage."}],"_v":2,"proper":false,"verb":"causes"}, "attack": "proficiencyBonus+max(strengthMod, dexterityMod)",
+    "code": {
+      "name": "Eruption",
+      "automation": [{
+        "type": "target",
+        "meta": [],
+        "target": "all",
+        "effects": [{
+          "type": "roll",
+          "meta": [],
+          "dice": "DAMAGE+{max(strengthMod, dexterityMod)}",
+          "name": "damage"
+        }, {
+          "type": "save",
+          "meta": [],
+          "stat": "dex",
+          "fail": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "{damage} [Fire]"
+          }],
+          "success": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "{damage}/2 [Fire]"
+          }],
+          "dc": "8+ATTACK"
+        }]
+      }, {
+        "type": "text",
+        "meta": [],
+        "text": "You spew hot magma in a 15 foot cone. Any creature caught in the blast must make a DEX saving throw against your Move DC, taking 3d8 + MOVE fire damage on a failure, or half as much on a success. If you are at full health when activating this move, double your STAB bonus when dealing damage."
+      }],
+      "_v": 2,
+      "proper": false,
+      "verb": "causes"
+    },
+    "attack": "proficiencyBonus+max(strengthMod, dexterityMod)",
     "damage": {
       "1": "3d8",
       "5": "5d6",
@@ -1705,16 +1741,17 @@
       "name": "Focus Energy",
       "automation": [{
         "type": "text",
-        "text": "You sacrifice your action to focus in on the energy inside you. For the duration, increase your critical range by 1 (From 20 to 19+ , from 19+ to 18+, etc.). This move is stackable up to a maximum of +5 to the critical hit range (15+)."
+        "text": "You shut your eyes and focus in on the energy inside you before striking. For the duration, increase your critical range by 2 (From 20 to 18+ , from 19+ to 17+, etc.). This move is not stackable."
       }, {
         "type": "target",
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "name": "Focus Energy (Crit rage +1)",
+          "name": "Focus Energy (Crit rage +2)",
           "duration": 10,
           "effects": "",
-          "end": false
+          "end": true,
+          "conc": true
         }]
       }],
       "verb": "uses",
