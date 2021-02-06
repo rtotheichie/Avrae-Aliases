@@ -1914,14 +1914,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE+{max(SMO,WMO)}[Dark]"
+            "damage": "DAMAGE [Dark]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You turn an opponent's own power against it. Make a melee attack roll using your MOVE power. On a hit, the target takes 2d8 + MOVE dark damage using their own MOVE power."
+        "text": "You turn a creature's own power against it. Make a melee attack roll using your MOVE power. On a hit, the target takes an amount of dark damage equal to 2d8 + the target's level."
       }],
       "_v": 2,
       "proper": true,
@@ -1934,7 +1934,7 @@
       "10": "3d10",
       "17": "4d12"
     },
-    "PP": 10
+    "PP": 5
   },
   "Freeze Shock": {
     "code": {
