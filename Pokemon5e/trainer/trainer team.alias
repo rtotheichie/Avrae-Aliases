@@ -1,0 +1,11 @@
+<drac2>
+cc = "We're a Team"
+if cc_exists(cc):
+    if get_cc(cc):
+        mod_cc(cc,-1)
+        return f'embed -title "{name} uses {cc}!" -desc "Your commanding presence is felt by all ally Pokémon on the battlefield. When you reach level 15, you may use a bonus action to speak a commanding phrase. Until the end of your next turn, all allied Pokémon within 60 feet of you have advantage on their attacks. You may use this feature a number of times equal to 1 + your Charisma modifier. This pool resets at each long rest." -f "{cc}|{cc_str(cc)} (-1)"'
+    else:
+        return f'embed -title "{name} tries to use {cc}!" -desc "You must finish a long rest before you can use this ability again." -f "{cc}|{cc_str(cc)}"'
+else:
+    return f'''embed -title "{name} tries to use {cc}!" -desc "You do not have this ability.  If you are a Commander, you can create the appropriate counter with the `!trainerlevel` alias."'''
+</drac2>
