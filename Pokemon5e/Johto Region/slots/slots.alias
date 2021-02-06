@@ -24,7 +24,7 @@ if results[1] > 7 and sum(results) / 3 == results[1] and str(results[0]-results[
     base = 2
     out.append('-f "Diagonal match!|Win twice the payout!|inline"')
     winner = 1
-elif results.count(23) == 3:
+elif results.count(22) == 3:
     match = 3
     base = 500
     out.append(f'-f ":bell:JACKPOT!:bell:|{symbols[results[0]]*3}|inline"')
