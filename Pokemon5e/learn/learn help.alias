@@ -15,7 +15,7 @@ embed
 `liquid` Apply the effects of Liquid Voice to your attack.  This has no way of knowing if your move is sound-based, so make sure you only use it when its appropriate
 `manual` Instead of adding the move automatically, display the code so you can tweak it and add it manually if you desire
 `help` Gets you this message"
--f "Special Notes|`Curse (Ghost)` for the Ghost version of the move. Non-ghost version coming soon :tm:
+-f "Special Notes|`Curse (Ghost)` for the Ghost version of the move. `Curse (Other)` for the non-ghost version.
 `Swords Dance` cannot change the AC bonus on its own; you will need to use `manual` and change it on your own.
 If your move has both an attack roll and a saving throw, `-b` will add to both.  For the time being, the only way around this is to use `manual` and remove the bonus from the saving throw DC."
 -f "Find an issue?|Feel free to report it at [my Github](https://github.com/rtotheichie/Avrae-Aliases/issues)"
