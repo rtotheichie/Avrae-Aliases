@@ -1,0 +1,11 @@
+embed <drac2>
+gvar = load_json(get_gvar("dea37f5d-d3fe-4431-a960-c406209ad38a"))
+out = []
+args = &ARGS&
+for x in gvar:
+    if args[0].title() in x:
+        out.append(f'-title "{x}"')
+        out.append(f'-desc "{gvar[x]}"')
+        break
+return " ".join(out)
+</drac2> -thumb {image} -color {color}
