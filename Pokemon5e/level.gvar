@@ -212,7 +212,7 @@
     "counters": [{
       "name": "Spirit",
       "level": 15,
-      "value": "charismaMod",
+      "value": "wisdomMod",
       "modifier": 1,
       "reset": "long",
       "display": "bubble",
