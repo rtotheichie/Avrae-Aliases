@@ -1,0 +1,120 @@
+embed <drac2>
+args = &ARGS&
+out = []
+if not args:
+    out.append('-title "Rowlet\'s Rockin\' Roulette!"')
+    out.append(f'-desc "Use `{ctx.prefix}{ctx.alias} # <type>` To set your `#` amount to bet and the type of bet you want to make (consult the below table)."')
+    out.append('-f "Available Bets:|`low` - 1-18 **2xBet**\n`high` - 19-36 **2xBet**\n`even` - Even Numbers **2xBet**\n`odd` - Odd Numbers **2xBet**\n`red` - Red Pockets **2xBet**\n`black` - Black Pockets **2xBet**\n`1dozen` - 1st 12 **3xBet**\n`2dozen` - 2nd 12 **3xBet**\n`3dozen` - 3rd 12 **3xBet**\n`1column` - 1st Column **3xBet**\n`2column` - 2nd Column **3xBet**\n`3column` - 3rd Column **3xBet**\n`basket` Basket (0,00,1,2,3) **6xBet**\n`#-#-#-#` - Corner (Any Block of Four Adjoining Numbers) **8xBet**\n`#-#-#` - Street (Any Three Horizontal Numbers) **11xBet**\n`#-#` - Split (Any Two Adjoining Numbers) **17xBet**\n`row` - 0 or 00 **17xBet**\n`#` - Straight Up (Any Single #) **36xBet**"')
+    out.append('-thumb "http://68.media.tumblr.com/626047232a819d31903c2914772b8a14/tumblr_ojo8lk0W7l1vt418do1_540.gif"')
+elif len(args) <2:
+    err("You must specify an amount to bet and a bet type.")
+else:
+    bet_amount = int(args[0])
+    bag = load_json(bags)
+    coins = [i for i in bag if ('Wallet' in i[0])][0]
+    credit = 'Credit'
+    if coins[1].get(credit) < bet_amount:
+        err("You don't have enough Credits to cover that bet!")
+    bet_type = args[1].lower()
+    pocket = vroll('1d38').total
+    if bet_type.isdigit():
+        bet_type = "straight"
+    elif bet_type.count("-") == 1:
+        bet_type = "split"
+    elif bet_type.count("-") == 2:
+        bet_type = "street"
+    elif bet_type.count("-") == 3:
+        bet_type = "corner"
+    bets = ["low", "high", "even", "odd", "1dozen", "2dozen", "3dozen", "straight", "red", "black", "basket", "1column", "2column", "3column", "row", "split", "street", "corner"]
+    if not bet_type in bets:
+        err(f"{args[1]} is not one of the approved bets.")
+    fancy_bet = "1-18" if bet_type == "low" else "19-36" if bet_type == "high" else "Evens" if bet_type == "even" else "Odds" if bet_type ==  "odd" else "First Dozen" if bet_type == "1dozen" else "Second Dozen" if bet_type == "2dozen" else "Third Dozen" if bet_type == "3dozen" else args[1] if bet_type == "straight" or bet_type == "split" or bet_type == "street" or bet_type == "corner" else "Red" if bet_type == "red" else "Black" if bet_type == "black" else "Basket" if bet_type == "basket" else "First Column" if bet_type == "1column" else "Second Column" if bet_type == "2column" else "Third Column" if bet_type == "3column" else "Row" if bet_type == "row" else ""
+    red = [1, 3, 5, 7, 9, 12, 14, 16, 18, 21, 23, 25, 27, 28, 30, 32, 34, 36]
+    black = [2, 4, 6, 8, 10, 11, 13, 15, 17, 19, 20, 22, 24, 26, 29, 31, 33, 35]
+    green = [37, 38]
+    out.append(f'-title "{name} bets {bet_amount} Credits on {fancy_bet}!"')
+    color = "Red" if pocket in red else "Black" if pocket in black else "Green"
+    if pocket == 37:
+        result = "0"
+    elif pocket == 38:
+        result = "00"
+    else:
+        result = str(pocket)
+    out.append(f'''-desc "The ball :white_circle: landed in {':black_large_square:' if color == "Black" else ':red_square:' if color == "Red" else ':green_square:'} **{result}**!"''')
+    winner = False
+    if bet_type == "low" and pocket <=18:
+        winner = True
+        multi = 1
+    if bet_type == "high" and 19 <= pocket < 37:
+        winner = True
+        multi = 1
+    if bet_type == "even" and pocket%2 == 0 and pocket < 37:
+        winner = True
+        multi = 1
+    if bet_type == "odd" and pocket%2 == 1 and pocket <37:
+        winner = True
+        multi = 1
+    if bet_type == "1dozen" and pocket <= 12:
+        winner = True
+        multi = 2
+    if bet_type == "2dozen" and 13 <= pocket <= 24:
+        winner = True
+        multi = 2
+    if bet_type == "3dozen" and 25 <= pocket <= 36:
+        winner = True
+        multi = 2
+    if bet_type == "straight" and pocket == int(args[1]):
+        winner = True
+        multi = 35
+    if bet_type == "straight" and pocket == 37 and args[1] == "0":
+        winner = True
+        multi = 35
+    if bet_type == "straight" and pocket == 38 and args[1] == "00":
+        winner = True
+        multi = 35
+    if bet_type == "red" and color == "Red":
+        winner = True
+        multi = 1
+    if bet_type == "black"  and color == "Black":
+        winner = True
+        multi = 1
+    if bet_type == "basket" and result in ["0", "00", "1", "2", "3"]:
+        winner = True
+        multi = 6
+    if bet_type == "1column" and pocket in [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34]:
+        winner = True
+        multi = 2
+    if bet_type == "2column" and pocket in [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35]:
+        winner = True
+        multi = 2
+    if bet_type == "3column" and pocket in [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36]:
+        winner = True
+        multi = 2
+    if bet_type == "row" and pocket in [37, 38]:
+        winner = True
+        multi = 17
+    if bet_type == "split" and result in args[1].split("-"):
+        winner = True
+        multi = 17
+    if bet_type == "street" and result in args[1].split("-"):
+        winner = True
+        multi = 11
+    if bet_type == "corner" and result in args[1].split("-"):
+        winner = True
+        multi = 8
+    if winner:
+        out.append(f'-f "Winner!|You won {bet_amount*multi} Credits!"')
+        coins[1].update({credit:coins[1][credit] + int(bet_amount*multi)})
+        set_cvar("bags", dump_json(bag))
+        out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits (+{int(bet_amount*multi)})"''')
+    else:
+        out.append('-f "Better luck next time!"')
+        coins[1].update({credit:coins[1][credit] - int(bet_amount)})
+        set_cvar("bags", dump_json(bag))
+        out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits (-{int(bet_amount)})"''')
+    out.append(f'-thumb {image}')
+
+return " ".join(out)
+</drac2>
+-footer "Developed by @R to the Ichie#6193"
+-image "https://images-ext-1.discordapp.net/external/VElf2CdW8D30QLgfc3LC6tcSQgIyaKEfrCBhqw88g3U/https/www.casinoencyclopedia.com/wp-content/uploads/2019/06/American-Roulette-Table-game.gif" -color {{color}}

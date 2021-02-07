@@ -1939,7 +1939,7 @@
             "cantripScale": null
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+DMO"
+          "attackBonus": "ATTACK"
         }, {
           "type": "attack",
           "hit": [{
@@ -1950,7 +1950,7 @@
             "cantripScale": null
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+DMO"
+          "attackBonus": "ATTACK"
         }, {
           "type": "attack",
           "hit": [{
@@ -1961,7 +1961,7 @@
             "cantripScale": null
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+DMO"
+          "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
@@ -2806,7 +2806,7 @@
             "name": "Confused",
             "duration": "3",
             "effects": "",
-            "end": false
+            "end": true
           }],
           "miss": [],
           "attackBonus": "ATTACK"
@@ -3719,7 +3719,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You burrow underground, disappearing from view before striking from underneath a target. When you activate this move, you burrow underground and remain there until your next turn. During this time, you cannot be the target of any attack. On your next turn, make a melee attack on a creature in range, with advantage, doing ground damage on a successful hit. If the target has Tremorsense, the attack is not rolled with advantage."
+        "text": "You burrow underground, disappearing from view before striking from underneath a target. When you activate this move, you use 10 feet of your movement to burrow underground (ignoring difficult terrain) and remain there until your next turn. During this time, you are immune to the damage and effects of any move. If you have no remaining movement or are grappled/restrained before activating this move, the move fails. On your next turn, you emerge from the ground and make a melee attack on a creature in range, with advantage, doing 2d8 + MOVE ground damage on a successful hit. If the target has Tremorsense, the attack is not rolled with advantage."
       }],
       "_v": 2,
       "proper": true,
@@ -3727,12 +3727,12 @@
     },
     "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
-      "1": "2d6",
-      "5": "2d8",
-      "10": "4d6",
-      "17": "6d6"
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
     },
-    "PP": 5
+    "PP": 10
   },
   "Disable": {
     "code": {

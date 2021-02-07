@@ -502,24 +502,39 @@
       "name": "Eruption",
       "automation": [{
         "type": "target",
+        "meta": [],
         "target": "all",
         "effects": [{
+          "type": "roll",
+          "meta": [],
+          "dice": "DAMAGE+{max(strengthMod, dexterityMod)}",
+          "name": "damage"
+        }, {
           "type": "save",
+          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "DAMAGE+{max(SMO,DMO)}[Fire]"
+            "meta": [],
+            "damage": "{damage} [Fire]"
           }],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+          "success": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "{damage}/2 [Fire]"
+          }],
+          "dc": "8+ATTACK"
         }]
       }, {
         "type": "text",
+        "meta": [],
         "text": "You spew hot magma in a 15 foot cone. Any creature caught in the blast must make a DEX saving throw against your Move DC, taking 3d8 + MOVE fire damage on a failure, or half as much on a success. If you are at full health when activating this move, double your STAB bonus when dealing damage."
       }],
       "_v": 2,
-      "proper": true,
-      "verb": null
+      "proper": false,
+      "verb": "causes"
     },
+    "attack": "proficiencyBonus+max(strengthMod, dexterityMod)",
     "damage": {
       "1": "3d8",
       "5": "5d6",
@@ -862,7 +877,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You fake out a creature before you strike. Make a melee attack against a target, dealing 1d6 + MOVE normal damage on a hit. If an opponent attempts to use a Protect or Detect reaction against the damage, it fails."
+        "text": "You fake out a creature before you strike. Make a melee attack against a target, dealing 1d10 + MOVE normal damage on a hit. If an opponent attempts to use a Protect or Detect reaction against the damage, it fails."
       }],
       "_v": 2,
       "proper": false,
@@ -870,12 +885,12 @@
     },
     "attack": "proficiencyBonus+DMO",
     "damage": {
-      "1": "1d6",
-      "5": "1d10",
-      "10": "2d8",
-      "17": "5d4"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
-    "PP": 5
+    "PP": 10
   },
   "Feint Attack": {
     "code": {
@@ -1093,19 +1108,19 @@
         }]
       }, {
         "type": "text",
-        "text": "Two pillars of raging hot flames explode out from you and leap towards up to two creatures in range. The creature(s) targeted must succeed on a DEX save against your Move DC, taking 3d6 + MOVE fire damage on a failure, or half as much on a success. Creatures that fail the save by more than 5 become burned."
+        "text": "Two pillars of raging hot flames explode out from you and leap towards up to two creatures in range. The creature(s) targeted must succeed on a DEX save against your Move DC, taking 1d8 + MOVE fire damage on a failure, or half as much on a success. Creatures that fail the save by 5 or more become burned."
       }],
       "verb": null,
       "proper": false,
       "_v": 2
     },
     "damage": {
-      "1": "3d6",
-      "5": "3d8",
-      "10": "6d6",
-      "17": "7d8"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
-    "PP": 3
+    "PP": 5
   },
   "Fire Fang": {
     "code": {
@@ -1726,16 +1741,17 @@
       "name": "Focus Energy",
       "automation": [{
         "type": "text",
-        "text": "You sacrifice your action to focus in on the energy inside you. For the duration, increase your critical range by 1 (From 20 to 19+ , from 19+ to 18+, etc.). This move is stackable up to a maximum of +5 to the critical hit range (15+)."
+        "text": "You shut your eyes and focus in on the energy inside you before striking. For the duration, increase your critical range by 2 (From 20 to 18+ , from 19+ to 17+, etc.). This move is not stackable."
       }, {
         "type": "target",
         "target": "self",
         "effects": [{
           "type": "ieffect",
-          "name": "Focus Energy (Crit rage +1)",
+          "name": "Focus Energy (Crit rage +2)",
           "duration": 10,
           "effects": "",
-          "end": false
+          "end": true,
+          "conc": true
         }]
       }],
       "verb": "uses",
@@ -1834,30 +1850,14 @@
     "code": {
       "name": "Foresight",
       "automation": [{
-        "type": "target",
-        "target": "all",
-        "effects": [{
-          "type": "save",
-          "stat": "wis",
-          "fail": [{
-            "type": "ieffect",
-            "name": "Foresight (attacks against get +2 to hit)",
-            "duration": "10",
-            "effects": "",
-            "end": true
-          }],
-          "success": [],
-          "dc": "{8+proficiencyBonus+WMO}"
-        }]
-      }, {
         "type": "text",
-        "text": "Force a creature in range to make a WIS saving throw against your Move DC. On a fail, add +2 to all attack rolls you make against the opponent for the duration. Regardless of the saving throw, for the remainder of combat, any of your fighting or normal moves can hit a\nghost type Pokémon. If you are a ghost type, your ghost moves can now hit normal type Pokémon."
+        "text": "You grant yourself a brief but incredible sixth sense. On the next ghost-, normal-, or fighting-type move you activate, ignore any immunities of the target creature(s) granted by their Pokémon type. If the target’s secondary type gives it vulnerability or resistance to the attack, it follows the secondary type for that effect."
       }],
       "_v": 2,
       "proper": true,
       "verb": null
     },
-    "PP": 20
+    "PP": 15
   },
   "Forest's Curse": {
     "code": {
@@ -1898,14 +1898,14 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE+{max(SMO,WMO)}[Dark]"
+            "damage": "DAMAGE [Dark]"
           }],
           "miss": [],
           "attackBonus": "ATTACK"
         }]
       }, {
         "type": "text",
-        "text": "You turn an opponent's own power against it. Make a melee attack roll using your MOVE power. On a hit, the target takes 2d8 + MOVE dark damage using their own MOVE power."
+        "text": "You turn a creature's own power against it. Make a melee attack roll using your MOVE power. On a hit, the target takes an amount of dark damage equal to 2d8 + the target's level."
       }],
       "_v": 2,
       "proper": true,
@@ -1918,7 +1918,7 @@
       "10": "3d10",
       "17": "4d12"
     },
-    "PP": 10
+    "PP": 5
   },
   "Freeze Shock": {
     "code": {
@@ -2282,7 +2282,7 @@
         }]
       }, {
         "type": "text",
-        "text": "You summon a gigantic lightning bolt that strikes down from the heavens in a 30 foot circle, centered on a point within range. All creatures caught in the blast must make a DEX save against your Move DC, taking 4d4 + MOVE electric damage on a failure, or half as much on a success. If Fusion Flare was already used this round, double the damage dealt.\n"
+        "text": "You summon a gigantic lightning bolt that strikes down from the heavens in a 30 foot circle, centered on a point within range. All creatures caught in the blast must make a DEX save against your Move DC, taking 4d4 + MOVE electric damage on a failure, or half as much on a success. If Fusion Flare was already used this round, double the damage dealt."
       }],
       "_v": 2,
       "proper": true,

@@ -37,7 +37,6 @@ if cave:
             cave = x
             break
 out = []
-
 if not help:
     if not route and not cave:
         err('You must select either a `-route` or a `-cave` in order to use this alias.')
@@ -47,14 +46,13 @@ if not help:
     if land and not npc and not land in table:
         if not args.get('land'):
             water = "Water"
-            break
+            land = ""
         else: 
             err("That area doesn't have land.")
     if water and not npc and not water in table:
         err("That area doesn't have water.")
     if npc and not npc in table:
         err("There are no trainers to fight in that area.")
-
 if help:
     out.append(help_text)
     out.append(f'''-f "Available Routes|{', '.join([x for x in table.Routes])}" ''')

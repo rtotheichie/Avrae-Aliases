@@ -1,0 +1,30 @@
+embed <drac2>
+if get("DDDBet",""):
+    err(f'{name} still has a game they need to finish!')
+out = []
+args = &ARGS&
+bet = 5 if not args else int(args[0]) if args[0].isdigit() else err("You can only bet credits in whole numbers.")
+bag = load_json(bags)
+coins = [i for i in bag if ('Wallet' in i[0])][0]
+credit = 'Credit'
+if coins[1].get(credit) < bet:
+    return err("You don't have enough Credits to cover the bet!")
+else:
+    coins[1].update({credit:coins[1][credit] - bet})
+    set_cvar("bags", dump_json(bag))
+cards = ["<:Goomy:630099254228287488>","<:pikasurprise:630099253988950016>","<:Spr_3r_059:629784975541141524>","<:mudthink:630099253808857145>","<:pichu:630099253322317845>","<:Hooh:768672497192402945>","<:coold:630098663276019793>","<:403Shinx_XY_anime:629786246243287080>","<:Goomy:630099254228287488>","<:pikasurprise:630099253988950016>","<:Spr_3r_059:629784975541141524>","<:mudthink:630099253808857145>","<:pichu:630099253322317845>","<:Hooh:768672497192402945>","<:coold:630098663276019793>","<:403Shinx_XY_anime:629786246243287080>"]
+shuffled = []
+for x in range(len(cards)):
+    newcard = cards.pop(randint(len(cards)))
+    shuffled.append(newcard)
+character().set_cvar("DDDcards", dump_json(shuffled))
+out.append('-title "Ditto\'s Dynamic Doppelgängers!"')
+out.append(f'-desc "{name} bets {bet} Credits and hopes to win big!"')
+out.append(f'-f "Match as many pairs as possible in five turns!|Four rows of four cards each, numbered 1-16, are dealt face down in front of you.\nUse `{ctx.prefix}{ctx.alias} # #` to flip over two cards.\nKeep up with which ones you have already flipped.\nFind a match and get an extra turn! Good luck!"')
+payouts = load_json(get_svar("payouts", [0, 0, 0.5, 1, 2, 3, 4, 5, 10]))
+out.append(f'-f "Possible Payouts:|**0** matches: {int(bet*payouts[0])} Credits\n**1** match: {int(bet*payouts[1])} Credits\n**2** matches: {int(bet*payouts[2])} Credits\n**3** matches: {int(bet*payouts[3])} Credits\n**4** matches: {int(bet*payouts[4])} Credits\n**5** matches: {int(bet*payouts[5])} Credits\n**6** matches: {int(bet*payouts[6])} Credits\n**7** matches: {int(bet*payouts[7])} Credits\n**8** matches: {int(bet*payouts[8])} Credits"')
+character().set_cvar("DDDBet", bet)
+character().set_cvar("DDDmatched", [])
+return " ".join(out)
+</drac2>
+-thumb {{image}} -color {{color}}
