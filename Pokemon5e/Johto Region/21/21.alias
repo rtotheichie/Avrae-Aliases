@@ -30,7 +30,7 @@ if total_value == 21:
     out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits (+{int(bet*1.5)})"''')
 else:
     character().set_cvar("bet21", bet)
-    character().set_cvar("cards21", deck)
+    character().set_cvar("cards21", dump_json(deck))
     character().set_cvar("dealt21", dump_json(dealt))
     out.append(f'-f "What will you do next?|`{ctx.prefix}{ctx.alias} stand` to stand and end the game\n`{ctx.prefix}{ctx.alias} hit` to deal another card."')
 return " ".join(out)
