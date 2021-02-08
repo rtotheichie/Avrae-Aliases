@@ -65,5 +65,8 @@
   "Pokemon5e/trainer/trainer tactician.alias":"601fbec4571eb8fbe472fbf0",
   "Pokemon5e/trainer/trainer team.alias":"601fbef08fbaa3db225556be",
   "Pokemon5e/trainer/trainer tracker.alias":"601fbf28571eb8fbe472fbf1",
-  "Pokemon5e/trainer/trainer versatile.alias":"601fbf62571eb8fbe472fbf2"
+  "Pokemon5e/trainer/trainer versatile.alias":"601fbf62571eb8fbe472fbf2",
+  "Pokemon5e/Johto Region/21/21.alias":"6020e02a8fbaa3db225557da",
+  "Pokemon5e/Johto Region/21/21 hit.alias":"6020e05e8fbaa3db225557db",
+  "Pokemon5e/Johto Region/21/21 stand.alias":"6020e0898fbaa3db225557dc"
 }
