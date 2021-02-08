@@ -35,4 +35,4 @@ else:
     out.append(f'-f "What will you do next?|`{ctx.prefix}{ctx.alias} stand` to stand and end the game\n`{ctx.prefix}{ctx.alias} hit` to deal another card."')
 return " ".join(out)
 </drac2>
--thumb {image} -color {color}
+-thumb {{image}} -color {{color}}
