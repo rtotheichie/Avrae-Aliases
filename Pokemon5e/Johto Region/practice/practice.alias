@@ -6,8 +6,8 @@ if args[0].lower() in "progress":
     for topic in character().cvars:
         if "Progress" in topic:
             practiceTopics.append(topic)
+    topicsProgress = []
     for topic in practiceTopics:
-        topicsProgress = []
         topicsProgress.append(f'{topic.replace("_"," ").replace("Progress", "")} - {get(topic, "0")}/20')
     out.append(f'-title "{name} is working on the following topics:"')
     if not practiceTopics:
