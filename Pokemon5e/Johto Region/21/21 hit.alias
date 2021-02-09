@@ -87,7 +87,7 @@ elif total_value > 21:
     character().delete_cvar("dealt21")
     character().delete_cvar("bet21")
 elif dealer_value > 21 and not total_value > 21:
-    out.append('-f "**The House BUSTS|Win back your bet.**"')
+    out.append('-f "**The House BUSTS**|Win back your bet."')
     bag = load_json(bags)
     coins = [i for i in bag if ('Wallet' in i[0])][0]
     credit = 'Credit'
