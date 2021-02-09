@@ -87,7 +87,7 @@ elif total_value > 21:
     character().delete_cvar("dealt21")
     character().delete_cvar("bet21")
 elif dealer_value > 21 and not total_value > 21:
-    out.append('-f "**The House BUSTS**"')
+    out.append('-f "**The House BUSTS|Win back your bet.**"')
     bag = load_json(bags)
     coins = [i for i in bag if ('Wallet' in i[0])][0]
     credit = 'Credit'
@@ -100,6 +100,7 @@ elif dealer_value > 21 and not total_value > 21:
 else:
     character().set_cvar("cards21", dump_json(deck))
     character().set_cvar("dealt21", dump_json(dealt))
+    character().set_cvar("dealer21", dump_json(dealer))
     out.append(f'-f "What will you do next?|`{ctx.prefix}{ctx.alias} stand` to stand and end the game\n`{ctx.prefix}{ctx.alias} hit` to deal another card."')
 return " ".join(out)
 </drac2>
