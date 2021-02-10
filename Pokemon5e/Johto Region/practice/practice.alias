@@ -1,7 +1,17 @@
 embed <drac2>
 out = []
 args = &ARGS&
-if args[0].lower() in "progress":
+if not args:
+    out.append(f'-title "{name} wants to learn something new."')
+    n="\n"
+    out.append(f'-desc "Use `{ctx.prefix}{ctx.alias}` to learn something new.  Use `-tool`, `-language`, or `-weapon` `<topic>` to have a practice session.  After 20 successful sessions, gain a new proficiency!  Weapon and tool training has a DC of 18, languages have a DC or 9. You can also add `adv`antage if you get it."')
+    tools = load_json(get_svar("practiceTools",get_gvar("0f04ee93-790d-401f-b91d-a42a7f2c7760")))
+    weapons = load_json(get_svar("practiceWeapons",get_gvar("cdf99c0b-fe06-4a6e-a31e-78fb72d1db57")))
+    languages = load_json(get_svar("practiceLanguages", get_gvar("1f0e238c-508a-435a-9e8a-c42e7e5de46f")))
+    out.append(f'-f "__Available `-tool`s__|{n.join(tools)}|inline"')
+    out.append(f'-f "__Available `-weapon`s__|{n.join(weapons)}|inline"')
+    out.append(f'-f "__Available `-language`s__|{n.join(languages)}|inline"')
+elif args[0].lower() in "progress":
     practiceTopics = []
     for topic in character().cvars:
         if "Progress" in topic:
@@ -18,7 +28,7 @@ if args[0].lower() in "progress":
 else:
     args = argparse(args)
     if args.get('tool'):
-        gvar = load_json(get_gvar("0f04ee93-790d-401f-b91d-a42a7f2c7760"))
+        gvar = load_json(get_svar("practiceTools",get_gvar("0f04ee93-790d-401f-b91d-a42a7f2c7760")))
         for tool in gvar:
             if args.last('tool').lower() in tool.lower():
                 topic = tool
@@ -30,8 +40,21 @@ else:
         else:
             check = vroll(f'{character().skills[gvar[topic]].d20(base_adv=args.adv(boolwise=True))}')
         DC = 18
+    if args.get('weapon'):
+        gvar = load_json(get_svar("practiceWeapons",get_gvar("cdf99c0b-fe06-4a6e-a31e-78fb72d1db57")))
+        for weapon in gvar:
+            if args.last('weapon').lower() in weapon.lower():
+                topic = weapon
+                break
+        else:
+            err("That is not one of the available weapons to train with.")
+        if typeof(gvar[topic]) == "SafeList":
+            check = vroll(f'{max(character().skills[gvar[topic][0]].d20(base_adv=args.adv(boolwise=True)), character().skills[gvar[topic][1]].d20(base_adv=args.adv(boolwise=True)))}')
+        else:
+            check = vroll(f'{character().skills[gvar[topic]].d20(base_adv=args.adv(boolwise=True))}')
+        DC = 18
     if args.get('language'):
-        languages = ["Common", "Kantoan", "Johtoan", "Kalosian", "Unovan", "Alolan", "Hoennian", "Galarian", "Draconic"]
+        languages = load_json(get_svar("practiceLanguages", get_gvar("1f0e238c-508a-435a-9e8a-c42e7e5de46f")))
         for lang in languages:
             if args.last('language').lower() in lang.lower():
                 topic = lang
