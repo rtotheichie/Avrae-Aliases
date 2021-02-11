@@ -13,7 +13,7 @@ character().set_cvar_nx("bags", dump_json(newBag))
 bag = load_json(bags)
 berries = ([i for i in bag if ('Berries' in i[0])] or newBag)[0]
 berries in bag or bag.append(berries)
-for result in range(rr):
+for result in range(int(rr)):
     result = table[randint(len(table))]
     berries[1].update({result:berries[1].get(result,0)+2})
     out.append(f'''-f "{name} found 2x {result}|{berries[1][result]}x {result} (+2)"''')
