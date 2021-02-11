@@ -17,18 +17,18 @@ for e in gr.consumables.custom:
 if "egg" in e or "Egg" in e:
     out.append(f'-title "{name} rolls for their daily hatching rate!"')
     desc=["-desc \"When an egg is created, it begins an incubation counter to determine how long it will take for the egg to hatch. Progress against this timer may only be made if the egg is being carried by its trainer through the night or a significant portion of the prior session. A trainer will roll 1d100 at the beginning of each in-campaign day (or session), and reduce the remaining counter by the result. Today, you rolled:"]
-    S=vroll(f"2d100kh1" if breeder else '1d100')
+    S=vroll(f"2d100kh1" if breeder or a.adv else '1d100')
     desc.append(str(S))
     if args.get("inc"):
-        inc=vroll(f"2d20kh1" if breeder else '1d20')
+        inc=vroll(f"2d20kh1" if breeder or a.adv else '1d20')
         incText="** Basic Incubator.** Trainers may reduce Hatch Time by an additional 1d20 when rolling against the incubation counter."
         desc.append(str(inc))
     if args.get("plus"):
-        inc=vroll(f"(2d20,2d20)kh1" if breeder else '2d20')
+        inc=vroll(f"(2d20,2d20)kh1" if breeder or a.adv else '2d20')
         incText="**Plus Incubator.** Trainers may reduce Hatch Time by an additional 2d20 when rolling against the incubation counter."
         desc.append(str(inc))
     if args.get("super"):
-        inc=vroll(f"(3d20,3d20)kh1" if breeder else '3d20')
+        inc=vroll(f"(3d20,3d20)kh1" if breeder or a.adv else '3d20')
         incText="**Super Incubator.** Trainers may reduce Hatch Time by an additional 3d20 when rolling against the incubation counter."
         desc.append(str(inc))
     iT=inc.total if inc else 0
