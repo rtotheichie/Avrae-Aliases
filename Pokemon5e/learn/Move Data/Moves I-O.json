@@ -444,7 +444,7 @@
         "type": "target",
         "meta": [{
           "type": "roll",
-          "dice": "DAMAGE",
+          "dice": "1d4",
           "name": "Infested",
           "hidden": false
         }],
@@ -453,7 +453,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Bug]|\"",
+            "damage": "DAMAGE+CoMO [Bug]",
             "end": true,
             "conc": false
           }],
@@ -487,7 +487,7 @@
           "type": "ieffect",
           "name": "roots",
           "duration": "3",
-          "effects": "-attack \"|-(1d6+{CoMO})| The Pokemon absorbs energy with its roots\"",
+          "effects": "-attack \"|-(DAMAGE+{CoMO})| The Pokemon absorbs energy with its roots\"",
           "end": false
         }]
       }, {
@@ -497,6 +497,12 @@
       "verb": "gains health with",
       "proper": true,
       "_v": 2
+    },
+    "damage": {
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 10
   },
@@ -1177,7 +1183,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "DAMAGE[Ghost]",
+            "damage": "DAMAGE+{max(DMO,WMO)} [Ghost]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
@@ -1193,12 +1199,12 @@
       "proper": true,
       "_v": 2
     },
-    "attack": "proficiencyBonus+max(WMO,IMO)",
+    "attack": "proficiencyBonus+max(WMO,DMO)",
     "damage": {
-      "1": "1d6+{max(WMO,IMO)}",
-      "5": "1d10+{max(WMO,IMO)}",
-      "10": "2d8+{max(WMO,IMO)}",
-      "17": "5d4+{max(WMO,IMO)}"
+      "1": "1d6",
+      "5": "1d10",
+      "10": "2d8",
+      "17": "5d4"
     },
     "PP": 15
   },
@@ -1718,35 +1724,44 @@
       "name": "Magnitude",
       "automation": [{
         "type": "text",
-        "text": "You shake the ground with an earth-shattering quake. All creatures in range must make a DEX save against your Move DC, taking half damage on a success and full damage on a fail."
+        "meta": [],
+        "text": "You shake the ground with an earth-shattering quake. All creatures in range must make a DEX save against your Move DC, taking half damage on a success and full damage on a fail. Creatures in range that are burrowed or in the invulnerable stage of Dig take double damage from this move. Roll a d100 on the table below to determine damage. Raised creatures are immune to the effects and damage of this move.\n\n| d100 | Damage |\n| 01-05 | 1d4+MOVE |\n| 06-15 | 1d8+MOVE |\n| 16-35 | 1d10+MOVE |\n| 36-65 | 1d12+MOVE |\n| 66-85 | 2d6+MOVE |\n| 86-95 | 2d8+MOVE |\n| 96-100 | 2d12+MOVE |"
       }, {
         "type": "target",
         "meta": [{
           "type": "roll",
+          "meta": [],
           "dice": "1d20",
           "name": "Power",
           "hidden": true
         }],
         "target": "all",
         "effects": [{
+          "type": "variable",
+          "meta": [],
+          "name": "multiplier",
+          "value": "1 if level<5 else 2 if level<10 else 3 if level<17 else 4"
+        }, {
           "type": "save",
+          "meta": [],
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "{{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{SMO} [Ground]",
+            "meta": [],
+            "damage": "{multiplier}*{{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{SMO} [Ground]",
             "overheal": false
           }],
           "success": [{
             "type": "damage",
-            "damage": "({{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{SMO})/2 [Ground]",
+            "meta": [],
+            "damage": "{multiplier}*({{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{SMO})/2 [Ground]",
             "overheal": false
           }],
           "dc": "{8+ATTACK}"
         }]
       }],
-      "verb": null,
-      "proper": true,
-      "_v": 2
+      "_v": 2,
+      "proper": true
     },
     "attack": "proficiencyBonus+SMO",
     "PP": 5

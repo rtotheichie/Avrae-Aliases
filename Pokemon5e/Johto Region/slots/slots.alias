@@ -1,0 +1,73 @@
+embed <drac2>
+symbols = ["<:fire:630099253443821568>","<:grass:630099253485895700>","<:electric:630098855009976399>","<:fairy:630098901352841217>","<:dragon:630098822684737537>","<:dark:630098756448026624>","<:fighting:630099253339095110>","<:normal:630099253611462685>","<:metal:630099253091500033>","<:psychic:630099253636628500>","<:water:630099253733097515>","<:Pokeball:637433317935022080>","<:GreatBall:637433317867782166>","<:DiveBall:637434851628154902>","<:DuskBall:637434851670360064>","<:HealBall:637434851435347982>","<:PremierBall:637434851812966411>","<:QuickBall:637434851531948034>","<:RepeatBall:637434851838132240>","<:TimerBall:637434851708108831>","<:SafariBall:637433317901336589>","<:UltraBall:637433317985222658>","<:GoldenSalamence:630154899706871809>","<:MasterBall:637433317897273354>"]
+args = &ARGS&
+if args:
+    if args[0].isdigit():
+        cost = int(args[0])
+    else:
+        cost = 5
+else:
+    cost = 5
+bet = cost//5
+cheat = 'cheat' in args or ''
+jackpot = cheat and 'jackpot' in args
+rolls = [vroll("23" if jackpot else "1d3+20" if cheat else "1d23") for x in range(3)]
+results = [x.total-1 for x in rolls]
+out=[]
+match, base = 0, 0
+winner = ''
+new = '\n'
+out.append(f'-title "{name} pulls the lever and takes a spin!"')
+out.append(f'''-desc "{new} {new.join(['  •  '+'  •  '.join([(symbols+symbols)[x+y] for x in results])+'  •  ' for y in [-1, 0, 1]])}"''')
+if results[1] > 7 and sum(results) / 3 == results[1] and str(results[0]-results[2]).strip('-') == '2':
+    match = results[2] if results[2]>results[0] else 0
+    base = 2
+    out.append('-f "Diagonal match!|Win twice the payout!|inline"')
+    winner = 1
+elif results.count(22) == 3:
+    match = 3
+    base = 500
+    out.append(f'-f ":bell:JACKPOT!:bell:|{symbols[results[0]]*3}|inline"')
+    winner = 1
+if not winner:
+    for x in range(7,23):
+        if results.count(x)==3:
+            out.append(f'-f "Three of a kind!|{symbols[results[0]]} x3|inline"')
+            match = x
+            base = 10
+            winner = 1
+            break
+if not winner:
+    for x in range(12,23):
+        if results.count(x)==2:
+            out.append(f'-f "One Pair|{symbols[results[0]]} x2|inline"')
+            match = x
+            base = 1
+            winner = 1
+            break
+if not winner:
+    out.append('-f "Better luck next time!"')
+Payout = int((match - 2) * base * bet * float(get_svar('slotsMultiplier', '1')))
+if cheat:
+    out.append(f'-f "{name} is a cheater! No money awarded| Projected Payout: 💰 {Payout} Credits|inline" ')    
+elif '-i' in args:
+    out.append(f'-f "The machine is in test mode.| Projected Payout: 💰 {Payout} Credits|inline" ')
+else:
+    bag = load_json(bags)
+    coins = [i for i in bag if ('Wallet' in i[0])][0]
+    credit = 'Credit'
+    coins[1].update({credit:coins[1].get(credit, 0)})
+    if coins[1].get(credit) >= cost:
+        coins[1].update({credit:coins[1][credit] - cost})
+        coins[1].update({credit:coins[1][credit] + Payout})
+        set_cvar("bags", dump_json(bag))
+        out.append(f'-f "Winnings|💰 {Payout} Credits|inline"')
+        out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits ({'+' if Payout else '-'}{Payout or cost})"''')
+    else:
+        out.append(f'-title "{name} is broke!"')
+        out.append(f'''-desc "You don't have enough Credits to cover that bet!!"''')
+        out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits"''')
+out.append(f'-footer "{ctx.prefix}{ctx.alias} to spin.  Add ## to change your bet (minimum of 5)"')
+out.append('-thumb <image> -color <color>')
+return " ".join(out)
+</drac2>

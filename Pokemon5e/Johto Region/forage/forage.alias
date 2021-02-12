@@ -1,0 +1,23 @@
+embed <drac2>
+table = load_json(get_gvar("461da1e3-e1c9-42e9-ac70-f458a5935780"))
+args = &ARGS&
+rr = argparse(args).last('rr') or 1
+out = []
+ranger = "Ranger" in get("subclass", "None")
+out.append(f'-title "{name} forages for berries!"')
+if ranger:
+    rr = int(rr)*2
+    out.append('-desc "They are really good at foraging thanks to being a Ranger."')
+newBag = [["Berries", {}]]
+character().set_cvar_nx("bags", dump_json(newBag))
+bag = load_json(bags)
+berries = ([i for i in bag if ('Berries' in i[0])] or newBag)[0]
+berries in bag or bag.append(berries)
+for result in range(int(rr)):
+    result = table[randint(len(table))]
+    berries[1].update({result:berries[1].get(result,0)+2})
+    out.append(f'''-f "{name} found 2x {result}|{berries[1][result]}x {result} (+2)"''')
+    set_cvar("bags", dump_json(bag))
+return " ".join(out)
+</drac2>
+-thumb {{image}} -color {{color}}

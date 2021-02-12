@@ -1,0 +1,20 @@
+embed <drac2>
+args = &ARGS&
+gender = vroll('1d100')
+ability = vroll('1d2')
+nature = vroll('1d20')
+nature_table = load_json(get_gvar("d8f15aca-b785-4a65-801e-ee2a27b93d6a"))
+starter_table = load_json(get_gvar("d3890ca2-bcf0-4833-a44b-9e4f7d2b9324"))
+region = args[0] if args else character().race
+region = "Kanto" if "kan" in region.lower() else "Johto" if "jo" in region.lower() else "Sinnoh" if "si" in region.lower() else "Hoenn" if "ho" in region.lower() else "Unova" if "uno" in region.lower() else "Alola" if "alol" in region.lower() else "Kalos" if "kal" in region.lower() else "Galar" if "gal" in region.lower() else err("You must specify your race on your sheet before using this alias!")
+starter1 = starter_table[region].pop(randint(len(starter_table[region]))-1)
+starter2 = starter_table[region].pop(randint(len(starter_table[region]))-1)
+starter3 = starter_table[region].pop(randint(len(starter_table[region]))-1)
+out = []
+out.append(f'-title "{name} gets to pick either a {starter1}, a {starter2}, or a {starter3} for their Nuzlocke run!"')
+out.append(f'-desc "The Pokemon has the following attirbutes:"')
+out.append(f'-f "Gender|{gender.total} (check the PHB: low is male, high is female)"')
+out.append(f'-f "Ability|{"First" if ability.total == 1 else "Second"}"')
+out.append(f'-f "Nature|{nature_table[nature.total-1]}"')
+return " ".join(out)
+</drac2>

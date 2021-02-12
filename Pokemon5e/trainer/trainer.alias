@@ -1,0 +1,67 @@
+embed <drac2>
+if not TrainerLevel:
+    return err("This alias is meant for characters with the Trainer class.  Please set your class on your sheet as Trainer and `!update` to use this alias.", pm_user=False)
+subclass = get('subclass', '')
+race = get('race', character().race)
+args = argparse(&ARGS&)
+out = []
+n = '\n'
+if not &ARGS&:
+    out.append(f'-title "{name} checks their Pokémon Trainer abilities"')
+    trainer_features = []
+    if level >= 13:
+        trainer_features.append("**Pokémon Tracker** - `tracker`")
+    if level == 20:
+        trainer_features.append("**Master Trainer** - `master`")
+    if "Ace Trainer" in subclass:
+        if level >= 5:
+            trainer_features.append("**Battle Master** - `bmaster`")
+    if "Hobbyist" in subclass:
+        if level >= 5:
+            trainer_features.append("**Versatile** - `versatile`")
+    if "Mentor" in subclass:
+        if level >= 5:
+            trainer_features.append("**Pokéchef** - `chef`")
+        if level >= 9:
+            trainer_features.append("**Cheerleader** - `cheerleader`")
+    if "Researcher" in subclass:
+        if level >= 15:
+            trainer_features.append("**Professor** - `professor`")
+    if "Collector" in subclass:
+        if level >= 5:
+            trainer_features.append("**Gotta Catch 'Em All** - `catch`")
+    if "Nurse" in subclass:
+        if level >= 5:
+            trainer_features.append("**Pure Heart** - `pure`")
+        if level >= 15:
+            trainer_features.append("**Joy** - `joy`")
+    if "Commander" in subclass:
+        if level >= 9:
+            trainer_features.append("**Show Me What You've Got** - `show`")
+        if level >= 15:
+            trainer_features.append("**We're a Team** - `team`")
+    if "Grunt" in subclass:
+        trainer_features.append("**Sabotage** - `sabotage`")
+        if level >= 5:
+            trainer_features.append("**Dark Advantage** - `dark`")
+        if level >= 9:
+            trainer_features.append("**Sinister Dodge** - `sinister`")
+        if level >= 15:
+            trainer_features.append("**Copy Meowth** - `meowth`")
+    if "Tactician" in subclass:
+        trainer_features.append("**Tactician** - `tactician`")
+        if level >= 5:
+            trainer_features.append("**Directed Strike** - `strike`")
+        if level >= 9:
+            trainer_features.append("**Raise Your Defenses** - `defense`")
+        if level >= 15:
+            trainer_features.append("**Not This Time** - `notthis`")
+    if "Ranger" in subclass:
+        if level >= 5:
+            trainer_features.append("**Deep Connection** - `connection`")
+    if "Guru" in subclass:
+        if level >= 15:
+            trainer_features.append("**Spirit** - `spirit`")
+    out.append(f'''-desc "The following features may be used with `{ctx.prefix}{ctx.alias} <feature name>`.{n}{n}{(n).join(trainer_features)}"''')
+    return " ".join(out)
+</drac2>

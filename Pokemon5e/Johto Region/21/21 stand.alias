@@ -1,0 +1,104 @@
+embed <drac2>
+bet = int(get("bet21", 5))
+dealt = load_json(get("dealt21", []))
+deck = load_json(get("cards21", []))
+dealer = load_json(get("dealer21", []))
+out = []
+total_value = 0
+for card in dealt:
+    cardvalue = 11 if "A" in card else 2 if "2" in card else 3 if "3" in card else 4 if "4" in card else 5 if "5" in card else 6 if "6" in card else 7 if "7" in card else 8 if "8" in card else 9 if "9" in card else 10
+    total_value += cardvalue
+Ace = ""
+if total_value > 21:
+    for cards in dealt:
+        if "A" in cards:
+            Ace = True
+if Ace:
+    total_value = 0
+    for card in dealt:
+        cardvalue = 1 if "A" in card else 2 if "2" in card else 3 if "3" in card else 4 if "4" in card else 5 if "5" in card else 6 if "6" in card else 7 if "7" in card else 8 if "8" in card else 9 if "9" in card else 10
+        total_value += cardvalue
+out.append(f'''-title "{name} stands - let's see what happens!"''')
+dealer_value = 0
+for card in dealer:
+    cardvalue = 11 if "A" in card else 2 if "2" in card else 3 if "3" in card else 4 if "4" in card else 5 if "5" in card else 6 if "6" in card else 7 if "7" in card else 8 if "8" in card else 9 if "9" in card else 10
+    dealer_value += cardvalue
+Ace = ""
+if dealer_value > 21:
+    for cards in dealer:
+        if "A" in cards:
+            Ace = True
+if Ace:
+    dealer_value = 0
+    for card in dealer:
+        cardvalue = 1 if "A" in card else 2 if "2" in card else 3 if "3" in card else 4 if "4" in card else 5 if "5" in card else 6 if "6" in card else 7 if "7" in card else 8 if "8" in card else 9 if "9" in card else 10
+        dealer_value += cardvalue
+dealerhit = ""
+dealercard = ""
+while dealer_value < 17:
+    dealerhit = True
+    dealercard = deck.pop(randint(len(deck)))
+    dealercard = dealercard.replace("S", ":spades:").replace("H", ":hearts:").replace("C",":clubs:").replace("D",":diamonds:")
+    dealer.append(dealercard)
+    dealer_value = 0
+    for card in dealer:
+        cardvalue = 11 if "A" in card else 2 if "2" in card else 3 if "3" in card else 4 if "4" in card else 5 if "5" in card else 6 if "6" in card else 7 if "7" in card else 8 if "8" in card else 9 if "9" in card else 10
+        dealer_value += cardvalue
+        Ace = ""
+        if dealer_value > 21:
+            for cards in dealer:
+                if "A" in cards:
+                    Ace = True
+        if Ace:
+            dealer_value = 0
+            for card in dealer:
+                cardvalue = 1 if "A" in card else 2 if "2" in card else 3 if "3" in card else 4 if "4" in card else 5 if "5" in card else 6 if "6" in card else 7 if "7" in card else 8 if "8" in card else 9 if "9" in card else 10
+                dealer_value += cardvalue
+
+n = "\n"
+out.append(f'-f "**{n.join(dealt)}**|Total: **{total_value}** {"** - Winner!**" if total_value == 21 and dealer_value != 21 else ""}|inline"')
+out.append(f'-f "**{n.join(dealer)}**|Total: **{dealer_value}** {"** - The House wins!**" if dealer_value == 21 and total_value != 21 else "** - The House Busts**" if dealer_value > 21 else ""}|inline"')
+if total_value == 21 and not dealer_value == 21:
+    bag = load_json(bags)
+    coins = [i for i in bag if ('Wallet' in i[0])][0]
+    credit = 'Credit'
+    coins[1].update({credit:coins[1][credit] + int(bet*1.5)})
+    set_cvar("bags", dump_json(bag))
+    out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits (+{int(bet*1.5)})"''')
+elif total_value > 21:
+    out.append('-f "**BUST!**|Better luck next time!"')
+    character().delete_cvar("cards21")
+    character().delete_cvar("dealt21")
+    character().delete_cvar("bet21")
+elif dealer_value > 21 and not total_value > 21:
+    out.append('-f "**The House BUSTS**|Win back your bet."')
+    bag = load_json(bags)
+    coins = [i for i in bag if ('Wallet' in i[0])][0]
+    credit = 'Credit'
+    coins[1].update({credit:coins[1][credit] + int(bet)})
+    set_cvar("bags", dump_json(bag))
+    out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits (+{int(bet)})"''')
+elif total_value == dealer_value:
+    out.append('-f "**PUSH**"')
+    bag = load_json(bags)
+    coins = [i for i in bag if ('Wallet' in i[0])][0]
+    credit = 'Credit'
+    coins[1].update({credit:coins[1][credit] + int(bet)})
+    set_cvar("bags", dump_json(bag))
+    out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits (+{int(bet)})"''')
+elif total_value > dealer_value:
+    out.append('-f "You beat the House!|Win back your bet."')
+    bag = load_json(bags)
+    coins = [i for i in bag if ('Wallet' in i[0])][0]
+    credit = 'Credit'
+    coins[1].update({credit:coins[1][credit] + int(bet)})
+    set_cvar("bags", dump_json(bag))
+    out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits (+{int(bet)})"''')
+else:
+    out.append('-f "The House wins!|Better luck next time."')
+character().delete_cvar("cards21")
+character().delete_cvar("dealt21")
+character().delete_cvar("bet21")
+return " ".join(out)
+</drac2>
+-thumb {{image}} -color {{color}}

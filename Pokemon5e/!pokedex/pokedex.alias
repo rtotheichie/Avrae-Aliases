@@ -67,11 +67,14 @@ elif str(args[0]).lower() == "add":
     if str(args[1]).lower() == "caught":
         addPKMN = 1
         PKMN = str(" ".join(args[2:])).title()
+        PKMN = PKMN.replace("'D","'d")
     elif str(args[1]).lower() == "seen":
         addPKMN = 2
         PKMN = str(" ".join(args[2:])).title()
+        PKMN = PKMN.replace("'D","'d")
     else:
         PKMN = str(" ".join(args[1:])).title()
+        PKMN = PKMN.replace("'D","'d")
         addPKMN = 1
 elif str(args[0]).lower() == "delete":
     Delete=str(" ".join(args[1:])).title()

@@ -1,0 +1,134 @@
+embed <drac2>
+pokedex = load_json(get('PokedexCaught', []))
+c = character()
+out = []
+if not pokedex:
+    return err("Make sure you have selected your Trainer before running this command.  If you're sure you have selected your Trainer, make sure you have updated your Pokedex.")
+pokedex = len(pokedex)
+if pokedex < 50:
+    return err("You must catch at least 50 Pokemon before you can gain Prestige Rewards.")
+PrestigeLevel = 0
+PrestigeLevels = [50, 75, 100, 125, 150, 175, 200, 225, 250, 300]
+for x in PrestigeLevels:
+    if pokedex > x:
+        PrestigeLevel += 1
+subclass = get('subclass', 0)
+if subclass == 0:
+    return err('You must set your Trainer Path using `!level` before using this command.')
+subclass = load_json(subclass)
+subclass = subclass["TrainerLevel"]
+race = get('race', c.race)
+if race == 0:
+    return err('You must set your Trainer Race using `!setrace` before using this command.')
+out.append(f'-title "{name} is trying to Prestige!"')
+out.append('''-desc "Prestige allows you to go beyond the usual leveling system, obtaining improvements to existing abilities and new ones entirely. Instead of your Prestige Levels being calculated by your highest leveled Pokémon, you level up based off of the number of Pokémon you have caught and registered in your Pokédex. Starting at 50 Pokémon caught you will become Prestige Level 1, and catching more Pokémon will raise your level as shown in the Prestige Trainer Table. Note Prestige Levels do not add to your Character Level. You are still a Level 20 Character, and as such you do not gain anymore hit dice or increase your hit points when you gain a Prestige Level. If you become Prestiged and meet the requirements for a Prestige Level (Example, 200 Pokémon caught for Prestige Level 7) you immediately gain the benefits up to that level."''')
+if PrestigeLevel >= 1:
+    c.create_cc('Pokéslots', 0, 7, None, 'bubble')
+    out.append('''-f "Champion's Privilege|As a Champion of the region you are gifted an additional Pokéslot bringing your party limit up to 7 Pokemon."''')
+    out.append(f'''-f "Pokéslots|{c.cc_str('Pokéslots')}"''')
+if PrestigeLevel >= 2:
+    out.append('''-f "Prestige Ability Score Improvement|Your ability to grow has reached it's peak, allowing your ability score maximum to become 30. When you reach Prestige Level 2, and again at 5, 7, and 9, you can increase one ability score of your choice by 3, or you can increase multiple ability scores of your choice by an amount equaling up to a total of 3. Alternatively can spend two points for a Feat and ignore if it has a stipulation about being unable to increase a score above 20."''')
+if PrestigeLevel >= 3:
+    c.create_cc("Champion's Presence", 0, f'{1+(max(strengthMod, dexterityMod, intelligenceMod, constitutionMod, wisdomMod, charismaMod)//2)}', "long", 'bubble' )
+    out.append('''-f "Champion's Presence|Due to your strength as a Trainer, more Pokémon seem drawn to you as if recognizing you as the key to them getting stronger. Starting at Prestige Level 3, when in an area populated by Pokémon roll an ability check trying to best a DC of 20 using your highest possible stat modifier, if successful you may choose the next Pokémon you encounter native to that route, cave, or wild area, instead of rolling a perception check to find one at random. You can use this ability up to 1 + half your chosen ability score per long rest."''')
+    out.append('-f "Specialization|As you continue your training, you begin to specialize in even more types of Pokémon. At Prestige Level 3 you gain an additional specialization to represent this growth, and gain one more at Prestige Level 8. As usual, specializations can be stacked for an additional +1 bonus to skill checks for each time it is chosen."')
+if PrestigeLevel >= 4:
+    out.append('''-f "Champion's Intuition|Due to your extensive time as a trainer finding Pokémon has become rather easy and it almost feels like you could find them just about anywhere without even trying. Starting at Prestige Level 4, when making an encounter roll, you can choose between using your Perception skill to find a Pokemon or simply roll a d20 with no bonuses instead."''')
+    if "Ace Trainer" in subclass:
+        out.append(f'''-f "Prestige Path ({subclass})|You are a master of battle as such your Pokémon's attacks are the strongest amongst normal Pokémon. All of your Pokémon now have a +2 bonus to their attack and damage rolls, instead of +1."''')
+    if "Hobbyist" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|Through your dabbling in a wide variety of Pokémon, you have found how to draw out their inner strength. At each long rest, you can increase two ability scores of each of your Pokémon by 1. The points reset and can be reassigned at the end of each long rest."')
+    if "Poké Mentor" in subclass:
+        out.append(f'''-f "Prestige Path ({subclass})|You've learned how to preserve research material to get the most use out of it. Your Technical Machines now never break despite how many times they are used."''')
+    if "Researcher" in subclass:
+        out.appent(f'-f "Prestige Path ({subclass})|Due to your knowledge of how to bring the best out of your Pokémon due to your unmatched understanding of them your Pokémon gain expertise in any natural skill they have."')
+    if "Pokémon Collector" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|Your Gotta Catch Them All feature can now be used twice per long rest."')
+        c.create_cc("Gotta Catch ‘Em All", 0, 2, 'long', 'bubble')
+    if "Nurse" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|You gain expertise in the Medicine and Nature skills, in addition your total pool of healing from the Pure Heart feature is now 10 x your level."')
+        c.create_cc("Pure Heart", 0, 200, 'long')
+    if "Type Master" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|The stab increase bonus for your specialized Pokémon increases to +2. If your Pokémon is dual-type and you are specialized in both types, the bonus is now +4."')
+    if "Commander" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|Your Show Me What You Got feature can now be activated twice per short rest."')
+        c.create_cc("Show Me What You've Got", 0, 2, 'short')
+        out.append(f'''-f "Show Me What You've Got|{c.cc_str("Show Me What You've Got")}"''')
+    if "Grunt" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|Your Shadow Point Pool increases by 10, making it now 30."')
+    if "Tactician" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|Your Tactical Point Pool increases by 10, making it now 30."')
+        c.create_cc("Tactical Points", 0, 30, 'long')
+        out.append(f'''-f "Tactical Points|{c.cc_str("Tactical Points")}"''')
+    if "Ranger" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|You gain expertise in the Nature and Survival skills, additionally you may select another terrain for your Natural Explorer feature. If you have expertise in either Nature or Survival, you gain proficiency in another skill you are not proficient in instead."')
+    if "Guru" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|You have become so close to your Pokémon, the line between you has become unclear. You gain expertise in Persuasion, additionally once per long rest, you can perform one move a Pokémon in your party knows."')
+if PrestigeLevel >= 5:
+    out.append('''-f "Prestige Ability Score Improvement|Your ability to grow has reached it's peak, allowing your ability score maximum to become 30. When you reach Prestige Level 2, and again at 5, 7, and 9, you can increase one ability score of your choice by 3, or you can increase multiple ability scores of your choice by an amount equaling up to a total of 3. Alternatively can spend two points for a Feat and ignore if it has a stipulation about being unable to increase a score above 20."''')    
+    if race == "Kantonian":
+        out.append(f'''-f "Prime Example ({race})|You gain another feat and skill of your choice."''')
+    if race == "Johto-Jin":
+        out.append(f'''-f "Prime Example ({race})|Your “Cultural Practitioner” ability can be used 1 + your Wisdom Modifier times per long rest, and the amount of additional hit points gained is always 40."''')
+        c.create_cc('Cultural Practioner', 0, f'{1+wisdomMod}', 'long')
+        out.append(f'''-f "Cultural Practioner|{c.cc_str('Cultural Practioner')}"''')
+    if "Hoennian" in race:
+        out.append(f'''-f "Prime Example ({race})|You may select another option from the racial feature “One With Nature”."''')
+    if race == "Sinnoan":
+        out.append(f'''-f "Prime Example ({race})|Your “Tough Through” racial feature can now be used 1 + your Constitution Modifier times per long rest."''')
+    if race == "Unovan":
+        out.append(f'''-f "Prime Example ({race})|Your “Not So Fast” racial feature can now be used 4 times per long rest."''')
+        c.create_cc('Not So Fast', 0, 4, 'long', 'bubble')
+        out.append(f'''-f "Not So Fast|{c.cc_str('Not So Fast')}"''')
+    if race == "Kalosian":
+        out.append(f'''-f "Prime Example ({race})|Your “Bon Chance” racial feature is now activated any time you have a natural roll of 1 for an attack roll, ability check, or saving throw for you or your Pokémon. You still need to use the new roll."''')
+    if race == "Alolan":
+        out.append(f'''-f "Prime Example ({race})|Your “Pokémon Whisperer” racial feature can now be used 1 + your Wisdom Modifier times per long rest."''')
+        c.create_cc('Pokemon Whisperer', 0, f'{1+wisdomMod}', 'long', 'bubble')
+        out.append(f'''-f "Pokemon Whisperer|{c.cc_str('Pokemon Whisperer')}"''')
+    if race == "Galarian":
+        out.append(f'''-f "Prime Example ({race})|Your “That Didn’t Even Hurt” racial feature can now be used 3 times per long rest."''')
+        c.create_cc("That Didn't Even Hurt", 0, 3, 'long', 'bubble')
+        out.append(f'''-f """That Didn't Even Hurt|{c.cc_str("That Didn't Even Hurt")}"""''')
+if PrestigeLevel >= 6:
+    out.append('''-f "Legendary Trainer|Your Pokémon have stuck with you through thick and thin and while they haven’t grown any stronger their experience facing extremely strong opponents has pushed them far beyond their natural skills. Starting at Prestige Level 6, you can use your Master Trainer feature up to a total of 3 times per long rest."''')
+    c.create_cc('Master Trainer', 0, 3, 'long', 'bubble')
+    out.append(f'''-f "Master Trainer|{c.cc_str('Master Trainer')}"''')
+if PrestigeLevel >= 7:
+    out.append('''-f "Prestige Ability Score Improvement|Your ability to grow has reached it's peak, allowing your ability score maximum to become 30. When you reach Prestige Level 2, and again at 5, 7, and 9, you can increase one ability score of your choice by 3, or you can increase multiple ability scores of your choice by an amount equaling up to a total of 3. Alternatively can spend two points for a Feat and ignore if it has a stipulation about being unable to increase a score above 20."''')
+    out.append('''-f "Critical Capture|Starting at Prestige Level 7, once per long rest you can change the roll of a capture natural roll to a 20 for SR 14 or lower Pokémon."''')
+if PrestigeLevel >= 8:
+    out.append('''-f "Champion's Resolve|Due to your constant push to stand side by side with your Pokémon and emerging victorious to point you have no more contenders. At Prestige Level 8, choose a third saving throw to be proficient in."''')
+if PrestigeLevel >= 9:
+    out.append('''-f "Prestige Ability Score Improvement|Your ability to grow has reached it's peak, allowing your ability score maximum to become 30. When you reach Prestige Level 2, and again at 5, 7, and 9, you can increase one ability score of your choice by 3, or you can increase multiple ability scores of your choice by an amount equaling up to a total of 3. Alternatively can spend two points for a Feat and ignore if it has a stipulation about being unable to increase a score above 20."''')
+    if "Ace Trainer" in subclass:
+        out.append(f'''-f "Prestige Path ({subclass})|Your expertise of calling the shots has helped improve your Pokémons performance in battle. Your Battle Master dice increase in size, from a d6 into a d10."''')
+    if "Hobbyist" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|Your Pokémon see the power you have inside, and refuse to let you down during battle. Your Versatile Skill dice increase in size, from a d6 into a d10."')
+    if "Poké Mentor" in subclass:
+        out.append(f'''-f "Prestige Path ({subclass})|When the going gets tough, you know exactly which words inspire the best in your Pokémon. Your Cheerleader feature now lasts three rounds instead of one."''')
+    if "Researcher" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|Your analytical mind has allowed you to learn the attack patterns of the Pokémon you study. When you use your Professor feature, you and your Pokémon gain the ability to take the dodge action as a bonus action, but only gain the benefits of the dodge action against that Pokémon."')
+    if "Pokémon Collector" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|Your reflexes and practice throwing Pokéballs has made it almost second nature for you. You can now throw a Pokéball as a bonus action."')
+    if "Nurse" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})Any healing move or healing items used by you are twice as effective as they usually due to your mastery of medicine. For example, a Potion recovers 40 hit points instead of 20."')
+    if "Type Master" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|Your Storing Power feature now allows you to select another specialized type for you to resist. This resistance cannot be changed later on, just like the first."')
+    if "Commander" in subclass:
+        out.append(f'''-f "Prestige Path ({subclass})|Your We’re a Team feature can now be activated as a free action on your turn, rather than a bonus action."''')
+    if "Grunt" in subclass:
+        out.append(f'''-f "Prestige Path ({subclass})|Twice per long rest you can decide to cut the cost of one of your main Grunt abilities in half, rounding down, and still reap the benefits of it’s bonuses. For example Dark Advantage costing only 1 Shadow Point."''')
+    if "Tactician" in subclass:
+        out.append(f'''-f "Prestige Path ({subclass})|Twice per long rest you can decide to cut the cost of one of your main Tactician abilities in half, rounding down, and still reap the benefits of it’s bonuses. For example Directed Strike costing only 1 Tactical Point."''')
+    if "Ranger" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|When you have 2 pokemon on the field, both of your active Pokemon half the damage taken from AoE moves. For example, the move Thunder is used you take 1/2 damage on a failed saving throw, and 1/4 damage on a success."')
+    if "Guru" in subclass:
+        out.append(f'-f "Prestige Path ({subclass})|Both you and your Pokémon have developed a spiritual awareness beyond themselves. Through channeling your inner energy, your Pokémon are immune to the confused condition, and gain advantage on all rolls to checks to overcome the sleep condition."')
+if PrestigeLevel == 10:
+    out.append('''-f "Majora's Blessing|Through the trials and tribulations you have overcome, like all champions have done before you, you can feel their energy course through you in combat. Now being a Prestige Trainer of Level 10, you may once per long rest take 1 additional action on your turn in combat with you or one of your Pokémon."''')
+    c.create_cc("Majora's Blessing", 0, 1, 'long', 'bubble')
+out.append('-thumb <image>')
+out.append('-color <color>')
+return " ".join(out)
+</drac2>

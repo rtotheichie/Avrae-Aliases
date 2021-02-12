@@ -1,0 +1,17 @@
+embed <drac2>
+season = get_svar("WeatherSeason",f'{["Summer", "Winter"][randint(2)]}')
+table = load_json(get_gvar("47f44040-5bd2-4a27-903e-771495af4a00"))
+CategoryList = load_json(get_svar("WeatherCategoryList", []))
+out = []
+out.append(f'-title "Rolling for weather for the {ctx.guild.name}!"')
+out.append('-desc "Weather plays a large role in Pokémon 5e. Many Pokémon have abilities that are affected by the surrounding weather or terrain, and weather can impact the power of certain Pokémon types. Be sure to implement weather into your game as much as possible! Each type of move listed in Types Affected can roll its damage rolls twice and take the higher result."')
+for category in CategoryList:
+    weather_roll = vroll('1d100')
+    for x in table[season]:
+        if weather_roll.total <= int(x):
+            result = table[season][x]
+            break
+    out.append(f'''-f "**{category}** -\n{result[0]}|Types Affected:\n{result[1]}|inline"''')
+out.append(f'-footer "{ctx.prefix}{ctx.alias} | Developed by @R to the Ichie#6193"')
+return " ".join(out)
+</drac2>

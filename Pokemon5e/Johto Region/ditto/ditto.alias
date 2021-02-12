@@ -1,0 +1,52 @@
+embed <drac2>
+out = []
+cards = load_json(get("DDDcards", []))
+if not cards:
+    return err(f'You must place your bet first using `{ctx.prefix}{ctx.alias} start`!')
+args = &ARGS&
+matches = int(get("DDDmatches", 0))
+if len(args)<2:
+    return err("You didn't pick enough cards")
+if args[0] == args[1]:
+    return err("You picked the same card for both choices")
+if not 0 < int(args[0]) <= 16 or not 0 < int(args[1]) <= 16:
+    return err("You told it to pick a card that doesn't exist.")
+character().set_cvar_nx("DDDturn", 0)
+turncount = int(get("DDDturn", 0)) + 1
+firstcard = cards[int(args[0])-1]
+secondcard = cards[int(args[1])-1]
+out.append('-title "Ditto\'s Dynamic Doppelgängers!"')
+out.append(f'-desc "You uncovered a {firstcard} and a {secondcard}!"')
+if firstcard == secondcard:
+    matched = load_json(get("DDDmatched", []))
+    if not firstcard in matched:
+        out.append('-f "You got a match!"')
+        matches += 1
+        character().set_cvar("DDDmatches", matches)
+        matched.append(firstcard)
+        character().set_cvar("DDDmatched", dump_json(matched))
+        turncount += -1
+    else:
+        out.append('-f "You already matched that pair!"')
+        turncount += -1
+out.append(f'-f "You have found **{matches} matches** and have **{5-turncount} turns** remaining."')
+if turncount == 5 or matches == 8:
+    payouts = load_json(get_svar("payouts","[0, 0.25, 0.5, 2, 5, 7.5, 10, 15, 20]"))
+    payout = int(get("DDDBet", 5)) * payouts[int(get("DDDmatches",0))]
+    out.append(f'-f "The game is over! You found {matches} matches and earned {int(payout)} Credits!"')
+    character().delete_cvar("DDDmatches")
+    character().delete_cvar("DDDmatched")
+    character().delete_cvar("DDDcards")
+    character().delete_cvar("DDDturn")
+    character().delete_cvar("DDDBet")
+    bag = load_json(bags)
+    coins = [i for i in bag if ('Wallet' in i[0])][0]
+    credit = 'Credit'
+    coins[1].update({credit:coins[1][credit] + int(payout)})
+    set_cvar("bags", dump_json(bag))
+    out.append(f'''-f "{name}'s Wallet|{coins[1][credit]} Credits (+{int(payout)})"''')
+else:
+    character().set_cvar("DDDturn", turncount)
+return " ".join(out)
+</drac2>
+-thumb {{image}} -color {{color}}

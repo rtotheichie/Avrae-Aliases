@@ -1,0 +1,88 @@
+embed <drac2>
+args = argparse(&ARGS&)
+if ctx.channel.name == "Direct Message with R to the Ichie#6193":
+    server = "&1&"
+else:
+    server = "Fiore" if ctx.guild.id==650853166115454996 else "Johto" if ctx.guild.id==592176064214859786 else err("This is designed for use on either the Johto Region or the Fiore server.  It won't do you much good anywhere else.")
+table = load_json(get_gvar("76c49219-fdbf-4d9d-9221-8a9e4ec54ce3")) if server=="Johto" else load_json(get_gvar("5c1e2ea3-f22c-49d9-be8d-60701e1d08c1"))
+nature_list = load_json(get_gvar("d8f15aca-b785-4a65-801e-ee2a27b93d6a"))
+help = not args or args.get('?') or args.get('help')
+help_text = get_gvar("63b96309-7bc9-40ff-bde5-d8308aba0884")
+perception = args.last('per', type_=int)
+crit = args.get('crit')
+route = "Route " + args.last ('route') if args.get('route') else ''
+cave = args.last('cave')
+npc = "NPC" if args.get('npc') or args.get("NPC") else ''
+water = "Water" if args.get('water') else ''
+land = "Land" if args.get('land') or not water else ''
+Time = time() + (int(get_svar('EncounterTimeZone', -6))*3600)
+flip = "Flip" if args.get('flip') or (not args.get('flip') and int((Time//86400)-11)%7) >= 5 else ''
+if flip and (args.get('flip') and int((Time//86400)-11)%7 >=5):
+    flip = ''
+Time = round(Time%86400//3600)
+day = 'Day' if args.get('day') or 7 <= Time <= 19 and not args.get('night') else ''
+if npc:
+    day = 'Day'
+    flip = ''
+night = 'Night' if args.get('night') or not day else ''
+shiny_rate = args.last('shiny', type_=int) or int(get_svar("ShinyRate", 5))
+shiny_roll = vroll('1d100')
+gender_roll = vroll('1d100')
+ability_roll = vroll('1d2')
+nature_roll = vroll('1d20')
+route_choice = "Flip" if flip else "Routes" if route else "Caves"
+if cave:
+    for x in table.Caves:
+        if cave.lower() in x.lower():
+            cave = x
+            break
+out = []
+if not help:
+    if not route and not cave:
+        err('You must select either a `-route` or a `-cave` in order to use this alias.')
+    if not perception and not npc and not crit:
+        err('You must either input the value of the perception roll using `-per ##` or declare a `crit` or `npc`.')
+    table = table[route_choice][route or cave][day or night]
+    if land and not npc and not land in table:
+        if not args.get('land'):
+            water = "Water"
+            land = ""
+        else: 
+            err("That area doesn't have land.")
+    if water and not npc and not water in table:
+        err("That area doesn't have water.")
+    if npc and not npc in table:
+        err("There are no trainers to fight in that area.")
+if help:
+    out.append(help_text)
+    out.append(f'''-f "Available Routes|{', '.join([x for x in table.Routes])}" ''')
+    out.append(f'''-f "Available Caves|{', '.join([x for x in table.Caves])}" ''')
+    out.append('-footer "v. 3.1 Developed by @R to the Ichie#6193. Special thanks to the Carpenters for all the tables you built!"')
+    return " ".join(out)
+    break
+else:
+    if npc:
+        trainer = table[npc][randint(len(table[npc]))]
+        out.append(f'-title "A wild trainer appears {"on" if route else "in"} {route or cave}!"')
+        out.append(f'-desc "The battle will be with **{trainer}**!"')
+    elif crit:
+        result = list(table[land or water].items())
+        out.append(f'-title "A wild {"" if result[-1][1].ra==200 else "male" if gender_roll.total <= result[-1][1].ra else "female"} {result[-1][1].na}, {"" if result[-2][1].ra==200 else "male" if gender_roll.total <= result[-2][1].ra else "female"} {result[-2][1].na}, and {"" if result[-3][1].ra==200 else "male" if gender_roll.total <= result[-3][1].ra else "female"} {result[-3][1].na} appear {"on" if route else "in"} {route or cave}!"')
+        out.append('-desc "The chosen Pokemon will have the following attributes:"')
+        out.append(f'-f "Shiny or Normal ({100 - shiny_rate}% chance)|{"Shiny" if shiny_roll.total < shiny_rate else "Normal"}"')
+        out.append(f'-f "Ability|{"First Ability" if ability_roll.total==1 else "Second Ability (if it has one)"}"')
+        out.append(f'-f "Nature|{nature_list[nature_roll.total-1]}"')
+    else:
+        for x in table[land or water]:
+            if perception <= int(x):
+                result = table[land or water][x]
+                break
+        out.append(f'-title "A wild {result.na} appears {"on" if route else "in"} {route or cave}!"')
+        out.append(f'-desc "The {result.na} will have the following attributes:"')
+        out.append(f'-f "Shiny or Normal ({100 - shiny_rate}% chance)|{"Shiny" if shiny_roll.total < shiny_rate else "Normal"}"')
+        out.append(f'-f "Gender|{"Genderless" if result.ra==200 else "Male" if gender_roll.total<=result.ra else "Female"}"')
+        out.append(f'-f "Ability|{"First Ability" if ability_roll.total==1 else "Second Ability (if it has one)"}"')
+        out.append(f'-f "Nature|{nature_list[nature_roll.total-1]}"')            
+    out.append(f'''-footer "{ctx.prefix}{ctx.alias} {' '.join(&ARGS&)}"''')
+    return " ".join(out)
+</drac2>

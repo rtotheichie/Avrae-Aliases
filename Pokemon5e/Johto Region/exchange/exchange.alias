@@ -1,0 +1,29 @@
+embed <drac2>
+args = &ARGS&
+help = not args or 'help' in args or 'Help' in args or '?' in args
+out = []
+poke = '\u20bd'
+if not help:
+    purchase = int(args[0])
+    cost = purchase * 20
+    bag = load_json(bags)
+    coins = [i for i in bag if ('Wallet' in i[0])][0]
+    credit = 'Credit'
+    coins[1].update({credit:coins[1].get(credit, 0)})
+    if coins[1].get(poke) >= cost:
+        coins[1].update({poke:coins[1][poke] - cost})
+        coins[1].update({credit:coins[1][credit] + purchase})
+        set_cvar("bags", dump_json(bag))
+        out.append(f'-title "{name} is buying some Credits."')
+        out.append(f'-desc "Spending {cost} {poke} to buy {purchase} Credits."')
+        out.append(f'''-f "{name}'s Wallet|{coins[1][poke]} {poke} (-{cost})\n{coins[1][credit]} Credits (+{purchase})"''')
+    else:
+        out.append(f'-title "{name} is broke!"')
+        out.append(f'''-desc "You don't have enough money to buy that many credits!"''')
+        out.append(f'''-f "{name}'s Wallet|{coins[1][poke]} {poke}\n{coins[1][credit]} Credits"''')
+else:
+    out.append(f'-title "{name} needs some help."')
+    out.append(f'-desc "You may purchase 5 Credits for 100 {poke}."')
+out.append(f'-footer "{ctx.prefix}{ctx.alias} # to buy # of Credits."')
+return " ".join(out)
+</drac2>
