@@ -1261,8 +1261,43 @@
     },
     "PP": 10
   },
+  "First Impression": {
+    "attack": "proficiencyBonus+DMO",
+    "code": {
+      "_v": 2,
+      "automation": [{
+        "effects": [{
+          "attackBonus": "proficiencyBonus+dexterityMod",
+          "hit": [{
+            "damage": "2d8+{dexterityMod} [Bug]",
+            "meta": [],
+            "overheal": false,
+            "type": "damage"
+          }],
+          "meta": [],
+          "miss": [],
+          "type": "attack"
+        }],
+        "meta": [],
+        "target": "each",
+        "type": "target"
+      }, {
+        "meta": [],
+        "text": "You make quite the entrance, quickly attacking a creature. This attack can only be used on the first turn that the user has entered combat. Make a melee attack on a creature, doing 2d8 + MOVE bug damage on a hit.",
+        "type": "text"
+      }],
+      "name": "First Impression"
+    },
+    "damage": {
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
+    },
+    "PP": 5
+  },
   "Fissure": {
-    "attack": "proficiencyBonus+max(0,0)",
+    "attack": "proficiencyBonus",
     "code": {
       "_v": 2,
       "automation": [{
