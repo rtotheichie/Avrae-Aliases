@@ -2489,7 +2489,7 @@
       "_v": 2,
       "automation": [{
         "effects": [{
-          "damage": "-(8d6+{CoMO})",
+          "damage": "-(DAMAGE+{CoMO})",
           "type": "damage"
         }],
         "target": "each",
@@ -2501,6 +2501,12 @@
       "name": "Roost",
       "proper": true,
       "verb": "heals with"
+    },
+    "damage":{
+      "1":"2d6",
+      "5":"3d6",
+      "10":"5d6",
+      "17":"8d6"
     },
     "PP": 5
   },
