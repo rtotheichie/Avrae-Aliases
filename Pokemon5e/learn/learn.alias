@@ -24,7 +24,6 @@ else:
     STAB = 0
 if args.get('pixilate'):
     Import_Code = Import_Code.replace('[Normal]','[Fairy]')
-    STAB = STAB*2
 if args.get('refrigerate'):
     Import_Code = Import_Code.replace('[Normal]','[Ice]')
     STAB = STAB*2
