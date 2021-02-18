@@ -1347,14 +1347,14 @@
     "PP": 10
   },
   "Punishment": {
-    "attack": "proficiencyBonus+max(SMO,0)",
+    "attack": "proficiencyBonus+max(SMO,WMO)",
     "code": {
       "_v": 2,
       "automation": [{
         "effects": [{
           "attackBonus": "ATTACK",
           "hit": [{
-            "damage": "DAMAGE[Dark]",
+            "damage": "DAMAGE+{max(SMO,WMO)}[Dark]",
             "type": "damage"
           }],
           "miss": [],
@@ -1368,13 +1368,13 @@
       }],
       "name": "Punishment",
       "proper": false,
-      "verb": "sends out"
+      "verb": "delivers"
     },
     "damage": {
-      "1": "1d10+{max(SMO,0)}",
-      "5": "2d10 + Move+{max(SMO,0)}",
-      "10": "3d10 + Move+{max(SMO,0)}",
-      "17": "4d10 + Move+{max(SMO,0)}"
+      "1": "1d10",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d10"
     },
     "PP": 3
   },
