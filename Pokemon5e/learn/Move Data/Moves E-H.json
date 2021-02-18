@@ -3254,7 +3254,7 @@
         "target": "self",
         "effects": [{
           "type": "damage",
-          "damage": "-(4d4+{CoMO}) [Healing]"
+          "damage": "-(DAMAGE+{CoMO}) [Healing]"
         }]
       }, {
         "type": "text",
@@ -3263,6 +3263,12 @@
       "_v": 2,
       "proper": false,
       "verb": "commands"
+    },
+    "damage": {
+      "1": "4d4",
+      "5": "3d6",
+      "10": "5d6",
+      "17": "8d6"
     },
     "PP": 5
   },
