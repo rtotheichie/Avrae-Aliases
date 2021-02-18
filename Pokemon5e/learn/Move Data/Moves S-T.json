@@ -121,24 +121,40 @@
       "_v": 2,
       "automation": [{
         "effects": [{
-          "attackBonus": "ATTACK",
-          "hit": [{
-            "damage": "DAMAGE[Ground]",
+          "dc": "8+ATTACK",
+          "fail": [{
+            "damage": "{{damage}}+{strengthMod} [Ground]",
+            "meta": [],
             "type": "damage"
           }, {
+            "desc": "- A restrained creature's speed becomes 0, and it can't benefit from any bonus to its speed.\n- Attack rolls against the creature have advantage, and the creature's attack rolls have disadvantage.\n- The creature has disadvantage on Dexterity saving throws.",
             "duration": "-1",
             "effects": "",
             "end": false,
-            "name": "Entombed",
+            "meta": [],
+            "name": "Restrained",
             "type": "ieffect"
           }],
-          "miss": [],
-          "type": "attack"
+          "meta": [],
+          "stat": "str",
+          "success": [{
+            "damage": "({{damage}}+{strengthMod})/2 [Ground]",
+            "meta": [],
+            "type": "damage"
+          }],
+          "type": "save"
+        }, {
+          "dice": "DAMAGE",
+          "meta": [],
+          "name": "damage",
+          "type": "roll"
         }],
-        "target": "each",
+        "meta": [],
+        "target": "all",
         "type": "target"
       }, {
-        "text": "You attempt to summon a wave of sand that surrounds your opponent. Make a ranged attack roll. On a hit, the target takes 1d4 + MOVE ground damage and is grappled and restrained. At the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. While a Pokémon is grappled, you may continue this move, as a bonus action, to do an automatic 1d4 ground damage without having to make an attack roll.",
+        "meta": [],
+        "text": "You attempt to summon a wave of sand that surrounds the target. Force a creature in range to make a STR saving throw against your Move DC, taking 1d10 + MOVE ground damage and becoming restrained on a failure, or half as much without being restrained on a success. If it fails, at the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. While a creature is restrained, you may continue this move, as an action, to deal an automatic 1d10 + MOVE ground damage.",
         "type": "text"
       }],
       "name": "Sand Tomb",
@@ -146,10 +162,10 @@
       "verb": null
     },
     "damage": {
-      "1": "1d4+{SMO}",
-      "5": "1d6+{SMO}",
-      "10": "1d8+{SMO}",
-      "17": "2d6+{SMO}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 10
   },
