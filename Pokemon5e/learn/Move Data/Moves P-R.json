@@ -352,7 +352,7 @@
         "effects": [{
           "attackBonus": "ATTACK",
           "hit": [{
-            "damage": "DAMAGE[Bug]",
+            "damage": "DAMAGE+{DMO} [Bug]",
             "type": "damage"
           }],
           "meta": [{
