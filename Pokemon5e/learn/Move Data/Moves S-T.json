@@ -724,7 +724,7 @@
     "PP": 5
   },
   "Shadow Sneak": {
-    "attack": "proficiencyBonus+DMO",
+    "attack": "proficiencyBonus+max(DMO,WMO)",
     "code": {
       "_v": 2,
       "automation": [{
