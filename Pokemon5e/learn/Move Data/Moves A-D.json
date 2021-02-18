@@ -3566,7 +3566,7 @@
           "type": "ieffect",
           "name": "Defend Order",
           "duration": "10",
-          "effects": "-ac +1",
+          "effects": "-ac +DAMAGE",
           "end": false,
           "conc": true
         }]
@@ -3577,6 +3577,12 @@
       "_v": 2,
       "proper": false,
       "verb": "commands"
+    },
+    "damage": {
+      "1": "1",
+      "5": "2",
+      "10": "3",
+      "17": "4"
     },
     "PP": 5
   },
