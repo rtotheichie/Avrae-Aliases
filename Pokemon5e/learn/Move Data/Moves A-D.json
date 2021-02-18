@@ -3746,7 +3746,7 @@
       "_v": 2,
       "automation": [{
         "effects": [{
-          "dc": "{8+proficiencyBonus+max(ChMO,WMO)}",
+          "dc": "{8+ATTACK}",
           "fail": [{
             "duration": "10",
             "effects": "end",
@@ -3757,14 +3757,7 @@
             "text": "You attempt to disable a target, hindering its abilities. Choose a target in range. The target must succeed on a WIS saving throw against your Move DC. On a fail, roll a d4. Each of the opponent’s moves is numbered 1 – 4 in alphabetical order. The move corresponding to the number rolled is unable to be activated for one minute. If the target has less than 4 moves, reroll until you get a lower result. If the target has the \"Extra Move\" feat, use a d6 and reroll on 6s.",
             "type": "text"
           }],
-          "meta": [{
-            "cantripScale": null,
-            "dice": "DAMAGE",
-            "hidden": false,
-            "higher": null,
-            "name": "Move",
-            "type": "roll"
-          }],
+          "meta": [],
           "stat": "wis",
           "success": [],
           "type": "save"
@@ -3776,7 +3769,8 @@
       "proper": true,
       "verb": null
     },
-    "PP": 10
+    "attack":"proficiencyBonus+max(ChMO,WMO)",
+    "PP": 5
   },
   "Disarming Voice": {
     "code": {
