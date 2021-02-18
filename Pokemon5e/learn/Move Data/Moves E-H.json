@@ -1613,6 +1613,34 @@
     },
     "PP": 5
   },
+  "Floral Healing": {
+    "code": {
+      "_v": 2,
+      "automation": [{
+        "effects": [{
+          "damage": "DAMAGE+{CoMO} [Healing]",
+          "meta": [],
+          "overheal": false,
+          "type": "damage"
+        }],
+        "meta": [],
+        "target": "each",
+        "type": "target"
+      }, {
+        "meta": [],
+        "text": "You extend a healing energy to recover the hit points of a creature in range. The target gains 2d8 + MOVE hit points. If the terrain is grassy, double your MOVE modifier.",
+        "type": "text"
+      }],
+      "name": "Floral Healing"
+    },
+    "damage": {
+      "1": "2d8",
+      "5": "2d10",
+      "10": "3d10",
+      "17": "4d12"
+    },
+    "PP": 10
+  },
   "Flower Shield": {
     "code": {
       "_v": 2,
