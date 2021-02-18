@@ -446,7 +446,7 @@
           "attackBonus": "ATTACK",
           "hit": [{
             "conc": false,
-            "damage": "DAMAGE+CoMO [Bug]",
+            "damage": "DAMAGE+{CoMO} [Bug]",
             "end": true,
             "type": "damage"
           }],
