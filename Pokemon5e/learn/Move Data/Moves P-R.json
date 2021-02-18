@@ -475,7 +475,7 @@
     "PP": 10
   },
   "Poison Fang": {
-    "attack": "proficiencyBonus+DMO",
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
       "_v": 2,
       "automation": [{
@@ -483,12 +483,12 @@
           "attackBonus": "ATTACK",
           "hit": [{
             "cantripScale": null,
-            "damage": "DAMAGE[Poison]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Poison]",
             "higher": null,
             "overheal": false,
             "type": "damage"
           }, {
-            "dc": "{8+proficiencyBonus+max(CoMO,DMO)}",
+            "dc": "{8+proficiencyBonus+max(SMO,DMO)}",
             "fail": [{
               "duration": "-1",
               "effects": "",
@@ -514,10 +514,10 @@
       "verb": null
     },
     "damage": {
-      "1": "1d8+{DMO}",
-      "5": "2d6+{DMO}",
-      "10": "4d4+{DMO}",
-      "17": "3d10+{DMO}"
+      "1": "1d8",
+      "5": "2d6",
+      "10": "4d4",
+      "17": "3d10"
     },
     "PP": 10
   },
@@ -1096,15 +1096,7 @@
           "fail": [{
             "damage": "DAMAGE+{max(DMO,IMO,WMO)} [Psychic]",
             "type": "damage"
-          }, {
-            "desc": "",
-            "duration": "3",
-            "effects": "",
-            "end": false,
-            "meta": [],
-            "name": "Confused",
-            "type": "ieffect"
-          }],
+          },{"type":"ieffect","meta":[],"name":"Confused","duration":"3","effects":"","end":false,"desc":""}],
           "stat": "wis",
           "success": [{
             "damage": "(DAMAGE+{max(DMO,IMO,WMO)})/2 [Psychic]",
