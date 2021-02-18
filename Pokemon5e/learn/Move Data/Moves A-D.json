@@ -2410,7 +2410,7 @@
           "fail": [{
             "conc": false,
             "duration": "10",
-            "effects": "-b EFFECT",
+            "effects": "-b DAMAGE",
             "end": true,
             "name": "Charmed",
             "type": "ieffect"
@@ -2429,7 +2429,7 @@
       "proper": true,
       "verb": "attempts to"
     },
-    "effect": {
+    "damage": {
       "1": "-2",
       "5": "-3",
       "10": "-4",
