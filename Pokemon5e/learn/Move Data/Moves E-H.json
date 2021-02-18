@@ -1081,7 +1081,7 @@
         "meta": [{
           "type": "roll",
           "dice": "DAMAGE",
-          "name": "Fire Pillar",
+          "name": "damage",
           "higher": null,
           "cantripScale": null,
           "hidden": false
@@ -1092,14 +1092,14 @@
           "stat": "dex",
           "fail": [{
             "type": "damage",
-            "damage": "{Fire Pillar}+{max(DMO,SMO)} [Fire]",
+            "damage": "{damage}+{max(DMO,SMO)} [Fire]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
           }],
           "success": [{
             "type": "damage",
-            "damage": "({Fire Pillar}+{max(DMO,SMO)})/2 [Fire]",
+            "damage": "({damage}+{max(DMO,SMO)})/2 [Fire]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
