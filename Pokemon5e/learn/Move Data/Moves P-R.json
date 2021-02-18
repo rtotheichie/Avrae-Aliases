@@ -2209,13 +2209,13 @@
             "overheal": false,
             "type": "damage"
           }, {
-            "duration": "{rounds}",
+            "duration": "3",
             "effects": "",
             "end": true,
-            "name": "Prone",
+            "name": "Proned",
             "type": "ieffect"
           }],
-          "stat": "dex",
+          "stat": "str",
           "success": [{
             "cantripScale": null,
             "damage": "({damage}+{SMO})/2 [Rock]",
@@ -2226,13 +2226,6 @@
           "type": "save"
         }],
         "meta": [{
-          "cantripScale": null,
-          "dice": "1d4",
-          "hidden": false,
-          "higher": null,
-          "name": "rounds",
-          "type": "roll"
-        }, {
           "cantripScale": null,
           "dice": "DAMAGE",
           "hidden": false,
