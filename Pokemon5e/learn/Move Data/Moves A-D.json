@@ -505,7 +505,7 @@
         "effects": [{
           "attackBonus": "ATTACK",
           "hit": [{
-            "damage": "DAMAGE+{max(SMO,DMO)[Rock]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Rock]",
             "type": "damage"
           }],
           "miss": [],
@@ -522,7 +522,7 @@
       "verb": null
     },
     "damage": {
-      "1": "1d10}",
+      "1": "1d10",
       "5": "2d8",
       "10": "5d4",
       "17": "4d8"
