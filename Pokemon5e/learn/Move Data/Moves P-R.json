@@ -522,34 +522,49 @@
     "PP": 10
   },
   "Poison Gas": {
+    "attack": "proficiencyBonus+CoMO",
     "code": {
       "_v": 2,
       "automation": [{
         "effects": [{
-          "conc": true,
-          "duration": "10",
-          "effects": "-attack \"|1d6+{CoMO} [Poison]|\"",
-          "end": false,
-          "name": "Noxious Gas",
-          "type": "ieffect"
+          "damage": "DAMAGE+{CoMO} [Poison]",
+          "meta": [],
+          "type": "damage"
+        }, {
+          "dc": "8+ATTACK",
+          "fail": [{
+            "desc": "A poisoned creature has disadvantage on all ability checks and attack rolls, and takes an amount of damage equal to its proficiency bonus at the end of each of its turns until it faints or is cured of its poison",
+            "duration": "-1",
+            "effects": "",
+            "end": false,
+            "meta": [],
+            "name": "Poisoned",
+            "type": "ieffect"
+          }],
+          "meta": [],
+          "stat": "con",
+          "success": [],
+          "type": "save"
         }],
-        "target": "self",
+        "meta": [],
+        "target": "all",
         "type": "target"
       }, {
-        "text": "You release a toxic cloud of poisonous gas in a 10 foot radius, centered on a point within range. Any creature that starts their turn in this area must succeed on a CON save against your Move DC, taking 1d6 + MOVE poison damage on a failure, or half as much on a success. Creatures that fail this save by more than 5 become poisoned.\n",
+        "meta": [],
+        "text": "You create a fog of poisonous gas in a 15 foot radius, centered on a point within range. Creatures that begin their turn in the area take 1d4 + MOVE poison damage and must succeed on a CON save against your Move DC or become poisoned. The gas cloud dissipates at the beginning of your next turn.",
         "type": "text"
       }],
       "name": "Poison Gas",
       "proper": true,
-      "verb": "lets out"
+      "verb": "create a fog of"
     },
     "damage": {
-      "1": "1d6+{CoMO}",
-      "5": "2d4+{CoMO}",
-      "10": "1d12+{CoMO}",
-      "17": "4d4+{CoMO}"
+      "1": "1d4",
+      "5": "1d6",
+      "10": "1d8",
+      "17": "2d6"
     },
-    "PP": 5
+    "PP": 10
   },
   "Poison Jab": {
     "attack": "proficiencyBonus+max(SMO,DMO)",
