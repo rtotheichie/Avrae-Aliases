@@ -3111,7 +3111,7 @@
         }],
         "meta": [{
           "cantripScale": null,
-          "dice": "1d4",
+          "dice": "DAMAGE",
           "hidden": false,
           "higher": null,
           "name": "damage",
@@ -3126,6 +3126,9 @@
       "name": "Swift",
       "proper": true,
       "verb": null
+    },
+    "damage": {
+      "1": "1d4"
     },
     "PP": 10
   },
