@@ -40,35 +40,43 @@
           "dc": "{8+ATTACK}",
           "fail": [{
             "conc": false,
-            "duration": "{roll}",
+            "desc": null,
+            "duration": "3",
             "effects": "",
             "end": true,
-            "name": "Prone",
+            "meta": [],
+            "name": "Proned",
             "type": "ieffect"
           }, {
-            "damage": "DAMAGE+{SMO} [Ground]",
+            "damage": "{{damage}}+{strengthMod} [Ground]",
+            "meta": [],
             "overheal": false,
             "type": "damage"
           }],
+          "meta": [],
           "stat": "dex",
           "success": [{
-            "damage": "(DAMAGE+{SMO})/2 [Ground]",
+            "damage": "({{damage}}+{strengthMod})/2 [Ground]",
+            "meta": [],
             "overheal": false,
             "type": "damage"
           }],
           "type": "save"
-        }],
-        "meta": [{
-          "dice": "1d4",
-          "hidden": false,
-          "name": "roll",
+        }, {
+          "dice": "DAMAGE",
+          "meta": [],
+          "name": "damage",
           "type": "roll"
         }],
+        "meta": [],
         "target": "all",
         "type": "target"
+      }, {
+        "meta": [],
+        "text": "You create a tremor in the ground in a 20 foot radius, centered on you. Each creature in the area must succeed on a STR save against your Move DC, taking 4d4 + MOVE ground damage on a fail and be knocked prone. On a success, they take half as much damage and are not knocked prone. Creatures in range that are burrowed or in the invulnerable stage of Dig take double damage from this move. After the move is activated, the area becomes difficult terrain. Raised creatures are immune to the effects and damage of this move.",
+        "type": "text"
       }],
       "name": "Earthquake",
-      "proper": false,
       "verb": "causes"
     },
     "damage": {
