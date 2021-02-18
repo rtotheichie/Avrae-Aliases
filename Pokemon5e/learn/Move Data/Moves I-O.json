@@ -1,28 +1,28 @@
 {
   "Ice Ball": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Ice Ball",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE [Ice^]"
+            "damage": "DAMAGE [Ice^]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You summon a rock-hard ball of ice that continues to pummel an opponent. When you activate this move, make a ranged attack on a target in range, doing 1d4 + MOVE ice damage on a hit. If you continue to use this move on consecutive turns, double the dice roll for damage each time you hit. The multiplier maxes out at 8x the original damage. The damage resets if any of the attacks miss, or if you are incapacitated."
+        "text": "You summon a rock-hard ball of ice that continues to pummel an opponent. When you activate this move, make a ranged attack on a target in range, doing 1d4 + MOVE ice damage on a hit. If you continue to use this move on consecutive turns, double the dice roll for damage each time you hit. The multiplier maxes out at 8x the original damage. The damage resets if any of the attacks miss, or if you are incapacitated.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Ice Ball",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d4+{max(SMO,DMO)}",
       "5": "1d6+{max(SMO,DMO)}",
@@ -32,44 +32,44 @@
     "PP": 10
   },
   "Ice Beam": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Ice Beam",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "DAMAGE",
-          "name": "damage"
-        }],
-        "target": "all",
         "effects": [{
-          "type": "save",
-          "stat": "dex",
+          "dc": "{8+ATTACK}",
           "fail": [{
-            "type": "damage",
-            "damage": "{damage}+{max(SMO,DMO)} [Ice]"
+            "damage": "{damage}+{max(SMO,DMO)} [Ice]",
+            "type": "damage"
           }, {
-            "type": "ieffect",
-            "name": "Frozen",
             "duration": "-1",
             "effects": "",
-            "end": false
+            "end": false,
+            "name": "Frozen",
+            "type": "ieffect"
           }],
+          "stat": "dex",
           "success": [{
-            "type": "damage",
-            "damage": "({damage}+{max(SMO,DMO)})/2 [Ice]"
+            "damage": "({damage}+{max(SMO,DMO)})/2 [Ice]",
+            "type": "damage"
           }],
-          "dc": "{8+ATTACK}"
-        }]
+          "type": "save"
+        }],
+        "meta": [{
+          "dice": "DAMAGE",
+          "name": "damage",
+          "type": "roll"
+        }],
+        "target": "all",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You create a 80 foot line of freezing ice, 5 feet wide. Any creature caught in the line must succeed on a DEX save against your Move DC or take 2d8 + MOVE ice damage and be frozen on a failure, or half as much without being frozen on a success."
+        "text": "You create a 80 foot line of freezing ice, 5 feet wide. Any creature caught in the line must succeed on a DEX save against your Move DC or take 2d8 + MOVE ice damage and be frozen on a failure, or half as much without being frozen on a success.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Ice Beam",
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "2d8",
       "5": "2d10",
@@ -80,38 +80,38 @@
   },
   "Ice Burn": {
     "code": {
-      "name": "Ice Burn",
+      "_v": 2,
       "automation": [{
-        "type": "target",
+        "effects": [{
+          "dc": "{8+proficiencyBonus+max(SMO,DMO)}",
+          "fail": [{
+            "damage": "{damage}+{max(SMO,DMO)} [Ice]",
+            "overheal": false,
+            "type": "damage"
+          }],
+          "stat": "dex",
+          "success": [{
+            "damage": "({damage}+{max(SMO,DMO)})/2 [Ice]",
+            "overheal": false,
+            "type": "damage"
+          }],
+          "type": "save"
+        }],
         "meta": [{
-          "type": "roll",
           "dice": "DAMAGE",
+          "hidden": false,
           "name": "damage",
-          "hidden": false
+          "type": "roll"
         }],
         "target": "all",
-        "effects": [{
-          "type": "save",
-          "stat": "dex",
-          "fail": [{
-            "type": "damage",
-            "damage": "{damage}+{max(SMO,DMO)} [Ice]",
-            "overheal": false
-          }],
-          "success": [{
-            "type": "damage",
-            "damage": "({damage}+{max(SMO,DMO)})/2 [Ice]",
-            "overheal": false
-          }],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
-        }]
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "When you use this move, you charge up an intense power within your body. On your next turn’s action, if you keep your concentration, you unleash an ultracold, freezing wind in a 30 foot circle all around you. Anyone caught in the blast must make a DEX save against your Move DC, taking 2d12 + MOVE ice damage on a failure, or half as much on a success. If any creature fails the save by more than 5, it is burned."
+        "text": "When you use this move, you charge up an intense power within your body. On your next turn’s action, if you keep your concentration, you unleash an ultracold, freezing wind in a 30 foot circle all around you. Anyone caught in the blast must make a DEX save against your Move DC, taking 2d12 + MOVE ice damage on a failure, or half as much on a success. If any creature fails the save by more than 5, it is burned.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Ice Burn",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
     "damage": {
       "1": "2d12",
@@ -122,29 +122,29 @@
     "PP": 3
   },
   "Ice Fang": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Ice Fang",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Ice]"
+            "damage": "DAMAGE[Ice]",
+            "type": "damage"
           }, {
-            "type": "text",
-            "text": "You attempt to pierce an opponent with ice-infused fangs. Make a melee attack, dealing 1d10 + MOVE Ice damage on a hit. On a natural attack roll of 19 or 20, the target is Frozen and flinches."
+            "text": "You attempt to pierce an opponent with ice-infused fangs. Make a melee attack, dealing 1d10 + MOVE Ice damage on a hit. On a natural attack roll of 19 or 20, the target is Frozen and flinches.",
+            "type": "text"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }],
-      "_v": 2,
+      "name": "Ice Fang",
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d10+{max(SMO,DMO)}",
       "5": "2d8+{max(SMO,DMO)}",
@@ -154,30 +154,30 @@
     "PP": 10
   },
   "Ice Punch": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Ice Punch",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
             "damage": "DAMAGE[Ice]",
-            "overheal": false
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You strike out with ice-infused fists. Make a melee attack roll, doing 1d12 + MOVE ice damage on a hit. On a natural attack roll of 19 or 20, the target is frozen."
+        "text": "You strike out with ice-infused fists. Make a melee attack roll, doing 1d12 + MOVE ice damage on a hit. On a natural attack roll of 19 or 20, the target is frozen.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Ice Punch",
       "proper": false,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d12+{max(SMO,DMO)}",
       "5": "2d8+{max(SMO,DMO)}",
@@ -187,29 +187,29 @@
     "PP": 10
   },
   "Ice Shard": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Ice Shard",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Ice]"
+            "damage": "DAMAGE[Ice]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You flash freeze chunks of ice and quickly hurl them at an opponent. As a bonus action, you fire a shard of ice at an opponent in range, dealing 1d4 ice damage on a hit."
+        "text": "You flash freeze chunks of ice and quickly hurl them at an opponent. As a bonus action, you fire a shard of ice at an opponent in range, dealing 1d4 ice damage on a hit.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Ice Shard",
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d4",
       "5": "1d6",
@@ -219,29 +219,29 @@
     "PP": 15
   },
   "Icicle Crash": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Icicle Crash",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Ice]"
+            "damage": "DAMAGE[Ice]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You generate a row of icicles that crash down on top of an opponent in range. Make a ranged attack, dealing 2d6 + MOVE ice damage on a hit. If the natural attack roll is 15 or higher, the target flinches.\n"
+        "text": "You generate a row of icicles that crash down on top of an opponent in range. Make a ranged attack, dealing 2d6 + MOVE ice damage on a hit. If the natural attack roll is 15 or higher, the target flinches.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Icicle Crash",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "2d6+{DMO}",
       "5": "2d8+{DMO}",
@@ -251,40 +251,40 @@
     "PP": 5
   },
   "Icicle Spear": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Icicle Spear",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
-          "meta": [{
-            "type": "roll",
-            "dice": "DAMAGE",
-            "name": "Extra Attacks",
-            "higher": null,
-            "cantripScale": null,
-            "hidden": false
-          }],
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
+            "cantripScale": null,
             "damage": "DAMAGE[Ice]",
-            "overheal": false,
             "higher": null,
-            "cantripScale": null
+            "overheal": false,
+            "type": "damage"
+          }],
+          "meta": [{
+            "cantripScale": null,
+            "dice": "DAMAGE",
+            "hidden": false,
+            "higher": null,
+            "name": "Extra Attacks",
+            "type": "roll"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You pummel an opponent in range with multiple sharp shards of ice. Make a ranged attack roll, doing 1d4 + MOVE ice damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 ice damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits. Higher Levels: The damage dice roll for this move changes to 2d4 at level 5, 1d12 at level 10, and 4d4 at level 17.\n"
+        "text": "You pummel an opponent in range with multiple sharp shards of ice. Make a ranged attack roll, doing 1d4 + MOVE ice damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 ice damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits. Higher Levels: The damage dice roll for this move changes to 2d4 at level 5, 1d12 at level 10, and 4d4 at level 17.\n",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Icicle Spear",
       "proper": false,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d4",
       "5": "2d4",
@@ -294,30 +294,30 @@
     "PP": 15
   },
   "Icy Wind": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Icy Wind",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
             "damage": "DAMAGE[Ice]",
-            "overheal": false
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You create an icy wind that gusts towards a creature in range. Make a ranged attack against an opponent, doing 1d8 + MOVE ice damage on a hit. On a natural attack roll of 18 or more, the target falls prone."
+        "text": "You create an icy wind that gusts towards a creature in range. Make a ranged attack against an opponent, doing 1d8 + MOVE ice damage on a hit. On a natural attack roll of 18 or more, the target falls prone.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Icy Wind",
       "proper": false,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d8+{DMO}",
       "5": "2d6+{DMO}",
@@ -328,69 +328,69 @@
   },
   "Imprison": {
     "code": {
-      "name": "Imprison",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "all",
         "effects": [{
-          "type": "save",
-          "stat": "wis",
-          "fail": [{
-            "type": "ieffect",
-            "name": "Can't use same moves",
-            "duration": "11",
-            "effects": "",
-            "end": false
-          }],
-          "success": [],
-          "dc": "{8+proficiencyBonus+max(WMO,IMO)}"
-        }]
-      }, {
-        "type": "target",
-        "target": "self",
-        "effects": [{
-          "type": "ieffect",
-          "name": "Imprisoning",
+          "conc": true,
           "duration": "10",
           "effects": "",
           "end": false,
-          "conc": true
-        }]
+          "name": "Imprisoning",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You create psychic walls within the mind of a target in range. Force the target to make a WIS saving throw against your Move DC. On a failure, the target is unable to use any Move it knows that is the same as yours for the duration."
+        "effects": [{
+          "dc": "{8+proficiencyBonus+max(WMO,IMO)}",
+          "fail": [{
+            "duration": "11",
+            "effects": "",
+            "end": false,
+            "name": "Can't use same moves",
+            "type": "ieffect"
+          }],
+          "stat": "wis",
+          "success": [],
+          "type": "save"
+        }],
+        "target": "all",
+        "type": "target"
+      }, {
+        "text": "You create psychic walls within the mind of a target in range. Force the target to make a WIS saving throw against your Move DC. On a failure, the target is unable to use any Move it knows that is the same as yours for the duration.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Imprison",
       "proper": true,
       "verb": "uses"
     },
     "PP": 5
   },
   "Incinerate": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Incinerate",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
             "damage": "DAMAGE[Fire]",
-            "overheal": false
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You summon forth a burning hot flame that surrounds an opponent. Make a ranged attack, dealing 1d10 + MOVE fire damage on a hit. On a hit, if the target is holding a berry, it is immediately burned to ash, becoming unusable."
+        "text": "You summon forth a burning hot flame that surrounds an opponent. Make a ranged attack, dealing 1d10 + MOVE fire damage on a hit. On a hit, if the target is holding a berry, it is immediately burned to ash, becoming unusable.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Incinerate",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d10+{max(SMO,DMO)}",
       "5": "2d8+{max(SMO,DMO)}",
@@ -400,35 +400,35 @@
     "PP": 10
   },
   "Inferno": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Inferno",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE[Fire]",
+            "type": "damage"
           }, {
-            "type": "ieffect",
-            "name": "Burned",
             "duration": "-1",
             "effects": "",
-            "end": false
+            "end": false,
+            "name": "Burned",
+            "type": "ieffect"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You engulf a target in intense flames. Make a ranged attack against a target, dealing 4d4 + MOVE fire damage on a hit, burning the target in the process."
+        "text": "You engulf a target in intense flames. Make a ranged attack against a target, dealing 4d4 + MOVE fire damage on a hit, burning the target in the process.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Inferno",
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "4d4+{max(SMO,DMO)}",
       "5": "2d12+{max(SMO,DMO)}",
@@ -438,37 +438,37 @@
     "PP": 3
   },
   "Infestation": {
+    "attack": "proficiencyBonus+CoMO",
     "code": {
-      "name": "Infestation",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "1d4",
-          "name": "Infested",
-          "hidden": false
-        }],
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
+            "conc": false,
             "damage": "DAMAGE+CoMO [Bug]",
             "end": true,
-            "conc": false
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "meta": [{
+          "dice": "1d4",
+          "hidden": false,
+          "name": "Infested",
+          "type": "roll"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You summon an infestation of tiny insects to attack a foe for multiple turns. Make a ranged attack on a target. On a hit, the target takes 1d4 + MOVE bug damage and becomes infested for 1d4 rounds. An infested creature must make a CON save against your Move DC at the beginning of each of its turns, taking 1d4 + MOVE bug damage on a failed save."
+        "text": "You summon an infestation of tiny insects to attack a foe for multiple turns. Make a ranged attack on a target. On a hit, the target takes 1d4 + MOVE bug damage and becomes infested for 1d4 rounds. An infested creature must make a CON save against your Move DC at the beginning of each of its turns, taking 1d4 + MOVE bug damage on a failed save.",
+        "type": "text"
       }],
-      "verb": "attacks with an",
+      "name": "Infestation",
       "proper": true,
-      "_v": 2
+      "verb": "attacks with an"
     },
-    "attack": "proficiencyBonus+CoMO",
     "damage": {
       "1": "1d4",
       "5": "1d6",
@@ -479,24 +479,24 @@
   },
   "Ingrain": {
     "code": {
-      "name": "Ingrain",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "roots",
           "duration": "3",
           "effects": "-attack \"|-(DAMAGE+{CoMO})| The Pokemon absorbs energy with its roots\"",
-          "end": false
-        }]
+          "end": false,
+          "name": "roots",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You pierce the ground with roots, absorbing natural energy and fixing you in place. At the end of each of your next three turns (including this one), heal yourself for 1d6 + MOVE hit points as a free action. During this time, you may not flee or be switched out."
+        "text": "You pierce the ground with roots, absorbing natural energy and fixing you in place. At the end of each of your next three turns (including this one), heal yourself for 1d6 + MOVE hit points as a free action. During this time, you may not flee or be switched out.",
+        "type": "text"
       }],
-      "verb": "gains health with",
+      "name": "Ingrain",
       "proper": true,
-      "_v": 2
+      "verb": "gains health with"
     },
     "damage": {
       "1": "1d6",
@@ -508,12 +508,12 @@
   },
   "Ion Deluge": {
     "code": {
-      "name": "Ion Deluge",
-      "automation": [{
-        "type": "text",
-        "text": "You disperse electric particles that charge the battlefield. Until the beginning of your next turn, any normal-type move activated within 50 feet of you is considered electric-type."
-      }],
       "_v": 2,
+      "automation": [{
+        "text": "You disperse electric particles that charge the battlefield. Until the beginning of your next turn, any normal-type move activated within 50 feet of you is considered electric-type.",
+        "type": "text"
+      }],
+      "name": "Ion Deluge",
       "proper": true,
       "verb": null
     },
@@ -521,74 +521,74 @@
   },
   "Iron Defense": {
     "code": {
-      "name": "Iron Defense",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "AC",
+          "conc": false,
           "duration": "1",
           "effects": "-ac +6",
           "end": false,
-          "conc": false
+          "name": "AC",
+          "type": "ieffect"
         }, {
-          "type": "ieffect",
-          "name": "Neutral",
-          "duration": "1",
-          "effects": "-neutral Type -neutral Type -neutral Type",
-          "end": false,
-          "conc": false
-        }, {
-          "type": "ieffect",
-          "name": "Resist",
-          "duration": "1",
-          "effects": "-resist Type -resist Type -resist Type",
-          "end": false,
-          "conc": false
-        }, {
-          "type": "ieffect",
-          "name": "Immune",
+          "conc": false,
           "duration": "1",
           "effects": "-immune Type -immune Type -immune Type",
           "end": false,
-          "conc": false
-        }]
+          "name": "Immune",
+          "type": "ieffect"
+        }, {
+          "conc": false,
+          "duration": "1",
+          "effects": "-neutral Type -neutral Type -neutral Type",
+          "end": false,
+          "name": "Neutral",
+          "type": "ieffect"
+        }, {
+          "conc": false,
+          "duration": "1",
+          "effects": "-resist Type -resist Type -resist Type",
+          "end": false,
+          "name": "Resist",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "Your body temporarily becomes solid as steel plate. Until your next turn, you gain + 6 to your AC and have resistance to all types of damage. If you were vulnerable, you now take regular damage. If you were already resistant, you become immune."
+        "text": "Your body temporarily becomes solid as steel plate. Until your next turn, you gain + 6 to your AC and have resistance to all types of damage. If you were vulnerable, you now take regular damage. If you were already resistant, you become immune.",
+        "type": "text"
       }],
-      "verb": "hardens with",
+      "name": "Iron Defense",
       "proper": true,
-      "_v": 2
+      "verb": "hardens with"
     },
     "PP": 10
   },
   "Iron Head": {
+    "attack": "proficiencyBonus+SMO",
     "code": {
-      "name": "Iron Head",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
             "damage": "DAMAGE[Steel]",
-            "overheal": false
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You slam into your opponent with your hard head. Make a melee attack, dealing 2d6 + MOVE steel damage on a hit. On a natural attack roll of 16 or higher, the target flinches."
+        "text": "You slam into your opponent with your hard head. Make a melee attack, dealing 2d6 + MOVE steel damage on a hit. On a natural attack roll of 16 or higher, the target flinches.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Iron Head",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+SMO",
     "damage": {
       "1": "2d6+{SMO}",
       "5": "2d8+{SMO}",
@@ -598,29 +598,29 @@
     "PP": 10
   },
   "Iron Tail": {
+    "attack": "proficiencyBonus+SMO",
     "code": {
-      "name": "Iron Tail",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Steel]"
+            "damage": "DAMAGE[Steel]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You swing your tail out, attempting to crush an opponent. Make an attack roll on an opponent in range, doing 4d4 + MOVE steel damage on a hit. If the natural attack roll is a 19 or 20, the target’s AC is decreased by 1 for the rest of combat."
+        "text": "You swing your tail out, attempting to crush an opponent. Make an attack roll on an opponent in range, doing 4d4 + MOVE steel damage on a hit. If the natural attack roll is a 19 or 20, the target’s AC is decreased by 1 for the rest of combat.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Iron Tail",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+SMO",
     "damage": {
       "1": "4d4+{SMO}",
       "5": "2d12+{SMO}",
@@ -631,41 +631,41 @@
   },
   "Judgment": {
     "code": {
-      "name": "Judgment",
+      "_v": 2,
       "automation": [{
-        "type": "target",
+        "effects": [{
+          "dc": "{8+proficiencyBonus+SMO}",
+          "fail": [{
+            "cantripScale": null,
+            "damage": "{damage}+{SMO}",
+            "higher": null,
+            "overheal": false,
+            "type": "damage"
+          }],
+          "stat": "dex",
+          "success": [{
+            "cantripScale": null,
+            "damage": "({damage}+{SMO})/2",
+            "higher": null,
+            "overheal": false,
+            "type": "damage"
+          }],
+          "type": "save"
+        }],
         "meta": [{
-          "type": "roll",
-          "dice": "DAMAGE",
-          "name": "damage",
-          "higher": null,
           "cantripScale": null,
-          "hidden": false
+          "dice": "DAMAGE",
+          "hidden": false,
+          "higher": null,
+          "name": "damage",
+          "type": "roll"
         }],
         "target": "all",
-        "effects": [{
-          "type": "save",
-          "stat": "dex",
-          "fail": [{
-            "type": "damage",
-            "damage": "{damage}+{SMO}",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }],
-          "success": [{
-            "type": "damage",
-            "damage": "({damage}+{SMO})/2",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }],
-          "dc": "{8+proficiencyBonus+SMO}"
-        }]
+        "type": "target"
       }],
-      "verb": null,
+      "name": "Judgment",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
     "damage": {
       "1": "5d6",
@@ -676,29 +676,29 @@
     "PP": 5
   },
   "Jump Kick": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Jump Kick",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE[Fighting]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You leap into the air to deliver a strong kick to the enemy. Make a melee attack against, doing 4d4 + MOVE fighting damage on a hit. On a miss, you take 1 damage."
+        "text": "You leap into the air to deliver a strong kick to the enemy. Make a melee attack against, doing 4d4 + MOVE fighting damage on a hit. On a miss, you take 1 damage.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Jump Kick",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "4d4+{max(SMO,DMO)}",
       "5": "2d12+{max(SMO,DMO)}",
@@ -708,29 +708,29 @@
     "PP": 5
   },
   "Karate Chop": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Karate Chop",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE[Fighting]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You extend a hand towards an enemy Pokémon for a savage karate chop. Make a melee Attack roll, doing 1d8 + MOVE fighting damage on a hit. Karate Chop scores a critical hit on 19s and 20s."
+        "text": "You extend a hand towards an enemy Pokémon for a savage karate chop. Make a melee Attack roll, doing 1d8 + MOVE fighting damage on a hit. Karate Chop scores a critical hit on 19s and 20s.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Karate Chop",
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d8+{max(SMO,DMO)}",
       "5": "2d6+{max(SMO,DMO)}",
@@ -741,22 +741,22 @@
   },
   "Kinesis": {
     "code": {
-      "name": "Kinesis",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "+20 Speed, +2 AC against Ranged",
           "duration": "10",
           "effects": "",
-          "end": false
-        }]
+          "end": false,
+          "name": "+20 Speed, +2 AC against Ranged",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You move with incredible speed. Increase your walking, flying, or swimming speed by 20 if it is greater than 0, and add +2 to AC when targeted by ranged attacks for the duration. This move cannot be stacked."
+        "text": "You move with incredible speed. Increase your walking, flying, or swimming speed by 20 if it is greater than 0, and add +2 to AC when targeted by ranged attacks for the duration. This move cannot be stacked.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Kinesis",
       "proper": true,
       "verb": "uses"
     },
@@ -764,50 +764,50 @@
   },
   "King's Shield": {
     "code": {
-      "name": "King's Shield",
+      "_v": 2,
       "automation": [{
-        "type": "text",
-        "text": "Your body is cloaked with a protective shield that negates all damage to you. When targeted by an attack, you may automatically avoid taking damage from this attack and any other damaging move until the beginning of your next turn. On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful."
-      }, {
-        "type": "target",
+        "effects": [],
         "meta": [{
-          "type": "roll",
           "dice": "1d20",
-          "name": "King's Shield"
+          "name": "King's Shield",
+          "type": "roll"
         }],
         "target": "self",
-        "effects": []
+        "type": "target"
+      }, {
+        "text": "Your body is cloaked with a protective shield that negates all damage to you. When targeted by an attack, you may automatically avoid taking damage from this attack and any other damaging move until the beginning of your next turn. On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "King's Shield",
       "proper": true,
       "verb": "is cloaked by"
     },
     "PP": 3
   },
   "Knock Off": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Knock Off",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Dark]"
+            "damage": "DAMAGE[Dark]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You attempt to rid an opponent of their held item for the rest of battle. Make a melee attack roll against a target. On a hit, deal 1d10 + MOVE dark damage and any held item of the target disappears. The item appears back in the target's inventory when the battle is over."
+        "text": "You attempt to rid an opponent of their held item for the rest of battle. Make a melee attack roll against a target. On a hit, deal 1d10 + MOVE dark damage and any held item of the target disappears. The item appears back in the target's inventory when the battle is over.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Knock Off",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d10+{DMO}",
       "5": "2d8+{DMO}",
@@ -818,33 +818,33 @@
   },
   "Land's Wrath": {
     "code": {
-      "name": "Land's Wrath",
+      "_v": 2,
       "automation": [{
-        "type": "target",
+        "effects": [{
+          "dc": "{8+proficiencyBonus+SMO}",
+          "fail": [{
+            "damage": "{damage}+{SMO} [Ground]",
+            "type": "damage"
+          }],
+          "stat": "dex",
+          "success": [{
+            "damage": "({damage}+{SMO})/2 [Ground]",
+            "type": "damage"
+          }],
+          "type": "save"
+        }],
         "meta": [{
-          "type": "roll",
           "dice": "DAMAGE",
-          "name": "damage"
+          "name": "damage",
+          "type": "roll"
         }],
         "target": "all",
-        "effects": [{
-          "type": "save",
-          "stat": "dex",
-          "fail": [{
-            "type": "damage",
-            "damage": "{damage}+{SMO} [Ground]"
-          }],
-          "success": [{
-            "type": "damage",
-            "damage": "({damage}+{SMO})/2 [Ground]"
-          }],
-          "dc": "{8+proficiencyBonus+SMO}"
-        }]
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You gather in the natural energy of the land around you and focus it into a sudden eruption of earth in a 30 ft radius, centered on a point within range. All creatures caught in the blast must make a DEX save against your Move DC, taking 2d8 + MOVE ground damage on a failure, or half as much on a success."
+        "text": "You gather in the natural energy of the land around you and focus it into a sudden eruption of earth in a 30 ft radius, centered on a point within range. All creatures caught in the blast must make a DEX save against your Move DC, taking 2d8 + MOVE ground damage on a failure, or half as much on a success.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Land's Wrath",
       "proper": true,
       "verb": null
     },
@@ -857,30 +857,30 @@
     "PP": 5
   },
   "Last Resort": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Last Resort",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
             "damage": "DAMAGE[Normal]",
-            "overheal": false
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You lash out an an opponent with a furious strike. This move can only be activated when all other known moves by a user have been activated in the same combat. If the user is switched out, this rule resets. Make a melee attack, dealing 2d12 + MOVE normal damage on a hit."
+        "text": "You lash out an an opponent with a furious strike. This move can only be activated when all other known moves by a user have been activated in the same combat. If the user is switched out, this rule resets. Make a melee attack, dealing 2d12 + MOVE normal damage on a hit.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Last Resort",
       "proper": false,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "2d12+{max(SMO,DMO)}",
       "5": "3d10+{max(SMO,DMO)}",
@@ -891,44 +891,44 @@
   },
   "Lava Plume": {
     "code": {
-      "name": "Lava Plume",
+      "_v": 2,
       "automation": [{
-        "type": "target",
+        "effects": [{
+          "dc": "{8+proficiencyBonus+SMO}",
+          "fail": [{
+            "cantripScale": null,
+            "damage": "{Fireball}+{SMO} [Fire]",
+            "higher": null,
+            "overheal": false,
+            "type": "damage"
+          }],
+          "stat": "dex",
+          "success": [{
+            "cantripScale": null,
+            "damage": "({Fireball}+{SMO})/2 [Fire]",
+            "higher": null,
+            "overheal": false,
+            "type": "damage"
+          }],
+          "type": "save"
+        }],
         "meta": [{
-          "type": "roll",
-          "dice": "DAMAGE",
-          "name": "Fireball",
-          "higher": null,
           "cantripScale": null,
-          "hidden": false
+          "dice": "DAMAGE",
+          "hidden": false,
+          "higher": null,
+          "name": "Fireball",
+          "type": "roll"
         }],
         "target": "all",
-        "effects": [{
-          "type": "save",
-          "stat": "dex",
-          "fail": [{
-            "type": "damage",
-            "damage": "{Fireball}+{SMO} [Fire]",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }],
-          "success": [{
-            "type": "damage",
-            "damage": "({Fireball}+{SMO})/2 [Fire]",
-            "overheal": false,
-            "higher": null,
-            "cantripScale": null
-          }],
-          "dc": "{8+proficiencyBonus+SMO}"
-        }]
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You unleash an inferno of hot flames at all creatures in a 20 foot cone. Creatures in the blast must make a DEX save against your Move DC, taking 2d6 + MOVE fire damage on a failure, or half as much on a success. If any creature fails the saving throw by more than 5, the creature is burned."
+        "text": "You unleash an inferno of hot flames at all creatures in a 20 foot cone. Creatures in the blast must make a DEX save against your Move DC, taking 2d6 + MOVE fire damage on a failure, or half as much on a success. If any creature fails the saving throw by more than 5, the creature is burned.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Lava Plume",
       "proper": false,
-      "_v": 2
+      "verb": null
     },
     "damage": {
       "1": "2d6",
@@ -938,62 +938,30 @@
     },
     "PP": 5
   },
-  "Leafage": {
-    "code": {
-      "name": "Leafage",
-      "automation": [{
-        "type": "target",
-        "target": "each",
-        "effects": [{
-          "type": "attack",
-          "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE [Grass]"
-          }],
-          "miss": [],
-          "attackBonus": "ATTACK"
-        }]
-      }, {
-        "type": "text",
-        "text": "You summon a flurry of leaves to pelt a target. Make a ranged attack, doing 1d6+MOVE grass damage on a hit."
-      }],
-      "_v": 2,
-      "proper": true,
-      "verb": null
-    },
-    "attack": "proficiencyBonus+DMO",
-    "damage": {
-      "1": "1d6+{DMO}",
-      "5": "1d12+{DMO}",
-      "10": "2d8+{DMO}",
-      "17": "4d6+{DMO}"
-    },
-    "PP": 20
-  },
   "Leaf Blade": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Leaf Blade",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Grass]"
+            "damage": "DAMAGE[Grass]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You attempt to slash an opponent with a sharp leaf. Make a melee attack against a target, dealing 2d8 + MOVE grass damage on a hit. This attack scores a critical on 19 and 20."
+        "text": "You attempt to slash an opponent with a sharp leaf. Make a melee attack against a target, dealing 2d8 + MOVE grass damage on a hit. This attack scores a critical on 19 and 20.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Leaf Blade",
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "2d8+{DMO}",
       "5": "2d10+{DMO}",
@@ -1004,34 +972,34 @@
   },
   "Leaf Storm": {
     "code": {
-      "name": "Leaf Storm",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "all",
         "effects": [{
-          "type": "save",
-          "stat": "dex",
+          "dc": "{8+proficiencyBonus+max(DMO,SMO)}",
           "fail": [{
-            "type": "damage",
-            "damage": "DAMAGE[Grass]"
+            "damage": "DAMAGE[Grass]",
+            "type": "damage"
           }],
-          "dc": "{8+proficiencyBonus+max(DMO,SMO)}"
-        }]
+          "stat": "dex",
+          "type": "save"
+        }],
+        "target": "all",
+        "type": "target"
       }, {
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Next Attack Half Damage",
           "duration": "-1",
           "effects": "",
-          "end": false
-        }]
+          "end": false,
+          "name": "Next Attack Half Damage",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You whip up a powerful storm of leaves in a 20 foot circle, centered on a point within range. All creatures in the area must make a DEX save against your Move DC, taking 5d4 + MOVE grass damage on a fail, or half as much on a success. After activating this move, you are sapped of energy. Your next attack deals half the normal damage, if it hits."
+        "text": "You whip up a powerful storm of leaves in a 20 foot circle, centered on a point within range. All creatures in the area must make a DEX save against your Move DC, taking 5d4 + MOVE grass damage on a fail, or half as much on a success. After activating this move, you are sapped of energy. Your next attack deals half the normal damage, if it hits.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Leaf Storm",
       "proper": false,
       "verb": "creates "
     },
@@ -1044,30 +1012,30 @@
     "PP": 3
   },
   "Leaf Tornado": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Leaf Tornado",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
             "damage": "DAMAGE[Grass]",
-            "overheal": false
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You summon forth a cyclone of harsh winds and fast moving leaves that rushes forward to strike an opponent in range. Make a ranged attack roll, dealing 1d10 + MOVE grass damage on a hit. If the natural attack roll is 15 or higher, the target has disadvantage on its next attack. If the opponent activates a move that requires a saving throw, its target(s) have advantage on the roll."
+        "text": "You summon forth a cyclone of harsh winds and fast moving leaves that rushes forward to strike an opponent in range. Make a ranged attack roll, dealing 1d10 + MOVE grass damage on a hit. If the natural attack roll is 15 or higher, the target has disadvantage on its next attack. If the opponent activates a move that requires a saving throw, its target(s) have advantage on the roll.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Leaf Tornado",
       "proper": false,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d10+{max(SMO,DMO)}",
       "5": "2d8+{max(SMO,DMO)}",
@@ -1076,31 +1044,63 @@
     },
     "PP": 5
   },
-  "Leech Life": {
+  "Leafage": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Leech Life",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Bug]",
-            "overheal": false
+            "damage": "DAMAGE [Grass]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You attempt to suck away some of a creature’s life force. Make a melee attack roll, doing 2d6 + MOVE bug damage on a hit. Half of the damage done is restored to the user."
+        "text": "You summon a flurry of leaves to pelt a target. Make a ranged attack, doing 1d6+MOVE grass damage on a hit.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Leafage",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
+    "damage": {
+      "1": "1d6+{DMO}",
+      "5": "1d12+{DMO}",
+      "10": "2d8+{DMO}",
+      "17": "4d6+{DMO}"
+    },
+    "PP": 20
+  },
+  "Leech Life": {
     "attack": "proficiencyBonus+DMO",
+    "code": {
+      "_v": 2,
+      "automation": [{
+        "effects": [{
+          "attackBonus": "ATTACK",
+          "hit": [{
+            "damage": "DAMAGE[Bug]",
+            "overheal": false,
+            "type": "damage"
+          }],
+          "miss": [],
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
+      }, {
+        "text": "You attempt to suck away some of a creature’s life force. Make a melee attack roll, doing 2d6 + MOVE bug damage on a hit. Half of the damage done is restored to the user.",
+        "type": "text"
+      }],
+      "name": "Leech Life",
+      "proper": true,
+      "verb": null
+    },
     "damage": {
       "1": "2d6+{DMO}",
       "5": "2d8+{DMO}",
@@ -1110,32 +1110,32 @@
     "PP": 5
   },
   "Leech Seed": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Leech Seed",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "ieffect",
-            "name": "Seeded (DAMAGE Grass Damage at end of every turn)",
             "duration": "-1",
             "effects": "",
-            "end": false
+            "end": false,
+            "name": "Seeded (DAMAGE Grass Damage at end of every turn)",
+            "type": "ieffect"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You send a seed at a Pokémon in range that implants itself in their hide. Make a ranged attack roll. On a hit, a seed implants into their skin. The target takes 1d4 grass damage at the end of each of its subsequent turns until it faints or is switched out. Half of the damage is restored by the attacker, or any other active Pokémon the trainer has in battle, even if the original attacker faints or is returned to its Pokéball. Only one Pokémon can be seeded by the attacker at a time."
+        "text": "You send a seed at a Pokémon in range that implants itself in their hide. Make a ranged attack roll. On a hit, a seed implants into their skin. The target takes 1d4 grass damage at the end of each of its subsequent turns until it faints or is switched out. Half of the damage is restored by the attacker, or any other active Pokémon the trainer has in battle, even if the original attacker faints or is returned to its Pokéball. Only one Pokémon can be seeded by the attacker at a time.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Leech Seed",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d4",
       "5": "2d4",
@@ -1146,60 +1146,60 @@
   },
   "Leer": {
     "code": {
-      "name": "Leer",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "all",
         "effects": [{
-          "type": "save",
-          "stat": "wis",
+          "dc": "{8+proficiencyBonus+max(WMO,ChMO)}",
           "fail": [{
-            "type": "ieffect",
-            "name": "Leer",
             "duration": 10,
             "effects": "",
-            "end": true
+            "end": true,
+            "name": "Leer",
+            "type": "ieffect"
           }, {
-            "type": "text",
-            "text": "You stare down an enemy Pokémon, reducing its will. The Pokémon must make a WIS save against your Move DC. On a fail, allies may add +1 to any attack they target it with for the duration. This modifier can be stacked if it fails multiple leer saves, up to a maximum of +5."
+            "text": "You stare down an enemy Pokémon, reducing its will. The Pokémon must make a WIS save against your Move DC. On a fail, allies may add +1 to any attack they target it with for the duration. This modifier can be stacked if it fails multiple leer saves, up to a maximum of +5.",
+            "type": "text"
           }],
+          "stat": "wis",
           "success": [],
-          "dc": "{8+proficiencyBonus+max(WMO,ChMO)}"
-        }]
+          "type": "save"
+        }],
+        "target": "all",
+        "type": "target"
       }],
-      "verb": "uses",
+      "name": "Leer",
       "proper": true,
-      "_v": 2
+      "verb": "uses"
     },
     "PP": 15
   },
   "Lick": {
+    "attack": "proficiencyBonus+max(WMO,DMO)",
     "code": {
-      "name": "Lick",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
+            "cantripScale": null,
             "damage": "DAMAGE+{max(DMO,WMO)} [Ghost]",
-            "overheal": false,
             "higher": null,
-            "cantripScale": null
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You reach out and lick an enemy Pokémon. Make a melee attack roll. On a hit, do 1d6 + MOVE ghost damage. On a natural attack roll of **18** or higher, the target becomes paralyzed."
+        "text": "You reach out and lick an enemy Pokémon. Make a melee attack roll. On a hit, do 1d6 + MOVE ghost damage. On a natural attack roll of **18** or higher, the target becomes paralyzed.",
+        "type": "text"
       }],
-      "verb": "attack with",
+      "name": "Lick",
       "proper": true,
-      "_v": 2
+      "verb": "attack with"
     },
-    "attack": "proficiencyBonus+max(WMO,DMO)",
     "damage": {
       "1": "1d6",
       "5": "1d10",
@@ -1210,40 +1210,40 @@
   },
   "Light Of Ruin": {
     "code": {
-      "name": "Light of Ruin",
+      "_v": 2,
       "automation": [{
-        "type": "target",
+        "effects": [{
+          "damage": "{Damage}/2",
+          "type": "damage"
+        }],
+        "target": "self",
+        "type": "target"
+      }, {
+        "effects": [{
+          "dc": "{8+proficiencyBonus+max(DMO,ChMO)}",
+          "fail": [{
+            "damage": "{Damage}+{max(DMO,ChMO)} [Fairy]",
+            "type": "damage"
+          }],
+          "stat": "dex",
+          "success": [{
+            "damage": "({Damage}+{max(DMO,ChMO)})/2 [Fairy]",
+            "type": "damage"
+          }],
+          "type": "save"
+        }],
         "meta": [{
-          "type": "roll",
           "dice": "DAMAGE",
-          "name": "Damage"
+          "name": "Damage",
+          "type": "roll"
         }],
         "target": "all",
-        "effects": [{
-          "type": "save",
-          "stat": "dex",
-          "fail": [{
-            "type": "damage",
-            "damage": "{Damage}+{max(DMO,ChMO)} [Fairy]"
-          }],
-          "success": [{
-            "type": "damage",
-            "damage": "({Damage}+{max(DMO,ChMO)})/2 [Fairy]"
-          }],
-          "dc": "{8+proficiencyBonus+max(DMO,ChMO)}"
-        }]
+        "type": "target"
       }, {
-        "type": "target",
-        "target": "self",
-        "effects": [{
-          "type": "damage",
-          "damage": "{Damage}/2"
-        }]
-      }, {
-        "type": "text",
-        "text": "You draw forth a powerful natural essence, concentrating it into a beam of light 80ft long and 5 feet wide. Any creature caught in the blast must make a DEX saving throw against your Move DC, taking 2d12 + MOVE fairy damage on a failure, or half as much on a success. The user takes damage equal to half the damage roll in typeless recoil damage."
+        "text": "You draw forth a powerful natural essence, concentrating it into a beam of light 80ft long and 5 feet wide. Any creature caught in the blast must make a DEX saving throw against your Move DC, taking 2d12 + MOVE fairy damage on a failure, or half as much on a success. The user takes damage equal to half the damage roll in typeless recoil damage.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Light of Ruin",
       "proper": true,
       "verb": null
     },
@@ -1257,16 +1257,16 @@
   },
   "Light Screen": {
     "code": {
-      "name": "Light Screen",
-      "automation": [{
-        "type": "target",
-        "target": "self",
-        "effects": []
-      }, {
-        "type": "text",
-        "text": "When you are hit by a ranged attack, use your reaction to take half the damage dealt."
-      }],
       "_v": 2,
+      "automation": [{
+        "effects": [],
+        "target": "self",
+        "type": "target"
+      }, {
+        "text": "When you are hit by a ranged attack, use your reaction to take half the damage dealt.",
+        "type": "text"
+      }],
+      "name": "Light Screen",
       "proper": false,
       "verb": "puts up"
     },
@@ -1274,22 +1274,22 @@
   },
   "Lock-On": {
     "code": {
-      "name": "Lock-On",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Locked-On",
           "duration": "2",
           "effects": "",
-          "end": true
-        }]
+          "end": true,
+          "name": "Locked-On",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You hone in on your target, ready to strike. When this move is activated, a single attack roll you make next turn is guaranteed to hit. You may roll to see if you crit or cause an effect from a high roll. This move does not affect one-shot moves like Fissure, Guillotine, etc.\n"
+        "text": "You hone in on your target, ready to strike. When this move is activated, a single attack roll you make next turn is guaranteed to hit. You may roll to see if you crit or cause an effect from a high roll. This move does not affect one-shot moves like Fissure, Guillotine, etc.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Lock-On",
       "proper": false,
       "verb": "hones in with"
     },
@@ -1297,60 +1297,60 @@
   },
   "Lovely Kiss": {
     "code": {
-      "name": "Lovely Kiss",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "all",
         "effects": [{
-          "type": "save",
-          "stat": "cha",
+          "dc": "{8+proficiencyBonus+max(WMO,ChMO)}",
           "fail": [{
-            "type": "ieffect",
-            "name": "Asleep",
             "duration": "4",
             "effects": "",
-            "end": false
+            "end": false,
+            "name": "Asleep",
+            "type": "ieffect"
           }],
+          "stat": "cha",
           "success": [],
-          "dc": "{8+proficiencyBonus+max(WMO,ChMO)}"
-        }]
+          "type": "save"
+        }],
+        "target": "all",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You blow a kiss to a creature, attempting to put the target to sleep. The target must make a CHA save against your Move DC, falling asleep on a failure."
+        "text": "You blow a kiss to a creature, attempting to put the target to sleep. The target must make a CHA save against your Move DC, falling asleep on a failure.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Lovely Kiss",
       "proper": true,
       "verb": null
     },
     "PP": 3
   },
   "Low Kick": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Low Kick",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
+            "cantripScale": null,
             "damage": "DAMAGE[Fighting]",
-            "overheal": false,
             "higher": null,
-            "cantripScale": null
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You kick out at a Pokémon’s lower half, dealing damage and attempting to knock it off balance. Make a melee attack, doing 1d8 + MOVE fighting damage on a hit. If the natural attack roll is 19 or 20, the target flinches."
+        "text": "You kick out at a Pokémon’s lower half, dealing damage and attempting to knock it off balance. Make a melee attack, doing 1d8 + MOVE fighting damage on a hit. If the natural attack roll is 19 or 20, the target flinches.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Low Kick",
       "proper": false,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d8+{max(SMO,DMO)}",
       "5": "1d10+{max(SMO,DMO)}",
@@ -1360,47 +1360,47 @@
     "PP": 10
   },
   "Low Sweep": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Low Sweep",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Fighting]"
+            "damage": "DAMAGE[Fighting]",
+            "type": "damage"
           }, {
-            "type": "save",
-            "meta": [{
-              "type": "roll",
-              "dice": "1d4",
-              "name": "Rounds",
-              "hidden": true
-            }],
-            "stat": "str",
+            "dc": "{8+ATTACK}",
             "fail": [{
-              "type": "ieffect",
-              "name": "Prone",
               "duration": "{Rounds}",
               "effects": "",
-              "end": true
+              "end": true,
+              "name": "Prone",
+              "type": "ieffect"
             }],
+            "meta": [{
+              "dice": "1d4",
+              "hidden": true,
+              "name": "Rounds",
+              "type": "roll"
+            }],
+            "stat": "str",
             "success": [],
-            "dc": "{8+ATTACK}"
+            "type": "save"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You sweep your legs at the lower half of an opponent's body. Make a melee attack roll, dealing 1d10 + MOVE fighting damage on a hit. On a hit, target must succeed on a STR save against your Move DC or be knocked prone."
+        "text": "You sweep your legs at the lower half of an opponent's body. Make a melee attack roll, dealing 1d10 + MOVE fighting damage on a hit. On a hit, target must succeed on a STR save against your Move DC or be knocked prone.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Low Sweep",
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d10+{max(SMO,DMO)}",
       "5": "2d8+{+max(SMO,DMO)}",
@@ -1411,12 +1411,12 @@
   },
   "Lucky Chant": {
     "code": {
-      "name": "Lucky Chant",
-      "automation": [{
-        "type": "text",
-        "text": "When an opponent scores a critical hit on you, you may use your reaction to quickly recite a magical incantation that treats the attack like a normal hit, preventing the extra damage."
-      }],
       "_v": 2,
+      "automation": [{
+        "text": "When an opponent scores a critical hit on you, you may use your reaction to quickly recite a magical incantation that treats the attack like a normal hit, preventing the extra damage.",
+        "type": "text"
+      }],
+      "name": "Lucky Chant",
       "proper": false,
       "verb": "recites"
     },
@@ -1424,48 +1424,48 @@
   },
   "Lunar Dance": {
     "code": {
-      "name": "Lunar Dance",
-      "automation": [{
-        "type": "target",
-        "target": "self",
-        "effects": [{
-          "type": "damage",
-          "damage": "{max_hp}"
-        }]
-      }, {
-        "type": "text",
-        "text": "You sacrifice yourself for another one of your trainer's Pokémon. When activating this move, the user faints, but the next creature released by its trainer is fully healed and cured of any status effects."
-      }],
       "_v": 2,
+      "automation": [{
+        "effects": [{
+          "damage": "{max_hp}",
+          "type": "damage"
+        }],
+        "target": "self",
+        "type": "target"
+      }, {
+        "text": "You sacrifice yourself for another one of your trainer's Pokémon. When activating this move, the user faints, but the next creature released by its trainer is fully healed and cured of any status effects.",
+        "type": "text"
+      }],
+      "name": "Lunar Dance",
       "proper": false,
       "verb": "does"
     },
     "PP": 5
   },
   "Lunge": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Lunge",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "proficiencyBonus+(DMO)",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE [Bug]"
+            "damage": "DAMAGE [Bug]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "proficiencyBonus+(DMO)"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "The user makes a lunge at the target, attacking with full force. Make a melee attack, doing 2d6 + MOVE Bug damage on a hit. If the Natural attack roll is 15 or more, the target has disadvantage in its next attack."
+        "text": "The user makes a lunge at the target, attacking with full force. Make a melee attack, doing 2d6 + MOVE Bug damage on a hit. If the Natural attack roll is 15 or more, the target has disadvantage in its next attack.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Lunge",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "2d6+{DMO}",
       "5": "2d8+{DMO}",
@@ -1475,29 +1475,29 @@
     "PP": 10
   },
   "Luster Purge": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Luster Purge",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Psychic]"
+            "damage": "DAMAGE[Psychic]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You create a blinding bright light that damages a target's eyes and may lower their defense. Make a ranged attack against an opponent, dealing 1d12 + MOVE psychic damage on a hit. On a natural attack roll of 18 or more, any attack against this target has advantage until the end of your next turn."
+        "text": "You create a blinding bright light that damages a target's eyes and may lower their defense. Make a ranged attack against an opponent, dealing 1d12 + MOVE psychic damage on a hit. On a natural attack roll of 18 or more, any attack against this target has advantage until the end of your next turn.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Luster Purge",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d12+{DMO}",
       "5": "2d8+{DMO}",
@@ -1507,29 +1507,29 @@
     "PP": 3
   },
   "Mach Punch": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Mach Punch",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE [Fighting]"
+            "damage": "DAMAGE [Fighting]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You rush forward to punch with incredible speed. Choose a target within 10 feet of you. You rush forward to slam a fist into the creature, avoiding all attacks of opportunity. Make a melee attack on that creature, dealing 1d4 Fighting damage on a hit.\n"
+        "text": "You rush forward to punch with incredible speed. Choose a target within 10 feet of you. You rush forward to slam a fist into the creature, avoiding all attacks of opportunity. Make a melee attack on that creature, dealing 1d4 Fighting damage on a hit.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mach Punch",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d4",
       "5": "1d6",
@@ -1540,22 +1540,22 @@
   },
   "Magic Coat": {
     "code": {
-      "name": "Magic Coat",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "ieffect",
-          "name": "Copied Status Effect",
           "duration": "-1",
           "effects": "",
-          "end": false
-        }]
+          "end": false,
+          "name": "Copied Status Effect",
+          "type": "ieffect"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "A flash of magical energy forms between you and an opponent, reflecting negative energy back at an attacker in range. When an attack from an opponent causes you to suffer from a negative status condition, they are also affected by the same condition.\n"
+        "text": "A flash of magical energy forms between you and an opponent, reflecting negative energy back at an attacker in range. When an attack from an opponent causes you to suffer from a negative status condition, they are also affected by the same condition.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Magic Coat",
       "proper": true,
       "verb": null
     },
@@ -1563,23 +1563,23 @@
   },
   "Magic Room": {
     "code": {
-      "name": "Magic Room",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "No Held Items Allowed",
+          "conc": true,
           "duration": "5",
           "effects": "",
           "end": false,
-          "conc": true
-        }]
+          "name": "No Held Items Allowed",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You employ your psychic power to suppress the effect of all held moves in a 50 foot circle, centered on you."
+        "text": "You employ your psychic power to suppress the effect of all held moves in a 50 foot circle, centered on you.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Magic Room",
       "proper": false,
       "verb": "creates"
     },
@@ -1587,22 +1587,22 @@
   },
   "Magical Leaf": {
     "code": {
-      "name": "Magical Leaf",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "all",
         "effects": [{
-          "type": "damage",
           "damage": "DAMAGE[Grass]",
-          "overheal": false
-        }]
+          "overheal": false,
+          "type": "damage"
+        }],
+        "target": "all",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You summon a sharp, magical leaf that strikes an opponent. This move is guaranteed to hit for 1d6 MOVE Grass damage, unless during the invulnerable stage of Fly, Dig, Bounce Dive, ect. Moves."
+        "text": "You summon a sharp, magical leaf that strikes an opponent. This move is guaranteed to hit for 1d6 MOVE Grass damage, unless during the invulnerable stage of Fly, Dig, Bounce Dive, ect. Moves.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Magical Leaf",
       "proper": false,
-      "_v": 2
+      "verb": null
     },
     "damage": {
       "1": "1d6+{DMO}",
@@ -1614,29 +1614,29 @@
   },
   "Magma Storm": {
     "code": {
-      "name": "Magma Storm",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Pass Con Save (DC #)",
+          "conc": true,
           "duration": "10",
           "effects": "-attack \"|4d4+{SMO} [Fire]|\"",
           "end": false,
-          "conc": true
+          "name": "Pass Con Save (DC #)",
+          "type": "ieffect"
         }, {
-          "type": "ieffect",
-          "name": "Fail Con Save",
           "duration": "10",
           "effects": "-attack \"|(4d4+{SMO})/2 [Fire]|\" -parent \"User|Pass Con Save\"",
-          "end": false
-        }]
+          "end": false,
+          "name": "Fail Con Save",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You stir up a maelstrom of fire in a 20 foot circle, centered on a point within range, that continues to rage as long as you hold your concentration. Any creature that starts their turn in the storm must make a CON save against your Move DC, taking 4d4 + MOVE fire damage on a failure, or half as much on a success.\n"
+        "text": "You stir up a maelstrom of fire in a 20 foot circle, centered on a point within range, that continues to rage as long as you hold your concentration. Any creature that starts their turn in the storm must make a CON save against your Move DC, taking 4d4 + MOVE fire damage on a failure, or half as much on a success.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Magma Storm",
       "proper": true,
       "verb": null
     },
@@ -1644,19 +1644,19 @@
   },
   "Magnet Bomb": {
     "code": {
-      "name": "Magnet Bomb",
-      "automation": [{
-        "type": "target",
-        "target": "each",
-        "effects": [{
-          "type": "damage",
-          "damage": "DAMAGE[Steel]"
-        }]
-      }, {
-        "type": "text",
-        "text": "You hurl a steel ball that seeks out an opponent in range, never missing. This move is guaranteed to hit for 1d6 + MOVE steel damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
-      }],
       "_v": 2,
+      "automation": [{
+        "effects": [{
+          "damage": "DAMAGE[Steel]",
+          "type": "damage"
+        }],
+        "target": "each",
+        "type": "target"
+      }, {
+        "text": "You hurl a steel ball that seeks out an opponent in range, never missing. This move is guaranteed to hit for 1d6 + MOVE steel damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves.",
+        "type": "text"
+      }],
+      "name": "Magnet Bomb",
       "proper": false,
       "verb": null
     },
@@ -1670,23 +1670,23 @@
   },
   "Magnet Rise": {
     "code": {
-      "name": "Magnetic Rise",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Risen",
+          "conc": true,
           "duration": "10",
           "effects": "-immune Ground",
           "end": false,
-          "conc": true
-        }]
+          "name": "Risen",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You use magnetic power within yourself to raise yourself from the ground, becoming immune to ground moves for the duration."
+        "text": "You use magnetic power within yourself to raise yourself from the ground, becoming immune to ground moves for the duration.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Magnetic Rise",
       "proper": true,
       "verb": "uses"
     },
@@ -1694,96 +1694,96 @@
   },
   "Magnetic Flux": {
     "code": {
-      "name": "Magnetic Flux",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Flux",
+          "conc": false,
           "duration": "1",
           "effects": "",
           "end": false,
-          "conc": false
-        }]
+          "name": "Flux",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You use your electric energy to manipulate magnetic fields. Until the beginning of your next turn, any creature in range with the Plus or Minus ability gains a bonus to their AC equal to your proficiency modifier, and any saving throw they are forced to make is rolled with advantage."
+        "text": "You use your electric energy to manipulate magnetic fields. Until the beginning of your next turn, any creature in range with the Plus or Minus ability gains a bonus to their AC equal to your proficiency modifier, and any saving throw they are forced to make is rolled with advantage.",
+        "type": "text"
       }, {
-        "type": "text",
-        "text": "`!i effect Target Fluxed -ac +{proficiencyBonus} -parent \"User|Flux\"` For plus or minus pokemon"
+        "text": "`!i effect Target Fluxed -ac +{proficiencyBonus} -parent \"User|Flux\"` For plus or minus pokemon",
+        "type": "text"
       }],
-      "verb": "sends out",
+      "name": "Magnetic Flux",
       "proper": false,
-      "_v": 2
+      "verb": "sends out"
     },
     "PP": 10
   },
   "Magnitude": {
+    "attack": "proficiencyBonus+SMO",
     "code": {
-      "name": "Magnitude",
+      "_v": 2,
       "automation": [{
-        "type": "text",
-        "meta": [],
-        "text": "You shake the ground with an earth-shattering quake. All creatures in range must make a DEX save against your Move DC, taking half damage on a success and full damage on a fail. Creatures in range that are burrowed or in the invulnerable stage of Dig take double damage from this move. Roll a d100 on the table below to determine damage. Raised creatures are immune to the effects and damage of this move.\n\n| d100 | Damage |\n| 01-05 | 1d4+MOVE |\n| 06-15 | 1d8+MOVE |\n| 16-35 | 1d10+MOVE |\n| 36-65 | 1d12+MOVE |\n| 66-85 | 2d6+MOVE |\n| 86-95 | 2d8+MOVE |\n| 96-100 | 2d12+MOVE |"
-      }, {
-        "type": "target",
-        "meta": [{
-          "type": "roll",
-          "meta": [],
-          "dice": "1d20",
-          "name": "Power",
-          "hidden": true
-        }],
-        "target": "all",
         "effects": [{
-          "type": "variable",
-          "meta": [],
-          "name": "multiplier",
-          "value": "1 if level<5 else 2 if level<10 else 3 if level<17 else 4"
-        }, {
-          "type": "save",
+          "dc": "{8+ATTACK}",
+          "fail": [{
+            "damage": "{multiplier}*{{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{SMO} [Ground]",
+            "meta": [],
+            "overheal": false,
+            "type": "damage"
+          }],
           "meta": [],
           "stat": "dex",
-          "fail": [{
-            "type": "damage",
-            "meta": [],
-            "damage": "{multiplier}*{{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{SMO} [Ground]",
-            "overheal": false
-          }],
           "success": [{
-            "type": "damage",
-            "meta": [],
             "damage": "{multiplier}*({{\"1d4\" if Power == \"1\" else \"1d8\" if Power == \"2\" else \"1d8\" if Power == \"3\" else \"1d10\" if Power == \"4\" else \"1d10\" if Power == \"5\" else \"1d10\" if Power == \"6\" else \"1d10\" if Power == \"7\" else \"1d12\" if Power == \"8\" else \"1d12\" if Power == \"9\" else \"1d12\" if Power == \"10\" else \"1d12\" if Power == \"11\" else \"1d12\" if Power == \"12\" else \"1d12\" if Power == \"13\" else \"2d6\" if Power == \"14\" else \"2d6\" if Power == \"15\" else \"2d6\" if Power == \"16\" else \"2d6\" if Power == \"17\" else \"2d8\" if Power == \"18\" else \"2d8\" if Power == \"19\" else \"2d12\"}}+{SMO})/2 [Ground]",
-            "overheal": false
+            "meta": [],
+            "overheal": false,
+            "type": "damage"
           }],
-          "dc": "{8+ATTACK}"
-        }]
+          "type": "save"
+        }, {
+          "meta": [],
+          "name": "multiplier",
+          "type": "variable",
+          "value": "1 if level<5 else 2 if level<10 else 3 if level<17 else 4"
+        }],
+        "meta": [{
+          "dice": "1d20",
+          "hidden": true,
+          "meta": [],
+          "name": "Power",
+          "type": "roll"
+        }],
+        "target": "all",
+        "type": "target"
+      }, {
+        "meta": [],
+        "text": "You shake the ground with an earth-shattering quake. All creatures in range must make a DEX save against your Move DC, taking half damage on a success and full damage on a fail. Creatures in range that are burrowed or in the invulnerable stage of Dig take double damage from this move. Roll a d100 on the table below to determine damage. Raised creatures are immune to the effects and damage of this move.\n\n| d100 | Damage |\n| 01-05 | 1d4+MOVE |\n| 06-15 | 1d8+MOVE |\n| 16-35 | 1d10+MOVE |\n| 36-65 | 1d12+MOVE |\n| 66-85 | 2d6+MOVE |\n| 86-95 | 2d8+MOVE |\n| 96-100 | 2d12+MOVE |",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Magnitude",
       "proper": true
     },
-    "attack": "proficiencyBonus+SMO",
     "PP": 5
   },
   "Mat Block": {
     "code": {
-      "name": "Mat Block",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "all",
         "effects": [{
-          "type": "ieffect",
-          "name": "All Damage Immunity",
           "duration": "2",
           "effects": "",
-          "end": true
-        }]
+          "end": true,
+          "name": "All Damage Immunity",
+          "type": "ieffect"
+        }],
+        "target": "all",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You conjure up a ethereal, protective mat to shield you and your allies. Until the end of your next turn, any ally creature within 15 feet of you (including you) is immune to damage from damaging moves. Status-inducing moves can still affect their targets."
+        "text": "You conjure up a ethereal, protective mat to shield you and your allies. Until the end of your next turn, any ally creature within 15 feet of you (including you) is immune to damage from damaging moves. Status-inducing moves can still affect their targets.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mat Block",
       "proper": false,
       "verb": "sets up"
     },
@@ -1791,12 +1791,12 @@
   },
   "Me First": {
     "code": {
-      "name": "Me First",
-      "automation": [{
-        "type": "text",
-        "text": "When targeted by a move that isn't Fake Out or Sucker Punch, you may use your reaction to copy the opponent's move against it before it makes the attack. If the attack requires a roll, you have disadvantage. On a hit, double the damage dice for the move. The damage/effect tier for the move is based off of your level, not the opponent's."
-      }],
       "_v": 2,
+      "automation": [{
+        "text": "When targeted by a move that isn't Fake Out or Sucker Punch, you may use your reaction to copy the opponent's move against it before it makes the attack. If the attack requires a roll, you have disadvantage. On a hit, double the damage dice for the move. The damage/effect tier for the move is based off of your level, not the opponent's.",
+        "type": "text"
+      }],
+      "name": "Me First",
       "proper": true,
       "verb": "uses"
     },
@@ -1804,28 +1804,28 @@
   },
   "Mean Look": {
     "code": {
-      "name": "Mean Look",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "all",
         "effects": [{
-          "type": "save",
-          "stat": "wis",
+          "dc": "{8+proficiencyBonus+max(SMO,ChMO)}",
           "fail": [{
-            "type": "ieffect",
-            "name": "Trapped",
             "duration": "4",
             "effects": "",
-            "end": false
+            "end": false,
+            "name": "Trapped",
+            "type": "ieffect"
           }],
+          "stat": "wis",
           "success": [],
-          "dc": "{8+proficiencyBonus+max(SMO,ChMO)}"
-        }]
+          "type": "save"
+        }],
+        "target": "all",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You flash an intimidating look at a target, attempting to freeze them in fear. Force a target in range to make a WIS save against your Move DC. On a fail, the target cannot flee or be switched out for 3 rounds."
+        "text": "You flash an intimidating look at a target, attempting to freeze them in fear. Force a target in range to make a WIS save against your Move DC. On a fail, the target cannot flee or be switched out for 3 rounds.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mean Look",
       "proper": false,
       "verb": "makes"
     },
@@ -1833,52 +1833,52 @@
   },
   "Meditate": {
     "code": {
-      "name": "Meditate",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Inner Peace",
+          "conc": true,
           "duration": "10",
           "effects": "-b {proficiencyBonus} -sb {proficiencyBonus}",
           "end": false,
-          "conc": true
-        }]
+          "name": "Inner Peace",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You become one with your inner self. For the duration, double your proficiency bonus when it comes to attack rolls and saving throws."
+        "text": "You become one with your inner self. For the duration, double your proficiency bonus when it comes to attack rolls and saving throws.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Meditate",
       "proper": true,
       "verb": "tries to"
     },
     "PP": 20
   },
   "Mega Drain": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Mega Drain",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Grass]"
+            "damage": "DAMAGE[Grass]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You attempt to drain the life force of an enemy Pokémon. Make a ranged attack on a target, doing 1d6 + MOVE grass damage on a hit. Half of the damage dealt is restored to the user."
+        "text": "You attempt to drain the life force of an enemy Pokémon. Make a ranged attack on a target, doing 1d6 + MOVE grass damage on a hit. Half of the damage dealt is restored to the user.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mega Drain",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d6+{max(SMO,DMO)}",
       "5": "1d12+{max(SMO,DMO)}",
@@ -1888,29 +1888,29 @@
     "PP": 10
   },
   "Mega Kick": {
+    "attack": "proficiencyBonus+SMO",
     "code": {
-      "name": "Mega Kick",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE[Normal]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You strike out with a hard kick. Make a melee attack against a target, doing 2d10 + MOVE normal damage on a hit.\n"
+        "text": "You strike out with a hard kick. Make a melee attack against a target, doing 2d10 + MOVE normal damage on a hit.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mega Kick",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+SMO",
     "damage": {
       "1": "2d10+{SMO}",
       "5": "3d8+{SMO}",
@@ -1920,29 +1920,29 @@
     "PP": 10
   },
   "Mega Punch": {
+    "attack": "proficiencyBonus+SMO",
     "code": {
-      "name": "Mega Punch",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Normal]"
+            "damage": "DAMAGE[Normal]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You strike out with a hard punch Make a melee attack against a target, doing 2d6 + MOVE normal damage on a hit."
+        "text": "You strike out with a hard punch Make a melee attack against a target, doing 2d6 + MOVE normal damage on a hit.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mega Punch",
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+SMO",
     "damage": {
       "1": "2d6+{SMO}",
       "5": "2d8+{SMO}",
@@ -1952,46 +1952,46 @@
     "PP": 15
   },
   "Megahorn": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Megahorn",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "1d4",
-          "name": "Prone"
-        }],
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Bug]"
+            "damage": "DAMAGE[Bug]",
+            "type": "damage"
           }, {
-            "type": "save",
-            "stat": "str",
+            "dc": "{8+ATTACK}",
             "fail": [{
-              "type": "ieffect",
-              "name": "Prone",
               "duration": "{Prone}",
               "effects": "",
-              "end": false
+              "end": false,
+              "name": "Prone",
+              "type": "ieffect"
             }],
+            "stat": "str",
             "success": [],
-            "dc": "{8+ATTACK}"
+            "type": "save"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "meta": [{
+          "dice": "1d4",
+          "name": "Prone",
+          "type": "roll"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You charge an opponent for a devastating horn attack. Make a melee attack roll, doing 2d10 + MOVE bug damage on a hit. If the user moves at least 20 feet towards a target before using this move, the target is forced to make a STR save against your Move DC or be knocked prone."
+        "text": "You charge an opponent for a devastating horn attack. Make a melee attack roll, doing 2d10 + MOVE bug damage on a hit. If the user moves at least 20 feet towards a target before using this move, the target is forced to make a STR save against your Move DC or be knocked prone.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Megahorn",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "2d10+{max(SMO,DMO)}",
       "5": "3d8+{max(SMO,DMO)}",
@@ -2002,89 +2002,89 @@
   },
   "Memento": {
     "code": {
-      "name": "Memento",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "all",
         "effects": [{
-          "type": "ieffect",
-          "name": "Memento",
+          "damage": "999",
+          "type": "damage"
+        }],
+        "target": "self",
+        "type": "target"
+      }, {
+        "effects": [{
           "duration": "3",
           "effects": "",
-          "end": false
-        }]
+          "end": false,
+          "name": "Memento",
+          "type": "ieffect"
+        }],
+        "target": "all",
+        "type": "target"
       }, {
-        "type": "target",
-        "target": "self",
-        "effects": [{
-          "type": "damage",
-          "damage": "999"
-        }]
-      }, {
-        "type": "text",
-        "text": "You sacrifice your life force to leave a lasting mark on an enemy. When you activate this move, you touch an opponent and drop to 0 hit points. As a result, the opponent is incapacitated for 2 rounds. All attacks against it have advantage, it automatically fails all STR and DEX saving throws, and it cannot attack, move, flee, or be switched out."
+        "text": "You sacrifice your life force to leave a lasting mark on an enemy. When you activate this move, you touch an opponent and drop to 0 hit points. As a result, the opponent is incapacitated for 2 rounds. All attacks against it have advantage, it automatically fails all STR and DEX saving throws, and it cannot attack, move, flee, or be switched out.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Memento",
       "proper": true,
       "verb": "uses"
     },
     "PP": 3
   },
   "Metal Burst": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Metal Burst",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
-          "meta": [{
-            "type": "roll",
-            "dice": "DAMAGE",
-            "name": "Max Damage"
-          }],
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Steel]"
+            "damage": "DAMAGE[Steel]",
+            "type": "damage"
+          }],
+          "meta": [{
+            "dice": "DAMAGE",
+            "name": "Max Damage",
+            "type": "roll"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You lash out in retaliation with a bust of harsh metal shards. You invoke a fight within to retaliate against a foe that damages you. As a reaction, when you are hit with a melee attack that deals damage, make a melee attack roll against your attacker, with disadvantage. On a hit, deal the same amount of fighting type damage back at your attacker (maximum of 5x your current level)."
+        "text": "You lash out in retaliation with a bust of harsh metal shards. You invoke a fight within to retaliate against a foe that damages you. As a reaction, when you are hit with a melee attack that deals damage, make a melee attack roll against your attacker, with disadvantage. On a hit, deal the same amount of fighting type damage back at your attacker (maximum of 5x your current level).",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Metal Burst",
       "proper": false,
       "verb": "lets out"
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "PP": 3
   },
   "Metal Claw": {
+    "attack": "proficiencyBonus+SMO",
     "code": {
-      "name": "Metal Claw",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Steel]"
+            "damage": "DAMAGE[Steel]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You strike out with sharp claws. Make a melee attack roll against an opponent, doing 1d8 + MOVE steel damage on a hit. If the natural attack roll is 19 or 20, your next attack gets an additional +1 to hit."
+        "text": "You strike out with sharp claws. Make a melee attack roll against an opponent, doing 1d8 + MOVE steel damage on a hit. If the natural attack roll is 19 or 20, your next attack gets an additional +1 to hit.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Metal Claw",
       "proper": false,
       "verb": null
     },
-    "attack": "proficiencyBonus+SMO",
     "damage": {
       "1": "1d8+{SMO}",
       "5": "2d6+{SMO}",
@@ -2095,57 +2095,57 @@
   },
   "Metal Sound": {
     "code": {
-      "name": "Metal Sound",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "save",
-          "stat": "con",
+          "dc": "{8+proficiencyBonus+max(SMO,DMO)}",
           "fail": [{
-            "type": "ieffect",
-            "name": "Metal Sound (+5 to attacks against)",
             "duration": 1,
             "effects": "",
-            "end": true
+            "end": true,
+            "name": "Metal Sound (+5 to attacks against)",
+            "type": "ieffect"
           }, {
-            "type": "text",
-            "text": "You emit an ear-shattering high pitched sound that only your target can hear, leaving them in a defenseless state. When activating this move, a target must make a CON saving throw against your Move DC. On a failure, all attack rolls against the target are given a +5 bonus until the end of your next turn."
+            "text": "You emit an ear-shattering high pitched sound that only your target can hear, leaving them in a defenseless state. When activating this move, a target must make a CON saving throw against your Move DC. On a failure, all attack rolls against the target are given a +5 bonus until the end of your next turn.",
+            "type": "text"
           }],
+          "stat": "con",
           "success": [],
-          "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
-        }]
+          "type": "save"
+        }],
+        "target": "each",
+        "type": "target"
       }],
-      "_v": 2,
+      "name": "Metal Sound",
       "proper": false,
       "verb": null
     },
     "PP": 5
   },
   "Meteor Mash": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Meteor Mash",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Steel]"
+            "damage": "DAMAGE[Steel]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You smash an opponent with a fist as fast as a meteor strike. Make a melee attack against an opponent, doing 2d8 + MOVE steel damage on a hit. If the natural attack roll is 18 or higher, your next attack has advantage.\n"
+        "text": "You smash an opponent with a fist as fast as a meteor strike. Make a melee attack against an opponent, doing 2d8 + MOVE steel damage on a hit. If the natural attack roll is 18 or higher, your next attack has advantage.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Meteor Mash",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "2d8+{max(SMO,DMO)}",
       "5": "2d10+{max(SMO,DMO)}",
@@ -2156,12 +2156,12 @@
   },
   "Metronome": {
     "code": {
-      "name": "Metronome",
-      "automation": [{
-        "type": "text",
-        "text": "You summon a move at random to inflict against the enemy. When you use this move, roll a d100. The resulting number is the TM number for the move you make. If the move is unable to be completed because of positioning, range, etc., Metronome fails."
-      }],
       "_v": 2,
+      "automation": [{
+        "text": "You summon a move at random to inflict against the enemy. When you use this move, roll a d100. The resulting number is the TM number for the move you make. If the move is unable to be completed because of positioning, range, etc., Metronome fails.",
+        "type": "text"
+      }],
+      "name": "Metronome",
       "proper": true,
       "verb": "uses"
     },
@@ -2169,44 +2169,44 @@
   },
   "Milk Drink": {
     "code": {
-      "name": "Milk Drink",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "damage",
           "damage": "-(8d6+{CoMO}) [Healing]",
-          "overheal": false
-        }]
+          "overheal": false,
+          "type": "damage"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You create a tasty drink that heals your or an ally’s wounds. The recipient gains 2d6 + MOVE hit points."
+        "text": "You create a tasty drink that heals your or an ally’s wounds. The recipient gains 2d6 + MOVE hit points.",
+        "type": "text"
       }],
-      "verb": "enjoys a tasty",
+      "name": "Milk Drink",
       "proper": true,
-      "_v": 2
+      "verb": "enjoys a tasty"
     },
     "PP": 5
   },
   "Mimic": {
     "code": {
-      "name": "Mimic",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Copied Move",
+          "conc": true,
           "duration": "10",
           "effects": "",
           "end": false,
-          "conc": true
-        }]
+          "name": "Copied Move",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You copy another creature's movements, learning its ways in battle. When used, this move is temporarily replaced by your choice of one of the target's moves. The target can be an ally. After one PP is subtracted to use this move, the replacement move will retain Mimic's remaining PP. The user can select any of the target's moves to copy for the duration."
+        "text": "You copy another creature's movements, learning its ways in battle. When used, this move is temporarily replaced by your choice of one of the target's moves. The target can be an ally. After one PP is subtracted to use this move, the replacement move will retain Mimic's remaining PP. The user can select any of the target's moves to copy for the duration.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mimic",
       "proper": true,
       "verb": null
     },
@@ -2214,22 +2214,22 @@
   },
   "Mind Reader": {
     "code": {
-      "name": "Mind Reader",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "1 Guarenteed Hit",
           "duration": "2",
           "effects": "",
-          "end": true
-        }]
+          "end": true,
+          "name": "1 Guarenteed Hit",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You sense the motives and moves of a creature around you. When this move is activated, a single attack roll you make next turn is guaranteed to hit. You may roll to see if you crit or cause an effect from a high roll. This move does not affect one-shot moves like Fissure, Guillotine, etc."
+        "text": "You sense the motives and moves of a creature around you. When this move is activated, a single attack roll you make next turn is guaranteed to hit. You may roll to see if you crit or cause an effect from a high roll. This move does not affect one-shot moves like Fissure, Guillotine, etc.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mind Reader",
       "proper": false,
       "verb": "is"
     },
@@ -2237,23 +2237,23 @@
   },
   "Minimize": {
     "code": {
-      "name": "Minimize",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Tiny",
+          "conc": true,
           "duration": "10",
           "effects": "-ac +2",
           "end": false,
-          "conc": true
-        }]
+          "name": "Tiny",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You appear smaller to your opponents, increasing your evasion. For the duration, you gain an additional +2 to your AC."
+        "text": "You appear smaller to your opponents, increasing your evasion. For the duration, you gain an additional +2 to your AC.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Minimize",
       "proper": true,
       "verb": "shrinks with"
     },
@@ -2261,28 +2261,28 @@
   },
   "Miracle Eye": {
     "code": {
-      "name": "Miracle Eye",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "all",
         "effects": [{
-          "type": "save",
-          "stat": "wis",
+          "dc": "{8+proficiencyBonus+max(WMO,IMO)}",
           "fail": [{
-            "type": "ieffect",
-            "name": "Seen",
             "duration": "11",
             "effects": "",
-            "end": false
+            "end": false,
+            "name": "Seen",
+            "type": "ieffect"
           }],
+          "stat": "wis",
           "success": [],
-          "dc": "{8+proficiencyBonus+max(WMO,IMO)}"
-        }]
+          "type": "save"
+        }],
+        "target": "all",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You flash your eyes at your opponent, stunning them briefly and lowering their defenses. When activating this move, choose a target in range and force them to make a WIS save against your Move DC. On a failure, any modifiers to their AC are reset, and if they are Dark or Ghost-type, their immunities are relinquished for the duration.\n"
+        "text": "You flash your eyes at your opponent, stunning them briefly and lowering their defenses. When activating this move, choose a target in range and force them to make a WIS save against your Move DC. On a failure, any modifiers to their AC are reset, and if they are Dark or Ghost-type, their immunities are relinquished for the duration.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Miracle Eye",
       "proper": true,
       "verb": "uses"
     },
@@ -2290,24 +2290,24 @@
   },
   "Mirror Coat": {
     "code": {
-      "name": "Mirror Coat",
+      "_v": 2,
       "automation": [{
-        "type": "target",
+        "effects": [{
+          "damage": "-1d6+{max(CoMO,WMO)}",
+          "type": "damage"
+        }],
         "meta": [{
-          "type": "roll",
           "dice": "DAMAGE",
-          "name": "To hit?"
+          "name": "To hit?",
+          "type": "roll"
         }],
         "target": "self",
-        "effects": [{
-          "type": "damage",
-          "damage": "-1d6+{max(CoMO,WMO)}"
-        }]
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "When hit by a ranged attack, you can attempt to decrease the damage and send some back at the attacker in range. Using this reaction, the damage is decreased by 1d6 + MOVE. If this causes the damage to fall below zero, the attack is deflected and you may make a ranged attack roll to send it back at the attacker for the same amount of psychic type damage."
+        "text": "When hit by a ranged attack, you can attempt to decrease the damage and send some back at the attacker in range. Using this reaction, the damage is decreased by 1d6 + MOVE. If this causes the damage to fall below zero, the attack is deflected and you may make a ranged attack roll to send it back at the attacker for the same amount of psychic type damage.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mirror Coat",
       "proper": false,
       "verb": "creates"
     },
@@ -2315,56 +2315,56 @@
   },
   "Mirror Move": {
     "code": {
-      "name": "Mirror Move",
-      "automation": [{
-        "type": "text",
-        "text": "You perform the same move made by a chosen target after your last turn, using your own statistics for bonuses and Move saves if applicable."
-      }],
       "_v": 2,
+      "automation": [{
+        "text": "You perform the same move made by a chosen target after your last turn, using your own statistics for bonuses and Move saves if applicable.",
+        "type": "text"
+      }],
+      "name": "Mirror Move",
       "proper": true,
       "verb": "uses"
     },
     "PP": 10
   },
   "Mirror Shot": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Mirror Shot",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
+            "cantripScale": null,
             "damage": "DAMAGE[Steel]",
-            "overheal": false,
             "higher": null,
-            "cantripScale": null
+            "overheal": false,
+            "type": "damage"
           }, {
-            "type": "save",
-            "stat": "con",
+            "dc": "{8+proficiencyBonus+max(SMO,DMO)}",
             "fail": [{
-              "type": "ieffect",
-              "name": "Disadvantage",
               "duration": "1",
               "effects": "",
-              "end": true
+              "end": true,
+              "name": "Disadvantage",
+              "type": "ieffect"
             }],
+            "stat": "con",
             "success": [],
-            "dc": "{8+proficiencyBonus+max(SMO,DMO)}"
+            "type": "save"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You lose a damaging flash of light from your polished body. Make a ranged attack on an opponent, dealing 1d10 + MOVE steel damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target has disadvantage on its next attack roll."
+        "text": "You lose a damaging flash of light from your polished body. Make a ranged attack on an opponent, dealing 1d10 + MOVE steel damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target has disadvantage on its next attack roll.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Mirror Shot",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d10+{max(SMO,DMO)}",
       "5": "2d8+{max(SMO,DMO)}",
@@ -2375,51 +2375,51 @@
   },
   "Mist": {
     "code": {
-      "name": "Mist",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "ieffect",
-          "name": "Mist",
           "duration": "10",
           "effects": "",
-          "end": true
-        }]
+          "end": true,
+          "name": "Mist",
+          "type": "ieffect"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "A light mist surrounds a target, offering a protective barrier. The target is immune to negative stat effects or modifier changes for the duration, but any current effects are still in place.\n"
+        "text": "A light mist surrounds a target, offering a protective barrier. The target is immune to negative stat effects or modifier changes for the duration, but any current effects are still in place.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mist",
       "proper": false,
       "verb": "creates"
     },
     "PP": 15
   },
   "Mist Ball": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Mist Ball",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Psychic]"
+            "damage": "DAMAGE[Psychic]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You fire an explosive ball of damaging mist at an opponent in range. Make a ranged attack against a target, doing 1d12 + MOVE psychic damage on a hit. If the natural attack roll is higher than 10, the opponent has disadvantage on its next attack.\n"
+        "text": "You fire an explosive ball of damaging mist at an opponent in range. Make a ranged attack against a target, doing 1d12 + MOVE psychic damage on a hit. If the natural attack roll is higher than 10, the opponent has disadvantage on its next attack.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mist Ball",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d12+{max(SMO,DMO)}",
       "5": "2d8+{max(SMO,DMO)}",
@@ -2430,54 +2430,54 @@
   },
   "Misty Terrain": {
     "code": {
-      "name": "Misty Terrain",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Misty Terrain",
           "duration": "3",
           "effects": "",
-          "end": false
-        }]
+          "end": false,
+          "name": "Misty Terrain",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You cover the ground in a thin, healing mist that surrounds a 60 foot circle, centered on you. For 3 turns, no grounded creatures inside the mist can suffer from new status conditions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability."
+        "text": "You cover the ground in a thin, healing mist that surrounds a 60 foot circle, centered on you. For 3 turns, no grounded creatures inside the mist can suffer from new status conditions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Misty Terrain",
       "proper": false,
       "verb": "makes"
     },
     "PP": 5
   },
   "Moonblast": {
+    "attack": "proficiencyBonus+max(DMO,ChMO)",
     "code": {
-      "name": "Moonblast",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
+            "cantripScale": null,
             "damage": "DAMAGE[Fairy]",
-            "overheal": false,
             "higher": null,
-            "cantripScale": null
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You summon forth a powerful moonbeam that strikes an opponent. Make a ranged attack on a target in range, dealing 2d8 + MOVE fairy damage on a hit. On a natural attack roll of 15 or more, the target has disadvantage on its next attack."
+        "text": "You summon forth a powerful moonbeam that strikes an opponent. Make a ranged attack on a target in range, dealing 2d8 + MOVE fairy damage on a hit. On a natural attack roll of 15 or more, the target has disadvantage on its next attack.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Moonblast",
       "proper": false,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(DMO,ChMO)",
     "damage": {
       "1": "2d8+{max(DMO,ChMO)}",
       "5": "2d10+{max(DMO,ChMO)}",
@@ -2486,21 +2486,67 @@
     },
     "PP": 10
   },
+  "Moongeist Beam": {
+    "attack": "proficiencyBonus+max(DMO,WMO)",
+    "code": {
+      "_v": 2,
+      "automation": [{
+        "effects": [{
+          "dc": "8+ATTACK",
+          "fail": [{
+            "damage": "{damage}+{max(DMO,WMO)} [Ghost]",
+            "meta": [],
+            "type": "damage"
+          }],
+          "meta": [],
+          "stat": "dex",
+          "success": [{
+            "damage": "({damage}+{max(DMO,WMO)})/2 [Ghost]",
+            "meta": [],
+            "type": "damage"
+          }],
+          "type": "save"
+        }, {
+          "dice": "DAMAGE",
+          "meta": [],
+          "name": "damage",
+          "type": "roll"
+        }],
+        "meta": [],
+        "target": "all",
+        "type": "target"
+      }, {
+        "meta": [],
+        "text": "You emit a sinister ray that explodes out from you in a 100 foot line, 5 feet wide. All creatures caught in the blast must make a DEX save against your Move DC, taking 5d6 + MOVE ghost damage on a failure or half as much on a success. This attack ignores any of the creature's abilities that would affect the user's ability to hit or deal full damage.",
+        "type": "text"
+      }],
+      "name": "Moongeist Beam",
+      "proper": false,
+      "verb": null
+    },
+    "damage": {
+      "1": "5d6",
+      "5": "4d10",
+      "10": "6d10",
+      "17": "8d12"
+    },
+    "PP": 5
+  },
   "Moonlight": {
     "code": {
-      "name": "Moonlight",
-      "automation": [{
-        "type": "target",
-        "target": "self",
-        "effects": [{
-          "type": "damage",
-          "damage": "-(DAMAGE) [Healing]"
-        }]
-      }, {
-        "type": "text",
-        "text": "A ray of moonlight shines upon you, basking you in healing light. The user gains 2d6 + MOVE hit points.\n"
-      }],
       "_v": 2,
+      "automation": [{
+        "effects": [{
+          "damage": "-(DAMAGE) [Healing]",
+          "type": "damage"
+        }],
+        "target": "self",
+        "type": "target"
+      }, {
+        "text": "A ray of moonlight shines upon you, basking you in healing light. The user gains 2d6 + MOVE hit points.\n",
+        "type": "text"
+      }],
+      "name": "Moonlight",
       "proper": true,
       "verb": "absorbs the"
     },
@@ -2514,63 +2560,63 @@
   },
   "Morning Sun": {
     "code": {
-      "name": "Morning Sun",
-      "automation": [{
-        "type": "target",
-        "target": "self",
-        "effects": [{
-          "type": "damage",
-          "damage": "-(2d6+{max(WMO,CoMO)}) [Healing]"
-        }]
-      }, {
-        "type": "text",
-        "text": "A ray of sunlight shines upon you, basking you in healing light. The user gains 2d6 + MOVE hit points."
-      }],
       "_v": 2,
+      "automation": [{
+        "effects": [{
+          "damage": "-(2d6+{max(WMO,CoMO)}) [Healing]",
+          "type": "damage"
+        }],
+        "target": "self",
+        "type": "target"
+      }, {
+        "text": "A ray of sunlight shines upon you, basking you in healing light. The user gains 2d6 + MOVE hit points.",
+        "type": "text"
+      }],
+      "name": "Morning Sun",
       "proper": true,
       "verb": "absorbs the"
     },
     "PP": 3
   },
   "Mud Bomb": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Mud Bomb",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
+            "cantripScale": null,
             "damage": "DAMAGE [Ground]",
-            "overheal": false,
             "higher": null,
-            "cantripScale": null
+            "overheal": false,
+            "type": "damage"
           }, {
-            "type": "save",
-            "stat": "con",
+            "dc": "{8+ATTACK}",
             "fail": [{
-              "type": "ieffect",
-              "name": "Disadvantage",
               "duration": "1",
               "effects": "",
-              "end": true
+              "end": true,
+              "name": "Disadvantage",
+              "type": "ieffect"
             }],
+            "stat": "con",
             "success": [],
-            "dc": "{8+ATTACK}"
+            "type": "save"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You throw a hard-packed mud ball at an opponent. Make a ranged attack, dealing ground damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target has disadvantage on its next attack roll. If activating a move that requires a save, the target(s) have advantage."
+        "text": "You throw a hard-packed mud ball at an opponent. Make a ranged attack, dealing ground damage on a hit. On a hit, the target must make a CON save against your Move DC. On a failure, the target has disadvantage on its next attack roll. If activating a move that requires a save, the target(s) have advantage.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Mud Bomb",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d10+{max(SMO,DMO)}",
       "5": "2d8+{max(SMO,DMO)}",
@@ -2580,29 +2626,29 @@
     "PP": 5
   },
   "Mud Shot": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Mud Shot",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Ground]"
+            "damage": "DAMAGE[Ground]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You fire a glob of mud at an opponent, dealing damage with a chance to hinder your opponent's movement. Make a ranged attack against an opponent in range, dealing 1d8 + MOVE ground damage on a hit. If the natural attack roll is higher than 15, the opponent's speed becomes 0 until the end of its next turn."
+        "text": "You fire a glob of mud at an opponent, dealing damage with a chance to hinder your opponent's movement. Make a ranged attack against an opponent in range, dealing 1d8 + MOVE ground damage on a hit. If the natural attack roll is higher than 15, the opponent's speed becomes 0 until the end of its next turn.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mud Shot",
       "proper": false,
       "verb": "sends out"
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d8+{DMO}",
       "5": "2d6+{DMO}",
@@ -2613,60 +2659,60 @@
   },
   "Mud Sport": {
     "code": {
-      "name": "Mud Sport (neutral)",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "ieffect",
-          "name": "Muddied",
+          "conc": true,
           "duration": "10",
           "effects": "-neutral Electric",
           "end": true,
-          "conc": true
-        }]
+          "name": "Muddied",
+          "type": "ieffect"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You cover yourself and all allies around you with thick mud, reducing the amount of electric damage taken for anyone affected. For the duration, you and any ally in range (when you initially activated this move) have resistance to electric-type attacks. If you were already resistant, you are now immune. If you were vulnerable, you now take regular damage. If you are immune to electric-type moves already, nothing happens."
+        "text": "You cover yourself and all allies around you with thick mud, reducing the amount of electric damage taken for anyone affected. For the duration, you and any ally in range (when you initially activated this move) have resistance to electric-type attacks. If you were already resistant, you are now immune. If you were vulnerable, you now take regular damage. If you are immune to electric-type moves already, nothing happens.",
+        "type": "text"
       }],
-      "verb": "goes into a fit of",
+      "name": "Mud Sport (neutral)",
       "proper": true,
-      "_v": 2
+      "verb": "goes into a fit of"
     },
     "PP": 10
   },
   "Mud-Slap": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Mud-slap",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Ground]",
-            "overheal": false
-          }, {
-            "type": "ieffect",
-            "name": "Mud-slap",
+            "conc": false,
             "duration": "-1",
             "effects": "-b -1",
             "end": false,
-            "conc": false
+            "name": "Mud-slap",
+            "type": "ieffect"
+          }, {
+            "damage": "DAMAGE[Ground]",
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You hurl mud at a target in range. Make a ranged attack roll, doing 1d4 + MOVE ground damage on a hit. On a hit, the target adds -1 to its attack rolls for the rest of the encounter. This decrease may be stacked, up to a maximum of -5 to hit. The target may take an action to remove any mud from its face, resetting the effect."
+        "text": "You hurl mud at a target in range. Make a ranged attack roll, doing 1d4 + MOVE ground damage on a hit. On a hit, the target adds -1 to its attack rolls for the rest of the encounter. This decrease may be stacked, up to a maximum of -5 to hit. The target may take an action to remove any mud from its face, resetting the effect.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Mud-slap",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d4+{max(SMO,DMO)}",
       "5": "2d4+{max(SMO,DMO)}",
@@ -2676,29 +2722,29 @@
     "PP": 5
   },
   "Muddy Water": {
+    "attack": "proficiencyBonus+max(DMO,CoMO)",
     "code": {
-      "name": "Muddy Water",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Water]"
+            "damage": "DAMAGE[Water]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You fire a stream of muddy water at an opponent in range. Make a ranged attack against an opponent, dealing 2d8 + MOVE water damage. If the natural attack roll is 15 or higher, the opponent has disadvantage on its next attack."
+        "text": "You fire a stream of muddy water at an opponent in range. Make a ranged attack against an opponent, dealing 2d8 + MOVE water damage. If the natural attack roll is 15 or higher, the opponent has disadvantage on its next attack.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Muddy Water",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(DMO,CoMO)",
     "damage": {
       "1": "2d8+{max(DMO,CoMO)}",
       "5": "2d10+{max(DMO,CoMO)}",
@@ -2708,35 +2754,35 @@
     "PP": 5
   },
   "Mystical Fire": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Mystical Fire",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Fire]"
+            "damage": "DAMAGE[Fire]",
+            "type": "damage"
           }, {
-            "type": "ieffect",
-            "name": "Disadv on Attack rolls",
             "duration": "1",
             "effects": "",
-            "end": true
+            "end": true,
+            "name": "Disadv on Attack rolls",
+            "type": "ieffect"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You summon forth a pair of mystical flames that dance around a target, dealing damage. Make a ranged attack roll against a target, dealing 1d12 + MOVE fire damage on a hit. If the target is hit with this attack, any attack roll it makes before the end of its next turn is rolled at disadvantage.\n"
+        "text": "You summon forth a pair of mystical flames that dance around a target, dealing damage. Make a ranged attack roll against a target, dealing 1d12 + MOVE fire damage on a hit. If the target is hit with this attack, any attack roll it makes before the end of its next turn is rolled at disadvantage.\n",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Mystical Fire",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d12+{DMO}",
       "5": "2d8+{DMO}",
@@ -2747,94 +2793,94 @@
   },
   "Nasty Plot": {
     "code": {
-      "name": "Nasty Plot",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Adv on Wis Attacks",
+          "conc": true,
           "duration": "10",
           "effects": "",
           "end": false,
-          "conc": true
-        }]
+          "name": "Adv on Wis Attacks",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You stimulate your brain with nasty thoughts. For the duration, you have advantage on any attacks with the Wisdom move power. If the attack requires a Wisdom saving throw, the target has disadvantage."
+        "text": "You stimulate your brain with nasty thoughts. For the duration, you have advantage on any attacks with the Wisdom move power. If the attack requires a Wisdom saving throw, the target has disadvantage.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Nasty Plot",
       "proper": false,
       "verb": "makes "
     },
     "PP": 10
   },
   "Natural Gift": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Natural Gift",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
+            "cantripScale": null,
             "damage": "2d12+{SMO} [Berry]",
-            "overheal": false,
             "higher": null,
-            "cantripScale": null
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": " You draw in power from your held berry, releasing it into a ranged attack. Make a ranged attack, dealing damage on a hit. The type is dependant on what berry you are holding, according to the chart below:"
+        "text": " You draw in power from your held berry, releasing it into a ranged attack. Make a ranged attack, dealing damage on a hit. The type is dependant on what berry you are holding, according to the chart below:",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Natural Gift",
       "proper": false,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "PP": 10
   },
   "Nature Power": {
     "code": {
-      "name": "Nature Power",
-      "automation": [{
-        "type": "text",
-        "text": "You call upon the powers of nature nearby and activate a move based on the terrain. The DM gets final say on what move you activate, but here are example terrain types:\n\n| Terrain | Move |\n| Cities/Roads/Buildings | Swift |\n| Sandy areas | Earthquake |\n| Volcanoes/Lava areas | Fire Blast |\n| Caves, Dark areas | Shadow Ball |\n| Rocky terrain, Mountains | Rock Slide |\n| Fields, Plains | Stun Spore |\n| Forests, Tall Grasslands | Razor Leaf |\n| Ponds/Swamps | Bubblebeam |\n| At sea | Surf |\n| Underwater | Hydro Pump |"
-      }],
       "_v": 2,
+      "automation": [{
+        "text": "You call upon the powers of nature nearby and activate a move based on the terrain. The DM gets final say on what move you activate, but here are example terrain types:\n\n| Terrain | Move |\n| Cities/Roads/Buildings | Swift |\n| Sandy areas | Earthquake |\n| Volcanoes/Lava areas | Fire Blast |\n| Caves, Dark areas | Shadow Ball |\n| Rocky terrain, Mountains | Rock Slide |\n| Fields, Plains | Stun Spore |\n| Forests, Tall Grasslands | Razor Leaf |\n| Ponds/Swamps | Bubblebeam |\n| At sea | Surf |\n| Underwater | Hydro Pump |",
+        "type": "text"
+      }],
+      "name": "Nature Power",
       "proper": true,
       "verb": null
     },
     "PP": 10
   },
   "Needle Arm": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Needle Arm",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Grass]"
+            "damage": "DAMAGE[Grass]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "Your arms turn to jagged, thorny needles as you strike a foe. Make a melee attack on an opponent, dealing 1d10 + MOVE grass damage on a hit. If the natural attack roll is a 15 or more, the opponent flinches."
+        "text": "Your arms turn to jagged, thorny needles as you strike a foe. Make a melee attack on an opponent, dealing 1d10 + MOVE grass damage on a hit. If the natural attack roll is a 15 or more, the opponent flinches.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Needle Arm",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d10+{DMO}",
       "5": "2d8+{DMO}",
@@ -2844,29 +2890,29 @@
     "PP": 10
   },
   "Night Daze": {
+    "attack": "proficiencyBonus+max(DMO,WMO)",
     "code": {
-      "name": "Night Daze",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Dark]"
+            "damage": "DAMAGE[Dark]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "A pitch black shockwave of dark energy rushes towards a target. Make a ranged attack roll, dealing 2d6 + MOVE dark damage on a hit. If the natural attack roll is 13 or more, the target rolls its next attack with disadvantage. If it activates a move that requires a saving throw, the target(s) have advantage on the roll."
+        "text": "A pitch black shockwave of dark energy rushes towards a target. Make a ranged attack roll, dealing 2d6 + MOVE dark damage on a hit. If the natural attack roll is 13 or more, the target rolls its next attack with disadvantage. If it activates a move that requires a saving throw, the target(s) have advantage on the roll.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Night Daze",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(DMO,WMO)",
     "damage": {
       "1": "2d6+{max(DMO,WMO)}",
       "5": "2d8+{max(DMO,WMO)}",
@@ -2876,32 +2922,32 @@
     "PP": 5
   },
   "Night Shade": {
+    "attack": "proficiencyBonus+max(WMO,IMO)",
     "code": {
-      "name": "Night Shade",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
+            "cantripScale": null,
             "damage": "DAMAGE[Ghost]",
-            "overheal": false,
             "higher": null,
-            "cantripScale": null
+            "overheal": false,
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You hit an enemy with a necrotic wave of dark energy. Make a ranged attack against a target. On a hit, the ghost damage is equal to 1d6 + the user’s level."
+        "text": "You hit an enemy with a necrotic wave of dark energy. Make a ranged attack against a target. On a hit, the ghost damage is equal to 1d6 + the user’s level.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Night Shade",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(WMO,IMO)",
     "damage": {
       "1": "1d6+{level}",
       "5": "2d4+{level}",
@@ -2911,32 +2957,32 @@
     "PP": 10
   },
   "Night Slash": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Night Slash",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
+            "cantripScale": null,
             "damage": "DAMAGE[Dark]",
-            "overheal": false,
             "higher": null,
-            "cantripScale": null
+            "overheal": false,
+            "type": "damage"
           }, {
-            "type": "text",
-            "text": "You slash out at an opponent with dark power. Make a melee attack, dealing 1d12 + MOVE dark damage on a hit. This attack scores a critical hit on natural attack rolls of 19 or 20."
+            "text": "You slash out at an opponent with dark power. Make a melee attack, dealing 1d12 + MOVE dark damage on a hit. This attack scores a critical hit on natural attack rolls of 19 or 20.",
+            "type": "text"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }],
-      "verb": null,
+      "name": "Night Slash",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d12+{max(SMO,DMO)}",
       "5": "2d8+{max(SMO,DMO)}",
@@ -2947,19 +2993,19 @@
   },
   "Nightmare": {
     "code": {
-      "name": "Nightmare",
-      "automation": [{
-        "type": "target",
-        "target": "each",
-        "effects": [{
-          "type": "damage",
-          "damage": "DAMAGE[Ghost]"
-        }]
-      }, {
-        "type": "text",
-        "text": "You create a horrible nightmare in the mind of any sleeping creature within 60 feet of you, inflicting 3d6 + MOVE ghost damage automatically."
-      }],
       "_v": 2,
+      "automation": [{
+        "effects": [{
+          "damage": "DAMAGE[Ghost]",
+          "type": "damage"
+        }],
+        "target": "each",
+        "type": "target"
+      }, {
+        "text": "You create a horrible nightmare in the mind of any sleeping creature within 60 feet of you, inflicting 3d6 + MOVE ghost damage automatically.",
+        "type": "text"
+      }],
+      "name": "Nightmare",
       "proper": false,
       "verb": "gives the target"
     },
@@ -2973,55 +3019,55 @@
   },
   "Noble Roar": {
     "code": {
-      "name": "Noble Roar",
-      "automation": [{
-        "type": "text",
-        "text": "You let out a stunning roar that intimidates your foe. When targeted by an attack, use this reaction to impose disadvantage on the attack roll."
-      }],
       "_v": 2,
+      "automation": [{
+        "text": "You let out a stunning roar that intimidates your foe. When targeted by an attack, use this reaction to impose disadvantage on the attack roll.",
+        "type": "text"
+      }],
+      "name": "Noble Roar",
       "proper": false,
       "verb": "lets out"
     },
     "PP": 3
   },
   "Nuzzle": {
+    "attack": "proficiencyBonus+DMO",
     "code": {
-      "name": "Nuzzle",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
             "damage": "DAMAGE[Electric]",
-            "overheal": false
+            "overheal": false,
+            "type": "damage"
           }, {
-            "type": "save",
-            "stat": "con",
+            "dc": "{8+proficiencyBonus+DMO}",
             "fail": [{
-              "type": "ieffect",
-              "name": "Paralyzed",
+              "conc": false,
               "duration": "-1",
               "effects": "",
               "end": false,
-              "conc": false
+              "name": "Paralyzed",
+              "type": "ieffect"
             }],
+            "stat": "con",
             "success": [],
-            "dc": "{8+proficiencyBonus+DMO}"
+            "type": "save"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You touch an opponent with your electrified cheeks, sending electricity coursing through their veins. Make an attack roll against an opponent. On a hit, the target takes 1d4 + MOVE electric damage and is forced to make a CON save against your Move DC, becoming paralyzed on a failure."
+        "text": "You touch an opponent with your electrified cheeks, sending electricity coursing through their veins. Make an attack roll against an opponent. On a hit, the target takes 1d4 + MOVE electric damage and is forced to make a CON save against your Move DC, becoming paralyzed on a failure.",
+        "type": "text"
       }],
-      "verb": null,
+      "name": "Nuzzle",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
-    "attack": "proficiencyBonus+DMO",
     "damage": {
       "1": "1d4+{DMO}",
       "5": "2d4+{DMO}",
@@ -3031,29 +3077,29 @@
     "PP": 10
   },
   "Oblivion Wing": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Oblivion Wing",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Flying]"
+            "damage": "DAMAGE[Flying]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You extend your wings and use a dark beam energy to absorb your opponent's life force. Make a range attack against an opponent, dealing 2d6 + MOVE flying damage on a hit, **recovering your own hit points by the amount of damage dealt.**"
+        "text": "You extend your wings and use a dark beam energy to absorb your opponent's life force. Make a range attack against an opponent, dealing 2d6 + MOVE flying damage on a hit, **recovering your own hit points by the amount of damage dealt.**",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Oblivion Wing",
       "proper": true,
       "verb": ""
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "2d6+{max(SMO,DMO)}",
       "5": "2d8+{max(SMO,DMO)}",
@@ -3063,29 +3109,29 @@
     "PP": 5
   },
   "Octazooka": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Octazooka",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Water]"
+            "damage": "DAMAGE[Water]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You send a blast of ink towards your opponents. Make a ranged attack roll, doing 1d10 + MOVE water damage on a hit. If the natural attack roll is 18 or more, the target must add -1 to attack rolls for the remainder of this combat."
+        "text": "You send a blast of ink towards your opponents. Make a ranged attack roll, doing 1d10 + MOVE water damage on a hit. If the natural attack roll is 18 or more, the target must add -1 to attack rolls for the remainder of this combat.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Octazooka",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "1d10+{max(SMO,DMO)}",
       "5": "2d8+{max(SMO,DMO)}",
@@ -3096,52 +3142,52 @@
   },
   "Odor Sleuth": {
     "code": {
-      "name": "Odor Sleuth",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "self",
         "effects": [{
-          "type": "ieffect",
-          "name": "Odor Sleuth",
+          "conc": true,
           "duration": "10",
           "effects": "end",
           "end": false,
-          "conc": true
-        }]
+          "name": "Odor Sleuth",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "When you activate this move, choose a target in range. For the duration, the target cannot activate any move that would increase its AC. If it has already activated such a move, the effect ends immediately. In addition, for the duration, no creature in range has immunity to your Ghost, Normal, or Fighting-type moves."
+        "text": "When you activate this move, choose a target in range. For the duration, the target cannot activate any move that would increase its AC. If it has already activated such a move, the effect ends immediately. In addition, for the duration, no creature in range has immunity to your Ghost, Normal, or Fighting-type moves.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Odor Sleuth",
       "proper": false,
       "verb": null
     },
     "PP": 3
   },
   "Ominous Wind": {
+    "attack": "proficiencyBonus+max(WMO,DMO)",
     "code": {
-      "name": "Ominous Wind",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "DAMAGE[Ghost]"
+            "damage": "DAMAGE[Ghost]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "You stir up a gust of repulsive wind that strikes an opponent in range. Make a ranged attack, dealing 1d10 + MOVE ghost damage on a hit. On a natural attack roll of 19 or 20, increase all of your ability scores by +1 for three rounds."
+        "text": "You stir up a gust of repulsive wind that strikes an opponent in range. Make a ranged attack, dealing 1d10 + MOVE ghost damage on a hit. On a natural attack roll of 19 or 20, increase all of your ability scores by +1 for three rounds.",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Ominous Wind",
       "proper": true,
       "verb": null
     },
-    "attack": "proficiencyBonus+max(WMO,DMO)",
     "damage": {
       "1": "1d10+{max(WMO,DMO)}",
       "5": "2d8+{max(WMO,DMO)}",
@@ -3151,29 +3197,29 @@
     "PP": 3
   },
   "Origin Pulse": {
+    "attack": "proficiencyBonus+max(SMO,DMO)",
     "code": {
-      "name": "Origin Pulse",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
+          "attackBonus": "ATTACK",
           "hit": [{
-            "type": "damage",
-            "damage": "7d8mi2 [Water^]"
+            "damage": "7d8mi2 [Water^]",
+            "type": "damage"
           }],
           "miss": [],
-          "attackBonus": "ATTACK"
-        }]
+          "type": "attack"
+        }],
+        "target": "each",
+        "type": "target"
       }, {
-        "type": "text",
-        "text": "Your body glows a bright and brilliant blue, sending three beams of focused light at any creature(s) in range. Make a ranged attack for each beam, dealing 2d6 water damage to any creature(s) you choose on each hit. **13 more damage on a hit**"
+        "text": "Your body glows a bright and brilliant blue, sending three beams of focused light at any creature(s) in range. Make a ranged attack for each beam, dealing 2d6 water damage to any creature(s) you choose on each hit. **13 more damage on a hit**",
+        "type": "text"
       }],
-      "_v": 2,
+      "name": "Origin Pulse",
       "proper": true,
       "verb": "uses"
     },
-    "attack": "proficiencyBonus+max(SMO,DMO)",
     "damage": {
       "1": "3 beams",
       "5": "4 beams",
@@ -3184,75 +3230,75 @@
   },
   "Outrage": {
     "code": {
-      "name": "Outrage",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "target": "each",
         "effects": [{
-          "type": "attack",
           "hit": [{
-            "type": "damage",
+            "conc": true,
             "damage": "DAMAGE[Dragon]|\"",
             "end": true,
-            "conc": true
-          }]
+            "type": "damage"
+          }],
+          "type": "attack"
         }, {
-          "type": "text",
-          "text": "You go into a rampage, doing several attacks without control for three rounds. This move automatically hits for 1d6 + MOVE dragon damage in the first round, 2d6 + MOVE dragon damage in the second round, and 4d6 + MOVE dragon damage in the third round. When this move ends, either after the third round or from breaking concentration, you become confused. This attack stops if concentration is broken, or the user becomes incapacitated."
-        }]
+          "text": "You go into a rampage, doing several attacks without control for three rounds. This move automatically hits for 1d6 + MOVE dragon damage in the first round, 2d6 + MOVE dragon damage in the second round, and 4d6 + MOVE dragon damage in the third round. When this move ends, either after the third round or from breaking concentration, you become confused. This attack stops if concentration is broken, or the user becomes incapacitated.",
+          "type": "text"
+        }],
+        "target": "each",
+        "type": "target"
       }],
-      "verb": null,
+      "name": "Outrage",
       "proper": true,
-      "_v": 2
+      "verb": null
     },
     "PP": 3
   },
   "Overheat": {
+    "attack": "proficiencyBonus+max(SMO,CoMO)",
     "code": {
-      "name": "Overheat",
+      "_v": 2,
       "automation": [{
-        "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "DAMAGE",
-          "name": "damage"
-        }],
-        "target": "all",
         "effects": [{
-          "type": "save",
-          "stat": "dex",
-          "fail": [{
-            "type": "damage",
-            "damage": "DAMAGE+{max(SMO,CoMO)} [Fire]",
-            "overheal": false
-          }],
-          "success": [{
-            "type": "damage",
-            "damage": "(DAMAGE+{max(SMO,CoMO)})/2 [Fire]",
-            "overheal": false
-          }],
-          "dc": "{8+ATTACK}"
-        }]
-      }, {
-        "type": "text",
-        "text": "With a roar, flames burst from your body in a 15 foot circle, centered on you. Any creature in range must roll a DEX saving throw against your Move DC, taking 5d4 + MOVE fire damage on a failure, or half as much on a success. The power of the move exhausts you, and your next attack is done at disadvantage. If your next attack requires an opponent saving throw, they have advantage."
-      }, {
-        "type": "target",
-        "target": "self",
-        "effects": [{
-          "type": "ieffect",
-          "name": "Exhausted",
+          "conc": false,
           "duration": "2",
           "effects": "-desc \"Disadvantage on your next attack\"",
           "end": true,
-          "conc": false
-        }]
+          "name": "Exhausted",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
+      }, {
+        "effects": [{
+          "dc": "{8+ATTACK}",
+          "fail": [{
+            "damage": "DAMAGE+{max(SMO,CoMO)} [Fire]",
+            "overheal": false,
+            "type": "damage"
+          }],
+          "stat": "dex",
+          "success": [{
+            "damage": "(DAMAGE+{max(SMO,CoMO)})/2 [Fire]",
+            "overheal": false,
+            "type": "damage"
+          }],
+          "type": "save"
+        }],
+        "meta": [{
+          "dice": "DAMAGE",
+          "name": "damage",
+          "type": "roll"
+        }],
+        "target": "all",
+        "type": "target"
+      }, {
+        "text": "With a roar, flames burst from your body in a 15 foot circle, centered on you. Any creature in range must roll a DEX saving throw against your Move DC, taking 5d4 + MOVE fire damage on a failure, or half as much on a success. The power of the move exhausts you, and your next attack is done at disadvantage. If your next attack requires an opponent saving throw, they have advantage.",
+        "type": "text"
       }],
-      "verb": "uses",
+      "name": "Overheat",
       "proper": true,
-      "_v": 2
+      "verb": "uses"
     },
-    "attack": "proficiencyBonus+max(SMO,CoMO)",
     "damage": {
       "1": "5d4",
       "5": "3d10",
