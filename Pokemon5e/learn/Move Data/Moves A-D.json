@@ -4129,26 +4129,40 @@
         "effects": [{
           "attackBonus": "ATTACK",
           "hit": [{
-            "damage": "{Damage} [Normal]",
+            "damage": "{Damage}+{max(strengthMod,dexterityMod)} [Normal]",
+            "meta": [],
+            "overheal": false,
             "type": "damage"
           }],
+          "meta": [],
           "miss": [],
           "type": "attack"
         }],
         "meta": [{
-          "dice": "DAMAGE+max(SMO,DMO)",
+          "dice": "DAMAGE",
+          "hidden": false,
+          "meta": [],
           "name": "Damage",
           "type": "roll"
         }],
         "target": "each",
         "type": "target"
       }, {
-        "text": "You commit a massive attack against a creature. Make a melee attack against a target, doing 2d10 + MOVE normal damage on a hit, but taking {Damage}/4 in typeless recoil damage.",
+        "effects": [{
+          "damage": "({Damage}+{max(strengthMod,dexterityMod)})/4",
+          "meta": [],
+          "type": "damage"
+        }],
+        "meta": [],
+        "target": "self",
+        "type": "target"
+      }, {
+        "meta": [],
+        "text": "You commit a massive attack against a creature. Make a melee attack against a target, doing 2d10 + MOVE normal damage on a hit, but taking a quarter of the total damage (rounded down) in typeless recoil.",
         "type": "text"
       }],
       "name": "Double-Edge",
-      "proper": true,
-      "verb": null
+      "proper": true
     },
     "damage": {
       "1": "2d10",
