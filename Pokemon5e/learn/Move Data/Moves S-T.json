@@ -175,9 +175,9 @@
       "automation": [{
         "effects": [{
           "conc": true,
-          "duration": "5",
+          "duration": "6",
           "effects": "-attack \"|{ceil(level/2)} [Rock]|\"",
-          "end": true,
+          "end": false,
           "name": "Sandstorm damage (level/2 Rock damage each round)",
           "type": "ieffect"
         }],
