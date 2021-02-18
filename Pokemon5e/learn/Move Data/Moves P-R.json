@@ -1094,12 +1094,20 @@
         "effects": [{
           "dc": "{8+ATTACK}",
           "fail": [{
-            "damage": "DAMAGE [Psychic]",
+            "damage": "DAMAGE+{max(DMO,IMO,WMO)} [Psychic]",
             "type": "damage"
+          }, {
+            "desc": "",
+            "duration": "3",
+            "effects": "",
+            "end": false,
+            "meta": [],
+            "name": "Confused",
+            "type": "ieffect"
           }],
           "stat": "wis",
           "success": [{
-            "damage": "(DAMAGE)/2 [Psychic]",
+            "damage": "(DAMAGE+{max(DMO,IMO,WMO)})/2 [Psychic]",
             "type": "damage"
           }],
           "type": "save"
@@ -1115,10 +1123,10 @@
       "verb": null
     },
     "damage": {
-      "1": "1d10+{max(DMO,IMO,WMO)}",
-      "5": "2d8+{max(DMO,IMO,WMO)}",
-      "10": "5d4+{max(DMO,IMO,WMO)}",
-      "17": "4d8+{max(DMO,IMO,WMO)}"
+      "1": "1d10",
+      "5": "2d8",
+      "10": "5d4",
+      "17": "4d8"
     },
     "PP": 10
   },
