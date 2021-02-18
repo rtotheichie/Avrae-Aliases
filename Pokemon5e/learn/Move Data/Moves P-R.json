@@ -1014,32 +1014,38 @@
     "PP": 5
   },
   "Present": {
+    "attack": "proficiencyBonus+max(DMO,ChMO)",
     "code": {
       "_v": 2,
       "automation": [{
         "effects": [{
-          "attackBonus": "ATTACK",
+          "attackBonus": "{ATTACK}",
           "hit": [{
-            "damage": "{Healing} [Normal]",
+            "damage": "DAMAGE+{max(dMO,ChMO)} [Normal]",
+            "meta": [],
+            "overheal": false,
             "type": "damage"
           }],
+          "meta": [],
           "miss": [],
           "type": "attack"
         }],
-        "meta": [{
-          "dice": "DAMAGE",
-          "name": "Healing",
-          "type": "roll"
-        }],
+        "meta": [],
         "target": "each",
         "type": "target"
       }, {
+        "meta": [],
         "text": "You send a booby-trapped gift to an opponent. Make a ranged attack on an opponent in range. On a hit, the present explodes, doing 1d6 + MOVE normal damage. If the natural attack roll is 2 or lower, however, regardless if it hits, the present provides the target with 1d6 + MOVE hit points instead.",
         "type": "text"
       }],
       "name": "Present",
-      "proper": true,
-      "verb": null
+      "proper": true
+    },
+    "damage": {
+      "1": "1d6",
+      "5": "2d4",
+      "10": "1d12",
+      "17": "4d4"
     },
     "PP": 10
   },
