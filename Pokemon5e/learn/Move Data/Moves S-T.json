@@ -1961,14 +1961,14 @@
           "attackBonus": "ATTACK",
           "hit": [{
             "cantripScale": null,
-            "damage": "DAMAGE[Normal]",
+            "damage": "DAMAGE+{max(SMO,DMO)} [Normal]",
             "higher": null,
             "overheal": false,
             "type": "damage"
           }],
           "meta": [{
             "cantripScale": null,
-            "dice": "DAMAGE",
+            "dice": "4d4",
             "hidden": false,
             "higher": null,
             "name": "Extra Attacks",
@@ -1993,7 +1993,7 @@
       "10": "1d12",
       "17": "4d4"
     },
-    "PP": 3
+    "PP": 10
   },
   "Spikes": {
     "code": {
