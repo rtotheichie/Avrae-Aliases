@@ -3491,7 +3491,7 @@
           "type": "attack",
           "hit": [{
             "type": "damage",
-            "damage": "2d6+{max(SMO,DMO)}[Dark]",
+            "damage": "DAMAGE+{max(SMO,DMO)}[Dark]",
             "overheal": false,
             "higher": null,
             "cantripScale": null
