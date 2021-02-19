@@ -2857,6 +2857,11 @@
     },
     "PP": 10
   },
+  "Nature's Madness": {
+    "code": {"name":"Nature's Madness","automation":[{"type":"target","meta":[],"target":"all","effects":[{"type":"save","meta":[],"stat":"con","fail":[{"type":"damage","meta":[],"damage":"{{target.hp}}/2 ","overheal":false}],"success":[],"dc":"{8+ATTACK}"}]},{"type":"text","meta":[],"text":"You harness all the power of nature and send it at a creature in range. The target must make a CON save against your Move DC. On a failed save, the target loses half their current HP (minimum of 1 damage)."}],"_v":2,"proper":true},
+    "attack": "proficiencyBonus+max(WMO,ChMO)",
+    "PP": 3
+  },
   "Needle Arm": {
     "attack": "proficiencyBonus+DMO",
     "code": {
