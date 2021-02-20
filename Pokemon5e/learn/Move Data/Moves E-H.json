@@ -1784,7 +1784,7 @@
       "proper": true,
       "verb": "uses"
     },
-    "PP": 15
+    "PP": 5
   },
   "Focus Punch": {
     "attack": "proficiencyBonus+max(SMO,DMO)}",
