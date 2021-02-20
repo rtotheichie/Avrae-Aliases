@@ -121,7 +121,12 @@
       "_v": 2,
       "automation": [{
         "effects": [{
-          "dc": "8+ATTACK",
+          "dice": "DAMAGE",
+          "meta": [],
+          "name": "damage",
+          "type": "roll"
+        }, {
+          "dc": "{8+ATTACK}",
           "fail": [{
             "damage": "{{damage}}+{strengthMod} [Ground]",
             "meta": [],
@@ -143,11 +148,6 @@
             "type": "damage"
           }],
           "type": "save"
-        }, {
-          "dice": "DAMAGE",
-          "meta": [],
-          "name": "damage",
-          "type": "roll"
         }],
         "meta": [],
         "target": "all",
@@ -1515,38 +1515,41 @@
   "Smog": {
     "attack": "proficiencyBonus+CoMO",
     "code": {
-      "_v": 2,
+      "name": "Smog",
       "automation": [{
-        "effects": [{
-          "dc": "8+ATTACK",
-          "fail": [{
-            "damage": "{{damage}}+{constitutionMod} [Poison]",
-            "meta": [],
-            "type": "damage"
-          }],
-          "meta": [],
-          "stat": "con",
-          "success": [{
-            "damage": "({{damage}}+{constitutionMod})/2 [Poison]",
-            "meta": [],
-            "type": "damage"
-          }],
-          "type": "save"
-        }, {
-          "dice": "DAMAGE",
-          "meta": [],
-          "name": "damage",
-          "type": "roll"
-        }],
+        "type": "target",
         "meta": [],
         "target": "all",
-        "type": "target"
+        "effects": [{
+          "type": "roll",
+          "meta": [],
+          "dice": "DAMAGE",
+          "name": "damage",
+          "hidden": false
+        }, {
+          "type": "save",
+          "meta": [],
+          "stat": "con",
+          "fail": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "{{damage}}+{CoMO} [Poison]",
+            "overheal": false
+          }],
+          "success": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "({{damage}}+{CoMO})/2 [Poison]",
+            "overheal": false
+          }],
+          "dc": "{8+ATTACK}"
+        }]
       }, {
+        "type": "text",
         "meta": [],
-        "text": "You release a toxic cloud of poisonous smog in a 10 foot radius, centered on a point within range. Any creature that starts their turn in this area must succeed on a CON save against your Move DC, taking 1d6 + MOVE poison damage on a failure, or half as much on a success. Creatures that fail this save by 5 or more become poisoned.",
-        "type": "text"
+        "text": "You release a toxic cloud of poisonous smog in a 10 foot radius, centered on a point within range. Any creature that starts their turn in this area must succeed on a CON save against your Move DC, taking 1d6 + MOVE poison damage on a failure, or half as much on a success. Creatures that fail this save by 5 or more become poisoned."
       }],
-      "name": "Smog",
+      "_v": 2,
       "proper": true,
       "verb": "releases poisonous"
     },
