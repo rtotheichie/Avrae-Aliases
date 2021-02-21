@@ -1771,7 +1771,7 @@
           "duration": 10,
           "effects": "",
           "end": true,
-          "name": "Focus Energy (Crit rage +2)",
+          "name": "Focus Energy (Crit range +2)",
           "type": "ieffect"
         }],
         "target": "self",
