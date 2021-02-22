@@ -3123,7 +3123,7 @@
         "target": "all",
         "type": "target"
       }, {
-        "text": "You fire three projectiles at any Pokémon you choose in range. They do not have to target the same Pokémon. Each hit for 1d4 normal damage. This move also targets Pokémon during the invulnerable stages of Dig, Fly, Bounce, etc.",
+        "text": "You fire two projectiles at any Pokémon you choose in range. They do not have to target the same Pokémon. Each hit for 1d4 normal damage. This move also targets Pokémon during the invulnerable stages of Dig, Fly, Bounce, etc.",
         "type": "text"
       }],
       "name": "Swift",
@@ -3131,7 +3131,10 @@
       "verb": null
     },
     "damage": {
-      "1": "1d4"
+      "1": "1d4",
+      "5": "1d4",
+      "10": "1d4",
+      "17": "1d4"
     },
     "PP": 10
   },
