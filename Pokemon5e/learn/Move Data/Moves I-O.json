@@ -2488,42 +2488,7 @@
   },
   "Moongeist Beam": {
     "attack": "proficiencyBonus+max(DMO,WMO)",
-    "code": {
-      "_v": 2,
-      "automation": [{
-        "effects": [{
-          "dc": "8+ATTACK",
-          "fail": [{
-            "damage": "{damage}+{max(DMO,WMO)} [Ghost]",
-            "meta": [],
-            "type": "damage"
-          }],
-          "meta": [],
-          "stat": "dex",
-          "success": [{
-            "damage": "({damage}+{max(DMO,WMO)})/2 [Ghost]",
-            "meta": [],
-            "type": "damage"
-          }],
-          "type": "save"
-        }, {
-          "dice": "DAMAGE",
-          "meta": [],
-          "name": "damage",
-          "type": "roll"
-        }],
-        "meta": [],
-        "target": "all",
-        "type": "target"
-      }, {
-        "meta": [],
-        "text": "You emit a sinister ray that explodes out from you in a 100 foot line, 5 feet wide. All creatures caught in the blast must make a DEX save against your Move DC, taking 5d6 + MOVE ghost damage on a failure or half as much on a success. This attack ignores any of the creature's abilities that would affect the user's ability to hit or deal full damage.",
-        "type": "text"
-      }],
-      "name": "Moongeist Beam",
-      "proper": false,
-      "verb": null
-    },
+    "code": {"name":"Moongeist Beam","automation":[{"type":"target","meta":[],"target":"all","effects":[{"type":"roll","meta":[],"dice":"DAMAGE","name":"damage","hidden":false},{"type":"save","meta":[],"stat":"dex","fail":[{"type":"damage","meta":[],"damage":"{damage}+{max(dexterityMod,wisdomMod)} [Ghost]","overheal":false}],"success":[{"type":"damage","meta":[],"damage":"({damage}+{max(dexterityMod,wisdomMod)})/2 [Ghost]","overheal":false}],"dc":"{8+ATTACK}"}]},{"type":"text","meta":[],"text":"You emit a sinister ray that explodes out from you in a 100 foot line, 5 feet wide. All creatures caught in the blast must make a DEX save against your Move DC, taking 5d6 + MOVE ghost damage on a failure or half as much on a success. This attack ignores any of the creature's abilities that would affect the user's ability to hit or deal full damage."}],"_v":2},
     "damage": {
       "1": "5d6",
       "5": "4d10",
