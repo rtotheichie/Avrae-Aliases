@@ -3850,16 +3850,16 @@
       "_v": 2,
       "automation": [{
         "effects": [{
-          "duration": "10",
-          "effects": "-b 1",
+          "duration": "2",
+          "effects": "",
           "end": true,
-          "name": "Increased Adrenaline",
+          "name": "Intimidating Howl",
           "type": "ieffect"
         }],
         "target": "self",
         "type": "target"
       }, {
-        "text": "You increase your adrenaline with a menacing howl. For the duration, add +1 to any attack roll you make. This move can be stacked for a maximum of +5.",
+        "text": "You pierce the air with an intimidating howl. Until the end of your next turn, allies (and you) have advantage on any melee attack rolls they make against a creature within 5 feet of you.",
         "type": "text"
       }],
       "name": "Howl",
