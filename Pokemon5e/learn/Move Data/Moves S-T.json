@@ -1169,7 +1169,7 @@
         "target": "self",
         "type": "target"
       }, {
-        "text": "You give yourself a break, healing your wounds. When you activate this move, you lose your turn for the next two rounds. At the end of your next turn, regain half of your maximum hit points.",
+        "text": "You give yourself a break, healing your wounds. When you activate this move, you become incapacitated immediately and through your next two turns. Your trainer may not switch you out during this time. At the end of the second turn, regain half of your maximum hit points and become stable once again.",
         "type": "text"
       }],
       "name": "Slack Off",
