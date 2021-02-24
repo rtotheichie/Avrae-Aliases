@@ -1071,7 +1071,7 @@
         "effects": [{
           "conc": true,
           "duration": "2",
-          "effects": "-attack \"{proficiencyBonus}+{max(DMO, SMO)}|3d8+{max(DMO, SMO)}|Sky attack dmg\"",
+          "effects": "-attack \"{proficiencyBonus}+{max(DMO, SMO)}|DAMAGE+{max(DMO, SMO)}|Sky attack dmg\"",
           "end": false,
           "name": "Sky damage",
           "type": "ieffect"
@@ -1085,7 +1085,7 @@
       "name": "Sky attack",
       "proper": true,
       "verb": null
-    },
+    }, "damage": {"1":"3d8", "5":"5d6","10":"4d12","17":"8d8" }
     "PP": 3
   },
   "Sky Drop": {
