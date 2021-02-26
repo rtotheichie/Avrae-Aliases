@@ -37,6 +37,8 @@ if args.get('ea') or args.get('adept'):
     else:
         dmg_String = dmg_String + "mi2"
     Import_Code = Import_Code.replace(']"','^]"')
+if args.get('twisted'):
+    Import_Code = Import_Code.replace(']"','^]"')
 if args.get('savage') or (args.get('technician') and gvar[Move_Name]["PP"]>=15):
     if "+" in dmg_String:
         dmg_String_x, dmg_String_y = dmg_String[:dmg_String.index("+")], dmg_String[dmg_String.index("+"):]
