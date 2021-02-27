@@ -57,7 +57,7 @@ if speed > 0:
     else:
         out.append(f'-desc "**DC:** {DC} {raceRoll.result}"')
         if not boosted:
-            if boosts < mod('con'):
+            if boosts < max(mod('con'),1):
                 c.add_effect('Boosts', '', duration=-1, desc='🥕'*(boosts+1))
     progress += tally
 else:
