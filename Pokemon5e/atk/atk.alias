@@ -20,4 +20,4 @@ attack {{atk,gr,gv,i="&1&",get_raw(),load_json(get_gvar("5eed7634-7526-4b25-86f2
 {{f'-f "Poisoned|{gv.Po}"' if poe else ''}}
 -f 'PP Remaining|{{cc_str(cc)}}'
 {{f'-f "Pressure|Any move targeting this Pokémon directly costs an additional 1 PP."' if "pressure" in &ARGS& else ''}}
-{{f'-f "{name}: <{hp_str()} HP> (-{proficiencyBonus})"' if ce and cr.total<=9 else ''}}
+{{f'-f "{name}: <{hp_str()} HP> (-{proficiencyBonus})"' if ce and cr.total<=10 else ''}}
