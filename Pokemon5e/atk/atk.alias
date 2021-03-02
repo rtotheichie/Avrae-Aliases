@@ -1,23 +1,69 @@
-attack {{atk,gr,gv,i="&1&",get_raw(),load_json(get_gvar("5eed7634-7526-4b25-86f2-38677ecc27b5")),"-i" in &ARGS&}}"{{atk}}" &*&
-{{atks=[i for i in gr.consumables.custom if atk.lower() in i.lower() and [x for x in (combat().me.attacks if combat() and combat().me else gr.attacks) if atk.lower() in x.name.lower()]]}}
-{{cc=atks[0] if atks else err("You do not have a PP counter set up for that!")}}{{v=get_cc(cc)}}
-{{'miss' if not v else mod_cc(cc, -1)}}
-{{err("You are out of PP!") if not v else ""}}
-{{mod_cc(cc, -1) if "pressure" in &ARGS& else ""}}
-{{c,cr,pr=combat(),vroll("1d20"),vroll("1d4")}}
-{{ce=c.me.get_effect('Confused') if c and c.me and not i else ''}}
-{{be=c.me.get_effect('Burned') if c and c.me and not i else ''}}
-{{poe=c.me.get_effect('Poisoned') if c and c.me and not i else ''}}
-{{cm = get('miss', 0) + (cr.total<=10) if ce else ''}}
-{{f'-phrase "It hurt itself in its confusion!"' if cm else ''}}
-{{f'-f "**{name} snapped out of Confusion!**"' if ce and cr.total>=16 else ''}}
-{{f'-f "Confused Roll|{cr}"' if ce else ''}}
-{{f'-f "Confused|{gv.C}"' if ce else ''}}
-{{f'miss{cm}' if cr.total<=10 and ce else ''}}
-{{c.me.mod_hp(-proficiencyBonus) if cr.total<=10 and ce else ''}}
-{{c.me.remove_effect(ce.name) if cr.total>=16 and ce else ''}}
-{{f'-f "Burned|{gv.B}"' if be else ''}}
-{{f'-f "Poisoned|{gv.Po}"' if poe else ''}}
--f 'PP Remaining|{{cc_str(cc)}}'
-{{f'-f "Pressure|Any move targeting this Pokémon directly costs an additional 1 PP."' if "pressure" in &ARGS& else ''}}
-{{f'-f "{name}: <{hp_str()} HP> (-{proficiencyBonus})"' if ce and cr.total<=10 else ''}}
+<drac2>
+args = &ARGS&
+ch = character()
+out = []
+gvar = load_json(get_gvar("5eed7634-7526-4b25-86f2-38677ecc27b5"))
+ignore = "-i" in args
+attack_name = ""
+cc = ""
+if not args:
+    return f'attack list'
+for a in ch.attacks:
+    if args[0].lower() == a.name.lower():
+        attack_name = a.name
+        break
+if not attack_name:
+    for a in ch.attacks:
+        if args[0].lower() in a.name.lower():
+            attack_name = a.name
+            break
+if not attack_name:
+    err("You do not know that attack.")
+args.remove(args[0])
+for c in ch.consumables:
+    if attack_name == c.name or attack_name + " PP" == c.name:
+        cc = c.name
+        break
+if not cc:!tatk
+    err(f"You do not have a PP counter set up for {attack_name}")
+if ch.cc(cc).value < 1 or ch.cc(cc).value < 2 and "pressure" in args:
+    err(f'Your {attack_name} attack is out of PP!')
+ch.mod_cc(cc, -1)
+if "pressure" in args:
+    ch.mod_cc(cc, -1)
+    args.remove("pressure")
+    out.append('-f "Pressure|Any move targeting this Pokémon directly costs an additional 1 PP."')
+c = combat()
+if c and not ignore:
+    if c.me.get_effect("Confused"):
+        confused_roll = vroll('1d20')
+        out.append(f'-f "Confused - {confused_roll}|{gvar.Confused}"')
+        if confused_roll.total <= 10:
+            out.append('miss pass')
+            ch.modify_hp(-proficiencyBonus)
+            out.append(f'-f "{name}: <{ch.hp_str()} HP> (-{proficiencyBonus})"')
+            out.append(f'-phrase "{name} hurt itself in its confusion!"')
+        elif confused_roll.total >= 16:
+            c.me.remove_effect("Confused")
+            out.append(f'-phrase "{name} snapped out of confusion!"')
+    if c.me.get_effect("Paralyzed"):
+        out.append(f'-f "Paralyzed|{gvar.Paralyzed}"')
+    if c.me.get_effect("Burned"):
+        out.append(f'-f "Burned|{gvar.Burned}"')
+        ch.modify_hp(-proficiencyBonus)
+        out.append(f'-f "{name}: <{ch.hp_str()} HP> (-{proficiencyBonus})"')
+    if c.me.get_effect("Poisoned"):
+        out.append('dis')
+        ch.modify_hp(-proficiencyBonus)
+        out.append(f'-f "Poisoned|{gvar.Poisoned}"')
+        out.append(f'-f "{name}: <{ch.hp_str()} HP> (-{proficiencyBonus})"')
+    if c.me.get_effect("Proned"):
+        out.append('dis sadv')
+        out.append(f'-f "Proned|{gvar.Proned}"')
+    if c.me.get_effect("Flinched"):
+        out.append('dis sadv')
+        out.append(f'-f "Flinched|{gvar.Flinched}"')
+out.append(f'-f "PP Remaining|{ch.cc_str(cc)}"')
+out.append(" ".join(args))
+return f'attack "{attack_name}" {" ".join(out)}'
+</drac2>
