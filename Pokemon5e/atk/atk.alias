@@ -24,7 +24,7 @@ for c in ch.consumables:
     if attack_name == c.name or attack_name + " PP" == c.name:
         cc = c.name
         break
-if not cc:!tatk
+if not cc:
     err(f"You do not have a PP counter set up for {attack_name}")
 if ch.cc(cc).value < 1 or ch.cc(cc).value < 2 and "pressure" in args:
     err(f'Your {attack_name} attack is out of PP!')
