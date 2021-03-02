@@ -5,4 +5,4 @@ out.append('-title"Check the tape!"')
 out.append(f'''-desc "The race is over!\n{c.name} finished in **{combat().round_num}** Laps at **{c.get_effect('Race Progress').desc}** feet!"''')
 return " ".join(out)
 </drac2>
--thumb "https://ncbarblog.com/wp-content/uploads/2016/02/checkered-flag-high-resolution-wallpaper.jpg" -color <color> {{f'-image {image}' if combat().me.name==c.name else ''}}
+-thumb "https://ncbarblog.com/wp-content/uploads/2016/02/checkered-flag-high-resolution-wallpaper.jpg" -color <color> {{f'-image {image}' if character.name==c.name else ''}}
