@@ -626,11 +626,6 @@
       "name": "Waterfall",
       "automation": [{
         "type": "target",
-        "meta": [{
-          "type": "roll",
-          "dice": "DAMAGE",
-          "name": "damage"
-        }],
         "target": "all",
         "effects": [{
           "type": "save",
