@@ -121,7 +121,7 @@
   },
   "Vacuum Wave": {
     "code": {
-      "name": "Vacuum wave",
+      "name": "Vacuum Wave",
       "automation": [{
         "type": "target",
         "target": "each",
