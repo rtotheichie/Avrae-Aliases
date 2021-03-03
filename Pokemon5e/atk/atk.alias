@@ -39,10 +39,14 @@ if c and not ignore:
         confused_roll = vroll('1d20')
         out.append(f'-f "Confused - {confused_roll}|{gvar.Confused}"')
         if confused_roll.total <= 10:
-            out.append('miss pass')
             ch.modify_hp(-proficiencyBonus)
-            out.append(f'-f "{name}: <{ch.hp_str()} HP> (-{proficiencyBonus})"')
+            out = []
+            out.append(f'-title "{name} tries to attack with {attack_name}!"')
+            out.append(f'-desc "Confused - {confused_roll} | {gvar.Confused}"')
+            out.append(f'-f "PP Remaining|{ch.cc_str(cc)}"')
+            out.append(f'-footer "{name}: <{ch.hp_str()} HP> (-{proficiencyBonus})"')
             out.append(f'-phrase "{name} hurt itself in its confusion!"')
+            return f'embed {" ".join(out)} -thumb {image} -color {color}'
         elif confused_roll.total >= 16:
             c.me.remove_effect("Confused")
             out.append(f'-phrase "{name} snapped out of confusion!"')
