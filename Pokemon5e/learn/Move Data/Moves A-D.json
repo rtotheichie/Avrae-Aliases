@@ -1545,7 +1545,7 @@
         "text": "You thrust yourself towards a creature in an attempt to crush them with your physical size. Make a melee attack on a target. On a hit, the target takes 2d6 + MOVE normal damage, and must succeed on a STR saving throw against your Move DC or be knocked prone.",
         "type": "text"
       }],
-      "name": "Body slam",
+      "name": "Body Slam",
       "proper": true,
       "verb": null
     },
