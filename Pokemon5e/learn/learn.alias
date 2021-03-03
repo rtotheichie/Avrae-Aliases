@@ -24,7 +24,6 @@ else:
     STAB = 0
 if args.get('pixilate'):
     Import_Code = Import_Code.replace('[Normal]','[Fairy]')
-    STAB = STAB*2
 if args.get('refrigerate'):
     Import_Code = Import_Code.replace('[Normal]','[Ice]')
     STAB = STAB*2
@@ -37,6 +36,8 @@ if args.get('ea') or args.get('adept'):
         dmg_String = dmg_String[:dmg_String.index("+")]+"mi2"+dmg_String[dmg_String.index("+"):]
     else:
         dmg_String = dmg_String + "mi2"
+    Import_Code = Import_Code.replace(']"','^]"')
+if args.get('tinted'):
     Import_Code = Import_Code.replace(']"','^]"')
 if args.get('savage') or (args.get('technician') and gvar[Move_Name]["PP"]>=15):
     if "+" in dmg_String:

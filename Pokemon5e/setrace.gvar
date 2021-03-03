@@ -112,6 +112,13 @@
       "level": 1,
       "value": 2,
       "use": "winningpersonality"
+    },
+    {
+      "name": "Bon Chance",
+      "reset": "long",
+      "level": 1,
+      "value": 2,
+      "use": "bonchance"
     }],
     "cvars": {
       "race": "Kalosian",
