@@ -1132,7 +1132,7 @@
         "target": "each",
         "type": "target"
       }, {
-        "text": "You use strength in numbers to attack a creature. Make a melee attack on a creature, and an additional attack for each conscious creature you are currently carrying, doing 1d6 + MOVE dark damage on each hit.",
+        "text": "You use strength in numbers to attack a creature. Make a melee attack on a creature, and an additional attack for any other conscious creature your trainer is currently carrying, dealing 2d6 dark damage on each hit.",
         "type": "text"
       }],
       "name": "Beat Up",
@@ -1140,10 +1140,10 @@
       "verb": null
     },
     "damage": {
-      "1": "1d6",
-      "5": "1d6",
-      "10": "1d6",
-      "17": "1d6"
+      "1": "2d6",
+      "5": "2d6",
+      "10": "2d6",
+      "17": "2d6"
     },
     "PP": 5
   },
