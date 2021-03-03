@@ -1341,12 +1341,6 @@
             "duration": "3",
             "effects": "",
             "end": true,
-            "meta": [{
-              "cantripScale": null,
-              "dice": "DAMAGE",
-              "hidden": false,
-              "higher": null
-            }],
             "name": "Confused",
             "type": "ieffect"
           }],
