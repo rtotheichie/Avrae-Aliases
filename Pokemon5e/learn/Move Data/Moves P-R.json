@@ -1096,7 +1096,14 @@
           "fail": [{
             "damage": "DAMAGE+{max(DMO,IMO,WMO)} [Psychic]",
             "type": "damage"
-          },{"type":"ieffect","meta":[],"name":"Confused","duration":"3","effects":"","end":false,"desc":""}],
+          },
+           {"type":"ieffect",
+            "meta":[
+              ],"name":"Confused",
+                "duration":"3",
+                "effects":"",
+                "end":false,
+                "desc":""}],
           "stat": "wis",
           "success": [{
             "damage": "(DAMAGE+{max(DMO,IMO,WMO)})/2 [Psychic]",
@@ -1331,17 +1338,9 @@
         "effects": [{
           "dc": "{8+proficiencyBonus+max(IMO,WMO)}",
           "fail": [{
-            "duration": "{Rounds}",
+            "duration": "3",
             "effects": "",
             "end": true,
-            "meta": [{
-              "cantripScale": null,
-              "dice": "DAMAGE",
-              "hidden": false,
-              "higher": null,
-              "name": "Rounds",
-              "type": "roll"
-            }],
             "name": "Confused",
             "type": "ieffect"
           }],

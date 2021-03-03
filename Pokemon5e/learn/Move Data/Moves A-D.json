@@ -4409,7 +4409,8 @@
       "5": "2d10",
       "10": "3d10",
       "17": "4d12"
-    }
+    },
+    "PP": 10
   },
   "Dragon Hammer": {
     "attack": "proficiencyBonus+SMO",
@@ -4440,7 +4441,8 @@
       "5": "2d10",
       "10": "3d10",
       "17": "4d12"
-    }
+    },
+    "PP": 10
   },
   "Dragon Pulse": {
     "attack": "proficiencyBonus+DMO",
