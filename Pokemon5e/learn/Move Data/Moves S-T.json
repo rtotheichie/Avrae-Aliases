@@ -3440,7 +3440,7 @@
         "text": "You sacrifice your own position to take down an opponent. Roll a melee attack roll. On a hit, you deal 2d8 + MOVE normal damage, taking a quarter of the total damage (rounded down) in recoil.",
         "type": "text"
       }],
-      "name": "Take down",
+      "name": "Take Down",
       "proper": true,
       "verb": null
     },
