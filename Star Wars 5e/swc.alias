@@ -1,0 +1,21 @@
+<drac2>
+args = &ARGS&
+if not args:
+    return f'''embed -title "Need help rolling a check?" -desc "This command takes all the same arguments as `{ctx.prefix}check`.  For the Star Wars 5e system, History is replaced by Lore, Arcana is replaced by Technology, and Religion is replaced by Piloting." -footer "Alias by @R to the Ichie#6193"'''
+if args[0].lower() in "lore":
+    args.remove(args[0])
+    args.insert(0,"History")
+elif args[0].lower() in "technology":
+    args.remove(args[0])
+    args.insert(0,"Arcana")
+elif args[0].lower() in "piloting":
+    args.remove(args[0])
+    args.insert(0,"Religion")
+if args[0].lower() in "history":
+    args.append(f'-title "[name] makes a Lore check!"')
+elif args[0].lower() in "arcana":
+    args.append(f'-title "[name] makes a Technology check!"')
+elif args[0].lower() in "religion":
+    args.append(f'-title "[name] makes a Piloting check!"')
+return f'check {" ".join(args)}'
+</drac2>
