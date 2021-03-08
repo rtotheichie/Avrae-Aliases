@@ -10,10 +10,10 @@ if not args:
 if not character().cc_exists(cc):
     return err('You need a counter named "Spell Points" in order to use this alias.')
 gvar = load_json(get_gvar("01a1a2e8-6167-4bda-a513-45cfa56b26d4"))
-homebrew = get_svar("brewspells", []) + get("brewspells", [])
+homebrew = load_json(get_svar("brewspells", [])) + load_json(get("brewspells", []))
 if homebrew:
     for g in homebrew:
-        gvar += load_json(get_gvar(f'"{g}"'))
+        gvar += load_json(get_gvar(g))
 for s in gvar:
     if args[0].lower() == s.name.lower():
         spell = s
