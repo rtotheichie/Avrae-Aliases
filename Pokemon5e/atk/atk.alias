@@ -29,12 +29,24 @@ if not cc:
 if ch.cc(cc).value < 1 or ch.cc(cc).value < 2 and "pressure" in args:
     err(f'Your {attack_name} attack is out of PP!')
 ch.mod_cc(cc, -1)
-if "pressure" in args:
+pressure = "pressure" in args
+if pressure:    
     ch.mod_cc(cc, -1)
     args.remove("pressure")
     out.append('-f "Pressure|Any move targeting this Pokémon directly costs an additional 1 PP."')
 c = combat()
 if c and not ignore:
+    if c.me.get_effect("Paralyzed"):
+        paralyzed_roll = vroll("1d4")
+        out.append(f'-f "Paralyzed - {paralyzed_roll}|{gvar.Paralyzed}"')
+        if paralyzed_roll.total == 1:
+            ch.mod_cc(cc, 1)
+            if pressure:
+                ch.mod_cc(cc, 1)
+            out = []
+            out.append(f'-title "{name} is paralyzed and cannot move!"')
+            out.append(f'-f "Paralyzed - {paralyzed_roll} | {gvar.Paralyzed}"')
+            return f'embed {" ".join(out)} -thumb {image} -color {color}'
     if c.me.get_effect("Confused"):
         confused_roll = vroll('1d20')
         out.append(f'-f "Confused - {confused_roll}|{gvar.Confused}"')
@@ -44,14 +56,14 @@ if c and not ignore:
             out.append(f'-title "{name} tries to attack with {attack_name}!"')
             out.append(f'-desc "Confused - {confused_roll} | {gvar.Confused}"')
             out.append(f'-f "PP Remaining|{ch.cc_str(cc)}"')
+            if c.me.get_effect("Paralyzed"):
+                out.append(f'-f "Paralyzed - {paralyzed_roll}|{gvar.Paralyzed}"')
             out.append(f'-footer "{name}: <{ch.hp_str()} HP> (-{proficiencyBonus})"')
             out.append(f'-phrase "{name} hurt itself in its confusion!"')
             return f'embed {" ".join(out)} -thumb {image} -color {color}'
         elif confused_roll.total >= 16:
             c.me.remove_effect("Confused")
             out.append(f'-phrase "{name} snapped out of confusion!"')
-    if c.me.get_effect("Paralyzed"):
-        out.append(f'-f "Paralyzed|{gvar.Paralyzed}"')
     if c.me.get_effect("Burned"):
         out.append(f'-f "Burned|{gvar.Burned}"')
         ch.modify_hp(-proficiencyBonus)
