@@ -2952,16 +2952,11 @@
             "damage": "{damage}+{max(SMO,DMO)} [Water]",
             "type": "damage"
           }, {
-            "duration": "prone",
+            "duration": "3",
             "effects": "",
             "end": true,
-            "name": "Prone",
+            "name": "Proned",
             "type": "ieffect"
-          }],
-          "meta": [{
-            "dice": "1d4",
-            "name": "prone",
-            "type": "roll"
           }],
           "stat": "dex",
           "success": [{

@@ -2620,11 +2620,6 @@
           "miss": [],
           "type": "attack"
         }],
-        "meta": [{
-          "dice": "DAMAGE",
-          "name": "Prone",
-          "type": "roll"
-        }],
         "target": "each",
         "type": "target"
       }, {
@@ -3755,20 +3750,15 @@
             "fail": [{
               "conc": false,
               "desc": null,
-              "duration": "{Rounds}",
+              "duration": "3",
               "effects": "",
               "end": true,
-              "name": "Prone",
+              "name": "Proned",
               "type": "ieffect"
             }],
             "stat": "str",
             "success": [],
             "type": "save"
-          }],
-          "meta": [{
-            "dice": "1d4",
-            "name": "Rounds",
-            "type": "roll"
           }],
           "miss": [],
           "type": "attack"
@@ -3874,32 +3864,34 @@
       "_v": 2,
       "automation": [{
         "effects": [{
-          "attackBonus": "ATTACK",
-          "hit": [{
-            "damage": "DAMAGE [Flying]",
-            "overheal": false,
+          "dc": "{8+ATTACK}",
+          "fail": [{
+            "damage": "{damage}+{max(SMO,DMO)} [Flying]",
             "type": "damage"
           }, {
             "desc": "",
-            "duration": "{Rounds}",
+            "duration": "3",
             "effects": "",
             "end": true,
-            "name": "Confused",
+            "name": "Proned",
             "type": "ieffect"
           }],
-          "miss": [],
-          "type": "attack"
+          "stat": "str",
+          "sucess":[{
+            "damage": "({damage}+{max(SMO,DMO)})/2 [Flying]",
+            "type": "damage"
+          }],
+          "type": "save"
         }],
-        "meta": [{
-          "dice": "1d4",
-          "hidden": false,
-          "name": "Rounds",
+        "meta":[{
+          "dice": "DAMAGE",
+          "name": "damage",
           "type": "roll"
         }],
-        "target": "each",
+        "target": "all",
         "type": "target"
       }, {
-        "text": "You wrap an opponent in a fierce wind. Make a ranged attack against a target, dealing 3d6 + MOVE flying damage on a hit. If this attack is activated during rain, roll the attack with advantage. If used during harsh sunlight, roll the attack with disadvantage. If the natural attack roll is 15 or higher, the target becomes confused.",
+        "text": "You whip up a maelstrom of harsh winds. Each creature in a 30 ft radius, centered on a point within range, must make a STR saving throw against your Move DC, taking 3d6 + MOVE flying damage and knocked prone on a failure, or half as much damage without being knocked prone on a success. Targets that fail the saving throw by 5 or more become confused. If this attack is activated during rain, the targets roll their saving throws with disadvantage. If used during harsh sunlight, the targets roll their saves with advantage.",
         "type": "text"
       }],
       "name": "Hurricane",
@@ -3907,10 +3899,10 @@
       "verb": null
     },
     "damage": {
-      "1": "3d6+{max(SMO,DMO)}",
-      "5": "3d8+{max(SMO,DMO)}",
-      "10": "6d6+{max(SMO,DMO)}",
-      "17": "7d8+{max(SMO,DMO)}"
+      "1": "3d6",
+      "5": "3d8",
+      "10": "6d6",
+      "17": "7d8"
     },
     "PP": 5
   },

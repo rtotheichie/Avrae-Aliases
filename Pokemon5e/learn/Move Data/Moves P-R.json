@@ -2321,7 +2321,7 @@
         "effects": [{
           "dc": "{8+proficiencyBonus+SMO}",
           "fail": [{
-            "damage": "{damage}+{SMO} [Rock]",
+            "damage": "{damage} [Rock]",
             "type": "damage"
           }, {
             "duration": "-1",
@@ -2331,7 +2331,10 @@
             "type": "ieffect"
           }],
           "stat": "str",
-          "success": [],
+          "success": [
+            {"damage": "({damage})/2 [Rock]",
+            "type": "damage"
+          }],
           "type": "save"
         }],
         "meta": [{
