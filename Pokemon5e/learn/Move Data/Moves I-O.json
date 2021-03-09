@@ -1372,17 +1372,11 @@
           }, {
             "dc": "{8+ATTACK}",
             "fail": [{
-              "duration": "{Rounds}",
+              "duration": "3",
               "effects": "",
               "end": true,
-              "name": "Prone",
+              "name": "Proned",
               "type": "ieffect"
-            }],
-            "meta": [{
-              "dice": "1d4",
-              "hidden": true,
-              "name": "Rounds",
-              "type": "roll"
             }],
             "stat": "str",
             "success": [],
@@ -1964,10 +1958,10 @@
           }, {
             "dc": "{8+ATTACK}",
             "fail": [{
-              "duration": "{Prone}",
+              "duration": "3",
               "effects": "",
               "end": false,
-              "name": "Prone",
+              "name": "Proned",
               "type": "ieffect"
             }],
             "stat": "str",
@@ -1976,11 +1970,6 @@
           }],
           "miss": [],
           "type": "attack"
-        }],
-        "meta": [{
-          "dice": "1d4",
-          "name": "Prone",
-          "type": "roll"
         }],
         "target": "each",
         "type": "target"
