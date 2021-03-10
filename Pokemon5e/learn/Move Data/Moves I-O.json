@@ -42,13 +42,7 @@
             "damage": "{damage}+{max(SMO,DMO)} [Ice]",
             "type": "damage"
           }, {
-            "duration": "-1",
-            "effects": "",
-            "end": false,
-            "name": "Frozen",
-            "type": "ieffect"
-          }],
-          "stat": "dex",
+            "stat": "dex",
           "success": [{
             "damage": "({damage}+{max(SMO,DMO)})/2 [Ice]",
             "type": "damage"
