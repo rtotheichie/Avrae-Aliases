@@ -41,8 +41,8 @@
           "fail": [{
             "damage": "{damage}+{max(SMO,DMO)} [Ice]",
             "type": "damage"
-          }, {
-            "stat": "dex",
+          }],
+          "stat": "dex",
           "success": [{
             "damage": "({damage}+{max(SMO,DMO)})/2 [Ice]",
             "type": "damage"
@@ -849,6 +849,30 @@
       "17": "4d12"
     },
     "PP": 5
+  },
+  "Laser Focus": {
+    "code": {
+      "_v": 2,
+      "automation": [{
+        "effects": [{
+          "conc": true,
+          "duration": 2,
+          "effects": "",
+          "end": true,
+          "name": "Laser Focus (Crit on next attack.)",
+          "type": "ieffect"
+        }],
+        "target": "self",
+        "type": "target"
+      }, {
+        "text": "When activating this move, you spend your action concentrating intensely. If you keep your concentration, your first attack on your next turn always results in a critical hit.",
+        "type": "text"
+      }],
+      "name": "Laser Focus",
+      "proper": true,
+      "verb": "uses"
+    },
+    "PP": 15
   },
   "Last Resort": {
     "attack": "proficiencyBonus+max(SMO,DMO)",
