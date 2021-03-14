@@ -13,51 +13,51 @@ elif args[0].lower() in "piloting":
     args.insert(0,"Religion")
 if args[0].lower() in "history":
     if len(args) > 1 and args[1].lower() in "strengthdexterityintelligencewissdomcharismaconstitution":
-        if arg[1].lower() in "strength":
+        if args[1].lower() in "strength":
             ability = "Strength"
-        elif arg[1].lower() in "dexterity":
+        elif args[1].lower() in "dexterity":
             ability = "Dexterity"
-        elif arg[1].lower() in "intelligence":
+        elif args[1].lower() in "intelligence":
             ability = "Intelligence"
-        elif arg[1].lower() in "wisdom":
+        elif args[1].lower() in "wisdom":
             ability = "Wisdom"
-        elif arg[1].lower() in "charisma":
+        elif args[1].lower() in "charisma":
             ability = "Charisma"
-        elif arg[1].lower() in "constitution":
+        elif args[1].lower() in "constitution":
             ability = "Constitution"
         args.append(f'-title "[name] makes a {ability} (Lore) check!"')
     else:
         args.append(f'-title "[name] makes a Lore check!"')
 elif args[0].lower() in "arcana":
     if len(args) > 1 and args[1].lower() in "strengthdexterityintelligencewissdomcharismaconstitution":
-        if arg[1].lower() in "strength":
+        if args[1].lower() in "strength":
             ability = "Strength"
-        elif arg[1].lower() in "dexterity":
+        elif args[1].lower() in "dexterity":
             ability = "Dexterity"
-        elif arg[1].lower() in "intelligence":
+        elif args[1].lower() in "intelligence":
             ability = "Intelligence"
-        elif arg[1].lower() in "wisdom":
+        elif args[1].lower() in "wisdom":
             ability = "Wisdom"
-        elif arg[1].lower() in "charisma":
+        elif args[1].lower() in "charisma":
             ability = "Charisma"
-        elif arg[1].lower() in "constitution":
+        elif args[1].lower() in "constitution":
             ability = "Constitution"
         args.append(f'-title "[name] makes a {ability} (Technology) check!"')
     else:
         args.append(f'-title "[name] makes a Technology check!"')
 elif args[0].lower() in "religion":
     if len(args) > 1 and args[1].lower() in "strengthdexterityintelligencewissdomcharismaconstitution":
-        if arg[1].lower() in "strength":
+        if args[1].lower() in "strength":
             ability = "Strength"
-        elif arg[1].lower() in "dexterity":
+        elif args[1].lower() in "dexterity":
             ability = "Dexterity"
-        elif arg[1].lower() in "intelligence":
+        elif args[1].lower() in "intelligence":
             ability = "Intelligence"
-        elif arg[1].lower() in "wisdom":
+        elif args[1].lower() in "wisdom":
             ability = "Wisdom"
-        elif arg[1].lower() in "charisma":
+        elif args[1].lower() in "charisma":
             ability = "Charisma"
-        elif arg[1].lower() in "constitution":
+        elif args[1].lower() in "constitution":
             ability = "Constitution"
         args.append(f'-title "[name] makes a {ability} (Piloting) check!"')
     else:
