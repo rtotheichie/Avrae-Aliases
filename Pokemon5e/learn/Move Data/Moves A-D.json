@@ -4550,33 +4550,25 @@
     "PP": 5
   },
   "Dragon Tail": {
+    "attack": "proficiencyBonus+SMO",
     "code": {
       "_v": 2,
       "automation": [{
         "effects": [{
-          "dc": "{8+proficiencyBonus+SMO}",
-          "fail": [{
-            "cantripScale": null,
+          "attackBonus": "ATTACK",
+          "hit": [{
             "damage": "DAMAGE+{SMO}[Dragon]",
-            "higher": null,
             "overheal": false,
             "type": "damage"
-          }, {
-            "duration": "0",
-            "effects": "frightened",
-            "end": true,
-            "name": "Forced to switch out",
-            "type": "ieffect"
-          }, {
-            "text": "You whip your dragon tail at a creature in an attempt to send them away. Force a target to make a CON save against your Move DC. On a failure, they take 1d10 + MOVE dragon damage and are too frightened by you to remain in battle. In trainer battles, the target must be switched out if another creature is available. In wild battles, the target only flees if it a lower level than the user.",
-            "type": "text"
           }],
-          "stat": "con",
-          "success": [],
-          "type": "save"
-        }],
-        "target": "all",
-        "type": "target"
+          "miss": [],
+          "type": "attack"
+          }],
+          "target": "each",
+          "type": "target"
+        }, {
+          "text": "You whip your dragon tail at a creature in an attempt to send them away. Make a melee attack roll against a target, dealing 1d10 + MOVE dragon damage. In wild battles, the target takes the damage and flees from battle if its level is lower than that of the user. In trainer battle, the target takes the damage and must be immediately switched out for another creature in the trainer's party, if any remain.",
+          "type": "text"
       }],
       "name": "Dragon Tail",
       "proper": false,
@@ -4588,7 +4580,7 @@
       "10": "5d4",
       "17": "4d8"
     },
-    "PP": 3
+    "PP": 5
   },
   "Drain Punch": {
     "attack": "proficiencyBonus+max(SMO,DMO)",
