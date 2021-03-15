@@ -26,7 +26,7 @@ if not spell:
 if not spell:
     return err("I don't think that's a supported power.  Make sure it is spelled correctly and is in your `brewspells` if it's unofficial.")
 if spell.name not in character().spellbook and not ignore:
-    return err("I don't think you know that power.  Make sure it is added to your spellbook or try to cast it again with `-i` to ignore requirements.")
+    return err(f"I don't think you know {spell.name}.  Make sure it is added to your spellbook or try to cast it again with `-i` to ignore requirements. If you didn't intend to use {spell.name}, try using quotes around the power name.")
 splevel = max(a.last('l', default = 0, type_=int), spell.level)
 points = point_list[splevel]
 if a.get('p'):
