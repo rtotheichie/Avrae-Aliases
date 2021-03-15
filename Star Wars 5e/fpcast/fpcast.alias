@@ -20,7 +20,7 @@ for s in gvar:
 if not spell:
     for s in gvar:
         if args[0].lower() in s.name.lower():
-            spell
+            spell = s
 if not spell:
     return err("I don't think that's a supported power.  Make sure it is spelled correctly and is in your `brewspells` if it's unofficial.")
 if spell.name not in character().spellbook and not ignore:
