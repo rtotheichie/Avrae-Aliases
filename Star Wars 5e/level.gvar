@@ -776,7 +776,7 @@
     "counters": []
   },
   {
-    "name": "Scholar",
+    "Class": "Scholar",
     "hitDie": "d8",
     "subclassLevel": 3,
     "counters": []
