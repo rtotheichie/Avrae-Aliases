@@ -42,7 +42,7 @@
   },
   {
     "Class": "Berserker",
-    "subclass": "Marauder",
+    "subclass": "Marauder Light",
     "counters": [{
         "name": "Force Points",
         "level": 3,
@@ -738,5 +738,59 @@
         "desc": "You can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a force power. Once you’ve used this feature, you can’t use it again until you finish a short or long rest."
       }
     ]
+  },
+  {
+    "Class": "Engineer",
+    "subclassLevel": 3,
+    "hitDie": "d8",
+    "counters":[]
+  },
+  {
+    "Class": "Fighter",
+    "hitDie": "d10",
+    "subclassLevel": 3,
+    "counters": []
+  },
+  {
+    "Class": "GuardianLight",
+    "hitDie": "d10",
+    "subclassLevel": 3,
+    "counters": []
+  },
+  {
+    "Class": "GuardianDark",
+    "hitDie": "d10",
+    "subclassLevel": 3,
+    "counters": []
+  },
+  {
+    "Class": "Monk",
+    "hitDie": "d8",
+    "subclassLevel": 3,
+    "counters": []
+  },
+  {
+    "Class": "Operative",
+    "hitDie": "d8",
+    "subclassLevel": 3,
+    "counters": []
+  },
+  {
+    "name": "Scholar",
+    "hitDie": "d8",
+    "subclassLevel": 3,
+    "counters": []
+  },
+  {
+    "Class": "Scout",
+    "hitDie": "d10",
+    "subclassLevel": 3,
+    "counters": []
+  },
+  {
+    "Class": "Sentinel",
+    "hitDie": "d8",
+    "subclassLevel": 3,
+    "counters": []
   }
 ]
