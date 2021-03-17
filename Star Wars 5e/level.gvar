@@ -788,7 +788,13 @@
     "counters": []
   },
   {
-    "Class": "Sentinel",
+    "Class": "SentinelLight",
+    "hitDie": "d8",
+    "subclassLevel": 3,
+    "counters": []
+  },
+  {
+    "Class": "SentinelDark",
     "hitDie": "d8",
     "subclassLevel": 3,
     "counters": []
