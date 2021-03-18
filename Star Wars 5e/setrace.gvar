@@ -1,0 +1,196 @@
+[{
+    "name": "Star Wars 5e Player's Handbook Species",
+    "featureResources": "",
+    "counters": [],
+    "cvars": {
+      "race": "",
+      "speed": "30 ft.",
+      "languages": "Galactic Basic",
+      "size": "Medium",
+      "creatureType": "Humanoid",
+      "resist": "",
+      "immune": "",
+      "cimmune": "",
+      "vuln": "",
+      "senses": ""
+    }
+  },
+  {
+    "name": "bith",
+    "counters": [],
+    "cvars": {
+      "race": "Bith",
+      "resist": "",
+      "languages": "Galactic Basic, Bith"
+    }
+  },
+  {
+    "name": "bothan",
+    "counters": [],
+    "cvars": {
+      "race": "Bothan",
+      "resist": "",
+      "languages": "Galactic Basic, Bothese"
+    }
+  },
+  {
+    "name": "cathar",
+    "counters": [],
+    "cvars": {
+      "race": "Cathar",
+      "speed": "30 ft., Climb 20 ft.",
+      "resist": "",
+      "languages": "Galactic Basic, Catharese",
+      "senses": "Darkvision 60 ft."
+    }
+  },
+  {
+    "name": "cerean",
+    "counters": [],
+    "cvars": {
+      "race": "Cerean",
+      "speed": "30 ft.",
+      "resist": "",
+      "languages": "Galactic Basic, Cerean"
+    }
+  },
+  {
+    "name": "chiss",
+    "counters": [],
+    "cvars": {
+      "race": "Chiss",
+      "speed": "30 ft.",
+      "resist": "",
+      "languages": "Galactic Basic, Cheunh",
+      "senses": "Darkvision 120 ft."
+    }
+  },
+  {
+    "name": "devaronian",
+    "counters": [{
+      "name": "Tough Through",
+      "reset": "long",
+      "level": 1,
+      "use": "tough",
+      "value": 2
+    }],
+    "cvars": {
+      "race": "Devaronian",
+      "languages": "Galactic Basic, Devaronese",
+      "resist": "Poison"
+    }
+  },
+  {
+    "name": "droid, class I",
+    "counters": [],
+    "cvars": {
+      "race": "Droid, Class I",
+      "speed": "25 ft.",
+      "languages": "Galactic Basic, Binary",
+      "resist": "Necrotic, Poison, Psychic",
+      "vuln": "Ion",
+      "cimmune": "Poison, Disease",
+      "creatureType": "Droid"
+    }
+  },
+  {
+    "name": "droid, class ii",
+    "counters": [],
+    "cvars": {
+      "race": "Droid, Class II",
+      "speed": "25 ft.",
+      "languages": "Binary, Galactic Basic",
+      "resist": "Necrotic, Poison, Psychic",
+      "vuln": "Ion",
+      "cimmune": "Poison, Disease",
+      "creatureType": "Droid",
+      "size": "Small"
+    }
+  },
+  {
+    "name": "droid, class iii",
+    "counters": [],
+    "cvars": {
+      "race": "Droid, Class III",
+      "speed": "25 ft.",
+      "languages": "Galactic Basic, Binary",
+      "resist": "Necrotic, Poison, Psychic",
+      "vuln": "Ion",
+      "cimmune": "Poison, Disease",
+      "creatureType": "Droid"
+    }
+  },
+  {
+    "name": "droid, class iv",
+    "counters": [],
+    "cvars": {
+      "race": "Droid, Class IV",
+      "speed": "30 ft.",
+      "languages": "Galactic Basic, Binary",
+      "resist": "Necrotic, Poison, Psychic",
+      "vuln": "Ion",
+      "cimmune": "Poison, Disease",
+      "creatureType": "Droid"
+    }
+  },
+  {
+    "name": "droid, class v",
+    "counters": [],
+    "cvars": {
+      "race": "Droid, Class V",
+      "speed": "30 ft.",
+      "languages": "Galactic Basic, Binary",
+      "resist": "Necrotic, Poison, Psychic",
+      "vuln": "Ion",
+      "cimmune": "Poison, Disease",
+      "creatureType": "Droid"
+    }
+  },
+  {
+    "name": "duros",
+    "counters": [],
+    "cvars": {
+      "race": "Duros",
+      "languages": "Galactic Basic, Durese",
+      "senses": "Darkvision 60 ft."
+    }
+  },
+  {
+    "name": "ewok",
+    "counters": [],
+    "cvars": {
+      "race": "Ewok",
+      "speed": "25 ft., Climb 25 ft.",
+      "size": "Small",
+      "languages": "Ewokese, Galactic Basic"
+    }
+  },
+  {
+    "name": "gamorrean",
+    "counters": [],
+    "cvars": {
+      "race": "Gamorrean",
+      "languages": "Gamorrese, Galactic Basic"
+    }
+  },
+  {
+    "name": "gungan",
+    "counters": [],
+    "cvars": {
+      "race": "Gungan",
+      "languages": "Galactic Basic, Gungan",
+      "speed": "30 ft., Sim 30 ft.",
+      "senses": "Darkvision 60 ft."
+    }
+  },
+  {
+    "name": "human",
+    "counters": [{
+      "name": "Defiant",
+      "reset": "short",
+      "level": 1
+    }],
+    "race": "Human",
+    "languages": "Galactic Basic"
+  }
+]
