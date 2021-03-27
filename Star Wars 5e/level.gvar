@@ -743,7 +743,90 @@
     "Class": "Engineer",
     "subclassLevel": 3,
     "hitDie": "d8",
-    "counters":[]
+    "counters":[
+      {
+        "name": "Tech Points",
+        "level": 1,
+        "value": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+        "modifier": "intelligenceMod",
+        "display": "default",
+        "reset": "short",
+        "classLevel": "EngineerLevel",
+        "desc": "You have a number of tech points equal to your engineer level x 2, as shown in the Tech Points column of the engineer table, + your Intelligence modifier. You use these tech points to cast tech powers. You regain all expended tech points when you finish a short or long rest."
+      },
+      {
+        "name": "Potent Aptitude",
+        "level": 1,
+        "value": "proficiencyBonus",
+        "display": "bubble",
+        "reset": "short",
+        "classLevel": "EngineerLevel",
+        "desc": "Your technological experience lends you an uncommon insight that you can use to bolster your allies. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Potent Aptitude die, a d4. This die changes as you gain engineer levels, as shown in the Potent Aptitude column of the engineer table.\n\nOnce within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 beforedeciding to use the Potent Aptitude die, but must decide before the GM says whether the roll succeeds or fails. Once the Potent Aptitude die is rolled, it is lost.\n\nA creature can have only one Potent Aptitude die at a time.\n\nYou can use this feature a number of times equal to your proficiency bonus, as shown in the engineer table. You regain any expended uses when you finish a short or long rest."
+      },
+      {
+        "name": "Infuse Item",
+        "level": 2,
+        "display": "bubble",
+        "value": 1,
+        "reset": "long",
+        "desc": "You gain the ability to temporarily enhance a weapon or armor. At the end of a long rest, you can touch one unenhanced object that is a suit of armor, a shield, or a simple or martial weapon. Until the end of your next long rest or until you die, the object becomes an enhanced item, granting a +1 bonus to AC if it’s armor or a shield or a +1 bonus to attack and damage rolls if it’s a weapon.\n\nOnce you’ve used this feature, you can’t use it again until you finish a long rest.\n\nThis bonus increases to +2 at 10th level and +3 at 15th level.",
+        "classLevel": "EngineerLevel"
+      }]
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Armormech",
+    "counters": []
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Armstech",
+    "counters": []
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Gadgeteer",
+    "counters": []
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Unstable",
+    "counters": []
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Artificer",
+    "counters": []
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Astrotech",
+    "counters": []
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Audiotech",
+    "counters": []
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Biochem",
+    "counters": []
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Biotech",
+    "counters": []
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Construction",
+    "counters": []
+  },
+  {
+    "Class": "Engineer",
+    "subclass":"Cybertech",
+    "counters": []
   },
   {
     "Class": "Fighter",
