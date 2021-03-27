@@ -832,6 +832,95 @@
     "Class": "Fighter",
     "hitDie": "d10",
     "subclassLevel": 3,
+    "counters": [{
+      "name": "Second Wind",
+      "level": 1,
+      "classLevel": "FighterLevel",
+      "reset": "short",
+      "display": "bubble",
+      "value": 1,
+      "desc": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level."
+    },
+    {
+      "name": "Action Surge",
+      "level": 2,
+      "value": [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2],
+      "desc": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
+      "classLevel": "FighterLevel",
+      "reset": "short",
+      "display": "bubble"
+    },
+    {
+      "name": "Superiority Dice",
+      "level": 2,
+      "classLevel": "FighterLevel",
+      "reset": "short",
+      "display": "bubble",
+      "value": [0,2,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,5,5]
+    },
+    {
+      "name": "Indominatable",
+      "level": 9,
+      "value": [0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3],
+      "reset": "long",
+      "classLevel": "FighterLevel",
+      "display": "bubble",
+      "desc": "You can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest."
+    }]
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Assault",
+    "counters": []
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Heavy Weapons",
+    "counters": []
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Shield",
+    "counters": []
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Tactical",
+    "counters": []
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Adept",
+    "counters": []
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Blademaster",
+    "counters": []
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Demolitions",
+    "counters": []
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Enhancement",
+    "counters": []
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Mounted",
+    "counters": []
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Praetorian",
+    "counters": []
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Totem",
     "counters": []
   },
   {
