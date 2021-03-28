@@ -170,7 +170,7 @@
     }]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "hitDie": "d6",
     "subclassLevel": 3,
     "counters": [{
@@ -180,7 +180,7 @@
         "modifier": "wisdomMod",
         "reset": "long",
         "display": "default",
-        "classLevel": "ConsularLightLevel"
+        "classLevel": "ConsularlightLevel"
       },
       {
         "name": "Force Shield",
@@ -188,7 +188,7 @@
         "value": "proficiencyBonus",
         "display": "bubble",
         "reset": "long",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "You learn how to defend yourself purely through your strength with the Force. When you are hit by an attack, you can use your reaction to shroud yourself in Force energy. Until the start of your next turn, you have a bonus to AC equal to your Wisdom or Charisma modifier (your choice, minimum of +1). This includes the triggering attack."
       },
       {
@@ -197,26 +197,26 @@
         "value": 1,
         "display": "bubble",
         "reset": "short",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "Your attunement to the Force is absolute. Your Wisdom or Charisma score increases by 4, and your maximum for this score increases by 4. Additionally, you gain mastery over a single force power, and can cast it with little effort. Choose one 3rd-level force power that you know as your signature power. You can cast it once at 3rd level without expending force points. When you do so, you can’t do so again until you finish a short or long rest."
       }
     ]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Balance",
     "counters": [{
       "name": "Force Barrier",
       "level": 3,
       "value": 1,
       "reset": "long",
-      "classLevel": "ConsularLightLevel",
+      "classLevel": "ConsularlightLevel",
       "display": "bubble",
-      "desc": "You can weave the Force around yourself for protection. When you cast a universal power of 1st level or higher, you can simultaneously manipulate the Force to create a barrier on yourself that lasts until you finish a long rest. The barrier has hit points equal to twice your ConsularLight level + your Wisdom or Charisma modifier (your choice). Your barrier can never have hit points greater than twice your ConsularLight level + your Wisdom or Charisma modifier (your choice).\n\nWhenever you take damage, the barrier takes the damage instead. If this damage reduces the barrier to 0 hit points, you take any remaining damage.\n\nWhile the barrier has 0 hit points, it can’t absorb damage, but its power remains. Whenever you cast a universal power of 1st level or higher, the barrier regains a number of hit points equal to twice the level of the power."
+      "desc": "You can weave the Force around yourself for protection. When you cast a universal power of 1st level or higher, you can simultaneously manipulate the Force to create a barrier on yourself that lasts until you finish a long rest. The barrier has hit points equal to twice your Consularlight level + your Wisdom or Charisma modifier (your choice). Your barrier can never have hit points greater than twice your Consularlight level + your Wisdom or Charisma modifier (your choice).\n\nWhenever you take damage, the barrier takes the damage instead. If this damage reduces the barrier to 0 hit points, you take any remaining damage.\n\nWhile the barrier has 0 hit points, it can’t absorb damage, but its power remains. Whenever you cast a universal power of 1st level or higher, the barrier regains a number of hit points equal to twice the level of the power."
     }]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Lightning",
     "counters": [{
         "name": "Shocking Affinity",
@@ -224,7 +224,7 @@
         "value": "wisdomMod",
         "display": "bubble",
         "reset": "short",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "When you cast a force power that deals lightning damage, you can use Wisdom or Charisma as your forcecasting ability for it.\n\nAdditionally, when you cast a damage-dealing force power that requires a force attack or saving throw, you can cause that power to instead deal lightning damage. If the power would call for a saving throw other than Dexterity, it instead calls for a Dexterity saving throw. If you hit with the power, or the target fails the power’s saving throw, affected creatures become shocked until the start of your next turn. You can use this feature a number of times equal to your Wisdom or Charisma modifier (your choice, a minimum of once). You regain all expended uses when you finish a short or long rest."
       },
       {
@@ -233,8 +233,8 @@
         "value": "wisdomMod",
         "display": "bubble",
         "reset": "long",
-        "classLevel": "ConsularLightLevel",
-        "desc": "When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. On a failed save, the creature takes 1d10 plus your ConsularLight level lightning damage, is pushed back 10 feet, and becomes shocked until the end of their next turn. On a successful save, the creature takes half as much damage and isn’t moved or shocked."
+        "classLevel": "ConsularlightLevel",
+        "desc": "When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. On a failed save, the creature takes 1d10 plus your Consularlight level lightning damage, is pushed back 10 feet, and becomes shocked until the end of their next turn. On a successful save, the creature takes half as much damage and isn’t moved or shocked."
       },
       {
         "name": "Way of Lightning",
@@ -242,13 +242,13 @@
         "value": "wisdomMod",
         "display": "bubble",
         "reset": "long",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "You can increase the power of your simpler lightning force powers. When you cast a force power of 1st through 6th level that deals lightning damage, you can deal maximum damage with that power.\n\nYou can use this feature with no adverse effects a number of times equal to your Wisdom or Charisma modifier (your choice, a minimum of once). If you use this feature beyond this before you finish a long rest, you take 2d12 true damage for each level of the power, immediately after you cast it. Each time you use this feature again before finishing a long rest, the damage increases by 1d12."
       }
     ]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Suggestion",
     "counters": [{
         "name": "Out Of Mind",
@@ -256,7 +256,7 @@
         "value": 1,
         "reset": "short",
         "display": "bubble",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "You can erase yourself from a single creature’s sight momentarily. As a bonus action, choose a creature within 60 feet of you that you are aware of. That creature must make a Wisdom saving throw against your universal force save DC. On a failed save, you become invisible to that creature for 1 minute, or until you deal damage to it."
       },
       {
@@ -265,7 +265,7 @@
         "value": "wisdomMod",
         "display": "bubble",
         "reset": "long",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "Your mind-affecting powers are particularly potent. When you cast one of cloud mind, dominate mind, mass coerce mind, and dominate monster, you can choose to treat the power as if cast at your Max Power Level."
       },
       {
@@ -274,8 +274,8 @@
         "value": 1,
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularLightLevel",
-        "desc": "When you cast a force power, you can delay the effects of the force power for up to a number of rounds equal to half your ConsularLight level. If you do so, the power immediately takes effect at the start of your turn, after the specified number of rounds have passed."
+        "classLevel": "ConsularlightLevel",
+        "desc": "When you cast a force power, you can delay the effects of the force power for up to a number of rounds equal to half your Consularlight level. If you do so, the power immediately takes effect at the start of your turn, after the specified number of rounds have passed."
       },
       {
         "name": "Subtle Presence",
@@ -283,13 +283,13 @@
         "value": 3,
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "You’ve learned how to weave the Force around you in a cloak of your choice. As an action, you can focus the Force for 10 minutes. For the duration, you gain your choice of one of the following effects.\n\nYou can use each feature once. You regain all expended uses when you complete a long rest."
       }
     ]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Sage",
     "counters": [{
         "name": "Preserve Life",
@@ -297,8 +297,8 @@
         "value": "wisdomMod",
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularLightLevel",
-        "desc": "As an action, you can channel the Force and evoke healing energy that restores a number of hit points equal to five times your ConsularLight level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half its hit point maximum. This feature has no effect on droids or constructs."
+        "classLevel": "ConsularlightLevel",
+        "desc": "As an action, you can channel the Force and evoke healing energy that restores a number of hit points equal to five times your Consularlight level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half its hit point maximum. This feature has no effect on droids or constructs."
       },
       {
         "name": "Blessed by the Force",
@@ -306,13 +306,13 @@
         "value": 1,
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "You gain the ability to overcome grievous injuries. As a bonus action when you have fewer than half your hit points remaining, you can regain a number of hit points equal to half your hit point maximum."
       }
     ]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Confluence",
     "counters": [{
       "name": "Interconnectedness",
@@ -320,12 +320,12 @@
       "value": "wisdomMod",
       "display": "bubble",
       "reset": "long",
-      "classLevel": "ConsularLightLevel",
+      "classLevel": "ConsularlightLevel",
       "desc": "When you cast a 5th level or lower force power that deals damage or restores hit points and targets only one creature, the power can instead target two creatures within range and within 5 feet of each other."
     }]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Endurance",
     "counters": [{
         "name": "Upheld by the Force",
@@ -333,7 +333,7 @@
         "value": 2,
         "reset": "short",
         "display": "bubble",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "The Force flowing through your body strengthens you, granting the following benefits:\n\n- Your hit point maximum increases by 3, and it increases by 1 again whenever you gain a level in this class.\n- Your base AC becomes 13 + your Constitution modifier.\n- When you make a melee weapon attack as a part of a force power you cast, you can use Wisdom or Charisma (your choice) instead of Strength for the attack and damage rolls.\n\nAdditionally, as an action, you can gain resistance to kinetic and energy damage for 1 minute. This effect lasts until you end it as a bonus action, you are incapacitated, or you don armor other than a shield. You can use this feature twice. You regain all expended uses of it when you finish a short or long rest."
       },
       {
@@ -341,7 +341,7 @@
         "level": 14,
         "value": 1,
         "display": "bubble",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "reset": "long",
         "desc": "When you use your Boundless Vitality feature while concentrating on a force power, you can add the result of the roll to the Constitution saving throw made to maintain concentration."
       },
@@ -351,13 +351,13 @@
         "value": "wisdomMod",
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "As an action, you can choose a point within 60 feet. Each creature of your choice within 30 feet of that point must make a Constitution saving throw against your universal force save DC. On a failed save, a creature takes 5d10 force damage and suffers 1 level of exhaustion. On a successful save, a creature takes half damage and does not suffer exhaustion.\n\nFor each creature that fails this saving throw, a friendly creature within 30 feet of them can regain hit points equal to the amount of damage dealt. A friendly creature can only gain this benefit once per turn."
       }
     ]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Manipulation",
     "counters": [{
       "name": "Saber Storm",
@@ -365,12 +365,12 @@
       "value": 2,
       "reset": "short",
       "display": "bubble",
-      "classLevel": "ConsularLightLevel",
+      "classLevel": "ConsularlightLevel",
       "desc": "You learn to deftly control your weapons utilizing the Force. As an action, you can initiate your Saber Storm. When you do so, select a light- or vibro-weapon within 5 feet that is not worn or carried by a conscious creature other than you, and use the Force to cause it to levitate, acting as an extension of your will for 1 minute. When you activate this feature, you can cause the weapon to move up to 10 feet and make a melee force attack against a creature within 5 feet of it. On a hit, the target takes 1d8 + your forcecasting ability modifier damage. The type is of the normal damage dealt by the weapon. The weapon then returns to your side.\n\nYour weapon moves with you, and while Saber Storm is active and you have a weapon animated, on each of your turns you can use an action to move a weapon up to 10 feet and repeat the attack against a creature within 5 feet of it. The weapon then returns to your side. Your Saber Storm ends early if you are incapacitated. At any time, you can end this feature and return the animated weapon to your hand.\n\nAdditionally, while your Saber Storm is active, and at least one animated weapon is within 5 feet of you, you gain the following benefits:\n\n- You gain a bonus to your AC equal to your Wisdom or Charisma modifier (your choice, minimum of +1) if it doesn’t already include that modifier.\n- You gain a bonus to any Constitution saving throw you make to maintain your concentration on a power. The bonus equals your Wisdom or Charisma modifier (your choice, minimum of +1).\n\nThis feature can animate more than one weapon when you reach higher levels: two weapons at 5th level, three weapons at 11th level, and four weapons at 17th level. When you use your action to attack with your weapons, you can direct them at the same target or at different ones. Make a separate attack roll for each weapon.\n\nAt 5th level, the distance your weapon can travel increases to 20 feet. This distance increases to 30 feet at 11th level, and 40 feet at 17th level."
     }]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Negation",
     "counters": [{
       "name": "Force Deflection",
@@ -378,12 +378,12 @@
       "level": 3,
       "reset": "long",
       "display": "bubble",
-      "classLevel": "ConsularLightLevel",
+      "classLevel": "ConsularlightLevel",
       "desc": "When you fail a saving throw, you can use your reaction to gain a bonus to that saving throw equal to your Wisdom or Charisma modifier (your choice, minimum of +1)."
     }]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Technology",
     "counters": [{
         "name": "Fundamentals of Mechu-Deru",
@@ -391,7 +391,7 @@
         "value": "wisdomMod",
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "Starting when you choose this tradition at 3rd level, you’ve dabbled in adapting your use of the Force, melding it with technology. You gain proficiency in the Technology skill, as well as simple blasters. When you cast a force power that calls for a melee weapon attack, and you are wielding a blaster with which you are proficient, you can instead make a ranged weapon attack, as long as the target is within your weapon’s normal range.\n\nAdditionally, you’ve learned to manipulate the Force to be able to manipulate technology when it couldn’t previously. When you cast a force power that could not affect droids or constructs, you can choose to have it affect droids or constructs. If it would affect multiple targets, you must expend additional uses of this feature for each additional target. "
       },
       {
@@ -400,13 +400,13 @@
         "level": 18,
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "You can cast one 5th-level tech power of your choice at its base level. The power counts as a universal force power for you, and you do not require force points to cast this power. Once you’ve done so, you can’t do so again until you complete a long rest."
       }
     ]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Telekinetics",
     "counters": [{
       "name": "Repulsing Wave",
@@ -414,12 +414,12 @@
       "value": "wisdomMod",
       "reset": "short",
       "display": "bubble",
-      "classLevel": "ConsularLightLevel",
-      "desc": "When you are dealt damage by a creature within 5 feet of you, you can use your reaction to deal force damage to the creature equal to your ConsularLight level + your Wisdom or Charisma modifier (your choice, minimum of +1). If the attacker is Huge or smaller, it must also make a Strength saving throw against your universal force save DC. On a failed save, the attacker is pushed in a straight line up to 20 feet away from you."
+      "classLevel": "ConsularlightLevel",
+      "desc": "When you are dealt damage by a creature within 5 feet of you, you can use your reaction to deal force damage to the creature equal to your Consularlight level + your Wisdom or Charisma modifier (your choice, minimum of +1). If the attacker is Huge or smaller, it must also make a Strength saving throw against your universal force save DC. On a failed save, the attacker is pushed in a straight line up to 20 feet away from you."
     }]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Tutelage",
     "counters": [{
       "name": "Strength Flows From the Force",
@@ -427,12 +427,12 @@
       "value": "wisdomMod",
       "display": "bubble",
       "reset": "long",
-      "classLevel": "ConsularLightLevel",
+      "classLevel": "ConsularlightLevel",
       "desc": "When you cast a power that affects only your companion, you can choose to treat the power as if cast at your Max Power Level."
     }]
   },
   {
-    "Class": "ConsularLight",
+    "Class": "Consularlight",
     "subclass": "Seer",
     "counters": [{
         "name": "Powerful Mind",
@@ -440,7 +440,7 @@
         "value": "wisdomMod",
         "display": "bubble",
         "reset": "long",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "You can use your force abilities to read a creature’s thoughts. You can then use your access to the creature’s mind to command it.\n\nAs an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw against your universal force save DC. If the creature succeeds on the saving throw, you can’t use this feature on it again until you finish a long rest. If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute. During that time, you can use your action to end this effect and cast the coerce mind force power at its base level on the creature without expending force points. The target automatically fails its saving throw against the power."
       },
       {
@@ -449,13 +449,13 @@
         "value": 1,
         "display": "bubble",
         "reset": "short",
-        "classLevel": "ConsularLightLevel",
+        "classLevel": "ConsularlightLevel",
         "desc": "You can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a force power. Once you’ve used this feature, you can’t use it again until you finish a short or long rest."
       }
     ]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "hitDie": "d6",
     "subclassLevel": 3,
     "counters": [{
@@ -465,7 +465,7 @@
         "modifier": "charismaMod",
         "reset": "long",
         "display": "default",
-        "classLevel": "ConsularDarkLevel"
+        "classLevel": "ConsulardarkLevel"
       },
       {
         "name": "Force Shield",
@@ -473,7 +473,7 @@
         "value": "proficiencyBonus",
         "display": "bubble",
         "reset": "long",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "You learn how to defend yourself purely through your strength with the Force. When you are hit by an attack, you can use your reaction to shroud yourself in Force energy. Until the start of your next turn, you have a bonus to AC equal to your Wisdom or Charisma modifier (your choice, minimum of +1). This includes the triggering attack."
       },
       {
@@ -482,26 +482,26 @@
         "value": 1,
         "display": "bubble",
         "reset": "short",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "Your attunement to the Force is absolute. Your Wisdom or Charisma score increases by 4, and your maximum for this score increases by 4. Additionally, you gain mastery over a single force power, and can cast it with little effort. Choose one 3rd-level force power that you know as your signature power. You can cast it once at 3rd level without expending force points. When you do so, you can’t do so again until you finish a short or long rest."
       }
     ]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Balance",
     "counters": [{
       "name": "Force Barrier",
       "level": 3,
       "value": 1,
       "reset": "long",
-      "classLevel": "ConsularDarkLevel",
+      "classLevel": "ConsulardarkLevel",
       "display": "bubble",
-      "desc": "You can weave the Force around yourself for protection. When you cast a universal power of 1st level or higher, you can simultaneously manipulate the Force to create a barrier on yourself that lasts until you finish a long rest. The barrier has hit points equal to twice your ConsularDark level + your Wisdom or Charisma modifier (your choice). Your barrier can never have hit points greater than twice your ConsularDark level + your Wisdom or Charisma modifier (your choice).\n\nWhenever you take damage, the barrier takes the damage instead. If this damage reduces the barrier to 0 hit points, you take any remaining damage.\n\nWhile the barrier has 0 hit points, it can’t absorb damage, but its power remains. Whenever you cast a universal power of 1st level or higher, the barrier regains a number of hit points equal to twice the level of the power."
+      "desc": "You can weave the Force around yourself for protection. When you cast a universal power of 1st level or higher, you can simultaneously manipulate the Force to create a barrier on yourself that lasts until you finish a long rest. The barrier has hit points equal to twice your Consulardark level + your Wisdom or Charisma modifier (your choice). Your barrier can never have hit points greater than twice your Consulardark level + your Wisdom or Charisma modifier (your choice).\n\nWhenever you take damage, the barrier takes the damage instead. If this damage reduces the barrier to 0 hit points, you take any remaining damage.\n\nWhile the barrier has 0 hit points, it can’t absorb damage, but its power remains. Whenever you cast a universal power of 1st level or higher, the barrier regains a number of hit points equal to twice the level of the power."
     }]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Lightning",
     "counters": [{
         "name": "Shocking Affinity",
@@ -509,7 +509,7 @@
         "value": "charismaMod",
         "display": "bubble",
         "reset": "short",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "When you cast a force power that deals lightning damage, you can use Wisdom or Charisma as your forcecasting ability for it.\n\nAdditionally, when you cast a damage-dealing force power that requires a force attack or saving throw, you can cause that power to instead deal lightning damage. If the power would call for a saving throw other than Dexterity, it instead calls for a Dexterity saving throw. If you hit with the power, or the target fails the power’s saving throw, affected creatures become shocked until the start of your next turn. You can use this feature a number of times equal to your Wisdom or Charisma modifier (your choice, a minimum of once). You regain all expended uses when you finish a short or long rest."
       },
       {
@@ -518,8 +518,8 @@
         "value": "charismaMod",
         "display": "bubble",
         "reset": "long",
-        "classLevel": "ConsularDarkLevel",
-        "desc": "When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. On a failed save, the creature takes 1d10 plus your ConsularDark level lightning damage, is pushed back 10 feet, and becomes shocked until the end of their next turn. On a successful save, the creature takes half as much damage and isn’t moved or shocked."
+        "classLevel": "ConsulardarkLevel",
+        "desc": "When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. On a failed save, the creature takes 1d10 plus your Consulardark level lightning damage, is pushed back 10 feet, and becomes shocked until the end of their next turn. On a successful save, the creature takes half as much damage and isn’t moved or shocked."
       },
       {
         "name": "Way of Lightning",
@@ -527,13 +527,13 @@
         "value": "charismaMod",
         "display": "bubble",
         "reset": "long",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "You can increase the power of your simpler lightning force powers. When you cast a force power of 1st through 6th level that deals lightning damage, you can deal maximum damage with that power.\n\nYou can use this feature with no adverse effects a number of times equal to your Wisdom or Charisma modifier (your choice, a minimum of once). If you use this feature beyond this before you finish a long rest, you take 2d12 true damage for each level of the power, immediately after you cast it. Each time you use this feature again before finishing a long rest, the damage increases by 1d12."
       }
     ]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Suggestion",
     "counters": [{
         "name": "Out Of Mind",
@@ -541,7 +541,7 @@
         "value": 1,
         "reset": "short",
         "display": "bubble",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "You can erase yourself from a single creature’s sight momentarily. As a bonus action, choose a creature within 60 feet of you that you are aware of. That creature must make a Wisdom saving throw against your universal force save DC. On a failed save, you become invisible to that creature for 1 minute, or until you deal damage to it."
       },
       {
@@ -550,7 +550,7 @@
         "value": "charismaMod",
         "display": "bubble",
         "reset": "long",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "Your mind-affecting powers are particularly potent. When you cast one of cloud mind, dominate mind, mass coerce mind, and dominate monster, you can choose to treat the power as if cast at your Max Power Level."
       },
       {
@@ -559,8 +559,8 @@
         "value": 1,
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularDarkLevel",
-        "desc": "When you cast a force power, you can delay the effects of the force power for up to a number of rounds equal to half your ConsularDark level. If you do so, the power immediately takes effect at the start of your turn, after the specified number of rounds have passed."
+        "classLevel": "ConsulardarkLevel",
+        "desc": "When you cast a force power, you can delay the effects of the force power for up to a number of rounds equal to half your Consulardark level. If you do so, the power immediately takes effect at the start of your turn, after the specified number of rounds have passed."
       },
       {
         "name": "Subtle Presence",
@@ -568,13 +568,13 @@
         "value": 3,
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "You’ve learned how to weave the Force around you in a cloak of your choice. As an action, you can focus the Force for 10 minutes. For the duration, you gain your choice of one of the following effects.\n\nYou can use each feature once. You regain all expended uses when you complete a long rest."
       }
     ]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Sage",
     "counters": [{
         "name": "Preserve Life",
@@ -582,8 +582,8 @@
         "value": "charismaMod",
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularDarkLevel",
-        "desc": "As an action, you can channel the Force and evoke healing energy that restores a number of hit points equal to five times your ConsularDark level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half its hit point maximum. This feature has no effect on droids or constructs."
+        "classLevel": "ConsulardarkLevel",
+        "desc": "As an action, you can channel the Force and evoke healing energy that restores a number of hit points equal to five times your Consulardark level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half its hit point maximum. This feature has no effect on droids or constructs."
       },
       {
         "name": "Blessed by the Force",
@@ -591,13 +591,13 @@
         "value": 1,
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "You gain the ability to overcome grievous injuries. As a bonus action when you have fewer than half your hit points remaining, you can regain a number of hit points equal to half your hit point maximum."
       }
     ]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Confluence",
     "counters": [{
       "name": "Interconnectedness",
@@ -605,12 +605,12 @@
       "value": "charismaMod",
       "display": "bubble",
       "reset": "long",
-      "classLevel": "ConsularDarkLevel",
+      "classLevel": "ConsulardarkLevel",
       "desc": "When you cast a 5th level or lower force power that deals damage or restores hit points and targets only one creature, the power can instead target two creatures within range and within 5 feet of each other."
     }]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Endurance",
     "counters": [{
         "name": "Upheld by the Force",
@@ -618,7 +618,7 @@
         "value": 2,
         "reset": "short",
         "display": "bubble",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "The Force flowing through your body strengthens you, granting the following benefits:\n\n- Your hit point maximum increases by 3, and it increases by 1 again whenever you gain a level in this class.\n- Your base AC becomes 13 + your Constitution modifier.\n- When you make a melee weapon attack as a part of a force power you cast, you can use Wisdom or Charisma (your choice) instead of Strength for the attack and damage rolls.\n\nAdditionally, as an action, you can gain resistance to kinetic and energy damage for 1 minute. This effect lasts until you end it as a bonus action, you are incapacitated, or you don armor other than a shield. You can use this feature twice. You regain all expended uses of it when you finish a short or long rest."
       },
       {
@@ -626,7 +626,7 @@
         "level": 14,
         "value": 1,
         "display": "bubble",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "reset": "long",
         "desc": "When you use your Boundless Vitality feature while concentrating on a force power, you can add the result of the roll to the Constitution saving throw made to maintain concentration."
       },
@@ -636,13 +636,13 @@
         "value": "charismaMod",
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "As an action, you can choose a point within 60 feet. Each creature of your choice within 30 feet of that point must make a Constitution saving throw against your universal force save DC. On a failed save, a creature takes 5d10 force damage and suffers 1 level of exhaustion. On a successful save, a creature takes half damage and does not suffer exhaustion.\n\nFor each creature that fails this saving throw, a friendly creature within 30 feet of them can regain hit points equal to the amount of damage dealt. A friendly creature can only gain this benefit once per turn."
       }
     ]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Manipulation",
     "counters": [{
       "name": "Saber Storm",
@@ -650,12 +650,12 @@
       "value": 2,
       "reset": "short",
       "display": "bubble",
-      "classLevel": "ConsularDarkLevel",
+      "classLevel": "ConsulardarkLevel",
       "desc": "You learn to deftly control your weapons utilizing the Force. As an action, you can initiate your Saber Storm. When you do so, select a light- or vibro-weapon within 5 feet that is not worn or carried by a conscious creature other than you, and use the Force to cause it to levitate, acting as an extension of your will for 1 minute. When you activate this feature, you can cause the weapon to move up to 10 feet and make a melee force attack against a creature within 5 feet of it. On a hit, the target takes 1d8 + your forcecasting ability modifier damage. The type is of the normal damage dealt by the weapon. The weapon then returns to your side.\n\nYour weapon moves with you, and while Saber Storm is active and you have a weapon animated, on each of your turns you can use an action to move a weapon up to 10 feet and repeat the attack against a creature within 5 feet of it. The weapon then returns to your side. Your Saber Storm ends early if you are incapacitated. At any time, you can end this feature and return the animated weapon to your hand.\n\nAdditionally, while your Saber Storm is active, and at least one animated weapon is within 5 feet of you, you gain the following benefits:\n\n- You gain a bonus to your AC equal to your Wisdom or Charisma modifier (your choice, minimum of +1) if it doesn’t already include that modifier.\n- You gain a bonus to any Constitution saving throw you make to maintain your concentration on a power. The bonus equals your Wisdom or Charisma modifier (your choice, minimum of +1).\n\nThis feature can animate more than one weapon when you reach higher levels: two weapons at 5th level, three weapons at 11th level, and four weapons at 17th level. When you use your action to attack with your weapons, you can direct them at the same target or at different ones. Make a separate attack roll for each weapon.\n\nAt 5th level, the distance your weapon can travel increases to 20 feet. This distance increases to 30 feet at 11th level, and 40 feet at 17th level."
     }]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Negation",
     "counters": [{
       "name": "Force Deflection",
@@ -663,12 +663,12 @@
       "level": 3,
       "reset": "long",
       "display": "bubble",
-      "classLevel": "ConsularDarkLevel",
+      "classLevel": "ConsulardarkLevel",
       "desc": "When you fail a saving throw, you can use your reaction to gain a bonus to that saving throw equal to your Wisdom or Charisma modifier (your choice, minimum of +1)."
     }]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Technology",
     "counters": [{
         "name": "Fundamentals of Mechu-Deru",
@@ -676,7 +676,7 @@
         "value": "charismaMod",
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "Starting when you choose this tradition at 3rd level, you’ve dabbled in adapting your use of the Force, melding it with technology. You gain proficiency in the Technology skill, as well as simple blasters. When you cast a force power that calls for a melee weapon attack, and you are wielding a blaster with which you are proficient, you can instead make a ranged weapon attack, as long as the target is within your weapon’s normal range.\n\nAdditionally, you’ve learned to manipulate the Force to be able to manipulate technology when it couldn’t previously. When you cast a force power that could not affect droids or constructs, you can choose to have it affect droids or constructs. If it would affect multiple targets, you must expend additional uses of this feature for each additional target. "
       },
       {
@@ -685,13 +685,13 @@
         "level": 18,
         "reset": "long",
         "display": "bubble",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "You can cast one 5th-level tech power of your choice at its base level. The power counts as a universal force power for you, and you do not require force points to cast this power. Once you’ve done so, you can’t do so again until you complete a long rest."
       }
     ]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Telekinetics",
     "counters": [{
       "name": "Repulsing Wave",
@@ -699,12 +699,12 @@
       "value": "charismaMod",
       "reset": "short",
       "display": "bubble",
-      "classLevel": "ConsularDarkLevel",
-      "desc": "When you are dealt damage by a creature within 5 feet of you, you can use your reaction to deal force damage to the creature equal to your ConsularDark level + your Wisdom or Charisma modifier (your choice, minimum of +1). If the attacker is Huge or smaller, it must also make a Strength saving throw against your universal force save DC. On a failed save, the attacker is pushed in a straight line up to 20 feet away from you."
+      "classLevel": "ConsulardarkLevel",
+      "desc": "When you are dealt damage by a creature within 5 feet of you, you can use your reaction to deal force damage to the creature equal to your Consulardark level + your Wisdom or Charisma modifier (your choice, minimum of +1). If the attacker is Huge or smaller, it must also make a Strength saving throw against your universal force save DC. On a failed save, the attacker is pushed in a straight line up to 20 feet away from you."
     }]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Tutelage",
     "counters": [{
       "name": "Strength Flows From the Force",
@@ -712,12 +712,12 @@
       "value": "charismaMod",
       "display": "bubble",
       "reset": "long",
-      "classLevel": "ConsularDarkLevel",
+      "classLevel": "ConsulardarkLevel",
       "desc": "When you cast a power that affects only your companion, you can choose to treat the power as if cast at your Max Power Level."
     }]
   },
   {
-    "Class": "ConsularDark",
+    "Class": "Consulardark",
     "subclass": "Seer",
     "counters": [{
         "name": "Powerful Mind",
@@ -725,7 +725,7 @@
         "value": "charismaMod",
         "display": "bubble",
         "reset": "long",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "You can use your force abilities to read a creature’s thoughts. You can then use your access to the creature’s mind to command it.\n\nAs an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw against your universal force save DC. If the creature succeeds on the saving throw, you can’t use this feature on it again until you finish a long rest. If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute. During that time, you can use your action to end this effect and cast the coerce mind force power at its base level on the creature without expending force points. The target automatically fails its saving throw against the power."
       },
       {
@@ -734,7 +734,7 @@
         "value": 1,
         "display": "bubble",
         "reset": "short",
-        "classLevel": "ConsularDarkLevel",
+        "classLevel": "ConsulardarkLevel",
         "desc": "You can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a force power. Once you’ve used this feature, you can’t use it again until you finish a short or long rest."
       }
     ]
@@ -743,7 +743,8 @@
     "Class": "Engineer",
     "subclassLevel": 3,
     "hitDie": "d8",
-    "counters": [{
+    "counters":[
+      {
         "name": "Tech Points",
         "level": 1,
         "value": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
@@ -770,62 +771,61 @@
         "reset": "long",
         "desc": "You gain the ability to temporarily enhance a weapon or armor. At the end of a long rest, you can touch one unenhanced object that is a suit of armor, a shield, or a simple or martial weapon. Until the end of your next long rest or until you die, the object becomes an enhanced item, granting a +1 bonus to AC if it’s armor or a shield or a +1 bonus to attack and damage rolls if it’s a weapon.\n\nOnce you’ve used this feature, you can’t use it again until you finish a long rest.\n\nThis bonus increases to +2 at 10th level and +3 at 15th level.",
         "classLevel": "EngineerLevel"
-      }
-    ]
+      }]
   },
   {
     "Class": "Engineer",
-    "subclass": "Armormech",
+    "subclass":"Armormech",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass": "Armstech",
+    "subclass":"Armstech",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass": "Gadgeteer",
+    "subclass":"Gadgeteer",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass": "Unstable",
+    "subclass":"Unstable",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass": "Artificer",
+    "subclass":"Artificer",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass": "Astrotech",
+    "subclass":"Astrotech",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass": "Audiotech",
+    "subclass":"Audiotech",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass": "Biochem",
+    "subclass":"Biochem",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass": "Biotech",
+    "subclass":"Biotech",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass": "Construction",
+    "subclass":"Construction",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass": "Cybertech",
+    "subclass":"Cybertech",
     "counters": []
   },
   {
@@ -833,41 +833,40 @@
     "hitDie": "d10",
     "subclassLevel": 3,
     "counters": [{
-        "name": "Second Wind",
-        "level": 1,
-        "classLevel": "FighterLevel",
-        "reset": "short",
-        "display": "bubble",
-        "value": 1,
-        "desc": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level."
-      },
-      {
-        "name": "Action Surge",
-        "level": 2,
-        "value": [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2],
-        "desc": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
-        "classLevel": "FighterLevel",
-        "reset": "short",
-        "display": "bubble"
-      },
-      {
-        "name": "Superiority Dice",
-        "level": 2,
-        "classLevel": "FighterLevel",
-        "reset": "short",
-        "display": "bubble",
-        "value": [0, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5]
-      },
-      {
-        "name": "Indominatable",
-        "level": 9,
-        "value": [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3],
-        "reset": "long",
-        "classLevel": "FighterLevel",
-        "display": "bubble",
-        "desc": "You can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest."
-      }
-    ]
+      "name": "Second Wind",
+      "level": 1,
+      "classLevel": "FighterLevel",
+      "reset": "short",
+      "display": "bubble",
+      "value": 1,
+      "desc": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level."
+    },
+    {
+      "name": "Action Surge",
+      "level": 2,
+      "value": [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2],
+      "desc": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
+      "classLevel": "FighterLevel",
+      "reset": "short",
+      "display": "bubble"
+    },
+    {
+      "name": "Superiority Dice",
+      "level": 2,
+      "classLevel": "FighterLevel",
+      "reset": "short",
+      "display": "bubble",
+      "value": [0,2,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,5,5]
+    },
+    {
+      "name": "Indominatable",
+      "level": 9,
+      "value": [0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3],
+      "reset": "long",
+      "classLevel": "FighterLevel",
+      "display": "bubble",
+      "desc": "You can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest."
+    }]
   },
   {
     "Class": "Fighter",
@@ -925,13 +924,14 @@
     "counters": []
   },
   {
-    "Class": "GuardianLight",
+    "Class": "Guardianlight",
     "hitDie": "d10",
     "subclassLevel": 3,
-    "counters": [{
+    "counters": [
+      {
         "name": "Force Points",
         "level": 1,
-        "classLevel": "GuardianLightLevel",
+        "classLevel": "GuardianlightLevel",
         "value": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
         "modifier": "wisdomMod",
         "reset": "long",
@@ -941,22 +941,22 @@
       {
         "name": "Channel the Force",
         "level": 1,
-        "classLevel": "GuardianLightLevel",
+        "classLevel": "GuardianlightLevel",
         "value": "wisdomMod",
         "reset": "short",
         "display": "bubble",
         "desc": "You know how to channel the Force to create a unique effect. You start with your choice of one from two such effects: Cause Harm or Lend Aid. At 3rd level, your Guardian Focus grants you an additional effect. When you use your Channel the Force, you choose which effect to create.\n\nSome Channel the Force effects require saving throws. When you use such an effect from this class, the DC equals your universal force save DC.\n\nYou can use this feature a number of times equal to your Wisdom or Charisma modifier (your choice, minimum of once). You regain all expended uses when you finish a short or long rest."
-      }
-    ]
+      }]
   },
   {
-    "Class": "GuardianDark",
+    "Class": "Guardiandark",
     "hitDie": "d10",
     "subclassLevel": 3,
-    "counters": [{
+    "counters": [
+           {
         "name": "Force Points",
         "level": 1,
-        "classLevel": "GuardianDarkLevel",
+        "classLevel": "GuardiandarkLevel",
         "value": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
         "modifier": "charismaMod",
         "reset": "long",
@@ -966,13 +966,12 @@
       {
         "name": "Channel the Force",
         "level": 1,
-        "classLevel": "GuardianLightLevel",
+        "classLevel": "GuardiandarkLevel",
         "value": "charismaMod",
         "reset": "short",
         "display": "bubble",
         "desc": "You know how to channel the Force to create a unique effect. You start with your choice of one from two such effects: Cause Harm or Lend Aid. At 3rd level, your Guardian Focus grants you an additional effect. When you use your Channel the Force, you choose which effect to create.\n\nSome Channel the Force effects require saving throws. When you use such an effect from this class, the DC equals your universal force save DC.\n\nYou can use this feature a number of times equal to your Wisdom or Charisma modifier (your choice, minimum of once). You regain all expended uses when you finish a short or long rest."
-      }
-    ]
+      }]
   },
   {
     "Class": "Monk",
@@ -999,13 +998,13 @@
     "counters": []
   },
   {
-    "Class": "SentinelLight",
+    "Class": "Sentinellight",
     "hitDie": "d8",
     "subclassLevel": 3,
     "counters": []
   },
   {
-    "Class": "SentinelDark",
+    "Class": "Sentineldark",
     "hitDie": "d8",
     "subclassLevel": 3,
     "counters": []
