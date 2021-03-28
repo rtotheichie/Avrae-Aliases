@@ -743,8 +743,7 @@
     "Class": "Engineer",
     "subclassLevel": 3,
     "hitDie": "d8",
-    "counters":[
-      {
+    "counters": [{
         "name": "Tech Points",
         "level": 1,
         "value": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
@@ -771,61 +770,62 @@
         "reset": "long",
         "desc": "You gain the ability to temporarily enhance a weapon or armor. At the end of a long rest, you can touch one unenhanced object that is a suit of armor, a shield, or a simple or martial weapon. Until the end of your next long rest or until you die, the object becomes an enhanced item, granting a +1 bonus to AC if it’s armor or a shield or a +1 bonus to attack and damage rolls if it’s a weapon.\n\nOnce you’ve used this feature, you can’t use it again until you finish a long rest.\n\nThis bonus increases to +2 at 10th level and +3 at 15th level.",
         "classLevel": "EngineerLevel"
-      }]
+      }
+    ]
   },
   {
     "Class": "Engineer",
-    "subclass":"Armormech",
+    "subclass": "Armormech",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass":"Armstech",
+    "subclass": "Armstech",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass":"Gadgeteer",
+    "subclass": "Gadgeteer",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass":"Unstable",
+    "subclass": "Unstable",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass":"Artificer",
+    "subclass": "Artificer",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass":"Astrotech",
+    "subclass": "Astrotech",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass":"Audiotech",
+    "subclass": "Audiotech",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass":"Biochem",
+    "subclass": "Biochem",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass":"Biotech",
+    "subclass": "Biotech",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass":"Construction",
+    "subclass": "Construction",
     "counters": []
   },
   {
     "Class": "Engineer",
-    "subclass":"Cybertech",
+    "subclass": "Cybertech",
     "counters": []
   },
   {
@@ -833,40 +833,41 @@
     "hitDie": "d10",
     "subclassLevel": 3,
     "counters": [{
-      "name": "Second Wind",
-      "level": 1,
-      "classLevel": "FighterLevel",
-      "reset": "short",
-      "display": "bubble",
-      "value": 1,
-      "desc": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level."
-    },
-    {
-      "name": "Action Surge",
-      "level": 2,
-      "value": [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2],
-      "desc": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
-      "classLevel": "FighterLevel",
-      "reset": "short",
-      "display": "bubble"
-    },
-    {
-      "name": "Superiority Dice",
-      "level": 2,
-      "classLevel": "FighterLevel",
-      "reset": "short",
-      "display": "bubble",
-      "value": [0,2,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,5,5]
-    },
-    {
-      "name": "Indominatable",
-      "level": 9,
-      "value": [0,0,0,0,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3],
-      "reset": "long",
-      "classLevel": "FighterLevel",
-      "display": "bubble",
-      "desc": "You can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest."
-    }]
+        "name": "Second Wind",
+        "level": 1,
+        "classLevel": "FighterLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": 1,
+        "desc": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level."
+      },
+      {
+        "name": "Action Surge",
+        "level": 2,
+        "value": [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2],
+        "desc": "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
+        "classLevel": "FighterLevel",
+        "reset": "short",
+        "display": "bubble"
+      },
+      {
+        "name": "Superiority Dice",
+        "level": 2,
+        "classLevel": "FighterLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": [0, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5]
+      },
+      {
+        "name": "Indominatable",
+        "level": 9,
+        "value": [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3],
+        "reset": "long",
+        "classLevel": "FighterLevel",
+        "display": "bubble",
+        "desc": "You can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest."
+      }
+    ]
   },
   {
     "Class": "Fighter",
@@ -927,13 +928,51 @@
     "Class": "GuardianLight",
     "hitDie": "d10",
     "subclassLevel": 3,
-    "counters": []
+    "counters": [{
+        "name": "Force Points",
+        "level": 1,
+        "classLevel": "GuardianLightLevel",
+        "value": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+        "modifier": "wisdomMod",
+        "reset": "long",
+        "display": "default",
+        "desc": "You have a number of force points equal to your guardian level x 2, as shown in the Force Points column of the guardian table, + your Wisdom or Charisma modifier (your choice). You use these force points to cast force powers. You regain all expended force points when you finish a long rest."
+      },
+      {
+        "name": "Channel the Force",
+        "level": 1,
+        "classLevel": "GuardianLightLevel",
+        "value": "wisdomMod",
+        "reset": "short",
+        "display": "bubble",
+        "desc": "You know how to channel the Force to create a unique effect. You start with your choice of one from two such effects: Cause Harm or Lend Aid. At 3rd level, your Guardian Focus grants you an additional effect. When you use your Channel the Force, you choose which effect to create.\n\nSome Channel the Force effects require saving throws. When you use such an effect from this class, the DC equals your universal force save DC.\n\nYou can use this feature a number of times equal to your Wisdom or Charisma modifier (your choice, minimum of once). You regain all expended uses when you finish a short or long rest."
+      }
+    ]
   },
   {
     "Class": "GuardianDark",
     "hitDie": "d10",
     "subclassLevel": 3,
-    "counters": []
+    "counters": [{
+        "name": "Force Points",
+        "level": 1,
+        "classLevel": "GuardianDarkLevel",
+        "value": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40],
+        "modifier": "charismaMod",
+        "reset": "long",
+        "display": "default",
+        "desc": "You have a number of force points equal to your guardian level x 2, as shown in the Force Points column of the guardian table, + your Wisdom or Charisma modifier (your choice). You use these force points to cast force powers. You regain all expended force points when you finish a long rest."
+      },
+      {
+        "name": "Channel the Force",
+        "level": 1,
+        "classLevel": "GuardianLightLevel",
+        "value": "charismaMod",
+        "reset": "short",
+        "display": "bubble",
+        "desc": "You know how to channel the Force to create a unique effect. You start with your choice of one from two such effects: Cause Harm or Lend Aid. At 3rd level, your Guardian Focus grants you an additional effect. When you use your Channel the Force, you choose which effect to create.\n\nSome Channel the Force effects require saving throws. When you use such an effect from this class, the DC equals your universal force save DC.\n\nYou can use this feature a number of times equal to your Wisdom or Charisma modifier (your choice, minimum of once). You regain all expended uses when you finish a short or long rest."
+      }
+    ]
   },
   {
     "Class": "Monk",
