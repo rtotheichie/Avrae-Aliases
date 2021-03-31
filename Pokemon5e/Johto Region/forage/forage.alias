@@ -5,9 +5,15 @@ rr = argparse(args).last('rr') or 1
 out = []
 ranger = "Ranger" in get("subclass", "None")
 out.append(f'-title "{name} forages for berries!"')
+nature_check = vroll(character().skills.nature.d20())
+if nature_check.total < 10:
+    out.append(f'-desc "They rolled a nature check of {nature_check} and did not find anything."')
+    return " ".join(out)
+else:
+    out.append(f'-desc "They rolled a nature check of {nature_check} and found:"')
 if ranger:
     rr = int(rr)*2
-    out.append('-desc "They are really good at foraging thanks to being a Ranger."')
+    out.append('-footer "They are really good at foraging thanks to being a Ranger."')
 newBag = [["Berries", {}]]
 character().set_cvar_nx("bags", dump_json(newBag))
 bag = load_json(bags)
