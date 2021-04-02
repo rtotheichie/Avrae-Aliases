@@ -1,0 +1,32 @@
+embed <drac2>
+args = &ARGS&
+weapon = " ".join(args)
+cc = ""
+for w in character().consumables:
+    if weapon.lower() == w.name.lower():
+        cc = w.name
+        break
+if not cc:
+    for w in character().consumables:
+        if weapon.lower() in w.name.lower():
+            cc = w.name
+            break
+Cell = "Power Cell"
+bag = load_json(get("bags",[]))
+if not bag:
+    return err(f"You do not have a bag set up.  Make sure you are currently on the correct character and have set up your `{ctx.prefix}bag`.")
+Consumables = [i for i in bag if "Consumables" in i][0]
+Consumables = Consumables[1]
+if not Consumables.get(Cell):
+    return err(f"You are out of Power Cells to reload your {weapon} with!")
+Consumables.update({Cell:Consumables[Cell] - 1})
+set_cvar("bags", dump_json(bag))
+character().cc(cc).reset()
+out = []
+out.append(f'-title "{name} loads a new {Cell} into their {cc}!"')
+out.append('-desc "**Reload |** A limited number of shots can be made with a weapon that has the reload property. A character must then reload it using an action or a bonus action (the character’s choice). You must have one free hand to reload."')
+out.append(f'-f "Power Cells remaining|{Consumables.get(Cell) or "0"}|inline"')
+out.append(f'-f "{cc}|{character().cc_str(cc)}|inline"')
+return " ".join(out)
+</drac2>
+-thumb {{image}} -color {{color}}
