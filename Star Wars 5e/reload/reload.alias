@@ -23,7 +23,7 @@ if not bag:
 Consumables = [i for i in bag if "Consumables" in i][0]
 Consumables = Consumables[1]
 if not Consumables.get(Cell):
-    return err(f"You are out of {Cell}s to reload your {weapon} with!")
+    return err(f"You are out of {Cell}s to reload your {cc} with!")
 Consumables.update({Cell:Consumables[Cell] - 1})
 set_cvar("bags", dump_json(bag))
 character().cc(cc).reset()
