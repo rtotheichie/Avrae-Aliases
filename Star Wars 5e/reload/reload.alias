@@ -26,7 +26,10 @@ if not Consumables.get(Cell):
     return err(f"You are out of {Cell}s to reload your {cc} with!")
 Consumables.update({Cell:Consumables[Cell] - 1})
 set_cvar("bags", dump_json(bag))
-character().cc(cc).reset()
+if damage == "energy":
+    character().cc(cc).reset()
+else:
+    character().mod_cc(cc, 1, strict=True)
 out = []
 out.append(f'-title "{name} loads a new {Cell} into their {cc}!"')
 out.append('-desc "**Reload |** A limited number of shots can be made with a weapon that has the reload property. A character must then reload it using an action or a bonus action (the character’s choice). You must have one free hand to reload."')
