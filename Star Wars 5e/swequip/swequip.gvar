@@ -733,7 +733,8 @@
         "damage": "1d12 [kinetic]",
         "overheal": false
       }],
-      "miss": []
+      "miss": [],
+      "attackBonus":"proficiencyBonus+dexterityMod"
     }]
   }, {
     "type": "text",
