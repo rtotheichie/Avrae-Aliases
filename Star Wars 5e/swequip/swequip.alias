@@ -1,4 +1,4 @@
-multiline <drac2>
+<drac2>
 args = &ARGS&
 gvar = load_json(get_gvar("c97af7b5-8734-4e3a-a361-382a7b3b3c3a"))
 weapon = " ".join(args)
@@ -13,6 +13,5 @@ if "counter" in str(attacks[0]):
     attack_text = str(attacks[0].automation[1].get("text")).lower()
     reload = int(attack_text[attack_text.index("reload "):].lstrip("reload ")[:2].rstrip(", "))
     character().create_cc(counter, 0, reload, None, 'bubble', reload)
-n = '\n'
+return f'attack import {dump_json(attacks)}'
 </drac2>
-{{n.join([f"{ctx.prefix}attack import {dump_json(attack)}" for attack in attacks])}}
