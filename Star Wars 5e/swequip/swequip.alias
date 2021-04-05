@@ -10,9 +10,9 @@ if not attacks:
     err(f"I can't find a weapon named {weapon}.")
 if "counter" in str(attacks[0]):
     counter =  attacks[0].automation[-1].get("counter")
-    attack_text = attacks[0].automation[1].get("text")
-    reload = int(attack_text[attack_text.index("Reload "):].lstrip("Reload ")[:2].rstrip(", "))
+    attack_text = str(attacks[0].automation[1].get("text"))
+    reload = int(attack_text[attack_text.index("reload "):].lstrip("reload ")[:2].rstrip(", "))
     character().create_cc(counter, 0, reload, 'none', 'bubble')
 n = '\n'
 </drac2>
-{{n.join([f"{ctx.prefix}attack import {attack}" for attack in attacks])}}
+{{n.join([f"{ctx.prefix}attack import {dump_json(attack)}" for attack in attacks])}}
