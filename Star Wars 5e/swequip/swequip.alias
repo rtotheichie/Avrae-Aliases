@@ -1,17 +1,25 @@
 <drac2>
 args = &ARGS&
 gvar = load_json(get_gvar("c97af7b5-8734-4e3a-a361-382a7b3b3c3a"))
+output = "output" in args
+
+if output:
+    args.remove("output")
+
 if len(args)>1 and "-" not in args[1]:
     weapon = " ".join([args[0], args[1]])
 else:
     weapon = args[0]
+
 args = argparse(args)
 attacks = []
+
 for x in gvar:
     if x.name.replace("Rapid - ", '').replace("Burst - ", '').replace("Two-Handed ", '').lower() == weapon.lower():
         attacks.append(x)
 if not attacks:
     err(f"I can't find a weapon named {weapon}.")
+
 if "counter" in str(attacks[0]):
     json = f"""{dump_json(attacks[0])}"""
     index = json.find('"counter": "') + 12
@@ -19,6 +27,7 @@ if "counter" in str(attacks[0]):
     attack_text = str(attacks[0].automation[1].get("text")).lower()
     reload = int(attack_text[attack_text.index("reload "):].lstrip("reload ")[:2].rstrip(", "))
     character().create_cc(counter, 0, reload, None, 'bubble', reload)
+
 if args.get('b'):
     for i, attack in enumerate(attacks):
         attacks[i] = load_json(dump_json(attack).replace('attackBonus": "',f'attackBonus": "{args.last("b")}+'))
@@ -27,5 +36,9 @@ if args.get('d'):
     for i, attack in enumerate(attacks):
         attacks[i] = load_json(dump_json(attack).replace('d} [', 'd}' + f'+{args.last("d")} ['))
 
-return f'attack import {dump_json(attacks)}'
+if output:
+    n = '\n'
+    return f'''embed -title "Use `{ctx.prefix}attack import` and the following code(s) to add a {weapon} to your attacks." -desc """{str(attacks)}""" -f "The following counter was created for **{name}**:" -f "{counter}|{character().cc_str(counter)}"'''
+else:
+    return f'attack import {dump_json(attacks)}'
 </drac2>
