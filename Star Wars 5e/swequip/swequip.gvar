@@ -12,16 +12,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Assault Cannon",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Assault Cannon",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -52,7 +52,7 @@
   }],
   "_v": 2
 }, {
-  "name": "Blaster Cannon",
+  "name": "Burst - Blaster Cannon",
   "automation": [{
     "type": "target",
     "target": "all",
@@ -73,7 +73,7 @@
   }, {
     "type": "counter",
     "counter": "Blaster Cannon",
-    "amount": "4",
+    "amount": "2",
     "allowOverflow": false,
     "errorBehaviour": "raise"
   }],
@@ -92,16 +92,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Blaster Carbine",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 60/240), reload 16, two-handed\n"
-  }, {
-    "type": "counter",
-    "counter": "Blaster Carbine",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -118,16 +118,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Blaster Pistol",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 40/160), reload 16"
-  }, {
-    "type": "counter",
-    "counter": "Blaster Pistol",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -144,16 +144,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Blaster Rifle",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 100/400), reload 12, two-handed\n"
-  }, {
-    "type": "counter",
-    "counter": "Blaster Rifle",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -197,16 +197,16 @@
       }],
       "miss": [],
       "attackBonus": "dexterityMod+proficiencyBonus"
+    }, {
+      "type": "counter",
+      "counter": "Bowcaster",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 50/200), Burst 4, Reload 4, Strength 11, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Bowcaster",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -224,16 +224,16 @@
       }],
       "success": [],
       "dc": "8+proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Carbine Rifle",
+      "amount": "3",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 80/320), Auto, Rapid 3, Reload 12, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Carbine Rifle",
-    "amount": "3",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -297,16 +297,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Cycler Rifle",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 100/400), Rapid 2, Reload 8, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Cycler Rifle",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -450,16 +450,16 @@
       }],
       "miss": [],
       "attackBonus": "dexterityMod+proficiencyBonus"
+    }, {
+      "type": "counter",
+      "counter": "Heavy Bowcaster",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 60/240), Burst 4, Reload 8, Strength 15, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Heavy Bowcaster",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -503,16 +503,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Heavy Pistol",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 40/160), Reload 12, Strength 11"
-  }, {
-    "type": "counter",
-    "counter": "Heavy Pistol",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -583,16 +583,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Heavy Shotgun",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 30/120), Burst 4, Reload 12, Strength 13, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Heavy Shotgun",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -636,16 +636,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Heavy Slugpistol",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 40/160), Rapid 2, Reload 8, Strength 13"
-  }, {
-    "type": "counter",
-    "counter": "Heavy Slugpistol",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -709,16 +709,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Hold-Out",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 30/120), Hidden, Light, Reload 6"
-  }, {
-    "type": "counter",
-    "counter": "Hold-Out",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -734,17 +734,17 @@
         "overheal": false
       }],
       "miss": [],
-      "attackBonus":"proficiencyBonus+dexterityMod"
+      "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Hunting Rifle",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 150/600), Reload 2, Strength 13, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Hunting Rifle",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -761,16 +761,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Ion Carbine",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 60/240), Reload 16, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Ion Carbine",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -787,16 +787,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Ion Pistol",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 40/160), Reload 16"
-  }, {
-    "type": "counter",
-    "counter": "Ion Pistol",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -813,16 +813,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Ion Rifle",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 100/400), Reload 12, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Ion Rifle",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -839,16 +839,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Light Pistol",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 40/160), Light, Reload 12"
-  }, {
-    "type": "counter",
-    "counter": "Light Pistol",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -912,16 +912,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Light Slugpistol",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 40/160), Hidden, Light, Reload 8"
-  }, {
-    "type": "counter",
-    "counter": "Light Slugpistol",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -1125,16 +1125,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Needler",
+      "amount": "10",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 40/160), Rapid 10, Reload 20, Special\n\nThe needler includes a specialized compartment for poison. One dose of poison, when installed in this compartment, retains its potency for 1 hour before drying. One dose of poison is effective for the next 10 shots fired by the weapon."
-  }, {
-    "type": "counter",
-    "counter": "Needler",
-    "amount": "10",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -1229,16 +1229,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Revolver",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 30/120), Rapid 6, Reload 6, Strength 11"
-  }, {
-    "type": "counter",
-    "counter": "Revolver",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -1322,16 +1322,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Scattergun",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 20/80), Burst 4, Reload 4"
-  }, {
-    "type": "counter",
-    "counter": "Scattergun",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -1375,16 +1375,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Shotgun",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 30/120), Burst 2, Reload 4, Strength 11, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Shotgun",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -1448,16 +1448,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Slugpistol",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 40/160), Rapid 8, Reload 16, Strength 11"
-  }, {
-    "type": "counter",
-    "counter": "Slugpistol",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -1501,16 +1501,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Slugthrower",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 100/400), Burst 6, Reload 12, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Slugthrower",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -1554,16 +1554,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Sniper Rifle",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 150/600), Reload 2, Strength 13, Two-handed"
-  }, {
-    "type": "counter",
-    "counter": "Sniper Rifle",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -1667,16 +1667,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Tranquilizer Rifle",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 100/400), Reload 4, Two-handed, Special\n\nThe tranquilizer rifle includes a specialized compartment for poison. One dose of poison, when installed in this compartment, retains its potency for 1 hour before drying. One dose of poison is effective for the next 4 shots fired by the weapon."
-  }, {
-    "type": "counter",
-    "counter": "Tranquilizer Rifle",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "raise"
   }],
   "_v": 2
 }, {
@@ -2171,16 +2171,16 @@
       }],
       "miss": [],
       "attackBonus": "proficiencyBonus+dexterityMod"
+    }, {
+      "type": "counter",
+      "counter": "Wristblaster",
+      "amount": "1",
+      "allowOverflow": false,
+      "errorBehaviour": "warn"
     }]
   }, {
     "type": "text",
     "text": "Ammunition (range 30/120), Disguised, Fixed, Light, Reload 12"
-  }, {
-    "type": "counter",
-    "counter": "Wristblaster",
-    "amount": "1",
-    "allowOverflow": false,
-    "errorBehaviour": "warn"
   }],
   "_v": 2,
   "proper": false,
