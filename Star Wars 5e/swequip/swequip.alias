@@ -9,7 +9,9 @@ for x in gvar:
 if not attacks:
     err(f"I can't find a weapon named {weapon}.")
 if "counter" in str(attacks[0]):
-    counter =  attacks[0].automation[-1].get("counter")
+    json = f"""{dump_json(attacks[0])}"""
+    index = json.find('"counter": "') + 12
+    counter = str(json[index:json[index:].find('"')+index])
     attack_text = str(attacks[0].automation[1].get("text")).lower()
     reload = int(attack_text[attack_text.index("reload "):].lstrip("reload ")[:2].rstrip(", "))
     character().create_cc(counter, 0, reload, None, 'bubble', reload)
