@@ -1,7 +1,11 @@
 <drac2>
 args = &ARGS&
 gvar = load_json(get_gvar("c97af7b5-8734-4e3a-a361-382a7b3b3c3a"))
-weapon = " ".join(args)
+if len(args)>1 and "-" not in args[1]:
+    weapon = " ".join([args[0], args[1]])
+else:
+    weapon = args[0]
+args = argparse(args)
 attacks = []
 for x in gvar:
     if x.name.replace("Rapid - ", '').replace("Burst - ", '').replace("Two-Handed ", '').lower() == weapon.lower():
@@ -15,5 +19,13 @@ if "counter" in str(attacks[0]):
     attack_text = str(attacks[0].automation[1].get("text")).lower()
     reload = int(attack_text[attack_text.index("reload "):].lstrip("reload ")[:2].rstrip(", "))
     character().create_cc(counter, 0, reload, None, 'bubble', reload)
+if args.get('b'):
+    for i, attack in enumerate(attacks):
+        attacks[i] = load_json(dump_json(attack).replace('attackBonus": "',f'attackBonus": "{args.last("b")}+'))
+
+if args.get('d'):
+    for i, attack in enumerate(attacks):
+        attacks[i] = load_json(dump_json(attack).replace('d} [', 'd}' + f'+{args.last("d")} ['))
+
 return f'attack import {dump_json(attacks)}'
 </drac2>
