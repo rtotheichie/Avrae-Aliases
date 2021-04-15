@@ -206,11 +206,13 @@
       "reset": "short",
       "level": 1
     }],
+    "cvars": {
     "race": "Human",
       "size": "Medium",      
       "speed": "30 ft.",
       "creatureType": "Humanoid",      
     "languages": "Galactic Basic"
+    }
   },
     {
     "name": "ithorian",
