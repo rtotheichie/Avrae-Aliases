@@ -356,4 +356,65 @@
       "languages": "Galactic Basic, Dosh",
       "senses": "Darkvision 60 ft."
     }
+  },
+  {
+    "name": "tusken",
+    "counters": [{
+      "name": "Intimidating Roar",
+      "reset": "long",
+      "level": 1,
+      "use": "racecast '(SW) Fear'",
+      "value": 1
+    }],
+    "cvars": {
+      "race": "Tusken",
+      "speed": "30 ft.",
+      "size": "Medium",
+      "creatureType": "Humanoid",
+      "languages": "Galactic Basic, Tusken"
+    }
+  },
+  {
+    "name": "twi'lek",
+    "counters": [],
+    "cvars": {
+      "race": "Twi'lek",
+      "senses": "Darkvision 60 ft.",
+      "resist": "poison",
+      "languages": "Galactic Basic, Twi'leki"
+    }
+  },
+  {
+    "name": "weequay",
+    "counters": [],
+    "cvars": {
+      "race": "Weequay",
+      "senses": "Darkvision 60 ft.",
+      "languages": "Galactic Basic, Sriluurian"
+    }
+  },
+  {
+    "name": "wookiee",
+    "counters": [],
+    "cvars": {
+      "race": "Wookiee",
+      "speed": "30 ft., Climb 30 ft.",
+      "senses": "Darkvision 60 ft.",
+      "languages": "Shyriiwook, Galactic Basic"
+    }
+  },
+  {
+    "name": "zabrak",
+    "counters": [{
+      "name": "Second Heart",
+      "level": 1,
+      "reset": "long",
+      "value": 1,
+      "use": "use secondHeart"
+    }],
+    "cvars": {
+      "race": "Zabrak",
+      "senses": "Darkvision 60 ft.",
+      "languages": "Galactic Basic, Zabraki"
+    }
   }]
