@@ -204,7 +204,9 @@
     "counters": [{
       "name": "Defiant",
       "reset": "short",
-      "level": 1
+      "level": 1,
+      "use": "",
+      "value": 1
     }],
     "cvars": {
     "race": "Human",
