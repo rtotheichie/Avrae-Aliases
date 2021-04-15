@@ -315,7 +315,7 @@
 "counters":[
    {"name":"Denounce","reset":"none","level":1,"use":"racecast 'Denounce' [-t target]"},
    {"name":"Curse","reset":"long","level":3,"use":"racecast 'curse' [-t target]"},
-   {"name":"Darkness","reset":"long","level":5,"use":"racecast '(SW) Darkness' [-t target]"}
+   {"name":"(SW) Darkness","reset":"long","level":5,"use":"racecast '(SW) Darkness' [-t target]"}
   ],
     "cvars": {
       "race": "Sith Pureblood",
