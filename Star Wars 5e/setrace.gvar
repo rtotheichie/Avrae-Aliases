@@ -20,7 +20,9 @@
     "counters": [],
     "cvars": {
       "race": "Bith",
-      "resist": "",
+      "size": "Medium",      
+      "speed": "30 ft.",
+      "creatureType": "Humanoid",
       "languages": "Galactic Basic, Bith"
     }
   },
@@ -29,7 +31,9 @@
     "counters": [],
     "cvars": {
       "race": "Bothan",
-      "resist": "",
+      "speed": "30 ft.",
+      "size": "Medium",
+      "creatureType": "Humanoid",
       "languages": "Galactic Basic, Bothese"
     }
   },
@@ -38,8 +42,9 @@
     "counters": [],
     "cvars": {
       "race": "Cathar",
+      "size": "Medium",      
       "speed": "30 ft., Climb 20 ft.",
-      "resist": "",
+      "creatureType": "Humanoid",      
       "languages": "Galactic Basic, Catharese",
       "senses": "Darkvision 60 ft."
     }
@@ -49,8 +54,9 @@
     "counters": [],
     "cvars": {
       "race": "Cerean",
+      "size": "Medium",      
       "speed": "30 ft.",
-      "resist": "",
+      "creatureType": "Humanoid",
       "languages": "Galactic Basic, Cerean"
     }
   },
@@ -59,8 +65,9 @@
     "counters": [],
     "cvars": {
       "race": "Chiss",
+      "size": "Medium",      
       "speed": "30 ft.",
-      "resist": "",
+      "creatureType": "Humanoid",      
       "languages": "Galactic Basic, Cheunh",
       "senses": "Darkvision 120 ft."
     }
@@ -76,16 +83,19 @@
     }],
     "cvars": {
       "race": "Devaronian",
+      "size": "Medium",
+      "creatureType": "Humanoid",      
       "languages": "Galactic Basic, Devaronese",
       "resist": "Poison"
     }
   },
   {
-    "name": "droid, class I",
+    "name": "droid, class i",
     "counters": [],
     "cvars": {
       "race": "Droid, Class I",
       "speed": "25 ft.",
+      "size": "Medium",      
       "languages": "Galactic Basic, Binary",
       "resist": "Necrotic, Poison, Psychic",
       "vuln": "Ion",
@@ -113,6 +123,7 @@
     "cvars": {
       "race": "Droid, Class III",
       "speed": "25 ft.",
+      "size": "Medium",      
       "languages": "Galactic Basic, Binary",
       "resist": "Necrotic, Poison, Psychic",
       "vuln": "Ion",
@@ -126,6 +137,7 @@
     "cvars": {
       "race": "Droid, Class IV",
       "speed": "30 ft.",
+      "size": "Medium",      
       "languages": "Galactic Basic, Binary",
       "resist": "Necrotic, Poison, Psychic",
       "vuln": "Ion",
@@ -139,6 +151,7 @@
     "cvars": {
       "race": "Droid, Class V",
       "speed": "30 ft.",
+      "size": "Medium",      
       "languages": "Galactic Basic, Binary",
       "resist": "Necrotic, Poison, Psychic",
       "vuln": "Ion",
@@ -151,6 +164,9 @@
     "counters": [],
     "cvars": {
       "race": "Duros",
+      "size": "Medium",
+      "speed": "30 ft.",   
+      "creatureType": "Humanoid",      
       "languages": "Galactic Basic, Durese",
       "senses": "Darkvision 60 ft."
     }
@@ -162,6 +178,7 @@
       "race": "Ewok",
       "speed": "25 ft., Climb 25 ft.",
       "size": "Small",
+      "creatureType": "Humanoid",      
       "languages": "Ewokese, Galactic Basic"
     }
   },
@@ -170,6 +187,9 @@
     "counters": [],
     "cvars": {
       "race": "Gamorrean",
+      "size": "Medium",      
+      "speed": "30 ft.",
+      "creatureType": "Humanoid",      
       "languages": "Gamorrese, Galactic Basic"
     }
   },
@@ -178,8 +198,10 @@
     "counters": [],
     "cvars": {
       "race": "Gungan",
+      "size": "Medium",      
       "languages": "Galactic Basic, Gungan",
-      "speed": "30 ft., Sim 30 ft.",
+      "speed": "30 ft., Swim 30 ft.",
+      "creatureType": "Humanoid",      
       "senses": "Darkvision 60 ft."
     }
   },
@@ -191,6 +213,153 @@
       "level": 1
     }],
     "race": "Human",
+      "size": "Medium",      
+      "speed": "30 ft.",
+      "creatureType": "Humanoid",      
     "languages": "Galactic Basic"
-  }
-]
+  },
+    {
+    "name": "ithorian",
+    "counters": [{
+      "name": "Sonic Scream",
+      "reset": "long",
+      "level": 1,
+      "use": "scream",
+      "value": 2
+    }],
+    "cvars": {
+      "race": "Ithorian",
+      "speed": "30 ft.",
+      "size": "Medium",      
+      "resist": "sonic",
+      "creatureType": "Humanoid",      
+      "languages": "Galactic Basic, Ithorese"
+    }
+  },
+  {
+    "name": "jawa",
+"counters":[
+   {"name":"Ion Blast","reset":"none","level":1,"use":"racecast 'Ion Blast' [-t target]"},
+   {"name":"Repair Droid","reset":"long","level":3,"use":"racecast 'Repair Droid' [-t target]"},
+   {"name":"Hold Droid","reset":"long","level":5,"use":"racecast 'Hold Droid' [-t target]"},
+   {
+      "name": "Grovel, Cower, Beg",
+      "reset": "short",
+      "level": 1,
+      "use": "gcb",
+      "value": 1
+    },
+   {
+      "name": "Tinker",
+      "reset": "long",
+      "level": 1,
+      "use": "tinker",
+      "value": 2
+    }
+  ],    
+    "cvars": {
+      "race": "Jawa",
+      "languages": "Galactic Basic, Jawaese",
+      "speed": "25 ft.",
+      "size": "Small", 
+      "creatureType": "Humanoid",      
+      "senses": "Darkvision 60 ft."
+    }
+  },
+  {
+    "name": "kel dor",
+    "counters": [],
+    "cvars": {
+      "race": "Kel Dor",
+      "languages": "Galactic Basic, Kel Dor",
+      "speed": "30 ft.",
+      "size": "Medium",      
+      "resist": "necrotic", 
+      "creatureType": "Humanoid",      
+      "senses": "Darkvision 60 ft."
+    }
+  },
+  {
+    "name": "mon calamari",
+    "counters": [],
+    "cvars": {
+      "race": "Mon Calamari",
+      "languages": "Galactic Basic, Mon Cal",
+      "size": "Medium",       
+      "speed": "30 ft., Swim 30 ft.",
+      "resist": "cold",  
+      "creatureType": "Humanoid",      
+      "senses": "Darkvision 60 ft."
+    }
+  },
+  {
+    "name": "nautolan",
+    "counters": [],
+    "cvars": {
+      "race": "Nautolan",
+      "languages": "Galactic Basic, Nautila",
+      "size": "Medium",
+      "creatureType": "Humanoid",      
+      "speed": "35 ft., Swim 30 ft.",   
+      "senses": "Darkvision 60 ft."
+    }
+  },
+  {
+    "name": "rodian",
+    "counters": [],
+    "cvars": {
+      "race": "Rodian",
+      "languages": "Galactic Basic, Rodese",
+      "size": "Medium",
+      "creatureType": "Humanoid",      
+      "speed": "35 ft., Climb 30 ft.",   
+      "senses": "Darkvision 60 ft."
+    }
+  },
+  {
+    "name": "sith pureblood",
+"counters":[
+   {"name":"Denounce","reset":"none","level":1,"use":"racecast 'Denounce' [-t target]"},
+   {"name":"Curse","reset":"long","level":3,"use":"racecast 'curse' [-t target]"},
+   {"name":"Darkness","reset":"long","level":5,"use":"racecast '(SW) Darkness' [-t target]"}
+  ],
+    "cvars": {
+      "race": "Sith Pureblood",
+      "languages": "Galactic Basic, Sith",
+      "size": "Medium", 
+      "creatureType": "Humanoid", 
+      "speed": "30 ft.",
+      "senses": "Darkvision 60 ft."
+    }
+  },
+  {
+    "name": "togruta",
+    "counters": [],
+    "cvars": {
+      "race": "Togruta",
+      "languages": "Galactic Basic, Togruti",
+      "size": "Medium",       
+      "speed": "30 ft.",
+      "creatureType": "Humanoid",
+      "senses": "Darkvision 60 ft., Tremorsense 30ft."
+    }
+  },
+    {
+    "name": "trandoshan",
+    "counters": [{
+      "name": "Saving Face",
+      "reset": "short",
+      "level": 1,
+      "use": "sface",
+      "value": 1
+    }],
+    "cvars": {
+      "race": "Trandoshan",
+      "speed": "30 ft.",
+      "size": "Medium",
+      "resist": "sonic",
+      "creatureType": "Humanoid",
+      "languages": "Galactic Basic, Dosh",
+      "senses": "Darkvision 60 ft."
+    }
+  }]
