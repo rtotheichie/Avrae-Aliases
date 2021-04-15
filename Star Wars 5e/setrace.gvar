@@ -74,13 +74,7 @@
   },
   {
     "name": "devaronian",
-    "counters": [{
-      "name": "Tough Through",
-      "reset": "long",
-      "level": 1,
-      "use": "tough",
-      "value": 2
-    }],
+    "counters": [],
     "cvars": {
       "race": "Devaronian",
       "size": "Medium",
