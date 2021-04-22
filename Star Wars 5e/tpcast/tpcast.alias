@@ -16,18 +16,18 @@ if homebrew:
         gvar += load_json(get_gvar(g))
 for s in gvar:
     if args[0].lower() == s.name.lower():
-        spell = s
+        spelll = s
         break
-if not spell:
+if not spelll:
     for s in gvar:
         if args[0].lower() in s.name.lower():
-            spell = s
+            spelll = s
             break
-if not spell:
+if not spelll:
     return err("I don't think that's a supported power.  Make sure it is spelled correctly and is in your `brewspells` if it's unofficial.")
-if spell.name not in character().spellbook and not ignore:
-    return err(f"I don't think you know {spell.name}.  Make sure it is added to your spellbook or try to cast it again with `-i` to ignore requirements. If you didn't intend to use {spell.name}, try using quotes around the power name.")
-splevel = max(a.last('l', default = 0, type_=int), spell.level)
+if spelll.name not in character().spellbook and not ignore:
+    return err(f"I don't think you know {spelll.name}.  Make sure it is added to your spellbook or try to cast it again with `-i` to ignore requirements. If you didn't intend to use {spelll.name}, try using quotes around the power name.")
+splevel = max(a.last('l', default = 0, type_=int), spelll.level)
 points = point_list[splevel]
 if a.get('p'):
     points += int(a.last('p'))
@@ -37,5 +37,5 @@ character().mod_cc(cc,-points) if not ignore else ''
 args.remove(args[0])
 out.append(" ".join(args))
 out.append(f'-f "{cc} (-{points})|{character().cc_str(cc)}"') if not a.get('-h') else ''
-return f'cast "{spell.name}" {" ".join(out)} -i'
+return f'cast "{spelll.name}" {" ".join(out)} -i'
 </drac2>
