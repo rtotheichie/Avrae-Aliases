@@ -1,0 +1,4 @@
+{{c=combat()}}
+{{e=c.me.get_effect('bolstered') if c and c.me else '' }}
+{{dice, eng=e.name[e.name.index('(1d'):].strip('()') if e else '', e.name[13:e.name.index('(1d')-1] if e else ''}}
+{{c.me.remove_effect(e.name) or f"""-b1 {dice}[aptitude] -phrase "{name} feels bolstered by {eng}!" """ if dice else ""}}
