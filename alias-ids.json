@@ -2,8 +2,11 @@
   "D&D misc/spcast/spcast.alias":"6042cbab1e2241970bbefa04",
   "Star Wars 5e/fpcast/fpcast.alias":"6042d2df1e2241970bbefa0f",
   "Star Wars 5e/tpcast/tpcast.alias":"6042d2f71e2241970bbefa10",
-  "Star Wars 5e/swc.alias":"6042ff791e2241970bbefa4b",
+  "Star Wars 5e/swc/swc.alias":"6042ff791e2241970bbefa4b",
   "Star Wars 5e/reload/reload.alias":"606732d8d749316905d7b16d",
-  "Star Wars 5e/swequip/swequip.alias":"606b277b6485235880091a49"
-  "Star Wars 5e/The Outer Rim/lootdrop/lootdrop.alias":"6084917ad829c8d51222b165"
+  "Star Wars 5e/swequip/swequip.alias":"606b277b6485235880091a49",
+  "Star Wars 5e/The Outer Rim/lootdrop/lootdrop.alias":"6084917ad829c8d51222b165",
+  "Star Wars 5e/potent/potent.alias":"60877482d7f581b33a83c64d",
+  "Star Wars 5e/aptitude/aptitude.snippet":"608774d6d7f581b33a83c64e",
+  "Star Wars 5e/defiant/defiant.snippet":"6087764dd829c8d51222b398"
 }
