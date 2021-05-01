@@ -18,5 +18,6 @@
     "cc": "Second Heart",
     "title": "[name] uses their Second Heart ability!",
     "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can\u2019t use this feature again until you finish a long rest."
-  }
+  },
+  "savingFace": {"cc": "Saving Face", "title": "[name] uses their Saving Face ability!", "desc": "Trandoshans are careful not to show weakness in front of their allies, for fear of losing status. If you miss with an attack roll or fail an ability check or a saving throw, you can gain a bonus to the roll equal to the number of allies you can see within 30 feet of you (maximum bonus of +5). Once you use this trait, you can\u2019t use it again until you finish a short or long rest."}
 }
