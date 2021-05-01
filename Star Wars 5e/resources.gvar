@@ -1,4 +1,22 @@
 {
-"sonicScream": {"dc": "{8+proficiencyBonus+constitutionMod}", "d": "{2*scale}d6 [sonic]", "half": "True", "cc": "Sonic Scream", "title": "[name] emits a Sonic Scream!", "desc": "As an action, you can violently expel air in a 15-foot cone. When you do so, each creature in the area of the exhalation must make a Wisdom saving throw.   This ability has no effect on constructs.", "save": "wis"},
-"grovelCowerBeg": {"effect": "Distracted|-desc 'Attacks against this opponent have advantage'|1", "cc": "Grovel, Cower, Beg", "title": "[name] uses Grovel, Cower, and Beg"}
+  "sonicScream": {
+    "dc": "{8+proficiencyBonus+constitutionMod}",
+    "d": "{2*scale}d6 [sonic]",
+    "half": "True",
+    "cc": "Sonic Scream",
+    "title": "[name] emits a Sonic Scream!",
+    "desc": "As an action, you can violently expel air in a 15-foot cone. When you do so, each creature in the area of the exhalation must make a Wisdom saving throw.   This ability has no effect on constructs.",
+    "save": "wis"
+  },
+  "grovelCowerBeg": {
+    "effect": "Distracted|-desc 'Attacks against this opponent have advantage'|1",
+    "cc": "Grovel, Cower, Beg",
+    "title": "[name] uses Grovel, Cower, and Beg"
+  },
+  "secondHeart": {
+    "d": "-1 [healing]",
+    "cc": "Second Heart",
+    "title": "[name] uses their Second Heart ability!",
+    "desc": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can\u2019t use this feature again until you finish a long rest."
+  }
 }
