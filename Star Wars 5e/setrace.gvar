@@ -222,7 +222,7 @@
       "name": "Sonic Scream",
       "reset": "long",
       "level": 1,
-      "use": "scream",
+      "use": "use sonicScream -t [targets]",
       "value": 2
     }],
     "cvars": {
@@ -244,14 +244,14 @@
       "name": "Grovel, Cower, Beg",
       "reset": "short",
       "level": 1,
-      "use": "gcb",
+      "use": "use grovelCowerBeg -t [targets]",
       "value": 1
     },
    {
       "name": "Tinker",
       "reset": "long",
       "level": 1,
-      "use": "tinker",
+      "use": "",
       "value": 2
     }
   ],    
@@ -348,7 +348,7 @@
       "name": "Saving Face",
       "reset": "short",
       "level": 1,
-      "use": "sface",
+      "use": "use savingFace",
       "value": 1
     }],
     "cvars": {
@@ -367,7 +367,7 @@
       "name": "Intimidating Roar",
       "reset": "long",
       "level": 1,
-      "use": "racecast '(SW) Fear'",
+      "use": "racecast '(SW) Fear' -t [targets]",
       "value": 1
     }],
     "cvars": {
