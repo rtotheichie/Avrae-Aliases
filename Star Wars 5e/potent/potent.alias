@@ -1,4 +1,4 @@
-!alias potent <drac2>
+<drac2>
 cc = "Potent Aptitude"
 D = proficiencyBonus * 2
 args = argparse(&ARGS&)
