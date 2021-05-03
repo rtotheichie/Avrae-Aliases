@@ -11,10 +11,6 @@ cc  = "Rages" if cc_exists("Rages") else "Rage"
 lvl = int(get("BerserkerLevel", 0)) if not args.last('t') else 1
 r   = args.last("t") if "t" in args else name
 b   = ["kinetic", "energy"]
-if "bear" == get("l3totem", "").lower():
-  b  += ["thunder", "necrotic",  "fire",
-         "force",   "lightning", "cold",
-         "poison",  "radiant",   "acid"]
 
 C   = c.get_combatant(r) if c else""
 v   = (cc_exists(cc) and get_cc(cc)>0) or i or lvl >= 20
