@@ -8,5 +8,9 @@
   "Star Wars 5e/The Outer Rim/lootdrop/lootdrop.alias":"6084917ad829c8d51222b165",
   "Star Wars 5e/potent/potent.alias":"60877482d7f581b33a83c64d",
   "Star Wars 5e/aptitude/aptitude.snippet":"608774d6d7f581b33a83c64e",
-  "Star Wars 5e/defiant/defiant.snippet":"6087764dd829c8d51222b398"
+  "Star Wars 5e/defiant/defiant.snippet":"6087764dd829c8d51222b398",
+  "Star Wars 5e/rage/rage.alias":"60900d442a5c5d50498a5737",
+  "Star Wars 5e/rage/rage end.alias":"60900da8c954387d70af18b4",
+  "Star Wars 5e/rage/no rage.snippet":"60900df9c954387d70af18b6",
+  "Star Wars 5e/rage/reckless.snippet":"60900f902a5c5d50498a5739"
 }
