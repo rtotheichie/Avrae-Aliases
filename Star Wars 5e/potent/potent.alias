@@ -1,0 +1,28 @@
+<drac2>
+cc = "Potent Aptitude"
+D = proficiencyBonus * 2
+args = argparse(&ARGS&)
+ch = character()
+out = []
+v = ch.get_cc(cc)
+c = combat()
+if not v:
+    out.append(f'-title "{name} tries to use their {cc}!"')
+    out.append('-desc "You must finish a short or long rest before you may use this feature again."')
+    out.append(f'-f "{cc}|{ch.cc_str(cc)}"')
+else:
+    targets = args.get('t')
+    names = []
+    if c:
+        for t in targets:
+            c.get_combatant(t).add_effect(f'Bolstered by {name} (1d{str(D)})', args= "", duration = 600, end = True)
+            names.append(c.get_combatant(t).name)
+    if names:
+        out.append(f'''-title "{name} uses their {cc} to bolster {', '.join(names)}!"''')
+    else:
+        out.append(f'-title "{name} uses their {cc}!"')
+    out.append('-desc "Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 beforedeciding to use the Potent Aptitude die, but must decide before the GM says whether the roll succeeds or fails. Once the Potent Aptitude die is rolled, it is lost."')
+    ch.mod_cc(cc, -1)
+    out.append(f'-f "{cc}|{ch.cc_str(cc)}"')
+return f'''embed {" ".join(out)} -thumb {image} -color {color}'''
+</drac2>

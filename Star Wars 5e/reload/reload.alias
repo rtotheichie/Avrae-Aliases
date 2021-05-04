@@ -32,7 +32,7 @@ else:
     character().mod_cc(cc, 1, strict=True)
 out = []
 out.append(f'-title "{name} loads a new {Cell} into their {cc}!"')
-out.append('-desc "**Reload |** A limited number of shots can be made with a weapon that has the reload property. A character must then reload it using an action or a bonus action (the character’s choice). You must have one free hand to reload."')
+out.append('-desc "***Reload.***  A limited number of shots can be made with a weapon that has the reload property. A character must then reload it using an action or a bonus action (the character’s choice). You must have one free hand to reload."')
 out.append(f'-f "{Cell}s remaining|{Consumables.get(Cell) or "0"}|inline"')
 out.append(f'-f "{cc}|{character().cc_str(cc)}|inline"')
 return " ".join(out)

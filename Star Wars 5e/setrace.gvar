@@ -1,6 +1,6 @@
 [{
     "name": "Star Wars 5e Player's Handbook Species",
-    "featureResources": "",
+    "featureResources": "99440ba2-33d5-42f1-a857-59aa44000114",
     "counters": [],
     "cvars": {
       "race": "",
@@ -204,13 +204,17 @@
     "counters": [{
       "name": "Defiant",
       "reset": "short",
-      "level": 1
+      "level": 1,
+      "use": "",
+      "value": 1
     }],
+    "cvars": {
     "race": "Human",
       "size": "Medium",      
       "speed": "30 ft.",
       "creatureType": "Humanoid",      
     "languages": "Galactic Basic"
+    }
   },
     {
     "name": "ithorian",
@@ -218,7 +222,7 @@
       "name": "Sonic Scream",
       "reset": "long",
       "level": 1,
-      "use": "scream",
+      "use": "use sonicScream -t [targets]",
       "value": 2
     }],
     "cvars": {
@@ -240,14 +244,14 @@
       "name": "Grovel, Cower, Beg",
       "reset": "short",
       "level": 1,
-      "use": "gcb",
+      "use": "use grovelCowerBeg -t [targets]",
       "value": 1
     },
    {
       "name": "Tinker",
       "reset": "long",
       "level": 1,
-      "use": "tinker",
+      "use": "",
       "value": 2
     }
   ],    
@@ -344,7 +348,7 @@
       "name": "Saving Face",
       "reset": "short",
       "level": 1,
-      "use": "sface",
+      "use": "use savingFace",
       "value": 1
     }],
     "cvars": {
@@ -363,7 +367,7 @@
       "name": "Intimidating Roar",
       "reset": "long",
       "level": 1,
-      "use": "racecast '(SW) Fear'",
+      "use": "racecast '(SW) Fear' -t [targets]",
       "value": 1
     }],
     "cvars": {
