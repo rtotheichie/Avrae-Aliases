@@ -12,7 +12,7 @@ lvl = int(get("BerserkerLevel", 0)) if not args.last('t') else 1
 r   = args.last("t") if "t" in args else name
 b   = ["kinetic", "energy"]
 if get("dewbackInstinct", ""):
-  b += get("dewbackInstinct")
+  b += load_json(get("dewbackInstinct", ""))
 
 C   = c.get_combatant(r) if c else""
 v   = (cc_exists(cc) and get_cc(cc)>0) or i or lvl >= 20
