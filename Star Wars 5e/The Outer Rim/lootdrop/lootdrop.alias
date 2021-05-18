@@ -14,6 +14,9 @@ args = &ARGS&
 B = "boost" in args
 out = []
 n = "\n"
+if not args:
+    out.append(f'-title "{name} is looking for a loot drop!"')
+    out.append(f'-desc "You may run `{ctx.prefix}{ctx.alias} Daily` to get your daily box or `{ctx.prefix}{ctx.alias} Weekly` to get your weekly box."')
 for arg in args:
     if D in arg.title():
         if T < nextDaily and not B:
@@ -34,7 +37,7 @@ for arg in args:
             out.append(f'-title "{name} collects their {W} Loot Drop!"')
             out.append(f'-desc "The box contains:{n}**{gvar.Weekly[randint(len(gvar.Weekly)-1)]}**"')
             out.append(f'''-f "Next drop|{['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][weekday]} at {int(round((lastWeekly-(3*3600))%86400//3600)%12.1) or 12:02d}:{int(int((lastWeekly)%86400%3600//60)):02d} {['AM','PM'][int((int((lastWeekly%86400//3600)+1)//12.1))]} Server Time"''')
-
+    
 return " ".join(out)
 </drac2>
 -thumb "https://hellosubscription.com/wp-content/uploads/2018/12/03201736/image_5c05d5ad36d97.png" -color {{color}}
