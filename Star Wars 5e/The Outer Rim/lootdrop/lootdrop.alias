@@ -25,7 +25,7 @@ for arg in args:
             if not B:
                 lastDaily = T
                 set_cvar("lastDrop", dump_json({"Daily": lastDaily, "Weekly": lastWeekly}))
-            out.append(f'-title "{name} collects their {D} Loot Drop!"')
+            out.append(f'''-title "{name} collects their {D}{' Booster' if B else ''} Loot Drop!"''')
             out.append(f'-desc "The box contains:{n}**{gvar.Daily[randint(len(gvar.Daily)-1)]}**"')
             out.append(f'''-f "Next drop|Tomorrow at {int(round((lastDaily-(4*3600))%86400//3600)%12.1) or 12:02d}:{int(int((lastDaily)%86400%3600//60)):02d} {['AM','PM'][int((int((lastDaily%86400//3600)+1)//12.1))]} Server Time"''')
     if W in arg.title():
