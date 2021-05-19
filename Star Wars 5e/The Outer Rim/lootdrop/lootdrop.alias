@@ -38,8 +38,8 @@ for arg in args:
             out.append(f'-desc "The box contains:{n}**{gvar.Weekly[randint(len(gvar.Weekly)-1)]}**"')
             out.append(f'''-f "Next drop|{['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][weekday]} at {int(round((lastWeekly-(3*3600))%86400//3600)%12.1) or 12:02d}:{int(int((lastWeekly)%86400%3600//60)):02d} {['AM','PM'][int((int((lastWeekly%86400//3600)+1)//12.1))]} Server Time"''')
     if B:
-    	    out.append(f'-title "{name} collects their Booster Loot Drop!"')
-            out.append(f'-desc "The box contains:{n}**{gvar.Daily[randint(len(gvar.Daily)-1)]}**"')
+    	out.append(f'-title "{name} collects their Booster Loot Drop!"')
+        out.append(f'-desc "The box contains:{n}**{gvar.Daily[randint(len(gvar.Daily)-1)]}**"')
     
 return " ".join(out)
 </drac2>
