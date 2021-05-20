@@ -1,0 +1,19 @@
+embed <drac2>
+args = &ARGS&
+if args:
+	cr = str(args[0]) 
+else:
+	cr = str(character().levels.total_level)
+gvar = load_json(get_gvar("dd465532-b71e-4d6d-a8aa-b2319bb0ce7b"))
+if cr == "1/8":
+	cr = "0.125"
+elif cr == "1/4":
+	cr = "0.25"
+elif cr == "1/2":
+	cr = "0.5"
+out = []
+out.append('-title "Combat Simulator, version 36A.19x0"')
+out.append(f'-desc "Generating a random combat simulation, challenge level {cr}..."')
+out.append(f'-f "Opponent|{gvar[cr][randint(len(gvar[cr])-1)]}"')
+return " ".join(out)
+</drac2>
