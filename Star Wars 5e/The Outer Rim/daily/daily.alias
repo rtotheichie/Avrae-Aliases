@@ -1,0 +1,30 @@
+embed <drac2>
+args = argparse(&ARGS&)
+rep = load_json(get('reputation',{"Renown": 0, "Notoriety": 0}))
+Roll = vroll(f"{['1d20','2d20kh1'][args.adv()>0]}")
+out = []
+out.append(f'-title "{name} does their daily assignment for their faction."')
+if Roll.result.crit == 2:
+    creditResult = -(level * vroll('1d20').total * vroll('1d3').total)
+    xp = 0
+elif Roll.result.crit == 1:
+    creditResult = Roll.total * 25
+    xp = Roll.total * level * 15
+else:
+    creditResult = Roll.total * 15 
+    xp = Roll.total * level * 10
+adjective = ["a spectacular failure", "not quite a complete failure", "pretty bad", "a learning opportunity", "almost a success", "barely a success", "a slight success", "not bad for someone like you", "a success", "a very good success", "a great success"][Roll.total // 2]
+out.append(f'''-desc "The mission was {adjective}! They {'lost' if creditResult <=0 else 'gained'} {creditResult} credits as a result."''')
+bag = load_json(get('bags', []))
+credits = [i for i in bag if ('Credits' in i[0])][0]
+cr = "cr"
+credits in bag or bag.append(credits)
+credits[1].update({cr:credits[1][cr] + creditResult})
+set_cvar("bags", dump_json(bag))
+out.append(f'''-f "{name}'s Credits|{credits[1][cr]} {cr}|inline"''')
+character().mod_cc("Experience", xp)
+out.append(f'''-f "Experience|{character().cc_str("Experience")}|inline"''')
+out.append('-footer "Your rewards have already been added to your character."')
+return " ".join(out)
+</drac2>
+-thumb {{image}} -color {{color}}
