@@ -1,6 +1,6 @@
 embed <drac2>
 args = argparse(&ARGS&)
-rep = load_json(get('reputation',{"Renown": 0, "Notoriety": 0}))
+rep = load_json(get('reputation','{"Renown": 0, "Notoriety": 0}'))
 Roll = vroll(f"{['1d20','2d20kh1'][args.adv()>0]}")
 out = []
 out.append(f'-title "{name} does their daily assignment for their faction."')
