@@ -14,7 +14,7 @@ else:
     creditResult = Roll.total * 15 
     xp = Roll.total * level * 10
 adjective = ["a spectacular failure", "not quite a complete failure", "pretty bad", "a learning opportunity", "almost a success", "barely a success", "a slight success", "not bad for someone like you", "a success", "a very good success", "a great success"][Roll.total // 2]
-out.append(f'''-desc "The mission was {adjective}! They {'lost' if creditResult <=0 else 'gained'} {creditResult} credits as a result."''')
+out.append(f'''-desc "The mission was {adjective}! They {'lost' if creditResult <=0 else 'gained'} {creditResult} credits and {xp} XP as a result."''')
 bag = load_json(get('bags', []))
 credits = [i for i in bag if ('Credits' in i[0])][0]
 cr = "cr"
