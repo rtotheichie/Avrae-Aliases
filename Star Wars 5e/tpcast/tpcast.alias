@@ -32,11 +32,11 @@ splevel = max(a.last('l', default = 0, type_=int), spelll.level)
 points = point_list[splevel]
 if a.get('p'):
     points += int(a.last('p'))
-if character().get_cc(cc) < points and not ignore:
+if not ignore and character().get_cc(cc) < points:
     return err("You don't have enough Tech Points to cast that power.")
 character().mod_cc(cc,-points) if not ignore else ''
 args.remove(args[0])
 out.append(" ".join(args))
-out.append(f'-f "{cc} (-{points})|{character().cc_str(cc)}"') if not a.get('-h') else ''
+out.append(f'-f "{cc} (-{points})|{character().cc_str(cc)}"') if not ignore and not a.get('-h') else ''
 return f'cast "{spelll.name}" {" ".join(out)} -i'
 </drac2>
