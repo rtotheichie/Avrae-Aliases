@@ -1,8 +1,8 @@
 embed <drac2>
 args = argparse(&ARGS&)
-rep = load_json(get('reputation','{"Renown": 0, "Notoriety": 0}'))
 Roll = vroll(f"{['1d20','2d20kh1'][args.adv()>0]}")
 out = []
+rep = 0
 out.append(f'-title "{name} does their daily assignment for their faction."')
 if Roll.result.crit == 2:
     creditResult = -(level * vroll('1d20').total * vroll('1d3').total)
@@ -10,11 +10,13 @@ if Roll.result.crit == 2:
 elif Roll.result.crit == 1:
     creditResult = Roll.total * 25
     xp = Roll.total * level * 15
+    rep += roll("2d3+1")//2
 else:
     creditResult = Roll.total * 15 
     xp = Roll.total * level * 10
+    rep += roll("1d4-1")
 adjective = ["a spectacular failure", "not quite a complete failure", "pretty bad", "a learning opportunity", "almost a success", "barely a success", "a slight success", "not bad for someone like you", "a success", "a very good success", "a great success"][Roll.total // 2]
-out.append(f'''-desc "The mission was {adjective}! They {'lost' if creditResult <=0 else 'gained'} {creditResult} credits and {xp} XP as a result."''')
+out.append(f'''-desc "The mission was {adjective}! They {'lost' if creditResult <=0 else 'gained'} {str(rep) + ' Renown or Notoriety, ' if rep else ''}{creditResult} credits and {xp} XP as a result."''')
 bag = load_json(get('bags', []))
 credits = [i for i in bag if ('Credits' in i[0])][0]
 cr = "cr"
