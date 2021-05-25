@@ -20,23 +20,23 @@ if not args:
 for arg in args:
     if D in arg.title():
         if T < nextDaily and not B:
-            return err(f"Your next drop isn't coming in until {int(round((nextDaily-(4*3600))%86400//3600)%12.1) or 12:02d}:{int(int((nextDaily)%86400%3600//60)):02d} {['AM','PM'][int((int((nextDaily%86400//3600)+1)//12.1))]} Server Time")
+            return err(f"Your next drop isn't coming in until {int(round((nextDaily-(5*3600))%86400//3600)%12.1) or 12:02d}:{int(int((nextDaily)%86400%3600//60)):02d} {['AM','PM'][int((int((nextDaily%86400//3600)+1)//12.1))]} Server Time")
         else:
             if not B:
                 lastDaily = T
                 set_cvar("lastDrop", dump_json({"Daily": lastDaily, "Weekly": lastWeekly}))
             out.append(f'''-title "{name} collects their {D}{' Booster' if B else ''} Loot Drop!"''')
             out.append(f'-desc "The box contains:{n}**{gvar.Daily[randint(len(gvar.Daily)-1)]}**"')
-            out.append(f'''-f "Next drop|Tomorrow at {int(round((lastDaily-(4*3600))%86400//3600)%12.1) or 12:02d}:{int(int((lastDaily)%86400%3600//60)):02d} {['AM','PM'][int((int((lastDaily%86400//3600)+1)//12.1))]} Server Time"''')
+            out.append(f'''-f "Next drop|Tomorrow at {int(round((lastDaily-(5*3600))%86400//3600)%12.1) or 12:02d}:{int(int((lastDaily)%86400%3600//60)):02d} {['AM','PM'][int((int((lastDaily%86400//3600)+1)//12.1))]} Server Time"''')
     if W in arg.title():
         if T < nextWeekly:
-            return err(f"Your next drop isn't coming in until {int(round((nextWeekly-(4*3600))%86400//3600)%12.1) or 12:02d}:{(int(nextWeekly)%86400%3600//60):02d} {['AM','PM'][int((int(nextDaily%86400//3600)+1)//12.1)]} on {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][int((((nextWeekly//86400))-11)%7)]}")
+            return err(f"Your next drop isn't coming in until {int(round((nextWeekly-(5*3600))%86400//3600)%12.1) or 12:02d}:{(int(nextWeekly)%86400%3600//60):02d} {['AM','PM'][int((int(nextDaily%86400//3600)+1)//12.1)]} on {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][int((((nextWeekly//86400))-11)%7)]}")
         else:
             lastWeekly = T
             set_cvar("lastDrop", dump_json({"Daily": lastDaily, "Weekly": lastWeekly}))
             out.append(f'-title "{name} collects their {W} Loot Drop!"')
             out.append(f'-desc "The box contains:{n}**{gvar.Weekly[randint(len(gvar.Weekly)-1)]}**"')
-            out.append(f'''-f "Next drop|{['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][weekday]} at {int(round((lastWeekly-(3*3600))%86400//3600)%12.1) or 12:02d}:{int(int((lastWeekly)%86400%3600//60)):02d} {['AM','PM'][int((int((lastWeekly%86400//3600)+1)//12.1))]} Server Time"''')
+            out.append(f'''-f "Next drop|{['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][weekday]} at {int(round((lastWeekly-(5*3600))%86400//3600)%12.1) or 12:02d}:{int(int((lastWeekly)%86400%3600//60)):02d} {['AM','PM'][int((int((lastWeekly%86400//3600)+1)//12.1))]} Server Time"''')
     
 return " ".join(out)
 </drac2>
