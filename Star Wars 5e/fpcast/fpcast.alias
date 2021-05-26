@@ -31,7 +31,7 @@ splevel = max(a.last('l', default = 0, type_=int), spell.level)
 points = point_list[splevel]
 if a.get('p'):
     points += int(a.last('p'))
-if not ignore and not character().get_cc(cc) < points:
+if not ignore and character().get_cc(cc) < points:
     return err("You don't have enough Force Points to cast that power.")
 character().mod_cc(cc,-points) if not ignore else ''
 args.remove(args[0])
