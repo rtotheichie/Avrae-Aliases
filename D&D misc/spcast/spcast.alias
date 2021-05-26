@@ -25,17 +25,17 @@ if not spell:
             break
 if not spell:
     return err("I don't think that's a supported spell.  Make sure it is spelled correctly and is in your `brewspells` if it's non-SRD.")
-if spell.name not in character().spellbook and not ignore:
+if not ignore and spell.name not in character().spellbook:
     return err("I don't think you know that spell.  Make sure it is added to your spellbook or try to cast it again with `-i` to ignore requirements.")
 splevel = max(a.last('l', default = 0, type_=int), spell.level)
 points = point_list[splevel]
 if a.get('p'):
     points += int(a.last('p'))
-if character().get_cc(cc) < points and not ignore:
+if not ignore and character().get_cc(cc) < points:
     return err("You don't have enough Spell Points to cast that spell.")
 character().mod_cc(cc,-points) if not ignore else ''
 args.remove(args[0])
 out.append(" ".join(args))
-out.append(f'-f "{cc} (-{points})|{character().cc_str(cc)}"') if not a.get('-h') else ''
+out.append(f'-f "{cc} (-{points})|{character().cc_str(cc)}"') if not ignore and not a.get('-h') else ''
 return f'cast "{spell.name}" {" ".join(out)} -i'
 </drac2>
