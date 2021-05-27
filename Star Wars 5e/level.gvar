@@ -1440,52 +1440,52 @@
     ]
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentinellight",
     "subclass": "Aggression",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentinellight",
     "subclass": "Focus",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentinellight",
     "subclass": "Shadows",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentinellight",
     "subclass": "Forceblade",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentinellight",
     "subclass": "Communion",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentinellight",
     "subclass": "Ethereality",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentinellight",
     "subclass": "Synthesis",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentinellight",
     "subclass": "Tenacity",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentinellight",
     "subclass": "Witchcraft",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentinellight",
     "subclass": "Corsair",
     "counters": []
   },
@@ -1515,52 +1515,52 @@
     ]
   },
   {
-    "Class": "Sentineldarklevel",
+    "Class": "Sentineldark",
     "subclass": "Aggression",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentineldark",
     "subclass": "Focus",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentineldark",
     "subclass": "Shadows",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentineldark",
     "subclass": "Forceblade",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentineldark",
     "subclass": "Communion",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentineldark",
     "subclass": "Ehtereality",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentineldark",
     "subclass": "Synthesis",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentineldark",
     "subclass": "Tenacity",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentineldark",
     "subclass": "Withcraft",
     "counters": []
   },
   {
-    "Class": "Sentinellightlevel",
+    "Class": "Sentineldark",
     "subclass": "Corsair",
     "counters": []
   }
