@@ -1,0 +1,16 @@
+embed <drac2>
+out = []
+cc = "Defiant"
+v = character().get_cc(cc)
+droll = vroll('1d4')
+out.append(f'''-title "{name} {'tries to use' if not v else 'uses'} their {cc} feature!"''')
+if not v:
+    out.append('-desc "You must complete a short or long rest before you can use your Defiant feature again"')
+else:
+    out.append('-desc "Humans are known to be stubborn and often refuse to give up, even against the worst odds. When you or a creature you can see that can see and understand you makes an ability check, attack roll, or saving throw, you can roll a d4 and add it to their roll (no action required). You can use this before or after the roll, but before the GM determines the roll’s outcome."')
+    out.append(f'-f "Bonus|{droll}"')
+    character().mod_cc(cc, -1)
+    out.append(f'-f "Defiant (-1)|{character().cc_str(cc)}"')
+return " ".join(out)
+</drac2>
+-thumb {{image}} -color {{color}}
