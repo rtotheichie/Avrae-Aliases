@@ -776,17 +776,44 @@
   {
     "Class": "Engineer",
     "subclass": "Armormech",
-    "counters": []
+    "counters": [{
+        "name": "Armormech's Celerity",
+        "level": 14,
+        "value": "intelligenceMod",
+        "display": "bubble",
+        "reset": "long",
+        "classLevel": "EngineerLevel",
+        "desc": "When you take the Attack action or use your action to a cast a tech power of 1st-level or higher, you can make one weapon attack as a bonus action.\n\nYou can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you complete a long rest."
+      }
+	]
   },
   {
     "Class": "Engineer",
     "subclass": "Armstech",
-    "counters": []
+    "counters": [{
+        "name": "Targeting Matrix",
+        "level": 14,
+        "value": "intelligenceMod",
+        "display": "bubble",
+        "reset": "long",
+        "classLevel": "EngineerLevel",
+        "desc": "When you cast a tech power that allows you to force creatures in an area to make a saving throw, you can instead make an attack roll with your modified weapon against a single target that would be in the range of the power. On a hit, the target suffers the effects as though they failed their saving throw. If the power would affect more than one creature, it instead affects only one.\n\nYou can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain any expended uses when you finish a long rest."
+      }
+	]
   },
   {
     "Class": "Engineer",
     "subclass": "Gadgeteer",
-    "counters": []
+    "counters": [{
+        "name": "Versatile Direction",
+        "level": 6,
+        "value": "intelligenceMod",
+        "display": "bubble",
+        "reset": "long",
+        "classLevel": "EngineerLevel",
+        "desc": "You can take a second bonus action on each of your turns. You can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+      }
+	]
   },
   {
     "Class": "Engineer",
@@ -801,17 +828,53 @@
   {
     "Class": "Engineer",
     "subclass": "Astrotech",
-    "counters": []
+    "counters": [{
+        "name": "Direct Controller",
+        "level": 6,
+        "value": "proficiencyBonus",
+        "display": "bubble",
+        "reset": "long",
+        "classLevel": "EngineerLevel",
+        "desc": "Your mastery of droids improves your ability to manipulate them. When you cast a power that could affect only droids or constructs, and you only affect droids with the power, you can choose to treat the power as if cast at your Max Power Level.\n\nYou can use this feature a number of times equal to your proficiency bonus, as shown in the engineer table. You regain all expended uses when you complete a long rest."
+      }
+	]
   },
   {
     "Class": "Engineer",
     "subclass": "Audiotech",
-    "counters": []
+    "counters": [{
+        "name": "Enhanced Song",
+        "level": 3,
+        "value": 2,
+        "display": "bubble",
+        "reset": "long",
+        "classLevel": "EngineerLevel",
+        "desc": "As an action while wielding your modified instrument, you can begin performing an enhanced song, which lasts for 1 minute. While playing a song, you gain access to a new use for your Potent Aptitude, as determined by the song, listed below. You can end your song at any time, no action required.\n\nWhenever you take damage while playing your song, you must make a Constitution saving throw to continue playing. The DC equals 10 or half the damage you take, which number is higher. If you take damage from multiple sources, you must make a separate saving throw for each source of damage.\n\nWhen you cast a damage dealing tech power while playing your song that requires an attack roll or saving throw, you can cause that power to instead deal sonic damage. If you do so, instead of an attack roll or saving throw, the power instead requires a Constitution saving throw.\n\nYour song ends early if you are incapacitated or die, or if you are no longer holding your modified instrument.\n\nYou can initiate playing an enhanced song twice. You regain all expended songs when you finish a short or long rest."
+      },
+	  {
+        "name": "Legendary Coda",
+        "level": 18,
+        "value": 1,
+        "display": "bubble",
+        "reset": "long",
+        "classLevel": "EngineerLevel",
+        "desc": "You’ve gained mastery over your modified instrument. As an action, you can end your enhanced song in a triumphant blast of power with an effect determined by the song you are playing.\n\nOnce you’ve used this feature, you must complete a long rest before you can use it again."
+      }
+	]
   },
   {
     "Class": "Engineer",
     "subclass": "Biochem",
-    "counters": []
+    "counters": [{
+        "name": "Epicenter",
+        "level": 14,
+        "value": 1,
+        "display": "bubble",
+        "reset": "short",
+        "classLevel": "EngineerLevel",
+        "desc": "As a reaction when you take damage from a creature within 15 feet of you that you can see, you can use one of your mixtures. The effects of the mixture release in a 15-foot-radius sphere centered on you, and if the mixture requires a saving throw, you automatically succeed on it. Additionally, the affected area is difficult terrain to creatures other than you until the end of your next turn.\n\nOnce you’ve used this feature, you must complete a short or long rest before you can use it again."
+      }
+	]
   },
   {
     "Class": "Engineer",
@@ -826,7 +889,25 @@
   {
     "Class": "Engineer",
     "subclass": "Cybertech",
-    "counters": []
+    "counters": [{
+        "name": "Adaptable Applications",
+        "level": 6,
+        "value": "intelligenceMod",
+        "display": "bubble",
+        "reset": "long",
+        "classLevel": "EngineerLevel",
+        "desc": "When you cast a tech power of 1st level or higher, you can choose to deal additional damage or provide additional healing with that power. The additional damage or healing equals half your engineer level (rounded down).\n\nYou can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you complete a long rest."
+      },
+	  {
+        "name": "Perfected Purposing",
+        "level": 18,
+        "value": 1,
+        "display": "bubble",
+        "reset": "short",
+        "classLevel": "EngineerLevel",
+        "desc": "When you cast a tech power, you can choose to deal maximum damage or provide maximum healing with that power.\n\nOnce you’ve used this feature, you must complete a short or long rest before you can use it again."
+      }
+	]
   },
   {
     "Class": "Fighter",
@@ -882,7 +963,17 @@
   {
     "Class": "Fighter",
     "subclass": "Shield",
-    "counters": []
+    "counters": [{
+        "name": "Tech Points",
+        "level": 3,
+        "value": [0, 0, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10],
+        "display": "default",
+        "modifier": "intelligenceMod",
+        "classLevel": "FighterLevel",
+        "reset": "short",
+        "desc": "You use these tech points to cast tech powers. You regain all expended tech points when you finish a short or long rest."
+      }
+	]
   },
   {
     "Class": "Fighter",
@@ -891,13 +982,60 @@
   },
   {
     "Class": "Fighter",
-    "subclass": "Adept",
-    "counters": []
+    "subclass": "Adept Dark",
+    "counters": [{
+        "name": "Force Points",
+        "level": 3,
+        "value": "FighterLevel",
+        "modifier": "charismaMod",
+        "reset": "long",
+        "display": "default",
+        "classLevel": "FighterLevel"
+      },
+	  {
+        "name": "Growing Momentum",
+        "level": 3,
+        "value": "charismaMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "FighterLevel"
+      }
+	]
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Adept Light",
+    "counters": [{
+        "name": "Force Points",
+        "level": 3,
+        "value": "FighterLevel",
+        "modifier": "wisdomMod",
+        "reset": "long",
+        "display": "default",
+        "classLevel": "FighterLevel"
+      },
+	  {
+        "name": "Growing Momentum",
+        "level": 3,
+        "value": "wisdomMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "FighterLevel"
+      }
+	]
   },
   {
     "Class": "Fighter",
     "subclass": "Blademaster",
-    "counters": []
+    "counters": [{
+        "name": "Bladestorm",
+        "level": 18,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "FighterLevel"
+      }
+	]
   },
   {
     "Class": "Fighter",
@@ -907,22 +1045,101 @@
   {
     "Class": "Fighter",
     "subclass": "Enhancement",
-    "counters": []
+    "counters": [{
+        "name": "Amplified Shots",
+        "level": 3,
+        "value": 2,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "FighterLevel"
+      }
+	]
+  },
+  {
+    "Class": "Fighter",
+    "subclass": "Exhibition",
+    "counters": [{
+        "name": "Spotlight",
+        "level": 3,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "FighterLevel"
+      },
+	  {
+        "name": "Showoff",
+        "level": 3,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "FighterLevel"
+      },
+	  {
+        "name": "Beauty of Violence",
+        "level": 18,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "FighterLevel"
+      }
+	]
   },
   {
     "Class": "Fighter",
     "subclass": "Mounted",
-    "counters": []
+    "counters": [{
+        "name": "Unwavering Mark",
+        "level": 3,
+        "value": "strengthMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "FighterLevel"
+      },
+	  {
+        "name": "Warding Maneuver",
+        "level": 7,
+        "value": "constitutionMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "FighterLevel"
+      }
+	]
   },
   {
     "Class": "Fighter",
     "subclass": "Praetorian",
-    "counters": []
+    "counters": [{
+        "name": "Fighting Spirit",
+        "level": 3,
+        "value": 3,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "FighterLevel",
+		"desc": "Your intensity in battle can shield you and help you strike true. As a bonus action on your turn, you can give yourself advantage on all weapon attack rolls until the end of the current turn. When you do so, you also gain 5 temporary hit points. The number of hit points increases when you reach certain levels in this class, increasing to 10 at 10th level and 15 at 15th level.\n\nYou can use this feature three times. You regain all expended uses when you finish a long rest."
+      },
+	  {
+        "name": "Strength Before Weakness",
+        "level": 18,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "FighterLevel",
+		"desc": "Your fighting spirit can delay the grasp of death. If you take damage that reduces you to 0 hit points, you can use your reaction to delay falling unconscious, and you can immediately take an extra turn. While you have 0 hit points during that extra turn, taking damage causes death saving throw failures as normal, and three death saving throw failures can still kill you. When the extra turn ends, you fall unconscious if you still have 0 hit points.\n\nOnce you’ve used this feature, you can’t use it again until you finish a long rest."
+      }
+	]
   },
   {
     "Class": "Fighter",
     "subclass": "Totem",
-    "counters": []
+    "counters": [{
+        "name": "Totemic Might",
+        "level": 3,
+        "value": 2,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "FighterLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
@@ -977,132 +1194,644 @@
   {
     "Class": "Guardianlight",
     "subclass": "Makashi",
-    "counters": []
+    "counters": [{
+        "name": "Ysalamiri",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Contention",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Niman",
-    "counters": []
+    "counters": [{
+        "name": "Rancor",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Redirect",
+        "level": 15,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Moderation",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Shien/Djem",
-    "counters": []
+    "counters": [{
+        "name": "Krayt Dragon",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Perserverance",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Soresu",
-    "counters": []
+    "counters": [{
+        "name": "Mynock",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Circle of Shelter",
+        "level": 7,
+        "value": "constitutionMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Resilience",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "Guardianlight"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Aqinos",
-    "counters": []
+    "counters": [{
+        "name": "Droid Companion",
+        "level": 3,
+        "value": "proficiencyBonus",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Adaptation",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Ataru",
-    "counters": []
+    "counters": [{
+        "name": "Hawk-Bat",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Aggression",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Jar'Kai",
-    "counters": []
+    "counters": [{
+        "name": "Acklay",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Rising Whirlwind",
+        "level": 15,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Domination",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Juyo/Vappad",
-    "counters": []
+    "counters": [{
+        "name": "Vornskr",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Vengeance",
+        "level": 15,
+        "value": "wisdomMod",
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Ferocity",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Shii-Cho",
-    "counters": []
+    "counters": [{
+        "name": "Sarlaac",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Determination",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Sokan",
-    "counters": []
+    "counters": [{
+        "name": "Varactyl",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Unwavering Self",
+        "level": 3,
+        "value": [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2],
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Persistence",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Trakata",
-    "counters": []
+    "counters": [{
+        "name": "Monkey-Lizard",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Deception",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Vonil/Ishu",
-    "counters": []
+    "counters": [{
+        "name": "Hydra",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Unity",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardianlight",
     "subclass": "Ysannanite",
-    "counters": []
+    "counters": [{
+        "name": "Yerdua",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Phasestorm",
+        "level": 15,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      },
+	  {
+        "name": "Master of Unorthodox",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardianlightLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Makashi",
-    "counters": []
+    "counters": [{
+        "name": "Ysalamiri",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Contention",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Niman",
-    "counters": []
+    "counters": [{
+        "name": "Rancor",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Redirect",
+        "level": 15,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Moderation",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Shien/Djem",
-    "counters": []
+    "counters": [{
+        "name": "Krayt Dragon",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Perserverance",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Soresu",
-    "counters": []
+    "counters": [{
+        "name": "Mynock",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Circle of Shelter",
+        "level": 7,
+        "value": "constitutionMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Resilience",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Aqinos",
-    "counters": []
+    "counters": [{
+        "name": "Droid Companion",
+        "level": 3,
+        "value": "proficiencyBonus",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Adaptation",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Ataru",
-    "counters": []
+    "counters": [{
+        "name": "Hawk-Bat",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Aggression",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Jar'Kai",
-    "counters": []
+    "counters": [{
+        "name": "Acklay",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Rising Whirlwind",
+        "level": 15,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Domination",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Juyo/Vaapad",
-    "counters": []
+    "counters": [{
+        "name": "Vornskr",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Vengeance",
+        "level": 15,
+        "value": "charismaMod",
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Ferocity",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Shii-Cho",
-    "counters": []
+    "counters": [{
+        "name": "Sarlaac",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Determination",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Sokan",
-    "counters": []
+    "counters": [{
+        "name": "Varactyl",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Unwavering Self",
+        "level": 3,
+        "value": [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2],
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Persistence",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Trakata",
-    "counters": []
+    "counters": [{
+        "name": "Monkey-Lizard",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Deception",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Vonil/Ishu",
-    "counters": []
+    "counters": [{
+        "name": "Hydra",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Unity",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Guardiandark",
     "subclass": "Ysannanite",
-    "counters": []
+    "counters": [{
+        "name": "Yerdua",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Phasestorm",
+        "level": 15,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      },
+	  {
+        "name": "Master of Unorthodox",
+        "level": 20,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "GuardiandarkLevel"
+      }
+	]
   },
   {
     "Class": "Monk",
@@ -1121,7 +1850,15 @@
   {
     "Class": "Monk",
     "subclass": "Crimson",
-    "counters": []
+    "counters": [{
+        "name": "Sovereign Protector",
+        "level": 17,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "MonkLevel"
+      }
+	]
   },
   {
     "Class": "Monk",
@@ -1130,8 +1867,29 @@
   },
   {
     "Class": "Monk",
-    "subclass": "Matukai",
-    "counters": []
+    "subclass": "Matukai Light",
+    "counters": [{
+        "name": "Absorb Damage",
+        "level": 11,
+        "value": "wisdomMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "MonkLevel"
+      }
+	]
+  },
+  {
+    "Class": "Monk",
+    "subclass": "Matukai Dark",
+    "counters": [{
+        "name": "Absorb Damage",
+        "level": 11,
+        "value": "charismaMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "MonkLevel"
+      }
+	]
   },
   {
     "Class": "Monk",
@@ -1140,8 +1898,47 @@
   },
   {
     "Class": "Monk",
-    "subclass": "Aing-Tii",
-    "counters": []
+    "subclass": "Aing-Tii Light",
+    "counters": [{
+        "name": "Force Points",
+        "level": 3,
+        "value": "MonkLevel",
+        "modifier": "wisdomMod",
+        "reset": "long",
+        "display": "default",
+        "classLevel": "MonkLevel"
+      },
+	  {
+        "name": "Flow-Walking",
+        "level": 6,
+        "value": "wisdomMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "MonkLevel"
+      }
+	]
+  },
+  {
+    "Class": "Monk",
+    "subclass": "Aing-Tii Dark",
+    "counters": [{
+        "name": "Force Points",
+        "level": 3,
+        "value": "MonkLevel",
+        "modifier": "charismaMod",
+        "reset": "long",
+        "display": "default",
+        "classLevel": "MonkLevel"
+      },
+	  {
+        "name": "Flow-Walking",
+        "level": 6,
+        "value": "charismaMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "MonkLevel"
+      }
+	]
   },
   {
     "Class": "Monk",
@@ -1150,13 +1947,50 @@
   },
   {
     "Class": "Monk",
-    "subclass": "Kage",
-    "counters": []
+    "subclass": "Kage Light",
+    "counters": [{
+        "name": "Disruptive Shock",
+        "level": 6,
+        "value": "wisdomMod",
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "MonkLevel"
+      }
+	]
+  },
+  {
+    "Class": "Monk",
+    "subclass": "Kage Dark",
+    "counters": [{
+        "name": "Disruptive Shock",
+        "level": 6,
+        "value": "charismaMod",
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "MonkLevel"
+      }
+	]
   },
   {
     "Class": "Monk",
     "subclass": "Krovar",
-    "counters": []
+    "counters": [{
+        "name": "Elemental Adept",
+        "level": 6,
+        "value": "proficiencyBonus",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "MonkLevel"
+      },
+	  {
+        "name": "Elemental Paragon",
+        "level": 17,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "MonkLevel"
+      }
+	]
   },
   {
     "Class": "Monk",
@@ -1171,7 +2005,15 @@
   {
     "Class": "Monk",
     "subclass": "Whills",
-    "counters": []
+    "counters": [{
+        "name": "One With The Force",
+        "level": 11,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "MonkLevel"
+      }
+	]
   },
   {
     "Class": "Operative",
@@ -1204,13 +2046,100 @@
   },
   {
     "Class": "Operative",
-    "subclass": "Beguiler",
-    "counters": []
+    "subclass": "Beguiler Light",
+    "counters": [{
+        "name": "Force Points",
+        "level": 3,
+        "value": "OperativeLevel",
+        "modifier": "wisdomMod",
+        "reset": "long",
+        "display": "default",
+        "classLevel": "OperativeLevel"
+      },
+	  {
+        "name": "Fascinating Display",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      },
+	  {
+        "name": "Enthralling Vigor",
+        "level": 13,
+        "value": "charismaMod",
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      },
+	  {
+        "name": "Distracting Countenance",
+        "level": 17,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      }
+	]
+  },
+  {
+    "Class": "Operative",
+    "subclass": "Beguiler Dark",
+    "counters": [{
+        "name": "Force Points",
+        "level": 3,
+        "value": "OperativeLevel",
+        "modifier": "charismaMod",
+        "reset": "long",
+        "display": "default",
+        "classLevel": "OperativeLevel"
+      },
+	  {
+        "name": "Fascinating Display",
+        "level": 3,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      },
+	  {
+        "name": "Enthralling Vigor",
+        "level": 13,
+        "value": "charismaMod",
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      },
+	  {
+        "name": "Distracting Countenance",
+        "level": 17,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      }
+	]
   },
   {
     "Class": "Operative",
     "subclass": "Gunslinger",
-    "counters": []
+    "counters": [{
+        "name": "Dive for Cover",
+        "level": 3,
+        "value": "dexterityMod",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      },
+	  {
+        "name": "Quickdraw",
+        "level": 17,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      }
+	]
   },
   {
     "Class": "Operative",
@@ -1220,17 +2149,41 @@
   {
     "Class": "Operative",
     "subclass": "Disabling",
-    "counters": []
+    "counters": [{
+        "name": "Neck Snap",
+        "level": 17,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      }
+	]
   },
   {
     "Class": "Operative",
     "subclass": "Lethality",
-    "counters": []
+    "counters": [{
+        "name": "Poisoner",
+        "level": 9,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      }
+	]
   },
   {
     "Class": "Operative",
     "subclass": "Performance",
-    "counters": []
+    "counters": [{
+        "name": "Dance of Death",
+        "level": 13,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      }
+	]
   },
   {
     "Class": "Operative",
@@ -1240,17 +2193,59 @@
   {
     "Class": "Operative",
     "subclass": "Ruffian",
-    "counters": []
+    "counters": [{
+        "name": "Master Duelist",
+        "level": 17,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "OperativeLevel"
+      }
+	]
   },
   {
     "Class": "Operative",
     "subclass": "Saboteur",
-    "counters": []
+    "counters": [{
+        "name": "Tech Points",
+        "level": 3,
+        "value": [0, 0, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10],
+        "display": "default",
+        "modifier": "intelligenceMod",
+        "classLevel": "OperativeLevel",
+        "reset": "short",
+        "desc": "You use these tech points to cast tech powers. You regain all expended tech points when you finish a short or long rest."
+      },
+	  {
+        "name": "Droid Companion",
+        "level": 3,
+        "value": "proficiencyBonus",
+        "display": "bubble",
+        "classLevel": "OperativeLevel",
+        "reset": "long"
+      },
+	  {
+        "name": "Sabotage",
+        "level": 17,
+        "value": 1,
+        "display": "bubble",
+        "classLevel": "OperativeLevel",
+        "reset": "long"
+      }
+	]
   },
   {
     "Class": "Operative",
     "subclass": "Sawbones",
-    "counters": []
+    "counters": [{
+        "name": "Self-Sustain",
+        "level": 17,
+        "value": 1,
+        "display": "bubble",
+        "classLevel": "OperativeLevel",
+        "reset": "short"
+      }
+	]
   },
   {
     "Class": "Operative",
@@ -1293,7 +2288,31 @@
   {
     "Class": "Scholar",
     "subclass": "Doctor",
-    "counters": []
+    "counters": [{
+        "name": "Field Surgeon",
+        "level": 6,
+        "value": [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+        "reset": "short",
+        "display": "bubble",
+		"classLevel": "ScholarLevel"
+      },
+	  {
+        "name": "Resuscitate",
+        "level": 9,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+		"classLevel": "ScholarLevel"
+      },
+	  {
+        "name": "Panacea",
+        "level": 17,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+		"classLevel": "ScholarLevel"
+      }
+	]
   },
   {
     "Class": "Scholar",
@@ -1303,22 +2322,109 @@
   {
     "Class": "Scholar",
     "subclass": "Politician",
-    "counters": []
+    "counters": [{
+        "name": "Force of Personality",
+        "level": 6,
+        "value": "proficiencyBonus",
+        "reset": "long",
+        "display": "bubble",
+		"classLevel": "ScholarLevel"
+      },
+	  {
+        "name": "Reassemble",
+        "level": 9,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+		"classLevel": "ScholarLevel"
+      }
+	]
   },
   {
     "Class": "Scholar",
     "subclass": "Tactician",
-    "counters": []
+    "counters": [{
+        "name": "All-Out Attack",
+        "level": 17,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+		"classLevel": "ScholarLevel"
+      }
+	]
   },
   {
     "Class": "Scholar",
-    "subclass": "Arcaheologist",
-    "counters": []
+    "subclass": "Arcaheologist Light",
+    "counters": [{
+        "name": "Force Points",
+        "level": 3,
+        "value": "ScholarLevel",
+        "modifier": "wisdomMod",
+        "reset": "long",
+        "display": "default",
+        "classLevel": "ScholarLevel"
+      },
+	  {
+        "name": "Psychometric Analysis",
+        "level": 9,
+        "value": [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3],
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "ScholarLevel"
+      },
+	  {
+        "name": "Knowledge is Power",
+        "level": 17,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "ScholarLevel"
+      }
+	]
+  },
+  {
+    "Class": "Scholar",
+    "subclass": "Arcaheologist Dark",
+    "counters": [{
+        "name": "Force Points",
+        "level": 3,
+        "value": "ScholarLevel",
+        "modifier": "charismaMod",
+        "reset": "long",
+        "display": "default",
+        "classLevel": "ScholarLevel"
+      },
+	  {
+        "name": "Psychometric Analysis",
+        "level": 9,
+        "value": [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3],
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "ScholarLevel"
+      },
+	  {
+        "name": "Knowledge is Power",
+        "level": 17,
+        "value": 1,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "ScholarLevel"
+      }
+	]
   },
   {
     "Class": "Scholar",
     "subclass": "Chef",
-    "counters": []
+    "counters": [{
+        "name": "Emergency Supplements",
+        "level": 3,
+        "value": 1,
+        "reset": "short",
+        "display": "bubble",
+        "classLevel": "ScholarLevel"
+      }
+	]
   },
   {
     "Class": "Scholar",
@@ -1328,22 +2434,72 @@
   {
     "Class": "Scholar",
     "subclass": "Geneticist",
-    "counters": []
+    "counters": [{
+        "name": "Mutagenic Transformation",
+        "level": 6,
+        "value": 2,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "ScholarLevel"
+      }
+	]
   },
   {
     "Class": "Scholar",
     "subclass": "Occultist",
-    "counters": []
+    "counters": [{
+        "name": "Curse of Objurgation",
+        "level": 3,
+        "value": "proficiencyBonus",
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "ScholarLevel"
+      },
+	  {
+        "name": "Voodoo Doll",
+        "level": 9,
+        "value": 2,
+        "reset": "long",
+        "display": "bubble",
+        "classLevel": "ScholarLevel"
+      }
+	]
   },
   {
     "Class": "Scholar",
     "subclass": "Slicer",
-    "counters": []
+    "counters": [{
+        "name": "Tech Points",
+        "level": 3,
+        "value": [0, 0, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10],
+        "display": "default",
+        "modifier": "intelligenceMod",
+        "classLevel": "ScholarLevel",
+        "reset": "short",
+        "desc": "You use these tech points to cast tech powers. You regain all expended tech points when you finish a short or long rest."
+      },
+	  {
+        "name": "Redirect Error",
+        "level": 9,
+        "value": 1,
+        "display": "bubble",
+        "classLevel": "ScholarLevel",
+        "reset": "long"
+      }
+	]
   },
   {
     "Class": "Scholar",
     "subclass": "Zoologist",
-    "counters": []
+    "counters": [{
+        "name": "Feral Ferocity",
+        "level": 17,
+        "value": 1,
+        "display": "bubble",
+        "classLevel": "ScholarLevel",
+        "reset": "long"
+      }
+	]
   },
   {
     "Class": "Scout",
@@ -1377,7 +2533,15 @@
   {
     "Class": "Scout",
     "subclass": "Stalker",
-    "counters": []
+    "counters": [{
+        "name": "Concealment",
+        "level": 7,
+        "value": "intelligenceMod",
+        "display": "bubble",
+        "classLevel": "ScoutLevel",
+        "reset": "short"
+      }
+	]
   },
   {
     "Class": "Scout",
@@ -1387,32 +2551,185 @@
   {
     "Class": "Scout",
     "subclass": "Deadeye",
-    "counters": []
+    "counters": [{
+        "name": "Superiority Dice",
+        "level": 3,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": [0, 0, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5]
+      }
+	]
   },
   {
     "Class": "Scout",
     "subclass": "Illusionist",
-    "counters": []
+    "counters": [{
+        "name": "Holographic Decoy",
+        "level": 3,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": "proficiencyBonus"
+      }
+	]
   },
   {
     "Class": "Scout",
     "subclass": "Inquisitor",
-    "counters": []
+    "counters": [{
+        "name": "Sense Force",
+        "level": 7,
+        "classLevel": "ScoutLevel",
+        "reset": "long",
+        "display": "bubble",
+        "value": "intelligenceMod"
+      },
+	  {
+        "name": "Inquisitor's Wrath",
+        "level": 7,
+        "classLevel": "ScoutLevel",
+        "reset": "long",
+        "display": "bubble",
+        "value": 1,
+		"modifier": "intelligenceMod"
+      }
+	]
   },
   {
     "Class": "Scout",
     "subclass": "Mastermind",
-    "counters": []
+    "counters": [{
+        "name": "Emergency Planning",
+        "level": 7,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": 1
+      },
+	  {
+        "name": "Exploit Weakness",
+        "level": 15,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": 1
+      }
+	]
+  },
+  {
+    "Class": "Scout",
+    "subclass": "Mechanist",
+    "counters": [{
+        "name": "Potent Tech",
+        "level": 7,
+        "classLevel": "ScoutLevel",
+        "reset": "long",
+        "display": "bubble",
+        "value": "proficiencyBonus"
+      }
+	]
+  },
+  {
+    "Class": "Scout",
+    "subclass": "Mechanist (Companion)",
+    "counters": [{
+        "name": "Droid Companion",
+        "level": 3,
+        "classLevel": "ScoutLevel",
+        "reset": "long",
+        "display": "bubble",
+        "value": 1,
+		"modifier": "intelligenceMod"
+      }
+	]
   },
   {
     "Class": "Scout",
     "subclass": "Predator",
-    "counters": []
+    "counters": [{
+        "name": "Hunting Party",
+        "level": 3,
+        "classLevel": "ScoutLevel",
+        "reset": "long",
+        "display": "bubble",
+        "value": "intelligenceMod"
+      },
+	  {
+        "name": "Predator's Resolve",
+        "level": 7,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": 1
+      }
+	]
   },
   {
     "Class": "Scout",
     "subclass": "Teleportation",
-    "counters": []
+    "counters": [{
+        "name": "Personal Teleporter",
+        "level": 3,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": "intelligenceMod"
+      },
+	  {
+        "name": "Reprisal",
+        "level": 15,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": 1
+      }
+	]
+  },
+  {
+    "Class": "Scout",
+    "subclass": "Triage",
+    "counters": [{
+        "name": "Mark of Triage",
+        "level": 3,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": 1
+      },
+	  {
+        "name": "Double Dose",
+        "level": 7,
+        "classLevel": "ScoutLevel",
+        "reset": "long",
+        "display": "bubble",
+        "value": "proficiencyBonus"
+      },
+	  {
+        "name": "Adrenaline/Tranquilizer",
+        "level": 11,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": 1
+      },
+	  {
+        "name": "Focus/Dizziness",
+        "level": 11,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": 1
+      },
+	  {
+        "name": "Toughen/Weaken",
+        "level": 11,
+        "classLevel": "ScoutLevel",
+        "reset": "short",
+        "display": "bubble",
+        "value": 1
+      }
+	]
   },
   {
     "Class": "Sentinellight",
@@ -1442,7 +2759,15 @@
   {
     "Class": "Sentinellight",
     "subclass": "Aggression",
-    "counters": []
+    "counters": [{
+        "name": "Living Current",
+        "level": 13,
+        "value": "wisdomMod",
+        "classLevel": "SentinellightLevel",
+        "reset": "short",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentinellight",
@@ -1457,32 +2782,125 @@
   {
     "Class": "Sentinellight",
     "subclass": "Forceblade",
-    "counters": []
+    "counters": [{
+        "name": "Twin Saber Throw",
+        "level": 7,
+        "value": "wisdomMod",
+        "classLevel": "SentinellightLevel",
+        "reset": "long",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentinellight",
     "subclass": "Communion",
-    "counters": []
+    "counters": [{
+        "name": "Twin Saber Throw",
+        "level": 3,
+        "value": "wisdomMod",
+        "classLevel": "SentinellightLevel",
+        "reset": "short",
+        "display": "bubble"
+	  },
+	  {
+        "name": "Invasive Presence",
+        "level": 7,
+        "value": 1,
+        "classLevel": "SentinellightLevel",
+        "reset": "long",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentinellight",
     "subclass": "Ethereality",
-    "counters": []
+    "counters": [{
+        "name": "Out of Touch",
+        "level": 7,
+        "value": 1,
+        "classLevel": "SentinellightLevel",
+        "reset": "short",
+        "display": "bubble"
+	  }
+	]
+  },
+  {
+    "Class": "Sentinellight",
+    "subclass": "Meditation",
+    "counters": [{
+        "name": "Unbreakable Focus",
+        "level": 7,
+        "value": 1,
+        "classLevel": "SentinellightLevel",
+        "reset": "long",
+        "display": "bubble"
+	  },
+	  {
+        "name": "Turbulent Presence",
+        "level": 13,
+        "value": 1,
+        "classLevel": "SentinellightLevel",
+        "reset": "long",
+        "display": "bubble"
+	  },
+	  {
+        "name": "Legendary Battle Meditation",
+        "level": 18,
+        "value": 1,
+        "classLevel": "SentinellightLevel",
+        "reset": "long",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentinellight",
     "subclass": "Synthesis",
-    "counters": []
+    "counters": [{
+        "name": "Force-Empowered Tech",
+        "level": 7,
+        "value": "wisdomMod",
+        "classLevel": "SentinellightLevel",
+        "reset": "short",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentinellight",
     "subclass": "Tenacity",
-    "counters": []
+    "counters": [{
+        "name": "Kinetic Bastion",
+        "level": 18,
+        "value": "wisdomMod",
+        "classLevel": "SentinellightLevel",
+        "reset": "long",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentinellight",
     "subclass": "Witchcraft",
-    "counters": []
+    "counters": [{
+        "name": "Nature's Vigor",
+        "level": 7,
+        "value": 1,
+        "classLevel": "SentinellightLevel",
+        "reset": "short",
+        "display": "bubble"
+	  },
+	  {
+        "name": "Stormcaller",
+        "level": 18,
+        "value": 1,
+        "classLevel": "SentinellightLevel",
+        "reset": "long",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentinellight",
@@ -1517,7 +2935,15 @@
   {
     "Class": "Sentineldark",
     "subclass": "Aggression",
-    "counters": []
+    "counters": [{
+        "name": "Living Current",
+        "level": 13,
+        "value": "charismaMod",
+        "classLevel": "SentineldarkLevel",
+        "reset": "short",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentineldark",
@@ -1532,32 +2958,125 @@
   {
     "Class": "Sentineldark",
     "subclass": "Forceblade",
-    "counters": []
+    "counters": [{
+        "name": "Twin Saber Throw",
+        "level": 7,
+        "value": "charismaMod",
+        "classLevel": "SentineldarkLevel",
+        "reset": "long",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentineldark",
     "subclass": "Communion",
-    "counters": []
+    "counters": [{
+        "name": "Twin Saber Throw",
+        "level": 3,
+        "value": "charismaMod",
+        "classLevel": "SentineldarkLevel",
+        "reset": "short",
+        "display": "bubble"
+	  },
+	  {
+        "name": "Invasive Presence",
+        "level": 7,
+        "value": 1,
+        "classLevel": "SentineldarkLevel",
+        "reset": "long",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentineldark",
     "subclass": "Ehtereality",
-    "counters": []
+    "counters": [{
+        "name": "Out of Touch",
+        "level": 7,
+        "value": 1,
+        "classLevel": "SentineldarkLevel",
+        "reset": "short",
+        "display": "bubble"
+	  }
+	]
+  },
+  {
+    "Class": "Sentineldark",
+    "subclass": "Meditation",
+    "counters": [{
+        "name": "Unbreakable Focus",
+        "level": 7,
+        "value": 1,
+        "classLevel": "SentineldarkLevel",
+        "reset": "long",
+        "display": "bubble"
+	  },
+	  {
+        "name": "Turbulent Presence",
+        "level": 13,
+        "value": 1,
+        "classLevel": "SentineldarkLevel",
+        "reset": "long",
+        "display": "bubble"
+	  },
+	  {
+        "name": "Legendary Battle Meditation",
+        "level": 18,
+        "value": 1,
+        "classLevel": "SentineldarkLevel",
+        "reset": "long",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentineldark",
     "subclass": "Synthesis",
-    "counters": []
+    "counters": [{
+        "name": "Force-Empowered Tech",
+        "level": 7,
+        "value": "charismaMod",
+        "classLevel": "SentineldarkLevel",
+        "reset": "short",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentineldark",
     "subclass": "Tenacity",
-    "counters": []
+    "counters": [{
+        "name": "Kinetic Bastion",
+        "level": 18,
+        "value": "charismaMod",
+        "classLevel": "SentineldarkLevel",
+        "reset": "long",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentineldark",
     "subclass": "Withcraft",
-    "counters": []
+    "counters": [{
+        "name": "Nature's Vigor",
+        "level": 7,
+        "value": 1,
+        "classLevel": "SentineldarkLevel",
+        "reset": "short",
+        "display": "bubble"
+	  },
+	  {
+        "name": "Stormcaller",
+        "level": 18,
+        "value": 1,
+        "classLevel": "SentineldarkLevel",
+        "reset": "long",
+        "display": "bubble"
+	  }
+	]
   },
   {
     "Class": "Sentineldark",
