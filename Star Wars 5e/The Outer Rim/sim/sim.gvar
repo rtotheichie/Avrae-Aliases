@@ -195,6 +195,114 @@
     "Tusken Chieftain",
     "Wookiee Engineer",
     "Wyyyschokk"
-    ]
-
+    ],
+  "5":[
+    "1.4 FD P-Tower Turret",
+    "Acklay, Adolescent",
+    "BX Series, BX-5C",
+    "Cliff Wampa",
+    "Dark Side Spirit",
+    "Dianoga, Adult",
+    "Fambaa Howdah",
+    "Forest Nexu, Adult",
+    "Knobby White Spider",
+    "Mistryl Master",
+    "Mob",
+    "Opee Sea Killer",
+    "Rakghoul, Hulking",
+    "Rathtar, Dwarf",
+    "Trooper, Squad"
+    ],
+    "6":[
+      "Bantha, Adult",
+      "Death Trooper",
+      "Ghest",
+      "Gorax",
+      "Hyena-Class Bomber",
+      "Imperial Guard Sentinel",
+      "Kolkpravis Khan",
+      "TX-225 Occupier Tank",
+      "Trandoshan Elite Warrior",
+      "Wookiee Hunter"
+      ],
+    "7":[
+      "Destroyer Droid",
+      "Hssiss",
+      "Lylek",
+      "Melee Destroyer Droid",
+      "Reek, Adult",
+      "Scrange",
+      "Trandoshan Huntmaster",
+      "Vesuvague Tree"
+      ],
+      "8":[
+        "Acklay, Adult",
+        "DF.9 Anti-Infantry Turret",
+        "Dragonsnake",
+        "HK Series, HK-47",
+        "Hutt Wrestler",
+        "Inquisitor Master",
+        "Mistryl Prime",
+        "NR-N99 Persuader-Class Enforcer",
+        "Rancor, Adolescent"
+        ],
+      "9":[
+        "Battle Hydra",
+        "Blastromech Series, BT-1",
+        "Gundark, Alpha",
+        "Imperial Royal Guard",
+        "JK-13 Security Droid",
+        "Kolkpravis Khagan",
+        "Krayt Dragon, Juvenile",
+        "Rathtar",
+        "Terentatek"],
+      "10":[
+        "Cyborg Khagan",
+        "Hutt Crime Lord",
+        "IG Series, Model 88",
+        "Imperial Shadow Guard",
+        "Mole Serpent, Adult",
+        "Riot"],
+      "11":[
+        "AT-ST",
+        "Exogorth, Adolescent",
+        "Imperial Guard Champion"],
+      "12":[
+        "Rancor, Adult"],
+      "13":[
+        "AAT",
+        "Bor Gullet"],
+      "14":[
+        "IG-227 Hailfire-Class Droid",
+        "Inquisitor, Grand",
+        "Swamp Slug",
+        "Trandoshan T'doshok"],
+      "15":[
+        "Exogorth, Adult",
+        "Super Tactical Droid",
+        "Uprising",
+        "Voxyn"],
+      "16":[
+        "Emperor's Hand"],
+      "17":[
+        "Krayt Dragon, Adult"],
+      "18":[
+        "AT-TE"],
+      "19":[
+        "AT-AT",
+        "Rancor, Ancient"],
+      "20":[
+        "Grand Admiral",
+        "War Wyrm"],
+      "21":[
+        "Sarlacc, Adult",
+        "Vessel of Abeloth"],
+      "23":[
+        "Force Storm Eye",
+        "Krayt Dragon, Greater"],
+      "24":[
+        "Dark Lord Spirit"],
+      "25":[
+        "Sando Aqua Monster"],
+      "26":["Manifestation of Abeloth"]
 }
