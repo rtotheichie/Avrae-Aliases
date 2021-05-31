@@ -818,7 +818,15 @@
   {
     "Class": "Engineer",
     "subclass": "Unstable",
-    "counters": []
+    "counters": [{
+      "name": "Modification Slots",
+      "level": 3,
+      "value": [0, 0, 4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9],
+      "display": "bubble",
+      "reset": "long",
+      "classLevel": "EngineerLevel",
+      "desc": "Your tinkercannon come equipped with four overrides, and they gain more at higher levels, as shown in the Modification Slots column of the engineer table. Each time you trigger an Unstable Engineering Surge, you can use an override to reroll the percentile dice. You must use the new result, you can only do this once per surge, and each time you do so in excess of your proficiency bonus (resetting on a long rest) your maximum tech points is reduced by 1 until you complete a long rest. You regain all expended overrides when you complete a long rest."
+    }]
   },
   {
     "Class": "Engineer",
@@ -836,7 +844,16 @@
         "reset": "long",
         "classLevel": "EngineerLevel",
         "desc": "Your mastery of droids improves your ability to manipulate them. When you cast a power that could affect only droids or constructs, and you only affect droids with the power, you can choose to treat the power as if cast at your Max Power Level.\n\nYou can use this feature a number of times equal to your proficiency bonus, as shown in the engineer table. You regain all expended uses when you complete a long rest."
-      }
+      },
+      {
+      "name": "Modification Slots",
+      "level": 3,
+      "value": [0, 0, 4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9],
+      "display": "bubble",
+      "reset": "long",
+      "classLevel": "EngineerLevel",
+      "desc": "Lastly, while bonded and within 10 feet of you, when you would use your action to cast a 1st-level tech power, you can instead have your droid companion cast it. You still expend tech points as normal, and if the power requires concentration, it still uses your concentration. Your droid companion must use its action, and it uses its tech attack modifier and tech save DC instead of your own. At 5th level, your droid can cast 2nd-level tech powers in this way. This increases to 3rd-level powers at 9th level, 4th-level powers at 13th level, and 5th-level powers at 17th level. When you cast a power, you consume a number of uses of this feature equal to that power’s level."
+    }
 	]
   },
   {
@@ -884,7 +901,15 @@
   {
     "Class": "Engineer",
     "subclass": "Construction",
-    "counters": []
+    "counters": [{
+      "name": "Modification Slots",
+      "level": 3,
+      "value": [0, 0, 4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9],
+      "display": "bubble",
+      "reset": "long",
+      "classLevel": "EngineerLevel",
+      "desc": "You can deploy your choice from these structures a combined total of four times, and you gain more uses at higher levels, as shown in the Modification Slots column of the engineer table. Each time you use this feature in excess of your proficiency bonus, your tech point maximum is reduced by 1 until you complete a long rest. You regain all expended uses when you complete a long rest."
+    }]
   },
   {
     "Class": "Engineer",
