@@ -15,7 +15,7 @@ if args:
     lookup = int(args[0])
     surge = gvar[ceil(lookup/2)-1]
     out.append(f'-title "{name} wants to know what a a roll of {lookup} is."')
-    out.append(f'-desc "surge.desc"')
+    out.append(f'-desc "{surge.desc}"')
     return " ".join(out)
 
 surge = gvar[ceil(surgeRoll.total/2)-1]
