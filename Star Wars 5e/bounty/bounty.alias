@@ -1,0 +1,56 @@
+embed <drac2>
+cr = 500
+args = argparse(&ARGS&)
+b = args.last('b')
+if b:
+    if int(b) > 5:
+        b = 5
+    cr = cr*int(b)
+credits = "cr"
+bag = load_json(get('bags', []))
+if not bag:
+    return err(f"You do not have a bag set up.  Make sure you are currently on the correct character and have set up your `{ctx.prefix}bag`.")
+Wallet = [i for i in bag if "Credits" in i][0]
+Wallet = Wallet[1]
+if Wallet.get(credits) < cr:
+    return err("You don't have enough Credits.  You must spend at least 500cr on materials, bribes, gifts, and other expenses.")
+Wallet.update({credits:Wallet[credits] - cr})
+Surv = vroll(f'character().skills.survival.d20()+b')
+compchance = vroll('1d100')
+complication = ''
+if compchance.total <= 10:
+    comproll = vroll('1d6-1')
+    complication = ["Your quarry swears up-and-down that you’ve got the wrong person.",
+                    "Your target manages to escape after you’ve collected your bounty, and they are coming for you.",
+                    "Your target was very valuable to a crime boss, and they’ve sworn to take revenge on you.",
+                    "Your target had connections with an esteemed noble family, and they’re publicly besmirching you.",
+                    "Your target was a high-ranking member of a guild. You’ve earned their ire.",
+                    "Another bounty hunter was also on the hunt. You just barely beat them, and they’re not happy."][comproll.total]
+huntbonus = 25 if Surv.total >= 30 else 20 if Surv.total >= 25 else 15 if Surv.total >= 20 else 10 if Surv.total >= 15 else 5 if Surv.total >= 10 else 0
+huntroll = vroll(f'1d100+{huntbonus}')
+if huntroll.total >= 111:
+    huntresult = str(huntroll) + " You catch a kingpin, resulting in a 10,000 cr bounty and a nickname."
+    Wallet.update({credits:Wallet[credits] + 10000})
+elif huntroll.total >= 101:
+    huntresult = str(huntroll) + " You catch a high-value target, resulting in a 2,500 cr bounty."
+    Wallet.update({credits:Wallet[credits] + 2500})
+elif huntroll.total >= 71:
+    huntresult = str(huntroll) + " You catch your target, resulting in a 1,000 cr bounty."
+    Wallet.update({credits:Wallet[credits] + 1000})
+elif huntroll.total >= 41:
+    huntresult = str(huntroll) + " You fail to catch your target, but stumble across a lesser bounty, earning 500 cr."
+    Wallet.update({credits:Wallet[credits] + 500})
+else:
+    huntresult = str(huntroll) + " You fail to catch your target."
+out = []
+out.append(f'-title "{name} attempts to collect a Bounty, spending {cr} Credits. Roll: {Surv}"')
+out.append(f'-desc "{huntresult}"')
+if complication:
+    out.append(f'-f "They had a bit of a complication...|{complication}"')
+out.append(f'''-f "{name}'s Credits|{Wallet.get(credits)}"''')
+out.append(f'''-footer "{ctx.prefix}{ctx.alias}. May add -b # (1-5) to add to your Survival check (500 credits per bonus added)."''')
+set_cvar("bags", dump_json(bag))
+return " ".join(out)
+</drac2>
+-thumb {{image}}
+-color {{color}}
