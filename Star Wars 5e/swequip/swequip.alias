@@ -56,9 +56,9 @@ if args.get('offhand'):
 if output:
     n = '\n'
     if counter:
-        return f'''embed -title "Use `{ctx.prefix}attack import` and the following code(s) to add a {weapon} to your attacks." -desc """{load_json(dump_json(str(",".join(attacks))))}""" -f "The following counter was created for **{name}**:" -f "{counter}|{character().cc_str(counter)}"'''
+        return f'''embed -title "Use `{ctx.prefix}attack import` and the following code(s) to add a {weapon} to your attacks." -desc """{(",".join(attacks))}""" -f "The following counter was created for **{name}**:" -f "{counter}|{character().cc_str(counter)}"'''
     else:
-        return f'''embed -title "Use `{ctx.prefix}attack import` and the following code(s) to add a {weapon} to your attacks." -desc """{load_json(dump_json(str(",".join(attacks))))}"""'''
+        return f'''embed -title "Use `{ctx.prefix}attack import` and the following code(s) to add a {weapon} to your attacks." -desc """{(",".join(attacks))}"""'''
 else:
     return f'attack import {dump_json(attacks)}'
 </drac2>
