@@ -498,7 +498,7 @@
         "type": "attack",
         "hit": [{
           "type": "damage",
-          "damage": "1d8 [energy]",
+          "damage": "1d8+{dexterityMod} [energy]",
           "overheal": false
         }],
         "miss": [],
