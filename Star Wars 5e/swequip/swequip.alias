@@ -7,7 +7,7 @@ counter = ""
 if output:
     args.remove("output")
 
-if len(args)>1 and "-" not in args[1] and args[1] not in "offhandnoprof":
+if len(args)>1 and "-" not in args[1] and args[1] not in "offhandnoprofdouble":
     weapon = " ".join([args[0], args[1]])
 else:
     weapon = args[0]
@@ -52,6 +52,10 @@ if args.get('noprof'):
 if args.get('offhand'):
     if "light" in str(attacks[0].automation[1].get("text")).lower():
         attacks.append(load_json(dump_json(attacks[0]).replace('"name": "', '"name": "Offhand ').replace('+{dexterityMod}','').replace('+{strengthMod}', '')))
+
+if args.get('double'):
+    if "double" in str(attacks[0].automation[1].get("text")).lower():
+        attacks.append(load_json(dump_json(attacks[0]).replace('"name": "', '"name": "Double ').replace('+{dexterityMod}','').replace('+{strengthMod}', '')))    
 
 if output:
     n = '\n'
