@@ -1085,6 +1085,32 @@
     }],
     "_v": 2
   }, {
+    "name": "Needler",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d4+{dexterityMod} [kinetic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Needler",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 40/160), Rapid 10, Reload 20, Special\n\nThe needler includes a specialized compartment for poison. One dose of poison, when installed in this compartment, retains its potency for 1 hour before drying. One dose of poison is effective for the next 10 shots fired by the weapon."
+    }],
+    "_v": 2
+  }, {
     "name": "Rapid - Needler",
     "automation": [{
       "type": "target",
@@ -1106,35 +1132,9 @@
     }, {
       "type": "counter",
       "counter": "Needler",
-      "amount": "1",
+      "amount": "10",
       "allowOverflow": false,
       "errorBehaviour": "raise"
-    }],
-    "_v": 2
-  }, {
-    "name": "Needler",
-    "automation": [{
-      "type": "target",
-      "target": "each",
-      "effects": [{
-        "type": "attack",
-        "hit": [{
-          "type": "damage",
-          "damage": "1d4+{dexterityMod} [kinetic]",
-          "overheal": false
-        }],
-        "miss": [],
-        "attackBonus": "proficiencyBonus+dexterityMod"
-      }, {
-        "type": "counter",
-        "counter": "Needler",
-        "amount": "10",
-        "allowOverflow": false,
-        "errorBehaviour": "raise"
-      }]
-    }, {
-      "type": "text",
-      "text": "Ammunition (range 40/160), Rapid 10, Reload 20, Special\n\nThe needler includes a specialized compartment for poison. One dose of poison, when installed in this compartment, retains its potency for 1 hour before drying. One dose of poison is effective for the next 10 shots fired by the weapon."
     }],
     "_v": 2
   }, {
@@ -1151,14 +1151,14 @@
           "effects": "",
           "end": false,
           "conc": false,
-          "desc": "A Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on formless or Huge or larger creatures. A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. The net has an AC of 10, 5 hit points, and immunity to all damage not dealt by melee weapons. Destroying the net frees the creature without harming it and immediately ends the net’s effects. While a creature is restrained by a net, you c"
+          "desc": "A Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on formless or Huge or larger creatures. A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. The net has an AC of 10, 5 hit points, and immunity to all damage not dealt by melee weapons. Destroying the net frees the creature without harming it and immediately ends the net’s effects. While a creature is restrained by a net, you can make no further attacks with it."
         }],
         "miss": [],
         "attackBonus": "proficiencyBonus+max(strengthMod,dexterityMod)"
       }]
     }, {
       "type": "text",
-      "text": "Light, finesse, special, thrown (range 15)\nA Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on formless or Huge or larger creatures. A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. The net has an AC of 10, 5 hit points, and immunity to all damage not dealt by melee weapons. Destroying the net frees the creature without harming it and immediately ends the net’s effects. While a creature is restrained by a net, you can make no further attacks with it."
+      "text": "Light, finesse, special, thrown (range 15)\n\nA Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on formless or Huge or larger creatures. A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. The net has an AC of 10, 5 hit points, and immunity to all damage not dealt by melee weapons. Destroying the net frees the creature without harming it and immediately ends the net’s effects. While a creature is restrained by a net, you can make no further attacks with it."
     }],
     "_v": 2
   }, {
@@ -1838,7 +1838,7 @@
       }]
     }, {
       "type": "text",
-      "text": "Reach, special\nYou have disadvantage when you use a vibrolance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren’t mounted."
+      "text": "Reach, special\n\nYou have disadvantage when you use a vibrolance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren’t mounted."
     }],
     "_v": 2,
     "proper": false,
@@ -2047,7 +2047,7 @@
       }]
     }, {
       "type": "text",
-      "text": "*Dart.*  This wrist launcher ammunition deals 1d6 kinetic damage on a hit.\n\nAmmunition (range 30/120), fixed, reload 1, special\nRather than traditional power cells, the wrist launcher fires specialized projectiles in the form of darts, small missiles, or specialized canisters."
+      "text": "*Dart.*  This wrist launcher ammunition deals 1d6 kinetic damage on a hit.\n\nAmmunition (range 30/120), fixed, reload 1, special\n\nRather than traditional power cells, the wrist launcher fires specialized projectiles in the form of darts, small missiles, or specialized canisters."
     }],
     "_v": 2,
     "proper": false,
@@ -2078,17 +2078,17 @@
         "stat": "dex",
         "fail": [{
           "type": "damage",
-          "damage": "{{damage}}+{dexterityMod} [kinetic]"
+          "damage": "{{damage}} [kinetic]"
         }],
         "success": [{
           "type": "damage",
-          "damage": "({{damage}}+{dexterityMod})/2 [kinetic]"
+          "damage": "({{damage}})/2 [kinetic]"
         }],
         "dc": "14"
       }]
     }, {
       "type": "text",
-      "text": "*Missile, Fragmentation.*  This wrist launcher ammunition deals 1d6 kinetic damage on a hit. Additionally, hit or miss, the missile then explodes. The target and each creature within 5 feet must make a DC 14 Dexterity saving throw, taking 1d10 kinetic damage on a failed save or half as much on a successful one.\n\nAmmunition (range 30/120), fixed, reload 1, special\nRather than traditional power cells, the wrist launcher fires specialized projectiles in the form of darts, small missiles, or specialized canisters."
+      "text": "*Missile, Fragmentation.*  This wrist launcher ammunition deals 1d6 kinetic damage on a hit. Additionally, hit or miss, the missile then explodes. The target and each creature within 5 feet must make a DC 14 Dexterity saving throw, taking 1d10 kinetic damage on a failed save or half as much on a successful one.\n\nAmmunition (range 30/120), fixed, reload 1, special\n\nRather than traditional power cells, the wrist launcher fires specialized projectiles in the form of darts, small missiles, or specialized canisters."
     }],
     "_v": 2,
     "proper": false,
@@ -2107,7 +2107,7 @@
         "stat": "con",
         "fail": [{
           "type": "damage",
-          "damage": "{damage}+{dexterityMod} [cold]"
+          "damage": "{damage} [cold]"
         }, {
           "type": "ieffect",
           "name": "Slowed",
@@ -2118,13 +2118,13 @@
         }],
         "success": [{
           "type": "damage",
-          "damage": "({damage}+{dexterityMod})/2 [cold]"
+          "damage": "({damage})/2 [cold]"
         }],
         "dc": "14"
       }]
     }, {
       "type": "text",
-      "text": "*Projector Canister, Cryo.*  When triggered, this wrist launcher ammunition produces a beam of carbonite energy in a line 15 feet long and 5 feet wide or a 15-foot cone. A single fuel canister holds enough fuel for three attacks in a line or a single attack in a cone. Each creature must make a DC 14 Constitution saving throw. On a failed save, a creature takes 1d4 cold damage and gains 1 slowed level until the end of your next turn. On a successful save, a creature takes half damage and isn’t slowed. If this damage reduces a creature to 0 hit points, that creature is frozen in carbonite for 1 hour. If you lack proficiency in the wrist launcher, you must roll the damage dice twice and take the lesser total.\n\nAmmunition (range 30/120), fixed, reload 1, special\nRather than traditional power cells, the wrist launcher fires specialized projectiles in the form of darts, small missiles, or specialized canisters."
+      "text": "*Projector Canister, Cryo.*  When triggered, this wrist launcher ammunition produces a beam of carbonite energy in a line 15 feet long and 5 feet wide or a 15-foot cone. A single fuel canister holds enough fuel for three attacks in a line or a single attack in a cone. Each creature must make a DC 14 Constitution saving throw. On a failed save, a creature takes 1d4 cold damage and gains 1 slowed level until the end of your next turn. On a successful save, a creature takes half damage and isn’t slowed. If this damage reduces a creature to 0 hit points, that creature is frozen in carbonite for 1 hour. If you lack proficiency in the wrist launcher, you must roll the damage dice twice and take the lesser total.\n\nAmmunition (range 30/120), fixed, reload 1, special\n\nRather than traditional power cells, the wrist launcher fires specialized projectiles in the form of darts, small missiles, or specialized canisters."
     }],
     "_v": 2,
     "proper": false,
@@ -2143,17 +2143,17 @@
         "stat": "dex",
         "fail": [{
           "type": "damage",
-          "damage": "{damage}+{dexterityMod} [fire]"
+          "damage": "{damage} [fire]"
         }],
         "success": [{
           "type": "damage",
-          "damage": "({damage}+{dexterityMod})/2 [fire]"
+          "damage": "({damage})/2 [fire]"
         }],
         "dc": "14"
       }]
     }, {
       "type": "text",
-      "text": "*Projector Canister, Incendiary.*  When triggered, this wrist launcher ammunition produces a burst of flame in a line 15 feet long and 5 feet wide or a 15-foot cone. A single fuel canister holds enough fuel for three attacks in a line or a single attack in a cone. Each creature must make a DC 14 Dexterity saving throw, taking 1d8 fire damage or half as much on a successful one. The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried. If you lack proficiency in the wrist launcher, you must roll the damage dice twice and take the lesser total.\n\nAmmunition (range 30/120), fixed, reload 1, special\nRather than traditional power cells, the wrist launcher fires specialized projectiles in the form of darts, small missiles, or specialized canisters."
+      "text": "*Projector Canister, Incendiary.*  When triggered, this wrist launcher ammunition produces a burst of flame in a line 15 feet long and 5 feet wide or a 15-foot cone. A single fuel canister holds enough fuel for three attacks in a line or a single attack in a cone. Each creature must make a DC 14 Dexterity saving throw, taking 1d8 fire damage or half as much on a successful one. The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried. If you lack proficiency in the wrist launcher, you must roll the damage dice twice and take the lesser total.\n\nAmmunition (range 30/120), fixed, reload 1, special\n\nRather than traditional power cells, the wrist launcher fires specialized projectiles in the form of darts, small missiles, or specialized canisters."
     }],
     "_v": 2,
     "proper": false,
@@ -2186,6 +2186,364 @@
     "proper": false,
     "verb": null
   },
+  {
+    "name": "ARC Caster",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d8+{dexterityMod} [lightning]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "ARC Caster",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 30/120), Burst 4, Rapid 2, Reload 4, Special, Strength 11, Two-handed\n\nWhen you score a critical hit with this weapon, a creature becomes shocked until the end of its next turn."
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Burst - ARC Caster",
+    "automation": [{
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "1d8+{dexterityMod} [lightning]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 30/120), Burst 4, Rapid 2, Reload 4, Special, Strength 11, Two-handed"
+    }, {
+      "type": "counter",
+      "counter": "ARC Caster",
+      "amount": "4",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Rapid - ARC Caster",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "2d8+{dexterityMod} [lightning]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 30/120), Burst 4, Rapid 2, Reload 4, Special, Strength 11, Two-handed"
+    }, {
+      "type": "counter",
+      "counter": "ARC Caster",
+      "amount": "2",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Burst - BKG",
+    "automation": [{
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "3d4+{dexterityMod} [fire]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 120/480), Auto, Burst 2, Disintegrate 13, Reload 2, Strength 19, Two-handed"
+    }, {
+      "type": "counter",
+      "counter": "BKG",
+      "amount": "2",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
+    }],
+    "_v": 2
+  },
+    {
+    "name": "Rifle - Bo-Rifle",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d8+{dexterityMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Bo-Rifle",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Special, Two-Handed\n\nThe bo-rifle is a lasat weapon most commonly carried by the Honor Guard of Lasan, which has the unique property of functioning as both a rifle and a staff. On your turn, you can use your object interaction to switch between modes, detailed below.\n\n*Rifle. While in this mode, the weapon uses traditional power cells.\n\n*Staff.* While in this mode, the weapon gains the shocking 13 property.\n\n*Rifle:* 1d8 Energy, Ammunition (100/400), Reload 6\n\n*Staff:* 1d8 Kinetic, Double (1d8 kinetic), Shocking 13"
+    }],
+    "_v": 2
+  },
+    {
+    "name": "Staff - Bo-Rifle",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d8+{strengthMod} [kinetic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }, {
+          "type": "save",
+          "meta": [],
+          "stat": "dex",
+          "fail": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "1d4[lightning]",
+            "overheal": false
+          }, {
+            "type": "text",
+            "meta": [],
+            "text": "When you hit a creature with a weapon with the shocking property, you can force it to make a Dexterity saving throw, DC equal to the sonorous number. On a failed save, the creature takes an additional 1d4 lightning damage and becomes shocked until the end of its next turn."
+          }],
+          "success": [],
+          "dc": "13"
+        }
+	  ]
+    }, {
+      "type": "text",
+      "text": "Special, Two-Handed\n\nThe bo-rifle is a lasat weapon most commonly carried by the Honor Guard of Lasan, which has the unique property of functioning as both a rifle and a staff. On your turn, you can use your object interaction to switch between modes, detailed below.\n\n*Rifle. While in this mode, the weapon uses traditional power cells.\n\n*Staff.* While in this mode, the weapon gains the shocking 13 property.\n\n*Rifle:* 1d8 Energy, Ammunition (100/400), Reload 6\n\n*Staff:* 1d8 Kinetic, Double (1d8 kinetic), Shocking 13"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Bolas",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "ieffect",
+          "name": "Restrained (Bolas)",
+          "duration": "-1",
+          "effects": "",
+          "end": false,
+          "conc": false,
+          "desc": "A Large or smaller creature hit by a bolas is restrained until it is freed. A bolas has no effect on formless or Huge or larger creatures. A creature can use its action to make a DC 13 Dexterity check, freeing itself or another creature within its reach on a success. The bolas has an AC of 10, 5 hit points, and immunity to all damage not dealt by melee weapons. Destroying the bolas frees the creature without harming it and immediately ends the bolas’s effects. While a creature is restrained by a bolas, you can make no further attacks with it.\n\nDue to their unwieldy nature, bolas make ineffective melee weapons. Melee attack rolls made with them are made at disadvantage."
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Light, Special, Thrown (range 20/60)\n\nA Large or smaller creature hit by a bolas is restrained until it is freed. A bolas has no effect on formless or Huge or larger creatures. A creature can use its action to make a DC 13 Dexterity check, freeing itself or another creature within its reach on a success. The bolas has an AC of 10, 5 hit points, and immunity to all damage not dealt by melee weapons. Destroying the bolas frees the creature without harming it and immediately ends the bolas’s effects. While a creature is restrained by a bolas, you can make no further attacks with it.\n\nDue to their unwieldy nature, bolas make ineffective melee weapons. Melee attack rolls made with them are made at disadvantage."
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Bolt-Thrower",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d10+{dexterityMod} [kinetic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Bolt-Thrower",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 100/400), Reload 2, Silent, Strength 11, Two-handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Canesaber",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d6+{max(strengthMod,dexterityMod)} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+max(strengthMod,dexterityMod)"
+      }]
+    }, {
+      "type": "text",
+      "text": "Disguised, Finesse, Luminous"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Chained Dagger",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d6+{max(strengthMod,dexterityMod)} [kinetic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+max(strengthMod,dexterityMod)"
+      }]
+    }, {
+      "type": "text",
+      "text": "Disarming, Finesse, Reach, Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Chained Lightdagger",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d6+{max(strengthMod,dexterityMod)} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+max(strengthMod,dexterityMod)"
+      }]
+    }, {
+      "type": "text",
+      "text": "Disarming, Finesse, Luminous, Reach, Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Claymore Saber",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "3d4+strengthMod [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Dexterity 13, Luminous, Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Crossguard Saber",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d8+strengthMod+{{max(strengthMod//2,1)}} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Defensive 1, Dexterity 13, Heavy, Luminous, Versatile(1d10)"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Two-Handed Crossguard Saber",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d10+strengthMod+{{max(strengthMod//2,1)}} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Defensive 1, Dexterity 13, Heavy, Luminous, Versatile(1d10)"
+    }],
+    "_v": 2
+  },
+  
+  
+  
+  
   {
     "name": "Echostaff",
     "automation": [{
