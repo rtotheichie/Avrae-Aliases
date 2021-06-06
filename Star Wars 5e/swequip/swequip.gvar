@@ -2298,7 +2298,7 @@
     "_v": 2
   },
     {
-    "name": "Rifle - Bo-Rifle",
+    "name": "Bo-Rifle - Rifle",
     "automation": [{
       "type": "target",
       "target": "each",
@@ -2325,7 +2325,7 @@
     "_v": 2
   },
     {
-    "name": "Staff - Bo-Rifle",
+    "name": "Bo-Rifle - Staff",
     "automation": [{
       "type": "target",
       "target": "each",
