@@ -14,5 +14,6 @@ __Available Arguments__
 `-criton` allows you to set a different natural dice roll that scores a critical hit
 `noprof` removes the proficiency bonus from an attack bonus
 `offhand` removes the ability mod from your damage roll and adds an attack called "Offhand ..." for Two-Weapon Fighting
+`double` removes the ability mod from your damage roll and adds an attack called "Double ..." for Double-Weapon Fighting
 `output` returns the JSON code for the attacks so you can modify it and use `!attack import <code>` to add it manually.
 *Note:* Make sure you input any desired arguments *after* the weapon name
