@@ -3065,7 +3065,7 @@
     "_v": 2,"criton":19
   },
   {
-    "name": "Blaster - IWS",
+    "name": "IWS - Blaster",
     "automation": [{
       "type": "target",
       "target": "each",
@@ -3080,7 +3080,7 @@
         "attackBonus": "proficiencyBonus+dexterityMod"
       }, {
         "type": "counter",
-        "counter": "Blaster - IWS",
+        "counter": "IWS - Blaster",
         "amount": "1",
         "allowOverflow": false,
         "errorBehaviour": "raise"
@@ -3092,7 +3092,7 @@
     "_v": 2
   },
   {
-    "name": "Sniper - IWS",
+    "name": "IWS - Sniper",
     "automation": [{
       "type": "target",
       "target": "each",
@@ -3107,7 +3107,7 @@
         "attackBonus": "proficiencyBonus+dexterityMod"
       }, {
         "type": "counter",
-        "counter": "Sniper - IWS",
+        "counter": "IWS - Sniper",
         "amount": "1",
         "allowOverflow": false,
         "errorBehaviour": "raise"
