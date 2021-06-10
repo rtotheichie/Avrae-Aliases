@@ -3262,6 +3262,1083 @@
     }],
     "_v": 2
   }, 
+  {
+    "name": "Mancatcher",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d8+{strengthMod} [kinetic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Reach, Special, Two-Handed\n\nWhen you would make a Strength (Athletics) check to attempt to grapple a creature while wielding a weapon with the grappling property, you can instead make a melee weapon attack with it. If the attack hits, the creature becomes grappled by you, and it takes damage equal to your Strength modifier of the same type as the weapon’s damage."
+    }],
+    "_v": 2
+  }, 
+  {
+    "name": "Nervebaton",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d6+{strengthMod} [kinetic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }, {
+          "type": "save",
+          "meta": [],
+          "stat": "wis",
+          "fail": [{
+            "type": "damage",
+            "meta": [],
+            "damage": "1d4[psychic]",
+            "overheal": false
+          }, {
+            "type": "text",
+            "meta": [],
+            "text": "When you hit a creature with a weapon with the neuralizing property, you can force it to make a Wisdom saving throw, DC equal to the neuralizing number. On a failed save, the creature takes an additional 1d4 psychic damage and becomes frightened of you until the start of its next turn."
+          }],
+          "success": [],
+          "dc": "13"
+        }
+	  ]
+    }, {
+      "type": "text",
+      "text": "Disruptive, Neuralizing 13"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Nightstinger Rifle",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d12+{dexterityMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Nightstinger Rifle",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 120/480), Silent, Reload 2, Strength 13, Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Railgun",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "2d6+{dexterityMod} [kinetic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Railgun",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 150/600), Piercing 1, Reload 1, Strength 15, Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Retrosaber",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "2d4+{strengthMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }, {
+        "type": "counter",
+        "counter": "Retrosaber",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Keen 1, Luminous, Special, Vicious 1\n\nThe retrosaber is an ancient type of lightweapon that requires a power cell to function. Once four attacks have been made with a retrosaber, a character must replace the power cell using an action or bonus action (the character’s choice). You must have one free hand to replace the power cell."
+    }],
+    "_v": 2,"criton":19
+  },
+  {
+    "name": "Rocket, Fragmentation - Rocket Launcher",
+    "automation": [{
+      "type": "target",
+      "target": 1,
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "2d6+{dexterityMod} [kinetic]"
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "roll",
+        "dice": "2d10",
+        "name": "damage"
+      }, {
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "{{damage}} [kinetic]"
+        }],
+        "success": [{
+          "type": "damage",
+          "damage": "({{damage}})/2 [kinetic]"
+        }],
+        "dc": "14"
+      }]
+    }, {
+      "type": "text",
+      "text": "*Rocket, Fragmentation.*  This rocket launcher ammunition deals 2d6 kinetic damage on a hit. Additionally, hit or miss, the rocket then explodes. The target and each creature within 15 feet must make a DC 14 Dexterity saving throw, taking 2d10 kinetic damage on a failed save or half as much on a successful one.\n\nAmmunition (range 100/120), Reload 1, Special, Strength 13, Two-Handed\n\nRather than traditional power cells, the rocket launcher fires specialized projectiles in the form of rockets. When firing a rocket at long range, or if you don’t meet the rocket launcher’s strength requirement, creatures within the radius of the rocket’s explosion have advantage on the saving throw."
+    }],
+    "_v": 2,
+  },
+  {
+    "name": "Rocket, Incendiary - Rocket Launcher",
+    "automation": [{
+      "type": "target",
+      "target": 1,
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "2d6+{dexterityMod} [kinetic]"
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "roll",
+        "dice": "2d8",
+        "name": "damage"
+      }, {
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "{{damage}} [fire]"
+        }],
+        "success": [{
+          "type": "damage",
+          "damage": "({{damage}})/2 [fire]"
+        }],
+        "dc": "14"
+      }]
+    }, {
+      "type": "text",
+      "text": "*Rocket, Incendiary.*  This rocket launcher ammunition deals 2d6 kinetic damage on a hit. Additionally, hit or miss, the rocket then explodes, setting the ground beneath it in a 15 foot radius ablaze for 1 minute. When a creature enters the fire or starts its turn there it must make a DC 14 Dexterity saving throw. On a failed save, the creature takes 2d8 fire damage or half as much on a successful one. A construct makes this save with disadvantage.\n\nAmmunition (range 100/120), Reload 1, Special, Strength 13, Two-Handed\n\nRather than traditional power cells, the rocket launcher fires specialized projectiles in the form of rockets. When firing a rocket at long range, or if you don’t meet the rocket launcher’s strength requirement, creatures within the radius of the rocket’s explosion have advantage on the saving throw."
+    }],
+    "_v": 2,
+  },
+  {
+    "name": "Rocket, Ion - Rocket Launcher",
+    "automation": [{
+      "type": "target",
+      "target": 1,
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "2d6+{dexterityMod} [kinetic]"
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "roll",
+        "dice": "2d6",
+        "name": "damage"
+      }, {
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "{{damage}} [ion]"
+        }],
+        "success": [{
+          "type": "damage",
+          "damage": "({{damage}})/2 [ion]"
+        }],
+        "dc": "14"
+      }]
+    }, {
+      "type": "text",
+      "text": "*Rocket, Ion.*  This rocket launcher ammunition deals 2d6 kinetic damage on a hit. Additionally, hit or miss, the rocket then explodes. The target and each creature within 15 feet must make a DC 14 Dexterity saving throw, taking 2d6 ion damage on a failed save or half as much on a successful one. Any electronics within the blast radius that aren’t being worn or carried are disabled until rebooted.\n\nAmmunition (range 100/120), Reload 1, Special, Strength 13, Two-Handed\n\nRather than traditional power cells, the rocket launcher fires specialized projectiles in the form of rockets. When firing a rocket at long range, or if you don’t meet the rocket launcher’s strength requirement, creatures within the radius of the rocket’s explosion have advantage on the saving throw."
+    }],
+    "_v": 2,
+  },
+  {
+    "name": "Burst - Rotary Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "2d6+{dexterityMod} [energy]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 100/400), Auto, Burst, Rapid. Special, Strength 19, Two-handed\n\nRather than traditional power cells, the rotary cannon uses specialized power generator that allow it to fire continuously for 10 minutes. Replacing a power generator takes an action.\n\nThe rotary cannon requires the use of a tripod unless you meet its strength requirement, which is included in the price. Over the course of 1 minute, you can deploy or collapse the rotary cannon on the tripod. While deployed, your speed is reduced to 0."
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Rapid - Rotary Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "4d6+{dexterityMod} [energy]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 100/400), Auto, Burst, Rapid. Special, Strength 19, Two-handed\n\nRather than traditional power cells, the rotary cannon uses specialized power generator that allow it to fire continuously for 10 minutes. Replacing a power generator takes an action.\n\nThe rotary cannon requires the use of a tripod unless you meet its strength requirement, which is included in the price. Over the course of 1 minute, you can deploy or collapse the rotary cannon on the tripod. While deployed, your speed is reduced to 0."
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Saberaxe",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d8+{strengthMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Brutal 1"
+    }],
+    "_v": 2,"extra_crit_damage": "{1d8}"'
+  }, 
+  {
+    "name": "Shatter Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d10+{dexterityMod} [kinetic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Shatter Cannon",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Silent, Strength 15, Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Burst - Shatter Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "1d10+{dexterityMod} [kinetic]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Silent, Strength 15, Two-handed"
+    }, {
+      "type": "counter",
+      "counter": "Shatter Cannon",
+      "amount": "4",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Shatter Pistol",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d4+{dexterityMod} [kinetic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Shatter Pistol",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 40/160), Light, Reload 20, Silent"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Shatter Rifle",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d10+{dexterityMod} [kinetic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Shatter Rifle",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 120/480), Reload 2, Silent, Strength 13, Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Shoulder Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d8+2 [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "4"
+      }, {
+        "type": "counter",
+        "counter": "Shoulder Cannon",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 60/240), Autotarget(15, +2) Burst 4, Reload 4, Special\n\nMounted by the shoulder slot, a shoulder cannon does not require a free hand to use. Additionally, you have advantage on Strength ability checks and saving throws to avoid being disarmed of this weapon."
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Burst - Shoulder Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "1d8+2 [energy]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "12"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 60/240), Autotarget(15, +2) Burst 4, Reload 4, Special\n\nMounted by the shoulder slot, a shoulder cannon does not require a free hand to use. Additionally, you have advantage on Strength ability checks and saving throws to avoid being disarmed of this weapon."
+    }, {
+      "type": "counter",
+      "counter": "Shoulder Cannon",
+      "amount": "4",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Sith Saber",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d8+{strengthMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Dexterity 11, Hidden, Keen 1, Luminous, Versatile(1d10)"
+    }],
+    "_v": 2,"criton":19
+  },
+  {
+    "name": "Two-Handed Sith Saber",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d10+{strengthMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+strengthMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Dexterity 11, Hidden, Keen 1, Luminous, Versatile(1d10)"
+    }],
+    "_v": 2,"criton":19
+  },
+  {
+    "name": "Sonic Pistol",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d6+{dexterityMod} [sonic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Sonic Pistol",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 40/160), Reload 12"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Sonic Rifle",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d8+{dexterityMod} [sonic]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Sonic Rifle",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 100/400), Reload 12, Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Switch Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d10+{dexterityMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Cannon",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Switch(2d4 acid/cold/fire/lightning), Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Burst - Switch Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "1d10+{dexterityMod} [energy]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Switch(2d4 acid/cold/fire/lightning), Two-handed"
+    }, {
+      "type": "counter",
+      "counter": "Switch Cannon",
+      "amount": "4",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Acid - Switch Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "2d4+{dexterityMod} [acid]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Cannon",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Switch(2d4 acid/cold/fire/lightning), Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Acid, Burst - Switch Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "2d4+{dexterityMod} [acid]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Switch(2d4 acid/cold/fire/lightning), Two-handed"
+    }, {
+      "type": "counter",
+      "counter": "Switch Cannon",
+      "amount": "4",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Cold - Switch Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "2d4+{dexterityMod} [cold]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Cannon",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Switch(2d4 acid/cold/fire/lightning), Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Cold, Burst - Switch Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "2d4+{dexterityMod} [cold]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Switch(2d4 acid/cold/fire/lightning), Two-handed"
+    }, {
+      "type": "counter",
+      "counter": "Switch Cannon",
+      "amount": "4",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Fire - Switch Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "2d4+{dexterityMod} [fire]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Cannon",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Switch(2d4 acid/cold/fire/lightning), Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Fire, Burst - Switch Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "2d4+{dexterityMod} [fire]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Switch(2d4 acid/cold/fire/lightning), Two-handed"
+    }, {
+      "type": "counter",
+      "counter": "Switch Cannon",
+      "amount": "4",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Lightning - Switch Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "2d4+{dexterityMod} [lightning]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Cannon",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Switch(2d4 acid/cold/fire/lightning), Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Lightning, Burst - Switch Cannon",
+    "automation": [{
+      "type": "target",
+      "target": "all",
+      "effects": [{
+        "type": "save",
+        "stat": "dex",
+        "fail": [{
+          "type": "damage",
+          "damage": "2d4+{dexterityMod} [lightning]",
+          "overheal": false
+        }],
+        "success": [],
+        "dc": "8+proficiencyBonus+dexterityMod"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 80/320), Burst 4, Reload 8, Strength 11, Switch(2d4 acid/cold/fire/lightning), Two-handed"
+    }, {
+      "type": "counter",
+      "counter": "Switch Cannon",
+      "amount": "4",
+      "allowOverflow": false,
+      "errorBehaviour": "raise"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Switch Carbine",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d6+{dexterityMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Carbine",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 60/240), Reload 12, Switch(1d4 acid), Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Acid - Switch Carbine",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d4+{dexterityMod} [acid]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Carbine",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 60/240), Reload 12, Switch(1d4 acid), Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Switch Pistol",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d6+{dexterityMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Pistol",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 40/160), Light, Reload 12, Switch(1d4 fire)"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Fire - Switch Pistol",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d4+{dexterityMod} [fire]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Pistol",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 40/160), Light, Reload 12, Switch(1d4 fire)"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Switch Rifle",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d8+{dexterityMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Rifle",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 60/240), Reload 8, Switch(1d6 lightning), Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Lightning - Switch Rifle",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d6+{dexterityMod} [lightning]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Rifle",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 60/240), Reload 8, Switch(1d6 lightning), Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Switch Sniper",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d12+{dexterityMod} [energy]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Sniper",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 120/480), Reload 2, Strength 13, Switch(1d10 cold), Two-Handed"
+    }],
+    "_v": 2
+  },
+  {
+    "name": "Cold - Switch Sniper",
+    "automation": [{
+      "type": "target",
+      "target": "each",
+      "effects": [{
+        "type": "attack",
+        "hit": [{
+          "type": "damage",
+          "damage": "1d10+{dexterityMod} [cold]",
+          "overheal": false
+        }],
+        "miss": [],
+        "attackBonus": "proficiencyBonus+dexterityMod"
+      }, {
+        "type": "counter",
+        "counter": "Switch Sniper",
+        "amount": "1",
+        "allowOverflow": false,
+        "errorBehaviour": "raise"
+      }]
+    }, {
+      "type": "text",
+      "text": "Ammunition (range 120/480), Reload 2, Strength 13, Switch(1d10 cold), Two-Handed"
+    }],
+    "_v": 2
+  },
+  
   
   
   {
