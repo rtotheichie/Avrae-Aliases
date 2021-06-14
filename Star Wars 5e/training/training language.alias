@@ -13,7 +13,10 @@ if not args:
 	langlist = []
 	for x in Progress.language:
 		langlist.append(f'''{x}: {Progress.language.get(x)}''')
+	if not langlist:
+		langlist.append("None")
 	out.append(f'''-f "Language Progress|{n.join(langlist)}"''')
+	out.append(f'''-footer '{ctx.prefix}{ctx.alias} "<language>" to practice a new language' ''')
 	return f'''embed {" ".join(out)}'''
 
 bag = load_json(get('bags', []))
