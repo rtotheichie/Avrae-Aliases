@@ -1,0 +1,78 @@
+<drac2>
+ch = character()
+out = []
+args = &ARGS&
+n = "\n"
+a = argparse(args)
+gvar = get_gvar("538cd48b-90d4-49ba-8fd8-d121059469f6")
+ch.set_cvar_nx("trainingProgress", dump_json({"language":{}, "weapon":{}, "skillPro":{}, "skillExp":{}, "feat":{}, "toolPro": {}, "toolExp": {}}))
+Progress = load_json(get("trainingProgress", {}))
+if not args:
+	out.append(f'''-title "{name} would like to check their language learning progress."''')
+	out.append(f'''-desc "Learning a new language takes 10 workweeks and costs 250 cr per workweek. During resolution, training in a language calls for an Intelligence check. If you are proficient in that saving throw, you add your proficiency bonus to the roll."''')
+	langlist = []
+	for x in Progress.language:
+		langlist.append(f'''{x}: {Progress.language.get(x)}''')
+	out.append(f'''-f "Language Progress|{n.join(langlist)}"''')
+	return f'''embed {" ".join(out)}'''
+
+bag = load_json(get('bags', []))
+if not bag:
+    return err(f"You do not have a bag set up.  Make sure you are currently on the correct character and have set up your `{ctx.prefix}bag`.")
+Wallet = [i for i in bag if "Credits" in i][0]
+Wallet = Wallet[1]
+if Wallet.get(credits) < 250:
+    return err("You don't have enough Credits.  You must spend at least 250cr for a teacher willing and capable of training you.")
+Wallet.update({credits:Wallet[credits] - 250})
+ch.set_cvar("bags", dump_json(bag))
+
+practiceTopic = args[0].title()
+if practiceTopic not in gvar.language:
+	return err(f'''{practiceTopic} is not one of the available languages.  Make sure you spelled it right and try again.''')
+if practiceTopic not in Progress.language:
+	ww = 0
+else:
+	ww = Progress.language.get(practiceTopic)
+out.append(f'''-title "{name} is trying to learn {practiceTopic}"''')
+intCheck = vroll(ch.skills.get("intelligence").d20(a.adv(boolwsie=True)))
+mod = 25 if intCheck.total >= 30 else 20 if intCheck.total >= 25 else 15 if intCheck.total >= 20 else 10 if intCheck.total >= 15 else 5 if intCheck.total >= 10 else 0
+trainingCheck = vroll(f'1d100 + {mod}')
+if trainingCheck.total >= 111:
+	resultText = str(trainingCheck) + "Your training is masterful, advancing four workweeks towards completion."
+	ww += 4
+elif trainingCheck.total >= 101:
+	resultText = str(trainingCheck) + "Your training is excellent, advancing three workweeks towards completion."
+	ww += 3
+elif trainingCheck.total >= 71:
+	resultText = str(trainingCheck) + "Your training has a breakthrough, advancing two workweeks towards completion."
+	ww += 2
+elif trainingCheck.total >= 41:
+	resultText = str(trainingCheck) + "Your training is adequate, advancing one workweek towards completion."
+	ww += 1
+else:
+	resultText = str(trainingCheck) + "Your training falters, advancing only half a workweek towards completion."
+	ww += 0.5
+if ww >= 10:
+	Progress.language.remove(practiceTopic)
+	resultText += f" **You completed your training!** Make sure to add your proficiency in {practiceTopic} to your sheet."
+else:
+	if int(ww) % 5 == 0 or trainingCheck.total <= 40:
+		compchance = vroll('1d100')
+	complication = ''
+	if compchance.total <= 10:
+    	comproll = vroll('1d6-1')
+    	complication = ["Your earn the ire of another of the teacher’s students.",
+                    "Your teacher instructs you in rare, archaic methods, which draw comments from others.",
+                    "Your teacher is a spy sent to learn your plans.",
+                    "Your teacher is a wanted criminal.",
+                    "Your teacher is a cruel taskmaster.",
+                    "Your teacher asks for help dealing with a threat."][comproll.total]
+	if complication:
+		out.append(f'-f "They had a bit of a complication...|{complication}"')
+    out.append(f'''-f "{practiceTopic} Progress|{ww} workweeks"''')
+    Progress.language.update({practiceTopic:ww})
+ch.set_cvar("trainingProgress", dump_json(Progress))
+out.append(f'''-f "{name}'s Credits|{Wallet.get(credits)}"''')
+return f'''embed {" ".join(out)}'''
+</drac2>
+-thumb {{image}} -color {{color}}
