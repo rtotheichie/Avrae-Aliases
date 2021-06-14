@@ -45,7 +45,7 @@ if typeof(Check) == "SafeList":
 else:
 	Check = vroll(f'{character().skills[Check].d20(a.adv(boolwise=True))}')
 mod = 25 if Check.total >= 30 else 20 if Check.total >= 25 else 15 if Check.total >= 20 else 10 if Check.total >= 15 else 5 if Check.total >= 10 else 0
-resultText = "Attack Roll: " + str(Check) + n + "Progress check: "
+resultText = "Tool Check: " + str(Check) + n + "Progress check: "
 trainingCheck = vroll(f'1d100 + {mod}')
 if trainingCheck.total >= 111:
 	resultText += str(trainingCheck) + n + "Your training is masterful, advancing four workweeks towards completion."
