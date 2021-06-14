@@ -1,0 +1,88 @@
+<drac2>
+ch = character()
+out = []
+args = &ARGS&
+n = "\n"
+a = argparse(args)
+gvar = load_json(get_gvar("538cd48b-90d4-49ba-8fd8-d121059469f6"))
+ch.set_cvar_nx("trainingProgress", dump_json({"language":{}, "weapon":{}, "skillPro":{}, "skillExp":{}, "feat":{}, "toolPro": {}, "toolExp": {}}))
+Progress = load_json(get("trainingProgress", {}))
+if not args:
+	out.append(f'''-title "{name} would like to check their tool proficiency training progress."''')
+	out.append(f'''-desc "Learning to use a new tool takes 10 workweeks and costs the value of the tool in cr per workweek. During resolution, training in a new tool calls for an ability check appropriate to that tool, as determined by the GM. If you are proficient in that saving throw, you add your proficiency bonus to the roll."''')
+	toollist = []
+	for x in Progress.toolPro:
+		toollist.append(f'''{x}: {Progress.toolPro.get(x)}''')
+	if not toollist:
+		toollist.append("None")
+	out.append(f'''-f "Tool Proficiency Progress|{n.join(toollist)}"''')
+	out.append(f'''-footer '{ctx.prefix}{ctx.alias} "<tool>" to train in a new tool proficiency.' ''')
+	return f'''embed {" ".join(out)}'''
+
+practiceTopic = args[0].title().replace("'S","'s")
+if practiceTopic not in gvar.tools:
+	return err(f'''{practiceTopic} is not one of the available weapons.  Make sure you spelled it right and try again.''')
+value = gvar.toolvalues.get(practiceTopic)
+
+bag = load_json(get('bags', []))
+if not bag:
+    return err(f"You do not have a bag set up.  Make sure you are currently on the correct character and have set up your `{ctx.prefix}bag`.")
+Wallet = [i for i in bag if "Credits" in i][0]
+Wallet = Wallet[1]
+if Wallet.get("cr") < value:
+    return err(f"You don't have enough Credits.  You must spend at least {value}cr for a teacher willing and capable of training you.")
+Wallet.update({"cr":Wallet["cr"] - value})
+ch.set_cvar("bags", dump_json(bag))
+
+if practiceTopic not in Progress.toolPro:
+	ww = 0
+else:
+	ww = Progress.toolPro.get(practiceTopic)
+out.append(f'''-title "{name} is trying to learn {practiceTopic}{" with advantage" if a.adv() else ""}."''')
+Check = gvar.tools[practiceTopic]
+if typeof(Check) == "SafeList":
+	Check = vroll(f'{max(character().skills[Check[0]].d20(a.adv(boolwise=True)), character().skills[Check[1]].d20(a.adv(boolwise=True)))}')
+else:
+	Check = vroll(f'{character().skills[Check].d20(a.adv(boolwise=True))}')
+mod = 25 if Check.total >= 30 else 20 if Check.total >= 25 else 15 if Check.total >= 20 else 10 if Check.total >= 15 else 5 if Check.total >= 10 else 0
+resultText = "Attack Roll: " + str(Check) + n + "Progress check: "
+trainingCheck = vroll(f'1d100 + {mod}')
+if trainingCheck.total >= 111:
+	resultText += str(trainingCheck) + n + "Your training is masterful, advancing four workweeks towards completion."
+	ww += 4
+elif trainingCheck.total >= 101:
+	resultText += str(trainingCheck) + n + "Your training is excellent, advancing three workweeks towards completion."
+	ww += 3
+elif trainingCheck.total >= 71:
+	resultText += str(trainingCheck) + n + "Your training has a breakthrough, advancing two workweeks towards completion."
+	ww += 2
+elif trainingCheck.total >= 41:
+	resultText += str(trainingCheck) + n + "Your training is adequate, advancing one workweek towards completion."
+	ww += 1
+else:
+	resultText += str(trainingCheck) + n + "Your training falters, advancing only half a workweek towards completion."
+	ww += 0.5
+if ww >= 10:
+	Progress.toolPro.pop(practiceTopic)
+	resultText += f"{n}**You completed your training!** Make sure to add your proficiency in {practiceTopic} to your sheet."
+else:
+	if int(ww) % 5 == 0 or trainingCheck.total <= 40:
+		compchance = vroll('1d100')
+		complication = ''
+		if compchance.total <= 10:
+			comproll = vroll('1d6-1')
+			complication = ["Your earn the ire of another of the teacher’s students.",
+			"Your teacher instructs you in rare, archaic methods, which draw comments from others.",
+			"Your teacher is a spy sent to learn your plans.",
+			"Your teacher is a wanted criminal.", "Your teacher is a cruel taskmaster.",
+			"Your teacher asks for help dealing with a threat."][comproll.total]
+		if complication:
+			out.append(f'-f "They had a bit of a complication...|{complication}"')
+	out.append(f'''-f "{practiceTopic} Progress|{ww} workweeks"''')
+	Progress.toolPro.update({practiceTopic:ww})
+ch.set_cvar("trainingProgress", dump_json(Progress))
+out.append(f'''-f "{name}'s Credits (-{value})|{Wallet.get("cr")} cr"''')
+out.append(f'''-desc "{resultText}"''')
+return f'''embed {" ".join(out)}'''
+</drac2>
+-thumb {{image}} -color {{color}}
