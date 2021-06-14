@@ -1,0 +1,83 @@
+<drac2>
+ch = character()
+out = []
+args = &ARGS&
+n = "\n"
+a = argparse(args)
+gvar = load_json(get_gvar("538cd48b-90d4-49ba-8fd8-d121059469f6"))
+ch.set_cvar_nx("trainingProgress", dump_json({"language":{}, "weapon":{}, "skillPro":{}, "skillExp":{}, "feat":{}, "toolPro": {}, "toolExp": {}}))
+Progress = load_json(get("trainingProgress", {}))
+if not args:
+	out.append(f'''-title "{name} would like to check their skill proficiency training progress."''')
+	out.append(f'''-desc "Learning a new skill takes 20 workweeks and costs at least 500 cr per workweek. During resolution, training in a new skill calls for an ability check with that skill’s governing ability score. If you are proficient in that saving throw, you add your proficiency bonus to the roll."''')
+	skilllist = []
+	for x in Progress.skillPro:
+		skilllist.append(f'''{x}: {Progress.skillPro.get(x)}''')
+	if not skilllist:
+		skilllist.append("None")
+	out.append(f'''-f "Skill Proficiency Progress|{n.join(skilllist)}"''')
+	out.append(f'''-footer '{ctx.prefix}{ctx.alias} "<skill>" to train in a skill proficiency.' ''')
+	return f'''embed {" ".join(out)}'''
+
+bag = load_json(get('bags', []))
+if not bag:
+    return err(f"You do not have a bag set up.  Make sure you are currently on the correct character and have set up your `{ctx.prefix}bag`.")
+Wallet = [i for i in bag if "Credits" in i][0]
+Wallet = Wallet[1]
+if Wallet.get("cr") < 500:
+    return err("You don't have enough Credits.  You must spend at least 250cr for a teacher willing and capable of training you.")
+Wallet.update({"cr":Wallet["cr"] - 500})
+ch.set_cvar("bags", dump_json(bag))
+
+practiceTopic = args[0].title()
+if practiceTopic not in gvar.skills:
+	return err(f'''{practiceTopic} is not one of the available skills.  Make sure you spelled it right and try again.''')
+if practiceTopic not in Progress.skillPro:
+	ww = 0
+else:
+	ww = Progress.skillPro.get(practiceTopic)
+out.append(f'''-title "{name} is trying to learn {practiceTopic}{" with advantage" if a.adv() else ""}."''')
+Check = gvar.skills[practiceTopic]
+Check = vroll(f'{character().skills[Check].d20(a.adv(boolwise=True))}')
+mod = 25 if Check.total >= 30 else 20 if Check.total >= 25 else 15 if Check.total >= 20 else 10 if Check.total >= 15 else 5 if Check.total >= 10 else 0
+resultText = "Ability Check: " + str(Check) + n + "Progress check: "
+trainingCheck = vroll(f'1d100 + {mod}')
+if trainingCheck.total >= 111:
+	resultText += str(trainingCheck) + n + "Your training is masterful, advancing four workweeks towards completion."
+	ww += 4
+elif trainingCheck.total >= 101:
+	resultText += str(trainingCheck) + n + "Your training is excellent, advancing three workweeks towards completion."
+	ww += 3
+elif trainingCheck.total >= 71:
+	resultText += str(trainingCheck) + n + "Your training has a breakthrough, advancing two workweeks towards completion."
+	ww += 2
+elif trainingCheck.total >= 41:
+	resultText += str(trainingCheck) + n + "Your training is adequate, advancing one workweek towards completion."
+	ww += 1
+else:
+	resultText += str(trainingCheck) + n + "Your training falters, advancing only half a workweek towards completion."
+	ww += 0.5
+if ww >= 10:
+	Progress.skillPro.pop(practiceTopic)
+	resultText += f"{n}**You completed your training!** Make sure to add your proficiency in {practiceTopic} to your sheet."
+else:
+	if int(ww) % 5 == 0 or trainingCheck.total <= 40:
+		compchance = vroll('1d100')
+		complication = ''
+		if compchance.total <= 10:
+			comproll = vroll('1d6-1')
+			complication = ["Your earn the ire of another of the teacher’s students.",
+			"Your teacher instructs you in rare, archaic methods, which draw comments from others.",
+			"Your teacher is a spy sent to learn your plans.",
+			"Your teacher is a wanted criminal.", "Your teacher is a cruel taskmaster.",
+			"Your teacher asks for help dealing with a threat."][comproll.total]
+		if complication:
+			out.append(f'-f "They had a bit of a complication...|{complication}"')
+	out.append(f'''-f "{practiceTopic} Progress|{ww} workweeks"''')
+	Progress.skillPro.update({practiceTopic:ww})
+ch.set_cvar("trainingProgress", dump_json(Progress))
+out.append(f'''-f "{name}'s Credits (-500)|{Wallet.get("cr")} cr"''')
+out.append(f'''-desc "{resultText}"''')
+return f'''embed {" ".join(out)}'''
+</drac2>
+-thumb {{image}} -color {{color}}
