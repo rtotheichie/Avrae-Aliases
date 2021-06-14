@@ -21,7 +21,7 @@ if not args:
 
 practiceTopic = args[0].title().replace("'S","'s")
 if practiceTopic not in gvar.tools:
-	return err(f'''{practiceTopic} is not one of the available weapons.  Make sure you spelled it right and try again.''')
+	return err(f'''{practiceTopic} is not one of the available tools.  Make sure you spelled it right and try again.''')
 value = gvar.toolvalues.get(practiceTopic)
 
 bag = load_json(get('bags', []))
