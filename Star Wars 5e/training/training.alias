@@ -1,0 +1,12 @@
+embed <drac2>
+out = []
+n = '\n'
+character().set_cvar_nx("trainingProgress", dump_json({"language":{}, "weapon":{}, "skillPro":{}, "skillExp":{}, "feat":{}, "toolPro": {}, "toolExp": {}}))
+Progress = load_json(get("trainingProgress", {}))
+out.append(f'''-title "{name} would like to learn something new."''')
+out.append('-desc "Given enough time, money, and the services of an instructor, a character can learn a language, pick up proficiency with a tool or kit, gain proficiency or even expertise in a skill, or possibly even earn a feat.\nReceiving training requires you first find a teacher who is willing and capable of teaching you. It then takes a varying amount of time and credits, depending on what you’re training in. Costs are paid at the beginning of each workweek."')
+for y in Progress:
+	out.append(f'''-f "{y} in Progress|{n.join([i for i in Progress[y]]) or 'None'}|inline"''')
+return " ".join(out)
+</drac2>
+-thumb {{image}} -color {{color}}
