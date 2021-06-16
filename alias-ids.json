@@ -17,5 +17,13 @@
   "Star Wars 5e/The Outer Rim/daily/daily.alias":"60aa17a798876c1310d98c58",
   "Star Wars 5e/defiant/defiant.alias":"60b11c2bd6e634d0741ec1e8",
   "Star Wars 5e/uesurge/uesurge.alias":"60b438bf298c20c0d4eafe0a",
-  "Star Wars 5e/bounty/bounty.alias":"60b540e4d6e634d0741ec4bb"
+  "Star Wars 5e/bounty/bounty.alias":"60b540e4d6e634d0741ec4bb",
+  "Star Wars 5e/training/training.alias":"60c968f095cccad933c3d841",
+  "Star Wars 5e/training/training feat.alias":"60c9695f19f6daec56e89aac",
+  "Star Wars 5e/training/training language.alias":"60c969df19f6daec56e89aae",
+  "Star Wars 5e/training/training skill pro.alias":"60c96c8619f6daec56e89ab3",
+  "Star Wars 5e/training/training skill exp.alias":"60c96cbb95cccad933c3d849",
+  "Star Wars 5e/training/training tool pro.alias":"60c96cf519f6daec56e89ab4",
+  "Star Wars 5e/training/training tool exp.alias":"60c96d2895cccad933c3d84c",
+  "Star Wars 5e/training/training weapon.alias":"60c96d5595cccad933c3d84d",
 }
