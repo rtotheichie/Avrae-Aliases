@@ -55,7 +55,7 @@ if args.get('offhand'):
 
 if args.get('double'):
     if "double" in str(attacks[0].automation[1].get("text")).lower():
-        attacks.append(load_json(dump_json(attacks[0]).replace('"name": "', '"name": "Double ').replace('+{dexterityMod}','').replace('+{strengthMod}', '')))    
+        attacks.append(load_json(dump_json(attacks[0]).replace('"name": "', '"name": "Double ').replace('+dexterityMod','').replace('+strengthMod', '').replace('+max(strengthMod,dexterityMod)','')))    
 
 if output:
     n = '\n'
