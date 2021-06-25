@@ -27,7 +27,8 @@
 "modifier": "charismaMod",
 "reset": "long",
 "display": "default",
-"classLevel": "BerserkerLevel"
+"classLevel": "BerserkerLevel",
+"desc": "You use these force points to cast force powers. You regain all expended force points when you finish a long rest."
 },
 {
 "name": "Powerful Presence",
@@ -50,7 +51,8 @@
 "modifier": "wisdomMod",
 "reset": "long",
 "display": "default",
-"classLevel": "BerserkerLevel"
+"classLevel": "BerserkerLevel",
+"desc": "You use these force points to cast force powers. You regain all expended force points when you finish a long rest."
 },
 {
 "name": "Powerful Presence",
@@ -180,7 +182,8 @@
 "modifier": "wisdomMod",
 "reset": "long",
 "display": "default",
-"classLevel": "ConsularlightLevel"
+"classLevel": "ConsularlightLevel",
+"desc": "You use these force points to cast force powers. You regain all expended force points when you finish a long rest."
 },
 {
 "name": "Force Shield",
@@ -465,7 +468,8 @@
 "modifier": "charismaMod",
 "reset": "long",
 "display": "default",
-"classLevel": "ConsulardarkLevel"
+"classLevel": "ConsulardarkLevel",
+"desc": "You use these force points to cast force powers. You regain all expended force points when you finish a long rest."
 },
 {
 "name": "Force Shield",
@@ -962,7 +966,8 @@
 "classLevel": "FighterLevel",
 "reset": "short",
 "display": "bubble",
-"value": [0, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5]
+"value": [0, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5],
+"desc": "You have two superiority dice, which are d4s, and you earn more at higher levels, as shown in the Superiority Dice column of the fighter table. This die changes as you gain fighter levels, as shown in the Combat Superiority column of the fighter table. A superiority die is expended when you use it. You regain all of your expended superiority dice when you finish a short or long rest."
 },
 {
 "name": "Indominatable",
@@ -1015,7 +1020,8 @@
 "modifier": "charismaMod",
 "reset": "long",
 "display": "default",
-"classLevel": "FighterLevel"
+"classLevel": "FighterLevel",
+"desc": "You use these force points to cast force powers. You regain all expended force points when you finish a long rest."
 },
 {
 "name": "Growing Momentum",
@@ -1023,7 +1029,8 @@
 "value": "charismaMod",
 "reset": "long",
 "display": "bubble",
-"classLevel": "FighterLevel"
+"classLevel": "FighterLevel",
+"desc": "You can cast the burst of speed force power targeting yourself at 1st-level without expending force points. At 10th level, when you do so, your speed increases by an additional 10 feet. At 18th level, when you do so, your speed increases by an additional 10 feet./n/nYou can use this feature a number of times equal to your Wisdom or Charisma modifier (your choice, a minimum of once). You regain any expended uses when you finish a long rest."
 }
 ]
 },
@@ -1037,7 +1044,8 @@
 "modifier": "wisdomMod",
 "reset": "long",
 "display": "default",
-"classLevel": "FighterLevel"
+"classLevel": "FighterLevel",
+"desc": "You use these force points to cast force powers. You regain all expended force points when you finish a long rest."
 },
 {
 "name": "Growing Momentum",
@@ -1045,7 +1053,8 @@
 "value": "wisdomMod",
 "reset": "long",
 "display": "bubble",
-"classLevel": "FighterLevel"
+"classLevel": "FighterLevel",
+"desc": "You can cast the burst of speed force power targeting yourself at 1st-level without expending force points. At 10th level, when you do so, your speed increases by an additional 10 feet. At 18th level, when you do so, your speed increases by an additional 10 feet./n/nYou can use this feature a number of times equal to your Wisdom or Charisma modifier (your choice, a minimum of once). You regain any expended uses when you finish a long rest."
 }
 ]
 },
@@ -1058,7 +1067,8 @@
 "value": 1,
 "reset": "short",
 "display": "bubble",
-"classLevel": "FighterLevel"
+"classLevel": "FighterLevel",
+"desc": "You can use your action to make a single melee weapon attack against each creature within your reach. Make a separate attack roll against each target. The first attack gains a +1 bonus to its attack roll, and each attack after the first gains an additional +1 bonus to its attack roll, cumulatively, to a maximum bonus of +6. If you are wielding two light- or vibro-weapons, or a weapon with the double property, you also add this bonus to your damage rolls, and you can use your bonus action to engage in Double- or Two-Weapon Fighting./n/nOnce you’ve used this feature, you must complete a short or long rest before you can use it again."
 }
 ]
 },
@@ -1076,7 +1086,8 @@
 "value": 2,
 "reset": "short",
 "display": "bubble",
-"classLevel": "FighterLevel"
+"classLevel": "FighterLevel",
+"desc": "You have two amplified shots, which you use to activate your ammunition enhancements. An amplified shot is expended when you use it. When you fire an amplified shot, your weapon is treated as enhanced for overcoming resistance and immunity to unenhanced attacks and damage. You decide to use the option when the shot hits a creature, unless the option doesn’t involve an attack roll. You regain all of your amplified shots when you finish a short or long rest."
 }
 ]
 },
