@@ -1,5 +1,5 @@
 {
-  "5":[
+  "1": [
     "Acklay, Adolescent",
     "Cliff Wampa",
     "Dianoga, Adult",
@@ -9,55 +9,41 @@
     "Opee Sea Killer",
     "Rakghoul, Hulking",
     "Rathtar, Dwarf",
-    ],
-    "6":[
-      "Ghest",
-      "Gorax",
-      ],
-    "7":[
-      "Hssiss",
-      "Lylek",
-      "Reek, Adult",
-      "Scrange",
-      "Vesuvague Tree"
-      ],
-      "8":[
-        "Acklay, Adult",
-        "Dragonsnake",
-        "Rancor, Adolescent"
-        ],
-      "9":[
-        "Battle Hydra",
-        "Gundark, Alpha",
-        "Krayt Dragon, Juvenile",
-        "Rathtar",
-        "Terentatek"],
-      "10":[
-        "Mole Serpent, Adult"],
-      "11":[
-        "Exogorth, Adolescent"],
-      "12":[
-        "Rancor, Adult"],
-      "13":[
-        "Bor Gullet"],
-      "14":[
-        "Swamp Slug"],
-      "15":[
-        "Exogorth, Adult",
-        "Voxyn"],
-      "17":[
-        "Krayt Dragon, Adult"],
-      "19":[
-        "Rancor, Ancient"],
-      "20":[
-        "War Wyrm"],
-      "21":[
-        "Sarlacc, Adult",
-        "Vessel of Abeloth"],
-      "23":[
-        "Force Storm Eye",
-        "Krayt Dragon, Greater"],
-      "25":[
-        "Sando Aqua Monster"],
-      "26":["Manifestation of Abeloth"]
+    "Ghest",
+    "Gorax"
+  ],
+  "2": [
+    "Hssiss",
+    "Lylek",
+    "Reek, Adult",
+    "Scrange",
+    "Vesuvague Tree",
+    "Acklay, Adult",
+    "Dragonsnake",
+    "Rancor, Adolescent",
+    "Battle Hydra",
+    "Gundark, Alpha",
+    "Krayt Dragon, Juvenile",
+    "Rathtar",
+    "Terentatek",
+    "Mole Serpent, Adult"
+  ],
+  "3": [
+    "Exogorth, Adolescent",
+    "Rancor, Adult",
+    "Bor Gullet",
+    "Swamp Slug",
+    "Exogorth, Adult",
+    "Voxyn"
+  ],
+  "4": [
+    "Krayt Dragon, Adult",
+    "Rancor, Ancient",
+    "War Wyrm",
+    "Sarlacc, Adult",
+    "Vessel of Abeloth",
+    "Force Storm Eye",
+    "Krayt Dragon, Greater",
+    "Sando Aqua Monster", "Manifestation of Abeloth"
+  ]
 }
