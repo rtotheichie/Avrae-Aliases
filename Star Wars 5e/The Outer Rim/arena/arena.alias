@@ -1,0 +1,12 @@
+embed <drac2>
+args = &ARGS&
+if not args:
+	return err("You must specify the highest level of combatant.")
+tier = "1" if int(args[0]) < 5 else "2" if int(args[0]) < 11 else "3" if int(args[0]) < 17 else "4"
+gvar = load_json(get_gvar("5e361332-c65e-4dad-8e8d-6c12a424a07b"))
+out = []
+out.append('-title "The Kol Daar Arena presents its next challenge..."')
+out.append(f'-desc "For a tier {tier} challenege, the combatants will face..."')
+out.append(f'-f "Monster|{gvar[tier][randint(len(gvar[tier])-1)]}"')
+return " ".join(out)
+</drac2>
