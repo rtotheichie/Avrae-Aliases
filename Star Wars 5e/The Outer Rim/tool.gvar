@@ -47,6 +47,7 @@
 {"t":"artistsimplements","n":"Artist's Implements","d":"Proficiency with artist's implements lets you add your proficiency bonus to any ability check you make involving the creation of art."},
 {"t":"astrotechsimplements","n":"Astrotech's Implements","d":"Proficiency with astrotech's implements lets you add your proficiency bonus to any ability check you make involving the crafting or modification of droids."},
 {"t":"biotechsimplements","n":"Biotech's Implements","d":"Proficiency with biotech's implements lets you add your proficiency bonus to any ability check you make involving the creation of cybernetic augmentations."},
+{"t":"munitionskit","n":"Munitions Kit","d":"Munitions kits are used to craft, identify, and disarm ammunition and ordnance."},
 {"t":"chefskit","n":"Chef's Kit","d":"Chef’s kits are used to prepare food and identify food that might be spoiled or tampered with. Proficiency with a chef's kit lets you add your proficiency bonus to any ability check you make involving the preparation or identification of food."},
 {"t":"constructorsimplements","n":"Constructor's Implements","d":"Proficiency with constructor's implements lets you add your proficiency bonus to any ability check you make involving the creation or fortification of structures."},
 {"t":"cybertechsimplements","n":"Cybertech's Implements","d":"Proficiency with cybertech's implements lets you add your proficiency bonus to any ability check you make involving the crafting or modification of wristpads."},
