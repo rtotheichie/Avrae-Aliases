@@ -46,6 +46,7 @@
 {"t":"artificersimplements","n":"Artificer's Implements","d":"Proficiency with artificer's implements lets you add your proficiency bonus to any ability check you make involving the creation of lightweapons."},
 {"t":"artistsimplements","n":"Artist's Implements","d":"Proficiency with artist's implements lets you add your proficiency bonus to any ability check you make involving the creation of art."},
 {"t":"astrotechsimplements","n":"Astrotech's Implements","d":"Proficiency with astrotech's implements lets you add your proficiency bonus to any ability check you make involving the crafting or modification of droids."},
+{"t":"bioanalysiskit","n":"Bioanalysis Kit","d":"This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by bioanalysts to harvest and store plants and herbs."},
 {"t":"biotechsimplements","n":"Biotech's Implements","d":"Proficiency with biotech's implements lets you add your proficiency bonus to any ability check you make involving the creation of cybernetic augmentations."},
 {"t":"munitionskit","n":"Munitions Kit","d":"Munitions kits are used to craft, identify, and disarm ammunition and ordnance."},
 {"t":"chefskit","n":"Chef's Kit","d":"Chef’s kits are used to prepare food and identify food that might be spoiled or tampered with. Proficiency with a chef's kit lets you add your proficiency bonus to any ability check you make involving the preparation or identification of food."},
