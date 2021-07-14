@@ -110,7 +110,7 @@
   "tools": {
     "Armormech's Implements": "intelligence",
     "Armstech's Implements": "intelligence",
-    "Artificier's Implements": "intelligence",
+    "Artificer's Implements": "intelligence",
     "Artist's Implements": ["wisdom", "intelligence", "charisma"],
     "Astrotech's Implements": "intelligence",
     "Audiotech's Implements": ["intelligence", "performance"],
