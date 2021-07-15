@@ -57,7 +57,7 @@ elif trainingCheck.total >= 41:
 else:
 	resultText += str(trainingCheck) + n + "Your training falters, advancing only half a workweek towards completion."
 	ww += 0.5
-if ww >= 10:
+if ww >= 20:
 	Progress.skillPro.pop(practiceTopic)
 	resultText += f"{n}**You completed your training!** Make sure to add your proficiency in {practiceTopic} to your sheet."
 else:
