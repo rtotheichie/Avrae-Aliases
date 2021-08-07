@@ -324,7 +324,7 @@
       "languages": "Galactic Basic, Rodese",
       "size": "Medium",
       "creatureType": "Humanoid",
-      "speed": "35 ft., Climb 30 ft.",
+      "speed": "30 ft., Climb 30 ft.",
       "senses": "Darkvision 60 ft."
     }
   },
