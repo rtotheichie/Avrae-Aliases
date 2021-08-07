@@ -3035,7 +3035,7 @@
 },
 {
 "Class": "Sentineldark",
-"subclass": "Ehtereality",
+"subclass": "Ethereality",
 "counters": [{
 "name": "Out of Touch",
 "level": 7,
