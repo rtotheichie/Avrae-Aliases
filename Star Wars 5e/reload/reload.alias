@@ -16,7 +16,7 @@ if not cc:
 for attack in character().attacks:
     if cc in attack.name:
         damage = "kinetic" if "kinetic" in str(attack) else "energy"
-Cell = "Power Cell" if damage == "energy" else "Slug Canister"
+Cell = "Power Cell" if damage == "energy" else "Slug Cartridge"
 bag = load_json(get("bags",[]))
 if not bag:
     return err(f"You do not have a bag set up.  Make sure you are currently on the correct character and have set up your `{ctx.prefix}bag`.")
