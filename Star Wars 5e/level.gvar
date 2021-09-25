@@ -240,7 +240,7 @@
 "desc": "When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. On a failed save, the creature takes 1d10 plus your Consularlight level lightning damage, is pushed back 10 feet, and becomes shocked until the end of their next turn. On a successful save, the creature takes half as much damage and isn’t moved or shocked."
 },
 {
-"name": "Way of Lightning",
+"name": "Unlimited Power",
 "level": 18,
 "value": "wisdomMod",
 "display": "bubble",
@@ -526,7 +526,7 @@
 "desc": "When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. On a failed save, the creature takes 1d10 plus your Consulardark level lightning damage, is pushed back 10 feet, and becomes shocked until the end of their next turn. On a successful save, the creature takes half as much damage and isn’t moved or shocked."
 },
 {
-"name": "Way of Lightning",
+"name": "Unlimited Power",
 "level": 18,
 "value": "charismaMod",
 "display": "bubble",
