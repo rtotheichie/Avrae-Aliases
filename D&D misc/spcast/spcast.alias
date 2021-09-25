@@ -32,6 +32,8 @@ splevel = max(a.last('l', default = 0, type_=int), spell.level)
 points = point_list[splevel]
 if a.get('p'):
     points += int(a.last('p'))
+if a.get('rr'):
+    points *= int(a.last('rr'))
 if not ignore and character().get_cc(cc) < points:
     return err("You don't have enough Spell Points to cast that spell.")
 character().mod_cc(cc,-points) if not ignore else ''
