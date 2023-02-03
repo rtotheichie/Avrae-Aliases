@@ -1203,7 +1203,7 @@
 "name": "Channel the Force",
 "level": 1,
 "classLevel": "GuardianlightLevel",
-"value": "wisdomMod",
+"value": "proficiencyBonus",
 "reset": "short",
 "display": "bubble",
 "desc": "You know how to channel the Force to create a unique effect. You start with your choice of one from two such effects: Cause Harm or Lend Aid. At 3rd level, your Guardian Focus grants you an additional effect. When you use your Channel the Force, you choose which effect to create.\n\nSome Channel the Force effects require saving throws. When you use such an effect from this class, the DC equals your universal force save DC.\n\nYou can use this feature a number of times equal to your Wisdom or Charisma modifier (your choice, minimum of once). You regain all expended uses when you finish a short or long rest."
@@ -1228,7 +1228,7 @@
 "name": "Channel the Force",
 "level": 1,
 "classLevel": "GuardiandarkLevel",
-"value": "charismaMod",
+"value": "proficiencyBonus",
 "reset": "short",
 "display": "bubble",
 "desc": "You know how to channel the Force to create a unique effect. You start with your choice of one from two such effects: Cause Harm or Lend Aid. At 3rd level, your Guardian Focus grants you an additional effect. When you use your Channel the Force, you choose which effect to create.\n\nSome Channel the Force effects require saving throws. When you use such an effect from this class, the DC equals your universal force save DC.\n\nYou can use this feature a number of times equal to your Wisdom or Charisma modifier (your choice, minimum of once). You regain all expended uses when you finish a short or long rest."
@@ -2303,7 +2303,7 @@
 "counters": [{
 "name": "Superiority Dice",
 "level": 1,
-"value": [2, 2, 4, 4, 4, 4, 6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 10, 10, 10, 10],
+"value": [3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12],
 "reset": "short",
 "display": "bubble",
 "desc": "You have two superiority dice, which are d4s, and you earn more at higher levels, as shown in the Superiority Dice column of the scholar table. This die changes as you gain scholar levels, as shown in the Academic Superiority column of the scholar table. A superiority die is expended when you use it.\n\nYou regain all of your expended superiority dice when you finish a short or long rest.",
@@ -2331,7 +2331,7 @@
 },
 {
 "Class": "Scholar",
-"subclass": "Doctor",
+"subclass": "Physician",
 "counters": [{
 "name": "Field Surgeon",
 "level": 6,
