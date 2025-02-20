@@ -6,12 +6,13 @@ if "(F)" in args:
 if "(M)" in args:
     args.pop()
     args.append("♂")
+ch=character()
 TableA = load_json(get_gvar("c237b15a-5b0d-4240-9ee3-c3006f0e53de"))
 TableF = load_json(get_gvar("a8e1c52a-f2cf-4f75-ba89-25020ac57dcc"))
 TableO = load_json(get_gvar("ffb3193c-612a-429e-acb4-c3b0ce91a02e"))
 TableU = load_json(get_gvar("0ab631b4-78c6-455b-8b43-7b72a4504c8f"))
-set_cvar_nx("PokedexCaught","[]")
-set_cvar_nx("PokedexSeen","[]")
+ch.set_cvar_nx("PokedexCaught","[]")
+ch.set_cvar_nx("PokedexSeen","[]")
 CaughtList = load_json(get("PokedexCaught","[]"))
 SeenList = load_json(get("PokedexSeen","[]"))
 PKMN = ""
@@ -163,7 +164,7 @@ else:
     out.append('-thumb "https://cdn.bulbagarden.net/upload/4/4f/Pok%C3%A9dex_GSC.png"')
 CaughtList.sort()
 SeenList.sort()
-set_cvar("PokedexCaught",dump_json(CaughtList))
-set_cvar("PokedexSeen",dump_json(SeenList))
+ch.set_cvar("PokedexCaught",dump_json(CaughtList))
+ch.set_cvar("PokedexSeen",dump_json(SeenList))
 return " ".join(out)
 </drac2>

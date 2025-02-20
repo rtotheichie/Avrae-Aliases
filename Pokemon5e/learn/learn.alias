@@ -4,7 +4,8 @@ Move_Name = args[0].title().replace("'S","'s")
 if args:
     args = argparse(args)
 dmg = "damage"
-gvar = load_json(get_gvar("31cb48fb-f491-4c43-bde1-9a89379c0cc3")) if Move_Name[0] in "ABCD" else load_json(get_gvar("df9bea71-6a5a-4e62-8c2c-2f81e2ac3b6e")) if Move_Name[0] in "EFGH" else load_json(get_gvar("d4056cb7-89d1-48df-af57-e4a225bd58fa")) if Move_Name[0] in "IJKLMNO" else load_json(get_gvar("96045d79-0720-4669-a10f-bd93bc7a1c28")) if Move_Name[0] in "PQR" else load_json(get_gvar("6295d6d5-db77-4c21-86f1-6dc4d92ca2f7")) if Move_Name[0] in "ST" else load_json(get_gvar("93845614-47fb-4c0c-a15b-9b22720b1183")) if Move_Name[0] in "UVWXYZ" else err("I don't think that's a valid move name")
+ch=character()
+gvar = load_json(get_gvar("31cb48fb-f491-4c43-bde1-9a89379c0cc3")) if Move_Name[0] in "ABCD" else load_json(get_gvar("df9bea71-6a5a-4e62-8c2c-2f81e2ac3b6e")) if Move_Name[0] in "EFGH" else load_json(get_gvar("a8b03cc4-389b-4e3e-8074-5f2f7ea02a41")) if Move_Name[0] in "IJKLMNO" else load_json(get_gvar("96045d79-0720-4669-a10f-bd93bc7a1c28")) if Move_Name[0] in "PQR" else load_json(get_gvar("6295d6d5-db77-4c21-86f1-6dc4d92ca2f7")) if Move_Name[0] in "ST" else load_json(get_gvar("93845614-47fb-4c0c-a15b-9b22720b1183")) if Move_Name[0] in "UVWXYZ" else err("I don't think that's a valid move name")
 dmg_level = "1" if level <5 else "5" if level<10 else "10" if level<17 else "17"
 Import_Code = dump_json(gvar[Move_Name]["code"])
 dmg_String = gvar[Move_Name][dmg][dmg_level] if dmg in gvar[Move_Name] else ''
@@ -68,5 +69,6 @@ if criton_value:
 if Move_Name != "Struggle":
     PP = gvar[Move_Name]["PP"]
     PP = int(PP)+PP_bonus+(1 if args.get('tireless') else 0)
-    create_cc(Move_Name,0,PP,'long')
-</drac2>{{f'echo {Import_Code}' if args.get('manual') else f'attack import {Import_Code}'}}
+    ch.create_cc(Move_Name,0,PP,'long')
+return f'echo {Import_Code}' if args.get('manual') else f'attack import {Import_Code}'
+</drac2>
