@@ -42,7 +42,7 @@ if CaughtList:
 if SeenList:
     SeenList=list({x:"" for x in SeenList})
     for y in SeenList:
-        if y not in TableA and y not in TableF and y not in TableO and x not in TableU:
+        if y not in TableA and y not in TableF and y not in TableO and y not in TableU:
             SeenList.remove(y)
         if y in CaughtList:
             SeenList.remove(y)
